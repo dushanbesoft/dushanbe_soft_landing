@@ -1,0 +1,127 @@
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: max(27px, 3.125vw);
+  flex: 1 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.titlesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: max(9px, 1.0417vw);
+  max-width: max(600px, 69.4444vw);
+}
+
+.badge {
+  display: flex;
+  padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
+  justify-content: center;
+  align-items: center;
+  gap: max(6px, 0.6944vw);
+  border-radius: max(133px, 15.4167vw);
+  border: 1px solid #5eb5f0;
+  background: rgba(15, 81, 224, 0.11);
+}
+
+.badgeIcon {
+  width: max(6px, 0.7639vw);
+  height: max(6px, 0.7639vw);
+  border-radius: 50%;
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+}
+
+.badgeText {
+  color: #fff;
+  font-family: var(--font-nunito-sans);
+  font-size: max(9px, 1.0417vw);
+  font-weight: 400;
+}
+
+.mainTitle {
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: max(45px, 5.2083vw);
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* Fallback color for some browsers */
+@supports not (-webkit-background-clip: text) {
+  .mainTitle {
+    color: #5eb5f0;
+  }
+}
+
+.subtitle {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-nunito-sans);
+  font-size: max(10px, 1.25vw);
+  font-weight: 400;
+  max-width: max(360px, 41.6667vw);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(max(9px, 1.0417vw), 3vw, max(18px, 2.0833vw));
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: flex;
+  height: max(37px, 4.375vw);
+  padding: 1px max(18px, 2.0833vw);
+  justify-content: center;
+  align-items: center;
+  gap: max(12px, 1.3889vw);
+  border-radius: max(6px, 0.7639vw);
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: max(10px, 1.25vw);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnSecondary {
+  display: flex;
+  height: max(37px, 4.375vw);
+  padding: 0 max(18px, 2.0833vw);
+  justify-content: center;
+  align-items: center;
+  gap: max(6px, 0.6944vw);
+  border-radius: max(6px, 0.7639vw);
+  border: 1px solid #5eb5f0;
+  background: rgba(1, 101, 88, 0.11);
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: max(10px, 1.25vw);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(1, 101, 88, 0.3);
+}

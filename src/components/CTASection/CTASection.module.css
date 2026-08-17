@@ -1,0 +1,127 @@
+.section {
+  display: flex;
+  padding: max(40px, 4.166vw) max(30px, 3.125vw);
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: max(26px, 1.8vw);
+  background: url('/images/login-home-bg.svg') lightgray 50% / cover no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: max(10px, 0.694vw);
+  flex: 1;
+}
+
+.subtitle {
+  color: #D9D9D9;
+  font-family: var(--font-tektur);
+  font-size: max(12px, 1.041vw);
+  font-weight: 500;
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-tektur);
+  font-size: max(24px, 2.222vw);
+  font-weight: 700;
+  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.desc {
+  color: #FFF;
+  font-family: var(--font-nunito-sans);
+  font-size: max(12px, 1.041vw);
+  font-weight: 400;
+  line-height: 1.73;
+  margin: 0;
+  max-width: max(300px, 29.58vw);
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start;
+  gap: max(15px, 2.083vw);
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.primaryBtn, .secondaryBtn {
+  display: flex;
+  max-height: max(45px, 4.375vw);
+  padding: max(10px, 1.388vw) max(20px, 2.083vw);
+  justify-content: center;
+  align-items: center;
+  gap: max(10px, 0.694vw);
+  border-radius: max(8px, 0.764vw);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+  }
+}
+
+.primaryBtn:hover, .secondaryBtn:hover {
+  transform: scale(1.03);
+}
+
+.primaryBtn {
+  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  border: none;
+}
+
+.primaryBtn span {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: max(14px, 1.25vw);
+  font-weight: 700;
+}
+
+.primaryBtn svg {
+  width: max(18px, 1.527vw);
+  height: max(18px, 1.527vw);
+}
+
+.secondaryBtn {
+  border: 1px solid rgba(94, 181, 240, 0.8); /* fallback border since gradient on border is hard without wrapper */
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.secondaryBtn span {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: max(14px, 1.25vw);
+  font-weight: 700;
+}
+
+.secondaryBtn svg {
+  width: max(18px, 1.527vw);
+  height: max(18px, 1.527vw);
+}

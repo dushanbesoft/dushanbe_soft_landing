@@ -1,0 +1,279 @@
+
+.backgroundLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #000;
+  pointer-events: none;
+}
+
+.layerBlobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.layerDarken {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to top right, transparent 0%, transparent 20%, black 40%, black 60%, transparent 80%, transparent 100%);
+}
+
+.layerGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: 
+    radial-gradient(circle at 100% 0%, rgba(5, 150, 100, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(5, 150, 100, 0.45) 0%, transparent 55%);
+}
+
+.networkCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.blob {
+  position: absolute;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(10vw, -10vh) rotate(45deg) scale(1.2); }
+  66% { transform: translate(-5vw, 5vh) rotate(90deg) scale(0.9); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(-10vw, 15vh) rotate(-30deg) scale(1.3); }
+  66% { transform: translate(10vw, -10vh) rotate(-60deg) scale(0.8); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(15vw, 15vh) rotate(60deg) scale(0.8); }
+  66% { transform: translate(-15vw, -15vh) rotate(120deg) scale(1.1); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
+
+.blob1 {
+  width: max(111px, 11.1vw);
+  height: max(111px, 11.1vw);
+  top: 9%;
+  left: -2%;
+  animation: float1 23s ease-in-out infinite reverse;
+}
+
+.blob2 {
+  width: max(47px, 4.7vw);
+  height: max(47px, 4.7vw);
+  top: 89%;
+  left: 8%;
+  animation: float1 32s ease-in-out infinite alternate-reverse;
+}
+
+.blob3 {
+  width: max(34px, 3.4vw);
+  height: max(34px, 3.4vw);
+  top: -2%;
+  left: 6%;
+  animation: float1 21s ease-in-out infinite normal;
+}
+
+.blob4 {
+  width: max(101px, 10.1vw);
+  height: max(101px, 10.1vw);
+  top: 20%;
+  left: 86%;
+  animation: float3 35s ease-in-out infinite alternate-reverse;
+}
+
+.blob5 {
+  width: max(58px, 5.8vw);
+  height: max(58px, 5.8vw);
+  top: 52%;
+  left: 70%;
+  animation: float1 23s ease-in-out infinite reverse;
+}
+
+.blob6 {
+  width: max(119px, 11.9vw);
+  height: max(119px, 11.9vw);
+  top: 49%;
+  left: 38%;
+  animation: float1 23s ease-in-out infinite reverse;
+}
+
+.blob7 {
+  width: max(73px, 7.3vw);
+  height: max(73px, 7.3vw);
+  top: 8%;
+  left: 6%;
+  animation: float1 27s ease-in-out infinite alternate;
+}
+
+.blob8 {
+  width: max(74px, 7.4vw);
+  height: max(74px, 7.4vw);
+  top: 72%;
+  left: 28%;
+  animation: float3 16s ease-in-out infinite alternate-reverse;
+}
+
+.blob9 {
+  width: max(98px, 9.8vw);
+  height: max(98px, 9.8vw);
+  top: 10%;
+  left: 43%;
+  animation: float3 17s ease-in-out infinite alternate;
+}
+
+.blob10 {
+  width: max(110px, 11.0vw);
+  height: max(110px, 11.0vw);
+  top: 74%;
+  left: 41%;
+  animation: float1 33s ease-in-out infinite normal;
+}
+
+.blob11 {
+  width: max(35px, 3.5vw);
+  height: max(35px, 3.5vw);
+  top: 79%;
+  left: 24%;
+  animation: float1 24s ease-in-out infinite reverse;
+}
+
+.blob12 {
+  width: max(42px, 4.2vw);
+  height: max(42px, 4.2vw);
+  top: 43%;
+  left: 30%;
+  animation: float3 29s ease-in-out infinite alternate;
+}
+
+.blob13 {
+  width: max(50px, 5.0vw);
+  height: max(50px, 5.0vw);
+  top: 42%;
+  left: 40%;
+  animation: float3 21s ease-in-out infinite alternate;
+}
+
+.blob14 {
+  width: max(119px, 11.9vw);
+  height: max(119px, 11.9vw);
+  top: 82%;
+  left: 77%;
+  animation: float3 17s ease-in-out infinite reverse;
+}
+
+.blob15 {
+  width: max(98px, 9.8vw);
+  height: max(98px, 9.8vw);
+  top: 88%;
+  left: 26%;
+  animation: float2 20s ease-in-out infinite alternate-reverse;
+}
+
+.blob16 {
+  width: max(64px, 6.4vw);
+  height: max(64px, 6.4vw);
+  top: 76%;
+  left: 83%;
+  animation: float1 32s ease-in-out infinite alternate;
+}
+
+.blob17 {
+  width: max(37px, 3.7vw);
+  height: max(37px, 3.7vw);
+  top: 24%;
+  left: -1%;
+  animation: float2 25s ease-in-out infinite alternate;
+}
+
+.blob18 {
+  width: max(38px, 3.8vw);
+  height: max(38px, 3.8vw);
+  top: 22%;
+  left: 67%;
+  animation: float1 25s ease-in-out infinite alternate-reverse;
+}
+
+.blob19 {
+  width: max(80px, 8.0vw);
+  height: max(80px, 8.0vw);
+  top: 77%;
+  left: 53%;
+  animation: float2 19s ease-in-out infinite reverse;
+}
+
+.blob20 {
+  width: max(61px, 6.1vw);
+  height: max(61px, 6.1vw);
+  top: 90%;
+  left: 66%;
+  animation: float2 32s ease-in-out infinite alternate-reverse;
+}
+
+.blob21 {
+  width: max(104px, 10.4vw);
+  height: max(104px, 10.4vw);
+  top: 46%;
+  left: 41%;
+  animation: float1 22s ease-in-out infinite alternate-reverse;
+}
+
+.blob22 {
+  width: max(41px, 4.1vw);
+  height: max(41px, 4.1vw);
+  top: 91%;
+  left: 1%;
+  animation: float1 18s ease-in-out infinite reverse;
+}
+
+.blob23 {
+  width: max(117px, 11.7vw);
+  height: max(117px, 11.7vw);
+  top: 49%;
+  left: 71%;
+  animation: float2 17s ease-in-out infinite alternate-reverse;
+}
+
+.blob24 {
+  width: max(106px, 10.6vw);
+  height: max(106px, 10.6vw);
+  top: 54%;
+  left: 62%;
+  animation: float3 23s ease-in-out infinite normal;
+}
+
+.blob25 {
+  width: max(117px, 11.7vw);
+  height: max(117px, 11.7vw);
+  top: 87%;
+  left: 9%;
+  animation: float2 32s ease-in-out infinite alternate;
+}

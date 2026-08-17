@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  padding: max(15px, 1.7361vw) max(18px, 2.0833vw);
+  align-items: center;
+  gap: max(27px, 3.1250vw);
+  flex-wrap: wrap;
+  align-self: stretch;
+  background: rgba(0, 0, 0, 0.11);
+  /* box-shadow: 0 0 max(4px, 0.5556vw) 0 #0C5B95; */
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  width: max(103px, 11.9444vw);
+  height: max(22px, 2.6389vw);
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: max(18px, 2.0833vw);
+  flex: 1 0 0;
+}
+
+.navItem {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: max(8px, 0.9722vw);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.navItem:hover {
+  opacity: 0.8;
+}
+
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: max(3px, 0.3472vw);
+  cursor: pointer;
+}
+
+.langText {
+  color: #FFF;
+  font-family: var(--font-tektur);
+  font-size: max(10px, 1.2500vw);
+  font-weight: 600;
+}

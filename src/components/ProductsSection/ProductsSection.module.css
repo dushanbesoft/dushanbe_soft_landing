@@ -1,0 +1,109 @@
+.section {
+  display: flex;
+  padding: max(27px, 3.1250vw) max(18px, 2.0833vw);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: max(18px, 2.0833vw);
+  align-self: stretch;
+  background: #000607;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: max(18px, 2.0833vw);
+  align-self: stretch;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  position: relative;
+  flex-wrap: wrap;
+  gap: max(12px, 1.3889vw);
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: max(3px, 0.3472vw);
+  flex: 1 0 0;
+  position: relative;
+}
+
+.subtitle {
+  color: #D9D9D9;
+  font-family: var(--font-tektur);
+  font-size: max(9px, 1.0417vw);
+  font-weight: 500;
+}
+
+.mainTitle {
+  font-family: var(--font-tektur);
+  font-size: max(19px, 2.2222vw);
+  font-weight: 700;
+  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* Fallback */
+@supports not (-webkit-background-clip: text) {
+  .mainTitle {
+    color: #5EB5F0;
+  }
+}
+
+.allProductsBtn {
+  display: flex;
+  padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
+  align-items: center;
+  gap: max(12px, 1.3889vw);
+  border-radius: max(3px, 0.3472vw);
+  border: 1px solid #5EB5F0;
+  background: rgba(1, 101, 88, 0.11);
+  color: #FFF;
+  font-family: var(--font-tektur);
+  font-size: max(9px, 1.0417vw);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.allProductsBtn:hover {
+  background: rgba(1, 101, 88, 0.3);
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: max(12px, 1.3889vw);
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: max(360px, 41.6667vw)) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+}
