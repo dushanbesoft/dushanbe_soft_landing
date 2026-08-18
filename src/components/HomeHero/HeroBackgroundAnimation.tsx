@@ -23,21 +23,26 @@ const Blob = ({ className }: { className: string }) => (
 );
 
 const NetworkCanvas = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasLightRef = useRef<HTMLCanvasElement>(null);
+  const canvasDarkRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvasLight = canvasLightRef.current;
+    const canvasDark = canvasDarkRef.current;
+    if (!canvasLight || !canvasDark) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctxLight = canvasLight.getContext('2d');
+    const ctxDark = canvasDark.getContext('2d');
+    if (!ctxLight || !ctxDark) return;
 
     let particles: Particle[] = [];
     let animationFrameId: number;
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvasLight.width = window.innerWidth;
+      canvasLight.height = window.innerHeight;
+      canvasDark.width = window.innerWidth;
+      canvasDark.height = window.innerHeight;
       initParticles();
     };
 
@@ -49,8 +54,8 @@ const NetworkCanvas = () => {
       radius: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.x = Math.random() * canvasLight.width;
+        this.y = Math.random() * canvasLight.height;
         this.vx = (Math.random() - 0.5) * 0.5; // Slow speed
         this.vy = (Math.random() - 0.5) * 0.5;
         this.radius = Math.random() * 5 + 3; // 3 to 8 px radius (6 to 16 px diameter)
@@ -61,16 +66,24 @@ const NetworkCanvas = () => {
         this.y += this.vy;
 
         // Bounce off walls
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        if (this.x < 0 || this.x > canvasLight.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvasLight.height) this.vy *= -1;
       }
 
       draw() {
-        if (!ctx) return;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(5, 160, 110, 1)';
-        ctx.fill();
+        if (!ctxLight || !ctxDark) return;
+        
+        // Draw dark layer
+        ctxDark.beginPath();
+        ctxDark.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctxDark.fillStyle = '#081821';
+        ctxDark.fill();
+
+        // Draw light layer
+        ctxLight.beginPath();
+        ctxLight.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctxLight.fillStyle = 'rgba(5, 160, 110, 1)';
+        ctxLight.fill();
       }
     }
 
@@ -90,20 +103,31 @@ const NetworkCanvas = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 250) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
             const opacity = 1 - distance / 250;
-            ctx.strokeStyle = `rgba(5, 160, 110, ${opacity * 0.8})`;
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
+            
+            // Draw dark layer line
+            ctxDark.beginPath();
+            ctxDark.moveTo(particles[i].x, particles[i].y);
+            ctxDark.lineTo(particles[j].x, particles[j].y);
+            ctxDark.strokeStyle = `rgba(8, 24, 33, ${opacity})`;
+            ctxDark.lineWidth = 1.5;
+            ctxDark.stroke();
+
+            // Draw light layer line
+            ctxLight.beginPath();
+            ctxLight.moveTo(particles[i].x, particles[i].y);
+            ctxLight.lineTo(particles[j].x, particles[j].y);
+            ctxLight.strokeStyle = `rgba(5, 160, 110, ${opacity * 0.8})`;
+            ctxLight.lineWidth = 1.5;
+            ctxLight.stroke();
           }
         }
       }
     };
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctxLight.clearRect(0, 0, canvasLight.width, canvasLight.height);
+      ctxDark.clearRect(0, 0, canvasDark.width, canvasDark.height);
       
       particles.forEach((p) => {
         p.update();
@@ -125,11 +149,16 @@ const NetworkCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className={styles.networkCanvas} />;
+  return (
+    <>
+      <canvas ref={canvasDarkRef} className={styles.networkCanvasDark} />
+      <canvas ref={canvasLightRef} className={styles.networkCanvasLight} />
+    </>
+  );
 };
 
 export default function HeroBackgroundAnimation() {
-  const blobs = Array.from({ length: 25 }, (_, i) => i + 1);
+  const blobs = Array.from({ length: 50 }, (_, i) => i + 1);
   return (
     <div className={styles.backgroundLayer}>
       {/* 1. Слой: Анимация с кружками (SVG-кляксы) */}

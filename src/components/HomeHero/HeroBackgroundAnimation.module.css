@@ -42,13 +42,26 @@
     radial-gradient(circle at 0% 100%, rgba(5, 150, 100, 0.45) 0%, transparent 55%);
 }
 
-.networkCanvas {
+.networkCanvasDark {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 4;
+  pointer-events: none;
+}
+
+.networkCanvasLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to top right, black 0%, black 20%, transparent 40%, transparent 60%, black 80%, black 100%);
+  mask-image: linear-gradient(to top right, black 0%, black 20%, transparent 40%, transparent 60%, black 80%, black 100%);
 }
 
 .blob {
@@ -79,201 +92,401 @@
 }
 
 .blob1 {
-  width: max(111px, 11.1vw);
-  height: max(111px, 11.1vw);
-  top: 9%;
-  left: -2%;
-  animation: float1 23s ease-in-out infinite reverse;
+  width: max(16px, 1.6vw);
+  height: max(16px, 1.6vw);
+  top: 80%;
+  left: 37%;
+  animation: float1 22s ease-in-out infinite reverse;
 }
 
 .blob2 {
-  width: max(47px, 4.7vw);
-  height: max(47px, 4.7vw);
-  top: 89%;
-  left: 8%;
-  animation: float1 32s ease-in-out infinite alternate-reverse;
+  width: max(15px, 1.5vw);
+  height: max(15px, 1.5vw);
+  top: 99%;
+  left: 27%;
+  animation: float1 16s ease-in-out infinite normal;
 }
 
 .blob3 {
-  width: max(34px, 3.4vw);
-  height: max(34px, 3.4vw);
-  top: -2%;
-  left: 6%;
-  animation: float1 21s ease-in-out infinite normal;
+  width: max(22px, 2.2vw);
+  height: max(22px, 2.2vw);
+  top: 48%;
+  left: 22%;
+  animation: float1 32s ease-in-out infinite alternate-reverse;
 }
 
 .blob4 {
-  width: max(101px, 10.1vw);
-  height: max(101px, 10.1vw);
-  top: 20%;
-  left: 86%;
-  animation: float3 35s ease-in-out infinite alternate-reverse;
+  width: max(23px, 2.3vw);
+  height: max(23px, 2.3vw);
+  top: 41%;
+  left: 80%;
+  animation: float1 15s ease-in-out infinite alternate-reverse;
 }
 
 .blob5 {
-  width: max(58px, 5.8vw);
-  height: max(58px, 5.8vw);
-  top: 52%;
-  left: 70%;
-  animation: float1 23s ease-in-out infinite reverse;
+  width: max(30px, 3.0vw);
+  height: max(30px, 3.0vw);
+  top: 3%;
+  left: 64%;
+  animation: float1 25s ease-in-out infinite normal;
 }
 
 .blob6 {
-  width: max(119px, 11.9vw);
-  height: max(119px, 11.9vw);
-  top: 49%;
-  left: 38%;
-  animation: float1 23s ease-in-out infinite reverse;
+  width: max(33px, 3.3vw);
+  height: max(33px, 3.3vw);
+  top: 89%;
+  left: 12%;
+  animation: float2 34s ease-in-out infinite normal;
 }
 
 .blob7 {
-  width: max(73px, 7.3vw);
-  height: max(73px, 7.3vw);
-  top: 8%;
-  left: 6%;
-  animation: float1 27s ease-in-out infinite alternate;
+  width: max(38px, 3.8vw);
+  height: max(38px, 3.8vw);
+  top: 55%;
+  left: 14%;
+  animation: float2 32s ease-in-out infinite alternate;
 }
 
 .blob8 {
-  width: max(74px, 7.4vw);
-  height: max(74px, 7.4vw);
-  top: 72%;
-  left: 28%;
-  animation: float3 16s ease-in-out infinite alternate-reverse;
-}
-
-.blob9 {
-  width: max(98px, 9.8vw);
-  height: max(98px, 9.8vw);
-  top: 10%;
-  left: 43%;
-  animation: float3 17s ease-in-out infinite alternate;
-}
-
-.blob10 {
-  width: max(110px, 11.0vw);
-  height: max(110px, 11.0vw);
+  width: max(21px, 2.1vw);
+  height: max(21px, 2.1vw);
   top: 74%;
-  left: 41%;
-  animation: float1 33s ease-in-out infinite normal;
-}
-
-.blob11 {
-  width: max(35px, 3.5vw);
-  height: max(35px, 3.5vw);
-  top: 79%;
-  left: 24%;
+  left: -8%;
   animation: float1 24s ease-in-out infinite reverse;
 }
 
-.blob12 {
-  width: max(42px, 4.2vw);
-  height: max(42px, 4.2vw);
-  top: 43%;
-  left: 30%;
-  animation: float3 29s ease-in-out infinite alternate;
+.blob9 {
+  width: max(15px, 1.5vw);
+  height: max(15px, 1.5vw);
+  top: 19%;
+  left: 80%;
+  animation: float2 35s ease-in-out infinite reverse;
 }
 
-.blob13 {
-  width: max(50px, 5.0vw);
-  height: max(50px, 5.0vw);
-  top: 42%;
-  left: 40%;
-  animation: float3 21s ease-in-out infinite alternate;
-}
-
-.blob14 {
-  width: max(119px, 11.9vw);
-  height: max(119px, 11.9vw);
-  top: 82%;
-  left: 77%;
-  animation: float3 17s ease-in-out infinite reverse;
-}
-
-.blob15 {
-  width: max(98px, 9.8vw);
-  height: max(98px, 9.8vw);
-  top: 88%;
-  left: 26%;
-  animation: float2 20s ease-in-out infinite alternate-reverse;
-}
-
-.blob16 {
-  width: max(64px, 6.4vw);
-  height: max(64px, 6.4vw);
-  top: 76%;
-  left: 83%;
-  animation: float1 32s ease-in-out infinite alternate;
-}
-
-.blob17 {
-  width: max(37px, 3.7vw);
-  height: max(37px, 3.7vw);
-  top: 24%;
-  left: -1%;
-  animation: float2 25s ease-in-out infinite alternate;
-}
-
-.blob18 {
-  width: max(38px, 3.8vw);
-  height: max(38px, 3.8vw);
-  top: 22%;
-  left: 67%;
-  animation: float1 25s ease-in-out infinite alternate-reverse;
-}
-
-.blob19 {
-  width: max(80px, 8.0vw);
-  height: max(80px, 8.0vw);
-  top: 77%;
-  left: 53%;
-  animation: float2 19s ease-in-out infinite reverse;
-}
-
-.blob20 {
-  width: max(61px, 6.1vw);
-  height: max(61px, 6.1vw);
-  top: 90%;
-  left: 66%;
-  animation: float2 32s ease-in-out infinite alternate-reverse;
-}
-
-.blob21 {
-  width: max(104px, 10.4vw);
-  height: max(104px, 10.4vw);
-  top: 46%;
-  left: 41%;
-  animation: float1 22s ease-in-out infinite alternate-reverse;
-}
-
-.blob22 {
-  width: max(41px, 4.1vw);
-  height: max(41px, 4.1vw);
-  top: 91%;
-  left: 1%;
-  animation: float1 18s ease-in-out infinite reverse;
-}
-
-.blob23 {
-  width: max(117px, 11.7vw);
-  height: max(117px, 11.7vw);
-  top: 49%;
+.blob10 {
+  width: max(32px, 3.2vw);
+  height: max(32px, 3.2vw);
+  top: 32%;
   left: 71%;
-  animation: float2 17s ease-in-out infinite alternate-reverse;
-}
-
-.blob24 {
-  width: max(106px, 10.6vw);
-  height: max(106px, 10.6vw);
-  top: 54%;
-  left: 62%;
   animation: float3 23s ease-in-out infinite normal;
 }
 
-.blob25 {
-  width: max(117px, 11.7vw);
-  height: max(117px, 11.7vw);
-  top: 87%;
-  left: 9%;
+.blob11 {
+  width: max(19px, 1.9vw);
+  height: max(19px, 1.9vw);
+  top: 104%;
+  left: 0%;
+  animation: float2 27s ease-in-out infinite reverse;
+}
+
+.blob12 {
+  width: max(29px, 2.9vw);
+  height: max(29px, 2.9vw);
+  top: 49%;
+  left: 4%;
+  animation: float2 25s ease-in-out infinite alternate;
+}
+
+.blob13 {
+  width: max(13px, 1.3vw);
+  height: max(13px, 1.3vw);
+  top: 85%;
+  left: 26%;
+  animation: float3 21s ease-in-out infinite alternate-reverse;
+}
+
+.blob14 {
+  width: max(34px, 3.4vw);
+  height: max(34px, 3.4vw);
+  top: 6%;
+  left: 63%;
+  animation: float1 19s ease-in-out infinite alternate;
+}
+
+.blob15 {
+  width: max(36px, 3.6vw);
+  height: max(36px, 3.6vw);
+  top: 4%;
+  left: 91%;
+  animation: float3 19s ease-in-out infinite alternate-reverse;
+}
+
+.blob16 {
+  width: max(14px, 1.4vw);
+  height: max(14px, 1.4vw);
+  top: 59%;
+  left: 45%;
+  animation: float3 19s ease-in-out infinite reverse;
+}
+
+.blob17 {
+  width: max(36px, 3.6vw);
+  height: max(36px, 3.6vw);
+  top: 93%;
+  left: 14%;
+  animation: float2 34s ease-in-out infinite alternate;
+}
+
+.blob18 {
+  width: max(44px, 4.4vw);
+  height: max(44px, 4.4vw);
+  top: 59%;
+  left: 33%;
   animation: float2 32s ease-in-out infinite alternate;
+}
+
+.blob19 {
+  width: max(16px, 1.6vw);
+  height: max(16px, 1.6vw);
+  top: 0%;
+  left: 100%;
+  animation: float1 29s ease-in-out infinite alternate;
+}
+
+.blob20 {
+  width: max(41px, 4.1vw);
+  height: max(41px, 4.1vw);
+  top: 58%;
+  left: 22%;
+  animation: float2 35s ease-in-out infinite reverse;
+}
+
+.blob21 {
+  width: max(18px, 1.8vw);
+  height: max(18px, 1.8vw);
+  top: 24%;
+  left: 65%;
+  animation: float1 31s ease-in-out infinite alternate;
+}
+
+.blob22 {
+  width: max(40px, 4.0vw);
+  height: max(40px, 4.0vw);
+  top: 91%;
+  left: -3%;
+  animation: float1 24s ease-in-out infinite normal;
+}
+
+.blob23 {
+  width: max(24px, 2.4vw);
+  height: max(24px, 2.4vw);
+  top: 107%;
+  left: -5%;
+  animation: float3 17s ease-in-out infinite reverse;
+}
+
+.blob24 {
+  width: max(17px, 1.7vw);
+  height: max(17px, 1.7vw);
+  top: 6%;
+  left: 66%;
+  animation: float3 31s ease-in-out infinite alternate-reverse;
+}
+
+.blob25 {
+  width: max(22px, 2.2vw);
+  height: max(22px, 2.2vw);
+  top: 84%;
+  left: 35%;
+  animation: float3 27s ease-in-out infinite alternate;
+}
+
+.blob26 {
+  width: max(37px, 3.7vw);
+  height: max(37px, 3.7vw);
+  top: 5%;
+  left: 60%;
+  animation: float1 22s ease-in-out infinite alternate;
+}
+
+.blob27 {
+  width: max(10px, 1.0vw);
+  height: max(10px, 1.0vw);
+  top: 73%;
+  left: 27%;
+  animation: float1 15s ease-in-out infinite normal;
+}
+
+.blob28 {
+  width: max(23px, 2.3vw);
+  height: max(23px, 2.3vw);
+  top: 87%;
+  left: -8%;
+  animation: float3 17s ease-in-out infinite reverse;
+}
+
+.blob29 {
+  width: max(26px, 2.6vw);
+  height: max(26px, 2.6vw);
+  top: 24%;
+  left: 72%;
+  animation: float3 19s ease-in-out infinite alternate-reverse;
+}
+
+.blob30 {
+  width: max(24px, 2.4vw);
+  height: max(24px, 2.4vw);
+  top: 2%;
+  left: 97%;
+  animation: float1 18s ease-in-out infinite alternate-reverse;
+}
+
+.blob31 {
+  width: max(31px, 3.1vw);
+  height: max(31px, 3.1vw);
+  top: 19%;
+  left: 97%;
+  animation: float3 16s ease-in-out infinite normal;
+}
+
+.blob32 {
+  width: max(12px, 1.2vw);
+  height: max(12px, 1.2vw);
+  top: 41%;
+  left: 88%;
+  animation: float1 18s ease-in-out infinite reverse;
+}
+
+.blob33 {
+  width: max(21px, 2.1vw);
+  height: max(21px, 2.1vw);
+  top: 17%;
+  left: 62%;
+  animation: float2 20s ease-in-out infinite alternate-reverse;
+}
+
+.blob34 {
+  width: max(24px, 2.4vw);
+  height: max(24px, 2.4vw);
+  top: 57%;
+  left: 18%;
+  animation: float3 16s ease-in-out infinite normal;
+}
+
+.blob35 {
+  width: max(14px, 1.4vw);
+  height: max(14px, 1.4vw);
+  top: 97%;
+  left: 0%;
+  animation: float2 30s ease-in-out infinite reverse;
+}
+
+.blob36 {
+  width: max(34px, 3.4vw);
+  height: max(34px, 3.4vw);
+  top: 93%;
+  left: 0%;
+  animation: float2 15s ease-in-out infinite alternate;
+}
+
+.blob37 {
+  width: max(38px, 3.8vw);
+  height: max(38px, 3.8vw);
+  top: 34%;
+  left: 99%;
+  animation: float3 32s ease-in-out infinite alternate-reverse;
+}
+
+.blob38 {
+  width: max(18px, 1.8vw);
+  height: max(18px, 1.8vw);
+  top: 72%;
+  left: 8%;
+  animation: float3 16s ease-in-out infinite normal;
+}
+
+.blob39 {
+  width: max(29px, 2.9vw);
+  height: max(29px, 2.9vw);
+  top: 106%;
+  left: -7%;
+  animation: float3 31s ease-in-out infinite reverse;
+}
+
+.blob40 {
+  width: max(12px, 1.2vw);
+  height: max(12px, 1.2vw);
+  top: 68%;
+  left: 44%;
+  animation: float3 17s ease-in-out infinite normal;
+}
+
+.blob41 {
+  width: max(24px, 2.4vw);
+  height: max(24px, 2.4vw);
+  top: 26%;
+  left: 60%;
+  animation: float3 22s ease-in-out infinite normal;
+}
+
+.blob42 {
+  width: max(14px, 1.4vw);
+  height: max(14px, 1.4vw);
+  top: 6%;
+  left: 85%;
+  animation: float3 21s ease-in-out infinite alternate;
+}
+
+.blob43 {
+  width: max(24px, 2.4vw);
+  height: max(24px, 2.4vw);
+  top: -2%;
+  left: 95%;
+  animation: float2 35s ease-in-out infinite alternate-reverse;
+}
+
+.blob44 {
+  width: max(29px, 2.9vw);
+  height: max(29px, 2.9vw);
+  top: 103%;
+  left: -10%;
+  animation: float3 34s ease-in-out infinite normal;
+}
+
+.blob45 {
+  width: max(13px, 1.3vw);
+  height: max(13px, 1.3vw);
+  top: 78%;
+  left: 22%;
+  animation: float2 19s ease-in-out infinite normal;
+}
+
+.blob46 {
+  width: max(24px, 2.4vw);
+  height: max(24px, 2.4vw);
+  top: 0%;
+  left: 81%;
+  animation: float3 29s ease-in-out infinite alternate;
+}
+
+.blob47 {
+  width: max(42px, 4.2vw);
+  height: max(42px, 4.2vw);
+  top: 83%;
+  left: 32%;
+  animation: float1 18s ease-in-out infinite alternate;
+}
+
+.blob48 {
+  width: max(16px, 1.6vw);
+  height: max(16px, 1.6vw);
+  top: 64%;
+  left: 37%;
+  animation: float2 23s ease-in-out infinite reverse;
+}
+
+.blob49 {
+  width: max(30px, 3.0vw);
+  height: max(30px, 3.0vw);
+  top: 78%;
+  left: 33%;
+  animation: float2 31s ease-in-out infinite alternate;
+}
+
+.blob50 {
+  width: max(12px, 1.2vw);
+  height: max(12px, 1.2vw);
+  top: 99%;
+  left: 30%;
+  animation: float1 23s ease-in-out infinite normal;
 }
