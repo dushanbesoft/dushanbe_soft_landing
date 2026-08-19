@@ -54,8 +54,8 @@ const NetworkCanvas = () => {
       radius: number;
 
       constructor() {
-        this.x = Math.random() * canvasLight.width;
-        this.y = Math.random() * canvasLight.height;
+        this.x = Math.random() * canvasLight!.width;
+        this.y = Math.random() * canvasLight!.height;
         this.vx = (Math.random() - 0.5) * 0.5; // Slow speed
         this.vy = (Math.random() - 0.5) * 0.5;
         this.radius = Math.random() * 5 + 3; // 3 to 8 px radius (6 to 16 px diameter)
@@ -66,8 +66,8 @@ const NetworkCanvas = () => {
         this.y += this.vy;
 
         // Bounce off walls
-        if (this.x < 0 || this.x > canvasLight.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvasLight.height) this.vy *= -1;
+        if (this.x < 0 || this.x > canvasLight!.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvasLight!.height) this.vy *= -1;
       }
 
       draw() {
