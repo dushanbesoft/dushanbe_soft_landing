@@ -10,7 +10,7 @@ const ArrowUpRight = () => (
 );
 
 const SmsIcon = () => (
-  <svg width="26" height="26" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="36" height="36" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M34.2 9H11.8C10.26 9 9 10.26 9 11.8V37L14.6 31.4H34.2C35.74 31.4 37 30.14 37 28.6V11.8C37 10.26 35.74 9 34.2 9ZM34.2 28.6H13.438L11.8 30.238V11.8H34.2V28.6ZM16 18.8H18.8V21.6H16V18.8ZM27.2 18.8H30V21.6H27.2V18.8ZM21.6 18.8H24.4V21.6H21.6V18.8Z" fill="url(#paint2_linear_sms)"/>
     <defs>
       <linearGradient id="paint2_linear_sms" x1="10.8756" y1="30" x2="35.1244" y2="16" gradientUnits="userSpaceOnUse">
@@ -22,7 +22,7 @@ const SmsIcon = () => (
 );
 
 const ChatIcon = () => (
-  <svg width="26" height="26" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="36" height="36" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M14.4444 26.1013H25.3333V24.5202H14.4444V26.1013ZM14.4444 21.3581H31.5556V19.777H14.4444V21.3581ZM14.4444 16.6148H31.5556V15.0338H14.4444V16.6148ZM9 36.5V12.055C9 11.3267 9.24007 10.719 9.72022 10.232C10.2004 9.74507 10.7977 9.50105 11.5122 9.5H34.4878C35.2033 9.5 35.8007 9.74401 36.2798 10.232C36.7589 10.7201 36.999 11.3277 37 12.055V29.0816C37 29.8089 36.7599 30.4166 36.2798 30.9046C35.7996 31.3926 35.2023 31.6361 34.4878 31.635H13.7864L9 36.5ZM13.1222 30.054H34.4878C34.7263 30.054 34.9456 29.9528 35.1458 29.7504C35.3459 29.548 35.4455 29.3251 35.4444 29.0816V12.0534C35.4444 11.811 35.3449 11.5881 35.1458 11.3846C34.9467 11.1812 34.7273 11.08 34.4878 11.0811H11.5122C11.2737 11.0811 11.0544 11.1823 10.8542 11.3846C10.6541 11.587 10.5545 11.8099 10.5556 12.0534V32.6548L13.1222 30.054Z" fill="url(#paint2_linear_chat)"/>
     <defs>
       <linearGradient id="paint2_linear_chat" x1="10.8756" y1="29.75" x2="34.6755" y2="15.5003" gradientUnits="userSpaceOnUse">
@@ -34,35 +34,30 @@ const ChatIcon = () => (
 );
 
 const smsTags = [
-  { label: 'Персонализация сообщений', highlighted: true },
-  { label: 'Подробная статистика' },
-  { label: 'Низкая стоимость' },
-  { label: 'Отправка всем операторам' },
-  { label: 'Надежность и безопасность' },
-  { label: 'API для интеграции' },
-  { label: 'Использование своих шаблонов' },
-  { label: 'Высокая доставляемость' },
-  { label: 'Высокая скорость и эффективность' },
+  { label: 'Разработка архитектуры платежного и SMS-шлюза', highlighted: true },
+  { label: 'Полная совместимость со всеми устройствами' },
+  { label: 'Высокая стабильность системы и мгновенная доставка сообщений' },
+  { label: 'Модуль планирования рассылок и работа с базой клиентов' },
+  { label: 'Личный кабинет пользователя с управлением тарифами, балансом и шаблонами сообщений' },
+  { label: 'Интеграция REST API для автоматической отправки сообщений из внешних CRM/ERP систем' },
 ];
 
 const chatTags = [
-  { label: 'Мультиканальность' },
-  { label: 'Настройка виджета' },
-  { label: 'Шаблоны ответов' },
-  { label: 'Мгновенный ответ' },
-  { label: 'Умный виджет' },
-  { label: 'Автоответы' },
-  { label: 'Многоязычность' },
-  { label: 'CRM интеграция' },
-  { label: 'Командная работа' },
-  { label: 'Управление операторами' },
-  { label: 'Аналитика и отчёты' },
-  { label: 'Поиск по чатам' },
-  { label: 'История чатов' },
-  { label: 'Безопасность данных' },
+  { label: 'Разработка архитектуры системы', highlighted: true },
+  { label: 'Высокая стабильность системы' },
+  { label: 'Интеграция онлайн-чата и виджетов' },
+  { label: 'Поддержка мобильных устройств' },
+  { label: 'Личный кабинет и аналитика' },
+  { label: 'Защита от DDoS-атак' },
+  { label: 'Мультиязычность' },
 ];
 
-export default function ProductsSection() {
+interface ProductsSectionProps {
+  showAll?: boolean;
+  lang?: string;
+}
+
+export default function ProductsSection({ showAll = false, lang = 'ru' }: ProductsSectionProps) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -71,36 +66,38 @@ export default function ProductsSection() {
             <div className={styles.subtitle}>Наши продукты</div>
             <h2 className={styles.mainTitle}>Готовые продукты для вашего бизнеса</h2>
           </div>
-          <Link href="/products" className={styles.allProductsBtn}>
-            Все продукты <ArrowUpRight />
-          </Link>
+          {!showAll && (
+            <Link href={`/${lang}/products`} className={styles.allProductsBtn}>
+              Все продукты <ArrowUpRight />
+            </Link>
+          )}
         </div>
 
         <div className={styles.cardsContainer}>
           <ProductCard 
-            imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/6cd17b2eb6e5d66a3f49ca6d4c078d80211f395d?width=893"
+            imageSrc="/images/ZudSMSBanner.svg"
             icon={<SmsIcon />}
-            title="SMS Платформа"
-            subtitle="Messaging"
-            description="Высоконагруженная платформа для массовых SMS-рассылок с аналитикой доставки в реальном времени."
+            title="ZudSMS – Платформа SMS-рассылок"
+            subtitle="zudsms.tj"
+            description="Облачный сервис автоматизации и массовой рассылки SMS-сообщений для бизнеса. Платформа обеспечивает мгновенную доставку целевых и транзакционных сообщений на номера всех мобильных операторов Таджикистана, помогая компаниям повышать лояльность клиентов и эффективность маркетинговых кампаний."
             tags={smsTags}
           />
           <ProductCard 
+            imageSrc="/images/liveChatBanner.svg"
+            icon={<ChatIcon />}
+            title="LiveChat TJ - Онлайн-чат"
+            subtitle="LiveChat TJ"
+            description="Веб-сервис и платформа онлайн-консультаций для бизнеса, обеспечивающая связь между организациями и клиентами в режиме реального времени. Платформа способствует автоматизации поддержки клиентов, улучшению качества обслуживания и увеличению продаж за счет мгновенного обмена сообщениями."
+            tags={chatTags}
+          />
+           {/* <ProductCard 
             imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/268dcc72b94a7c00121e9469418d8968ab539011?width=893"
             icon={<ChatIcon />}
             title="Онлайн-чат"
             subtitle="Communication"
             description="Интеллектуальная платформа поддержки клиентов с чат-ботом на базе AI и мультиканальной интеграцией."
             tags={chatTags}
-          />
-           <ProductCard 
-            imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/268dcc72b94a7c00121e9469418d8968ab539011?width=893"
-            icon={<ChatIcon />}
-            title="Онлайн-чат"
-            subtitle="Communication"
-            description="Интеллектуальная платформа поддержки клиентов с чат-ботом на базе AI и мультиканальной интеграцией."
-            tags={chatTags}
-          />
+          /> */}
         </div>
       </div>
     </section>

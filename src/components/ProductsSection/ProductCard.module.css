@@ -42,7 +42,7 @@
 
 .iconWrapper {
   display: flex;
-  padding: max(3px, 0.3472vw) max(6px, 0.6944vw);
+  padding: max(3px, 0.0472vw) max(6px, 0.0944vw);
   flex-direction: column;
   justify-content: center;
   align-items: center;

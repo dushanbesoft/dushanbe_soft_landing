@@ -23,9 +23,9 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
     <TranslationsProvider namespaces={i18nNamespaces} locale={lang} resources={resources}>
       <main>
         <HomeHero />   
-        <ProductsSection />
+        <ProductsSection lang={lang} />
         <WhyUsSection />
-        <CasesSection />
+        <CasesSection lang={lang} />
         <TeamSection />
         <ServicesSection />
         <ProcessSection />

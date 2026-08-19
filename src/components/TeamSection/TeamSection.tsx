@@ -139,12 +139,12 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
-              className={index === activeIndex ? styles.thumbnailActiveWrapper : styles.thumbnailWrapper}
+              className={`${styles.thumbnailWrapper} ${index === activeIndex ? styles.active : ''}`}
               onClick={() => setActiveIndex(index)}
               style={{ cursor: 'pointer' }}
             >
               <img
-                className={index === activeIndex ? styles.thumbnailActive : styles.thumbnail}
+                className={styles.thumbnail}
                 src={member.thumbnail}
                 alt={member.name}
               />
@@ -158,7 +158,7 @@ export default function TeamSection() {
         </div>
 
         <main className={styles.personMainCard}>
-          <div className={styles.personCard}>
+          <div key={activeMember.id} className={styles.personCard}>
             <div className={styles.personInfo}>
               <div className={styles.personHeader}>
                 <h3 className={styles.personName}>{activeMember.name}</h3>

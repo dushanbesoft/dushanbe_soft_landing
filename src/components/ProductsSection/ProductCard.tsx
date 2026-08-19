@@ -24,7 +24,8 @@ export default function ProductCard({
   tags
 }: ProductCardProps) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card}>26
+26
       <img src={imageSrc} alt={title} className={styles.image} />
       
       <div className={styles.content}>
