@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={styles.brandCol}>
           <div className={styles.brandInfo}>
             <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b33f2f87d3a502977caf36c7d982b1092f559af8?width=408" 
+              src="/icons/logo-header.svg" 
               alt="Dushanbe Soft Logo" 
               className={styles.logo}
             />
