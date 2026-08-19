@@ -5,35 +5,115 @@ import styles from './PartnersSection.module.css';
 const partnersData = [
   {
     id: 1,
-    name: "Tcell",
-    logoSmall: "https://api.builder.io/api/v1/image/assets/TEMP/3fffdfd2ae2ec4a52292eb89f2ec350efce35b6f",
-    logoLarge: "https://api.builder.io/api/v1/image/assets/TEMP/3fffdfd2ae2ec4a52292eb89f2ec350efce35b6f",
-    sector: "Сфера услуг",
-    description: "Телекоммуникационная компания, предоставляющая широкий спектр услуг сотовой связи и мобильного интернета."
+    name: "Президент РТ",
+    logoSmall: "/icons/partners/prezedent.svg",
+    logoLarge: "/icons/partners/prezedent.svg",
+    sector: "Государственный сектор",
+    description: "Официальный сайт Президента Республики Таджикистан – главный государственный веб-портал страны."
   },
   {
     id: 2,
-    name: "Somon TV",
-    logoSmall: "https://api.builder.io/api/v1/image/assets/TEMP/e245ba453db3d51833599348ce257cf1745c1169",
-    logoLarge: "https://api.builder.io/api/v1/image/assets/TEMP/8cf6276d4a8a9c55e27e3e7c8a188960bc6df200",
-    sector: "Организация логистики",
-    description: "Организация специализируется на эффективном управлении и координации грузоперевозок и поставок для различных компаний. Благодаря оптимизированным логистическим решениям и передовым технологиям, она обеспечивает клиентам надежное и эффективное перемещение товаров по всей цепочке поставок."
+    name: "Digital Tajikistan",
+    logoSmall: "/icons/partners/pic.svg",
+    logoLarge: "/icons/partners/pic.svg",
+    sector: "Государственный сектор",
+    description: "Государственный портал цифровых услуг Таджикистана. Единая точка доступа к электронным государственным услугам."
   },
   {
     id: 3,
-    name: "Ориёнбанк",
-    logoSmall: "https://api.builder.io/api/v1/image/assets/TEMP/9fc44446caa1764385363348536b656caeb36c6b",
-    logoLarge: "https://api.builder.io/api/v1/image/assets/TEMP/9fc44446caa1764385363348536b656caeb36c6b",
-    sector: "Финансовые технологии",
-    description: "Один из ведущих банков страны, активно внедряющий современные цифровые решения."
+    name: "СХДО",
+    logoSmall: "/icons/partners/shdo.svg",
+    logoLarge: "/icons/partners/shdo.svg",
+    sector: "Государственный сектор",
+    description: "Внутренняя информационная система для автоматизации деятельности пожарной службы и учета чрезвычайных ситуаций."
   },
   {
     id: 4,
-    name: "Alif",
-    logoSmall: "https://api.builder.io/api/v1/image/assets/TEMP/a0aec7389b59c267fe9e6cb147a75e605ac97963",
-    logoLarge: "https://api.builder.io/api/v1/image/assets/TEMP/a0aec7389b59c267fe9e6cb147a75e605ac97963",
-    sector: "Финтех и Электронная коммерция",
-    description: "Инновационная технологическая компания, предоставляющая удобные финансовые сервисы."
+    name: "МегаФон Таджикистан",
+    logoSmall: "/icons/partners/megafon.svg",
+    logoLarge: "/icons/partners/megafon.svg",
+    sector: "Телекоммуникации",
+    description: "Один из ведущих операторов мобильной связи и провайдер цифровых услуг в Таджикистане."
+  },
+  {
+    id: 5,
+    name: "Телекомм Технолоджи",
+    logoSmall: "/icons/partners/ttl.svg",
+    logoLarge: "/icons/partners/ttl.svg",
+    sector: "Телекоммуникации",
+    description: "Телекоммуникационная компания и интернет-провайдер, предоставляющий услуги высокоскоростного интернета и IP-телефонии."
+  },
+  {
+    id: 6,
+    name: "Somon TV",
+    logoSmall: "/icons/partners/somontv.svg",
+    logoLarge: "/icons/partners/somontv.svg",
+    sector: "Медиа и телевидение",
+    description: "Платформа OTT-стриминга для крупнейшей телекомпании Таджикистана, обеспечивающая прямые трансляции и архив VoD."
+  },
+  {
+    id: 7,
+    name: "Mavji Somon",
+    logoSmall: "/icons/partners/mavjisomon.svg",
+    logoLarge: "/icons/partners/mavjisomon.svg",
+    sector: "Медиа и развлечения",
+    description: "Платформа онлайн и сервис потокового вещания для просмотра фильмов, сериалов и телеканалов."
+  },
+  {
+    id: 8,
+    name: "Sunduk TV",
+    logoSmall: "/icons/partners/sunduk.svg",
+    logoLarge: "/icons/partners/sunduk.svg",
+    sector: "Медиа и развлечения",
+    description: "Сервис потокового вещания для просмотра огромной коллекции фильмов, сериалов и популярных телеканалов."
+  },
+  {
+    id: 9,
+    name: "ТВ Синамо",
+    logoSmall: "/icons/partners/sinamo.svg",
+    logoLarge: "/icons/partners/sinamo.svg",
+    sector: "Медиа и телевидение",
+    description: "Государственный телеканал, посвященный кинематографу и культурным программам."
+  },
+  {
+    id: 10,
+    name: "Новое Радио",
+    logoSmall: "/icons/partners/newradio.svg",
+    logoLarge: "/icons/partners/newradio.svg",
+    sector: "Медиа и радиовещание",
+    description: "Популярная радиостанция, предлагающая современные музыкальные хиты и развлекательные программы."
+  },
+  {
+    id: 11,
+    name: "Радио Памир",
+    logoSmall: "/icons/partners/pamir.svg",
+    logoLarge: "/icons/partners/pamir.svg",
+    sector: "Медиа и радиовещание",
+    description: "Радиостанция, транслирующая национальную музыку и новости, объединяющая слушателей по всему региону."
+  },
+  {
+    id: 12,
+    name: "iTrans",
+    logoSmall: "/icons/partners/itrans.svg",
+    logoLarge: "/icons/partners/itrans.svg",
+    sector: "Логистика",
+    description: "Инновационная платформа для управления логистикой и транспортными потоками."
+  },
+  {
+    id: 13,
+    name: "Rushd",
+    logoSmall: "/icons/partners/rushd.svg",
+    logoLarge: "/icons/partners/rushd.svg",
+    sector: "Сфера услуг",
+    description: "Организация, предоставляющая надежные и современные решения для бизнеса."
+  },
+  {
+    id: 14,
+    name: "Zenith",
+    logoSmall: "/icons/partners/zenith.svg",
+    logoLarge: "/icons/partners/zenith.svg",
+    sector: "Сфера услуг",
+    description: "Современная компания, предоставляющая высококачественные услуги для корпоративных и частных клиентов."
   }
 ];
 
