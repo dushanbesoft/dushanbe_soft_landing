@@ -167,3 +167,38 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+  }
+  .mainTitle {
+    font-size: 24px;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+  .headerRow, .titles {
+    align-items: center;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cardTitle {
+    font-size: 18px;
+  }
+  .cardDesc {
+    font-size: 14px;
+  }
+  .badgeText {
+    font-size: 12px;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -138,3 +138,25 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 768px) {
+  .imageHeader {
+    height: 180px;
+  }
+  .content {
+    padding: 16px;
+    gap: 8px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .tag {
+    padding: 6px 12px;
+  }
+  .tagText {
+    font-size: 12px;
+  }
+}

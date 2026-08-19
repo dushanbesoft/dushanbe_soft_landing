@@ -52,3 +52,70 @@
   font-size: max(10px, 1.2500vw);
   font-weight: 600;
 }
+
+.controlsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+@media (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+  
+  .hamburgerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 50;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  }
+
+  .navOpen {
+    right: 0;
+  }
+
+  .navItem {
+    font-size: 18px;
+  }
+
+  .overlay {
+    display: block;
+  }
+}

@@ -296,6 +296,54 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+  .mainTitle {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .personCard {
+    padding: 20px;
+    width: calc(100% - 40px);
+    flex-direction: column;
+    align-items: center;
+  }
+  .personInfo {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+  .personName {
+    font-size: 18px;
+  }
+  .personRole, .personBio {
+    font-size: 14px;
+  }
+  .detailLabel {
+    width: 100px;
+    font-size: 12px;
+  }
+  .detailValue {
+    font-size: 12px;
+  }
+  .statValue {
+    font-size: 24px;
+  }
+  .statLabel {
+    font-size: 12px;
+  }
+  .thumbnailWrapper {
+    width: 60px;
+  }
+  .thumbnailWrapper.active {
+    width: 70px;
+  }
+  .personImage {
+    width: 100%;
+    max-width: 250px;
+  }
   .statItem {
     border-right: none;
     border-bottom: 1px solid #5eb5f0;

@@ -70,9 +70,32 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mainTitle {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
   .grid {
     grid-template-columns: 1fr;
+  }
+  .cardTitle {
+    font-size: 16px;
+  }
+  .cardDescription {
+    font-size: 14px;
+  }
+  .iconWrapper {
+    width: 32px;
+    height: 32px;
   }
 }
 

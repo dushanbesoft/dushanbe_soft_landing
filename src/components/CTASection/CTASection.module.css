@@ -125,3 +125,40 @@
   width: max(18px, 1.527vw);
   height: max(18px, 1.527vw);
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+    align-items: center;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .desc {
+    max-width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    max-height: none;
+    padding: 15px;
+  }
+  .secondaryBtn {
+    width: calc(100% - 30px);
+    max-height: none;
+    padding: 15px;
+  }
+  .primaryBtn span, .secondaryBtn span {
+    font-size: 16px;
+  }
+}

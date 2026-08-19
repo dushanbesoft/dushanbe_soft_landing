@@ -163,9 +163,41 @@
   .top {
     flex-direction: column;
     gap: 40px;
+    padding: 30px 20px;
   }
   
   .brandCol, .contactCol {
     width: 100%;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .colTitle {
+    font-size: 18px;
+  }
+
+  .link, .contactItem span, .contactItem a, .copyright {
+    font-size: 14px;
+  }
+
+  .contactItem svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .bottom {
+    padding: 20px;
+    text-align: center;
   }
 }

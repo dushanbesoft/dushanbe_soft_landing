@@ -415,3 +415,81 @@
   width: max(16px, 1.527vw);
   height: max(16px, 1.527vw);
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .leftCol, .rightCol {
+    width: 100%;
+    flex: none;
+  }
+  .titleGradient, .titleBlack {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .desc {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .features {
+    gap: 20px;
+  }
+  .featureItem {
+    min-width: 45%;
+  }
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .featureLabel {
+    font-size: 14px;
+  }
+  .featureValue {
+    font-size: 16px;
+  }
+  .teamBox {
+    padding: 20px;
+  }
+  .teamText {
+    font-size: 14px;
+  }
+  .messengersTitle {
+    font-size: 16px;
+  }
+  .messengerName {
+    font-size: 14px;
+  }
+  .messengerIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .formCard {
+    padding: 20px;
+  }
+  .formTitle {
+    font-size: 20px;
+  }
+  .formSubtitle {
+    font-size: 14px;
+  }
+  .label, .input, .select, .textarea {
+    font-size: 14px;
+  }
+  .submitBtn {
+    padding: 15px;
+  }
+  .submitBtn span {
+    font-size: 16px;
+  }
+  .submitBtn svg {
+    width: 20px;
+    height: 20px;
+  }
+}

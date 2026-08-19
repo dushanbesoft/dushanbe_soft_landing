@@ -190,3 +190,62 @@
   width: max(24px, 2.9417vw);
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+  }
+  .title {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+  }
+  .subtitle {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+  .header {
+    align-items: center;
+  }
+  .grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .reviewText {
+    font-size: 14px;
+  }
+  .cardFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .avatarWrapper {
+    width: 48px;
+    height: 48px;
+  }
+  .authorName {
+    font-size: 16px;
+  }
+  .authorRole {
+    font-size: 12px;
+  }
+  .stars svg {
+    width: 80px;
+  }
+  .pagination {
+    margin-top: 20px;
+  }
+  .dot {
+    width: 12px;
+    height: 6px;
+  }
+  .dotActive {
+    width: 24px;
+  }
+}

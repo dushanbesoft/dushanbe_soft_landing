@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 
@@ -17,43 +19,89 @@ const DownArrow = () => (
   </svg>
 );
 
+const HamburgerIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+);
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu when resizing to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 900 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className={styles.header}>
-      <Link href="/">
+      <Link href="/" onClick={closeMenu}>
         <img
           className={styles.logo}
           src="/icons/logo-header.svg"
           alt="Dushanbe-Soft Logo"
         />
       </Link>
-      <nav className={styles.nav}>
-        <Link href="/" className={styles.navItem}>
+      
+      <div className={styles.controlsWrapper}>
+        <div className={styles.langSwitcher}>
+          <span className={styles.langText}>ТҶ</span>
+          <DownArrow />
+        </div>
+        
+        <button 
+          className={styles.hamburgerBtn} 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+        </button>
+      </div>
+
+      <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
+        <Link href="/" className={styles.navItem} onClick={closeMenu}>
           Главная
         </Link>
-        <Link href="/services" className={styles.navItem}>
+        <Link href="/services" className={styles.navItem} onClick={closeMenu}>
           Услуги
         </Link>
-        <Link href="/products" className={styles.navItem}>
+        <Link href="/products" className={styles.navItem} onClick={closeMenu}>
           Продукты
         </Link>
-        <Link href="/cases" className={styles.navItem}>
+        <Link href="/cases" className={styles.navItem} onClick={closeMenu}>
           Кейсы
         </Link>
-        <Link href="/partners" className={styles.navItem}>
+        <Link href="/partners" className={styles.navItem} onClick={closeMenu}>
           Партнёры
         </Link>
-        <Link href="/about" className={styles.navItem}>
+        <Link href="/about" className={styles.navItem} onClick={closeMenu}>
           О компании
         </Link>
-        <Link href="/contacts" className={styles.navItem}>
+        <Link href="/contacts" className={styles.navItem} onClick={closeMenu}>
           Контакты
         </Link>
       </nav>
-      <div className={styles.langSwitcher}>
-        <span className={styles.langText}>ТҶ</span>
-        <DownArrow />
-      </div>
+      
+      {/* Overlay to close menu when clicking outside */}
+      {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}
     </header>
   );
 }

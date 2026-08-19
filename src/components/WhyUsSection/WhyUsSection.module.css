@@ -77,7 +77,16 @@
   }
 }
 
-@media (max-width: max(360px, 41.6667vw)) {
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+  .mainTitle {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
   .cardsGrid {
     grid-template-columns: 1fr;
   }
