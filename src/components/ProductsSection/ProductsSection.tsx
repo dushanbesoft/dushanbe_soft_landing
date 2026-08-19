@@ -90,14 +90,6 @@ export default function ProductsSection({ showAll = false, lang = 'ru' }: Produc
             description="Веб-сервис и платформа онлайн-консультаций для бизнеса, обеспечивающая связь между организациями и клиентами в режиме реального времени. Платформа способствует автоматизации поддержки клиентов, улучшению качества обслуживания и увеличению продаж за счет мгновенного обмена сообщениями."
             tags={chatTags}
           />
-           {/* <ProductCard 
-            imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/268dcc72b94a7c00121e9469418d8968ab539011?width=893"
-            icon={<ChatIcon />}
-            title="Онлайн-чат"
-            subtitle="Communication"
-            description="Интеллектуальная платформа поддержки клиентов с чат-ботом на базе AI и мультиканальной интеграцией."
-            tags={chatTags}
-          /> */}
         </div>
       </div>
     </section>

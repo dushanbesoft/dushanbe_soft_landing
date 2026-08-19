@@ -33,6 +33,8 @@
 }
 
 .yearBadge {
+  position: absolute;
+  right: max(6px, 0.6944vw);
   display: flex;
   padding: max(3px, 0.3472vw) max(6px, 0.6944vw);
   justify-content: center;
