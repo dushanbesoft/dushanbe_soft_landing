@@ -37,7 +37,6 @@ const CloseIcon = () => (
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close menu when resizing to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 900 && isMenuOpen) {
@@ -61,21 +60,6 @@ export default function Header() {
         />
       </Link>
       
-      <div className={styles.controlsWrapper}>
-        <div className={styles.langSwitcher}>
-          <span className={styles.langText}>ТҶ</span>
-          <DownArrow />
-        </div>
-        
-        <button 
-          className={styles.hamburgerBtn} 
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
-        </button>
-      </div>
-
       <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
         <Link href="/" className={styles.navItem} onClick={closeMenu}>
           Главная
@@ -99,8 +83,22 @@ export default function Header() {
           Контакты
         </Link>
       </nav>
+
+      <div className={styles.controlsWrapper}>
+        <div className={styles.langSwitcher}>
+          <span className={styles.langText}>ТҶ</span>
+          <DownArrow />
+        </div>
+        
+        <button 
+          className={styles.hamburgerBtn} 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+        </button>
+      </div>
       
-      {/* Overlay to close menu when clicking outside */}
       {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}
     </header>
   );

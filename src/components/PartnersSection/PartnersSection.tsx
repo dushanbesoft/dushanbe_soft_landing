@@ -118,7 +118,7 @@ const partnersData = [
 ];
 
 export default function PartnersSection() {
-  const [activeIndex, setActiveIndex] = useState(1); // default index 1 (Somon TV)
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const nextPartner = () => {
     setActiveIndex((prev) => (prev + 1) % partnersData.length);

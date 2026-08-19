@@ -56,16 +56,15 @@ const NetworkCanvas = () => {
       constructor() {
         this.x = Math.random() * canvasLight!.width;
         this.y = Math.random() * canvasLight!.height;
-        this.vx = (Math.random() - 0.5) * 0.5; // Slow speed
+        this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
-        this.radius = Math.random() * 5 + 3; // 3 to 8 px radius (6 to 16 px diameter)
+        this.radius = Math.random() * 5 + 3;
       }
 
       update() {
         this.x += this.vx;
         this.y += this.vy;
 
-        // Bounce off walls
         if (this.x < 0 || this.x > canvasLight!.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvasLight!.height) this.vy *= -1;
       }
@@ -73,13 +72,11 @@ const NetworkCanvas = () => {
       draw() {
         if (!ctxLight || !ctxDark) return;
         
-        // Draw dark layer
         ctxDark.beginPath();
         ctxDark.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctxDark.fillStyle = '#081821';
         ctxDark.fill();
 
-        // Draw light layer
         ctxLight.beginPath();
         ctxLight.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctxLight.fillStyle = 'rgba(5, 160, 110, 1)';
@@ -105,7 +102,6 @@ const NetworkCanvas = () => {
           if (distance < 250) {
             const opacity = 1 - distance / 250;
             
-            // Draw dark layer line
             ctxDark.beginPath();
             ctxDark.moveTo(particles[i].x, particles[i].y);
             ctxDark.lineTo(particles[j].x, particles[j].y);
@@ -113,7 +109,6 @@ const NetworkCanvas = () => {
             ctxDark.lineWidth = 1.5;
             ctxDark.stroke();
 
-            // Draw light layer line
             ctxLight.beginPath();
             ctxLight.moveTo(particles[i].x, particles[i].y);
             ctxLight.lineTo(particles[j].x, particles[j].y);
@@ -161,20 +156,16 @@ export default function HeroBackgroundAnimation() {
   const blobs = Array.from({ length: 50 }, (_, i) => i + 1);
   return (
     <div className={styles.backgroundLayer}>
-      {/* 1. Слой: Анимация с кружками (SVG-кляксы) */}
       <div className={styles.layerBlobs}>
         {blobs.map((num) => (
           <Blob key={num} className={styles[`blob${num}`]} />
         ))}
       </div>
 
-      {/* 2. Слой: Затемнение (Диагональное, скрывает нижние слои в центре) */}
       <div className={styles.layerDarken} />
 
-      {/* 3. Слой: Свечение (Свечение по углам) */}
       <div className={styles.layerGlow} />
 
-      {/* 4. Слой: Анимация паутины (Сверху, поверх всего остального) */}
       <NetworkCanvas />
     </div>
   );

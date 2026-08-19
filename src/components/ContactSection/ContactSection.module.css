@@ -230,7 +230,8 @@
 .messengerItem {
   display: flex;
   align-items: center;
-  gap: max(5.5px, 0.694vw);
+  gap: max(15px, 1.041vw);
+  text-decoration: none;
 }
 
 .messengerIcon {
