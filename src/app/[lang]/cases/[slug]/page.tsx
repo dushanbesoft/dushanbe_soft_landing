@@ -45,6 +45,8 @@ const ArrowLeftIcon = () => (
   </svg>
 );
 
+import { Metadata } from "next";
+
 export async function generateStaticParams() {
   const languages = ["ru", "tj", "en"];
   const params: { lang: string; slug: string }[] = [];
@@ -56,6 +58,60 @@ export async function generateStaticParams() {
   });
 
   return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const project = ProductSite.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {};
+  }
+
+  const { t } = await initTranslations(lang, ["common"]);
+  const title = t(`projects.${project.slug}.title`, { defaultValue: "Кейс Dushanbe Soft" });
+  const description = t(`projects.${project.slug}.description`, { defaultValue: "Кейс Dushanbe Soft" });
+  
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      url: `${siteUrl}/${lang}/cases/${slug}`,
+      images: [
+        {
+          url: project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+      locale: lang === 'tj' ? 'tg_TJ' : lang === 'ru' ? 'ru_RU' : 'en_US',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`],
+    },
+    alternates: {
+      canonical: `${siteUrl}/${lang}/cases/${slug}`,
+      languages: {
+        'tg': `${siteUrl}/tj/cases/${slug}`,
+        'ru': `${siteUrl}/ru/cases/${slug}`,
+        'en': `${siteUrl}/en/cases/${slug}`,
+        'x-default': `${siteUrl}/ru/cases/${slug}`,
+      },
+    },
+  };
 }
 
 export default async function CaseDetailsPage({
