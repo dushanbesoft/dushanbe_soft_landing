@@ -1,4 +1,5 @@
 import React from 'react';
+import initTranslations from '@/app/i18n';
 import styles from './ServicesSection.module.css';
 
 const services = [
@@ -136,14 +137,17 @@ const services = [
   }
 ];
 
-export default function ServicesSection() {
+const i18nNamespaces = ['common'];
+
+export default async function ServicesSection({ lang = 'ru' }: { lang?: string }) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
   return (
-    <section className={styles.section}>
+    <section id="services" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>Что мы делаем</span>
-            <h2 className={styles.mainTitle}>Полный спектр IT-услуг</h2>
+            <span className={styles.subtitle}>{t('services.subtitle', 'Что мы делаем')}</span>
+            <h2 className={styles.mainTitle}>{t('services.title', 'Полный спектр IT-услуг')}</h2>
           </div>
         </div>
 
@@ -154,8 +158,8 @@ export default function ServicesSection() {
                 {service.icon}
               </div>
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{service.title}</h3>
-                <p className={styles.cardDescription}>{service.description}</p>
+                <h3 className={styles.cardTitle}>{t(`services.list.${index}.title`, service.title)}</h3>
+                <p className={styles.cardDescription}>{t(`services.list.${index}.description`, service.description)}</p>
               </div>
             </div>
           ))}

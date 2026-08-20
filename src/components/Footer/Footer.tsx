@@ -1,7 +1,11 @@
 import React from 'react';
+import initTranslations from '@/app/i18n';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+const i18nNamespaces = ['common'];
+
+export default async function Footer({ lang = 'ru' }: { lang?: string }) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>
@@ -13,7 +17,7 @@ export default function Footer() {
               className={styles.logo}
             />
             <p className={styles.desc}>
-              Ведущая IT-компания Таджикистана. Разрабатываем цифровые решения для бизнеса и государства с 2015 года.
+              {t('footer.desc', 'Ведущая IT-компания Таджикистана. Разрабатываем цифровые решения для бизнеса и государства с 2015 года.')}
             </p>
           </div>
           <div className={styles.socials}>
@@ -56,37 +60,37 @@ export default function Footer() {
         </div>
 
         <div className={styles.linksCol}>
-          <h4 className={styles.colTitle}>Компания</h4>
+          <h4 className={styles.colTitle}>{t('footer.col1', 'Компания')}</h4>
           <div className={styles.linksList}>
-            <a href="#" className={styles.link}>О нас</a>
-            <a href="#" className={styles.link}>Команда</a>
-            <a href="#" className={styles.link}>Наши продукты</a>
-            <a href="#" className={styles.link}>Как мы работаем</a>
-            <a href="#" className={styles.link}>Кейсы</a>
-            <a href="#" className={styles.link}>Отзывы</a>
+            <a href="#" className={styles.link}>{t('footer.links1.0', 'О нас')}</a>
+            <a href="#" className={styles.link}>{t('footer.links1.1', 'Команда')}</a>
+            <a href="#" className={styles.link}>{t('footer.links1.2', 'Наши продукты')}</a>
+            <a href="#" className={styles.link}>{t('footer.links1.3', 'Как мы работаем')}</a>
+            <a href="#" className={styles.link}>{t('footer.links1.4', 'Кейсы')}</a>
+            <a href="#" className={styles.link}>{t('footer.links1.5', 'Отзывы')}</a>
           </div>
         </div>
 
         <div className={styles.linksCol}>
-          <h4 className={styles.colTitle}>Услуги</h4>
+          <h4 className={styles.colTitle}>{t('footer.col2', 'Услуги')}</h4>
           <div className={styles.linksList}>
-            <a href="#" className={styles.link}>Веб-разработка</a>
-            <a href="#" className={styles.link}>Мобильная разработка</a>
-            <a href="#" className={styles.link}>UI/UX Дизайн</a>
-            <a href="#" className={styles.link}>API Интеграция</a>
-            <a href="#" className={styles.link}>Кибербезопасность</a>
-            <a href="#" className={styles.link}>Техническая поддержка</a>
+            <a href="#" className={styles.link}>{t('footer.links2.0', 'Веб-разработка')}</a>
+            <a href="#" className={styles.link}>{t('footer.links2.1', 'Мобильная разработка')}</a>
+            <a href="#" className={styles.link}>{t('footer.links2.2', 'UI/UX Дизайн')}</a>
+            <a href="#" className={styles.link}>{t('footer.links2.3', 'API Интеграция')}</a>
+            <a href="#" className={styles.link}>{t('footer.links2.4', 'Кибербезопасность')}</a>
+            <a href="#" className={styles.link}>{t('footer.links2.5', 'Техническая поддержка')}</a>
           </div>
         </div>
 
         <div className={styles.contactCol}>
-          <h4 className={styles.colTitle}>Тамос</h4>
+          <h4 className={styles.colTitle}>{t('footer.col3', 'Контакты')}</h4>
           <div className={styles.contactList}>
             <div className={styles.contactItem}>
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.0763 1C6.70333 1 3 4.49156 3 8.62781C3 12.9591 7.29233 17.3884 10.1797 20.5016C10.1907 20.5141 10.6574 21 11.2323 21H11.2834C11.8584 21 12.3217 20.5141 12.3333 20.5016C15.043 17.5812 19 12.7663 19 8.62781C19 4.49156 16.1113 1 11.0763 1ZM11.3437 19.6631C11.3203 19.685 11.2863 19.7094 11.2563 19.7297C11.2256 19.71 11.1923 19.685 11.1677 19.6631L10.819 19.2872C8.08167 16.3431 4.33333 12.3116 4.33333 8.62781C4.33333 5.17063 7.42133 2.24969 11.0763 2.24969C15.629 2.24969 17.6667 5.45281 17.6667 8.62781C17.6667 11.4244 15.539 15.1375 11.3437 19.6631ZM11.0233 4.78469C8.81431 4.78469 7.02331 6.46375 7.02331 8.53469C7.02331 10.6056 8.81431 12.2847 11.0233 12.2847C13.2323 12.2847 15.0233 10.6056 15.0233 8.53469C15.0233 6.46375 13.2323 4.78469 11.0233 4.78469ZM11.0233 11.0347C9.55298 11.0347 8.32596 9.88594 8.32596 8.50719C8.32596 7.12875 9.52229 6.00719 10.9926 6.00719C12.464 6.00719 13.6593 7.12875 13.6593 8.50719C13.66 9.88594 12.4946 11.0347 11.0233 11.0347Z" fill="white"/>
               </svg>
-              <span>Ҷумҳурии Тоҷикистон, ш. Душанбе</span>
+              <span>{t('footer.address', 'Республика Таджикистан, г. Душанбе')}</span>
             </div>
             
             <div className={styles.contactItem}>
@@ -113,7 +117,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottom}>
-        <p className={styles.copyright}>© 2017–2026 Dushanbe Soft. Все права защищены.</p>
+        <p className={styles.copyright}>{t('footer.copyright', '© 2017–2026 Dushanbe Soft. Все права защищены.')}</p>
       </div>
     </footer>
   );

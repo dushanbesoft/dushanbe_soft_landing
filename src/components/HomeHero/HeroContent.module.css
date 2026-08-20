@@ -7,6 +7,7 @@
   flex: 1 0 0;
   position: relative;
   width: 100%;
+  padding-top: max(15px, 5.7361vw);
 }
 
 .titlesContainer {
@@ -130,7 +131,7 @@
   .heroContent {
     padding: 20px;
     margin-top: 40px;
-    width: calc(100% - 40px);
+    width: calc(100%);
   }
   .mainTitle {
     font-size: 26px;
@@ -145,7 +146,7 @@
     align-items: stretch;
   }
   .btnPrimary, .btnSecondary {
-    width: calc(100% - max(36px, 2.0833vw));
+    width: calc(100%);
     font-size: 14px;
     height: 48px;
   }

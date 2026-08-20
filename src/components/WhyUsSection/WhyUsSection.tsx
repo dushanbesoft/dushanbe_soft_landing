@@ -1,4 +1,5 @@
 import React from 'react';
+import initTranslations from '@/app/i18n';
 import styles from './WhyUsSection.module.css';
 import WhyUsCard from './WhyUsCard';
 
@@ -61,49 +62,52 @@ const SupportIcon = () => (
     </defs>
   </svg>
 );
+const i18nNamespaces = ['common'];
 
-export default function WhyUsSection() {
+export default async function WhyUsSection({ lang = 'ru' }: { lang?: string }) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
+
   return (
-    <section className={styles.section}>
+    <section id="about" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <div className={styles.subtitle}>Почему мы</div>
-            <h2 className={styles.mainTitle}>Технологии. Опыт. Доверие.</h2>
+            <div className={styles.subtitle}>{t('whyUs.subtitle', 'Почему мы')}</div>
+            <h2 className={styles.mainTitle}>{t('whyUs.title', 'Технологии. Опыт. Доверие.')}</h2>
           </div>
         </div>
 
         <div className={styles.cardsGrid}>
           <WhyUsCard 
             icon={<StandardIcon />}
-            title="Международные стандарты"
-            description="ISO 9001, GDPR, ISO/IEC 27001 — международные стандарты качества и безопасности."
+            title={t('whyUs.standards.title', 'Международные стандарты')}
+            description={t('whyUs.standards.desc', 'ISO 9001, GDPR, ISO/IEC 27001 — международные стандарты качества и безопасности.')}
           />
           <WhyUsCard  
             icon={<CrossIcon />}
-            title="Индивидуальный подход"
-            description="Каждый проект — индивидуальная стратегия и оптимальное решение."
+            title={t('whyUs.individual.title', 'Индивидуальный подход')}
+            description={t('whyUs.individual.desc', 'Каждый проект — индивидуальная стратегия и оптимальное решение.')}
           />
           <WhyUsCard 
             icon={<SecurityIcon />}
-            title="Высокая безопасность"
-            description="Многоуровневая защита, OWASP, шифрование и регулярные аудиты."
+            title={t('whyUs.security.title', 'Высокая безопасность')}
+            description={t('whyUs.security.desc', 'Многоуровневая защита, OWASP, шифрование и регулярные аудиты.')}
           />
           
           <WhyUsCard 
             icon={<TechnologyIcon />}
-            title="Современные технологии"
-            description="React, Flutter, Node.js, AI/ML, облачные технологии — только актуальный стек."
+            title={t('whyUs.technology.title', 'Современные технологии')}
+            description={t('whyUs.technology.desc', 'React, Flutter, Node.js, AI/ML, облачные технологии — только актуальный стек.')}
           />
           <WhyUsCard 
             icon={<SupportIcon />}
-            title="Поддержка 24/7"
-            description="Выделенная команда мониторинга и поддержки. SLA с гарантированным временем отклика до 30 минут."
+            title={t('whyUs.support.title', 'Поддержка 24/7')}
+            description={t('whyUs.support.desc', 'Выделенная команда мониторинга и поддержки. SLA с гарантированным временем отклика до 30 минут.')}
           />
           <WhyUsCard 
             icon={<CrossIcon />}
-            title="Долгосрочное партнёрство"
-            description="80% клиентов возвращаются с новыми проектами. Мы строим отношения на годы, а не на спринты."
+            title={t('whyUs.partnership.title', 'Долгосрочное партнёрство')}
+            description={t('whyUs.partnership.desc', '80% клиентов возвращаются с новыми проектами. Мы строим отношения на годы, а не на спринты.')}
           />
         </div>
       </div>

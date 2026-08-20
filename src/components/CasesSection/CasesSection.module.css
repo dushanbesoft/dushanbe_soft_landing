@@ -124,7 +124,7 @@
     grid-template-columns: 1fr;
   }
   .allCasesBtn {
-    width:  calc(100% - 24px);
+    width:  calc(100%);
     justify-content: center;
     padding: 12px;
   }

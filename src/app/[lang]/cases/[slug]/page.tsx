@@ -71,6 +71,10 @@ export default async function CaseDetailsPage({
   }
 
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
+  
+  const title = t(`projects.${project.slug}.title`);
+  const description = t(`projects.${project.slug}.description`);
+  const tasks = t(`projects.${project.slug}.tasks`, { returnObjects: true, defaultValue: null }) as string[] | null;
 
   return (
     <TranslationsProvider
@@ -93,27 +97,27 @@ export default async function CaseDetailsPage({
         <div className={styles.contentWrapper}>
           <Link href={`/${lang}/cases`} className={styles.backBtn}>
             <ArrowLeftIcon />
-            <span>Все проекты</span>
+            <span>{t("cases.all_projects")}</span>
           </Link>
 
           <div className={styles.heroContent}>
             <div className={styles.yearBadge}>
               <span className={styles.yearText}>{project.year}</span>
             </div>
-            <h1 className={styles.title}>{project.title}</h1>
+            <h1 className={styles.title}>{title}</h1>
           </div>
 
           <div className={styles.descriptionSection}>
-            <h2 className={styles.sectionTitle}>О проекте</h2>
-            <p className={styles.descriptionText}>{project.description}</p>
+            <h2 className={styles.sectionTitle}>{t("cases.about_project")}</h2>
+            <p className={styles.descriptionText}>{description}</p>
           </div>
 
           <div className={styles.grid}>
-            {project.tasks && project.tasks.length > 0 && (
+            {Array.isArray(tasks) && tasks.length > 0 && (
               <div className={styles.tasksSection}>
-                <h2 className={styles.sectionTitle}>Чӣ иҷро карда шуд</h2>
+                <h2 className={styles.sectionTitle}>{t("cases.what_was_done")}</h2>
                 <ul className={styles.tasksList}>
-                  {project.tasks.map((task, idx) => (
+                  {tasks.map((task, idx) => (
                     <li key={idx} className={styles.taskItem}>
                       <CheckIcon />
                       <span>{task}</span>
@@ -124,7 +128,7 @@ export default async function CaseDetailsPage({
             )}
 
             <div className={styles.tagsSection}>
-              <h2 className={styles.sectionTitle}>Технологияҳо</h2>
+              <h2 className={styles.sectionTitle}>{t("cases.technologies")}</h2>
               <div className={styles.tagsContainer}>
                 {project.tags.map((tag, idx) => (
                   <div key={idx} className={styles.tag}>

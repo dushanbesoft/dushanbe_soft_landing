@@ -31,21 +31,21 @@ export default async function Page({
       resources={resources}
     >
       <main className="main-global">
-        <div className="header-global">
+        <div className="header-global header-fixed">
           <Header />
         </div>
         <HomeHero />
         <ProductsSection lang={lang} />
-        <WhyUsSection />
+        <WhyUsSection lang={lang} />
         <CasesSection lang={lang} />
         <TeamSection />
-        <ServicesSection />
-        <ProcessSection />
-        <ReviewsSection />
+        <ServicesSection lang={lang} />
+        <ProcessSection lang={lang} />
+        <ReviewsSection lang={lang} />
         <PartnersSection />
-        <ContactSection />
-        <CTASection />
-        <Footer />
+        <ContactSection lang={lang} />
+        <CTASection lang={lang} />
+        <Footer lang={lang} />
       </main>
     </TranslationsProvider>
   );

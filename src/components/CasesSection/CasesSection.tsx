@@ -3,6 +3,9 @@ import Link from "next/link";
 import styles from "./CasesSection.module.css";
 import CaseCard from "./CaseCard";
 import { ProductSite } from "../../const/product-site";
+import initTranslations from "../../app/i18n";
+
+const i18nNamespaces = ["common"];
 
 const ArrowUpIcon = () => (
   <svg
@@ -38,18 +41,20 @@ interface CasesSectionProps {
   lang?: string;
 }
 
-export default function CasesSection({ showAll = false, lang = 'ru' }: CasesSectionProps) {
+export default async function CasesSection({ showAll = false, lang = 'ru' }: CasesSectionProps) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
+  
   return (
-    <section className={styles.section}>
+    <section id="cases" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>Кейсы</span>
-            <h2 className={styles.mainTitle}>Проекты, которыми мы гордимся</h2>
+            <span className={styles.subtitle}>{t("cases.subtitle")}</span>
+            <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
           </div>
           {!showAll && (
             <Link href={`/${lang}/cases`} className={styles.allCasesBtn}>
-              <span className={styles.btnText}>Все кейсы</span>
+              <span className={styles.btnText}>{t("cases.all_cases")}</span>
               <ArrowUpIcon />
             </Link>
           )}
@@ -63,8 +68,8 @@ export default function CasesSection({ showAll = false, lang = 'ru' }: CasesSect
               lang={lang}
               imageSrc={e.imageSrc}
               year={e.year}
-              title={e.title}
-              description={e.description}
+              title={t(`projects.${e.slug}.title`)}
+              description={t(`projects.${e.slug}.description`)}
               tags={e.tags}
             />
           ))}

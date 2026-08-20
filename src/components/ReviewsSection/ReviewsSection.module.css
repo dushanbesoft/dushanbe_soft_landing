@@ -6,7 +6,7 @@
   align-items: center;
   background: #FDFDFE;
   position: relative;
-  width: calc(100% -  max(17px, 5.0833vw));
+  width: 100%;
 }
 
 .container {
@@ -52,7 +52,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: max(11px, 1.3889vw);
-  width: calc(100% - max(17px, 4.0833vw));
+  width: calc(100%);
   position: relative;
 }
 
@@ -194,7 +194,7 @@
 @media (max-width: 768px) {
   .section {
     padding: 30px 20px;
-    width: calc(100% - 40px);
+    width: calc(100%);
   }
   .title {
     font-size: 24px;

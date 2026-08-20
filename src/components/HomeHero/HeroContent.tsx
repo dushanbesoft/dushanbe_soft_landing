@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import styles from './HeroContent.module.css';
 
 const ArrowRight = () => (
@@ -9,25 +10,27 @@ const ArrowRight = () => (
 );
 
 export default function HeroContent() {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.heroContent}>
       <div className={styles.titlesContainer}>
         <div className={styles.badge}>
           <div className={styles.badgeIcon} />
-          <span className={styles.badgeText}>IT-решения для бизнеса и государства</span>
+          <span className={styles.badgeText}>{t('hero.badge', 'IT-решения для бизнеса и государства')}</span>
         </div>
-        <h1 className={styles.mainTitle}>Технологии, которые<br/>двигают бизнес вперёд</h1>
+        <h1 className={styles.mainTitle}>{t('hero.title1', 'Технологии, которые')}<br/>{t('hero.title2', 'двигают бизнес вперёд')}</h1>
         <p className={styles.subtitle}>
-          Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.
+          {t('hero.subtitle', 'Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.')}
         </p>
       </div>
       
       <div className={styles.buttons}>
         <Link href="/consultation" className={styles.btnPrimary}>
-          Получить консультацию <ArrowRight />
+          {t('hero.btnPrimary', 'Получить консультацию')} <ArrowRight />
         </Link>
         <Link href="/projects" className={styles.btnSecondary}>
-          Смотреть проекты
+          {t('hero.btnSecondary', 'Смотреть проекты')}
         </Link>
       </div>
     </div>

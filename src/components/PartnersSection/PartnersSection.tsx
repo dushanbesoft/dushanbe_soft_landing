@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './PartnersSection.module.css';
 
 const partnersData = [
@@ -118,6 +119,7 @@ const partnersData = [
 ];
 
 export default function PartnersSection() {
+  const { t } = useTranslation('common');
   const [activeIndex, setActiveIndex] = useState(1);
 
   const nextPartner = () => {
@@ -131,11 +133,11 @@ export default function PartnersSection() {
   const activePartner = partnersData[activeIndex];
 
   return (
-    <section className={styles.section}>
+    <section id="partners" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.subtitle}>Наши партнеры</span>
-          <h2 className={styles.title}>Нам доверяют ведущие организации</h2>
+          <span className={styles.subtitle}>{t('partners.subtitle', 'Наши партнеры')}</span>
+          <h2 className={styles.title}>{t('partners.title', 'Нам доверяют ведущие организации')}</h2>
         </div>
 
         <div className={styles.logosCarousel}>
@@ -153,11 +155,11 @@ export default function PartnersSection() {
         <div className={styles.detailCard}>
           <div className={styles.detailLeft}>
             <div className={styles.detailTitleBadge}>
-              <span className={styles.detailTitleText}>{activePartner.name}</span>
+              <span className={styles.detailTitleText}>{t(`partners.list.${activeIndex}.name`, activePartner.name)}</span>
             </div>
-            <span className={styles.detailSector}>{activePartner.sector}</span>
+            <span className={styles.detailSector}>{t(`partners.list.${activeIndex}.sector`, activePartner.sector)}</span>
             <div className={styles.divider}></div>
-            <p className={styles.detailDesc}>{activePartner.description}</p>
+            <p className={styles.detailDesc}>{t(`partners.list.${activeIndex}.description`, activePartner.description)}</p>
           </div>
 
           <div className={styles.detailRight}>

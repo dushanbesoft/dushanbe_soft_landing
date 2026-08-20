@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 
 const DownArrow = () => (
@@ -20,7 +22,16 @@ const DownArrow = () => (
 );
 
 const HamburgerIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="white"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <line x1="3" y1="12" x2="21" y2="12"></line>
     <line x1="3" y1="6" x2="21" y2="6"></line>
     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -28,7 +39,16 @@ const HamburgerIcon = () => (
 );
 
 const CloseIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="white"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <line x1="18" y1="6" x2="6" y2="18"></line>
     <line x1="6" y1="6" x2="18" y2="18"></line>
   </svg>
@@ -36,6 +56,28 @@ const CloseIcon = () => (
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const { t } = useTranslation();
+  const router = useRouter();
+  const pathname = usePathname();
+  
+  const currentLang = pathname.split('/')[1] || 'ru';
+  
+  const changeLanguage = (lang: string) => {
+    setIsLangMenuOpen(false);
+    if (lang === currentLang) return;
+    const segments = pathname.split('/');
+    segments[1] = lang;
+    router.push(segments.join('/'));
+  };
+
+  const getLangDisplayName = (l: string) => {
+    switch (l) {
+      case 'tj': return 'ТҶ';
+      case 'en': return 'EN';
+      default: return 'РУ';
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,46 +101,58 @@ export default function Header() {
           alt="Dushanbe-Soft Logo"
         />
       </Link>
-      
-      <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
-        <Link href="/" className={styles.navItem} onClick={closeMenu}>
-          Главная
+
+      <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
+        <Link href={`/${currentLang}/`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.home', 'Главная')}
         </Link>
-        <Link href="/services" className={styles.navItem} onClick={closeMenu}>
-          Услуги
+        <Link href={`/${currentLang}/#services`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.services', 'Услуги')}
         </Link>
-        <Link href="/products" className={styles.navItem} onClick={closeMenu}>
-          Продукты
+        <Link href={`/${currentLang}/#products`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.products', 'Продукты')}
         </Link>
-        <Link href="/cases" className={styles.navItem} onClick={closeMenu}>
-          Кейсы
+        <Link href={`/${currentLang}/#cases`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.cases', 'Кейсы')}
         </Link>
-        <Link href="/partners" className={styles.navItem} onClick={closeMenu}>
-          Партнёры
+        <Link href={`/${currentLang}/#partners`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.partners', 'Партнёры')}
         </Link>
-        <Link href="/about" className={styles.navItem} onClick={closeMenu}>
-          О компании
+        <Link href={`/${currentLang}/#about`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.about', 'О компании')}
         </Link>
-        <Link href="/contacts" className={styles.navItem} onClick={closeMenu}>
-          Контакты
+        <Link href={`/${currentLang}/#contacts`} className={styles.navItem} onClick={closeMenu}>
+          {t('header.contacts', 'Контакты')}
         </Link>
       </nav>
 
       <div className={styles.controlsWrapper}>
-        <div className={styles.langSwitcher}>
-          <span className={styles.langText}>ТҶ</span>
-          <DownArrow />
+        <div className={styles.langSwitcherContainer}>
+          <div 
+            className={styles.langSwitcher} 
+            onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+          >
+            <span className={styles.langText}>{getLangDisplayName(currentLang)}</span>
+            <DownArrow />
+          </div>
+          {isLangMenuOpen && (
+            <div className={styles.langDropdown}>
+              <div className={styles.langOption} onClick={() => changeLanguage('tj')}>ТҶ</div>
+              <div className={styles.langOption} onClick={() => changeLanguage('ru')}>РУ</div>
+              <div className={styles.langOption} onClick={() => changeLanguage('en')}>EN</div>
+            </div>
+          )}
         </div>
-        
-        <button 
-          className={styles.hamburgerBtn} 
+
+        <button
+          className={styles.hamburgerBtn}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
         </button>
       </div>
-      
+
       {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}
     </header>
   );

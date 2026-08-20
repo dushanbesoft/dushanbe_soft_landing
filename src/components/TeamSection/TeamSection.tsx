@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./TeamSection.module.css";
 
 const LeftArrowIcon = ({ onClick }: { onClick: () => void }) => (
@@ -116,6 +117,7 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
+  const { t } = useTranslation('common');
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextMember = () => setActiveIndex((prev) => (prev + 1) % teamMembers.length);
@@ -128,9 +130,9 @@ export default function TeamSection() {
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>Команда</span>
+            <span className={styles.subtitle}>{t('team.subtitle', 'Команда')}</span>
             <h2 className={styles.mainTitle}>
-              Люди, которые делают это возможным
+              {t('team.title', 'Люди, которые делают это возможным')}
             </h2>
           </div>
         </div>
@@ -161,12 +163,12 @@ export default function TeamSection() {
           <div key={activeMember.id} className={styles.personCard}>
             <div className={styles.personInfo}>
               <div className={styles.personHeader}>
-                <h3 className={styles.personName}>{activeMember.name}</h3>
+                <h3 className={styles.personName}>{activeIndex === 0 ? t('team.member0.name') : t('team.memberDefault.name')}</h3>
                 <p className={styles.personRole}>
-                  {activeMember.role}
+                  {activeIndex === 0 ? t('team.member0.role') : t('team.memberDefault.role')}
                 </p>
                 <p className={styles.personBio}>
-                  {activeMember.bio}
+                  {activeIndex === 0 ? t('team.member0.bio') : t('team.memberDefault.bio')}
                 </p>
               </div>
 
@@ -174,19 +176,19 @@ export default function TeamSection() {
 
               <div className={styles.personDetails}>
                 <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Навыки</span>
+                  <span className={styles.detailLabel}>{t('team.labels.skills', 'Навыки')}</span>
                   <span className={styles.detailValue}>
-                    {activeMember.skills}
+                    {activeIndex === 0 ? t('team.member0.skills') : t('team.memberDefault.skills')}
                   </span>
                 </div>
                 <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Опыт работы</span>
-                  <span className={styles.detailValue}>{activeMember.experience}</span>
+                  <span className={styles.detailLabel}>{t('team.labels.experience', 'Опыт работы')}</span>
+                  <span className={styles.detailValue}>{activeIndex === 0 ? t('team.member0.experience') : t('team.memberDefault.experience')}</span>
                 </div>
                 <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Образование</span>
+                  <span className={styles.detailLabel}>{t('team.labels.education', 'Образование')}</span>
                   <span className={styles.detailValue}>
-                    {activeMember.education}
+                    {activeIndex === 0 ? t('team.member0.education') : t('team.memberDefault.education')}
                   </span>
                 </div>
               </div>
@@ -202,23 +204,23 @@ export default function TeamSection() {
         <div className={styles.statsBar}>
           <div className={styles.statItem}>
             <span className={styles.statValue}>2015</span>
-            <span className={styles.statLabel}>Год основания</span>
+            <span className={styles.statLabel}>{t('team.stats.founded', 'Год основания')}</span>
           </div>
           <div className={styles.statItem}>
             <span className={styles.statValue}>150+</span>
-            <span className={styles.statLabel}>Проектов</span>
+            <span className={styles.statLabel}>{t('team.stats.projects', 'Проектов')}</span>
           </div>
           <div className={styles.statItem}>
             <span className={styles.statValue}>20+</span>
-            <span className={styles.statLabel}>Экспертов</span>
+            <span className={styles.statLabel}>{t('team.stats.experts', 'Экспертов')}</span>
           </div>
           <div className={styles.statItem}>
             <span className={styles.statValue}>5+</span>
-            <span className={styles.statLabel}>Стран</span>
+            <span className={styles.statLabel}>{t('team.stats.countries', 'Стран')}</span>
           </div>
           <div className={styles.statItemLast}>
             <span className={styles.statValue}>98%</span>
-            <span className={styles.statLabel}>Удовлетворённость</span>
+            <span className={styles.statLabel}>{t('team.stats.satisfaction', 'Удовлетворённость')}</span>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@
   align-items: center;
   background: #000607;
   position: relative;
-  width: calc(100% - max(17px, 4.1666vw));
+  width: calc(100%);
 }
 
 .container {
@@ -171,7 +171,7 @@
 @media (max-width: 768px) {
   .section {
     padding: 30px 20px;
-    width: calc(100% - 40px);
+    width: calc(100%);
   }
   .mainTitle {
     font-size: 24px;

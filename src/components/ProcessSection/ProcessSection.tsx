@@ -1,4 +1,5 @@
 import React from 'react';
+import initTranslations from '@/app/i18n';
 import styles from './ProcessSection.module.css';
 
 const steps = [
@@ -170,14 +171,17 @@ const steps = [
   }
 ];
 
-export default function ProcessSection() {
+const i18nNamespaces = ['common'];
+
+export default async function ProcessSection({ lang = 'ru' }: { lang?: string }) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>Как мы работаем</span>
-            <h2 className={styles.mainTitle}>Процесс разработки</h2>
+            <span className={styles.subtitle}>{t('process.subtitle', 'Как мы работаем')}</span>
+            <h2 className={styles.mainTitle}>{t('process.title', 'Процесс разработки')}</h2>
           </div>
         </div>
 
@@ -187,10 +191,10 @@ export default function ProcessSection() {
               <div key={index} className={styles.card}>
                 {step.icon}
                 <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{step.title}</h3>
-                  <p className={styles.cardDesc}>{step.description}</p>
+                  <h3 className={styles.cardTitle}>{t(`process.list.${index}.title`, step.title)}</h3>
+                  <p className={styles.cardDesc}>{t(`process.list.${index}.description`, step.description)}</p>
                   <div className={styles.badge}>
-                    <span className={styles.badgeText}>{step.duration}</span>
+                    <span className={styles.badgeText}>{t(`process.list.${index}.duration`, step.duration)}</span>
                   </div>
                 </div>
               </div>

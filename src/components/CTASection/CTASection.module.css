@@ -154,7 +154,7 @@
     padding: 15px;
   }
   .secondaryBtn {
-    width: calc(100% - 30px);
+    width: calc(100%);
     max-height: none;
     padding: 15px;
   }

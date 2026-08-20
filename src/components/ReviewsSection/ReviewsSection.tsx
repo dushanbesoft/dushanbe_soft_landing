@@ -1,4 +1,5 @@
 import React from 'react';
+import initTranslations from '@/app/i18n';
 import styles from './ReviewsSection.module.css';
 
 const StarRating = () => (
@@ -52,19 +53,23 @@ const reviews = [
   }
 ];
 
-export default function ReviewsSection() {
+const i18nNamespaces = ['common'];
+
+export default async function ReviewsSection({ lang = 'ru' }: { lang?: string }) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.subtitle}>Отзывы</span>
-          <h2 className={styles.title}>Что о нас говорят</h2>
+          <span className={styles.subtitle}>{t('reviews.subtitle', 'Отзывы')}</span>
+          <h2 className={styles.title}>{t('reviews.title', 'Что о нас говорят')}</h2>
         </div>
         
         <div className={styles.grid}>
-          {reviews.map((review) => (
+          {reviews.map((review, index) => (
             <div key={review.id} className={`${styles.card} ${review.isActive ? styles.cardActive : ''}`}>
-              <p className={styles.reviewText}>{review.text}</p>
+              <p className={styles.reviewText}>{t(`reviews.list.${index}.text`, review.text)}</p>
               
               <div className={styles.cardFooter}>
                 <div className={styles.authorInfo}>
@@ -72,8 +77,8 @@ export default function ReviewsSection() {
                     <img src={review.avatar} alt={review.name} className={styles.avatar} />
                   </div>
                   <div className={styles.authorDetails}>
-                    <h3 className={styles.authorName}>{review.name}</h3>
-                    <span className={styles.authorRole}>{review.role}</span>
+                    <h3 className={styles.authorName}>{t(`reviews.list.${index}.name`, review.name)}</h3>
+                    <span className={styles.authorRole}>{t(`reviews.list.${index}.role`, review.role)}</span>
                   </div>
                 </div>
                 

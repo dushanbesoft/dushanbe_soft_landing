@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import initTranslations from '@/app/i18n';
 import styles from './ProductsSection.module.css';
 import ProductCard from './ProductCard';
 
@@ -33,42 +34,46 @@ const ChatIcon = () => (
   </svg>
 );
 
-const smsTags = [
-  { label: 'Разработка архитектуры платежного и SMS-шлюза', highlighted: true },
-  { label: 'Полная совместимость со всеми устройствами' },
-  { label: 'Высокая стабильность системы и мгновенная доставка сообщений' },
-  { label: 'Модуль планирования рассылок и работа с базой клиентов' },
-  { label: 'Личный кабинет пользователя с управлением тарифами, балансом и шаблонами сообщений' },
-  { label: 'Интеграция REST API для автоматической отправки сообщений из внешних CRM/ERP систем' },
-];
-
-const chatTags = [
-  { label: 'Разработка архитектуры системы', highlighted: true },
-  { label: 'Высокая стабильность системы' },
-  { label: 'Интеграция онлайн-чата и виджетов' },
-  { label: 'Поддержка мобильных устройств' },
-  { label: 'Личный кабинет и аналитика' },
-  { label: 'Защита от DDoS-атак' },
-  { label: 'Мультиязычность' },
-];
-
 interface ProductsSectionProps {
   showAll?: boolean;
   lang?: string;
 }
 
-export default function ProductsSection({ showAll = false, lang = 'ru' }: ProductsSectionProps) {
+const i18nNamespaces = ['common'];
+
+export default async function ProductsSection({ showAll = false, lang = 'ru' }: ProductsSectionProps) {
+  const { t } = await initTranslations(lang, i18nNamespaces);
+
+  const getSmsTags = () => [
+    { label: t('products.zudsms.tags.0', 'Разработка архитектуры платежного и SMS-шлюза'), highlighted: true },
+    { label: t('products.zudsms.tags.1', 'Полная совместимость со всеми устройствами') },
+    { label: t('products.zudsms.tags.2', 'Высокая стабильность системы и мгновенная доставка сообщений') },
+    { label: t('products.zudsms.tags.3', 'Модуль планирования рассылок и работа с базой клиентов') },
+    { label: t('products.zudsms.tags.4', 'Личный кабинет пользователя с управлением тарифами, балансом и шаблонами сообщений') },
+    { label: t('products.zudsms.tags.5', 'Интеграция REST API для автоматической отправки сообщений из внешних CRM/ERP систем') },
+  ];
+
+  const getChatTags = () => [
+    { label: t('products.livechat.tags.0', 'Разработка архитектуры системы'), highlighted: true },
+    { label: t('products.livechat.tags.1', 'Высокая стабильность системы') },
+    { label: t('products.livechat.tags.2', 'Интеграция онлайн-чата и виджетов') },
+    { label: t('products.livechat.tags.3', 'Поддержка мобильных устройств') },
+    { label: t('products.livechat.tags.4', 'Личный кабинет и аналитика') },
+    { label: t('products.livechat.tags.5', 'Защита от DDoS-атак') },
+    { label: t('products.livechat.tags.6', 'Мультиязычность') },
+  ];
+
   return (
-    <section className={styles.section}>
+    <section id="products" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <div className={styles.subtitle}>Наши продукты</div>
-            <h2 className={styles.mainTitle}>Готовые продукты для вашего бизнеса</h2>
+            <div className={styles.subtitle}>{t('products.subtitle', 'Наши продукты')}</div>
+            <h2 className={styles.mainTitle}>{t('products.title', 'Готовые продукты для вашего бизнеса')}</h2>
           </div>
           {!showAll && (
             <Link href={`/${lang}/products`} className={styles.allProductsBtn}>
-              Все продукты <ArrowUpRight />
+              {t('products.allProducts', 'Все продукты')} <ArrowUpRight />
             </Link>
           )}
         </div>
@@ -77,18 +82,18 @@ export default function ProductsSection({ showAll = false, lang = 'ru' }: Produc
           <ProductCard 
             imageSrc="/images/ZudSMSBanner.svg"
             icon={<SmsIcon />}
-            title="ZudSMS – Платформа SMS-рассылок"
-            subtitle="zudsms.tj"
-            description="Облачный сервис автоматизации и массовой рассылки SMS-сообщений для бизнеса. Платформа обеспечивает мгновенную доставку целевых и транзакционных сообщений на номера всех мобильных операторов Таджикистана, помогая компаниям повышать лояльность клиентов и эффективность маркетинговых кампаний."
-            tags={smsTags}
+            title={t('products.zudsms.title', 'ZudSMS – Платформа SMS-рассылок')}
+            subtitle={t('products.zudsms.subtitle', 'zudsms.tj')}
+            description={t('products.zudsms.description', 'Облачный сервис автоматизации и массовой рассылки SMS-сообщений для бизнеса...')}
+            tags={getSmsTags()}
           />
           <ProductCard 
             imageSrc="/images/liveChatBanner.svg"
             icon={<ChatIcon />}
-            title="LiveChat TJ - Онлайн-чат"
-            subtitle="LiveChat TJ"
-            description="Веб-сервис и платформа онлайн-консультаций для бизнеса, обеспечивающая связь между организациями и клиентами в режиме реального времени. Платформа способствует автоматизации поддержки клиентов, улучшению качества обслуживания и увеличению продаж за счет мгновенного обмена сообщениями."
-            tags={chatTags}
+            title={t('products.livechat.title', 'LiveChat TJ - Онлайн-чат')}
+            subtitle={t('products.livechat.subtitle', 'LiveChat TJ')}
+            description={t('products.livechat.description', 'Веб-сервис и платформа онлайн-консультаций для бизнеса...')}
+            tags={getChatTags()}
           />
         </div>
       </div>
