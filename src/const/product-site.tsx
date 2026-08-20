@@ -6,6 +6,7 @@ export const ProductSite = [
     description:
       "Сомонаи расмии Президенти Ҷумҳурии Тоҷикистон – веб-портали асосии давлатии кишвар мебошад. Платформа интишори хабарҳои расмӣ, фармонҳо, суханрониҳо ва гузоришҳои аксиро аз чорабиниҳо бо чанд забон таъмин менамояд.",
     tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    slug: "president"
   },
 
   {
@@ -15,6 +16,7 @@ export const ProductSite = [
     description:
       "Системаи дохилии иттилоотӣ (системаи ERP/CRM) барои автоматикунонии фаъолияти фаврии хадамоти оташнишонӣ, баҳисобгирии ҳолатҳои фавқулода, пешбурди баҳисобгирии кадрӣ ва гардиши электронии ҳуҷҷатҳо.",
     tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    slug: "sohktor"
   },
   {
     imageSrc: "/images/projects/pic.svg",
@@ -23,6 +25,7 @@ export const ProductSite = [
     description:
       "Портали давлатии хизматрасониҳои рақамии Тоҷикистон. Нуқтаи ягонаи дастрасӣ ба хизматрасониҳои электронии давлатӣ барои шаҳрвандон ва ташкилотҳои кишвар.",
     tags: ["ASP.NET Core", "React", "PostgreSQL", "Docker", "REST API"],
+    slug: "digital-tajikistan"
   },
   {
     imageSrc: "/images/projects/mavjisomon.svg",
@@ -31,6 +34,7 @@ export const ProductSite = [
     description:
       "Платформаи онлайн ва хидмати ҷараёни мустақим барои тамошои филмҳо, сериалҳо ва шабакаҳои телевизионӣ. Хизматрасонӣ дастрасӣ ба муҳтавои мултимедиявии дорои сифати баландро дар дастгоҳҳои гуногун таъмин менамояд.",
     tags: ["Node.js", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    slug: "mavji-somon"
   },
   {
     imageSrc: "/images/projects/livechat.svg",
@@ -39,6 +43,7 @@ export const ProductSite = [
     description:
       "Хидмати вебӣ ва платформаи машварати онлайн барои бизнес, ки робитаи воқеии вақти байни ташкилотҳо ва муштариёнро таъмин менамояд. Платформа ба автоматикунонии дастгирии муштариён, беҳтар намудани сифати хизматрасонӣ ва афзоиши фурӯш тавассути мубодилаи фаврии паёмҳо мусоидат мекунад.",
     tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "WebSocket"],
+    slug: "livechat-tj"
   },
   {
     imageSrc: "/images/projects/ttl.svg",
@@ -54,6 +59,7 @@ export const ProductSite = [
       "Bootstrap",
       "REST API",
     ],
+    slug: "telecomm"
   },
   {
     imageSrc: "/images/projects/navo.svg",
@@ -62,6 +68,7 @@ export const ProductSite = [
     description:
       "Платформаи OTT-стримингӣ барои Somon TV - яке аз калонтарин шабакаҳои телевизионии Тоҷикистон. Платформа пахши мустақими эфир, бойгонии VoD ва имконияти тамошои бисёрэкранаро таъмин менамояд.",
     tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    slug: "navo"
   },
   {
     imageSrc: "/images/projects/somontv.svg",
@@ -70,6 +77,7 @@ export const ProductSite = [
     description:
       "Платформаи OTT-стримингӣ барои Somon TV - яке аз калонтарин шабакаҳои телевизионии Тоҷикистон. Платформа пахши мустақими эфир, бойгонии VoD ва имконияти тамошои бисёрэкранаро таъмин менамояд.",
     tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    slug: "somon-tv"
   },
   {
     imageSrc: "/images/projects/zudsms.svg",
@@ -78,6 +86,7 @@ export const ProductSite = [
     description:
       "Хидмати абрии автоматизатсия ва ирсоли оммавии SMS-паёмҳо барои бизнес. Платформа интиқоли фаврии паёмҳои мақсаднок ва транзаксиониро ба рақамҳои ҳамаи операторони мобилии Тоҷикистон таъмин намуда, ба ширкатҳо барои баланд бардоштани вафодории муштариён ва самаранокии маъракаҳои маркетингӣ мусоидат мекунад.",
     tags: ["Node.js", "JavaScript", "MS SQL", "HTML5 / CSS3", "REST API"],
+    slug: "zudsms"
   },
   {
     imageSrc: "/images/projects/sunduk.svg",
@@ -94,6 +103,7 @@ export const ProductSite = [
       "Underscore.js",
       "Сервер БД MySQL",
     ],
+    slug: "sunduk-tv"
   },
   {
     imageSrc: "/images/projects/onlinepay.svg",
@@ -108,6 +118,8 @@ export const ProductSite = [
       "HTML5 / CSS3",
       "REST API"
     ],
+    slug: "onlinepay",
+    tasks: ["Разработка дизайна", "Разработка фронтенда", "Разработка бэкенда", "Интеграция с платежными системами"]
   },
   {
     imageSrc: "/images/projects/zenith.svg",
@@ -122,6 +134,8 @@ export const ProductSite = [
       "HTML5 / CSS3",
       "REST API"
     ],
+    slug: "zenith-valuation",
+    tasks: ["Разработка дизайна", "Разработка фронтенда", "Разработка бэкенда", "SEO-оптимизация"]
   },
   {
     imageSrc: "/images/projects/itrans.svg",
@@ -136,5 +150,7 @@ export const ProductSite = [
       "HTML5 / CSS3",
       "REST API"
     ],
+    slug: "imron-nakliet",
+    tasks: ["Разработка дизайна", "Разработка фронтенда", "Разработка бэкенда"]
   }
 ];

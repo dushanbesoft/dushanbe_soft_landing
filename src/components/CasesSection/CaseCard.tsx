@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './CaseCard.module.css';
 
 interface CaseCardProps {
@@ -7,6 +8,8 @@ interface CaseCardProps {
   title: string;
   description: string;
   tags: string[];
+  slug: string;
+  lang: string;
 }
 
 export default function CaseCard({
@@ -14,14 +17,16 @@ export default function CaseCard({
   year,
   title,
   description,
-  tags
+  tags,
+  slug,
+  lang
 }: CaseCardProps) {
   const half = Math.ceil(tags.length / 2);
   const topTags = tags.slice(0, half);
   const bottomTags = tags.slice(half);
 
   return (
-    <div className={styles.card}>
+    <Link href={`/${lang}/cases/${slug}`} className={styles.card}>
       <div 
         className={styles.imageHeader} 
         style={{ backgroundImage: `url('${imageSrc}')` }}
@@ -61,6 +66,6 @@ export default function CaseCard({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

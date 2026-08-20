@@ -52,7 +52,7 @@ table {
   position: relative;
 }
 .header-global {
-  background-color: #081c22;
+  background-color: transparent;
   position: sticky;
   top: 0px;
   z-index: 99999;

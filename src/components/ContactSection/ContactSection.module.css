@@ -14,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch; /* To make them equal height or just top align */
+  align-items: stretch;
   align-items: flex-start;
   gap: max(25px, 3.125vw);
   position: relative;
@@ -23,7 +23,7 @@
 
 .leftCol {
   display: flex;
-  flex: 1 1 max(400px, 40.69vw); /* roughly 586px / 1440px */
+  flex: 1 1 max(400px, 40.69vw);
   flex-direction: column;
   align-items: flex-start;
   gap: max(25px, 3.125vw);
@@ -59,7 +59,7 @@
 .titleBlack {
   color: #000;
   font-family: var(--font-tektur);
-  font-size: max(32px, 3.819vw); /* 55px on 1440 */
+  font-size: max(32px, 3.819vw);
   font-weight: 700;
 }
 
@@ -85,7 +85,7 @@
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
-  max-width: max(200px, 23.82vw); /* 343px */
+  max-width: max(200px, 23.82vw);
 }
 
 .features {
@@ -246,10 +246,9 @@
   font-weight: 700;
 }
 
-/* RIGHT COLUMN (FORM) */
 .rightCol {
   display: flex;
-  flex: 1 1 max(450px, 50.55vw); /* roughly 728px / 1440px */
+  flex: 1 1 max(450px, 50.55vw);
   position: relative;
 }
 
@@ -260,7 +259,7 @@
   flex-direction: column;
   align-items: stretch;
   gap: max(17px, 2.083vw);
-  border-radius: max(12px, 1.527vw); /* 22px in design */
+  border-radius: max(12px, 1.527vw); 
   background: #FFF;
   box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
   box-sizing: border-box;
@@ -340,7 +339,7 @@
   width: 100%;
   padding: max(11px, 1.388vw);
   border-radius: max(6px, 0.764vw);
-  border: 1px solid rgba(94, 181, 240, 0.5); /* fallback border */
+  border: 1px solid rgba(94, 181, 240, 0.5);
   background: #FFF;
   color: #000;
   font-family: var(--font-nunito-sans);
@@ -383,7 +382,7 @@
 
 .textarea {
   resize: vertical;
-  min-height: max(80px, 9.51vw); /* 137px in design */
+  min-height: max(80px, 9.51vw);
 }
 
 .submitBtn {

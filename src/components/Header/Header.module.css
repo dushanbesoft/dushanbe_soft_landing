@@ -5,7 +5,7 @@
   gap: max(27px, 3.1250vw);
   flex-wrap: wrap;
   align-self: stretch;
-  background: rgba(0, 0, 0, 0.11);
+  background: transparent;
   position: relative;
   z-index: 10;
 }

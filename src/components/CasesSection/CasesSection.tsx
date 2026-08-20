@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./CasesSection.module.css";
 import CaseCard from "./CaseCard";
-import { ProductSite } from "@/const/product-site";
+import { ProductSite } from "../../const/product-site";
 
 const ArrowUpIcon = () => (
   <svg
@@ -59,6 +59,8 @@ export default function CasesSection({ showAll = false, lang = 'ru' }: CasesSect
           {ProductSite.filter((_, i) => showAll || i < 6).map((e, i) => (
             <CaseCard
               key={i}
+              slug={e.slug}
+              lang={lang}
               imageSrc={e.imageSrc}
               year={e.year}
               title={e.title}

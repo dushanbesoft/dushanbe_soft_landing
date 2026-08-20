@@ -206,7 +206,7 @@
 }
 
 .largeLogoWrapper {
-  width: max(200px, 29.23vw);
+  width: max(200px, 20.23vw);
   height: auto;
   display: flex;
   justify-content: center;
