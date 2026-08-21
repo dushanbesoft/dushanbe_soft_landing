@@ -30,17 +30,26 @@ export default async function Page({
     "name": "Dushanbe Soft",
     "url": process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj",
     "logo": `${process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj"}/icons/site-favicon.svg`,
+    "image": `${process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj"}/icons/site-favicon.svg`,
     "description": t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане."),
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Душанбе",
+      "addressRegion": "РРП",
       "addressCountry": "TJ"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "telephone": "+992988888888" // Example, can be replaced by real phone if known
-    }
+      "telephone": "+992988888888",
+      "email": "info@dushanbesoft.tj",
+      "availableLanguage": ["Tajik", "Russian", "English"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/dushanbesoft",
+      "https://www.instagram.com/dushanbesoft",
+      "https://t.me/dushanbesoft"
+    ]
   };
 
   return (
