@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HeroMarquee.module.css';
 
-const marqueeItems = [
+const defaultMarqueeItems = [
   "Банковские приложения",
   "Электронные кошельки",
   "Интернет-эквайринг",
@@ -24,7 +24,12 @@ const marqueeItems = [
   "Корпоративные сайты",
 ];
 
+import { useTranslation } from 'react-i18next';
+
 export default function HeroMarquee() {
+  const { t } = useTranslation();
+  const tItems = t('hero.marquee', { returnObjects: true });
+  const marqueeItems = Array.isArray(tItems) ? tItems : defaultMarqueeItems;
   return (
     <div className={styles.marqueeContainer}>
       <div className={styles.marqueeContent}>
