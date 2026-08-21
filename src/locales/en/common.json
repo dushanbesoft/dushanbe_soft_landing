@@ -16,7 +16,29 @@
     "title2": "drive business forward",
     "subtitle": "We develop and implement modern IT solutions, automate processes, and increase company efficiency.",
     "btnPrimary": "Get consultation",
-    "btnSecondary": "View projects"
+    "btnSecondary": "View projects",
+    "marquee": [
+      "Banking Apps",
+      "Digital Wallets",
+      "Internet Acquiring",
+      "UX/UI Design",
+      "API Integration",
+      "Chatbots",
+      "Billing Systems",
+      "Digital Queues",
+      "E-Government",
+      "State Portals",
+      "Landing Pages",
+      "Financial Apps",
+      "News Portals",
+      "Android Apps",
+      "iOS Apps",
+      "Media Platforms",
+      "Marketplaces",
+      "Service Portals",
+      "Educational Platforms",
+      "Corporate Websites"
+    ]
   },
   "products": {
     "subtitle": "Our Products",
@@ -388,7 +410,11 @@
       },
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us about your project: task, scale, deadlines…",
-      "submitBtn": "Submit request"
+      "submitBtn": "Submit request",
+      "submitting": "Submitting...",
+      "successMessage": "Application successfully sent!",
+      "errorSend": "Failed to send message",
+      "errorOccurred": "An error occurred. Please try again later."
     }
   },
   "cta": {
@@ -420,5 +446,10 @@
     ],
     "address": "Republic of Tajikistan, Dushanbe",
     "copyright": "© 2017–2026 Dushanbe Soft. All rights reserved."
+  },
+  "seo": {
+    "default_title": "Dushanbe Soft - IT solutions for business and government",
+    "default_description": "Innovative IT solutions for business. Software, website, and mobile app development in Tajikistan.",
+    "keywords": "web development, mobile apps, IT company, Dushanbe, Tajikistan, Dushanbe Soft"
   }
 }

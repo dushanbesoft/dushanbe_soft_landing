@@ -26,9 +26,9 @@ export default function HeroContent() {
       </div>
       
       <div className={styles.buttons}>
-        <Link href="/consultation" className={styles.btnPrimary}>
+        <a href="https://t.me/m_yakub" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
           {t('hero.btnPrimary', 'Получить консультацию')} <ArrowRight />
-        </Link>
+        </a>
         <Link href="/projects" className={styles.btnSecondary}>
           {t('hero.btnSecondary', 'Смотреть проекты')}
         </Link>
