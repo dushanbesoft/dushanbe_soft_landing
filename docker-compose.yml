@@ -11,6 +11,8 @@ services:
       - "3121"
     ports:
       - "3121:3121"
+    env_file:
+      - .env
     environment:
       PORT: 3121
     networks:
