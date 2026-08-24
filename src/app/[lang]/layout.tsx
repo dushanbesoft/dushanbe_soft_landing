@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   // Initialize translations for SEO. We'll provide fallbacks just in case the translation keys don't exist yet.
   const { t } = await initTranslations(lang, ["common"]);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
 
   const defaultTitle = t("seo.default_title", "Dushanbe Soft | Разработка программного обеспечения");
   const defaultDesc = t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.");

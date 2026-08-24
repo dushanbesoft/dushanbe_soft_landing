@@ -47,7 +47,7 @@
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,7 +67,7 @@
   align-items: center;
   gap: 20px;
   border-radius: 5px;
-  border: 1px solid #0f51e0;
+  border: 1px solid #02704f;
   background: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -81,7 +81,7 @@
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

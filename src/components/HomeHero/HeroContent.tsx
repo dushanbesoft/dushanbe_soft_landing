@@ -1,5 +1,5 @@
-import React from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./HeroContent.module.css";
 import HeroMarquee from "./HeroMarquee";
@@ -21,24 +21,50 @@ const ArrowRight = () => (
   </svg>
 );
 
+const TYPING_SPEED_MS = 95;
+
+function TypedTitle({ text }: { text: string }) {
+  const [typed, setTyped] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      index += 1;
+      setTyped(text.slice(0, index));
+      if (index >= text.length) {
+        clearInterval(intervalId);
+      }
+    }, TYPING_SPEED_MS);
+
+    return () => clearInterval(intervalId);
+  }, [text]);
+
+  return <span className={styles.typedText}>{typed}</span>;
+}
+
 export default function HeroContent() {
   const { t } = useTranslation();
+  const fullTitle = t(
+    "hero.subtitle",
+    "Разрабатываем и внедряем современные IT-решения",
+  );
 
   return (
     <div className={styles.heroContent}>
       <div className={styles.titlesContainer}>
-       
+
         <h1 className={styles.mainTitle}>
-          {t("hero.title1", "Технологии, которые")}
+          <TypedTitle key={fullTitle} text={fullTitle} />
+          <span className={styles.cursor} aria-hidden="true" />
           <br />
-          {t("hero.title2", "двигают бизнес вперёд")}
+          {/* {t("hero.title2", "двигают бизнес вперёд")} */}
         </h1>
-        <p className={styles.subtitle}>
+        {/* <p className={styles.subtitle}>
           {t(
             "hero.subtitle",
             "Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.",
           )}
-        </p>
+        </p> */}
       </div>
 
       <div className={styles.buttons}>
@@ -50,9 +76,9 @@ export default function HeroContent() {
         >
           {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
         </a>
-        <Link href="/projects" className={styles.btnSecondary}>
+        {/* <Link href="/projects" className={styles.btnSecondary}>
           {t("hero.btnSecondary", "Смотреть проекты")}
-        </Link>
+        </Link> */}
       </div>
       <HeroMarquee />
     </div>

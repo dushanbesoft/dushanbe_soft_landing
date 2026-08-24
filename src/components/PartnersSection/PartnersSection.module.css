@@ -48,7 +48,7 @@
   font-size: 32px;
   font-weight: 700;
   margin: 0;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -86,14 +86,14 @@
 }
 
 .logoItem:hover:not(.logoActive) {
-  border: 1px solid #5eb5f0;
+  border: 1px solid #3ddc84;
   background: linear-gradient(
     60deg,
-    rgba(94, 181, 240, 0.11) 13.4%,
+    rgba(61, 220, 132, 0.11) 13.4%,
     rgba(2, 112, 79, 0.11) 86.6%
   );
   box-shadow:
-    0 0 11px 0 rgba(94, 181, 240, 0.3) inset,
+    0 0 11px 0 rgba(61, 220, 132, 0.3) inset,
     0 0 11px 0 rgba(0, 140, 113, 0.3);
   transform: translateY(-2px);
 }
@@ -101,10 +101,10 @@
 .logoActive {
   width: 290px;
   height: 136px;
-  border: 1px solid #5eb5f0;
+  border: 1px solid #3ddc84;
   background: rgba(1, 101, 88, 0.1);
   box-shadow:
-    0 0 11px 0 #5eb5f0 inset,
+    0 0 11px 0 #3ddc84 inset,
     0 0 11px 0 #008c71;
 }
 
@@ -149,7 +149,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 11px;
-  border: 1px solid #5eb5f0;
+  border: 1px solid #3ddc84;
   background: rgba(1, 101, 88, 0.11);
 }
 
@@ -173,11 +173,11 @@
   height: 1px;
   background: linear-gradient(
     270deg,
-    rgba(104, 206, 254, 0) 0.17%,
+    rgba(0, 140, 113, 0) 0.17%,
     #008c71 15.74%,
-    #5eaaf0 50%,
+    #3ddc84 50%,
     #008c71 83.22%,
-    rgba(104, 206, 254, 0) 100%
+    rgba(0, 140, 113, 0) 100%
   );
 }
 

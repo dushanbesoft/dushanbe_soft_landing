@@ -11,23 +11,23 @@ const StarRating = () => (
     <path d="M80.2773 5.28981C80.1852 4.99399 79.9337 4.78455 79.6374 4.75658L75.596 4.37371L73.9989 0.471701C73.8809 0.185024 73.6126 0 73.314 0C73.0153 0 72.7469 0.185024 72.6297 0.471701L71.0326 4.37371L66.9905 4.75658C66.6942 4.78511 66.4433 4.99455 66.3506 5.28981C66.2584 5.58562 66.3436 5.91008 66.5677 6.11517L69.6226 8.91049L68.7219 13.0504C68.656 13.3548 68.7692 13.6695 69.0112 13.8521C69.1413 13.9507 69.2942 14 69.4476 14C69.5794 14 69.7113 13.9634 69.8291 13.8899L73.314 11.7155L76.7982 13.8899C77.0538 14.0493 77.3752 14.0347 77.6167 13.8521C77.8588 13.6695 77.972 13.3548 77.9061 13.0504L77.0053 8.91049L80.0603 6.11517C80.2843 5.91008 80.3695 5.58629 80.2773 5.28981V5.28981Z" fill="url(#paint4_linear_10_601)"/>
     <defs>
       <linearGradient id="paint0_linear_10_601" x1="0.937822" y1="10.5" x2="13.0622" y2="3.5" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#5EB5F0"/>
+        <stop stopColor="#3DDC84"/>
         <stop offset="1" stopColor="#02704F"/>
       </linearGradient>
       <linearGradient id="paint1_linear_10_601" x1="16.9378" y1="10.5" x2="29.0622" y2="3.5" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#5EB5F0"/>
+        <stop stopColor="#3DDC84"/>
         <stop offset="1" stopColor="#02704F"/>
       </linearGradient>
       <linearGradient id="paint2_linear_10_601" x1="33.9378" y1="10.5" x2="46.0622" y2="3.5" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#5EB5F0"/>
+        <stop stopColor="#3DDC84"/>
         <stop offset="1" stopColor="#02704F"/>
       </linearGradient>
       <linearGradient id="paint3_linear_10_601" x1="49.9378" y1="10.5" x2="62.0622" y2="3.5" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#5EB5F0"/>
+        <stop stopColor="#3DDC84"/>
         <stop offset="1" stopColor="#02704F"/>
       </linearGradient>
       <linearGradient id="paint4_linear_10_601" x1="67.2518" y1="10.5" x2="79.3761" y2="3.5" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#5EB5F0"/>
+        <stop stopColor="#3DDC84"/>
         <stop offset="1" stopColor="#02704F"/>
       </linearGradient>
     </defs>

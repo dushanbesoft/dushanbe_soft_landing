@@ -29,7 +29,7 @@
 }
 
 .transparent {
-  background-color: rgba(0, 0, 0, 0.202);
+  background-color: rgba(0, 0, 0, 0.702);
 }
 
 .logo {
@@ -55,6 +55,7 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .navItem:hover {
