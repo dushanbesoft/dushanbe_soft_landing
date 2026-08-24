@@ -17,7 +17,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const defaultDesc = t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.");
 
   return {
-    metadataBase: new URL(siteUrl),
     title: {
       default: defaultTitle,
       template: `%s | Dushanbe Soft`
@@ -57,15 +56,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     icons: {
       icon: "/icons/site-favicon.svg",
-      apple: "/icons/site-favicon.svg",
-    },
-    appleWebApp: {
-      capable: true,
-      statusBarStyle: 'default',
-      title: 'Dushanbe Soft',
-    },
-    formatDetection: {
-      telephone: false,
     },
   };
 }
