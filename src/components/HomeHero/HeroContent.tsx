@@ -27,12 +27,7 @@ export default function HeroContent() {
   return (
     <div className={styles.heroContent}>
       <div className={styles.titlesContainer}>
-        <div className={styles.badge}>
-          <div className={styles.badgeIcon} />
-          <span className={styles.badgeText}>
-            {t("hero.badge", "IT-решения для бизнеса и государства")}
-          </span>
-        </div>
+       
         <h1 className={styles.mainTitle}>
           {t("hero.title1", "Технологии, которые")}
           <br />
