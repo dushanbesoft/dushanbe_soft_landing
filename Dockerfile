@@ -2,29 +2,26 @@
 FROM node:22-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-RUN npm install -g pnpm@11.22.0
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 
-# Production-only deps, installed separately so the runner image
-# doesn't carry devDependencies
+# Production-only deps, pruned from the already-installed deps stage
+# so the runner image doesn't carry devDependencies
 FROM node:22-alpine AS prod-deps
-RUN apk add --no-cache libc6-compat
 WORKDIR /app
-RUN npm install -g pnpm@11.22.0
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile --prod
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json package-lock.json ./
+RUN npm prune --omit=dev
 
 # Rebuild the source code only when needed
 FROM node:22-alpine AS builder
 WORKDIR /app
-RUN npm install -g pnpm@11.22.0
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN pnpm run build
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM node:22-alpine AS runner
