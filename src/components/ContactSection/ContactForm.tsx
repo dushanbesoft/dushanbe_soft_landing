@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { IMaskInput } from "react-imask";
 import styles from "./ContactSection.module.css";
 
 export default function ContactForm() {
@@ -102,17 +101,16 @@ export default function ContactForm() {
           <label className={styles.label}>
             {t("contact.form.phoneLabel", "Телефон")}
           </label>
-          <IMaskInput
-            mask="+992 00 000 0000"
+          <input
             type="tel"
             name="phone"
             className={styles.input}
             placeholder={t(
               "contact.form.phonePlaceholder",
-              "+992 _ _ _ _ _ _ _ _ _",
+              "+_ (___) ___ __ __",
             )}
             value={formData.phone}
-            onAccept={(value: string) => setFormData((prev) => ({ ...prev, phone: value }))}
+            onChange={handleChange}
             required
           />
         </div>

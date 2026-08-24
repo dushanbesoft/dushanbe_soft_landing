@@ -136,13 +136,29 @@
   align-items: center;
   gap: max(6px, 0.6944vw);
   border-radius: max(133px, 15.4167vw);
-  border: 1px solid #5EB5F0;
+  border: 1px solid transparent;
   color: #9EAABB;
   font-family: var(--font-nunito-sans);
   font-size: max(9px, 1.0417vw);
   font-weight: 400;
   white-space: nowrap;
   flex-shrink: 0;
+  position: relative;
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
 }
 
 .tag.highlighted {
