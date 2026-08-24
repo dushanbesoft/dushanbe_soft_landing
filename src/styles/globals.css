@@ -143,6 +143,8 @@ body {
 
 .main-global {
   position: relative;
+ 
+  overflow: hidden;
 }
 .header-global {
   background-color: #00000050;

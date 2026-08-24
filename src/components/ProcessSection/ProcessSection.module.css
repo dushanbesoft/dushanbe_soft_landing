@@ -1,6 +1,6 @@
 .section {
   display: flex;
-  padding: max(25px, 3.1250vw) max(17px, 2.0833vw);
+  padding: 45px 30px;
   justify-content: center;
   align-items: center;
   background: #000607;
@@ -13,9 +13,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: max(17px, 2.0833vw);
+  gap: 30px;
   flex: 1 0 0;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .headerRow {
@@ -31,25 +34,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: max(3px, 0.3472vw);
+  gap: 5px;
   flex: 1 0 0;
   position: relative;
 }
 
 .subtitle {
-  color: #D9D9D9;
+  color: #d9d9d9;
   font-family: var(--font-tektur);
-  font-size: max(8.5px, 1.0417vw);
+  font-size: 15px;
   font-weight: 500;
   margin: 0;
 }
 
 .mainTitle {
   font-family: var(--font-tektur);
-  font-size: max(18px, 2.2222vw);
+  font-size: 32px;
   font-weight: 700;
   margin: 0;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,7 +70,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: max(17px, 2.0833vw);
+  gap: 30px;
   align-self: stretch;
   position: relative;
   width: 100%;
@@ -93,14 +96,14 @@
 
 .card {
   display: flex;
-  padding-top: max(11px, 1.3889vw);
+  padding-top: 20px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: max(11px, 1.3889vw);
+  gap: 20px;
   flex: 1 0 0;
-  border-radius: max(6px, 0.7639vw);
-  background: rgba(255, 255, 255, 0.00);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0);
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -111,8 +114,8 @@
 
 .icon {
   display: flex;
-  width: max(36px, 4.4444vw);
-  height: max(36px, 4.4444vw);
+  width: 64px;
+  height: 64px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -122,24 +125,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: max(5.5px, 0.6944vw);
+  gap: 10px;
   align-self: stretch;
 }
 
 .cardTitle {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: var(--font-tektur);
-  font-size: max(9px, 1.1111vw);
+  font-size: 16px;
   font-weight: 700;
   margin: 0;
 }
 
 .cardDesc {
-  color: #9EAABB;
+  color: #9eaabb;
   text-align: center;
   font-family: var(--font-nunito-sans);
-  font-size: max(8.5px, 1.0417vw);
+  font-size: 15px;
   font-weight: 400;
   margin: 0;
   line-height: 1.4;
@@ -147,22 +150,26 @@
 
 .badge {
   display: flex;
-  padding: max(3px, 0.3472vw) max(5.5px, 0.6944vw);
+  padding: 5px 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: max(11px, 1.3889vw);
-  border-radius: max(3px, 0.3472vw);
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  gap: 20px;
+  border-radius: 5px;
+  background: linear-gradient(
+    60deg,
+    rgba(94, 181, 240, 0.11) 13.4%,
+    rgba(2, 112, 79, 0.11) 86.6%
+  );
   position: relative;
 }
 
 .badgeText {
   font-family: var(--font-tektur);
-  font-size: max(7.5px, 0.9028vw);
+  font-size: 13px;
   font-weight: 400;
   margin: 0;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -181,7 +188,8 @@
     font-size: 14px;
     text-align: center;
   }
-  .headerRow, .titles {
+  .headerRow,
+  .titles {
     align-items: center;
   }
   .grid {
