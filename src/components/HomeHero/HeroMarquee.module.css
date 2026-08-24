@@ -12,7 +12,7 @@
   align-items: center;
   gap: max(18px, 2.0833vw);
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 .marqueeItem {
