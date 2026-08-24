@@ -1,9 +1,15 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { techIcons, techNames } from './techIcons';
 import styles from './HeroBackgroundAnimation.module.css';
 
-const Blob = ({ className }: { className: string }) => (
+interface BlobTech {
+  Icon: (typeof techIcons)[string]['Icon'];
+  color: string;
+}
+
+const Blob = ({ className, tech }: { className: string; tech?: BlobTech }) => (
   <div className={`${styles.blob} ${className}`}>
     <svg width="100%" height="100%" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M39.0597 66.1375C20.9375 69.3134 3.67919 57.1937 0.503362 39.0686C-2.66389 20.9492 9.4444 3.67948 27.5695 0.50365C45.7004 -2.66646 62.9586 9.45893 66.1287 27.5755C69.3074 45.7063 57.1877 62.9674 39.0597 66.1375Z" fill="url(#paint0_radial_blob)"/>
@@ -19,6 +25,9 @@ const Blob = ({ className }: { className: string }) => (
         </radialGradient>
       </defs>
     </svg>
+    {tech && (
+      <tech.Icon className={styles.blobIcon} style={{ color: tech.color }} aria-hidden="true" />
+    )}
   </div>
 );
 
@@ -318,6 +327,17 @@ const NetworkCanvas = () => {
   return <canvas ref={canvasRef} className={styles.networkCanvas} />;
 };
 
+// Only blobs at least this big get a tech logo inside — smaller ones stay
+// as plain glowing dots so the icon doesn't turn into an unreadable smudge.
+const ICON_MIN_SIZE = 30;
+const BLOB_SIZES: Record<number, number> = {
+  1: 23, 2: 22, 3: 32, 4: 33, 5: 43, 6: 48, 7: 55, 8: 30, 9: 22, 10: 46,
+  11: 27, 12: 42, 13: 19, 14: 49, 15: 52, 16: 20, 17: 52, 18: 63, 19: 23, 20: 59,
+  21: 26, 22: 58, 23: 35, 24: 24, 25: 32, 26: 53, 27: 14, 28: 33, 29: 37, 30: 35,
+  31: 45, 32: 17, 33: 30, 34: 35, 35: 20, 36: 49, 37: 55, 38: 26, 39: 42, 40: 17,
+  41: 35, 42: 20, 43: 35, 44: 42, 45: 19, 46: 35, 47: 60, 48: 23, 49: 43, 50: 17,
+};
+
 export default function HeroBackgroundAnimation() {
   const [blobCount, setBlobCount] = useState(DESKTOP_BLOB_COUNT);
 
@@ -330,12 +350,15 @@ export default function HeroBackgroundAnimation() {
   }, []);
 
   const blobs = Array.from({ length: blobCount }, (_, i) => i + 1);
+  let techCursor = 0;
   return (
     <div className={styles.backgroundLayer}>
       <div className={styles.layerBlobs}>
-        {blobs.map((num) => (
-          <Blob key={num} className={styles[`blob${num}`]} />
-        ))}
+        {blobs.map((num) => {
+          const showIcon = (BLOB_SIZES[num] ?? 0) >= ICON_MIN_SIZE;
+          const tech = showIcon ? techIcons[techNames[techCursor++ % techNames.length]] : undefined;
+          return <Blob key={num} className={styles[`blob${num}`]} tech={tech} />;
+        })}
       </div>
 
       <div className={styles.layerDarken} />
