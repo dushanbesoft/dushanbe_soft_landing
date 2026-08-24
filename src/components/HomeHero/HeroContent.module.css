@@ -39,7 +39,7 @@
 
 .badgeText {
   color: #fff;
-  font-family: var(--font-nunito-sans);
+  font-family: var(--font-tektur);
   font-size: max(9px, 1.0417vw);
   font-weight: 400;
 }
@@ -67,7 +67,7 @@
 .subtitle {
   color: #fff;
   text-align: center;
-  font-family: var(--font-nunito-sans);
+  font-family: var(--font-tektur);
   font-size: max(14px, 1vw);
   font-weight: 400;
   max-width: max(500px, 41.6667vw);

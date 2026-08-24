@@ -13,6 +13,7 @@ interface ProductCardProps {
   subtitle: string;
   description: string;
   tags: Tag[];
+  href?: string;
 }
 
 export default function ProductCard({
@@ -21,11 +22,11 @@ export default function ProductCard({
   title,
   subtitle,
   description,
-  tags
+  tags,
+  href
 }: ProductCardProps) {
-  return (
-    <div className={styles.card}>26
-26
+  const CardContent = (
+    <>
       <img src={imageSrc} alt={title} className={styles.image} />
       
       <div className={styles.content}>
@@ -66,6 +67,20 @@ export default function ProductCard({
           </div>
         </div>
       </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={styles.card} style={{ textDecoration: 'none' }}>
+        {CardContent}
+      </a>
+    );
+  }
+
+  return (
+    <div className={styles.card}>
+      {CardContent}
     </div>
   );
 }

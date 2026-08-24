@@ -86,6 +86,7 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
             subtitle={t('products.zudsms.subtitle', 'zudsms.tj')}
             description={t('products.zudsms.description', 'Облачный сервис автоматизации и массовой рассылки SMS-сообщений для бизнеса...')}
             tags={getSmsTags()}
+            href="https://zudsms.tj"
           />
           <ProductCard 
             imageSrc="/images/liveChatBanner.svg"
@@ -94,6 +95,7 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
             subtitle={t('products.livechat.subtitle', 'LiveChat TJ')}
             description={t('products.livechat.description', 'Веб-сервис и платформа онлайн-консультаций для бизнеса...')}
             tags={getChatTags()}
+            href="https://livechat.tj"
           />
         </div>
       </div>
