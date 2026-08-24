@@ -6,7 +6,7 @@
 
 .top {
   display: flex;
-  padding: max(30px, 3.125vw) max(20px, 2.083vw);
+  padding: max(30px, 3.125vw) max(45px, 2.083vw);
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -37,7 +37,7 @@
 }
 
 .desc {
-  color: #9EAABB;
+  color: #9eaabb;
   font-family: var(--font-nunito-sans);
   font-size: max(12px, 1.041vw);
   font-weight: 400;
@@ -59,7 +59,9 @@
   background: rgba(255, 255, 255, 0.15);
   width: max(24px, 1.944vw); /* 28px */
   height: max(24px, 1.944vw);
-  transition: transform 0.3s, background 0.3s;
+  transition:
+    transform 0.3s,
+    background 0.3s;
   cursor: pointer;
 }
 
@@ -85,18 +87,19 @@
   flex-direction: column;
   align-items: flex-start;
   gap: max(15px, 1.388vw);
-  width: max(200px, 18.47vw); /* 266px */
+  /*  width: max(200px, 18.47vw); */
 }
 
 .colTitle {
-  color: #FFF;
+  color: #fff;
   font-family: var(--font-tektur);
   font-size: max(14px, 1.111vw);
   font-weight: 700;
   margin: 0;
 }
 
-.linksList, .contactList {
+.linksList,
+.contactList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -104,7 +107,7 @@
 }
 
 .link {
-  color: #9EAABB;
+  color: #9eaabb;
   font-family: var(--font-nunito-sans);
   font-size: max(12px, 1.041vw);
   font-weight: 400;
@@ -113,7 +116,7 @@
 }
 
 .link:hover {
-  color: #5EB5F0;
+  color: #5eb5f0;
 }
 
 .contactItem {
@@ -128,8 +131,9 @@
   flex-shrink: 0;
 }
 
-.contactItem span, .contactItem a {
-  color: #9EAABB;
+.contactItem span,
+.contactItem a {
+  color: #9eaabb;
   font-family: var(--font-nunito-sans);
   font-size: max(12px, 1.041vw);
   font-weight: 400;
@@ -138,7 +142,7 @@
 }
 
 .contactItem a:hover {
-  color: #5EB5F0;
+  color: #5eb5f0;
 }
 
 .bottom {
@@ -152,7 +156,7 @@
 }
 
 .copyright {
-  color: #64748B;
+  color: #64748b;
   font-family: var(--font-nunito-sans);
   font-size: max(12px, 1.041vw);
   font-weight: 400;
@@ -165,8 +169,9 @@
     gap: 40px;
     padding: 30px 20px;
   }
-  
-  .brandCol, .contactCol {
+
+  .brandCol,
+  .contactCol {
     width: 100%;
   }
 
@@ -187,7 +192,10 @@
     font-size: 18px;
   }
 
-  .link, .contactItem span, .contactItem a, .copyright {
+  .link,
+  .contactItem span,
+  .contactItem a,
+  .copyright {
     font-size: 14px;
   }
 
@@ -195,7 +203,7 @@
     width: 24px;
     height: 24px;
   }
-  
+
   .bottom {
     padding: 20px;
     text-align: center;

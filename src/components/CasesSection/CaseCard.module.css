@@ -15,6 +15,8 @@
 
 .card:hover {
   transform: translateY(-5px);
+  border: 1px solid #5EB5F0;
+  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
   box-shadow: 0 max(10px, 1vw) max(20px, 2vw) rgba(0,0,0,0.05);
 }
 

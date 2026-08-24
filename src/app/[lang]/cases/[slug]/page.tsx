@@ -139,7 +139,7 @@ export default async function CaseDetailsPage({
       resources={resources}
     >
       <main className={styles.main}>
-        <div className="header-global">
+        <div className="header-global header-fixed">
           <Header />
         </div>
 

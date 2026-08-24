@@ -8,6 +8,15 @@
   background: rgba(0, 0, 0, 0.05);
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #5EB5F0;
+  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  box-shadow: 0 0 11px 0 rgba(94, 181, 240, 0.3) inset, 0 0 11px 0 rgba(0, 140, 113, 0.3);
 }
 
 .image {
