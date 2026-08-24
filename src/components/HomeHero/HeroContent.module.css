@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: max(40px, 2.77vw);
+  gap: 40px;
   flex: 1 0 0;
   position: relative;
   width: 100%;
-  padding-top:calc(max(15px, 5.7361vw) + max(40px, 2.77vw));
+  padding-top:calc(83px + 40px);
 }
 
 .titlesContainer {
@@ -15,24 +15,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: max(24px, 1.66vw);
-  max-width: max(800px, 69.4444vw);
+  gap: 24px;
+  max-width: 1000px;
 }
 
 .badge {
   display: flex;
-  padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
+  padding: 10px 20px;
   justify-content: center;
   align-items: center;
-  gap: max(6px, 0.6944vw);
-  border-radius: max(133px, 15.4167vw);
+  gap: 10px;
+  border-radius: 222px;
   border: 1px solid #5eb5f0;
   background: rgba(15, 81, 224, 0.11);
 }
 
 .badgeIcon {
-  width: max(6px, 0.7639vw);
-  height: max(6px, 0.7639vw);
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
 }
@@ -40,14 +40,14 @@
 .badgeText {
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   font-weight: 400;
 }
 
 .mainTitle {
   text-align: center;
   font-family: var(--font-tektur);
-  font-size: max(45px, 5.2083vw);
+  font-size: 75px;
   font-weight: 700;
   line-height: 1.1;
   background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
@@ -68,9 +68,9 @@
   color: #fff;
   text-align: center;
   font-family: var(--font-tektur);
-  font-size: max(14px, 1vw);
+  font-size: 14px;
   font-weight: 400;
-  max-width: max(500px, 41.6667vw);
+  max-width: 600px;
   line-height: 1.4;
   margin: 0;
 }
@@ -78,22 +78,22 @@
 .buttons {
   display: flex;
   align-items: flex-start;
-  gap: max(16px, 1.1vw);
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btnPrimary {
   display: flex;
-  height: max(48px, 3.3vw);
-  padding: 0 max(28px, 2vw);
+  height: 48px;
+  padding: 0 29px;
   justify-content: center;
   align-items: center;
-  gap: max(12px, 1.3889vw);
-  border-radius: max(6px, 0.7639vw);
+  gap: 20px;
+  border-radius: 11px;
   background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: max(14px, 0.97vw);
+  font-size: 14px;
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -107,17 +107,17 @@
 
 .btnSecondary {
   display: flex;
-  height: max(48px, 3.3vw);
-  padding: 0 max(28px, 2vw);
+  height: 48px;
+  padding: 0 29px;
   justify-content: center;
   align-items: center;
-  gap: max(6px, 0.6944vw);
-  border-radius: max(6px, 0.7639vw);
+  gap: 10px;
+  border-radius: 11px;
   border: 1px solid #5eb5f0;
   background: rgba(1, 101, 88, 0.11);
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: max(14px, 0.97vw);
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   transition: background 0.3s ease;

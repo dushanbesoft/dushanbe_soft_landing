@@ -11,11 +11,11 @@
 .hero {
   position: relative;
   width: 100%;
-  height: max(250px, 47.77vw);
+  height: 688px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: max(15px, 1.7361vw) max(18px, 2.0833vw);
+  padding: 25px 30px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
 .heroOverlay {
   /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0;heroContent
   right: 0;
   bottom: 0; */
   background: #fff;
@@ -36,14 +36,14 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: max(12px, 0.833vw);
+  gap: 12px;
 }
 
 .yearBadge {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  padding: max(6px, 0.5vw) max(16px, 1.11vw);
+  padding: 7px 16px;
   width: fit-content;
   backdrop-filter: blur(10px);
 }
@@ -51,14 +51,14 @@
 .yearText {
   color: #fff;
   font-family: var(--font-nunito-sans);
-  font-size: max(12px, 0.972vw);
+  font-size: 14px;
   font-weight: 500;
 }
 
 .title {
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: max(32px, 3.333vw);
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
   margin: 0;
@@ -66,38 +66,38 @@
 
 .contentWrapper {
   width: 100%;
-  padding: max(15px, 1.7361vw) max(18px, 2.0833vw);
-  padding-bottom: max(40px, 6.16vw);
+  padding: 25px 30px;
+  padding-bottom: 89px;
   display: flex;
   flex-direction: column;
-  gap: max(40px, 4.16vw);
+  gap: 60px;
   position: relative;
   z-index: 2;
 }
 
 .descriptionSection {
-  max-width: max(600px, 41.666vw);
+  max-width: 600px;
 }
 
 .sectionTitle {
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: max(24px, 1.666vw);
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: max(16px, 1.111vw);
+  margin-bottom: 16px;
 }
 
 .descriptionText {
   color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-nunito-sans);
-  font-size: max(16px, 1.111vw);
+  font-size: 16px;
   line-height: 1.6;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: max(30px, 2.77vw);
+  gap: 40px;
 }
 
 .tasksList {
@@ -106,16 +106,16 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: max(12px, 1.11vw);
+  gap: 16px;
 }
 
 .taskItem {
   color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-nunito-sans);
-  font-size: max(16px, 1.111vw);
+  font-size: 16px;
   display: flex;
   align-items: flex-start;
-  gap: max(8px, 0.833vw);
+  gap: 12px;
 }
 
 .taskIcon {
@@ -127,17 +127,17 @@
 .tagsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: max(8px, 0.833vw);
+  gap: 12px;
 }
 
 .tag {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
-  padding: max(8px, 0.69vw) max(16px, 1.38vw);
+  padding: 10px 20px;
   color: #fff;
   font-family: var(--font-nunito-sans);
-  font-size: max(14px, 0.972vw);
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 
@@ -149,13 +149,13 @@
 .backBtn {
   display: inline-flex;
   align-items: center;
-  gap: max(6px, 0.55vw);
+  gap: 8px;
   color: rgba(255, 255, 255, 0.6);
   font-family: var(--font-nunito-sans);
   text-decoration: none;
-  font-size: max(16px, 1.111vw);
+  font-size: 16px;
   transition: color 0.3s ease;
-  margin-bottom: max(20px, 2.77vw);
+  margin-bottom: 40px;
 }
 
 .backBtn:hover {

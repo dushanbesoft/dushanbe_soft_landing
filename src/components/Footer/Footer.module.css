@@ -6,40 +6,43 @@
 
 .top {
   display: flex;
-  padding: max(30px, 3.125vw) max(45px, 2.083vw);
+  padding: 45px 30px;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: max(30px, 3.125vw);
+  gap: 45px;
   background: #000607;
   width: 100%;
   box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 30px;
 }
 
 .brandCol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(20px, 2.083vw);
-  width: max(220px, 18.54vw); /* 267px roughly */
+  gap: 30px;
+  width: 267px; /* 267px roughly */
 }
 
 .brandInfo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(15px, 1.388vw);
+  gap: 20px;
 }
 
 .logo {
-  width: max(150px, 14.16vw); /* 204px */
+  width: 204px; /* 204px */
   height: auto;
 }
 
 .desc {
   color: #9eaabb;
   font-family: var(--font-nunito-sans);
-  font-size: max(12px, 1.041vw);
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.46;
   margin: 0;
@@ -48,7 +51,7 @@
 .socials {
   display: flex;
   align-items: flex-start;
-  gap: max(8px, 0.694vw);
+  gap: 10px;
 }
 
 .socialIcon {
@@ -57,8 +60,8 @@
   align-items: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
-  width: max(24px, 1.944vw); /* 28px */
-  height: max(24px, 1.944vw);
+  width: 28px; /* 28px */
+  height: 28px;
   transition:
     transform 0.3s,
     background 0.3s;
@@ -79,21 +82,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(15px, 1.388vw);
+  gap: 20px;
 }
 
 .contactCol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(15px, 1.388vw);
-  /*  width: max(200px, 18.47vw); */
+  gap: 20px;
+  /*  width: 266px; */
 }
 
 .colTitle {
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: max(14px, 1.111vw);
+  font-size: 16px;
   font-weight: 700;
   margin: 0;
 }
@@ -103,13 +106,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(8px, 0.694vw);
+  gap: 10px;
 }
 
 .link {
   color: #9eaabb;
   font-family: var(--font-nunito-sans);
-  font-size: max(12px, 1.041vw);
+  font-size: 15px;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s;
@@ -122,12 +125,12 @@
 .contactItem {
   display: flex;
   align-items: center;
-  gap: max(8px, 0.764vw);
+  gap: 11px;
 }
 
 .contactItem svg {
-  width: max(18px, 1.527vw);
-  height: max(18px, 1.527vw);
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
@@ -135,7 +138,7 @@
 .contactItem a {
   color: #9eaabb;
   font-family: var(--font-nunito-sans);
-  font-size: max(12px, 1.041vw);
+  font-size: 15px;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s;
@@ -147,7 +150,7 @@
 
 .bottom {
   display: flex;
-  padding: max(20px, 2.083vw) max(20px, 2.083vw);
+  padding: 30px 30px;
   justify-content: center;
   align-items: flex-start;
   background: #001010;
@@ -158,7 +161,7 @@
 .copyright {
   color: #64748b;
   font-family: var(--font-nunito-sans);
-  font-size: max(12px, 1.041vw);
+  font-size: 15px;
   font-weight: 400;
   margin: 0;
 }

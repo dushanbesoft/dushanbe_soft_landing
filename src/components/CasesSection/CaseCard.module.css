@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   flex: 1 0 0;
-  border-radius: max(7px, 0.7639vw);
+  border-radius: 11px;
   border: 1px solid #E2E8F0;
   background: #FFF;
   overflow: hidden;
@@ -17,17 +17,17 @@
   transform: translateY(-5px);
   border: 1px solid #5EB5F0;
   background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
-  box-shadow: 0 max(10px, 1vw) max(20px, 2vw) rgba(0,0,0,0.05);
+  box-shadow: 0 14px 29px rgba(0,0,0,0.05);
 }
 
 .imageHeader {
   display: flex;
-  height: max(137px, 15.8333vw);
-  padding: max(6px, 0.6944vw);
+  height: 228px;
+  padding: 10px;
   align-items: flex-end;
-  gap: max(6px, 0.6944vw);
+  gap: 10px;
   align-self: stretch;
-  border-radius: max(3px, 0.3472vw) max(3px, 0.3472vw) 0 0;
+  border-radius: 5px 5px 0 0;
   background-color: lightgray;
   background-position: 50%;
   background-size: cover;
@@ -37,13 +37,13 @@
 
 .yearBadge {
   position: absolute;
-  right: max(6px, 0.6944vw);
+  right: 10px;
   display: flex;
-  padding: max(3px, 0.3472vw) max(6px, 0.6944vw);
+  padding: 5px 10px;
   justify-content: center;
   align-items: center;
-  gap: max(6px, 0.6944vw);
-  border-radius: max(133px, 15.4167vw);
+  gap: 10px;
+  border-radius: 222px;
   border: 1px solid #5EB5F0;
   background: rgba(255, 255, 255, 0.11);
 }
@@ -51,18 +51,18 @@
 .yearText {
   color: #FFF;
   font-family: var(--font-nunito-sans);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   font-weight: 400;
 }
 
 .content {
   display: flex;
-  padding: max(12px, 1.3889vw) max(12px, 1.3889vw) max(18px, 2.0833vw) max(12px, 1.3889vw);
+  padding: 20px 20px 30px 20px;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(12px, 1.3889vw);
+  gap: 20px;
   align-self: stretch;
-  border-radius: 0 0 max(7px, 0.7639vw) max(7px, 0.7639vw);
+  border-radius: 0 0 11px 11px;
   background: rgba(255, 255, 255, 0.06);
   flex-grow: 1;
 }
@@ -70,14 +70,14 @@
 .title {
   color: #000;
   font-family: var(--font-tektur);
-  font-size: max(10px, 1.1111vw);
+  font-size: 16px;
   font-weight: 700;
 }
 
 .description {
   color: #64748B;
   font-family: var(--font-nunito-sans);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -85,7 +85,7 @@
 .tagsContainer {
   display: flex;
   flex-direction: column;
-  gap: max(6px, 0.6944vw);
+  gap: 10px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -99,7 +99,7 @@
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center;
-  gap: max(6px, 0.6944vw);
+  gap: 10px;
   width: max-content;
   min-width: 100%;
   animation: marquee-left 25s linear infinite;
@@ -117,11 +117,11 @@
 
 .tag {
   display: inline-flex;
-  padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
+  padding: 10px 20px;
   justify-content: center;
   align-items: center;
-  gap: max(6px, 0.6944vw);
-  border-radius: max(3px, 0.3472vw);
+  gap: 10px;
+  border-radius: 5px;
   border: 1px solid transparent;
   background: rgba(15, 81, 224, 0.05);
   white-space: nowrap;
@@ -150,7 +150,7 @@
 
 .tagText {
   font-family: var(--font-nunito-sans);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   font-weight: 400;
   background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
   background-clip: text;

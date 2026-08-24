@@ -1,21 +1,23 @@
-
 .section {
   display: flex;
-  padding: max(27px, 3.1250vw) max(18px, 2.0833vw);
+  padding: 45px 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: max(18px, 2.0833vw);
+  gap: 30px;
   align-self: stretch;
-  background: #FDFDFE;
+  background: #fdfdfe;
   position: relative;
 }
 
 .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: max(18px, 2.0833vw);
+  gap: 30px;
   align-self: stretch;
   position: relative;
   width: 100%;
@@ -28,7 +30,7 @@
   align-self: stretch;
   position: relative;
   flex-wrap: wrap;
-  gap: max(12px, 1.3889vw);
+  gap: 20px;
 }
 
 .titles {
@@ -36,16 +38,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: max(3px, 0.3472vw);
+  gap: 5px;
   flex: 1 0 0;
   position: relative;
 }
 
 .subtitle {
   font-family: var(--font-tektur);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -54,19 +56,19 @@
 .mainTitle {
   color: #000;
   font-family: var(--font-tektur);
-  font-size: max(19px, 2.2222vw);
+  font-size: 32px;
   font-weight: 700;
   margin: 0;
 }
 
 .allCasesBtn {
   display: flex;
-  padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
+  padding: 10px 20px;
   align-items: center;
-  gap: max(12px, 1.3889vw);
-  border-radius: max(3px, 0.3472vw);
-  border: 1px solid #0F51E0;
-  background: #FFF;
+  gap: 20px;
+  border-radius: 5px;
+  border: 1px solid #0f51e0;
+  background: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -77,24 +79,24 @@
 
 .btnText {
   font-family: var(--font-tektur);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .btnIcon {
-  width: max(13px, 1.5278vw);
-  height: max(13px, 1.5278vw);
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: max(12px, 1.3889vw);
+  gap: 20px;
   align-self: stretch;
   position: relative;
   width: 100%;
@@ -124,7 +126,7 @@
     grid-template-columns: 1fr;
   }
   .allCasesBtn {
-    width:  calc(100%);
+    width: calc(100%);
     justify-content: center;
     padding: 12px;
   }

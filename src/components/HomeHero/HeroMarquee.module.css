@@ -1,7 +1,7 @@
 .marqueeContainer {
   width: 100%;
   overflow: hidden;
-  padding-bottom: max(18px, 2.0833vw);
+  padding-bottom: 30px;
   margin-top: auto;
   position: relative;
   z-index: 10;
@@ -10,21 +10,21 @@
 .marqueeContent {
   display: flex;
   align-items: center;
-  gap: max(18px, 2.0833vw);
+  gap: 30px;
   width: max-content;
   animation: marquee 60s linear infinite;
 }
 
 .marqueeItem {
   display: flex;
-  padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
+  padding: 10px 20px;
   justify-content: center;
   align-items: center;
   border-radius: 1000px;
   border: 1px solid transparent;
   color: #9EAABB;
   font-family: var(--font-nunito-sans);
-  font-size: max(9px, 1.0417vw);
+  font-size: 15px;
   white-space: nowrap;
   position: relative;
 }

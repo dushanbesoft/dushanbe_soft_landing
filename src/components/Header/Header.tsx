@@ -61,22 +61,25 @@ export default function Header() {
   const { t } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
-  
-  const currentLang = pathname.split('/')[1] || 'ru';
-  
+
+  const currentLang = pathname.split("/")[1] || "ru";
+
   const changeLanguage = (lang: string) => {
     setIsLangMenuOpen(false);
     if (lang === currentLang) return;
-    const segments = pathname.split('/');
+    const segments = pathname.split("/");
     segments[1] = lang;
-    router.push(segments.join('/'));
+    router.push(segments.join("/"));
   };
 
   const getLangDisplayName = (l: string) => {
     switch (l) {
-      case 'tj': return 'ТҶ';
-      case 'en': return 'EN';
-      default: return 'РУ';
+      case "tj":
+        return "ТҶ";
+      case "en":
+        return "EN";
+      default:
+        return "РУ";
     }
   };
 
@@ -95,7 +98,7 @@ export default function Header() {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    
+
     // Check initial scroll position
     handleScroll();
 
@@ -106,67 +109,116 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : styles.transparent}`}>
-      <Link href="/" onClick={closeMenu}>
-        <img
-          className={styles.logo}
-          src="/icons/logo-header.svg"
-          alt="Dushanbe-Soft Logo"
-        />
-      </Link>
+    <header
+      className={`${styles.header} ${isScrolled ? styles.scrolled : styles.transparent}`}
+    >
+      <main>
+        <Link href="/" onClick={closeMenu}>
+          <img
+            className={styles.logo}
+            src="/icons/logo-header.svg"
+            alt="Dushanbe-Soft Logo"
+          />
+        </Link>
 
-      <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
-        <Link href={`/${currentLang}/`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.home', 'Главная')}
-        </Link>
-        <Link href={`/${currentLang}/#services`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.services', 'Услуги')}
-        </Link>
-        <Link href={`/${currentLang}/#products`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.products', 'Продукты')}
-        </Link>
-        <Link href={`/${currentLang}/#cases`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.cases', 'Кейсы')}
-        </Link>
-        <Link href={`/${currentLang}/#partners`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.partners', 'Партнёры')}
-        </Link>
-        <Link href={`/${currentLang}/#about`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.about', 'О компании')}
-        </Link>
-        <Link href={`/${currentLang}/#contacts`} className={styles.navItem} onClick={closeMenu}>
-          {t('header.contacts', 'Контакты')}
-        </Link>
-      </nav>
-
-      <div className={styles.controlsWrapper}>
-        <div className={styles.langSwitcherContainer}>
-          <div 
-            className={styles.langSwitcher} 
-            onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+        <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
+          <Link
+            href={`/${currentLang}/`}
+            className={styles.navItem}
+            onClick={closeMenu}
           >
-            <span className={styles.langText}>{getLangDisplayName(currentLang)}</span>
-            <DownArrow />
-          </div>
-          {isLangMenuOpen && (
-            <div className={styles.langDropdown}>
-              <div className={styles.langOption} onClick={() => changeLanguage('tj')}>ТҶ</div>
-              <div className={styles.langOption} onClick={() => changeLanguage('ru')}>РУ</div>
-              <div className={styles.langOption} onClick={() => changeLanguage('en')}>EN</div>
+            {t("header.home", "Главная")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#services`}
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.services", "Услуги")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#products`}
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.products", "Продукты")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#cases`}
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.cases", "Кейсы")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#partners`}
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.partners", "Партнёры")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#about`}
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.about", "О компании")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#contacts`}
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.contacts", "Контакты")}
+          </Link>
+        </nav>
+
+        <div className={styles.controlsWrapper}>
+          <div className={styles.langSwitcherContainer}>
+            <div
+              className={styles.langSwitcher}
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+            >
+              <span className={styles.langText}>
+                {getLangDisplayName(currentLang)}
+              </span>
+              <DownArrow />
             </div>
-          )}
+            {isLangMenuOpen && (
+              <div className={styles.langDropdown}>
+                <div
+                  className={styles.langOption}
+                  onClick={() => changeLanguage("tj")}
+                >
+                  ТҶ
+                </div>
+                <div
+                  className={styles.langOption}
+                  onClick={() => changeLanguage("ru")}
+                >
+                  РУ
+                </div>
+                <div
+                  className={styles.langOption}
+                  onClick={() => changeLanguage("en")}
+                >
+                  EN
+                </div>
+              </div>
+            )}
+          </div>
+
+          <button
+            className={styles.hamburgerBtn}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+          </button>
         </div>
 
-        <button
-          className={styles.hamburgerBtn}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
-        </button>
-      </div>
-
-      {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}
+        {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}
+      </main>
     </header>
   );
 }
