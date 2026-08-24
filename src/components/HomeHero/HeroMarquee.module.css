@@ -1,7 +1,7 @@
 .marqueeContainer {
   width: 100%;
   overflow: hidden;
-  padding: max(18px, 2.0833vw) 0;
+  padding-bottom: max(18px, 2.0833vw);
   margin-top: auto;
   position: relative;
   z-index: 10;
@@ -20,12 +20,28 @@
   padding: max(6px, 0.6944vw) max(12px, 1.3889vw);
   justify-content: center;
   align-items: center;
-  border-radius: max(133px, 15.4167vw);
-  border: 1px solid #5EB5F0;
+  border-radius: 1000px;
+  border: 1px solid transparent;
   color: #9EAABB;
   font-family: var(--font-nunito-sans);
   font-size: max(9px, 1.0417vw);
   white-space: nowrap;
+  position: relative;
+}
+
+.marqueeItem::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
 }
 
 @keyframes marquee {

@@ -57,6 +57,7 @@ const CloseIcon = () => (
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
@@ -89,11 +90,23 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    
+    // Check initial scroll position
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : styles.transparent}`}>
       <Link href="/" onClick={closeMenu}>
         <img
           className={styles.logo}
