@@ -28,7 +28,7 @@
   align-self: stretch;
   border-radius: max(3px, 0.3472vw) max(3px, 0.3472vw) 0 0;
   object-fit: cover;
-}
+}к
 
 .content {
   display: flex;
@@ -37,9 +37,11 @@
   align-items: flex-start;
   gap: max(12px, 1.3889vw);
   align-self: stretch;
+  justify-content: space-between;
   border-radius: 0 0 max(6px, 0.7639vw) max(6px, 0.7639vw);
   background: rgba(1, 101, 88, 0.11);
   flex-grow: 1;
+  /*height: 100%;*/
 }
 
 .headerRow {
