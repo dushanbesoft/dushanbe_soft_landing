@@ -77,7 +77,7 @@ export default async function Footer({ lang = 'ru' }: { lang?: string }) {
             <a href="#" className={styles.link}>{t('footer.links2.0', 'Веб-разработка')}</a>
             <a href="#" className={styles.link}>{t('footer.links2.1', 'Мобильная разработка')}</a>
             <a href="#" className={styles.link}>{t('footer.links2.2', 'UI/UX Дизайн')}</a>
-            <a href="#" className={styles.link}>{t('footer.links2.3', 'API Инеграция')}</a>
+            <a href="#" className={styles.link}>{t('footer.links2.3', 'API Интеграция')}</a>
             <a href="#" className={styles.link}>{t('footer.links2.4', 'Кибербезопасность')}</a>
             <a href="#" className={styles.link}>{t('footer.links2.5', 'Техническая поддержка')}</a>
           </div>
