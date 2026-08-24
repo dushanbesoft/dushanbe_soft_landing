@@ -180,7 +180,7 @@ export default async function ProcessSection({ lang = 'ru' }: { lang?: string })
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>{t('process.subtitle', 'Как мы работаем')}</span>
+            {/* <span className={styles.subtitle}>{t('process.subtitle', 'Как мы работаем')}</span> */}
             <h2 className={styles.mainTitle}>{t('process.title', 'Процесс разработки')}</h2>
           </div>
         </div>

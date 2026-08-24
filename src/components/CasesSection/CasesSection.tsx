@@ -52,12 +52,12 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
             {/* <span className={styles.subtitle}>{t("cases.subtitle")}</span> */}
             <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
           </div>
-          {!showAll && (
+          {/* {!showAll && (
             <Link href={`/${lang}/cases`} className={styles.allCasesBtn}>
               <span className={styles.btnText}>{t("cases.all_cases")}</span>
               <ArrowUpIcon />
             </Link>
-          )}
+          )} */}
         </div>
 
         <div className={styles.cardsGrid}>

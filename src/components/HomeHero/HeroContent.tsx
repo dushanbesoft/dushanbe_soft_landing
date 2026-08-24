@@ -51,34 +51,38 @@ export default function HeroContent() {
 
   return (
     <div className={styles.heroContent}>
-      <div className={styles.titlesContainer}>
+      <div className={styles.centerGroup}>
+        <div className={styles.titlesContainer}>
 
-        <h1 className={styles.mainTitle}>
-          <TypedTitle key={fullTitle} text={fullTitle} />
-          <span className={styles.cursor} aria-hidden="true" />
-          <br />
-          {/* {t("hero.title2", "двигают бизнес вперёд")} */}
-        </h1>
-        {/* <p className={styles.subtitle}>
-          {t(
-            "hero.subtitle",
-            "Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.",
-          )}
-        </p> */}
-      </div>
+          <h1 className={styles.mainTitle}>
+            <TypedTitle key={fullTitle} text={fullTitle} />
+            <span className={styles.cursor} aria-hidden="true" />
+            <br />
+            {/* {t("hero.title2", "двигают бизнес вперёд")} */}
+          </h1>
+          {/* <p className={styles.subtitle}>
+            {t(
+              "hero.subtitle",
+              "Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.",
+            )}
+          </p> */}
+        </div>
 
-      <div className={styles.buttons}>
-        <a
-          href="https://t.me/m_yakub"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.btnPrimary}
-        >
-          {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
-        </a>
-        {/* <Link href="/projects" className={styles.btnSecondary}>
-          {t("hero.btnSecondary", "Смотреть проекты")}
-        </Link> */}
+     
+
+        <div className={styles.buttons}>
+          <a
+            href="https://t.me/m_yakub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btnPrimary}
+          >
+            {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
+          </a>
+          {/* <Link href="/projects" className={styles.btnSecondary}>
+            {t("hero.btnSecondary", "Смотреть проекты")}
+          </Link> */}
+        </div>
       </div>
       <HeroMarquee />
     </div>

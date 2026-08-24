@@ -47,6 +47,7 @@
 }
 
 .navItem {
+  position: relative;
   color: #fff;
   text-align: center;
   font-family: var(--font-tektur);
@@ -54,12 +55,31 @@
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
 .navItem:hover {
-  opacity: 0.8;
+  color: #3ddc84;
+}
+
+.navItem:hover::after {
+  transform: scaleX(1);
 }
 
 .langSwitcher {
@@ -78,21 +98,29 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-width: 60px;
+  min-width: 76px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   margin-top: 10px;
   z-index: 1000;
+  user-select: none;
 }
 
 .langOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   padding: 8px 12px;
   cursor: pointer;
-  text-align: center;
   transition: background 0.2s;
+}
+
+.langFlag {
+  font-size: 16px;
+  line-height: 1;
 }
 
 .langOption:hover {
@@ -106,7 +134,7 @@
 .langText {
   color: #fff;
   font-family: var(--font-tektur);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -169,7 +197,7 @@
   }
 
   .navItem {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .overlay {

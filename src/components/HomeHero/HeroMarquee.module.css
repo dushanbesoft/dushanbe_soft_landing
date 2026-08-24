@@ -2,7 +2,6 @@
   width: 100%;
   overflow: hidden;
   padding-bottom: 30px;
-  margin-top: auto;
   position: relative;
   z-index: 10;
 }
@@ -15,11 +14,16 @@
   animation: marquee 60s linear infinite;
 }
 
+.marqueeContent:hover {
+  animation-play-state: paused;
+}
+
 .marqueeItem {
   display: flex;
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   border-radius: 1000px;
   border: 1px solid transparent;
   color: #9EAABB;
@@ -27,6 +31,26 @@
   font-size: 15px;
   white-space: nowrap;
   position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marqueeItem:hover {
+  transform: translateY(0px) scale(1);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(61, 220, 132, 0.25);
+}
+
+.marqueeIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.marqueeItem:hover .marqueeIcon {
+  transform: scale(1.15);
 }
 
 .marqueeItem::before {
