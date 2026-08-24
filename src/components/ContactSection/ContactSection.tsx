@@ -81,7 +81,7 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
               </div>
             </div>
           </div>
-
+{/* 
           <div className={styles.teamBox}>
             <div className={styles.avatarsGroup}>
               <div className={styles.avatarWrap} style={{ zIndex: 5 }}>
@@ -110,7 +110,7 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
             <p className={styles.teamText}>
               {t('contact.teamText', 'Наша команда экспертов готова помочь вам в реализации проекта')}
             </p>
-          </div>
+          </div> */}
 
           <div className={styles.messengersSection}>
             <p className={styles.messengersTitle}>{t('contact.messengersTitle', 'Или пишите нам в удобный мессенджер')}</p>
