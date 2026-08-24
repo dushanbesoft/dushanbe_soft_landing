@@ -35,7 +35,7 @@
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);

@@ -45,7 +45,7 @@
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,7 +75,7 @@
   font-family: var(--font-tektur);
   font-size: 55px;
   font-weight: 700;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,7 +171,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid #5eb5f0;
+  border: 1px solid #3ddc84;
   background: #051517;
   overflow: hidden;
   position: relative;
@@ -200,7 +200,7 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -344,7 +344,7 @@
   width: 100%;
   padding: 20px;
   border-radius: 11px;
-  border: 1px solid rgba(94, 181, 240, 0.5);
+  border: 1px solid rgba(61, 220, 132, 0.5);
   background: #fff;
   color: #000;
   font-family: var(--font-nunito-sans);
@@ -400,7 +400,7 @@
   align-items: center;
   gap: 20px;
   border-radius: 11px;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   border: none;
   cursor: pointer;
   width: 100%;

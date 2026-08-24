@@ -51,7 +51,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,7 +61,7 @@
 /* Fallback */
 @supports not (-webkit-background-clip: text) {
   .mainTitle {
-    color: #5EB5F0;
+    color: #3DDC84;
   }
 }
 

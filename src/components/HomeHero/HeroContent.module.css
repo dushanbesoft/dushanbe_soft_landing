@@ -27,15 +27,15 @@
   align-items: center;
   gap: 10px;
   border-radius: 222px;
-  border: 1px solid #5eb5f0;
-  background: rgba(15, 81, 224, 0.11);
+  border: 1px solid #3ddc84;
+  background: rgba(2, 112, 79, 0.11);
 }
 
 .badgeIcon {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
 }
 
 .badgeText {
@@ -48,20 +48,66 @@
 .mainTitle {
   text-align: center;
   font-family: var(--font-tektur);
-  font-size: 75px;
+  font-size: 65px;
   font-weight: 700;
   line-height: 1.1;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: 0;
 }
 
 /* Fallback color for some browsers */
 @supports not (-webkit-background-clip: text) {
-  .mainTitle {
-    color: #5eb5f0;
+  .typedText {
+    color: #3ddc84;
+  }
+}
+
+.typedText {
+  background: linear-gradient(
+    90deg,
+    #3ddc84 0%,
+    #f1f7ff 25%,
+    #02704f 50%,
+    #f1f7ff 75%,
+    #3ddc84 100%
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  margin-left: 4px;
+  margin-bottom: -0.1em;
+  background: #3ddc84;
+  animation: cursorBlink 0.9s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes cursorBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
   }
 }
 
@@ -91,7 +137,9 @@
   align-items: center;
   gap: 20px;
   border-radius: 11px;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background-size: 180% 180%;
+  background-position: 0% 50%;
   color: #fff;
   font-family: var(--font-tektur);
   font-size: 14px;
@@ -99,11 +147,20 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: background-position 0.5s ease, opacity 0.3s ease;
 }
 
 .btnPrimary:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  background-position: 100% 50%;
+}
+
+.btnPrimary svg {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimary:hover svg {
+  transform: translateX(4px);
 }
 
 .btnSecondary {
@@ -114,7 +171,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 11px;
-  border: 1px solid #5eb5f0;
+  border: 1px solid #3ddc84;
   background: rgba(1, 101, 88, 0.11);
   color: #fff;
   font-family: var(--font-tektur);
