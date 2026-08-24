@@ -146,7 +146,7 @@ export default async function ServicesSection({ lang = 'ru' }: { lang?: string }
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>{t('services.subtitle', 'Что мы делаем')}</span>
+            {/* <span className={styles.subtitle}>{t('services.subtitle', 'Что мы делаем')}</span> */}
             <h2 className={styles.mainTitle}>{t('services.title', 'Полный спектр IT-услуг')}</h2>
           </div>
         </div>

@@ -83,6 +83,17 @@ export default function Header() {
     }
   };
 
+  const getLangFlag = (l: string) => {
+    switch (l) {
+      case "tj":
+        return "🇹🇯";
+      case "en":
+        return "🇬🇧";
+      default:
+        return "🇷🇺";
+    }
+  };
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 900 && isMenuOpen) {
@@ -179,6 +190,7 @@ export default function Header() {
               className={styles.langSwitcher}
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
             >
+              <span className={styles.langFlag}>{getLangFlag(currentLang)}</span>
               <span className={styles.langText}>
                 {getLangDisplayName(currentLang)}
               </span>
@@ -190,18 +202,21 @@ export default function Header() {
                   className={styles.langOption}
                   onClick={() => changeLanguage("tj")}
                 >
+                  <span className={styles.langFlag}>🇹🇯</span>
                   ТҶ
                 </div>
                 <div
                   className={styles.langOption}
                   onClick={() => changeLanguage("ru")}
                 >
+                  <span className={styles.langFlag}>🇷🇺</span>
                   РУ
                 </div>
                 <div
                   className={styles.langOption}
                   onClick={() => changeLanguage("en")}
                 >
+                  <span className={styles.langFlag}>🇬🇧</span>
                   EN
                 </div>
               </div>

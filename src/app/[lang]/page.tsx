@@ -58,14 +58,16 @@ export default async function Page({
         <div className="header-global header-fixed">
           <Header />
         </div>
+
         <HomeHero />
+        
         <CasesSection lang={lang} />
+        <ProcessSection lang={lang} />
+        <ServicesSection lang={lang} />
 
         <ProductsSection lang={lang} />
         <WhyUsSection lang={lang} />
         {/* <TeamSection /> */}
-        <ServicesSection lang={lang} />
-        <ProcessSection lang={lang} />
         <ReviewsSection lang={lang} />
         <PartnersSection />
         <ContactSection lang={lang} />
