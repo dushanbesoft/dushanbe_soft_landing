@@ -2,7 +2,7 @@
 FROM node:22-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-RUN npm install -g pnpm@11.22.0
+RUN npm install -g pnpm@10.34.5
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 
@@ -11,14 +11,14 @@ RUN pnpm install --frozen-lockfile
 FROM node:22-alpine AS prod-deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-RUN npm install -g pnpm@11.22.0
+RUN npm install -g pnpm@10.34.5
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile --prod
 
 # Rebuild the source code only when needed
 FROM node:22-alpine AS builder
 WORKDIR /app
-RUN npm install -g pnpm@11.22.0
+RUN npm install -g pnpm@10.34.5
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
