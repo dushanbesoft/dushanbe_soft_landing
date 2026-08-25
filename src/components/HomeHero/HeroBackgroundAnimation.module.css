@@ -42,7 +42,7 @@
     radial-gradient(circle at 0% 100%, rgba(5, 150, 100, 0.45) 0%, transparent 55%);
 }
 
-.networkCanvasDark {
+.networkCanvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,22 +52,27 @@
   pointer-events: none;
 }
 
-.networkCanvasLight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(to top right, black 0%, black 20%, transparent 40%, transparent 60%, black 80%, black 100%);
-  mask-image: linear-gradient(to top right, black 0%, black 20%, transparent 40%, transparent 60%, black 80%, black 100%);
-}
-
 .blob {
   position: absolute;
   opacity: 0.9;
   mix-blend-mode: screen;
+}
+
+.blobIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 52%;
+  height: 52%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none !important;
+  }
 }
 
 @keyframes float1 {

@@ -14,9 +14,9 @@
 
 .card:hover {
   transform: translateY(-5px);
-  border: 1px solid #5EB5F0;
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
-  box-shadow: 0 0 11px 0 rgba(94, 181, 240, 0.3) inset, 0 0 11px 0 rgba(0, 140, 113, 0.3);
+  border: 1px solid #3DDC84;
+  background: linear-gradient(60deg, rgba(61, 220, 132, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  box-shadow: 0 0 11px 0 rgba(61, 220, 132, 0.3) inset, 0 0 11px 0 rgba(0, 140, 113, 0.3);
 }
 
 .image {
@@ -60,8 +60,8 @@
   align-items: center;
   gap: 20px;
   border-radius: 6px;
-  border: 1px solid #5EB5F0;
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  border: 1px solid #3DDC84;
+  background: linear-gradient(60deg, rgba(61, 220, 132, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
 }
 
 .titles {
@@ -83,7 +83,7 @@
   font-family: var(--font-tektur);
   font-size: 13px;
   font-weight: 400;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -91,7 +91,7 @@
 
 @supports not (-webkit-background-clip: text) {
   .subtitle {
-    color: #5EB5F0;
+    color: #3DDC84;
   }
 }
 
@@ -164,7 +164,7 @@
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
@@ -174,5 +174,5 @@
 }
 
 .tag.highlighted {
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  background: linear-gradient(60deg, rgba(61, 220, 132, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
 }
