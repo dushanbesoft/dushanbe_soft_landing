@@ -79,9 +79,16 @@ export default function HeroContent() {
           >
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
           </a>
-          {/* <Link href="/projects" className={styles.btnSecondary}>
+          <button 
+            type="button"
+            className={styles.btnSecondary}
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new CustomEvent('openCaseModal', { detail: { index: 0 } }));
+            }}
+          >
             {t("hero.btnSecondary", "Смотреть проекты")}
-          </Link> */}
+          </button>
         </div>
       </div>
       <HeroMarquee />

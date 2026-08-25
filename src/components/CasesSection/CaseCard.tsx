@@ -10,6 +10,7 @@ interface CaseCardProps {
   tags: string[];
   slug: string;
   lang: string;
+  onClick?: () => void;
 }
 
 export default function CaseCard({
@@ -19,14 +20,22 @@ export default function CaseCard({
   description,
   tags,
   slug,
-  lang
+  lang,
+  onClick
 }: CaseCardProps) {
   const half = Math.ceil(tags.length / 2);
   const topTags = tags.slice(0, half);
   const bottomTags = tags.slice(half);
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
   return (
-    <Link href={`/${lang}/cases/${slug}`} className={styles.card}>
+    <Link href={`/${lang}/cases/${slug}`} className={styles.card} onClick={handleClick}>
       <div 
         className={styles.imageHeader} 
         style={{ backgroundImage: `url('${imageSrc}')` }}
