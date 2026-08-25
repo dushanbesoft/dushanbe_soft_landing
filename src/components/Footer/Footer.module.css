@@ -14,11 +14,20 @@
   background: #000607;
   width: 100%;
   box-sizing: border-box;
+}
+.top > main {
   max-width: 1440px;
   margin: 0 auto;
   padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 45px;
+  background: #000607;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 .brandCol {
   display: flex;
   flex-direction: column;
