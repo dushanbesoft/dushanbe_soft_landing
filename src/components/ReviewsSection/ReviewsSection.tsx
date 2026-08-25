@@ -78,7 +78,6 @@ const i18nNamespaces = ['common'];
 export default async function ReviewsSection({ lang = 'ru' }: { lang?: string }) {
   const { t } = await initTranslations(lang, i18nNamespaces);
 
-  // Translate all reviews statically before passing them to the client component
   const translatedReviews: ReviewType[] = reviews.map((review, index) => ({
     ...review,
     text: t(`reviews.list.${index}.text`, review.text),
