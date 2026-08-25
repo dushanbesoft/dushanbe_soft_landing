@@ -251,14 +251,14 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
           </div>
         </main>
       </div>
-      <div className={styles.bottom}>
+      {/* <div className={styles.bottom}>
         <p className={styles.copyright}>
           {t(
             "footer.copyright",
             "© 2017–2026 Dushanbe Soft. Все права защищены.",
           )}
         </p>
-      </div>
+      </div> */}
     </footer>
   );
 }
