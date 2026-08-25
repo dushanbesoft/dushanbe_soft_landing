@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./CasesSection.module.css";
-import CaseCard from "./CaseCard";
+import CasesGrid from "./CasesGrid";
 import { ProductSite } from "../../const/product-site";
 import initTranslations from "../../app/i18n";
 
@@ -60,20 +60,25 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
           )} */}
         </div>
 
-        <div className={styles.cardsGrid}>
-          {ProductSite.filter((_, i) => showAll || i < 6).map((e, i) => (
-            <CaseCard
-              key={i}
-              slug={e.slug}
-              lang={lang}
-              imageSrc={e.imageSrc}
-              year={e.year}
-              title={t(`projects.${e.slug}.title`)}
-              description={t(`projects.${e.slug}.description`)}
-              tags={e.tags}
-            />
-          ))}
-        </div>
+        <CasesGrid
+          lang={lang}
+          casesData={ProductSite.filter((_, i) => showAll || i < 6).map(e => ({
+            slug: e.slug,
+            imageSrc: e.imageSrc,
+            year: e.year,
+            title: t(`projects.${e.slug}.title`),
+            description: t(`projects.${e.slug}.description`),
+            tags: e.tags
+          }))}
+          labels={{
+            descriptionTitle: t('cases.descriptionTitle', { defaultValue: 'Описание проекта' }),
+            techTitle: t('cases.techTitle', { defaultValue: 'Технологии' }),
+            advantagesTitle: t('cases.advantagesTitle', { defaultValue: 'Преимущества' }),
+            prevProject: t('cases.prevProject', { defaultValue: 'Предыдущий проект' }),
+            nextProject: t('cases.nextProject', { defaultValue: 'Следующий проект' }),
+            outOf: t('cases.outOf', { defaultValue: 'из' })
+          }}
+        />
       </div>
     </section>
   );
