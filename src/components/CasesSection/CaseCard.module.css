@@ -15,8 +15,8 @@
 
 .card:hover {
   transform: translateY(-5px);
-  border: 1px solid #5EB5F0;
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  border: 1px solid #3DDC84;
+  background: linear-gradient(60deg, rgba(61, 220, 132, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
   box-shadow: 0 14px 29px rgba(0,0,0,0.05);
 }
 
@@ -44,7 +44,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 222px;
-  border: 1px solid #5EB5F0;
+  border: 1px solid #3DDC84;
   background: rgba(255, 255, 255, 0.11);
 }
 
@@ -123,7 +123,7 @@
   gap: 10px;
   border-radius: 5px;
   border: 1px solid transparent;
-  background: rgba(15, 81, 224, 0.05);
+  background: rgba(2, 112, 79, 0.05);
   white-space: nowrap;
   flex-shrink: 0;
   position: relative;
@@ -135,7 +135,7 @@
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
@@ -145,14 +145,14 @@
 }
 
 .marqueeRow:nth-child(2) .tag {
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.05) 13.4%, rgba(2, 112, 79, 0.05) 86.6%);
+  background: linear-gradient(60deg, rgba(61, 220, 132, 0.05) 13.4%, rgba(2, 112, 79, 0.05) 86.6%);
 }
 
 .tagText {
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
-  background: linear-gradient(60deg, #5EB5F0 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

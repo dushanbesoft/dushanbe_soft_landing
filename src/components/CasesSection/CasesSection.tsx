@@ -29,7 +29,7 @@ const ArrowUpIcon = () => (
         y2="4.28374"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#5EB5F0" />
+        <stop stopColor="#3DDC84" />
         <stop offset="1" stopColor="#02704F" />
       </linearGradient>
     </defs>
@@ -49,15 +49,15 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            <span className={styles.subtitle}>{t("cases.subtitle")}</span>
+            {/* <span className={styles.subtitle}>{t("cases.subtitle")}</span> */}
             <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
           </div>
-          {!showAll && (
+          {/* {!showAll && (
             <Link href={`/${lang}/cases`} className={styles.allCasesBtn}>
               <span className={styles.btnText}>{t("cases.all_cases")}</span>
               <ArrowUpIcon />
             </Link>
-          )}
+          )} */}
         </div>
 
         <div className={styles.cardsGrid}>

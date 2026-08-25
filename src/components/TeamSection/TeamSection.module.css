@@ -49,7 +49,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,7 +58,7 @@
 
 @supports not (-webkit-background-clip: text) {
   .mainTitle {
-    color: #5eb5f0;
+    color: #3ddc84;
   }
 }
 
@@ -93,7 +93,7 @@
 .thumbnailWrapper.active {
   width: 176px;
   padding: 0 5px 0 6px;
-  border: 1px solid #5eb5f0;
+  border: 1px solid #3ddc84;
   background:
     linear-gradient(to bottom right, #1c837c 0%, #000a1d 50%) bottom right / 50%
       50% no-repeat,
@@ -104,7 +104,7 @@
     linear-gradient(to top right, #1c837c 0%, #000a1d 50%) top right / 50% 50%
       no-repeat;
   box-shadow:
-    0 0 5px 0 #5eb5f0 inset,
+    0 0 5px 0 #3ddc84 inset,
     0 0 11px 0 #008c71;
 }
 
@@ -196,11 +196,11 @@
   align-self: stretch;
   background: linear-gradient(
     270deg,
-    rgba(104, 206, 254, 0) 0.17%,
+    rgba(0, 140, 113, 0) 0.17%,
     #008c71 15.74%,
-    #5eaaf0 50%,
+    #3ddc84 50%,
     #008c71 83.22%,
-    rgba(104, 206, 254, 0) 100%
+    rgba(0, 140, 113, 0) 100%
   );
 }
 
@@ -267,7 +267,7 @@
 }
 
 .statItem {
-  border-right: 1px solid #5eb5f0;
+  border-right: 1px solid #3ddc84;
 }
 
 .statValue {
@@ -275,7 +275,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -346,7 +346,7 @@
   }
   .statItem {
     border-right: none;
-    border-bottom: 1px solid #5eb5f0;
+    border-bottom: 1px solid #3ddc84;
   }
   .statItemLast {
     border-bottom: none;

@@ -45,7 +45,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -102,7 +102,7 @@
 }
 
 .primaryBtn {
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   border: none;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .secondaryBtn {
-  border: 1px solid rgba(94, 181, 240, 0.8); /* fallback border since gradient on border is hard without wrapper */
+  border: 1px solid rgba(61, 220, 132, 0.8); /* fallback border since gradient on border is hard without wrapper */
   background: rgba(255, 255, 255, 0.06);
 }
 

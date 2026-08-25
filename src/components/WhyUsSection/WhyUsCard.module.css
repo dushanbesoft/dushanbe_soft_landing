@@ -15,8 +15,8 @@
 }
 
 .card:hover {
-  border: 1px solid #5EB5F0;
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  border: 1px solid #3DDC84;
+  background: linear-gradient(60deg, rgba(61, 220, 132, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
 }
 
 .textContainer {

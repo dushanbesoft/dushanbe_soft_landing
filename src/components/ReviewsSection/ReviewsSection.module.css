@@ -38,7 +38,7 @@
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -84,10 +84,13 @@
 
 .card:hover {
   transform: translateY(-2px);
-  border: 1px solid #5eb5f0;
+}
+
+.cardActive {
+  border: 1px solid #3ddc84;
   background: linear-gradient(
     60deg,
-    rgba(94, 181, 240, 0.11) 13.4%,
+    rgba(61, 220, 132, 0.11) 13.4%,
     rgba(2, 112, 79, 0.11) 86.6%
   );
 }
@@ -159,7 +162,7 @@
   font-family: var(--font-tektur);
   font-size: 13px;
   font-weight: 400;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -188,7 +191,7 @@
   height: 8px;
   border-radius: 4px;
   opacity: 0.2;
-  background: linear-gradient(60deg, #5eb5f0 13.4%, #02704f 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   transition: all 0.3s ease;
   cursor: pointer;
 }
