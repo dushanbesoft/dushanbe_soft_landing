@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import { tektur, nunitoSans } from "../../styles/fonts";
 
 import initTranslations from "../i18n";
+import GlobalPreloader from "../../components/GlobalPreloader/GlobalPreloader";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -75,7 +76,10 @@ export default async function RootLayout({
   
   return (
     <html lang={lang} dir={dir(lang)}>
-      <body className={`${tektur.variable} ${nunitoSans.variable}`}>{children}</body>
+      <body className={`${tektur.variable} ${nunitoSans.variable}`}>
+        <GlobalPreloader />
+        {children}
+      </body>
     </html>
   );
 }
