@@ -89,7 +89,7 @@ export default async function ReviewsSection({ lang = 'ru' }: { lang?: string })
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.subtitle}>{t('reviews.subtitle', 'Отзывы')}</span>
+          {/* <span className={styles.subtitle}>{t('reviews.subtitle', 'Отзывы')}</span> */}
           <h2 className={styles.title}>{t('reviews.title', 'Что о нас говорят')}</h2>
         </div>
         
