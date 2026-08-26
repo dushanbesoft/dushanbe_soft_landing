@@ -62,7 +62,7 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
 
         <CasesGrid
           lang={lang}
-          casesData={ProductSite.filter((_, i) => showAll || i < 6).map(e => ({
+          casesData={ProductSite.map(e => ({
             slug: e.slug,
             imageSrc: e.imageSrc,
             year: e.year,
@@ -76,7 +76,8 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
             advantagesTitle: t('cases.advantagesTitle', { defaultValue: 'Преимущества' }),
             prevProject: t('cases.prevProject', { defaultValue: 'Предыдущий проект' }),
             nextProject: t('cases.nextProject', { defaultValue: 'Следующий проект' }),
-            outOf: t('cases.outOf', { defaultValue: 'из' })
+            outOf: t('cases.outOf', { defaultValue: 'из' }),
+            loadMore: t('cases.loadMore', { defaultValue: 'Посмотреть еще' })
           }}
         />
       </div>
