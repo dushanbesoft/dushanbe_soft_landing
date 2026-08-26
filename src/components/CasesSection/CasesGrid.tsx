@@ -15,11 +15,13 @@ interface CasesGridProps {
     prevProject: string;
     nextProject: string;
     outOf: string;
+    loadMore?: string;
   };
 }
 
 export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     const handleOpenModal = (e: Event) => {
@@ -49,10 +51,12 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
 
   const selectedCase = selectedIndex !== null ? casesData[selectedIndex] : null;
 
+  const displayedCases = showAll ? casesData : casesData.slice(0, 6);
+
   return (
     <>
       <div className={styles.cardsGrid}>
-        {casesData.map((e, i) => (
+        {displayedCases.map((e, i) => (
           <CaseCard
             key={i}
             slug={e.slug}
@@ -66,6 +70,14 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
           />
         ))}
       </div>
+
+      {!showAll && casesData.length > 6 && (
+        <div className={styles.loadMoreContainer}>
+          <button className={styles.allCasesBtn} onClick={() => setShowAll(true)} style={{ cursor: 'pointer' }}>
+            <span className={styles.btnText}>{labels.loadMore || "Посмотреть еще"}</span>
+          </button>
+        </div>
+      )}
 
       <CaseModal
         isOpen={selectedIndex !== null}
