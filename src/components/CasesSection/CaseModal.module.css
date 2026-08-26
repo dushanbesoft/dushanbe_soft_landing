@@ -95,6 +95,12 @@
   align-self: stretch;
   overflow-x: auto;
   padding-bottom: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.thumbnails::-webkit-scrollbar {
+  display: none;
 }
 
 .thumbnail {

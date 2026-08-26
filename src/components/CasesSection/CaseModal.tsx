@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './CaseModal.module.css';
 
 export interface CaseModalData {
@@ -87,6 +87,34 @@ export default function CaseModal({
     };
   }, [isOpen]);
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   if (!caseData) return null;
 
   const handleOverlayClick = (e: React.MouseEvent) => {
@@ -113,13 +141,22 @@ export default function CaseModal({
         <div className={styles.imagesContainer}>
           <img src={caseData.imageSrc} alt={caseData.title} className={styles.mainImage} />
           
-          <div className={styles.thumbnails}>
+          <div 
+            className={styles.thumbnails}
+            ref={scrollRef}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+          >
             {dummyThumbnails.map((src, idx) => (
               <img 
                 key={idx} 
                 src={src} 
                 alt="Thumbnail" 
                 className={`${styles.thumbnail} ${idx === 0 ? styles.active : ''}`} 
+                onDragStart={(e) => e.preventDefault()}
               />
             ))}
           </div>
