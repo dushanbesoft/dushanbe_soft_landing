@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import styles from "./TeamSection.module.css";
 
@@ -145,10 +146,12 @@ export default function TeamSection() {
               onClick={() => setActiveIndex(index)}
               style={{ cursor: 'pointer' }}
             >
-              <img
+              <Image
                 className={styles.thumbnail}
                 src={member.thumbnail}
                 alt={member.name}
+                width={200}
+                height={200}
               />
             </div>
           ))}
@@ -193,10 +196,13 @@ export default function TeamSection() {
                 </div>
               </div>
             </div>
-            <img
+            <Image
               className={styles.personImage}
               src={activeMember.image}
               alt={activeMember.name}
+              width={600}
+              height={600}
+              priority
             />
           </div>
         </main>

@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './PartnersSection.module.css';
 
@@ -147,7 +148,7 @@ export default function PartnersSection() {
               className={`${styles.logoItem} ${idx === activeIndex ? styles.logoActive : ''}`}
               onClick={() => setActiveIndex(idx)}
             >
-              <img src={partner.logoSmall} alt={partner.name} className={styles.logoImg} />
+              <Image src={partner.logoSmall} alt={partner.name} className={styles.logoImg} width={300} height={300} />
             </div>
           ))}
         </div>
@@ -178,7 +179,7 @@ export default function PartnersSection() {
               </button>
             </div>
             <div className={styles.largeLogoWrapper}>
-              <img src={activePartner.logoLarge} alt={activePartner.name} className={styles.largeLogo} />
+              <Image src={activePartner.logoLarge} alt={activePartner.name} className={styles.largeLogo} width={600} height={600} />
             </div>
           </div>
         </div>
