@@ -5,14 +5,14 @@ import styles from "./HomeHero.module.css";
 import HeroContent from "./HeroContent";
 import HeroBackgroundAnimation from "./HeroBackgroundAnimation";
 
-export default function HomeHero() {
+export default function HomeHero({ marqueeItems }: { marqueeItems?: string[] }) {
   return (
     <div className={styles.container}>
       <div>
         <HeroBackgroundAnimation />
       </div>
       <div className={styles.foreground}>
-        <HeroContent />
+        <HeroContent marqueeItems={marqueeItems} />
         
       </div>
     </div>

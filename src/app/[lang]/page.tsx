@@ -15,6 +15,7 @@ import CasesSection from "../../components/CasesSection/CasesSection";
 import TeamSection from "../../components/TeamSection/TeamSection";
 import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
 import StatisticsComponent from "../../components/StatisticsComponent/StatisticsComponent";
+import { getMarqueeItems, getTeamMembers, getPartnersData } from "../../services/dataService";
 
 const i18nNamespaces = ["common"];
 
@@ -25,6 +26,9 @@ export default async function Page({
 }) {
   const { lang } = await params;
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
+  const marqueeItems = await getMarqueeItems();
+  const teamMembers = await getTeamMembers();
+  const partnersData = await getPartnersData();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -60,7 +64,7 @@ export default async function Page({
           <Header />
         </div>
 
-        <HomeHero />
+        <HomeHero marqueeItems={marqueeItems} />
 
         <CasesSection lang={lang} />
         <ProcessSection lang={lang} />
@@ -68,14 +72,14 @@ export default async function Page({
 
         {/* <ProductsSection lang={lang} /> */}
         {/* <WhyUsSection lang={lang} /> */}
-        {/* <TeamSection /> */}
+        {/* <TeamSection teamMembers={teamMembers} /> */}
 
         <StatisticsComponent />
 
 
 
         <ReviewsSection lang={lang} />
-        {/* <PartnersSection /> */}
+        {/* <PartnersSection partnersData={partnersData} /> */}
         {/* <ContactSection lang={lang} /> */}
         {/* <CTASection lang={lang} /> */}
         <Footer lang={lang} />

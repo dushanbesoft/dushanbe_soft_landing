@@ -42,7 +42,7 @@ function TypedTitle({ text }: { text: string }) {
   return <span className={styles.typedText}>{typed}</span>;
 }
 
-export default function HeroContent() {
+export default function HeroContent({ marqueeItems }: { marqueeItems?: string[] }) {
   const { t } = useTranslation();
   const fullTitle = t(
     "hero.subtitle",
@@ -91,7 +91,7 @@ export default function HeroContent() {
           </button>
         </div>
       </div>
-      <HeroMarquee />
+      <HeroMarquee marqueeItems={marqueeItems} />
     </div>
   );
 }
