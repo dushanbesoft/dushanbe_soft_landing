@@ -228,7 +228,39 @@
   },
   "reviews": {
     "subtitle": "Reviews",
-    "title": "What they say about us"
+    "title": "What they say about us",
+    "list": [
+      {
+        "text": "Dushanbe-Soft has established itself as a team that understands the specifics of IT projects and approaches the tasks assigned to it responsibly. We place particular emphasis on efficiency, technical support, and a willingness to find solutions even in challenging situations.",
+        "name": "Umedjon Ubaydullo",
+        "role": "Deputy Head of the company \"ZAO Teleradiocom\""
+      },
+      {
+        "text": "Working with Dushanbe-Soft means, first and foremost, a professional approach and understanding of business objectives. The team is attentive to requirements, offers practical solutions, and supports the project throughout every stage.",
+        "name": "Gulmahmad Kayumov",
+        "role": "CEO of Telecom Technology"
+      },
+      {
+        "text": "When working with Dushanbe-Soft, we value their technical expertise and responsible approach to projects. The team is adept at handling complex tasks and responding promptly to any issues that arise.",
+        "name": "Sulton Niyozi",
+        "role": "Deputy Chief Engineer, Tajikistan Television"
+      },
+      {
+        "text": "Dushanbe-Soft helped us implement digital solutions that make working with clients more convenient and efficient. We especially appreciate the team's combination of a modern approach, flexibility, and ongoing support.",
+        "name": "Shahrom Jamhurov",
+        "role": "Founder and CEO of Yak Du Trip"
+      },
+      {
+        "text": "At Dushanbe-Soft, we don't just fulfill technical requirements; we immerse ourselves in the task and offer the optimal solution. Transparent communication, adherence to agreements, and attention to detail are important to us.",
+        "name": "Ikrom Abdullaev",
+        "role": "Coordinator, PIC.TJ"
+      },
+      {
+        "text": "We value Dushanbe-Soft for their professionalism, efficiency, and focus on results. The team quickly understands project needs and transforms technical challenges into user-friendly digital solutions.",
+        "name": "Taghoimurod Sidikov",
+        "role": "CEO of Etagi"
+      }
+    ]
   },
   "cases": {
     "subtitle": "Cases",
