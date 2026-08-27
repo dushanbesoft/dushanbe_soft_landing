@@ -69,16 +69,16 @@ export default async function Page({
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
-        {/* <ProductsSection lang={lang} /> */}
-        {/* <WhyUsSection lang={lang} /> */}
-        {/* <TeamSection /> */}
+        <ProductsSection lang={lang} />
+        <WhyUsSection lang={lang} />
+        <TeamSection />
 
         <StatisticsComponent />
 
         <ReviewsSection lang={lang} />
-        {/* <PartnersSection /> */}
-        {/* <ContactSection lang={lang} /> */}
-        {/* <CTASection lang={lang} /> */}
+        <PartnersSection />
+        <ContactSection lang={lang} />
+        <CTASection lang={lang} />
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>
