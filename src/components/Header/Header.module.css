@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  padding: 25px 60px;
+  padding: 25px 15px;
   align-items: center;
   gap: 45px;
   flex-wrap: wrap;
@@ -166,12 +166,12 @@
 
 @media (max-width: 900px) {
   .header {
-    padding: 15px 0px; /* Reduced horizontal padding on the wrapper, relying on main for padding */
+    padding: 15px 15px !important; /* Reduced horizontal padding on the wrapper, relying on main for padding */
   }
 
   .header > main {
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 15px;
     gap: 20px;
   }
 
