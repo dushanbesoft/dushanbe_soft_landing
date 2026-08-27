@@ -228,19 +228,7 @@
   },
   "reviews": {
     "subtitle": "Reviews",
-    "title": "What they say about us",
-    "list": [
-      {
-        "text": "\"Dushanbe Soft completely redesigned our public procurement system. Now process transparency has increased by 40%, and tender processing time has been halved. This is exactly the level of quality we expected.\"",
-        "name": "Malika Hasanova",
-        "role": "Head of Digital, Orienbank"
-      },
-      {
-        "text": "\"SMS Platform is a reliable and scalable solution. Zero downtime in half a year of operation. Support responds within 15 minutes. I recommend Dushanbe Soft to anyone looking for a long-term partner.\"",
-        "name": "Sergey Petrov",
-        "role": "CTO, TelecomTJ"
-      }
-    ]
+    "title": "What they say about us"
   },
   "cases": {
     "subtitle": "Cases",
