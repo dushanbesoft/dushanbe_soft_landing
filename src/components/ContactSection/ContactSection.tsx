@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import initTranslations from '@/app/i18n';
 import styles from './ContactSection.module.css';
 import ContactForm from './ContactForm';
@@ -74,7 +75,7 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
             </div>
 
             <div className={styles.featureItem}>
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/2f96c9e233051da3cda4d9560c68adf9154f735c?width=128" alt="" className={styles.featureIcon} />
+              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/2f96c9e233051da3cda4d9560c68adf9154f735c?width=128" alt="" width={128} height={128} className={styles.featureIcon} />
               <div className={styles.featureTexts}>
                 <span className={styles.featureLabel}>{t('contact.free', 'Бесплатная')}</span>
                 <span className={styles.featureValue}>{t('contact.consultation', 'консультация')}</span>

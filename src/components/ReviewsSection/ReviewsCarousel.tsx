@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import styles from './ReviewsSection.module.css';
 
 const StarRating = () => (
@@ -134,7 +135,7 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
               <div className={styles.cardFooter}>
                 <div className={styles.authorInfo}>
                   <div className={styles.avatarWrapper}>
-                    <img src={review.avatar} alt={review.name} className={styles.avatar} />
+                    <Image src={review.avatar} alt={review.name} className={styles.avatar} width={100} height={100} />
                   </div>
                   <div className={styles.authorDetails}>
                     <h3 className={styles.authorName}>{review.name}</h3>
