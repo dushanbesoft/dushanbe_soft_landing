@@ -70,7 +70,7 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
       <div className={styles.carouselContainer}>
         <div 
           className={styles.carouselTrack}
-          style={{ transform: `translateX(calc(-${activeIndex} * (${itemsToShow === 2 ? '50% + 10px' : '100% + 15px'})))` }}
+          style={{ transform: `translateX(calc(-${activeIndex} * (var(--card-width, 600px) + 20px)))` }}
         >
           {reviews.map((review) => (
             <div key={review.id} className={styles.card}>
