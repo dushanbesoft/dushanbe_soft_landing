@@ -244,8 +244,10 @@
 }
 
 .statsBar {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
-  padding: 20px 30px;
+  padding: 20px 0px;
   align-items: stretch;
   gap: 10px;
   align-self: stretch;

@@ -47,83 +47,20 @@ const RightArrowIcon = ({ onClick }: { onClick: () => void }) => (
   </svg>
 );
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Дилавар Абдуллаев",
-    role: "Специалист по анализу данных, Fullstack-разработчик, специалист по администрированию баз данных (DBA)",
-    bio: "Дилавар — выдающийся междисциплинарный специалист, сочетающий знания и навыки в области анализа данных, разработки Fullstack и управления базами данных. Широкий спектр его компетенций делает его ценным активом для нашей команды, способным решать самые разнообразные задачи. Дилавар умеет работать как с данными, так и с веб-приложениями и базами данных, что позволяет ему создавать комплексные и эффективные бизнес-решения.",
-    skills: "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
-    experience: "2012",
-    education: "Курсы Ташкентского университета информационных технологий : Stepik, IT Step, Harvard, Skillbox, ITVDN, Yandex",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/69e24040f3b04f632fdfb77c3ff85d4cce075f71",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
-  {
-    id: 2,
-    name: "Имя сотрудника 2",
-    role: "Роль",
-    bio: "Описание сотрудника 2",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/c6c34c5e97f823b42668217326595f097545a015",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
-  {
-    id: 3,
-    name: "Имя сотрудника 3",
-    role: "Роль",
-    bio: "Описание сотрудника 3",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/4efdac4d58302c2ac2c5d2196bb5ea79f4a26beb",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
-  {
-    id: 4,
-    name: "Имя сотрудника 4",
-    role: "Роль",
-    bio: "Описание сотрудника 4",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/12f403898af0b6e7b2bc9cfd3c09452f79b10384",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
-  {
-    id: 5,
-    name: "Имя сотрудника 5",
-    role: "Роль",
-    bio: "Описание сотрудника 5",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/b53409e480a41641e6ac6b3fb39e45d97599ac40",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
-  {
-    id: 6,
-    name: "Имя сотрудника 6",
-    role: "Роль",
-    bio: "Описание сотрудника 6",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/685dfaf77fe7ac96160c133d047c3f85d4df0c5c",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
-];
 
-export default function TeamSection() {
+
+export default function TeamSection({ teamMembers = [] }: { teamMembers?: any[] }) {
   const { t } = useTranslation('common');
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextMember = () => setActiveIndex((prev) => (prev + 1) % teamMembers.length);
   const prevMember = () => setActiveIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
 
-  const activeMember = teamMembers[activeIndex];
+  const activeMember = teamMembers.length > 0 ? teamMembers[activeIndex] : null;
+
+  if (!teamMembers || teamMembers.length === 0) {
+    return null;
+  }
 
   return (
     <section className={styles.section}>

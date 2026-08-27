@@ -45,59 +45,16 @@ const techUrls: Record<string, string> = {
   "Webpack": "https://webpack.js.org",
 };
 
-const defaultMarqueeItems = [
-  "PHP",
-  "JavaScript",
-  "TypeScript",
-  "Python",
-  "MySQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "React",
-  "React Native",
-  "Next.js",
-  "Vue.js",
-  "Node.js",
-  "Express.js",
-  "NestJS",
-  "Laravel",
-  "Django",
-  "Flutter",
-  "Swift",
-  "Kotlin",
-  "Java",
-  "Spring Boot",
-  "Go",
-  ".NET",
-  "GraphQL",
-  "Socket.io",
-  "GitHub",
-  "Docker",
-  "Kubernetes",
-  "Nginx",
-  "AWS",
-  "Git",
-  "GitHub Actions",
-  "Kafka",
-  "RabbitMQ",
-  "Elasticsearch",
-  "Firebase",
-  "Tailwind CSS",
-  "Vite",
-  "Webpack",
-];
-
 import { useTranslation } from 'react-i18next';
 
-export default function HeroMarquee() {
+export default function HeroMarquee({ marqueeItems = [] }: { marqueeItems?: string[] }) {
   const { t } = useTranslation();
   const tItems = t('hero.marquee', { returnObjects: true });
-  const marqueeItems: string[] = Array.isArray(tItems) ? tItems : defaultMarqueeItems;
+  const finalMarqueeItems = Array.isArray(tItems) && tItems.length > 0 ? tItems : marqueeItems;
   return (
     <div className={styles.marqueeContainer}>
       <div className={styles.marqueeContent}>
-        {[...marqueeItems, ...marqueeItems].map((item, i) => {
+        {[...finalMarqueeItems, ...finalMarqueeItems].map((item, i) => {
           const tech = techIcons[item];
           const url = techUrls[item];
           return (
