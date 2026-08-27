@@ -74,7 +74,7 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
             </div>
 
             <div className={styles.featureItem}>
-              <img src="/images/builder/2f96c9e233051da3cda4d9560c68adf9154f735c.png" alt="" className={styles.featureIcon} />
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/2f96c9e233051da3cda4d9560c68adf9154f735c?width=128" alt="" className={styles.featureIcon} />
               <div className={styles.featureTexts}>
                 <span className={styles.featureLabel}>{t('contact.free', 'Бесплатная')}</span>
                 <span className={styles.featureValue}>{t('contact.consultation', 'консультация')}</span>
@@ -85,19 +85,19 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
           <div className={styles.teamBox}>
             <div className={styles.avatarsGroup}>
               <div className={styles.avatarWrap} style={{ zIndex: 5 }}>
-                <img src="/images/builder/2faf45a2e91b9578889e773f47933cb6e201db77.png" alt="" />
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/2faf45a2e91b9578889e773f47933cb6e201db77?width=104" alt="" />
               </div>
               <div className={styles.avatarWrap} style={{ zIndex: 4, marginLeft: '-15px' }}>
-                <img src="/images/builder/958903a1ee4b53f3d7a906783acf03a8460a3ae1.png" alt="" />
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/958903a1ee4b53f3d7a906783acf03a8460a3ae1?width=128" alt="" />
               </div>
               <div className={styles.avatarWrap} style={{ zIndex: 3, marginLeft: '-15px' }}>
-                <img src="/images/builder/d97f350c5ab2f2de8497f5a59a642f096e90921d.png" alt="" />
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/d97f350c5ab2f2de8497f5a59a642f096e90921d?width=136" alt="" />
               </div>
               <div className={styles.avatarWrap} style={{ zIndex: 2, marginLeft: '-15px' }}>
-                <img src="/images/builder/7a2e95e4bff69bbc26cb810136b34eaff353729f.png" alt="" />
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/7a2e95e4bff69bbc26cb810136b34eaff353729f?width=126" alt="" />
               </div>
               <div className={styles.avatarWrap} style={{ zIndex: 1, marginLeft: '-15px' }}>
-                <img src="/images/builder/5661293058c63fb8ec2787bf2d8175563424276f.png" alt="" />
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/5661293058c63fb8ec2787bf2d8175563424276f?width=120" alt="" />
               </div>
               <div className={styles.avatarPlus} style={{ zIndex: 6, marginLeft: '-15px' }}>
                 <svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
