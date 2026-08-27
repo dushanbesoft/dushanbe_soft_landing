@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./CasesSection.module.css";
 import CasesGrid from "./CasesGrid";
-import { getProductSites } from "../../services/dataService";
+import { ProductSite } from "../../const/product-site";
 import initTranslations from "../../app/i18n";
 
 const i18nNamespaces = ["common"];
@@ -43,7 +43,6 @@ interface CasesSectionProps {
 
 export default async function CasesSection({ showAll = false, lang = 'ru' }: CasesSectionProps) {
   const { t } = await initTranslations(lang, i18nNamespaces);
-  const ProductSite = await getProductSites();
   
   return (
     <section id="cases" className={styles.section}>
