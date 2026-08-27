@@ -50,7 +50,7 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.titles}>
-            {/* <span className={styles.subtitle}>{t("cases.subtitle")}</span> */}
+            <span className={styles.subtitle}>{t("cases.subtitle")}</span>
             <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
           </div>
           {/* {!showAll && (

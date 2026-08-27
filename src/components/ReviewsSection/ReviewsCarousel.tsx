@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './ReviewsSection.module.css';
 
 const StarRating = () => (
@@ -65,12 +65,67 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
     return () => clearInterval(interval);
   }, [maxIndex]);
 
+  // Touch and mouse drag logic
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [currentX, setCurrentX] = useState(0);
+
+  const handleDragStart = (clientX: number) => {
+    setIsDragging(true);
+    setStartX(clientX);
+    setCurrentX(clientX);
+  };
+
+  const handleDragMove = (clientX: number) => {
+    if (!isDragging) return;
+    setCurrentX(clientX);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    
+    const diff = startX - currentX;
+    const minSwipe = 50;
+    
+    if (diff > minSwipe && activeIndex < maxIndex) {
+      setActiveIndex(prev => prev + 1);
+    } else if (diff < -minSwipe && activeIndex > 0) {
+      setActiveIndex(prev => prev - 1);
+    }
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => handleDragStart(e.touches[0].clientX);
+  const onTouchMove = (e: React.TouchEvent) => handleDragMove(e.touches[0].clientX);
+  const onTouchEnd = () => handleDragEnd();
+
+  const onMouseDown = (e: React.MouseEvent) => handleDragStart(e.clientX);
+  const onMouseMove = (e: React.MouseEvent) => handleDragMove(e.clientX);
+  const onMouseUp = () => handleDragEnd();
+  const onMouseLeave = () => handleDragEnd();
+
+  // dynamic drag offset
+  const dragOffset = isDragging ? currentX - startX : 0;
+
+
   return (
     <>
-      <div className={styles.carouselContainer}>
+      <div 
+        className={styles.carouselContainer}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseLeave}
+      >
         <div 
           className={styles.carouselTrack}
-          style={{ transform: `translateX(calc(-${activeIndex} * (var(--card-width, 600px) + 20px)))` }}
+          style={{ 
+            transform: `translateX(calc(-${activeIndex} * (var(--card-width, 600px) + 20px) + ${dragOffset}px))`,
+            transition: isDragging ? 'none' : 'transform 0.5s ease-in-out'
+          }}
         >
           {reviews.map((review) => (
             <div key={review.id} className={styles.card}>
@@ -100,9 +155,9 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
         {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
           <div 
             key={idx} 
-            className={`${styles.dot} ${activeIndex === idx ? styles.dotActive : ''}`}
+            className={`${styles.dot} ${idx === activeIndex ? styles.dotActive : ''}`} 
             onClick={() => setActiveIndex(idx)}
-          ></div>
+          />
         ))}
       </div>
     </>
