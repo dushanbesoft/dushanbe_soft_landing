@@ -25,27 +25,41 @@ export default async function Page({
   const { lang } = await params;
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Dushanbe Soft",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj",
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj"}/icons/site-favicon.svg`,
-    description: t(
-      "seo.default_description",
-      "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
-    ),
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Душанбе",
-      addressCountry: "TJ",
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
+  
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Dushanbe Soft",
+      url: siteUrl,
+      logo: `${siteUrl}/icons/site-favicon.svg`,
+      description: t(
+        "seo.default_description",
+        "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
+      ),
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Душанбе",
+        addressCountry: "TJ",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+992988888888",
+      },
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      telephone: "+992988888888", // Example, can be replaced by real phone if known
-    },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Dushanbe Soft",
+      url: siteUrl,
+      description: t(
+        "seo.default_description",
+        "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
+      ),
+    }
+  ];
 
   return (
     <TranslationsProvider
@@ -68,16 +82,16 @@ export default async function Page({
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
-        <ProductsSection lang={lang} />
+        {/* <ProductsSection lang={lang} />
         <WhyUsSection lang={lang} />
-        <TeamSection />
+        <TeamSection /> */}
 
         <StatisticsComponent />
 
         <ReviewsSection lang={lang} />
-        <PartnersSection />
+        {/* <PartnersSection />
         <ContactSection lang={lang} />
-        <CTASection lang={lang} />
+        <CTASection lang={lang} /> */}
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>
