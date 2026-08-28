@@ -12,7 +12,8 @@ import ContactSection from "../../components/ContactSection/ContactSection";
 import CTASection from "../../components/CTASection/CTASection";
 import Footer from "../../components/Footer/Footer";
 import CasesSection from "../../components/CasesSection/CasesSection";
-
+import TeamSection from "../../components/TeamSection/TeamSection";
+import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
 import StatisticsComponent from "../../components/StatisticsComponent/StatisticsComponent";
 const i18nNamespaces = ["common"];
 
@@ -67,9 +68,16 @@ export default async function Page({
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
+        <ProductsSection lang={lang} />
+        <WhyUsSection lang={lang} />
+        <TeamSection />
+
         <StatisticsComponent />
 
         <ReviewsSection lang={lang} />
+        <PartnersSection />
+        <ContactSection lang={lang} />
+        <CTASection lang={lang} />
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>
