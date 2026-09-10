@@ -80,7 +80,7 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
 
         <div className={styles.cardsContainer}>
           <ProductCard 
-            imageSrc="/images/ZudSMSBanner.svg"
+            imageSrc="/images/ZudSMSBanner.webp"
             icon={<SmsIcon />}
             title={t('products.zudsms.title', 'ZudSMS – Платформа SMS-рассылок')}
             subtitle={t('products.zudsms.subtitle', 'zudsms.tj')}
@@ -89,7 +89,7 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
             href="https://zudsms.tj"
           />
           <ProductCard 
-            imageSrc="/images/liveChatBanner.svg"
+            imageSrc="/images/liveChatBanner.webp"
             icon={<ChatIcon />}
             title={t('products.livechat.title', 'LiveChat TJ - Онлайн-чат')}
             subtitle={t('products.livechat.subtitle', 'LiveChat TJ')}

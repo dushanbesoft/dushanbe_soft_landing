@@ -5,7 +5,7 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 26px;
-  background: url("/images/login-home-bg.svg") lightgray 50% / cover no-repeat;
+  background: url("/images/login-home-bg.webp") lightgray 50% / cover no-repeat;
   width: 100%;
   box-sizing: border-box;
 }

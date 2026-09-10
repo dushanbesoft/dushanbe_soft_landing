@@ -84,11 +84,10 @@
 .mainImageWrapper {
   position: relative;
   width: 100%;
+  height: 480px;
 }
 
 .mainImage {
-  height: 480px;
-  width: 100%;
   object-fit: cover;
   border-radius: 11px;
   display: block;
@@ -320,7 +319,7 @@
   .modal {
     padding: 20px;
   }
-  .mainImage {
+  .mainImageWrapper {
     height: 240px;
   }
   .footer {

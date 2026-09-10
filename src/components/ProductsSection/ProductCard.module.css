@@ -19,14 +19,16 @@
   box-shadow: 0 0 11px 0 rgba(61, 220, 132, 0.3) inset, 0 0 11px 0 rgba(0, 140, 113, 0.3);
 }
 
-.image {
-  display: flex;
-  height: 228px;
+.imageWrapper {
+  position: relative;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  height: 228px;
   align-self: stretch;
   border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.image {
   object-fit: cover;
 }
 
