@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './ProductCard.module.css';
 
 interface Tag {
@@ -27,8 +28,16 @@ export default function ProductCard({
 }: ProductCardProps) {
   const CardContent = (
     <>
-      <img src={imageSrc} alt={title} className={styles.image} />
-      
+      <div className={styles.imageWrapper}>
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, 400px"
+          className={styles.image}
+        />
+      </div>
+
       <div className={styles.content}>
         <div className={styles.headerRow}>
           <div className={styles.iconWrapper}>

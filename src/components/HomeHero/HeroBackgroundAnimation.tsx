@@ -36,8 +36,10 @@ const GREEN = { r: 5, g: 190, b: 130 };
 const CONNECT_DISTANCE = 250;
 const MOUSE_RADIUS = 170;
 const MOBILE_QUERY = '(max-width: 768px)';
-const MOBILE_BLOB_COUNT = 20;
-const DESKTOP_BLOB_COUNT = 50;
+// B2: halved from 20/50 to cut DOM + per-frame work while keeping the
+// "field of blobs" look (blob CSS classes 1..25 stay populated).
+const MOBILE_BLOB_COUNT = 10;
+const DESKTOP_BLOB_COUNT = 25;
 
 // Matches the old diagonal "to top right" mask: bright green in the
 // bottom-left/top-right corners, fading to the dark tone in the middle band.
@@ -123,7 +125,10 @@ const NetworkCanvas = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // B4: reduced-motion is read live via a matchMedia change listener (below),
+    // so toggling the OS setting is honoured without a reload.
+    const motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let reduceMotion = motionMq.matches;
 
     let width = 0;
     let height = 0;
@@ -136,12 +141,36 @@ const NetworkCanvas = () => {
     let running = true;
     let resizeTimeout: ReturnType<typeof setTimeout>;
 
+    // B4: pointer events only stash the latest client coords (cheap); the
+    // getBoundingClientRect + hit-test is applied at most once per frame
+    // (see applyPointer in renderFrame), coalescing bursts of move events.
+    let pendingClientX = 0;
+    let pendingClientY = 0;
+    let pointerDirty = false;
+    let pointerCleared = false;
+
+    // B3: uniform spatial grid (cell size = CONNECT_DISTANCE) makes connection
+    // detection ~O(n) instead of O(n^2). Buckets + active-pair buffers are
+    // reused across frames to avoid per-frame allocation.
+    let grid: number[][] = [];
+    let gridCols = 0;
+    let gridRows = 0;
+    const activeA: Particle[] = [];
+    const activeB: Particle[] = [];
+    let connFrame = 0;
+    let connAccum = 0;
+
     const initParticles = () => {
       particles = [];
       pulses = [];
+      // B2: roughly halved particle density + caps (mobile 40->20, desktop
+      // 100->50) — the dominant per-frame cost driver.
       const count = isMobile
-        ? Math.min(Math.floor(width / 24), 40)
-        : Math.min(Math.floor(width / 15), 100);
+        ? Math.min(Math.floor(width / 32), 20)
+        : Math.min(Math.floor(width / 24), 50);
+      console.debug(
+        `[hero] initParticles: ${isMobile ? 'mobile' : 'desktop'} count=${count} (width=${width})`,
+      );
       for (let i = 0; i < count; i++) {
         particles.push(new Particle(width, height));
       }
@@ -152,10 +181,15 @@ const NetworkCanvas = () => {
       width = canvas.clientWidth;
       height = canvas.clientHeight;
       isMobile = width <= 768;
-      maxPulses = isMobile ? 3 : 8;
+      maxPulses = isMobile ? 2 : 5; // B2: scaled down with the lower particle count
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      // (Re)build the spatial-grid buckets for the new dimensions.
+      gridCols = Math.max(1, Math.ceil(width / CONNECT_DISTANCE));
+      gridRows = Math.max(1, Math.ceil(height / CONNECT_DISTANCE));
+      grid = new Array(gridCols * gridRows);
+      for (let c = 0; c < grid.length; c++) grid[c] = [];
       initParticles();
     };
 
@@ -164,29 +198,72 @@ const NetworkCanvas = () => {
       resizeTimeout = setTimeout(applySize, 150);
     };
 
-    const drawConnections = () => {
-      const active: [Particle, Particle, number][] = [];
-
+    const assignGrid = () => {
+      for (let c = 0; c < grid.length; c++) grid[c].length = 0;
       for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const a = particles[i];
-          const b = particles[j];
-          const dist = Math.hypot(a.x - b.x, a.y - b.y);
-          if (dist < CONNECT_DISTANCE) {
-            const opacity = (1 - dist / CONNECT_DISTANCE) * 0.8;
-            const nx = (a.x + b.x) / 2 / width;
-            const ny = (a.y + b.y) / 2 / height;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = particleColor(nx, ny, opacity);
-            ctx.lineWidth = 1.2;
-            ctx.stroke();
-            active.push([a, b, dist]);
+        const p = particles[i];
+        let cx = Math.floor(p.x / CONNECT_DISTANCE);
+        let cy = Math.floor(p.y / CONNECT_DISTANCE);
+        if (cx < 0) cx = 0;
+        else if (cx >= gridCols) cx = gridCols - 1;
+        if (cy < 0) cy = 0;
+        else if (cy >= gridRows) cy = gridRows - 1;
+        grid[cy * gridCols + cx].push(i);
+      }
+    };
+
+    const drawConnections = () => {
+      // B3: bucket particles once, then only compare each particle against the
+      // 3x3 neighbourhood of cells (cell size == CONNECT_DISTANCE guarantees any
+      // pair within range shares or borders a cell). `j > i` dedupes each pair.
+      assignGrid();
+      let activeCount = 0;
+
+      for (let cy = 0; cy < gridRows; cy++) {
+        for (let cx = 0; cx < gridCols; cx++) {
+          const bucket = grid[cy * gridCols + cx];
+          for (let bi = 0; bi < bucket.length; bi++) {
+            const i = bucket[bi];
+            const a = particles[i];
+            for (let ny = cy - 1; ny <= cy + 1; ny++) {
+              if (ny < 0 || ny >= gridRows) continue;
+              for (let nx = cx - 1; nx <= cx + 1; nx++) {
+                if (nx < 0 || nx >= gridCols) continue;
+                const nb = grid[ny * gridCols + nx];
+                for (let bj = 0; bj < nb.length; bj++) {
+                  const j = nb[bj];
+                  if (j <= i) continue;
+                  const b = particles[j];
+                  const dist = Math.hypot(a.x - b.x, a.y - b.y);
+                  if (dist < CONNECT_DISTANCE) {
+                    const opacity = (1 - dist / CONNECT_DISTANCE) * 0.8;
+                    const mnx = (a.x + b.x) / 2 / width;
+                    const mny = (a.y + b.y) / 2 / height;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.strokeStyle = particleColor(mnx, mny, opacity);
+                    ctx.lineWidth = 1.2;
+                    ctx.stroke();
+                    if (activeCount < activeA.length) {
+                      activeA[activeCount] = a;
+                      activeB[activeCount] = b;
+                    } else {
+                      activeA.push(a);
+                      activeB.push(b);
+                    }
+                    activeCount++;
+                  }
+                }
+              }
+            }
           }
         }
+      }
 
-        if (mouse) {
+      // Mouse -> particle links (kept intact; linear over particles).
+      if (mouse) {
+        for (let i = 0; i < particles.length; i++) {
           const p = particles[i];
           const dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
           if (dist < MOUSE_RADIUS) {
@@ -201,9 +278,23 @@ const NetworkCanvas = () => {
         }
       }
 
-      if (!reduceMotion && active.length && pulses.length < maxPulses && Math.random() < 0.05) {
-        const [a, b] = active[Math.floor(Math.random() * active.length)];
-        pulses.push({ a, b, t: 0 });
+      if (!reduceMotion && activeCount && pulses.length < maxPulses && Math.random() < 0.05) {
+        const k = Math.floor(Math.random() * activeCount);
+        pulses.push({ a: activeA[k], b: activeB[k], t: 0 });
+      }
+
+      // B3: dev-only, throttled avg connections/frame to confirm the reduction.
+      if (process.env.NODE_ENV !== 'production') {
+        connFrame++;
+        connAccum += activeCount;
+        if (connFrame >= 120) {
+          console.debug(
+            `[hero] avg connections/frame ~= ${(connAccum / connFrame).toFixed(1)} ` +
+              `(grid ${gridCols}x${gridRows}, particles=${particles.length})`,
+          );
+          connFrame = 0;
+          connAccum = 0;
+        }
       }
     };
 
@@ -238,7 +329,24 @@ const NetworkCanvas = () => {
       ctx.shadowBlur = 0;
     };
 
+    // B4: fold the latest pointer position into `mouse` once per frame.
+    const applyPointer = () => {
+      if (pointerCleared) {
+        mouse = null;
+        pointerCleared = false;
+        pointerDirty = false;
+        return;
+      }
+      if (!pointerDirty) return;
+      pointerDirty = false;
+      const rect = canvas.getBoundingClientRect();
+      const x = pendingClientX - rect.left;
+      const y = pendingClientY - rect.top;
+      mouse = x >= 0 && x <= rect.width && y >= 0 && y <= rect.height ? { x, y } : null;
+    };
+
     const renderFrame = () => {
+      applyPointer();
       ctx.clearRect(0, 0, width, height);
       particles.forEach((p) => p.update(width, height, mouse));
       drawConnections();
@@ -254,73 +362,139 @@ const NetworkCanvas = () => {
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      mouse = x >= 0 && x <= rect.width && y >= 0 && y <= rect.height ? { x, y } : null;
+      pendingClientX = e.clientX;
+      pendingClientY = e.clientY;
+      pointerDirty = true;
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       const touch = e.touches[0];
       if (!touch) return;
-      const rect = canvas.getBoundingClientRect();
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
-      mouse = x >= 0 && x <= rect.width && y >= 0 && y <= rect.height ? { x, y } : null;
+      pendingClientX = touch.clientX;
+      pendingClientY = touch.clientY;
+      pointerDirty = true;
     };
 
     const handleTouchEnd = () => {
-      mouse = null;
+      // Defer clearing to the next frame so it stays coalesced with moves.
+      pointerCleared = true;
     };
 
-    applySize();
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        running = entry.isIntersecting && document.visibilityState === 'visible';
-        if (running && !reduceMotion) {
-          cancelAnimationFrame(animationFrameId);
-          animate();
-        }
-      },
-      { threshold: 0 },
-    );
-    observer.observe(canvas);
+    // B1: defer the expensive first setup (canvas sizing + particle allocation
+    // + starting the rAF loop) until the hero is on/near screen AND the main
+    // thread is idle. This keeps particle work off the hydration critical path
+    // (the root cause of the huge TTI). The CSS gradient placeholder + the
+    // .layer* divs cover the canvas until this runs.
+    let initialized = false;
+    let idleHandle: number | null = null;
+    let listenersAttached = false;
 
     const handleVisibilityChange = () => {
+      if (!initialized) return;
       running = document.visibilityState === 'visible';
+      console.debug(`[hero] visibilitychange -> ${running ? 'resume' : 'pause'}`);
       if (running && !reduceMotion) {
         cancelAnimationFrame(animationFrameId);
         animate();
       }
     };
 
-    window.addEventListener('resize', scheduleResize);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchstart', handleTouchMove, { passive: true });
-    window.addEventListener('touchmove', handleTouchMove, { passive: true });
-    window.addEventListener('touchend', handleTouchEnd);
-    window.addEventListener('touchcancel', handleTouchEnd);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    // B4: honour prefers-reduced-motion live. When turned on, stop the loop and
+    // settle on one static frame; when turned off, resume if visible.
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      reduceMotion = e.matches;
+      console.debug(`[hero] prefers-reduced-motion -> ${reduceMotion}`);
+      if (!initialized) return;
+      cancelAnimationFrame(animationFrameId);
+      if (reduceMotion) {
+        renderFrame();
+      } else if (running) {
+        animate();
+      }
+    };
 
-    if (reduceMotion) {
-      renderFrame();
-    } else {
-      animate();
-    }
+    const attachListeners = () => {
+      if (listenersAttached) return;
+      listenersAttached = true;
+      window.addEventListener('resize', scheduleResize);
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
+      window.addEventListener('touchstart', handleTouchMove, { passive: true });
+      window.addEventListener('touchmove', handleTouchMove, { passive: true });
+      window.addEventListener('touchend', handleTouchEnd);
+      window.addEventListener('touchcancel', handleTouchEnd);
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      motionMq.addEventListener('change', handleMotionChange);
+    };
+
+    const doInit = () => {
+      if (initialized) return;
+      initialized = true;
+      console.debug('[hero] canvas init starting (idle)');
+      applySize();
+      attachListeners();
+      running = document.visibilityState === 'visible';
+      if (reduceMotion) {
+        renderFrame();
+      } else if (running) {
+        animate();
+      }
+    };
+
+    const scheduleInit = () => {
+      if (initialized || idleHandle !== null) return;
+      const ric: (cb: IdleRequestCallback) => number =
+        typeof window.requestIdleCallback === 'function'
+          ? window.requestIdleCallback.bind(window)
+          : (cb) =>
+              window.setTimeout(
+                () => cb({ didTimeout: true, timeRemaining: () => 0 }),
+                200,
+              ) as unknown as number;
+      console.debug('[hero] init scheduled via requestIdleCallback');
+      idleHandle = ric(() => {
+        idleHandle = null;
+        doInit();
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visible = entry.isIntersecting && document.visibilityState === 'visible';
+        if (!initialized) {
+          // First time the hero comes near the viewport: schedule the heavy
+          // setup for an idle slot instead of running it eagerly on mount.
+          if (entry.isIntersecting) scheduleInit();
+          return;
+        }
+        running = visible;
+        console.debug(`[hero] intersection -> ${running ? 'resume' : 'pause'}`);
+        if (running && !reduceMotion) {
+          cancelAnimationFrame(animationFrameId);
+          animate();
+        }
+      },
+      { threshold: 0, rootMargin: '200px' },
+    );
+    observer.observe(canvas);
 
     return () => {
       running = false;
       clearTimeout(resizeTimeout);
       cancelAnimationFrame(animationFrameId);
+      if (idleHandle !== null && typeof window.cancelIdleCallback === 'function') {
+        window.cancelIdleCallback(idleHandle);
+      }
       observer.disconnect();
-      window.removeEventListener('resize', scheduleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('touchstart', handleTouchMove);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleTouchEnd);
-      window.removeEventListener('touchcancel', handleTouchEnd);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      if (listenersAttached) {
+        window.removeEventListener('resize', scheduleResize);
+        window.removeEventListener('mousemove', handleMouseMove);
+        window.removeEventListener('touchstart', handleTouchMove);
+        window.removeEventListener('touchmove', handleTouchMove);
+        window.removeEventListener('touchend', handleTouchEnd);
+        window.removeEventListener('touchcancel', handleTouchEnd);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        motionMq.removeEventListener('change', handleMotionChange);
+      }
     };
   }, []);
 

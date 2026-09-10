@@ -24,16 +24,16 @@ const partnersData = [
   {
     id: 3,
     name: "СХДО",
-    logoSmall: "/icons/partners/shdo.svg",
-    logoLarge: "/icons/partners/shdo.svg",
+    logoSmall: "/icons/partners/shdo.webp",
+    logoLarge: "/icons/partners/shdo.webp",
     sector: "mahzan.tj",
     description: "Маҳзани ягонаи электронӣ — это специализированная внутренняя информационная система для автоматизации оперативной деятельности пожарной службы. Платформа обеспечивает надежный учет чрезвычайных ситуаций, ведение кадрового учета и безопасный электронный документооборот между подразделениями ведомства."
   },
   {
     id: 4,
     name: "Рушди Кӯҳистон",
-    logoSmall: "/icons/partners/rushd.svg",
-    logoLarge: "/icons/partners/rushd.svg",
+    logoSmall: "/icons/partners/rushd.webp",
+    logoLarge: "/icons/partners/rushd.webp",
     sector: "rushdikuhiston.tj",
     description: "Rushdi Kuhiston Invest Project — масштабный инвестиционный проект, стратегической целью которого является поддержка и всестороннее развитие горных регионов. Инициатива способствует улучшению инфраструктуры, повышению уровня жизни местного населения и созданию новых рабочих мест."
   },
@@ -80,40 +80,40 @@ const partnersData = [
   {
     id: 10,
     name: "IMRON NAKLIET",
-    logoSmall: "/icons/partners/itrans.svg",
-    logoLarge: "/icons/partners/itrans.svg",
+    logoSmall: "/icons/partners/itrans.webp",
+    logoLarge: "/icons/partners/itrans.webp",
     sector: "imronnakliet.tj",
     description: "Инновационная логистическая компания, специализирующаяся на предоставлении надежных и современных услуг грузоперевозок. Благодаря использованию передовых технологий в управлении цепями поставок, компания гарантирует своим клиентам безопасную, своевременную и экономически эффективную доставку грузов."
   },
   {
     id: 11,
     name: "Sunduk TV",
-    logoSmall: "/icons/partners/sunduk.svg",
-    logoLarge: "/icons/partners/sunduk.svg",
+    logoSmall: "/icons/partners/sunduk.webp",
+    logoLarge: "/icons/partners/sunduk.webp",
     sector: "sunduk.tv",
     description: "Современное интернет-телевидение Sunduk.TV, открывающее доступ к огромному миру мультимедиа. Платформа позволяет зрителям смотреть более 650 русскоязычных и международных телеканалов, а также обширную библиотеку фильмов и сериалов онлайн в безупречном качестве HD и UltraHD."
   },
   {
     id: 12,
     name: "Памир Энерджи",
-    logoSmall: "/icons/partners/pamir.svg",
-    logoLarge: "/icons/partners/pamir.svg",
+    logoSmall: "/icons/partners/pamir.webp",
+    logoLarge: "/icons/partners/pamir.webp",
     sector: "pamirenergy.com",
     description: "Стратегическая энергетическая компания, миссией которой является обеспечение надежного, чистого и бесперебойного электроснабжения на Памире. Компания активно инвестирует в комплексное развитие энергетической инфраструктуры региона и внедрение устойчивых экологических технологий."
   },
   {
     id: 13,
     name: "Zenith Valuation",
-    logoSmall: "/icons/partners/zenith.svg",
-    logoLarge: "/icons/partners/zenith.svg",
+    logoSmall: "/icons/partners/zenith.webp",
+    logoLarge: "/icons/partners/zenith.webp",
     sector: "zenithvaluation.com",
     description: "Профессиональная независимая оценочная компания, пользующаяся высоким доверием на рынке. Эксперты предоставляют полный спектр квалифицированных услуг по оценке недвижимости, оборудования, различных активов и бизнеса для обеспечения прозрачности финансовых операций и инвестиций."
   },
   {
     id: 14,
     name: "СинамоТВ",
-    logoSmall: "/icons/partners/sinamo.svg",
-    logoLarge: "/icons/partners/sinamo.svg",
+    logoSmall: "/icons/partners/sinamo.webp",
+    logoLarge: "/icons/partners/sinamo.webp",
     sector: "sinamo.tv",
     description: "Муассисаи давлатии телевизиони «Синамо» — это авторитетный государственный телеканал, полностью посвященный развитию и популяризации национального кинематографа. В эфире телеканала регулярно транслируются лучшие образцы отечественного кино, культурные программы и документальные фильмы об искусстве."
   }

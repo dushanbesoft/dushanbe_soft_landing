@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './CaseModal.module.css';
 
 export interface CaseModalData {
@@ -161,7 +162,13 @@ export default function CaseModal({
               <ChevronLeftIcon />
             </button>
 
-            <img src={caseData.imageSrc} alt={caseData.title} className={styles.mainImage} />
+            <Image
+              src={caseData.imageSrc}
+              alt={caseData.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 900px"
+              className={styles.mainImage}
+            />
 
             <button 
               className={`${styles.sideNavBtn} ${styles.sideNavBtnNext}`} 
@@ -183,11 +190,14 @@ export default function CaseModal({
             style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
           >
             {dummyThumbnails.map((src, idx) => (
-              <img 
-                key={idx} 
-                src={src} 
-                alt="Thumbnail" 
-                className={`${styles.thumbnail} ${idx === 0 ? styles.active : ''}`} 
+              <Image
+                key={idx}
+                src={src}
+                alt="Thumbnail"
+                width={265}
+                height={123}
+                draggable={false}
+                className={`${styles.thumbnail} ${idx === 0 ? styles.active : ''}`}
                 onDragStart={(e) => e.preventDefault()}
               />
             ))}
