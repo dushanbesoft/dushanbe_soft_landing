@@ -81,11 +81,52 @@
   align-self: stretch;
 }
 
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+}
+
 .mainImage {
   height: 480px;
   width: 100%;
   object-fit: cover;
   border-radius: 11px;
+  display: block;
+}
+
+.sideNavBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  z-index: 10;
+}
+
+.sideNavBtn:hover:not(:disabled) {
+  background: rgba(61, 220, 132, 0.8);
+}
+
+.sideNavBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.sideNavBtnPrev {
+  left: 20px;
+}
+
+.sideNavBtnNext {
+  right: 20px;
 }
 
 .thumbnails {
