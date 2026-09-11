@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './CasesSection.module.css';
 import CaseCard from './CaseCard';
 import CaseModal, { CaseModalData } from './CaseModal';
+import { StaggerContainer, StaggerItem, FadeIn } from '../MotionWrapper';
 
 interface CasesGridProps {
   casesData: (CaseModalData & { year: string })[];
@@ -55,28 +56,29 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
 
   return (
     <>
-      <div className={styles.cardsGrid}>
+      <StaggerContainer className={styles.cardsGrid} staggerChildren={0.15}>
         {displayedCases.map((e, i) => (
-          <CaseCard
-            key={i}
-            slug={e.slug}
-            lang={lang}
-            imageSrc={e.imageSrc}
-            year={e.year}
-            title={e.title}
-            description={e.description}
-            tags={e.tags}
-            onClick={() => setSelectedIndex(i)}
-          />
+          <StaggerItem key={i}>
+            <CaseCard
+              slug={e.slug}
+              lang={lang}
+              imageSrc={e.imageSrc}
+              year={e.year}
+              title={e.title}
+              description={e.description}
+              tags={e.tags}
+              onClick={() => setSelectedIndex(i)}
+            />
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
 
       {!showAll && casesData.length > 6 && (
-        <div className={styles.loadMoreContainer}>
+        <FadeIn delay={0.2} direction="up" className={styles.loadMoreContainer}>
           <button className={styles.allCasesBtn} onClick={() => setShowAll(true)} style={{ cursor: 'pointer' }}>
             <span className={styles.btnText}>{labels.loadMore || "Посмотреть еще"}</span>
           </button>
-        </div>
+        </FadeIn>
       )}
 
       <CaseModal

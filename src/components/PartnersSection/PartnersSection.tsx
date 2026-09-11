@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './PartnersSection.module.css';
+import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 
 const partnersData = [
   {
@@ -136,53 +137,59 @@ export default function PartnersSection() {
   return (
     <section id="partners" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.subtitle}>{t('partners.subtitle', 'Наши партнеры')}</span>
-          <h2 className={styles.title}>{t('partners.title', 'Нам доверяют ведущие организации')}</h2>
-        </div>
-
-        <div className={styles.logosCarousel}>
-          {partnersData.map((partner, idx) => (
-            <div 
-              key={partner.id} 
-              className={`${styles.logoItem} ${idx === activeIndex ? styles.logoActive : ''}`}
-              onClick={() => setActiveIndex(idx)}
-            >
-              <Image src={partner.logoSmall} alt={partner.name} className={styles.logoImg} width={300} height={300} />
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.detailCard}>
-          <div className={styles.detailLeft}>
-            <div className={styles.detailTitleBadge}>
-              <span className={styles.detailTitleText}>{t(`partners.list.${activeIndex}.name`, activePartner.name)}</span>
-            </div>
-            <span className={styles.detailSector}>{t(`partners.list.${activeIndex}.sector`, activePartner.sector)}</span>
-            <div className={styles.divider}></div>
-            <p className={styles.detailDesc}>{t(`partners.list.${activeIndex}.description`, activePartner.description)}</p>
+        <FadeIn direction="up">
+          <div className={styles.header}>
+            <span className={styles.subtitle}>{t('partners.subtitle', 'Наши партнеры')}</span>
+            <h2 className={styles.title}>{t('partners.title', 'Нам доверяют ведущие организации')}</h2>
           </div>
+        </FadeIn>
 
-          <div className={styles.detailRight}>
-            <div className={styles.navigation}>
-              <button className={styles.navBtn} onClick={prevPartner}>
-                <svg width="102" height="53" viewBox="0 0 102 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="-0.5" y="0.5" width="101" height="52" rx="26" transform="matrix(-1 0 0 1 101 0)" stroke="#7B808A"/>
-                  <path d="M64 26.5H38M49.7 34L38 26.5L49.7 19" stroke="#7B808A" strokeWidth="2"/>
-                </svg>
-              </button>
-              <button className={`${styles.navBtn} ${styles.navBtnActive}`} onClick={nextPartner}>
-                <svg width="102" height="53" viewBox="0 0 102 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.5" y="0.5" width="101" height="52" rx="26" stroke="white"/>
-                  <path d="M38 26.5H64M52.3 34L64 26.5L52.3 19" stroke="white" strokeWidth="2"/>
-                </svg>
-              </button>
+        <FadeIn direction="up" delay={0.2} fullWidth>
+          <div className={styles.logosCarousel}>
+            {partnersData.map((partner, idx) => (
+              <div 
+                key={partner.id} 
+                className={`${styles.logoItem} ${idx === activeIndex ? styles.logoActive : ''}`}
+                onClick={() => setActiveIndex(idx)}
+              >
+                <Image src={partner.logoSmall} alt={partner.name} className={styles.logoImg} width={300} height={300} />
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.4} fullWidth>
+          <div className={styles.detailCard}>
+            <div className={styles.detailLeft}>
+              <div className={styles.detailTitleBadge}>
+                <span className={styles.detailTitleText}>{t(`partners.list.${activeIndex}.name`, activePartner.name)}</span>
+              </div>
+              <span className={styles.detailSector}>{t(`partners.list.${activeIndex}.sector`, activePartner.sector)}</span>
+              <div className={styles.divider}></div>
+              <p className={styles.detailDesc}>{t(`partners.list.${activeIndex}.description`, activePartner.description)}</p>
             </div>
-            <div className={styles.largeLogoWrapper}>
-              <Image src={activePartner.logoLarge} alt={activePartner.name} className={styles.largeLogo} width={600} height={600} />
+
+            <div className={styles.detailRight}>
+              <div className={styles.navigation}>
+                <button className={styles.navBtn} onClick={prevPartner}>
+                  <svg width="102" height="53" viewBox="0 0 102 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="-0.5" y="0.5" width="101" height="52" rx="26" transform="matrix(-1 0 0 1 101 0)" stroke="#7B808A"/>
+                    <path d="M64 26.5H38M49.7 34L38 26.5L49.7 19" stroke="#7B808A" strokeWidth="2"/>
+                  </svg>
+                </button>
+                <button className={`${styles.navBtn} ${styles.navBtnActive}`} onClick={nextPartner}>
+                  <svg width="102" height="53" viewBox="0 0 102 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="101" height="52" rx="26" stroke="white"/>
+                    <path d="M38 26.5H64M52.3 34L64 26.5L52.3 19" stroke="white" strokeWidth="2"/>
+                  </svg>
+                </button>
+              </div>
+              <div className={styles.largeLogoWrapper}>
+                <Image src={activePartner.logoLarge} alt={activePartner.name} className={styles.largeLogo} width={600} height={600} />
+              </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

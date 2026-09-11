@@ -2,6 +2,7 @@ import React from 'react';
 import initTranslations from '@/app/i18n';
 import styles from './WhyUsSection.module.css';
 import WhyUsCard from './WhyUsCard';
+import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 
 const StandardIcon = () => (
   <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,46 +71,60 @@ export default async function WhyUsSection({ lang = 'ru' }: { lang?: string }) {
   return (
     <section id="about" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.headerRow}>
-          <div className={styles.titles}>
-            <div className={styles.subtitle}>{t('whyUs.subtitle', 'Почему мы')}</div>
-            <h2 className={styles.mainTitle}>{t('whyUs.title', 'Технологии. Опыт. Доверие.')}</h2>
+        <FadeIn direction="up">
+          <div className={styles.headerRow}>
+            <div className={styles.titles}>
+              <div className={styles.subtitle}>{t('whyUs.subtitle', 'Почему мы')}</div>
+              <h2 className={styles.mainTitle}>{t('whyUs.title', 'Технологии. Опыт. Доверие.')}</h2>
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
-        <div className={styles.cardsGrid}>
-          <WhyUsCard 
-            icon={<StandardIcon />}
-            title={t('whyUs.standards.title', 'Международные стандарты')}
-            description={t('whyUs.standards.desc', 'ISO 9001, GDPR, ISO/IEC 27001 — международные стандарты качества и безопасности.')}
-          />
-          <WhyUsCard  
-            icon={<CrossIcon />}
-            title={t('whyUs.individual.title', 'Индивидуальный подход')}
-            description={t('whyUs.individual.desc', 'Каждый проект — индивидуальная стратегия и оптимальное решение.')}
-          />
-          <WhyUsCard 
-            icon={<SecurityIcon />}
-            title={t('whyUs.security.title', 'Высокая безопасность')}
-            description={t('whyUs.security.desc', 'Многоуровневая защита, OWASP, шифрование и регулярные аудиты.')}
-          />
+        <StaggerContainer className={styles.cardsGrid} staggerChildren={0.1}>
+          <StaggerItem>
+            <WhyUsCard 
+              icon={<StandardIcon />}
+              title={t('whyUs.standards.title', 'Международные стандарты')}
+              description={t('whyUs.standards.desc', 'ISO 9001, GDPR, ISO/IEC 27001 — международные стандарты качества и безопасности.')}
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <WhyUsCard  
+              icon={<CrossIcon />}
+              title={t('whyUs.individual.title', 'Индивидуальный подход')}
+              description={t('whyUs.individual.desc', 'Каждый проект — индивидуальная стратегия и оптимальное решение.')}
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <WhyUsCard 
+              icon={<SecurityIcon />}
+              title={t('whyUs.security.title', 'Высокая безопасность')}
+              description={t('whyUs.security.desc', 'Многоуровневая защита, OWASP, шифрование и регулярные аудиты.')}
+            />
+          </StaggerItem>
           
-          <WhyUsCard 
-            icon={<TechnologyIcon />}
-            title={t('whyUs.technology.title', 'Современные технологии')}
-            description={t('whyUs.technology.desc', 'React, Flutter, Node.js, AI/ML, облачные технологии — только актуальный стек.')}
-          />
-          <WhyUsCard 
-            icon={<SupportIcon />}
-            title={t('whyUs.support.title', 'Поддержка 24/7')}
-            description={t('whyUs.support.desc', 'Выделенная команда мониторинга и поддержки. SLA с гарантированным временем отклика до 30 минут.')}
-          />
-          <WhyUsCard 
-            icon={<CrossIcon />}
-            title={t('whyUs.partnership.title', 'Долгосрочное партнёрство')}
-            description={t('whyUs.partnership.desc', '80% клиентов возвращаются с новыми проектами. Мы строим отношения на годы, а не на спринты.')}
-          />
-        </div>
+          <StaggerItem>
+            <WhyUsCard 
+              icon={<TechnologyIcon />}
+              title={t('whyUs.technology.title', 'Современные технологии')}
+              description={t('whyUs.technology.desc', 'React, Flutter, Node.js, AI/ML, облачные технологии — только актуальный стек.')}
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <WhyUsCard 
+              icon={<SupportIcon />}
+              title={t('whyUs.support.title', 'Поддержка 24/7')}
+              description={t('whyUs.support.desc', 'Выделенная команда мониторинга и поддержки. SLA с гарантированным временем отклика до 30 минут.')}
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <WhyUsCard 
+              icon={<CrossIcon />}
+              title={t('whyUs.partnership.title', 'Долгосрочное партнёрство')}
+              description={t('whyUs.partnership.desc', '80% клиентов возвращаются с новыми проектами. Мы строим отношения на годы, а не на спринты.')}
+            />
+          </StaggerItem>
+        </StaggerContainer>
       </div>
     </section>
   );

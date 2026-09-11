@@ -6,12 +6,12 @@
   align-items: center;
   gap: 30px;
   align-self: stretch;
-  background: #fdfdfe;
+  background: #000;
   position: relative;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0px 15px;
   display: flex;
@@ -54,7 +54,7 @@
 }
 
 .mainTitle {
-  color: #000;
+  color: #fff;
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;

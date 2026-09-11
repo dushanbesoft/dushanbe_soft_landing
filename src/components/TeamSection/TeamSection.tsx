@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import styles from "./TeamSection.module.css";
+import { FadeIn, StaggerContainer, StaggerItem } from "../MotionWrapper";
 
 const LeftArrowIcon = ({ onClick }: { onClick: () => void }) => (
   <svg
@@ -129,40 +130,44 @@ export default function TeamSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.headerRow}>
-          <div className={styles.titles}>
-            <span className={styles.subtitle}>{t('team.subtitle', 'Команда')}</span>
-            <h2 className={styles.mainTitle}>
-              {t('team.title', 'Люди, которые делают это возможным')}
-            </h2>
-          </div>
-        </div>
-
-        <div className={styles.teamCarousel}>
-          {teamMembers.map((member, index) => (
-            <div
-              key={member.id}
-              className={`${styles.thumbnailWrapper} ${index === activeIndex ? styles.active : ''}`}
-              onClick={() => setActiveIndex(index)}
-              style={{ cursor: 'pointer' }}
-            >
-              <Image
-                className={styles.thumbnail}
-                src={member.thumbnail}
-                alt={member.name}
-                width={200}
-                height={200}
-              />
+        <FadeIn direction="up">
+          <div className={styles.headerRow}>
+            <div className={styles.titles}>
+              <span className={styles.subtitle}>{t('team.subtitle', 'Команда')}</span>
+              <h2 className={styles.mainTitle}>
+                {t('team.title', 'Люди, которые делают это возможным')}
+              </h2>
             </div>
+          </div>
+        </FadeIn>
+
+        <StaggerContainer className={styles.teamCarousel} staggerChildren={0.1}>
+          {teamMembers.map((member, index) => (
+            <StaggerItem key={member.id}>
+              <div
+                className={`${styles.thumbnailWrapper} ${index === activeIndex ? styles.active : ''}`}
+                onClick={() => setActiveIndex(index)}
+                style={{ cursor: 'pointer' }}
+              >
+                <Image
+                  className={styles.thumbnail}
+                  src={member.thumbnail}
+                  alt={member.name}
+                  width={200}
+                  height={200}
+                />
+              </div>
+            </StaggerItem>
           ))}
 
-          <div className={styles.carouselNav}>
+          <FadeIn direction="up" delay={0.2} className={styles.carouselNav}>
             <LeftArrowIcon onClick={prevMember} />
             <RightArrowIcon onClick={nextMember} />
-          </div>
-        </div>
+          </FadeIn>
+        </StaggerContainer>
 
-        <main className={styles.personMainCard}>
+        <FadeIn direction="up" delay={0.3}>
+          <main className={styles.personMainCard}>
           <div key={activeMember.id} className={styles.personCard}>
             <div className={styles.personInfo}>
               <div className={styles.personHeader}>
@@ -205,8 +210,8 @@ export default function TeamSection() {
               priority
             />
           </div>
-        </main>
-
+          </main>
+        </FadeIn>
         
       </div>
     </section>

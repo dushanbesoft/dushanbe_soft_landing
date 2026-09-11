@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./CasesSection.module.css";
-import CasesGrid from "./CasesGrid";
+import CasesScrollLayout from "./CasesScrollLayout";
 import { ProductSite } from "../../const/product-site";
 import initTranslations from "../../app/i18n";
+import { FadeIn } from "../MotionWrapper";
 
 const i18nNamespaces = ["common"];
 
@@ -47,20 +48,22 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
   return (
     <section id="cases" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.headerRow}>
-          <div className={styles.titles}>
-            <span className={styles.subtitle}>{t("cases.subtitle")}</span>
-            <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
+        <FadeIn direction="up">
+          <div className={styles.headerRow}>
+            <div className={styles.titles}>
+              <span className={styles.subtitle}>{t("cases.subtitle")}</span>
+              <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
+            </div>
+            {/* {!showAll && (
+              <Link href={`/${lang}/cases`} className={styles.allCasesBtn}>
+                <span className={styles.btnText}>{t("cases.all_cases")}</span>
+                <ArrowUpIcon />
+              </Link>
+            )} */}
           </div>
-          {/* {!showAll && (
-            <Link href={`/${lang}/cases`} className={styles.allCasesBtn}>
-              <span className={styles.btnText}>{t("cases.all_cases")}</span>
-              <ArrowUpIcon />
-            </Link>
-          )} */}
-        </div>
+        </FadeIn>
 
-        <CasesGrid
+        <CasesScrollLayout
           lang={lang}
           casesData={ProductSite.map(e => ({
             slug: e.slug,

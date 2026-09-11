@@ -3,6 +3,7 @@ import Link from 'next/link';
 import initTranslations from '@/app/i18n';
 import styles from './ProductsSection.module.css';
 import ProductCard from './ProductCard';
+import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 
 const ArrowUpRight = () => (
   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,38 +67,44 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
   return (
     <section id="products" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.headerRow}>
-          <div className={styles.titles}>
-            <div className={styles.subtitle}>{t('products.subtitle', 'Наши продукты')}</div>
-            <h2 className={styles.mainTitle}>{t('products.title', 'Готовые продукты для вашего бизнеса')}</h2>
+        <FadeIn direction="up">
+          <div className={styles.headerRow}>
+            <div className={styles.titles}>
+              <div className={styles.subtitle}>{t('products.subtitle', 'Наши продукты')}</div>
+              <h2 className={styles.mainTitle}>{t('products.title', 'Готовые продукты для вашего бизнеса')}</h2>
+            </div>
+            {!showAll && (
+              <Link href={`/${lang}/products`} className={styles.allProductsBtn}>
+                {t('products.allProducts', 'Все продукты')} <ArrowUpRight />
+              </Link>
+            )}
           </div>
-          {!showAll && (
-            <Link href={`/${lang}/products`} className={styles.allProductsBtn}>
-              {t('products.allProducts', 'Все продукты')} <ArrowUpRight />
-            </Link>
-          )}
-        </div>
+        </FadeIn>
 
-        <div className={styles.cardsContainer}>
-          <ProductCard 
-            imageSrc="/images/ZudSMSBanner.webp"
-            icon={<SmsIcon />}
-            title={t('products.zudsms.title', 'ZudSMS – Платформа SMS-рассылок')}
-            subtitle={t('products.zudsms.subtitle', 'zudsms.tj')}
-            description={t('products.zudsms.description', 'Облачный сервис автоматизации и массовой рассылки SMS-сообщений для бизнеса...')}
-            tags={getSmsTags()}
-            href="https://zudsms.tj"
-          />
-          <ProductCard 
-            imageSrc="/images/liveChatBanner.webp"
-            icon={<ChatIcon />}
-            title={t('products.livechat.title', 'LiveChat TJ - Онлайн-чат')}
-            subtitle={t('products.livechat.subtitle', 'LiveChat TJ')}
-            description={t('products.livechat.description', 'Веб-сервис и платформа онлайн-консультаций для бизнеса...')}
-            tags={getChatTags()}
-            href="https://livechat.tj"
-          />
-        </div>
+        <StaggerContainer className={styles.cardsContainer} staggerChildren={0.2}>
+          <StaggerItem>
+            <ProductCard 
+              imageSrc="/images/ZudSMSBanner.webp"
+              icon={<SmsIcon />}
+              title={t('products.zudsms.title', 'ZudSMS – Платформа SMS-рассылок')}
+              subtitle={t('products.zudsms.subtitle', 'zudsms.tj')}
+              description={t('products.zudsms.description', 'Облачный сервис автоматизации и массовой рассылки SMS-сообщений для бизнеса...')}
+              tags={getSmsTags()}
+              href="https://zudsms.tj"
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <ProductCard 
+              imageSrc="/images/liveChatBanner.webp"
+              icon={<ChatIcon />}
+              title={t('products.livechat.title', 'LiveChat TJ - Онлайн-чат')}
+              subtitle={t('products.livechat.subtitle', 'LiveChat TJ')}
+              description={t('products.livechat.description', 'Веб-сервис и платформа онлайн-консультаций для бизнеса...')}
+              tags={getChatTags()}
+              href="https://livechat.tj"
+            />
+          </StaggerItem>
+        </StaggerContainer>
       </div>
     </section>
   );

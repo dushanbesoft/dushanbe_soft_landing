@@ -3,6 +3,7 @@ import Image from 'next/image';
 import initTranslations from '@/app/i18n';
 import styles from './ContactSection.module.css';
 import ContactForm from './ContactForm';
+import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 
 const i18nNamespaces = ['common'];
 
@@ -11,7 +12,7 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
   return (
     <section id="contacts" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.leftCol}>
+        <FadeIn direction="right" fullWidth className={styles.leftCol}>
           <div className={styles.textContent}>
             <span className={styles.subtitle}>{t('contact.subtitle', 'Связаться с нами')}</span>
             <h2 className={styles.title}>
@@ -150,9 +151,9 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
               </a>
             </div>
           </div>
-        </div>
+        </FadeIn>
 
-        <div className={styles.rightCol}>
+        <FadeIn direction="left" fullWidth className={styles.rightCol}>
           <div className={styles.formCard}>
             <div className={styles.formHeader}>
               <svg className={styles.formHeaderIcon} width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,7 +178,7 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
 
             <ContactForm />
           </div>
-        </div>
+        </FadeIn>
 
       </div>
     </section>

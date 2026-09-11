@@ -1,6 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
 import styles from "./CTASection.module.css";
+import { FadeIn } from "../MotionWrapper";
 
 const i18nNamespaces = ["common"];
 
@@ -8,7 +9,8 @@ export default async function CTASection({ lang = "ru" }: { lang?: string }) {
   const { t } = await initTranslations(lang, i18nNamespaces);
   return (
     <section className={styles.section}>
-      <main>
+      <FadeIn direction="up">
+        <main>
         <div className={styles.content}>
           <span className={styles.subtitle}>
             {t("cta.subtitle", "Готовы начать?")}
@@ -64,7 +66,8 @@ export default async function CTASection({ lang = "ru" }: { lang?: string }) {
             <span>+992 901 000 535</span>
           </a>
         </div>
-      </main>
+        </main>
+      </FadeIn>
     </section>
   );
 }
