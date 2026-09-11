@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* B1: static stand-in for the animated background while its JS chunk loads
+   and before the idle-time canvas init. Mirrors the .layerGlow radial tint on
+   black so there is no visible flash when the real animation mounts. */
+.heroPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #000;
+  background-image:
+    radial-gradient(circle at 100% 0%, rgba(5, 150, 100, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(5, 150, 100, 0.45) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.foreground {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1;
+}

@@ -1,0 +1,208 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #081c22;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 688px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 25px 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroOverlay {
+  /* position: absolute;
+  top: 0;
+  left: 0;heroContent
+  right: 0;
+  bottom: 0; */
+  background: #fff;
+  /* z-index: -1; */
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.yearBadge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 7px 16px;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+}
+
+.yearText {
+  color: #fff;
+  font-family: var(--font-nunito-sans);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.title {
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.contentWrapper {
+  width: 100%;
+  padding: 25px 30px;
+  padding-bottom: 89px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.descriptionSection {
+  max-width: 600px;
+}
+
+.sectionTitle {
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.descriptionText {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-nunito-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tasksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.taskItem {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-nunito-sans);
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.taskIcon {
+  color: #3ddc84;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: var(--font-nunito-sans);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-nunito-sans);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.backBtn:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;
+    padding: 20px 15px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .yearBadge {
+    padding: 4px 12px;
+  }
+  .yearText {
+    font-size: 10px;
+  }
+  .contentWrapper {
+    padding: 20px 15px;
+    width: 100%;
+    gap: 30px;
+  }
+  .descriptionSection {
+    max-width: 100%;
+  }
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .descriptionText {
+    font-size: 14px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .taskItem {
+    font-size: 14px;
+  }
+  .tag {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .backBtn {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
