@@ -1,0 +1,211 @@
+.header {
+  display: flex;
+  padding: 25px 15px;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+  align-self: stretch;
+  position: relative;
+  z-index: 10;
+  transition: background-color 0.4s ease;
+}
+
+.header > main {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+  align-self: stretch;
+  position: relative;
+  z-index: 10;
+}
+
+.scrolled {
+  background-color: #000000;
+}
+
+.transparent {
+  background-color: rgba(0, 0, 0, 0.702);
+}
+
+.logo {
+  width: 172px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1 0 0;
+}
+
+.navItem {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.navItem:hover {
+  color: #3ddc84;
+}
+
+.navItem:hover::after {
+  transform: scaleX(1);
+}
+
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.langDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #111;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 76px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+  z-index: 1000;
+  user-select: none;
+}
+
+.langOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.langFlag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.langOption:hover {
+  background-color: #333;
+}
+
+.langSwitcherContainer {
+  position: relative;
+}
+
+.langText {
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.controlsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 15px 15px !important; /* Reduced horizontal padding on the wrapper, relying on main for padding */
+  }
+
+  .header > main {
+    justify-content: space-between;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .hamburgerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 50;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .navOpen {
+    right: 0;
+  }
+
+  .navItem {
+    font-size: 16px;
+  }
+
+  .overlay {
+    display: block;
+  }
+}

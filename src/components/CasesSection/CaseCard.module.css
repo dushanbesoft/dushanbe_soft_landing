@@ -1,0 +1,213 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 11px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #3ddc84;
+  background: linear-gradient(
+    60deg,
+    rgba(61, 220, 132, 0.11) 13.4%,
+    rgba(2, 112, 79, 0.11) 86.6%
+  );
+  box-shadow: 0 14px 29px rgba(0, 0, 0, 0.05);
+}
+
+.imageHeader {
+  display: flex;
+  height: 188px;
+  padding: 10px;
+  align-items: flex-end;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 5px 5px 0 0;
+  background-color: lightgray;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.yearBadge {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid #3ddc84;
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.yearText {
+  color: #a0a5ad;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  padding: 20px 20px 30px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 0 0 11px 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.description {
+  color: #64748b;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+  margin-top: auto;
+}
+
+.marqueeRow {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  min-width: 100%;
+  animation: marquee-left 25s linear infinite;
+}
+
+.marqueeRow:nth-child(2) {
+  animation-duration: 30s;
+  animation-direction: reverse;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tag {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: rgba(2, 112, 79, 0.05);
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.marqueeRow:nth-child(2) .tag {
+  background: linear-gradient(
+    60deg,
+    rgba(61, 220, 132, 0.05) 13.4%,
+    rgba(2, 112, 79, 0.05) 86.6%
+  );
+}
+
+.tagText {
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 400;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .desktopLayout {
+    display: none;
+  }
+  .mobileLayout {
+    display: block;
+  }
+  .imageHeader {
+    height: 180px;
+  }
+  .content {
+    padding: 16px;
+    gap: 8px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .tag {
+    padding: 6px 12px;
+  }
+  .tagText {
+    font-size: 12px;
+  }
+}

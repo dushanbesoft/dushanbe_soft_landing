@@ -1,0 +1,22 @@
+services:
+  frontend:
+    container_name: dushanbesoft_landing
+    image: dushanbesoft_landing
+    build:
+      context: .
+      target: runner
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - "3121"
+    ports:
+      - "3121:3121"
+    env_file:
+      - .env
+    environment:
+      PORT: 3121
+    networks:
+      - dushanbesoft_landing_app_network
+networks:
+  dushanbesoft_landing_app_network:
+    driver: bridge

@@ -1,0 +1,131 @@
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  padding: 30px 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+  background: #000607;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex: 1 0 0;
+  position: relative;
+}
+
+.subtitle {
+  color: #D9D9D9;
+  font-family: var(--font-tektur);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mainTitle {
+  font-family: var(--font-tektur);
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* Fallback */
+@supports not (-webkit-background-clip: text) {
+  .mainTitle {
+    color: #3DDC84;
+  }
+}
+
+.allProductsBtn {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 1px solid #3DDC84;
+  background: rgba(1, 101, 88, 0.11);
+  color: #FFF;
+  font-family: var(--font-tektur);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.allProductsBtn:hover {
+  background: rgba(1, 101, 88, 0.3);
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0; }
+  .section {
+    padding: 20px 15px;
+  }
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mainTitle {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  .allProductsBtn {
+    width: calc(100%);
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px;
+  }
+}

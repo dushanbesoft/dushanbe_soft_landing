@@ -1,0 +1,509 @@
+.section {
+  display: flex;
+  padding: 30px 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fdfdfe;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-items: flex-start;
+  gap: 45px;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.leftCol {
+  display: flex;
+  flex: 1 1 586px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 45px;
+  position: relative;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+}
+
+.subtitle {
+  font-family: var(--font-tektur);
+  font-size: 15px;
+  font-weight: 500;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.titleBlack {
+  color: #000;
+  font-family: var(--font-tektur);
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.titleInline {
+  display: flex;
+  align-items: center;
+}
+
+.titleGradient {
+  font-family: var(--font-tektur);
+  font-size: 55px;
+  font-weight: 700;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  color: #64748b;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 343px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 115px;
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+}
+
+.featureTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.featureLabel {
+  color: #64748b;
+  text-align: center;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.featureValue {
+  color: #000;
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.teamBox {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  gap: 30px;
+  border-radius: 11px;
+  background: #000607;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .teamBox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.avatarsGroup {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.avatarWrap {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #3ddc84;
+  background: #051517;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatarWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlus {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #001010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.teamText {
+  flex: 1;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.messengersSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.messengersTitle {
+  color: #000;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.messengersList {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.messengerItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.messengerIcon {
+  width: 46px;
+  height: 46px;
+}
+
+.messengerName {
+  color: #64748b;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.rightCol {
+  display: flex;
+  flex: 1 1 728px;
+  position: relative;
+}
+
+.formCard {
+  display: flex;
+  width: 100%;
+  padding: 45px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
+  box-sizing: border-box;
+}
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.formHeaderIcon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.formHeaderTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.formTitle {
+  color: #000;
+  font-family: var(--font-tektur);
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.formSubtitle {
+  color: #64748b;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    flex-direction: column;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+  width: 100%;
+}
+
+.label {
+  color: #000;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 20px;
+  border-radius: 11px;
+  border: 1px solid rgba(61, 220, 132, 0.5);
+  background: #fff;
+  color: #000;
+  font-family: var(--font-nunito-sans);
+  font-size: 15px;
+  font-weight: 400;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #02704f;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #64748b;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 9px;
+  height: auto;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 137px;
+}
+
+.submitBtn {
+  display: flex;
+  padding: 20px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 11px;
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: scale(1.02);
+}
+
+.submitBtn span {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-tektur);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.submitBtn svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0; }
+  .section {
+    padding: 20px 15px;
+  }
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .leftCol,
+  .rightCol {
+    width: 100%;
+    flex: none;
+  }
+  .titleGradient,
+  .titleBlack {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .desc {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .features {
+    gap: 20px;
+  }
+  .featureItem {
+    min-width: 45%;
+  }
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .featureLabel {
+    font-size: 14px;
+  }
+  .featureValue {
+    font-size: 16px;
+  }
+  .teamBox {
+    padding: 20px;
+  }
+  .teamText {
+    font-size: 14px;
+  }
+  .messengersTitle {
+    font-size: 16px;
+  }
+  .messengerName {
+    font-size: 14px;
+  }
+  .messengerIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .formCard {
+    padding: 20px;
+  }
+  .formTitle {
+    font-size: 20px;
+  }
+  .formSubtitle {
+    font-size: 14px;
+  }
+  .label,
+  .input,
+  .select,
+  .textarea {
+    font-size: 14px;
+  }
+  .submitBtn {
+    padding: 15px;
+  }
+  .submitBtn span {
+    font-size: 16px;
+  }
+  .submitBtn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
