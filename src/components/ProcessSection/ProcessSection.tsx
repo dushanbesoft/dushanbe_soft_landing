@@ -1,6 +1,7 @@
 import React from 'react';
 import initTranslations from '@/app/i18n';
 import styles from './ProcessSection.module.css';
+import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 
 const steps = [
   {
@@ -178,28 +179,32 @@ export default async function ProcessSection({ lang = 'ru' }: { lang?: string })
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.headerRow}>
-          <div className={styles.titles}>
-            <span className={styles.subtitle}>{t('process.subtitle', 'Как мы работаем')}</span>
-            <h2 className={styles.mainTitle}>{t('process.title', 'Процесс разработки')}</h2>
+        <FadeIn direction="up">
+          <div className={styles.headerRow}>
+            <div className={styles.titles}>
+              <span className={styles.subtitle}>{t('process.subtitle', 'Как мы работаем')}</span>
+              <h2 className={styles.mainTitle}>{t('process.title', 'Процесс разработки')}</h2>
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         <div className={styles.cardsContainer}>
-          <div className={styles.grid}>
+          <StaggerContainer className={styles.grid} staggerChildren={0.1}>
             {steps.map((step, index) => (
-              <div key={index} className={styles.card}>
-                {step.icon}
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{t(`process.list.${index}.title`, step.title)}</h3>
-                  <p className={styles.cardDesc}>{t(`process.list.${index}.description`, step.description)}</p>
-                  <div className={styles.badge}>
-                    <span className={styles.badgeText}>{t(`process.list.${index}.duration`, step.duration)}</span>
+              <StaggerItem key={index}>
+                <div className={styles.card}>
+                  {step.icon}
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>{t(`process.list.${index}.title`, step.title)}</h3>
+                    <p className={styles.cardDesc}>{t(`process.list.${index}.description`, step.description)}</p>
+                    <div className={styles.badge}>
+                      <span className={styles.badgeText}>{t(`process.list.${index}.duration`, step.duration)}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

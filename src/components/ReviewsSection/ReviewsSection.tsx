@@ -2,6 +2,7 @@ import React from 'react';
 import initTranslations from '@/app/i18n';
 import styles from './ReviewsSection.module.css';
 import ReviewsCarousel, { ReviewType } from './ReviewsCarousel';
+import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 
 const reviews = [
   {
@@ -63,12 +64,16 @@ export default async function ReviewsSection({ lang = 'ru' }: { lang?: string })
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.subtitle}>{t('reviews.subtitle', 'Отзывы')}</span>
-          <h2 className={styles.title}>{t('reviews.title', 'Что о нас говорят')}</h2>
-        </div>
+        <FadeIn direction="up">
+          <div className={styles.header}>
+            <span className={styles.subtitle}>{t('reviews.subtitle', 'Отзывы')}</span>
+            <h2 className={styles.title}>{t('reviews.title', 'Что о нас говорят')}</h2>
+          </div>
+        </FadeIn>
         
-        <ReviewsCarousel reviews={translatedReviews} />
+        <FadeIn direction="up" delay={0.2} fullWidth>
+          <ReviewsCarousel reviews={translatedReviews} />
+        </FadeIn>
       </div>
     </section>
   );
