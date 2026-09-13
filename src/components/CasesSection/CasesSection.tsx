@@ -71,7 +71,8 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
             year: e.year,
             title: t(`projects.${e.slug}.title`),
             description: t(`projects.${e.slug}.description`),
-            tags: e.tags
+            tags: e.tags,
+            gallery: e.gallery
           }))}
           labels={{
             descriptionTitle: t('cases.descriptionTitle', { defaultValue: 'Описание проекта' }),
