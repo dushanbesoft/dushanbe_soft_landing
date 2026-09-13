@@ -14,7 +14,7 @@ export interface ProductSiteItem {
 export const ProductSite: ProductSiteItem[] = [
   {
     imageSrc: "/images/projects/president/banner-president-main.webp",
-    bannerSrc: "/images/projects/president/banner-president-2026.webp",
+    bannerSrc: "/images/projects/president/banner-president-strip.webp",
     year: "2024",
     tags: ["React", "Redux", "ASP.NET Core", "MS SQL", "REST API"],
     slug: "president",
