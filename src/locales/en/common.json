@@ -270,12 +270,23 @@
     "all_projects": "All projects",
     "about_project": "About the project",
     "what_was_done": "What was done",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "gallery": "Gallery"
   },
   "projects": {
     "president": {
       "title": "President of the Republic of Tajikistan",
-      "description": "The official website of the President of the Republic of Tajikistan is the main state web portal of the country. The platform ensures the publication of official news, decrees, speeches, and photo reports from events in multiple languages."
+      "description": "The official website of the President of the Republic of Tajikistan is the main state web portal of the country. The platform ensures the publication of official news, decrees, speeches, and photo reports from events in multiple languages.",
+      "gallery": [
+        "Four interface languages",
+        "State symbols",
+        "Text scaling",
+        "Full RTL for Arabic",
+        "English version of the portal",
+        "Powers of the President",
+        "\"Noma ba President\" form",
+        "Portal structure and footer"
+      ]
     },
     "sohktor": {
       "title": "SChDO",

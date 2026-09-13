@@ -228,6 +228,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  width: 100%;
+}
+.cardsGrid > * {
+  min-width: 0;
 }
 
 .loadMoreContainer {
@@ -259,6 +263,56 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 1200px) {
+  .desktopLayout {
+    gap: 30px;
+  }
+  .leftCol {
+    flex: 0 0 45%;
+  }
+  .rightCol {
+    flex: 0 0 50%;
+  }
+  .cardContentWrapper {
+    padding: 30px;
+  }
+  .cardTitle {
+    font-size: 32px;
+  }
+  .cardDesc {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .tag {
+    font-size: 13px;
+    padding: 6px 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .leftCol {
+    flex: 0 0 45%;
+  }
+  .rightCol {
+    flex: 0 0 50%;
+  }
+  .cardContentWrapper {
+    padding: 24px;
+  }
+  .cardTitle {
+    font-size: 28px;
+  }
+  .yearBadge {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .viewMoreBtn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .desktopLayout {
     display: none;
@@ -266,9 +320,6 @@
   .mobileLayout {
     display: block;
   }
-}
-
-@media (max-width: 768px) {
   .cardsGrid {
     grid-template-columns: 1fr;
   }
