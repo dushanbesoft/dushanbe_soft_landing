@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./CasesSection.module.css";
-import CasesScrollLayout from "./CasesScrollLayout";
+import CasesGrid from "./CasesGrid";
 import { ProductSite } from "../../const/product-site";
 import initTranslations from "../../app/i18n";
 import { FadeIn } from "../MotionWrapper";
@@ -63,7 +63,7 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
           </div>
         </FadeIn>
 
-        <CasesScrollLayout
+        <CasesGrid
           lang={lang}
           casesData={ProductSite.map(e => ({
             slug: e.slug,
