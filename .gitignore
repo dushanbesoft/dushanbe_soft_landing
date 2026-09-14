@@ -10,6 +10,9 @@ dist/
 .next
 .env
 
+# TypeScript incremental build info
+*.tsbuildinfo
+
 # Compiled Java class files
 *.class
 

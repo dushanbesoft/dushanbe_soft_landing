@@ -1,15 +1,44 @@
-export const ProductSite = [
+export interface ProductSiteItem {
+  imageSrc: string;
+  /** Опциональное отдельное фото под широкий баннер страницы кейса. */
+  bannerSrc?: string;
+  /** Как вписывать баннер в hero: "cover" (по умолчанию) для фото, "contain" для логотипов. */
+  bannerFit?: "cover" | "contain";
+  year: string;
+  tags: string[];
+  slug: string;
+  /** Опциональная галерея скриншотов кейса (пути в /public). */
+  gallery?: string[];
+}
+
+export const ProductSite: ProductSiteItem[] = [
   {
-    imageSrc: "/images/projects/site-prezedent-tj.webp",
+    imageSrc: "/images/projects/president/banner-president-strip.webp",
+    bannerSrc: "/images/projects/president/banner-president-strip.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
-    slug: "president"
+    tags: ["React", "Redux", "ASP.NET Core", "MS SQL", "REST API"],
+    slug: "president",
+    gallery: [
+      "/images/projects/president/gallery-1.webp",
+      "/images/projects/president/gallery-2.webp",
+      "/images/projects/president/gallery-3.webp",
+      "/images/projects/president/gallery-4.webp",
+      "/images/projects/president/gallery-5.webp",
+      "/images/projects/president/gallery-6.webp",
+      "/images/projects/president/gallery-7.webp",
+      "/images/projects/president/gallery-8.webp",
+    ]
   },
   {
-    imageSrc: "/images/projects/project-sohktor.webp",
+    imageSrc: "/images/projects/sohktor/banner-schdo.webp",
+    bannerSrc: "/images/projects/sohktor/banner-schdo.webp",
+    bannerFit: "contain",
     year: "2024",
     tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
-    slug: "sohktor"
+    slug: "sohktor",
+    gallery: [
+      "/images/projects/sohktor/gallery-1.webp",
+    ]
   },
   {
     imageSrc: "/images/projects/pic.webp",

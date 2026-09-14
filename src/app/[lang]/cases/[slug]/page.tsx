@@ -7,6 +7,7 @@ import Header from "../../../../components/Header/Header";
 import Footer from "../../../../components/Footer/Footer";
 import initTranslations from "../../../i18n";
 import TranslationsProvider from "../../../../components/TranslationsProvider";
+import CaseGallery from "../../../../components/CasesSection/CaseGallery";
 
 const i18nNamespaces = ["common"];
 
@@ -131,6 +132,8 @@ export default async function CaseDetailsPage({
   const title = t(`projects.${project.slug}.title`);
   const description = t(`projects.${project.slug}.description`);
   const tasks = t(`projects.${project.slug}.tasks`, { returnObjects: true, defaultValue: null }) as string[] | null;
+  const galleryCaptions = t(`projects.${project.slug}.gallery`, { returnObjects: true, defaultValue: null }) as string[] | null;
+  const gallery = project.gallery ?? [];
 
   return (
     <TranslationsProvider
@@ -146,7 +149,13 @@ export default async function CaseDetailsPage({
         <div className={styles.heroOverlay}>
           <div
             className={styles.hero}
-            style={{ backgroundImage: `url('${project.imageSrc}')` }}
+            style={{
+              backgroundImage: `url('${project.bannerSrc ?? project.imageSrc}')`,
+              backgroundSize: project.bannerFit ?? "cover",
+              ...(project.bannerFit === "contain"
+                ? { backgroundColor: "#ffffff" }
+                : {}),
+            }}
           ></div>
         </div>
 
@@ -194,6 +203,17 @@ export default async function CaseDetailsPage({
               </div>
             </div>
           </div>
+
+          {gallery.length > 0 && (
+            <div className={styles.descriptionSection}>
+              <h2 className={styles.sectionTitle}>{t("cases.gallery")}</h2>
+              <CaseGallery
+                images={gallery}
+                captions={galleryCaptions}
+                title={title}
+              />
+            </div>
+          )}
         </div>
 
         <Footer />
