@@ -10,6 +10,7 @@ export interface CaseModalData {
   description: string;
   imageSrc: string;
   tags: string[];
+  gallery?: string[];
 }
 
 interface CaseModalProps {
@@ -104,6 +105,17 @@ export default function CaseModal({
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(0);
+  // When stepping back into the previous project, land on its last photo.
+  const openOnLastImageRef = useRef(false);
+
+  // Reset the selected thumbnail whenever a different project is shown.
+  useEffect(() => {
+    const galleryLength =
+      caseData?.gallery && caseData.gallery.length > 0 ? caseData.gallery.length : 1;
+    setSelectedImage(openOnLastImageRef.current ? galleryLength - 1 : 0);
+    openOnLastImageRef.current = false;
+  }, [caseData?.slug]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!scrollRef.current) return;
@@ -136,7 +148,28 @@ export default function CaseModal({
     }
   };
 
-  const dummyThumbnails = Array(5).fill(caseData.imageSrc);
+  const thumbnails =
+    caseData.gallery && caseData.gallery.length > 0
+      ? caseData.gallery
+      : [caseData.imageSrc];
+  const mainImage = thumbnails[selectedImage] ?? thumbnails[0];
+
+  const isFirstImage = selectedImage === 0;
+  const isLastImage = selectedImage >= thumbnails.length - 1;
+
+  // Side arrows step through the current project's gallery first,
+  // then move to the previous/next project once the ends are reached.
+  const handleImagePrev = () => {
+    if (!isFirstImage) setSelectedImage((i) => i - 1);
+    else if (currentIndex > 0) {
+      openOnLastImageRef.current = true;
+      onPrev();
+    }
+  };
+  const handleImageNext = () => {
+    if (!isLastImage) setSelectedImage((i) => i + 1);
+    else if (currentIndex < totalCases - 1) onNext();
+  };
 
   return (
     <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`} onClick={handleOverlayClick}>
@@ -153,27 +186,27 @@ export default function CaseModal({
 
         <div className={styles.imagesContainer}>
           <div className={styles.mainImageWrapper}>
-            <button 
-              className={`${styles.sideNavBtn} ${styles.sideNavBtnPrev}`} 
-              onClick={onPrev}
-              disabled={currentIndex === 0}
+            <button
+              className={`${styles.sideNavBtn} ${styles.sideNavBtnPrev}`}
+              onClick={handleImagePrev}
+              disabled={isFirstImage && currentIndex === 0}
               aria-label={labels.prevProject}
             >
               <ChevronLeftIcon />
             </button>
 
             <Image
-              src={caseData.imageSrc}
+              src={mainImage}
               alt={caseData.title}
               fill
               sizes="(max-width: 768px) 100vw, 900px"
               className={styles.mainImage}
             />
 
-            <button 
-              className={`${styles.sideNavBtn} ${styles.sideNavBtnNext}`} 
-              onClick={onNext}
-              disabled={currentIndex === totalCases - 1}
+            <button
+              className={`${styles.sideNavBtn} ${styles.sideNavBtnNext}`}
+              onClick={handleImageNext}
+              disabled={isLastImage && currentIndex === totalCases - 1}
               aria-label={labels.nextProject}
             >
               <ChevronRightIcon />
@@ -189,15 +222,16 @@ export default function CaseModal({
             onMouseMove={handleMouseMove}
             style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
           >
-            {dummyThumbnails.map((src, idx) => (
+            {thumbnails.map((src, idx) => (
               <Image
                 key={idx}
                 src={src}
-                alt="Thumbnail"
+                alt={`${caseData.title} — ${idx + 1}`}
                 width={265}
                 height={123}
                 draggable={false}
-                className={`${styles.thumbnail} ${idx === 0 ? styles.active : ''}`}
+                className={`${styles.thumbnail} ${idx === selectedImage ? styles.active : ''}`}
+                onClick={() => setSelectedImage(idx)}
                 onDragStart={(e) => e.preventDefault()}
               />
             ))}
