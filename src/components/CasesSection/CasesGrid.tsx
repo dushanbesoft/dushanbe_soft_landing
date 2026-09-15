@@ -3,11 +3,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CasesSection.module.css';
 import CaseCard from './CaseCard';
-import CaseModal, { CaseModalData } from './CaseModal';
 import { FadeIn } from '../MotionWrapper';
 
 interface CasesGridProps {
-  casesData: (CaseModalData & { year: string })[];
+  casesData: ({ slug: string, title: string, description: string, imageSrc: string, tags: string[], gallery?: string[] } & { year: string })[];
   lang: string;
   labels: {
     descriptionTitle: string;
@@ -21,36 +20,7 @@ interface CasesGridProps {
 }
 
 export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
-
-  useEffect(() => {
-    const handleOpenModal = (e: Event) => {
-      const customEvent = e as CustomEvent;
-      if (customEvent.detail && typeof customEvent.detail.index === 'number') {
-        setSelectedIndex(customEvent.detail.index);
-      }
-    };
-    
-    window.addEventListener('openCaseModal', handleOpenModal);
-    return () => {
-      window.removeEventListener('openCaseModal', handleOpenModal);
-    };
-  }, []);
-
-  const handleNext = () => {
-    if (selectedIndex !== null && selectedIndex < casesData.length - 1) {
-      setSelectedIndex(selectedIndex + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (selectedIndex !== null && selectedIndex > 0) {
-      setSelectedIndex(selectedIndex - 1);
-    }
-  };
-
-  const selectedCase = selectedIndex !== null ? casesData[selectedIndex] : null;
 
   const displayedCases = showAll ? casesData : casesData.slice(0, 6);
 
@@ -67,7 +37,6 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
               title={e.title}
               description={e.description}
               tags={e.tags}
-              onClick={() => setSelectedIndex(i)}
             />
           </FadeIn>
         ))}
@@ -81,16 +50,6 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
         </FadeIn>
       )}
 
-      <CaseModal
-        isOpen={selectedIndex !== null}
-        onClose={() => setSelectedIndex(null)}
-        caseData={selectedCase}
-        currentIndex={selectedIndex ?? 0}
-        totalCases={casesData.length}
-        onNext={handleNext}
-        onPrev={handlePrev}
-        labels={labels}
-      />
     </>
   );
 }

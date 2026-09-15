@@ -8,6 +8,7 @@ import Footer from "../../../../components/Footer/Footer";
 import initTranslations from "../../../i18n";
 import TranslationsProvider from "../../../../components/TranslationsProvider";
 import CaseGallery from "../../../../components/CasesSection/CaseGallery";
+import CaseTabs from "../../../../components/CasesSection/CaseTabs";
 
 const i18nNamespaces = ["common"];
 
@@ -134,6 +135,7 @@ export default async function CaseDetailsPage({
   const tasks = t(`projects.${project.slug}.tasks`, { returnObjects: true, defaultValue: null }) as string[] | null;
   const galleryCaptions = t(`projects.${project.slug}.gallery`, { returnObjects: true, defaultValue: null }) as string[] | null;
   const gallery = project.gallery ?? [];
+  const projectComponents = project.projectComponents;
 
   return (
     <TranslationsProvider
@@ -172,47 +174,55 @@ export default async function CaseDetailsPage({
             <h1 className={styles.title}>{title}</h1>
           </div>
 
-          <div className={styles.descriptionSection}>
-            <h2 className={styles.sectionTitle}>{t("cases.about_project")}</h2>
-            <p className={styles.descriptionText}>{description}</p>
-          </div>
-
-          <div className={styles.grid}>
-            {Array.isArray(tasks) && tasks.length > 0 && (
-              <div className={styles.tasksSection}>
-                <h2 className={styles.sectionTitle}>{t("cases.what_was_done")}</h2>
-                <ul className={styles.tasksList}>
-                  {tasks.map((task, idx) => (
-                    <li key={idx} className={styles.taskItem}>
-                      <CheckIcon />
-                      <span>{task}</span>
-                    </li>
-                  ))}
-                </ul>
+          {projectComponents ? (
+            <div style={{ marginTop: '40px', width: '100%' }}>
+              <CaseTabs groups={projectComponents} />
+            </div>
+          ) : (
+            <>
+              <div className={styles.descriptionSection}>
+                <h2 className={styles.sectionTitle}>{t("cases.about_project")}</h2>
+                <p className={styles.descriptionText}>{description}</p>
               </div>
-            )}
 
-            <div className={styles.tagsSection}>
-              <h2 className={styles.sectionTitle}>{t("cases.technologies")}</h2>
-              <div className={styles.tagsContainer}>
-                {project.tags.map((tag, idx) => (
-                  <div key={idx} className={styles.tag}>
-                    {tag}
+              <div className={styles.grid}>
+                {Array.isArray(tasks) && tasks.length > 0 && (
+                  <div className={styles.tasksSection}>
+                    <h2 className={styles.sectionTitle}>{t("cases.what_was_done")}</h2>
+                    <ul className={styles.tasksList}>
+                      {tasks.map((task, idx) => (
+                        <li key={idx} className={styles.taskItem}>
+                          <CheckIcon />
+                          <span>{task}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
+                )}
 
-          {gallery.length > 0 && (
-            <div className={styles.descriptionSection}>
-              <h2 className={styles.sectionTitle}>{t("cases.gallery")}</h2>
-              <CaseGallery
-                images={gallery}
-                captions={galleryCaptions}
-                title={title}
-              />
-            </div>
+                <div className={styles.tagsSection}>
+                  <h2 className={styles.sectionTitle}>{t("cases.technologies")}</h2>
+                  <div className={styles.tagsContainer}>
+                    {project.tags.map((tag, idx) => (
+                      <div key={idx} className={styles.tag}>
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {gallery.length > 0 && (
+                <div className={styles.descriptionSection}>
+                  <h2 className={styles.sectionTitle}>{t("cases.gallery")}</h2>
+                  <CaseGallery
+                    images={gallery}
+                    captions={galleryCaptions}
+                    title={title}
+                  />
+                </div>
+              )}
+            </>
           )}
         </div>
 
