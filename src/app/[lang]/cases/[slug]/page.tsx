@@ -176,7 +176,7 @@ export default async function CaseDetailsPage({
 
           {projectComponents ? (
             <div style={{ marginTop: '40px', width: '100%' }}>
-              <CaseTabs groups={projectComponents} />
+              <CaseTabs groups={projectComponents} lang={lang} projectSlug={slug} />
             </div>
           ) : (
             <>
