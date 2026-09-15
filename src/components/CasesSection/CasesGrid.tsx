@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './CasesSection.module.css';
 import CaseCard from './CaseCard';
 import CaseModal, { CaseModalData } from './CaseModal';
-import { StaggerContainer, StaggerItem, FadeIn } from '../MotionWrapper';
+import { FadeIn } from '../MotionWrapper';
 
 interface CasesGridProps {
   casesData: (CaseModalData & { year: string })[];
@@ -56,9 +56,9 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
 
   return (
     <>
-      <StaggerContainer className={styles.cardsGrid} staggerChildren={0.15}>
+      <div className={styles.cardsGrid}>
         {displayedCases.map((e, i) => (
-          <StaggerItem key={i}>
+          <FadeIn key={e.slug} delay={(i % 6) * 0.15} direction="up" fullWidth style={{ height: '100%' }}>
             <CaseCard
               slug={e.slug}
               lang={lang}
@@ -69,9 +69,9 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
               tags={e.tags}
               onClick={() => setSelectedIndex(i)}
             />
-          </StaggerItem>
+          </FadeIn>
         ))}
-      </StaggerContainer>
+      </div>
 
       {!showAll && casesData.length > 6 && (
         <FadeIn delay={0.2} direction="up" className={styles.loadMoreContainer}>

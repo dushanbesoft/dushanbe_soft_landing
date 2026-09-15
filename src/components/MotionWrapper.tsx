@@ -41,7 +41,7 @@ export function FadeIn({
         delay,
         ease: "easeOut",
       }}
-      style={{ width: fullWidth ? "100%" : "auto" }}
+      style={{ width: fullWidth ? "100%" : "auto", ...(props.style as React.CSSProperties) }}
       {...props}
     >
       {children}
