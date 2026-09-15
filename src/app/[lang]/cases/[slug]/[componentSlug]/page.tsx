@@ -143,7 +143,7 @@ export default async function ComponentDetailsPage({
           <div
             className={styles.hero}
             style={{
-              backgroundImage: `url('${component.imageSrc}')`,
+              backgroundImage: `url('${component.BannerSrc}')`,
               backgroundSize: "cover",
             }}
           ></div>

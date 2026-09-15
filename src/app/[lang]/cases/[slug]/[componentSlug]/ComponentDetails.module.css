@@ -30,7 +30,7 @@
 .hero {
   width: 100%;
   height: 100%;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
