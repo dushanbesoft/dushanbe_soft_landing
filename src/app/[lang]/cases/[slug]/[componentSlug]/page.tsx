@@ -75,7 +75,7 @@ export async function generateMetadata({
 
   if (!component) return {};
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
 
   return {
     title: `${component.title} | ${project.slug}`,
@@ -86,14 +86,16 @@ export async function generateMetadata({
       url: `${siteUrl}/${lang}/cases/${slug}/${componentSlug}`,
       images: [
         {
-          url: component.imageSrc.startsWith('http') ? component.imageSrc : `${siteUrl}${component.imageSrc}`,
+          url: component.imageSrc.startsWith("http")
+            ? component.imageSrc
+            : `${siteUrl}${component.imageSrc}`,
           width: 1200,
           height: 630,
           alt: component.title,
         },
       ],
-      locale: lang === 'tj' ? 'tg_TJ' : lang === 'ru' ? 'ru_RU' : 'en_US',
-      type: 'article',
+      locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
+      type: "article",
     },
   };
 }
@@ -126,7 +128,9 @@ export default async function ComponentDetailsPage({
   }
 
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
-  const projectTitle = t(`projects.${project.slug}.title`, { defaultValue: project.slug });
+  const projectTitle = t(`projects.${project.slug}.title`, {
+    defaultValue: project.slug,
+  });
 
   return (
     <TranslationsProvider
@@ -140,13 +144,14 @@ export default async function ComponentDetailsPage({
         </div>
 
         <div className={styles.heroOverlay}>
-          <div
+          {/* <div
             className={styles.hero}
             style={{
-              backgroundImage: `url('${component.BannerSrc}')`,
-              backgroundSize: "cover",
+              backgroundImage: `url('${component.imageSrc}')`,
+              // backgroundSize: "cover",
             }}
-          ></div>
+          ></div> */}
+          <img src={component.imageSrc}  className={styles.hero} alt="imageSrc" />
         </div>
 
         <div className={styles.contentWrapper}>
@@ -161,13 +166,18 @@ export default async function ComponentDetailsPage({
           </div>
 
           <div className={styles.descriptionSection}>
-            {component.fullInfo.split('\n').map((paragraph, idx) => (
-              paragraph.trim() && (
-                <p key={idx} className={styles.descriptionText} style={{ marginBottom: '16px' }}>
-                  {paragraph}
-                </p>
-              )
-            ))}
+            {component.fullInfo.split("\n").map(
+              (paragraph, idx) =>
+                paragraph.trim() && (
+                  <p
+                    key={idx}
+                    className={styles.descriptionText}
+                    style={{ marginBottom: "16px" }}
+                  >
+                    {paragraph}
+                  </p>
+                ),
+            )}
           </div>
         </div>
 

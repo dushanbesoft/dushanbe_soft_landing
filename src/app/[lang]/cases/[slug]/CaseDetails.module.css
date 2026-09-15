@@ -5,6 +5,7 @@
   background-color: #081c22;
   position: relative;
   overflow: hidden;
+  padding-top: 90px;
 }
 
 .hero {
@@ -65,11 +66,13 @@
 
 .contentWrapper {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 25px 30px;
   padding-bottom: 89px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 0px;
   position: relative;
   z-index: 2;
 }
