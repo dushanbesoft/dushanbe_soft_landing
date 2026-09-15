@@ -9,6 +9,15 @@ export interface ProductSiteItem {
   slug: string;
   /** Опциональная галерея скриншотов кейса (пути в /public). */
   gallery?: string[];
+  projectComponents?: {
+    tabName: string;
+    items: {
+      title: string;
+      imageSrc: string;
+      shortInfo: string;
+      fullInfo: string;
+    }[];
+  }[];
 }
 
 export const ProductSite: ProductSiteItem[] = [
@@ -66,6 +75,71 @@ export const ProductSite: ProductSiteItem[] = [
       "/images/projects/mavjisomon/gallery-5.png",
       "/images/projects/mavjisomon/gallery-6.png",
     ],
+    projectComponents: [
+      {
+        tabName: "Админ-панель",
+        items: [
+          {
+            title: "Управление пользователями",
+            imageSrc: "/images/projects/mavjisomon/gallery-1.png",
+            shortInfo: "CRM и биллинг подписчиков",
+            fullInfo: "Интегрированная CRM-система для управления базой пользователей. Позволяет отслеживать активность, управлять тарифными планами, обрабатывать платежи и анализировать статистику просмотров в реальном времени."
+          },
+          {
+            title: "Управление контентом (CMS)",
+            imageSrc: "/images/projects/mavjisomon/gallery-2.png",
+            shortInfo: "Организация базы в 130 000+ фильмов",
+            fullInfo: "Мощный модуль управления видеоконтентом. Включает инструменты для пакетной загрузки метаданных, распределения по жанрам, загрузки постеров и настройки SEO для поисковой оптимизации."
+          },
+          {
+            title: "Управление Live TV",
+            imageSrc: "/images/projects/mavjisomon/gallery-1.png",
+            shortInfo: "Мониторинг 2500+ телеканалов",
+            fullInfo: "Инструментарий для мониторинга стабильности потоков IPTV, автоматической загрузки телепрограммы (EPG) и управления архивом передач (Catch-up) для отложенного просмотра."
+          }
+        ]
+      },
+      {
+        tabName: "Мобильные приложения",
+        items: [
+          {
+            title: "Адаптивный видеоплеер",
+            imageSrc: "/images/projects/mavjisomon/gallery-3.png",
+            shortInfo: "Нативный плеер с выбором качества",
+            fullInfo: "Высокопроизводительный нативный плеер на Android и iOS с поддержкой HLS/DASH. Автоматически подстраивает битрейт под скорость интернета, позволяет переключать звуковые дорожки и субтитры без прерывания видео."
+          },
+          {
+            title: "Оффлайн просмотр",
+            imageSrc: "/images/projects/mavjisomon/gallery-4.png",
+            shortInfo: "Загрузка контента в память",
+            fullInfo: "Функция безопасного кэширования фильмов и сериалов для просмотра в поездках или при отсутствии интернета. Загруженный контент зашифрован и доступен только внутри приложения."
+          },
+          {
+            title: "Интеграция с устройствами",
+            imageSrc: "/images/projects/mavjisomon/gallery-3.png",
+            shortInfo: "Chromecast и AirPlay",
+            fullInfo: "Бесшовная передача видеопотока с мобильного устройства на телевизор в один клик благодаря встроенной поддержке технологий Google Cast и Apple AirPlay."
+          }
+        ]
+      },
+      {
+        tabName: "Smart TV",
+        items: [
+          {
+            title: "ТВ-Интерфейс (10-foot UI)",
+            imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+            shortInfo: "Управление пультом ДУ",
+            fullInfo: "Полностью переработанный пользовательский интерфейс, адаптированный под большие экраны и управление с помощью крестовины пульта (D-pad). Крупные постеры, читабельные шрифты и плавная анимация фокуса."
+          },
+          {
+            title: "Синхронизация прогресса",
+            imageSrc: "/images/projects/mavjisomon/gallery-6.png",
+            shortInfo: "Единый профиль на всех устройствах",
+            fullInfo: "Система сохраняет таймкод остановки видео на сервере, позволяя начать просмотр фильма на смартфоне по дороге домой, и продолжить точно с того же места на телевизоре."
+          }
+        ]
+      }
+    ]
   },
   {
     imageSrc: "/images/projects/livechat.webp",
