@@ -13,50 +13,71 @@ export interface ProductSiteItem {
 
 export const ProductSite: ProductSiteItem[] = [
   {
-    imageSrc: "/images/projects/president/banner-president-strip.webp",
-    bannerSrc: "/images/projects/president/banner-president-strip.webp",
+    imageSrc: "/images/projects/president/banner.svg",
+    bannerSrc: "/images/projects/president/banner.svg",
     year: "2024",
     tags: ["React", "Redux", "ASP.NET Core", "MS SQL", "REST API"],
     slug: "president",
     gallery: [
-      "/images/projects/president/gallery-1.webp",
-      "/images/projects/president/gallery-2.webp",
-      "/images/projects/president/gallery-3.webp",
-      "/images/projects/president/gallery-4.webp",
-      "/images/projects/president/gallery-5.webp",
-      "/images/projects/president/gallery-6.webp",
-      "/images/projects/president/gallery-7.webp",
-      "/images/projects/president/gallery-8.webp",
-    ]
+      "/images/projects/president/banner.png",
+      "/images/projects/president/gallery-1.png",
+      "/images/projects/president/gallery-2.png",
+    ],
   },
   {
-    imageSrc: "/images/projects/sohktor/banner-schdo.webp",
-    bannerSrc: "/images/projects/sohktor/banner-schdo.webp",
+    imageSrc: "/images/projects/sohktor/banner.svg",
+    bannerSrc: "/images/projects/sohktor/banner.svg",
     bannerFit: "contain",
     year: "2024",
     tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
     slug: "sohktor",
     gallery: [
-      "/images/projects/sohktor/gallery-1.webp",
-    ]
+      "/images/projects/sohktor/gallery-1.png",
+      "/images/projects/sohktor/gallery-2.png",
+      "/images/projects/sohktor/gallery-3.png",
+      "/images/projects/sohktor/gallery-5.png",
+      "/images/projects/sohktor/gallery-6.png",
+      "/images/projects/sohktor/gallery-7.png",
+    ],
   },
   {
     imageSrc: "/images/projects/pic.webp",
     year: "2024",
     tags: ["ASP.NET Core", "React", "PostgreSQL", "Docker", "REST API"],
-    slug: "digital-tajikistan"
+    slug: "digital-tajikistan",
+    gallery: [
+      "/images/projects/pic/gallery-1.png",
+      "/images/projects/pic/gallery-2.png",
+      "/images/projects/pic/gallery-3.png",
+      "/images/projects/pic/gallery-4.png",
+      "/images/projects/pic/gallery-5.png",
+    ],
   },
   {
     imageSrc: "/images/projects/mavjisomon.webp",
     year: "2024",
     tags: ["Node.js", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
-    slug: "mavji-somon"
+    slug: "mavji-somon",
+    gallery: [
+      "/images/projects/mavjisomon/gallery-1.png",
+      "/images/projects/mavjisomon/gallery-2.png",
+      "/images/projects/mavjisomon/gallery-3.png",
+      "/images/projects/mavjisomon/gallery-4.png",
+      "/images/projects/mavjisomon/gallery-5.png",
+      "/images/projects/mavjisomon/gallery-6.png",
+    ],
   },
   {
     imageSrc: "/images/projects/livechat.webp",
     year: "2024",
     tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "WebSocket"],
-    slug: "livechat-tj"
+    slug: "livechat-tj",
+    gallery: [
+      "/images/projects/livechat/gallery-1.png",
+      "/images/projects/livechat/gallery-2.png",
+      "/images/projects/livechat/gallery-3.png",
+      "/images/projects/livechat/gallery-4.png",
+    ],
   },
   {
     imageSrc: "/images/projects/ttl.webp",
@@ -69,25 +90,46 @@ export const ProductSite: ProductSiteItem[] = [
       "Bootstrap",
       "REST API",
     ],
-    slug: "telecomm"
+    slug: "telecomm",
+    gallery: [
+      "/images/projects/ttl/gallery-1.png",
+      "/images/projects/ttl/gallery-2.png",
+      "/images/projects/ttl/gallery-3.png",
+      "/images/projects/ttl/gallery-4.png",
+      "/images/projects/ttl/gallery-5.png",
+    ]
   },
   {
     imageSrc: "/images/projects/navo.webp",
     year: "2024",
     tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
-    slug: "navo"
+    slug: "navo",
   },
   {
     imageSrc: "/images/projects/somontv.webp",
     year: "2024",
     tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
-    slug: "somon-tv"
+    slug: "somon-tv",
+    gallery: [
+      "/images/projects/somontv/gallery-1.png",
+      "/images/projects/somontv/gallery-2.png",
+      "/images/projects/somontv/gallery-3.png",
+      "/images/projects/somontv/gallery-4.png",
+
+     ]
   },
   {
     imageSrc: "/images/projects/zudsms.webp",
     year: "2024",
     tags: ["Node.js", "JavaScript", "MS SQL", "HTML5 / CSS3", "REST API"],
-    slug: "zudsms"
+    slug: "zudsms",
+    gallery: [
+      "/images/projects/zudSMS/gallery-1.png",
+      "/images/projects/zudSMS/gallery-2.png",
+      "/images/projects/zudSMS/gallery-3.png",
+      "/images/projects/zudSMS/gallery-4.png",
+      "/images/projects/zudSMS/gallery-5.png",
+    ]
   },
   {
     imageSrc: "/images/projects/sunduk.webp",
@@ -101,7 +143,14 @@ export const ProductSite: ProductSiteItem[] = [
       "Underscore.js",
       "Сервер БД MySQL",
     ],
-    slug: "sunduk-tv"
+    slug: "sunduk-tv",
+    gallery: [
+      "/images/projects/sandukTV/gallery-1.png",
+      "/images/projects/sandukTV/gallery-2.png",
+      "/images/projects/sandukTV/gallery-3.png",
+      "/images/projects/sandukTV/gallery-4.png",
+      "/images/projects/sandukTV/gallery-5.png",
+    ]
   },
   {
     imageSrc: "/images/projects/onlinepay.webp",
@@ -111,9 +160,16 @@ export const ProductSite: ProductSiteItem[] = [
       "JavaScript",
       "MS SQL",
       "HTML5 / CSS3",
-      "REST API"
+      "REST API",
     ],
-    slug: "onlinepay"
+    slug: "onlinepay",
+    gallery: [
+      "/images/projects/onlinepay/gallery-1.png",
+      "/images/projects/onlinepay/gallery-2.png",
+      "/images/projects/onlinepay/gallery-3.png",
+      "/images/projects/onlinepay/gallery-4.png",
+
+    ]
   },
   {
     imageSrc: "/images/projects/zenith.webp",
@@ -123,9 +179,9 @@ export const ProductSite: ProductSiteItem[] = [
       "JavaScript",
       "MS SQL",
       "HTML5 / CSS3",
-      "REST API"
+      "REST API",
     ],
-    slug: "zenith-valuation"
+    slug: "zenith-valuation",
   },
   {
     imageSrc: "/images/projects/itrans.webp",
@@ -135,8 +191,8 @@ export const ProductSite: ProductSiteItem[] = [
       "JavaScript",
       "MS SQL",
       "HTML5 / CSS3",
-      "REST API"
+      "REST API",
     ],
-    slug: "imron-nakliet"
-  }
+    slug: "imron-nakliet",
+  },
 ];

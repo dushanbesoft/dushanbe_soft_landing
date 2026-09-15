@@ -84,11 +84,11 @@
 .mainImageWrapper {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 700px;
 }
 
 .mainImage {
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: 11px;
   display: block;
 }
