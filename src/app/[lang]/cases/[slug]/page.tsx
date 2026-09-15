@@ -147,7 +147,7 @@ export default async function CaseDetailsPage({
         <div className="header-global header-fixed">
           <Header />
         </div>
-
+{/* 
         <div className={styles.heroOverlay}>
           <div
             className={styles.hero}
@@ -159,7 +159,7 @@ export default async function CaseDetailsPage({
                 : {}),
             }}
           ></div>
-        </div>
+        </div> */}
 
         <div className={styles.contentWrapper}>
           <Link href={`/${lang}/cases`} className={styles.backBtn}>
@@ -168,9 +168,9 @@ export default async function CaseDetailsPage({
           </Link>
 
           <div className={styles.heroContent}>
-            <div className={styles.yearBadge}>
+            {/* <div className={styles.yearBadge}>
               <span className={styles.yearText}>{project.year}</span>
-            </div>
+            </div> */}
             <h1 className={styles.title}>{title}</h1>
           </div>
 

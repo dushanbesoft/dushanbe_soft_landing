@@ -107,7 +107,7 @@ export default function CasesScrollLayout({ casesData, lang, labels }: CasesScro
                 <div className={styles.cardContentWrapper}>
                   <div className={styles.cardHeader}>
                     <h3 className={styles.cardTitle}>{activeCase.title}</h3>
-                    <span className={styles.yearBadge}>{activeCase.year}</span>
+                    {/* <span className={styles.yearBadge}>{activeCase.year}</span> */}
                   </div>
                   <p className={styles.cardDesc}>{activeCase.description}</p>
                   
