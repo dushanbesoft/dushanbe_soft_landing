@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import styles from './CaseTabs.module.css';
 import { TranslatedString, getTranslated } from '../../utils/translation';
 
@@ -27,7 +26,6 @@ interface CaseTabsProps {
 }
 
 export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
-  const { t } = useTranslation('common');
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
 
@@ -54,16 +52,6 @@ export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
       <div className={styles.grid}>
         {activeGroup.items.map((item, idx) => {
           const href = item.slug ? `/${lang}/cases/${projectSlug}/${item.slug}` : '#';
-          const cardTitle = item.slug
-            ? t(`projectComponents.${projectSlug}.${item.slug}.title`, {
-                defaultValue: item.title,
-              })
-            : item.title;
-          const cardShortInfo = item.slug
-            ? t(`projectComponents.${projectSlug}.${item.slug}.shortInfo`, {
-                defaultValue: item.shortInfo,
-              })
-            : item.shortInfo;
           return (
             <Link key={idx} href={href} className={styles.card}>
               <div className={styles.imageWrapper}>
