@@ -176,6 +176,157 @@ export const ProductSite: ProductSiteItem[] = [
       "/images/projects/sohktor/gallery-6.png",
       "/images/projects/sohktor/gallery-7.png",
     ],
+    projectComponents: [
+      {
+        tabName: {
+          ru: "Веб-приложение",
+          en: "Web application",
+          tj: "Барномаи веб",
+        },
+        items: [
+          {
+            slug: "login",
+            title: {
+              ru: "Вход в систему",
+              en: "Sign In",
+              tj: "Вуруд ба система",
+            },
+            imageSrc: "/images/projects/sohktor/login.png",
+            BannerSrc: "/images/projects/sohktor/login.png",
+            shortInfo: {
+              ru: "Авторизация сотрудников в едином электронном хранилище",
+              en: "Staff authentication for the unified electronic repository",
+              tj: "Воридшавии кормандон ба махзани ягонаи электронӣ",
+            },
+            fullInfo: {
+              ru: "Экран входа — начальная точка работы с единым электронным хранилищем Главного управления государственной противопожарной службы МВД (СХДО ВКД). В верхней части размещены геральдический знак службы и её полное название, что сразу обозначает ведомственную принадлежность системы. Заголовок «Маҳзани ягонаи электронӣ» подчёркивает, что это единая база данных для всех подразделений.\n\nФорма авторизации содержит два поля: «Эл. Почта / Логин» с иконкой конверта и «Пароль» с иконкой замка. Поля снабжены подсказками на таджикском языке, что помогает сотруднику ввести корректные данные. Крупная зелёная кнопка «Вход» завершает форму и визуально соответствует фирменному стилю службы.\n\nПользовательский сценарий: сотрудник открывает систему, вводит логин или электронную почту и пароль, после чего получает доступ к рабочему пространству согласно своей роли и подразделению.\n\nЦенность для бизнеса: единая точка входа с разграничением доступа обеспечивает безопасность ведомственных данных и позволяет вести учёт действий пользователей. Аналогичный подход применим для любой корпоративной или государственной системы, где важны контроль доступа и защита конфиденциальной информации.",
+              en: "The sign-in screen is the entry point to the unified electronic repository of the Main Directorate of the State Fire Service of the Ministry of Internal Affairs (SFS). The service emblem and its full name appear at the top, immediately identifying the institutional owner of the system. The heading “Unified electronic repository” emphasises that this is a single database shared across all divisions.\n\nThe authentication form contains two fields: “Email / Login” with an envelope icon and “Password” with a lock icon. Placeholder hints in Tajik help staff enter the correct details. A large green “Sign in” button completes the form and matches the service's visual identity.\n\nUser journey: a member of staff opens the system, enters a login or email and a password, and then gains access to the workspace according to their role and division.\n\nBusiness value: a single entry point with access control protects institutional data and enables an audit trail of user actions. The same pattern suits any corporate or government system where access control and protection of confidential information matter.",
+              tj: "Экрани вуруд нуқтаи оғози кор бо махзани ягонаи электронии Сарраёсати хадамоти давлатии оташнишонии ВКД (СХДО ВКД) мебошад. Дар қисми боло нишони хидмат ва номи пурраи он ҷойгиранд, ки мансубияти идоравии системаро дарҳол нишон медиҳанд. Сарлавҳаи «Маҳзани ягонаи электронӣ» таъкид мекунад, ки ин пойгоҳи ягонаи додаҳо барои ҳамаи воҳидҳо мебошад.\n\nШакли воридшавӣ ду майдон дорад: «Почтаи электронӣ ё Логин» бо нишонаи лифофа ва «Парол» бо нишонаи қулф. Майдонҳо бо ишораҳо ба забони тоҷикӣ муҷаҳҳазанд, ки ба корманд барои дуруст ворид кардани маълумот кумак мекунанд. Тугмаи калони сабзи «Вуруд» шаклро анҷом медиҳад ва ба сабки фирмавии хидмат мувофиқ аст.\n\nРаванди истифода: корманд системаро мекушояд, логин ё почтаи электронӣ ва паролро ворид мекунад ва сипас мувофиқи нақш ва воҳиди худ ба фазои корӣ дастрасӣ пайдо мекунад.\n\nАҳамият барои тиҷорат: нуқтаи ягонаи вуруд бо тақсими дастрасӣ амнияти додаҳои идоравиро таъмин мекунад ва имкони бақайдгирии амали корбаронро медиҳад. Чунин равиш барои ҳар системаи корпоративӣ ё давлатӣ, ки дар он назорати дастрасӣ ва ҳифзи маълумоти махфӣ муҳим аст, мувофиқ мебошад.",
+            },
+          },
+          {
+            slug: "workspace",
+            title: {
+              ru: "Главное рабочее пространство",
+              en: "Main Workspace",
+              tj: "Фазои асосии корӣ",
+            },
+            imageSrc: "/images/projects/sohktor/workspace.png",
+            BannerSrc: "/images/projects/sohktor/workspace.png",
+            shortInfo: {
+              ru: "Навигация по всем модулям учёта и отчётности",
+              en: "Navigation across all accounting and reporting modules",
+              tj: "Роҳнамоӣ дар ҳамаи модулҳои баҳисобгирӣ ва ҳисобот",
+            },
+            fullInfo: {
+              ru: "Рабочее пространство открывается сразу после входа и объединяет все инструменты системы в едином интерфейсе. Левая боковая панель содержит основное меню: «Частные объекты», «Государственные объекты», «Заключения», «Услуги», «КПО», «Предписания (частные)», «Предписания (государственные)», «Пожары», «Уголовные дела», «Отчёты», а также разделы настроек — «ШНБДС СХДО ВКД ҶТ», «Список услуг», «Инспекторы» и «Настройки». Пункты снабжены иконками для быстрого визуального распознавания.\n\nЦентральную часть занимает эмблема службы и полное название организации — «Единое электронное хранилище Главного управления государственной противопожарной службы МВД Республики Таджикистан». В правом верхнем углу отображаются имя пользователя и его роль («Администратор») с выпадающим меню профиля.\n\nПользовательский сценарий: авторизованный сотрудник выбирает нужный модуль в боковом меню и переходит к учёту объектов, регистрации пожаров, ведению уголовных дел или формированию отчётов. Раскрывающиеся пункты («Отчёты», «Настройки») группируют связанные разделы.\n\nЦенность для бизнеса: единое рабочее пространство с логичной группировкой модулей ускоряет работу сотрудников и снижает порог обучения. Такая структура подходит для любой ведомственной ERP-системы с большим числом функциональных разделов.",
+              en: "The workspace opens immediately after sign-in and brings all system tools together in one interface. The left sidebar holds the primary menu: Private Facilities, State Facilities, Conclusions, Services, Fire-Technical Inspection (FTI), Orders (private), Orders (state), Fires, Criminal Cases, Reports, plus configuration sections — the departmental register, Services List, Inspectors and Settings. Each item carries an icon for quick visual recognition.\n\nThe central area displays the service emblem and the full name of the organisation — “Unified electronic repository of the Main Directorate of the State Fire Service of the Ministry of Internal Affairs of the Republic of Tajikistan”. The top-right corner shows the user's name and role (“Administrator”) with a profile dropdown.\n\nUser journey: an authenticated employee selects the required module in the sidebar and moves on to facility accounting, fire registration, criminal-case handling or report generation. Expandable items (Reports, Settings) group related sections.\n\nBusiness value: a single workspace with a logical grouping of modules speeds up staff work and lowers the learning curve. This structure suits any departmental ERP system with a large number of functional sections.",
+              tj: "Фазои корӣ дарҳол пас аз вуруд кушода мешавад ва ҳамаи воситаҳои системаро дар як интерфейс муттаҳид мекунад. Панели чапи паҳлуӣ менюи асосиро дар бар мегирад: «Иншоотҳои хусусӣ», «Иншоотҳои давлатӣ», «Хулосаҳо», «Хизматрасониҳо», «КПО», «Амрнома (хусусӣ)», «Амрнома (давлатӣ)», «Сӯхторҳо», «Ҷиноятҳо», «Ҳисоботҳо», инчунин бахшҳои танзимот — «ШНБДС СХДО ВКД ҶТ», «Рӯйхати хизматрасониҳо», «Назоратчиён» ва «Танзимот». Бандҳо бо нишонаҳо барои шинохти зуди визуалӣ муҷаҳҳазанд.\n\nҚисми марказиро нишони хидмат ва номи пурраи ташкилот — «Маҳзани ягонаи электронии Сарраёсати Хадамоти Давлатии Оташнишонии ВКД Ҷумҳурии Тоҷикистон» — ишғол мекунад. Дар кунҷи болоии рост ном ва нақши корбар («Администратор») бо менюи профил нишон дода мешавад.\n\nРаванди истифода: корманди воридшуда модули заруриро дар менюи паҳлуӣ интихоб карда, ба баҳисобгирии иншоот, бақайдгирии сӯхтор, пешбурди парвандаҳои ҷиноятӣ ё таҳияи ҳисобот мегузарад. Бандҳои кушодашаванда («Ҳисоботҳо», «Танзимот») бахшҳои алоқамандро гурӯҳбандӣ мекунанд.\n\nАҳамият барои тиҷорат: фазои ягонаи корӣ бо гурӯҳбандии мантиқии модулҳо кори кормандонро тезонида, остонаи омӯзишро паст мекунад. Чунин сохтор барои ҳар системаи идоравии ERP бо шумораи зиёди бахшҳои функсионалӣ мувофиқ аст.",
+            },
+          },
+          {
+            slug: "fire-registration",
+            title: {
+              ru: "Регистрация пожара",
+              en: "Fire Registration",
+              tj: "Бақайдгирии сӯхтор",
+            },
+            imageSrc: "/images/projects/sohktor/fire-registration.png",
+            BannerSrc: "/images/projects/sohktor/fire-registration.png",
+            shortInfo: {
+              ru: "Структурированная карточка происшествия с вложениями",
+              en: "A structured incident record with attachments",
+              tj: "Корти сохторёфтаи ҳодиса бо замимаҳо",
+            },
+            fullInfo: {
+              ru: "Экран «Добавить» (Илова кунед) в разделе «Пожары» предназначен для регистрации нового происшествия. Форма разделена на две колонки, что помогает вводить большой объём данных без перегрузки интерфейса.\n\nВ левой колонке расположено дерево подразделений «КМДА» (СХДО, ШНБДС СХДО, РХДО г.Душанбе, РХДО обл.Хатлон, РХДО обл.Согд, ШХДО ГБАО, ШХДО Рашт, ШХДО районов республиканского подчинения), позволяющее выбрать ответственную структуру. Ниже размещены поля «Дата и время начала пожара», выпадающий список «Причина пожара», тип объекта («Навъи иншоот») и выбор конкретного объекта с кнопкой «+ Добавить», а также номер информационной книги (КА).\n\nПравая колонка содержит решения по пожару, принятые меры, поле следователя (НДСБ), загрузку файла «Лист пожара» (Варақаи сӯхтор) через кнопку выбора файла, чекбокс «Архивировано» и кнопки «Сохранить» (Сабт кардан) и «Назад» (Бозгашт).\n\nПользовательский сценарий: сотрудник выбирает подразделение, указывает время и причину пожара, привязывает объект, заполняет сведения о принятых решениях и следователе, прикладывает документ и сохраняет карточку.\n\nЦенность для бизнеса: единая структурированная форма обеспечивает полноту и единообразие учёта происшествий, а вложения и привязка к подразделению делают данные пригодными для последующей аналитики и отчётности.",
+              en: "The “Add” (Ilova kuned) screen in the Fires section is designed to register a new incident. The form is split into two columns, which helps enter a large volume of data without overloading the interface.\n\nThe left column contains the “KMDA” unit tree (SFS headquarters, the departmental register, city and regional fire directorates for Dushanbe, Khatlon and Sughd, GBAO, Rasht and the districts of republican subordination), letting the user pick the responsible structure. Below it are the “Fire start date and time” field, a “Fire cause” dropdown, the object type and a specific-object selector with an “+ Add” button, plus the information-book number.\n\nThe right column holds the decisions taken on the fire, the measures applied, an investigator field, a “Fire sheet” file upload through a file-picker button, an “Archived” checkbox and the “Save” and “Back” buttons.\n\nUser journey: an officer selects the division, enters the time and cause of the fire, links the facility, fills in details of the decisions taken and the investigator, attaches a document and saves the record.\n\nBusiness value: a single structured form ensures complete and consistent incident records, while attachments and the link to a division make the data suitable for later analytics and reporting.",
+              tj: "Экрани «Илова кунед» дар бахши «Сӯхторҳо» барои бақайдгирии ҳодисаи нав пешбинӣ шудааст. Шакл ба ду сутун ҷудо шудааст, ки ворид кардани ҳаҷми зиёди маълумотро бидуни вазнинии интерфейс осон мекунад.\n\nДар сутуни чап дарахти воҳидҳои «КМДА» (СХДО, ШНБДС СХДО, РХДО ш.Душанбе, РХДО в.Хатлон, РХДО в.Суғд, ШХДО ВМКБ, ШХДО Рашт, ШХДО ноҳияҳои тобеи марказ) ҷойгир аст, ки интихоби сохтори масъулро имкон медиҳад. Дар поён майдонҳои «Таърих, вақти сар задани сӯхтор», рӯйхати кушодашавандаи «Сабаби сӯхтор», навъи иншоот ва интихоби иншооти мушаххас бо тугмаи «+ Илова», инчунин рақами китоби ахборотӣ (КА) ҷой доранд.\n\nСутуни рост қарорҳо оид ба сӯхтор, чораҳои андешидашуда, майдони таҳқиқбаранда (НДСБ), боркунии файли «Варақаи сӯхтор» тавассути тугмаи интихоби файл, катакчаи «Архившуда» ва тугмаҳои «Сабт кардан» ва «Бозгашт»-ро дар бар мегирад.\n\nРаванди истифода: корманд воҳидро интихоб мекунад, вақт ва сабаби сӯхторро нишон медиҳад, иншоотро пайваст мекунад, маълумотро дар бораи қарорҳои қабулшуда ва таҳқиқбаранда пур карда, санадро замима мекунад ва кортро нигоҳ медорад.\n\nАҳамият барои тиҷорат: шакли ягонаи сохторёфта пуррагӣ ва якрангии баҳисобгирии ҳодисаҳоро таъмин мекунад, замимаҳо ва пайванд ба воҳид бошанд, додаҳоро барои таҳлил ва ҳисоботи минбаъда мувофиқ мегардонанд.",
+            },
+          },
+          {
+            slug: "criminal-cases",
+            title: {
+              ru: "Уголовные дела",
+              en: "Criminal Cases",
+              tj: "Парвандаҳои ҷиноятӣ",
+            },
+            imageSrc: "/images/projects/sohktor/criminal-cases.png",
+            BannerSrc: "/images/projects/sohktor/criminal-cases.png",
+            shortInfo: {
+              ru: "Учёт материалов проверки и уголовных дел по пожарам",
+              en: "Tracking of inquiry materials and fire-related criminal cases",
+              tj: "Баҳисобгирии маводи санҷиш ва парвандаҳои ҷиноятӣ",
+            },
+            fullInfo: {
+              ru: "Раздел «Уголовные дела» (Ҷиноятҳо) позволяет фиксировать материалы проверок и уголовные дела, связанные с пожарами. Форма «Добавить» построена в две колонки и логически продолжает карточку пожара.\n\nЛевая колонка содержит тип объекта, дерево подразделений «КМДА», текстовое поле с описанием происшествия (город и район, наименование объекта, причина, ущерб и виновники), поле следователя, инспектора или прокурора, рассматривавшего материал, а также поле статьи Уголовного кодекса, по которой возбуждено или отказано в возбуждении дела.\n\nПравая колонка включает дату проверки материалов или рассмотрения дела и назначения наказания, поле следователя (НДБС), выпадающий список «Статус исполнения» (Ҳолати иҷро), номер книги учёта уголовных дел (КЧ), способ регистрации, признак передачи в другое подразделение, загрузку файла «Лист уголовного дела» и чекбокс архивации. Форму завершают кнопки «Сохранить» и «Назад».\n\nПользовательский сценарий: сотрудник связывает уголовное дело с конкретным пожаром, указывает статью, ответственных лиц и статус исполнения, прикладывает материалы и сохраняет запись.\n\nЦенность для бизнеса: сквозная связь пожаров и уголовных дел даёт целостную картину правовых последствий происшествий и упрощает контроль исполнения. Похожая модель применима в любых системах, где инцидент порождает последующее делопроизводство.",
+              en: "The Criminal Cases section lets the service record inquiry materials and criminal cases linked to fires. The “Add” form uses two columns and logically follows on from the fire record.\n\nThe left column holds the object type, the “KMDA” unit tree, a text field describing the incident (city and district, facility name, cause, damage and responsible parties), a field for the investigator, inspector or prosecutor who reviewed the material, and a field for the Criminal Code article under which a case was opened or declined.\n\nThe right column includes the date the materials were checked or the case reviewed and the penalty assigned, an investigator field, an “Execution status” dropdown, the criminal-case book number, the registration method, a flag for transfer to another division, a “Criminal case sheet” file upload and an archive checkbox. “Save” and “Back” buttons complete the form.\n\nUser journey: an officer links a criminal case to a specific fire, specifies the article, the responsible persons and the execution status, attaches the materials and saves the record.\n\nBusiness value: an end-to-end link between fires and criminal cases gives a complete picture of the legal consequences of incidents and simplifies execution control. A similar model suits any system where an incident triggers subsequent case management.",
+              tj: "Бахши «Ҷиноятҳо» имкон медиҳад, ки маводи санҷишҳо ва парвандаҳои ҷиноятии марбут ба сӯхторҳо ба қайд гирифта шаванд. Шакли «Илова кунед» дар ду сутун сохта шуда, кортҳои сӯхторро мантиқан идома медиҳад.\n\nСутуни чап навъи иншоот, дарахти воҳидҳои «КМДА», майдони матнӣ бо тавсифи ҳодиса (шаҳру ноҳия, номи иншоот, сабаб, зарар ва шахсони сабабгор), майдони таҳқиқбаранда, муфаттиш ё прокуроре, ки маводро баррасӣ намудааст, инчунин майдони моддаи Кодекси ҷиноятиро, ки парванда аз рӯи он оғоз ё рад шудааст, дар бар мегирад.\n\nСутуни рост санаи санҷиши мавод ё баррасии парванда ва таъини ҷазо, майдони таҳқиқбаранда (НДБС), рӯйхати кушодашавандаи «Ҳолати иҷро», рақами китоби бақайдгирии ҷиноятҳо (КҶ), усули бақайдгирӣ, аломати гузариш ба воҳиди дигар, боркунии файли «Варақаи ҷиноят» ва катакчаи архивро дар бар мегирад. Шаклро тугмаҳои «Сабт кардан» ва «Бозгашт» анҷом медиҳанд.\n\nРаванди истифода: корманд парвандаи ҷиноятиро бо сӯхтори мушаххас пайваст мекунад, модда, шахсони масъул ва ҳолати иҷроро нишон медиҳад, маводро замима карда, сабтро нигоҳ медорад.\n\nАҳамият барои тиҷорат: пайванди фаросарии сӯхторҳо ва парвандаҳои ҷиноятӣ манзараи мукаммали оқибатҳои ҳуқуқии ҳодисаҳоро медиҳад ва назорати иҷроро осон мекунад. Модели монанд барои ҳар системае, ки дар он ҳодиса пешбурди минбаъдаро ба миён меорад, мувофиқ аст.",
+            },
+          },
+          {
+            slug: "fire-report",
+            title: {
+              ru: "Отчёт по пожарам",
+              en: "Fire Report",
+              tj: "Ҳисоботи сӯхторҳо",
+            },
+            imageSrc: "/images/projects/sohktor/fire-report.png",
+            BannerSrc: "/images/projects/sohktor/fire-report.png",
+            shortInfo: {
+              ru: "Сводная статистика ущерба с фильтрами и экспортом",
+              en: "Aggregate damage statistics with filters and export",
+              tj: "Омори ҷамъбастии зарар бо филтрҳо ва содирот",
+            },
+            fullInfo: {
+              ru: "Экран «Отчёт по пожарам» (Ҳисоботи Сӯхторҳо) формирует сводную статистику происшествий по заданным параметрам. Верхняя часть содержит развитый блок фильтров: подразделение «КМДА», дата начала и окончания периода, признак архива, причина пожара, способ регистрации, распространение пожара, гибель людей, телесные повреждения, принятые решения и меры, а также тип объекта.\n\nПод фильтрами расположены кнопки действий: «Поиск» (Ҷустуҷӯ), «Сравнить с прошлым годом» (Муқоиса бо соли гузашта) и «Экспорт в Excel» (Экспорт ба Excel). Результат представлен в виде итоговой таблицы с ключевыми показателями — количество пожаров, площадь пожара (кв. м), ущерб и спасённое имущество (в сомони). Ниже выводится круговая диаграмма «Распределение данных (%)», наглядно показывающая соотношение ущерба и спасённого имущества.\n\nПользовательский сценарий: аналитик задаёт период и фильтры, запускает поиск, оценивает показатели в таблице и на диаграмме, при необходимости сравнивает с прошлым годом и выгружает данные в Excel.\n\nЦенность для бизнеса: гибкая многопараметрическая отчётность превращает разрозненные записи о пожарах в управленческую информацию, поддерживает анализ динамики и обоснование решений. Подобный модуль востребован в любой системе, где нужны срезы данных, визуализация и экспорт.",
+              en: "The Fire Report screen builds aggregate incident statistics from the chosen parameters. The upper area contains a rich filter block: the “KMDA” division, the start and end dates of the period, an archive flag, the fire cause, the registration method, fire spread, loss of life, physical injuries, decisions and measures taken, and the object type.\n\nBelow the filters are the action buttons: “Search”, “Compare with last year” and “Export to Excel”. The result is shown as a summary table with the key indicators — the number of fires, the fire area (sq. m), the damage and the saved property (in somoni). A “Data distribution (%)” pie chart below the table clearly shows the ratio of damage to saved property.\n\nUser journey: an analyst sets the period and filters, runs the search, assesses the indicators in the table and the chart, optionally compares them with the previous year and exports the data to Excel.\n\nBusiness value: flexible multi-parameter reporting turns scattered fire records into management information, supporting trend analysis and decision justification. A similar module is in demand in any system that needs data slices, visualisation and export.",
+              tj: "Экрани «Ҳисоботи Сӯхторҳо» омори ҷамъбастии ҳодисаҳоро аз рӯи параметрҳои додашуда таҳия мекунад. Қисми боло блоки васеи филтрҳоро дар бар мегирад: воҳиди «КМДА», санаи аввал ва анҷоми давра, аломати архив, сабаби сӯхтор, усули бақайдгирӣ, паҳншавии сӯхтор, фавти одамон, ҷароҳати ҷисмонӣ, қарорҳо ва чораҳои қабулшуда, инчунин навъи иншоот.\n\nЗери филтрҳо тугмаҳои амал ҷойгиранд: «Ҷустуҷӯ», «Муқоиса бо соли гузашта» ва «Экспорт ба Excel». Натиҷа дар шакли ҷадвали ҷамъбастӣ бо нишондиҳандаҳои асосӣ — шумораи сӯхторҳо, масоҳати сӯхтор (метри мураббаъ), зарар ва амволи наҷотдодашуда (бо сомонӣ) — пешниҳод мешавад. Дар поён диаграммаи доиравии «Тақсимоти маълумот (%)» нисбати зарар ва амволи наҷотдодашударо ба таври равшан нишон медиҳад.\n\nРаванди истифода: таҳлилгар давра ва филтрҳоро таъин мекунад, ҷустуҷӯро оғоз менамояд, нишондиҳандаҳоро дар ҷадвал ва диаграмма арзёбӣ мекунад, ҳангоми зарурат бо соли гузашта муқоиса карда, додаҳоро ба Excel содир мекунад.\n\nАҳамият барои тиҷорат: ҳисоботи чандпараметрии фасеҳ сабтҳои парокандаи сӯхторро ба иттилооти идоракунӣ табдил медиҳад, таҳлили динамика ва асоснокии қарорҳоро дастгирӣ мекунад. Чунин модул дар ҳар системае, ки ба буришҳои додаҳо, тасвир ва содирот ниёз дорад, зарур аст.",
+            },
+          },
+          {
+            slug: "inspected-objects-report",
+            title: {
+              ru: "Отчёт по проверенным объектам",
+              en: "Inspected Objects Report",
+              tj: "Ҳисоботи иншоотҳои санҷишӣ",
+            },
+            imageSrc: "/images/projects/sohktor/inspected-objects-report.png",
+            BannerSrc: "/images/projects/sohktor/inspected-objects-report.png",
+            shortInfo: {
+              ru: "Распределение объектов по категориям пожарного риска",
+              en: "Facilities grouped by fire-risk category",
+              tj: "Тақсими иншоот аз рӯи категорияи хавфи сӯхтор",
+            },
+            fullInfo: {
+              ru: "Экран «Отчёт по проверенным объектам» (Ҳисоботи Иншоотҳои санҷишӣ) показывает распределение проверенных субъектов хозяйствования по степени пожарного риска. Блок фильтров включает степень риска, присвоенную субъекту, подразделение «КМДА», дату начала и окончания периода и признак архива.\n\nОсновной результат представлен таблицей с итоговыми показателями: общее количество объектов и разбивка по категориям риска — «Высокий», «Средний» и «Низкий» с указанием как абсолютных значений, так и процентных долей. Круговая диаграмма «Распределение данных (%)» визуализирует соотношение категорий риска цветовыми секторами. Внизу расположены кнопки «Поиск» и «Экспорт в Excel», а также детальная таблица с подробными сведениями о каждом проверенном объекте (наименование субъекта, адрес, основание проверки, даты проверок, инспектор и подразделение).\n\nПользовательский сценарий: инспектор выбирает степень риска и период, формирует отчёт, оценивает распределение объектов по категориям и выгружает данные для дальнейшей работы.\n\nЦенность для бизнеса: риск-ориентированная отчётность помогает планировать надзорные мероприятия и концентрировать ресурсы на наиболее опасных объектах. Модель risk-based выборки и визуализации применима в любой системе контроля и аудита.",
+              en: "The Inspected Objects Report screen shows how inspected business entities are distributed by fire-risk level. The filter block includes the risk level assigned to the entity, the “KMDA” division, the start and end dates of the period and an archive flag.\n\nThe main result is a table with summary figures: the total number of facilities and a breakdown by risk category — High, Medium and Low — with both absolute values and percentage shares. A “Data distribution (%)” pie chart visualises the ratio of risk categories with coloured sectors. At the bottom are “Search” and “Export to Excel” buttons, along with a detailed table with full information on each inspected facility (entity name, address, inspection grounds, inspection dates, inspector and division).\n\nUser journey: an inspector selects the risk level and period, generates the report, assesses the distribution of facilities across categories and exports the data for further work.\n\nBusiness value: risk-based reporting helps plan supervisory activities and concentrate resources on the most dangerous facilities. A risk-based sampling and visualisation model applies to any control and audit system.",
+              tj: "Экрани «Ҳисоботи Иншоотҳои санҷишӣ» тақсими субъектҳои хоҷагидории санҷидашударо аз рӯи дараҷаи хавфи сӯхтор нишон медиҳад. Блоки филтрҳо дараҷаи хавфи ба субъект додашуда, воҳиди «КМДА», санаи аввал ва анҷоми давра ва аломати архивро дар бар мегирад.\n\nНатиҷаи асосӣ дар ҷадвали дорои нишондиҳандаҳои ҷамъбастӣ пешниҳод мешавад: шумораи умумии иншоот ва тақсим аз рӯи категорияҳои хавф — «Баланд», «Миёна» ва «Паст» бо нишон додани ҳам қиматҳои мутлақ ва ҳам ҳиссаҳои фоизӣ. Диаграммаи доиравии «Тақсимоти маълумот (%)» нисбати категорияҳои хавфро бо секторҳои рангӣ тасвир мекунад. Дар поён тугмаҳои «Ҷустуҷӯ» ва «Экспорт ба Excel», инчунин ҷадвали муфассал бо маълумоти ҳар иншооти санҷидашуда (номи субъект, суроға, асоси санҷиш, санаҳои санҷиш, назоратчӣ ва воҳид) ҷойгиранд.\n\nРаванди истифода: назоратчӣ дараҷаи хавф ва давраро интихоб мекунад, ҳисоботро таҳия менамояд, тақсими иншоотро аз рӯи категорияҳо арзёбӣ карда, додаҳоро барои кори минбаъда содир мекунад.\n\nАҳамият барои тиҷорат: ҳисоботи ба хавф нигаронидашуда ба банақшагирии чорабиниҳои назоратӣ ва мутамарказ кардани захираҳо ба иншооти хавфноктарин кумак мекунад. Модели интихоб ва тасвири ба хавф асосёфта барои ҳар системаи назорат ва аудит мувофиқ аст.",
+            },
+          },
+          {
+            slug: "fire-register",
+            title: {
+              ru: "Реестр пожаров",
+              en: "Fire Register",
+              tj: "Феҳристи сӯхторҳо",
+            },
+            imageSrc: "/images/projects/sohktor/fire-register.png",
+            BannerSrc: "/images/projects/sohktor/fire-register.png",
+            shortInfo: {
+              ru: "Табличный список происшествий с поиском и пагинацией",
+              en: "A tabular list of incidents with search and pagination",
+              tj: "Рӯйхати ҷадвалии ҳодисаҳо бо ҷустуҷӯ ва саҳифабандӣ",
+            },
+            fullInfo: {
+              ru: "Реестр пожаров — это табличное представление всех зарегистрированных происшествий, дающее оператору полный обзор данных. В верхней части расположены строка поиска (Ҷустуҷӯ...), выпадающий фильтр по типу записи (Ҳамаи намуд), кнопка обновления и кнопка «+» для добавления новой записи, которая ведёт к форме регистрации пожара.\n\nОсновную область занимает широкая таблица с колонками: ИД, «КМДА», дата и время начала пожара, наименование и адрес объекта с его принадлежностью, причина пожара и виновники, площадь пожара (кв. м), ущерб и спасённое имущество (в сомони), номер информационной книги (КА), способ регистрации и сведения о распространении пожара. Горизонтальная прокрутка обеспечивает доступ ко всем полям, а чекбоксы в первой колонке позволяют выбирать записи для групповых операций.\n\nВнизу таблицы находится постраничная навигация с номерами страниц, кнопкой перехода к следующей и последней странице, а также селектор количества строк на странице.\n\nПользовательский сценарий: оператор ищет нужное происшествие по ключевым словам или фильтру, просматривает показатели в таблице, открывает запись для редактирования или добавляет новую через кнопку «+».\n\nЦенность для бизнеса: реестр с поиском, фильтрами и пагинацией обеспечивает быстрый доступ к большим объёмам данных и удобное ведение учёта. Такой паттерн является основой любой административной системы работы со списками записей.",
+              en: "The fire register is a tabular view of all recorded incidents that gives the operator a complete overview of the data. The top area holds a search field, a record-type dropdown filter, a refresh button and a “+” button for adding a new record, which opens the fire registration form.\n\nThe main area is a wide table with columns: ID, “KMDA”, the fire start date and time, the facility name and address with its affiliation, the fire cause and responsible parties, the fire area (sq. m), the damage and the saved property (in somoni), the information-book number, the registration method and details of the fire's spread. Horizontal scrolling provides access to all fields, while checkboxes in the first column let the user select records for bulk operations.\n\nAt the bottom of the table is pagination with page numbers, buttons to move to the next and last page, and a selector for the number of rows per page.\n\nUser journey: an operator searches for the required incident by keywords or filter, reviews the indicators in the table, opens a record for editing or adds a new one with the “+” button.\n\nBusiness value: a register with search, filters and pagination provides fast access to large volumes of data and convenient record keeping. This pattern is the foundation of any administrative system that works with lists of records.",
+              tj: "Феҳристи сӯхторҳо намоиши ҷадвалии ҳамаи ҳодисаҳои бақайдгирифташуда буда, ба оператор шарҳи мукаммали додаҳоро медиҳад. Дар қисми боло сатри ҷустуҷӯ (Ҷустуҷӯ...), филтри кушодашаванда аз рӯи навъи сабт (Ҳамаи намуд), тугмаи навсозӣ ва тугмаи «+» барои илова кардани сабти нав, ки ба шакли бақайдгирии сӯхтор мебарад, ҷойгиранд.\n\nМайдони асосиро ҷадвали васеъ бо сутунҳо ишғол мекунад: ИД, «КМДА», таърих ва вақти сар задани сӯхтор, ному нишонӣ ва суроғаи иншоот бо мансубияти он, сабаби сӯхтор ва шахсони сабабгор, масоҳати сӯхтор (метри мураббаъ), зарар ва амволи наҷотдодашуда (бо сомонӣ), рақами китоби ахборотӣ (КА), усули бақайдгирӣ ва маълумот дар бораи паҳншавии сӯхтор. Ҳаракати уфуқӣ дастрасӣ ба ҳамаи майдонҳоро таъмин мекунад, катакчаҳо дар сутуни аввал бошанд, интихоби сабтҳоро барои амалиёти гурӯҳӣ имкон медиҳанд.\n\nДар поёни ҷадвал саҳифабандӣ бо рақамҳои саҳифаҳо, тугмаҳои гузариш ба саҳифаи навбатӣ ва охирин, инчунин интихобкунандаи шумораи сатрҳо дар саҳифа ҷойгир аст.\n\nРаванди истифода: оператор ҳодисаи заруриро аз рӯи калимаҳои калидӣ ё филтр меҷӯяд, нишондиҳандаҳоро дар ҷадвал мебинад, сабтро барои таҳрир мекушояд ё сабти навро тавассути тугмаи «+» илова мекунад.\n\nАҳамият барои тиҷорат: феҳрист бо ҷустуҷӯ, филтрҳо ва саҳифабандӣ дастрасии зудро ба ҳаҷми зиёди додаҳо ва пешбурди осони баҳисобгириро таъмин мекунад. Чунин намуна асоси ҳар системаи маъмурии кор бо рӯйхати сабтҳо мебошад.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     imageSrc: "/images/projects/pic.webp",
@@ -193,7 +344,7 @@ export const ProductSite: ProductSiteItem[] = [
   {
     imageSrc: "/images/projects/mavjisomon.webp",
     year: "2024",
-    tags: ["Node.js", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "mavji-somon",
     gallery: [
       "/images/projects/mavjisomon/gallery-1.png",
@@ -1612,14 +1763,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/ttl.webp",
     year: "2024",
-    tags: [
-      "Node.js",
-      "ASP.NET Core",
-      "JavaScript",
-      "MS SQL",
-      "Bootstrap",
-      "REST API",
-    ],
+    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
     slug: "telecomm",
     gallery: [
       "/images/projects/ttl/gallery-1.png",
@@ -1664,13 +1808,11 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     imageSrc: "/images/projects/sunduk.webp",
     year: "2020",
     tags: [
-      "PHP-Framework Kohana",
+      "PHP (Kohana Framework)",
       "JavaScript",
-      "HTML5",
-      "CSS3",
-      "JQuery",
-      "Underscore.js",
-      "Сервер БД MySQL",
+      "jQuery",
+      "HTML5 / CSS3",
+      "MySQL",
     ],
     slug: "sunduk-tv",
     gallery: [
@@ -1687,7 +1829,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     tags: [
       "PHP (Laravel Framework)",
       "JavaScript",
-      "MS SQL",
+      "MySQL",
       "HTML5 / CSS3",
       "REST API",
     ],
@@ -1705,7 +1847,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     tags: [
       "PHP (Laravel Framework)",
       "JavaScript",
-      "MS SQL",
+      "MySQL",
       "HTML5 / CSS3",
       "REST API",
     ],
@@ -1717,7 +1859,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     tags: [
       "PHP (Laravel Framework)",
       "JavaScript",
-      "MS SQL",
+      "MySQL",
       "HTML5 / CSS3",
       "REST API",
     ],
