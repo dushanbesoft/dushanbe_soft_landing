@@ -1432,69 +1432,593 @@ To easily navigate dozens of TV channels, a flexible classifier is provided abov
         ],
       },
       {
+        
         tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели админ" },
         items: [
           {
-            slug: "user-management",
-            title: {
-              ru: "Управление пользователями",
-              en: "User Management",
-              tj: "Идоракунии корбарон",
-            },
-            imageSrc: "/images/projects/mavjisomon/gallery-1.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-            shortInfo: {
-              ru: "CRM и биллинг подписчиков",
-              en: "CRM and subscriber billing",
-              tj: "CRM ва биллинги муштариён",
-            },
-            fullInfo: {
-              ru: `Модуль управления пользователями представляет собой полноценную CRM-систему, разработанную специально для нужд телеком-провайдера. Администраторы могут в реальном времени просматривать статус подписок, историю платежей и детали устройств каждого абонента. Система интегрирована с биллинговой платформой для автоматического списания абонентской платы.
+            slug: "order",
+              title: {
+                ru: "Подписки и Заказы",
+                en: "Subscriptions and Orders",
+                tj: "Обунаҳо ва Фармоишҳо",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/order1.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/order1.png",
+              shortInfo: {
+                ru: "Управление подписками пользователей",
+                en: "User subscription management",
+                tj: "Идоракунии обунаҳои корбарон",
+              },
+              fullInfo: {
+                ru: `Модуль управления заказами позволяет администраторам контролировать все активные подписки пользователей. Система предоставляет детализированную информацию о каждом заказе: статус оплаты, срок действия подписки и выбранный тарифный план.
 
-Дополнительно реализованы функции глубокой аналитики: когортный анализ, отслеживание оттока (churn rate) и активности пользователей. Для технической поддержки предусмотрен функционал быстрой блокировки, сброса паролей и отправки персональных push-уведомлений на устройства клиентов.`,
-              en: `The user management module is a full-fledged CRM system designed specifically for the needs of a telecom provider. Administrators can view subscription statuses, payment histories, and device details of each subscriber in real time. The system is integrated with the billing platform for automatic subscription fee deduction.
+Администраторы могут вручную продлевать подписки, отменять заказы в случае мошенничества и формировать отчетность по продажам за определенный период.`,
+                en: `The order management module allows administrators to control all active user subscriptions. The system provides detailed information about each order: payment status, subscription expiration date, and the selected tariff plan.
 
-Additionally, deep analytics functions are implemented: cohort analysis, churn rate tracking, and user activity monitoring. For technical support, there is functionality for quick blocking, password resets, and sending personalized push notifications to client devices.`,
-              tj: `Модули идоракунии корбарон як системаи мукаммали CRM мебошад, ки махсус барои эҳтиёҷоти провайдери телеком таҳия шудааст. Маъмурон метавонанд ҳолати обунаҳо, таърихи пардохтҳо ва тафсилоти дастгоҳҳои ҳар як муштариро дар вақти воқеӣ бубинанд. Система бо платформаи биллингӣ барои ба таври худкор ситонидани ҳаққи абонентӣ ҳамгиро шудааст.
+Administrators can manually renew subscriptions, cancel orders in case of fraud, and generate sales reports for a specific period.`,
+                tj: `Модули идоракунии фармоишҳо ба маъмурон имкон медиҳад, ки ҳамаи обунаҳои фаъоли корбаронро назорат кунанд. Система маълумоти муфассалро дар бораи ҳар як фармоиш пешниҳод мекунад: ҳолати пардохт, мӯҳлати эътибори обуна ва нақшаи тарифии интихобшуда.
 
-Илова бар ин, вазифаҳои таҳлилии амиқ амалӣ карда шуданд: таҳлили когортӣ, пайгирии рехтани муштариён (churn rate) ва фаъолияти корбарон. Барои дастгирии техникӣ функсияи зуд масдуд кардан, барқарор кардани паролҳо ва фиристодани огоҳиномаҳои шахсии push ба дастгоҳҳои мизоҷон пешбинӣ шудааст.`,
+Маъмурон метавонанд обунаҳоро дастӣ тамдид кунанд, фармоишҳоро дар сурати қаллобӣ бекор кунанд ва ҳисоботи фурӯшро барои давраи муайян таҳия кунанд.`,
+              },
             },
-          },
           {
-            slug: "content-management",
-            title: {
-              ru: "Управление контентом (CMS)",
-              en: "Content Management (CMS)",
-              tj: "Идоракунии мундариҷа (CMS)",
-            },
-            imageSrc: "/images/projects/mavjisomon/gallery-2.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-            shortInfo: {
-              ru: "Организация базы в 130 000+ фильмов",
-              en: "Organizing a database of 130,000+ movies",
-              tj: "Ташкили пойгоҳи дорои 130 000+ филм",
-            },
-            fullInfo: {
-              ru: `CMS-модуль разработан для обработки огромных массивов медиаданных. Загрузка новых фильмов и сериалов автоматизирована: администраторам достаточно указать ID из популярных кинобаз, и система сама скачает постеры, трейлеры, описания и список актеров. Поддерживается массовое редактирование и транскодирование видеофайлов в несколько разрешений (HLS).
+            slug: "payment",
+              title: {
+                ru: "Финансовые транзакции",
+                en: "Financial Transactions",
+                tj: "Амалиётҳои молиявӣ",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/payment.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/payment.png",
+              shortInfo: {
+                ru: "История платежей и чеков",
+                en: "Payment and receipt history",
+                tj: "Таърихи пардохтҳо ва чекҳо",
+              },
+              fullInfo: {
+                ru: `В разделе транзакций собрана полная финансовая история платформы. Администраторы могут отслеживать каждый платеж, проверять статусы (успешно, ожидание, ошибка) и просматривать электронные чеки.
 
-Для удобной навигации клиентов контент-менеджеры могут создавать кастомные подборки, сортировать элементы по жанрам и годам выпуска, а также управлять приоритетом выдачи контента на Главном экране приложения с помощью визуального drag-and-drop интерфейса.`,
-              en: `The CMS module is designed to process huge arrays of media data. Uploading new movies and series is automated: administrators only need to specify the ID from popular movie databases, and the system will download posters, trailers, descriptions, and cast lists itself. Bulk editing and transcoding of video files into multiple resolutions (HLS) are supported.
+Модуль интегрирован с системой уведомлений: при сбое платежа пользователь автоматически получает напоминание. Также доступен экспорт транзакций в форматы CSV/Excel для бухгалтерского учета.`,
+                en: `The transaction section contains the full financial history of the platform. Administrators can track every payment, check statuses (success, pending, error), and view electronic receipts.
 
-For convenient client navigation, content managers can create custom collections, sort elements by genres and release years, and manage the priority of content output on the application's Main Screen using a visual drag-and-drop interface.`,
-              tj: `Модули CMS барои коркарди массивҳои бузурги маълумоти медиа таҳия шудааст. Боркунии филмҳо ва сериалҳои нав автоматикунонида шудааст: ба маъмурон танҳо лозим аст, ки ID-ро аз пойгоҳҳои машҳури кино нишон диҳанд ва система худаш постерҳо, трейлерҳо, тавсифҳо ва рӯйхати актёрҳоро зеркашӣ мекунад. Таҳрири оммавӣ ва транскодинги файлҳои видеоӣ ба якчанд қарорҳо (HLS) дастгирӣ карда мешавад.
+The module is integrated with the notification system: in case of a payment failure, the user automatically receives a reminder. Export of transactions to CSV/Excel formats for accounting is also available.`,
+                tj: `Дар бахши транзаксияҳо таърихи пурраи молиявии платформа ҷамъ оварда шудааст. Маъмурон метавонанд ҳар як пардохтро пайгирӣ кунанд, ҳолатҳоро (муваффақ, интизорӣ, хатогӣ) тафтиш кунанд ва чекҳои электрониро бинанд.
 
-Барои паймоиши қулайи мизоҷон, менеҷерҳои мундариҷа метавонанд интихобҳои фармоишӣ эҷод кунанд, унсурҳоро аз рӯи жанрҳо ва солҳои барориш ҷудо кунанд, инчунин афзалияти баровардани мундариҷаро дар Экрани асосии барнома бо истифода аз интерфейси визуалии drag-and-drop идора кунанд.`,
+Модул бо системаи огоҳиномаҳо ҳамгиро шудааст: дар сурати нокомии пардохт корбар ба таври худкор ёдраскунӣ мегирад. Содироти транзаксияҳо ба форматҳои CSV/Excel барои баҳисобгирии муҳосибӣ инчунин дастрас аст.`,
+              },
             },
-          },
           {
-            slug: "live-tv-management",
+            slug: "total-balance",
+              title: {
+                ru: "Аналитика доходов",
+                en: "Revenue Analytics",
+                tj: "Таҳлили даромадҳо",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/total-balance.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/total-balance.png",
+              shortInfo: {
+                ru: "Дашборд финансовых метрик",
+                en: "Financial metrics dashboard",
+                tj: "Дашборди ченакҳои молиявӣ",
+              },
+              fullInfo: {
+                ru: `Интерактивный дашборд для отслеживания общего баланса и выручки проекта. Графики показывают динамику доходов по дням, неделям и месяцам, позволяя оценивать эффективность маркетинговых кампаний.
+
+Система автоматически рассчитывает средний чек (ARPU), общую стоимость жизни клиента (LTV) и предоставляет сводку по самым прибыльным тарифным планам платформы.`,
+                en: `An interactive dashboard for tracking the total balance and revenue of the project. Charts show income dynamics by day, week, and month, allowing the evaluation of marketing campaign effectiveness.
+
+The system automatically calculates the average check (ARPU), total customer lifetime value (LTV), and provides a summary of the platform's most profitable tariff plans.`,
+                tj: `Дашборди интерактивӣ барои пайгирии тавозуни умумӣ ва даромади лоиҳа. Графикҳо динамикаи даромадро аз рӯи рӯз, ҳафта ва моҳ нишон медиҳанд ва имкон медиҳанд самаранокии маъракаҳои маркетингиро арзёбӣ кунанд.
+
+Система чеки миёна (ARPU), арзиши умумии ҳаёти муштарӣ (LTV) -ро ба таври худкор ҳисоб мекунад ва хулосаи нақшаҳои тарифии аз ҳама фоидаовари платформаро пешниҳод мекунад.`,
+              },
+            },
+          {
+            slug: "payment-system",
+              title: {
+                ru: "Платежные шлюзы",
+                en: "Payment Gateways",
+                tj: "Шлюзҳои пардохт",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/payment-system.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/payment-system.png",
+              shortInfo: {
+                ru: "Интеграция с банками и кошельками",
+                en: "Integration with banks and wallets",
+                tj: "Ҳамгироӣ бо бонкҳо ва ҳамёнҳо",
+              },
+              fullInfo: {
+                ru: `Модуль настройки платежных систем позволяет гибко управлять способами оплаты для пользователей. Поддерживается интеграция с популярными местными и международными шлюзами (Корти Милли, Alif, Visa, Mastercard, электронные кошельки).
+
+Администратор может в один клик включать или отключать определенные способы оплаты, настраивать комиссии и проверять состояние API-соединения с банковскими серверами.`,
+                en: `The payment systems configuration module allows flexible management of payment methods for users. Integration with popular local and international gateways (Corti Milli, Alif, Visa, Mastercard, e-wallets) is supported.
+
+An administrator can enable or disable specific payment methods in one click, set up commissions, and check the status of the API connection with bank servers.`,
+                tj: `Модули танзимоти системаҳои пардохт имкон медиҳад, ки усулҳои пардохт барои корбарон ба таври чандир идора карда шаванд. Ҳамгироӣ бо шлюзҳои машҳури маҳаллӣ ва байналмилалӣ (Корти Миллӣ, Alif, Visa, Mastercard, ҳамёнҳои электронӣ) дастгирӣ карда мешавад.
+
+Маъмур метавонад бо як клик усулҳои муайяни пардохтро фаъол ё ғайрифаъол кунад, комиссияҳоро танзим кунад ва ҳолати пайвасти API-ро бо серверҳои бонкӣ тафтиш кунад.`,
+              },
+            },
+          {
+            slug: "products",
+              title: {
+                ru: "Тарифные планы",
+                en: "Tariff Plans",
+                tj: "Нақшаҳои тарифӣ",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/products.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/products.png",
+              shortInfo: {
+                ru: "Создание и управление подписками",
+                en: "Creating and managing subscriptions",
+                tj: "Эҷод ва идоракунии обунаҳо",
+              },
+              fullInfo: {
+                ru: `Гибкий конструктор продуктов, позволяющий создавать разнообразные тарифные планы. Можно настроить длительность подписки (день, месяц, год), стоимость, а также доступный в рамках тарифа контент (только VOD, только Live TV или всё вместе).
+
+Система поддерживает создание акционных тарифов со скидкой и настройку триального (пробного) периода для привлечения новых пользователей на платформу.`,
+                en: `A flexible product builder that allows the creation of various tariff plans. You can configure subscription duration (day, month, year), cost, and content available within the tariff (VOD only, Live TV only, or everything together).
+
+The system supports the creation of discounted promotional tariffs and the setup of a trial period to attract new users to the platform.`,
+                tj: `Конструктори чандири маҳсулот, ки имкон медиҳад нақшаҳои тарифии гуногун эҷод карда шаванд. Шумо метавонед давомнокии обуна (рӯз, моҳ, сол), арзиш ва мундариҷаи дар доираи тариф дастрасро (танҳо VOD, танҳо Live TV ё ҳама якҷоя) танзим кунед.
+
+Система эҷоди тарифҳои аксиягӣ бо тахфиф ва танзими давраи озмоиширо барои ҷалби корбарони нав ба платформа дастгирӣ мекунад.`,
+              },
+            },
+          {
+            slug: "type-product",
+              title: {
+                ru: "Типы продуктов",
+                en: "Product Types",
+                tj: "Намудҳои маҳсулот",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/type-product.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/type-product.png",
+              shortInfo: {
+                ru: "Категоризация услуг",
+                en: "Service categorization",
+                tj: "Категориябандии хидматҳо",
+              },
+              fullInfo: {
+                ru: `Модуль для управления базовыми типами предлагаемых услуг. Позволяет логически разделять предложения на платформе: подписки на кинотеатр, пакеты телеканалов, покупка отдельных фильмов (PPV) или доступ к эксклюзивным трансляциям.
+
+Правильная настройка типов продуктов обеспечивает корректную работу рекомендательных алгоритмов и упрощает навигацию пользователей при выборе подходящего тарифа.`,
+                en: `A module for managing the basic types of offered services. It allows logical separation of offers on the platform: cinema subscriptions, TV channel packages, pay-per-view (PPV) movies, or access to exclusive broadcasts.
+
+Proper configuration of product types ensures the correct operation of recommendation algorithms and simplifies user navigation when choosing a suitable tariff.`,
+                tj: `Модул барои идоракунии намудҳои асосии хидматҳои пешниҳодшуда. Ба таври мантиқӣ тақсим кардани пешниҳодҳоро дар платформа имкон медиҳад: обунаҳо ба кинотеатр, бастаҳои шабакаҳои телевизионӣ, хариди филмҳои алоҳида (PPV) ё дастрасӣ ба пахшҳои эксклюзивӣ.
+
+Танзими дурусти намудҳои маҳсулот кори дурусти алгоритмҳои тавсиявиро таъмин мекунад ва паймоиши корбаронро ҳангоми интихоби тарифи мувофиқ осон мекунад.`,
+              },
+            },
+          {
+            slug: "promotional-campaigns",
+              title: {
+                ru: "Маркетинг и Промо",
+                en: "Marketing and Promos",
+                tj: "Маркетинг ва Промо",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/promotional-campaigns.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/promotional-campaigns.png",
+              shortInfo: {
+                ru: "Скидки, баннеры и пуш-уведомления",
+                en: "Discounts, banners, and push notifications",
+                tj: "Тахфифҳо, баннерҳо ва огоҳиномаҳои push",
+              },
+              fullInfo: {
+                ru: `Мощный инструмент для проведения рекламных кампаний. Администраторы могут создавать промокоды на скидку, настраивать динамические баннеры для Главного экрана приложения и запускать массовые email/push рассылки.
+
+Для каждой кампании можно задать точные сроки действия, лимиты активаций и целевую аудиторию (например, только неактивные пользователи). Встроенная аналитика показывает конверсию каждого запущенного промо.`,
+                en: `A powerful tool for running advertising campaigns. Administrators can create discount promo codes, set up dynamic banners for the application's Main Screen, and launch mass email/push campaigns.
+
+For each campaign, exact validity periods, activation limits, and a target audience (e.g., only inactive users) can be set. Built-in analytics show the conversion rate of each launched promo.`,
+                tj: `Воситаи пуриқтидор барои гузаронидани маъракаҳои таблиғотӣ. Маъмурон метавонанд промокодҳои тахфифӣ эҷод кунанд, баннерҳои динамикиро барои Экрани асосии барнома танзим кунанд ва фиристодани оммавии email/push-ро оғоз кунанд.
+
+Барои ҳар як маърака, мӯҳлатҳои дақиқи амал, маҳдудиятҳои фаъолсозӣ ва аудиторияи мақсаднок (масалан, танҳо корбарони ғайрифаъол) метавонанд муқаррар карда шаванд. Таҳлили дарунсохт конверсияи ҳар як промои оғозшударо нишон медиҳад.`,
+              },
+            },
+          {
+            slug: "chanals",
+              title: {
+                ru: "Телеканалы",
+                en: "TV Channels",
+                tj: "Шабакаҳои телевизионӣ",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/chanals.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/chanals.png",
+              shortInfo: {
+                ru: "Управление потоками Live TV",
+                en: "Live TV stream management",
+                tj: "Идоракунии ҷараёнҳои Live TV",
+              },
+              fullInfo: {
+                ru: `Основной раздел для управления сеткой вещания. Позволяет добавлять новые телеканалы, указывать URL-адреса HLS-потоков, загружать логотипы и назначать категории (Новостные, Спортивные, Детские).
+
+Система поддерживает резервирование потоков (fallback URL) для обеспечения бесперебойного вещания. Здесь же настраивается привязка канала к телепрограмме (EPG) и активируется функция записи архива (Catch-up).`,
+                en: `The main section for managing the broadcasting grid. It allows adding new TV channels, specifying HLS stream URLs, uploading logos, and assigning categories (News, Sports, Kids).
+
+The system supports stream redundancy (fallback URL) to ensure uninterrupted broadcasting. Channel mapping to the TV guide (EPG) and activation of the archive recording function (Catch-up) are also configured here.`,
+                tj: `Бахши асосӣ барои идоракунии шабакаи пахш. Илова кардани шабакаҳои нави телевизионӣ, нишон додани URL-адресҳои ҷараёнҳои HLS, боркунии логотипҳо ва таъин кардани категорияҳо (Ахбор, Варзиш, Кӯдакон)-ро имкон медиҳад.
+
+Система захиракунии ҷараёнҳоро (fallback URL) барои таъмини пахши бефосила дастгирӣ мекунад. Пайвасти шабака ба барномаи телевизионӣ (EPG) ва фаъолсозии функсияи сабти бойгонӣ (Catch-up) низ дар ин ҷо танзим карда мешавад.`,
+              },
+            },
+          {
+            slug: "epg-provider",
+              title: {
+                ru: "EPG Провайдеры",
+                en: "EPG Providers",
+                tj: "Провайдерҳои EPG",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
+              shortInfo: {
+                ru: "Интеграция телепрограмм (XMLTV)",
+                en: "TV guide integration (XMLTV)",
+                tj: "Ҳамгироии барномаҳои телевизионӣ (XMLTV)",
+              },
+              fullInfo: {
+                ru: `Модуль настройки источников телепрограммы. Платформа поддерживает автоматический парсинг XMLTV-файлов от различных поставщиков метаданных. Администратор может добавить несколько ссылок на источники EPG и задать частоту их обновления (например, каждые 12 часов).
+
+Умный алгоритм сопоставления помогает автоматически привязать программы передач к существующим телеканалам по ID или названию, минимизируя ручной труд контент-менеджеров.`,
+                en: `The TV guide sources configuration module. The platform supports automatic parsing of XMLTV files from various metadata providers. An administrator can add multiple EPG source links and set their update frequency (e.g., every 12 hours).
+
+A smart matching algorithm helps automatically link broadcast programs to existing TV channels by ID or name, minimizing the manual work of content managers.`,
+                tj: `Модули танзими манбаъҳои барномаи телевизионӣ. Платформа парсинги автоматии файлҳои XMLTV-ро аз таъминкунандагони гуногуни метамаълумот дастгирӣ мекунад. Маъмур метавонад якчанд истинод ба манбаъҳои EPG илова кунад ва басомади навсозии онҳоро (масалан, ҳар 12 соат) муқаррар кунад.
+
+Алгоритми интеллектуалии муқоисакунӣ барои ба таври худкор пайваст кардани барномаҳои пахш ба шабакаҳои телевизионии мавҷуда аз рӯи ID ё ном кӯмак мекунад ва кори дастии менеҷерҳои мундариҷаро кам мекунад.`,
+              },
+            },
+          {
+            slug: "radio",
+              title: {
+                ru: "Радиостанции",
+                en: "Radio Stations",
+                tj: "Истгоҳҳои радио",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/radio.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/radio.png",
+              shortInfo: {
+                ru: "Каталог аудио-потоков",
+                en: "Audio stream catalog",
+                tj: "Каталоги ҷараёнҳои аудио",
+              },
+              fullInfo: {
+                ru: `Раздел для администрирования онлайн-радиостанций. Функционал аналогичен управлению телеканалами, но оптимизирован для аудио-стримов (Icecast/Shoutcast). Можно загружать обложки радиостанций, указывать жанры и битрейт потока.
+
+Радио-модуль платформы потребляет минимум трафика, и через эту панель можно настраивать приоритет станций, чтобы самые популярные из них отображались на главном экране приложения.`,
+                en: `A section for administrating online radio stations. The functionality is similar to TV channel management but optimized for audio streams (Icecast/Shoutcast). You can upload radio station covers, specify genres, and stream bitrates.
+
+The platform's radio module consumes minimal traffic, and through this panel, you can prioritize stations so that the most popular ones appear on the application's main screen.`,
+                tj: `Бахш барои маъмурияти истгоҳҳои радиои онлайн. Функсияҳо ба идоракунии шабакаҳои телевизионӣ монанданд, аммо барои ҷараёнҳои аудиоӣ (Icecast/Shoutcast) оптимизатсия шудаанд. Шумо метавонед муқоваҳои истгоҳҳои радиоро бор кунед, жанрҳо ва битрейти ҷараёнро нишон диҳед.
+
+Модули радиои платформа ҳадди ақали трафикро сарф мекунад ва тавассути ин панел шумо метавонед афзалияти истгоҳҳоро танзим кунед, то маъмултаринҳо дар экрани асосии барнома пайдо шаванд.`,
+              },
+            },
+          {
+            slug: "video-content",
+              title: {
+                ru: "Библиотека фильмов (VOD)",
+                en: "Movie Library (VOD)",
+                tj: "Китобхонаи филмҳо (VOD)",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/video-content.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/video-content.png",
+              shortInfo: {
+                ru: "Управление каталогом видео",
+                en: "Video catalog management",
+                tj: "Идоракунии каталоги видео",
+              },
+              fullInfo: {
+                ru: `Сердце контентного раздела платформы. Здесь осуществляется загрузка новых фильмов, сериалов и мультфильмов на сервер. Плеер поддерживает множественные звуковые дорожки и субтитры — их можно прикрепить к видеофайлу прямо через панель.
+
+Каждому фильму присваивается подробное описание, рейтинг (IMDb/Кинопоиск), список актеров и режиссеров. Встроенный поиск и фильтры позволяют быстро находить нужный контент в базе из тысяч видео.`,
+                en: `The heart of the platform's content section. Here, new movies, series, and cartoons are uploaded to the server. The player supports multiple audio tracks and subtitles—they can be attached to the video file directly through the panel.
+
+Each movie is assigned a detailed description, rating (IMDb/Kinopoisk), and a list of actors and directors. Built-in search and filters allow you to quickly find the needed content in a database of thousands of videos.`,
+                tj: `Қалби бахши мундариҷаи платформа. Дар ин ҷо филмҳо, сериалҳо ва мултфилмҳои нав ба сервер бор карда мешаванд. Плеер якчанд роҳҳои аудио ва субтитрҳоро дастгирӣ мекунад — онҳоро бевосита тавассути панел ба файли видео пайваст кардан мумкин аст.
+
+Ба ҳар як филм тавсифи муфассал, рейтинг (IMDb/Kinopoisk), рӯйхати актёрҳо ва коргардонҳо дода мешавад. Ҷустуҷӯ ва филтрҳои дарунсохт ба шумо имкон медиҳанд, ки мундариҷаи лозимиро дар пойгоҳи маълумоти ҳазорҳо видео зуд пайдо кунед.`,
+              },
+            },
+          {
+            slug: "parental-control",
+              title: {
+                ru: "Родительский контроль",
+                en: "Parental Control",
+                tj: "Назорати волидайн",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/parental-control.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/parental-control.png",
+              shortInfo: {
+                ru: "Возрастные ограничения",
+                en: "Age restrictions",
+                tj: "Маҳдудиятҳои синну солӣ",
+              },
+              fullInfo: {
+                ru: `Модуль обеспечения безопасности контента для детей. Администраторы могут задавать возрастные рейтинги (0+, 12+, 18+) для всего каталога фильмов и телеканалов.
+
+Пользователи в своих приложениях могут установить PIN-код на профиль. Если профиль защищен, контент со взрослым рейтингом будет скрыт из поиска и рекомендаций, а при попытке прямого доступа система потребует ввод PIN-кода, настроенного в этой панели.`,
+                en: `A module for ensuring content safety for children. Administrators can set age ratings (0+, 12+, 18+) for the entire catalog of movies and TV channels.
+
+Users can set a PIN code for their profile in their apps. If a profile is protected, adult-rated content will be hidden from search and recommendations, and upon attempting direct access, the system will require entering the PIN code configured in this panel.`,
+                tj: `Модул барои таъмини бехатарии мундариҷа барои кӯдакон. Маъмурон метавонанд рейтингҳои синну солиро (0+, 12+, 18+) барои тамоми каталоги филмҳо ва шабакаҳои телевизионӣ муқаррар кунанд.
+
+Корбарон метавонанд дар барномаҳои худ ба профили худ рамзи PIN гузоранд. Агар профил ҳифз карда шавад, мундариҷаи дорои рейтинги калонсолон аз ҷустуҷӯ ва тавсияҳо пинҳон мешавад ва ҳангоми кӯшиши дастрасии мустақим система ворид кардани рамзи PIN-и дар ин панел танзимшударо талаб мекунад.`,
+              },
+            },
+          {
+            slug: "type-films",
+              title: {
+                ru: "Категории видео",
+                en: "Video Categories",
+                tj: "Категорияҳои видео",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/type-films.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/type-films.png",
+              shortInfo: {
+                ru: "Структура контента",
+                en: "Content structure",
+                tj: "Сохтори мундариҷа",
+              },
+              fullInfo: {
+                ru: `Раздел для глобальной классификации видеобазы. Позволяет создавать и редактировать макро-категории: Фильмы, Сериалы, Аниме, Документальное кино, Таджикфильм и т.д.
+
+Каждой категории можно присвоить иконку и определить ее место в главном меню приложений. Правильная иерархия категорий является основой для интуитивно понятного UI, позволяя зрителям легко ориентироваться в огромном массиве медиа.`,
+                en: `A section for global classification of the video database. Allows creating and editing macro-categories: Movies, Series, Anime, Documentaries, Tajikfilm, etc.
+
+Each category can be assigned an icon and its place in the main menu of the applications can be defined. A proper category hierarchy is the foundation for an intuitive UI, allowing viewers to easily navigate through a huge array of media.`,
+                tj: `Бахш барои таснифи глобалии пойгоҳи видео. Барои эҷод ва таҳрири макро-категорияҳо имкон медиҳад: Филмҳо, Сериалҳо, Аниме, Кинои ҳуҷҷатӣ, Тоҷикфилм ва ғ.
+
+Ба ҳар як категория метавонад нишона таъин карда шавад ва ҷои онро дар менюи асосии барномаҳо муайян кардан мумкин аст. Иерархияи дурусти категорияҳо асоси UI-и интуитивӣ мебошад, ки ба тамошобинон имкон медиҳад, ки дар массиви бузурги медиа ба осонӣ ҳаракат кунанд.`,
+              },
+            },
+          {
+            slug: "genre",
+              title: {
+                ru: "Жанры контента",
+                en: "Content Genres",
+                tj: "Жанрҳои мундариҷа",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/genre.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/genre.png",
+              shortInfo: {
+                ru: "Тегирование фильмов и сериалов",
+                en: "Tagging movies and series",
+                tj: "Теггузории филмҳо ва сериалҳо",
+              },
+              fullInfo: {
+                ru: `Инструмент для глубокого тегирования контента. В этой вкладке создается база жанров (Боевики, Комедии, Драма, Фантастика), которые затем прикрепляются к конкретным фильмам.
+
+Наличие детальной жанровой разметки критически важно для работы модуля поиска и системы рекомендаций «Похожие фильмы». Администраторы могут объединять жанры в подборки для создания тематических коллекций на Главном экране (например, «Ужасы на Хэллоуин»).`,
+                en: `A tool for deep content tagging. In this tab, a database of genres (Action, Comedy, Drama, Sci-Fi) is created, which are then attached to specific movies.
+
+Having detailed genre markup is critically important for the operation of the search module and the 'Similar Movies' recommendation system. Administrators can combine genres into selections to create thematic collections on the Main Screen (e.g., 'Halloween Horror').`,
+                tj: `Восита барои теггузории амиқи мундариҷа. Дар ин ҷадвал пойгоҳи жанрҳо (Ҷангӣ, Комедия, Драма, Фантастика) эҷод карда мешавад, ки баъдан ба филмҳои мушаххас пайваст карда мешаванд.
+
+Доштани аломатгузории муфассали жанрӣ барои кори модули ҷустуҷӯ ва системаи тавсияҳои «Филмҳои монанд» хеле муҳим аст. Маъмурон метавонанд жанрҳоро ба интихобҳо муттаҳид кунанд, то коллексияҳои мавзӯиро дар Экрани асосӣ эҷод кунанд (масалан, «Даҳшат дар Ҳеллоуин»).`,
+              },
+            },
+          {
+            slug: "actors",
             title: {
               ru: "Управление Live TV",
               en: "Live TV Management",
               tj: "Идоракунии Live TV",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-1.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/admin/actors.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/actors.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "most-interesting",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/most-interesting.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/most-interesting.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "directory",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/directory.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/directory.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "clients",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/clients.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/clients.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "subscription",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/subscription.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/subscription.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "statistic-video-content",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc:
+              "/images/projects/mavjisomon/admin/statistic-video-content.png",
+            BannerSrc:
+              "/images/projects/mavjisomon/admin/statistic-video-content.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "statistic-chanals",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/statistic-chanals.png",
+            BannerSrc:
+              "/images/projects/mavjisomon/admin/statistic-chanals.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "statistic-radio",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/statistic-radio.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/statistic-radio.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "setting",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/setting.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/setting.png",
             shortInfo: {
               ru: "Мониторинг 2500+ телеканалов",
               en: "Monitoring 2500+ TV channels",
