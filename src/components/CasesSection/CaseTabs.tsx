@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import styles from './CaseTabs.module.css';
 
 interface ComponentItem {
@@ -25,6 +26,7 @@ interface CaseTabsProps {
 }
 
 export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
+  const { t } = useTranslation('common');
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
 
@@ -51,20 +53,26 @@ export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
       <div className={styles.grid}>
         {activeGroup.items.map((item, idx) => {
           const href = item.slug ? `/${lang}/cases/${projectSlug}/${item.slug}` : '#';
+          const cardTitle = item.slug
+            ? t(`projectComponents.${projectSlug}.${item.slug}.title`, item.title)
+            : item.title;
+          const cardShortInfo = item.slug
+            ? t(`projectComponents.${projectSlug}.${item.slug}.shortInfo`, item.shortInfo)
+            : item.shortInfo;
           return (
             <Link key={idx} href={href} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <Image
                   src={item.imageSrc}
-                  alt={item.title}
+                  alt={cardTitle}
                   fill
                   className={styles.image}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
               <div className={styles.caption}>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardShortInfo}>{item.shortInfo}</p>
+                <h3 className={styles.cardTitle}>{cardTitle}</h3>
+                <p className={styles.cardShortInfo}>{cardShortInfo}</p>
               </div>
             </Link>
           );

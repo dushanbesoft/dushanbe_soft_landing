@@ -131,6 +131,18 @@ export default async function ComponentDetailsPage({
   const projectTitle = t(`projects.${project.slug}.title`, {
     defaultValue: project.slug,
   });
+  const componentTitle = t(
+    `projectComponents.${slug}.${componentSlug}.title`,
+    { defaultValue: component.title },
+  );
+  const componentShortInfo = t(
+    `projectComponents.${slug}.${componentSlug}.shortInfo`,
+    { defaultValue: component.shortInfo },
+  );
+  const componentFullInfo = t(
+    `projectComponents.${slug}.${componentSlug}.fullInfo`,
+    { defaultValue: component.fullInfo },
+  );
 
   return (
     <TranslationsProvider
@@ -161,12 +173,12 @@ export default async function ComponentDetailsPage({
           </Link>
 
           <div>
-            <h1 className={styles.title}>{component.title}</h1>
-            <p className={styles.shortInfo}>{component.shortInfo}</p>
+            <h1 className={styles.title}>{componentTitle}</h1>
+            <p className={styles.shortInfo}>{componentShortInfo}</p>
           </div>
 
           <div className={styles.descriptionSection}>
-            {component.fullInfo.split("\n").map(
+            {componentFullInfo.split("\n").map(
               (paragraph, idx) =>
                 paragraph.trim() && (
                   <p
