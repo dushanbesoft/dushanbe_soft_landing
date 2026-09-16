@@ -26,7 +26,7 @@ export const ProductSite: ProductSiteItem[] = [
     imageSrc: "/images/projects/president/banner.svg",
     bannerSrc: "/images/projects/president/banner.svg",
     year: "2024",
-    tags: ["React", "Redux", "ASP.NET Core", "MS SQL", "REST API"],
+    tags: ["React", "Redux", "Laravel", "MySQL", "REST API"],
     slug: "president",
     // gallery: [
     //   "/images/projects/president/banner.png",
@@ -166,7 +166,7 @@ export const ProductSite: ProductSiteItem[] = [
     bannerSrc: "/images/projects/sohktor/banner.svg",
     bannerFit: "contain",
     year: "2024",
-    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "sohktor",
     gallery: [
       "/images/projects/sohktor/gallery-1.png",
@@ -331,7 +331,7 @@ export const ProductSite: ProductSiteItem[] = [
   {
     imageSrc: "/images/projects/pic.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Docker", "REST API"],
+    tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
     slug: "digital-tajikistan",
     gallery: [
       "/images/projects/pic/gallery-1.png",
@@ -344,7 +344,7 @@ export const ProductSite: ProductSiteItem[] = [
   {
     imageSrc: "/images/projects/mavjisomon.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "mavji-somon",
     gallery: [
       "/images/projects/mavjisomon/gallery-1.png",
@@ -1751,7 +1751,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/livechat.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "WebSocket"],
+    tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "WebSocket"],
     slug: "livechat-tj",
     gallery: [
       "/images/projects/livechat/gallery-1.png",
@@ -1763,7 +1763,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/ttl.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "telecomm",
     gallery: [
       "/images/projects/ttl/gallery-1.png",
@@ -1776,13 +1776,13 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/navo.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "navo",
   },
   {
     imageSrc: "/images/projects/somontv.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "somon-tv",
     gallery: [
       "/images/projects/somontv/gallery-1.png",
@@ -1794,7 +1794,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/zudsms.webp",
     year: "2024",
-    tags: ["Node.js", "JavaScript", "MS SQL", "HTML5 / CSS3", "REST API"],
+    tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
     slug: "zudsms",
     gallery: [
       "/images/projects/zudSMS/gallery-1.png",
