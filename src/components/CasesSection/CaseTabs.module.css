@@ -84,14 +84,14 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: rgba(255, 255, 255, 0.05);
+  background: #081c22;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .image {
   object-fit: cover;
-  object-position: center ;
+  object-position: top center;
   width: 100%;
   height: 100%;
 }

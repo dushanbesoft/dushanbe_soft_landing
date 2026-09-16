@@ -28,6 +28,36 @@ const ArrowLeftIcon = () => (
   </svg>
 );
 
+const ChevronLeftIcon = () => (
+  <svg
+    width="28"
+    height="28"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="15 18 9 12 15 6"></polyline>
+  </svg>
+);
+
+const ChevronRightIcon = () => (
+  <svg
+    width="28"
+    height="28"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+);
+
 export async function generateStaticParams() {
   const languages = ["ru", "tj", "en"];
   const params: { lang: string; slug: string; componentSlug: string }[] = [];
@@ -132,18 +162,19 @@ export default async function ComponentDetailsPage({
   const projectTitle = t(`projects.${project.slug}.title`, {
     defaultValue: project.slug,
   });
-  const componentTitle = t(
-    `projectComponents.${slug}.${componentSlug}.title`,
-    { defaultValue: component.title },
+
+  const allItems =
+    project.projectComponents?.flatMap((group) => group.items) ?? [];
+  const currentIndex = allItems.findIndex(
+    (item) => item.slug === componentSlug,
   );
-  const componentShortInfo = t(
-    `projectComponents.${slug}.${componentSlug}.shortInfo`,
-    { defaultValue: component.shortInfo },
-  );
-  const componentFullInfo = t(
-    `projectComponents.${slug}.${componentSlug}.fullInfo`,
-    { defaultValue: component.fullInfo },
-  );
+  const hasSiblings = allItems.length > 1;
+  const prevSlug = hasSiblings
+    ? allItems[(currentIndex - 1 + allItems.length) % allItems.length].slug
+    : null;
+  const nextSlug = hasSiblings
+    ? allItems[(currentIndex + 1) % allItems.length].slug
+    : null;
 
   return (
     <TranslationsProvider
@@ -156,6 +187,13 @@ export default async function ComponentDetailsPage({
           <Header />
         </div>
 
+        <div className={styles.topNav}>
+          <Link href={`/${lang}/cases/${slug}`} className={styles.backBtn}>
+            <ArrowLeftIcon />
+            <span>Вернуться к {projectTitle}</span>
+          </Link>
+        </div>
+
         <div className={styles.heroOverlay}>
           {/* <div
             className={styles.hero}
@@ -165,14 +203,30 @@ export default async function ComponentDetailsPage({
             }}
           ></div> */}
           <img src={component.imageSrc}  className={styles.hero} alt="imageSrc" />
+
+          {hasSiblings && prevSlug && (
+            <Link
+              href={`/${lang}/cases/${slug}/${prevSlug}`}
+              className={`${styles.heroNav} ${styles.heroNavPrev}`}
+              aria-label="Previous"
+              scroll={false}
+            >
+              <ChevronLeftIcon />
+            </Link>
+          )}
+          {hasSiblings && nextSlug && (
+            <Link
+              href={`/${lang}/cases/${slug}/${nextSlug}`}
+              className={`${styles.heroNav} ${styles.heroNavNext}`}
+              aria-label="Next"
+              scroll={false}
+            >
+              <ChevronRightIcon />
+            </Link>
+          )}
         </div>
 
         <div className={styles.contentWrapper}>
-          <Link href={`/${lang}/cases/${slug}`} className={styles.backBtn}>
-            <ArrowLeftIcon />
-            <span>Вернуться к {projectTitle}</span>
-          </Link>
-
           <div>
             <h1 className={styles.title}>{getTranslated(component.title, lang)}</h1>
             <p className={styles.shortInfo}>{getTranslated(component.shortInfo, lang)}</p>
