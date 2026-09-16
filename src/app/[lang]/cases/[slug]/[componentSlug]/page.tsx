@@ -8,6 +8,7 @@ import Footer from "../../../../../components/Footer/Footer";
 import initTranslations from "../../../../i18n";
 import TranslationsProvider from "../../../../../components/TranslationsProvider";
 import { Metadata } from "next";
+import { getTranslated } from "../../../../../utils/translation";
 
 const i18nNamespaces = ["common"];
 
@@ -78,11 +79,11 @@ export async function generateMetadata({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
 
   return {
-    title: `${component.title} | ${project.slug}`,
-    description: component.shortInfo,
+    title: `${getTranslated(component.title, lang)} | ${project.slug}`,
+    description: getTranslated(component.shortInfo, lang),
     openGraph: {
-      title: component.title,
-      description: component.shortInfo,
+      title: getTranslated(component.title, lang),
+      description: getTranslated(component.shortInfo, lang),
       url: `${siteUrl}/${lang}/cases/${slug}/${componentSlug}`,
       images: [
         {
@@ -91,7 +92,7 @@ export async function generateMetadata({
             : `${siteUrl}${component.imageSrc}`,
           width: 1200,
           height: 630,
-          alt: component.title,
+          alt: getTranslated(component.title, lang),
         },
       ],
       locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
@@ -161,12 +162,12 @@ export default async function ComponentDetailsPage({
           </Link>
 
           <div>
-            <h1 className={styles.title}>{component.title}</h1>
-            <p className={styles.shortInfo}>{component.shortInfo}</p>
+            <h1 className={styles.title}>{getTranslated(component.title, lang)}</h1>
+            <p className={styles.shortInfo}>{getTranslated(component.shortInfo, lang)}</p>
           </div>
 
           <div className={styles.descriptionSection}>
-            {component.fullInfo.split("\n").map(
+            {getTranslated(component.fullInfo, lang).split("\n").map(
               (paragraph, idx) =>
                 paragraph.trim() && (
                   <p

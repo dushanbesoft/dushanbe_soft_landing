@@ -4,17 +4,18 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './CaseTabs.module.css';
+import { TranslatedString, getTranslated } from '../../utils/translation';
 
 interface ComponentItem {
   slug?: string;
-  title: string;
+  title: TranslatedString;
   imageSrc: string;
-  shortInfo: string;
-  fullInfo: string;
+  shortInfo: TranslatedString;
+  fullInfo: TranslatedString;
 }
 
 interface TabGroup {
-  tabName: string;
+  tabName: TranslatedString;
   items: ComponentItem[];
 }
 
@@ -42,7 +43,7 @@ export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
               className={`${styles.tabButton} ${idx === activeTabIndex ? styles.activeTab : ''}`}
               onClick={() => setActiveTabIndex(idx)}
             >
-              {group.tabName}
+              {getTranslated(group.tabName, lang)}
             </button>
           ))}
         </div>
@@ -56,15 +57,15 @@ export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
               <div className={styles.imageWrapper}>
                 <Image
                   src={item.imageSrc}
-                  alt={item.title}
+                  alt={getTranslated(item.title, lang)}
                   fill
                   className={styles.image}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
               <div className={styles.caption}>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardShortInfo}>{item.shortInfo}</p>
+                <h3 className={styles.cardTitle}>{getTranslated(item.title, lang)}</h3>
+                <p className={styles.cardShortInfo}>{getTranslated(item.shortInfo, lang)}</p>
               </div>
             </Link>
           );
