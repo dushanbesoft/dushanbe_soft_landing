@@ -26,7 +26,7 @@ export const ProductSite: ProductSiteItem[] = [
     imageSrc: "/images/projects/president/banner.svg",
     bannerSrc: "/images/projects/president/banner.svg",
     year: "2024",
-    tags: ["React", "Redux", "ASP.NET Core", "MS SQL", "REST API"],
+    tags: ["React", "Redux", "Laravel", "MySQL", "REST API"],
     slug: "president",
     // gallery: [
     //   "/images/projects/president/banner.png",
@@ -35,16 +35,127 @@ export const ProductSite: ProductSiteItem[] = [
     // ],
     projectComponents: [
       {
-        tabName: "Web-сайт",
+        tabName: { ru: "Web-сайт", en: "Website", tj: "Веб-сайт" },
         items: [
           {
-            slug: "gallery-1",
-            title: "Главный экран и Каналы",
-            imageSrc: "/images/projects/president/gallery-1.png",
-            BannerSrc: "/images/projects/president/gallery-1.png",
-            shortInfo: "Карусель новинок и Live TV",
-            fullInfo:
-              "Верхняя часть главной страницы сайта представляет собой продуманный интерфейс для быстрого доступа к контенту. В шапке (Header) расположено главное меню с разделами: Фильмы, Сериалы, Мультфильмы, Таджикские фильмы, Репортажи, Радио и ТВ. Также здесь реализован глобальный поиск, переключатель языков, смена темы (светлая/темная) и виджет профиля пользователя с отображением текущего баланса.\n\nОсновное внимание привлекает масштабный Hero-баннер — анимированная карусель с главными премьерами (например, фильм «ГНЕВ»). Баннер плавно перелистывается и имеет удобные элементы управления по бокам. Сразу под ним находится блок «Каналы» с горизонтальной прокруткой, предлагающий быстрый доступ к популярным национальным и спортивным телеканалам (Точикистон, Сафина, Чахоннамо, Варзиш, Футбол HD, Синамо).",
+            slug: "home",
+            title: {
+              ru: "Главная страница",
+              en: "Homepage",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/president/web-home.png",
+            BannerSrc: "/images/projects/president/web-home.png",
+            shortInfo: {
+              ru: "Ключевые события и навигация по порталу",
+              en: "Featured events and portal navigation",
+              tj: "Рӯйдодҳои муҳим ва роҳнамоии портал",
+            },
+            fullInfo: {
+              ru: "Главная страница prezident.tj объединяет основные точки входа в информационную систему. В верхней части расположены логотип и название учреждения, благодаря которым посетитель сразу понимает назначение ресурса. Основное меню предоставляет доступ к разделам «Таджикистан», «Государственные символы», «Лидер нации», «Президент», «Правительство» и «Исполнительный аппарат».\n\nЦентральный элемент страницы — слайдер ключевых событий. Каждый представленный материал сопровождается крупной фотографией, заголовком, датой и временем публикации. Дополнительный индикатор обозначает количество фотографий. Стрелки и точки навигации позволяют выбирать элементы слайдера, а ссылка в заголовке ведёт к соответствующей публикации. Такой формат объединяет визуальную презентацию и переход к подробной информации.\n\nВ шапке предусмотрены переключатель языковых версий, поиск по сайту, настройка размера текста и ссылки на социальные каналы. Отдельная кнопка «Письмо президенту» выделяет сценарий обращения и делает его доступным из общей навигации. В интерфейсе представлены таджикский, русский, английский и арабский языки.\n\nПользовательский сценарий: посетитель знакомится с главным событием, открывает заинтересовавшую публикацию либо выбирает другой путь — тематический раздел, поиск или форму обращения.\n\nЦенность для бизнеса: подобная главная страница подходит организациям, которым необходимо одновременно представлять бренд, публиковать важные сообщения и обеспечивать доступ к большому количеству разделов. Она может объединять новости компании, ключевые проекты, направления деятельности и кнопку связи с командой.",
+              en: "The prezident.tj homepage brings together the main entry points into the portal. The institutional logo and name identify the resource at the top of the page. The primary menu provides access to Tajikistan, State Symbols, Leader of the Nation, President, Government and Executive Office sections.\n\nThe central component is a featured event slider. Each item combines a large photograph, headline, publication date and time. An additional indicator displays the number of photographs. Arrows and navigation dots provide controls for selecting slides, while the headline links to the relevant publication. This connects visual presentation with access to detailed information.\n\nThe header also includes language selection, site search, text size controls and social media links. A separate “Letter to the President” button makes the enquiry journey visible within the shared navigation. The interface presents Tajik, Russian, English and Arabic language options.\n\nUser journey: visitors review a featured event and open its publication, or choose another route through a section link, search or the enquiry form.\n\nBusiness value: this homepage structure suits organisations that need to introduce their brand, highlight important announcements and provide access to numerous sections. A corporate version could combine company news, major projects, business areas and a prominent contact button.",
+              tj: "Саҳифаи асосии prezident.tj роҳҳои асосии дастрасӣ ба иттилооти порталро муттаҳид мекунад. Дар қисми боло нишон ва номи ниҳод ҷойгиранд, то корбар мақсади сомонаро зуд дарк намояд. Менюи асосӣ ба бахшҳои «Тоҷикистон», «Рамзҳои давлатӣ», «Пешвои миллат», «Президент», «Ҳукумат» ва «Дастгоҳи иҷроия» роҳ медиҳад.\n\nУнсури марказии саҳифа слайдери рӯйдодҳои муҳим мебошад. Ҳар мавод бо акси калон, сарлавҳа, сана ва вақти нашр пешниҳод мешавад. Нишондиҳандаи иловагӣ шумораи аксҳоро нишон медиҳад. Тирчаҳо ва нуқтаҳои роҳнамоӣ барои интихоби маводи слайдер пешбинӣ шудаанд, пайванди сарлавҳа бошад, ба хабари дахлдор мебарад.\n\nДар қисми боло интихоби забон, ҷустуҷӯ, танзими андозаи матн ва пайвандҳои шабакаҳои иҷтимоӣ ҷой доранд. Тугмаи алоҳидаи «Нома ба Президент» роҳи дастрасӣ ба шакли муроҷиатро намоён мекунад. Дар интерфейс забонҳои тоҷикӣ, русӣ, англисӣ ва арабӣ пешниҳод шудаанд.\n\nРаванди истифода: корбар бо рӯйдоди асосӣ шинос мешавад ва маводи ҷолибро мекушояд ё ба бахши дигар, ҷустуҷӯ ва шакли муроҷиат мегузарад.\n\nАҳамият барои тиҷорат: чунин саҳифа барои ташкилоте мувофиқ аст, ки мехоҳад бренд, хабарҳои муҳим ва бахшҳои зиёди сомонаро дар як муҳит пешниҳод кунад. Дар сомонаи ширкат ин сохтор метавонад хабарҳо, лоиҳаҳои асосӣ, самтҳои фаъолият ва тугмаи тамосро муттаҳид намояд.",
+            },
+          },
+          {
+            slug: "events",
+            title: {
+              ru: "События",
+              en: "Events",
+              tj: "Рӯйдодҳо",
+            },
+            imageSrc: "/images/projects/president/web-events.png",
+            BannerSrc: "/images/projects/president/web-events.png",
+            shortInfo: {
+              ru: "Каталог публикаций, календарь и тематическая навигация",
+              en: "Publication directory, calendar and topic navigation",
+              tj: "Феҳристи мавод, тақвим ва роҳнамоии мавзуӣ",
+            },
+            fullInfo: {
+              ru: "Модуль «События» организует текущие публикации и предоставляет несколько способов ориентироваться в информационном потоке. В верхней части расположены категории: события, встречи, выступления, поездки, документы, послания, телеграммы и телефонные разговоры. Такое разделение позволяет выбирать материалы по их содержанию и формату.\n\nПубликации представлены компактным списком в две колонки. Каждая запись включает заголовок и сопровождающие сведения: дату, время и место события. Благодаря этому посетитель может оценить актуальность и содержание материала без открытия каждой страницы. Заголовок служит точкой перехода к подробной публикации.\n\nПравая колонка содержит календарь с месяцем, годом, сеткой дат и кнопкой сброса. Этот интерфейс предназначен для выбора временного контекста при работе с публикациями. Ниже расположен тематический каталог: внутренняя политика, международные структуры и двусторонние отношения. Вложенные направления предлагают более точный переход к интересующей теме. Кнопка «Подробнее» под списком служит входом к дополнительным материалам.\n\nПользовательский сценарий: посетитель выбирает тип публикации, просматривает заголовки и даты, затем открывает материал. Для уточнения направления поиска предусмотрены календарь и тематические ссылки.\n\nЦенность для бизнеса: аналогичный модуль подходит для корпоративного пресс-центра, отраслевого портала или архива мероприятий. Он позволяет структурировать новости по типам, направлениям деятельности и времени публикации.",
+              en: "The Events module organises current publications and offers several ways to browse the information. Categories at the top include events, meetings, speeches, visits, documents, addresses, telegrams and telephone conversations. This structure separates material by subject and publication type.\n\nEntries appear in a compact two-column list. Each includes a headline and supporting details such as the date, time and event location. Visitors can assess the subject and timing of an item without opening every page. The headline provides access to the complete publication.\n\nThe right-hand column contains a calendar with a month, year, date grid and reset button. This interface is intended to provide a date-based browsing option. Below it, a topic directory groups domestic policy, international organisations and bilateral relations, with links to more specific subjects. A “Read more” button beneath the list offers access to further material.\n\nUser journey: visitors select a publication category, review headlines and dates, and open an item. Calendar controls and topic links provide additional ways to narrow their area of interest.\n\nBusiness value: a similar module suits corporate newsrooms, industry portals and event archives. It can organise publications by content type, business area and date.",
+              tj: "Модули «Рӯйдодҳо» маводи ҷориро ба тартиб оварда, чанд роҳи пайдо кардани иттилоотро пешниҳод мекунад. Дар қисми боло хабарҳо, вохӯриҳо, суханрониҳо, сафарҳо, санадҳо, паём, барқияҳо ва суҳбатҳои телефонӣ ҷудо шудаанд. Ин гурӯҳбандӣ интихоби маводро аз рӯйи мазмун ва навъ осон мекунад.\n\nМавод дар рӯйхати ду сутун пешниҳод мешавад. Ҳар сабт сарлавҳа, сана, вақт ва ҷойи рӯйдодро дар бар мегирад. Корбар метавонад пеш аз кушодани саҳифа мавзуъ ва вақти нашри онро арзёбӣ намояд. Сарлавҳа барои гузариш ба матни муфассал хизмат мекунад.\n\nДар сутуни рост тақвим бо моҳ, сол, рӯзҳо ва тугмаи бозсозӣ ҷойгир аст. Он барои интихоби сана ҳангоми кор бо мавод пешбинӣ шудааст. Дар поён гурӯҳҳои мавзуӣ — сиёсати дохилӣ, сохторҳои байналмилалӣ ва муносибатҳои дуҷониба — пешниҳод мешаванд. Зербахшҳо ба мавзуъҳои мушаххастар роҳ медиҳанд. Тугмаи маълумоти бештар дастрасӣ ба маводи иловагиро пешниҳод мекунад.\n\nРаванди истифода: корбар навъи маводро интихоб мекунад, сарлавҳа ва санаҳоро мебинад ва хабари заруриро мекушояд. Барои муайян кардани самти ҷустуҷӯ тақвим ва пайвандҳои мавзуӣ мавҷуданд.\n\nАҳамият барои тиҷорат: ин сохтор барои маркази матбуоти ширкат, портали соҳавӣ ва бойгонии чорабиниҳо мувофиқ аст. Маводро аз рӯйи навъ, самти фаъолият ва вақт ташкил кардан мумкин аст.",
+            },
+          },
+          {
+            slug: "president-section",
+            title: {
+              ru: "Раздел «Президент»",
+              en: "President Section",
+              tj: "Бахши «Президент»",
+            },
+            imageSrc: "/images/projects/president/web-president.png",
+            BannerSrc: "/images/projects/president/web-president.png",
+            shortInfo: {
+              ru: "Тематическая структура информации",
+              en: "A structured information hub",
+              tj: "Сохтори мавзуии иттилоот",
+            },
+            fullInfo: {
+              ru: "Раздел «Президент» объединяет сведения о персоне и связанные с ней материалы в самостоятельный информационный блок. Основную область занимает крупная фотография, под которой размещены имя, должность и ссылка на биографию. Это создаёт понятную начальную точку для знакомства с разделом.\n\nБоковая навигация разделяет информацию на категории: полномочия, символы президента, книги, статьи, фильмы и награды. Каждый пункт представляет отдельное направление, поэтому посетителю не требуется просматривать весь массив материалов для поиска конкретной информации. Визуальное разделение пунктов помогает быстро ориентироваться в структуре.\n\nМодуль сочетает краткое представление и переходы к подробным сведениям. Биографическая информация, публикации и медиаматериалы связаны общей темой, но представлены через отдельные категории. Такой подход позволяет сохранять обзорную страницу компактной и понятной.\n\nПользовательский сценарий: посетитель знакомится с основными сведениями, затем выбирает биографию либо интересующий тип материалов — например, книги, статьи или фильмы.\n\nЦенность для бизнеса: аналогичную структуру можно использовать для профилей руководителей и экспертов, истории основателя компании или представления организации. В отдельных категориях могут размещаться профессиональный опыт, публикации, интервью, проекты и подтверждённые достижения.",
+              en: "The President section brings together information about the person and related material within a dedicated area. A large photograph occupies the main space, followed by the name, position and a biography link. This provides a clear starting point for exploring the section.\n\nSide navigation divides the information into powers, presidential symbols, books, articles, films and awards. Each link represents a distinct category, allowing visitors to choose the information they need without browsing the entire collection. Visual separators make the navigation easier to scan.\n\nThe module combines a concise introduction with routes to more detailed information. Biography, publications and media share a common subject but remain organised into separate categories. This keeps the overview page focused while providing access to a broader collection.\n\nUser journey: visitors review the introductory information, then choose the biography or a particular content category, such as books, articles or films.\n\nBusiness value: a similar structure can present executives, experts, a company founder or an organisation. Separate categories could cover professional experience, publications, interviews, projects and verified achievements.",
+              tj: "Бахши «Президент» маълумот дар бораи шахсият ва маводи вобастаро дар як қисми мустақили портал ҷамъ меорад. Дар майдони асосӣ акси калон ҷойгир буда, зери он ном, вазифа ва пайванд ба шарҳи ҳол оварда шудаанд. Ин нуқтаи равшани оғоз барои шиносоӣ бо бахш мебошад.\n\nМенюи паҳлуӣ маълумотро ба гурӯҳҳо ҷудо мекунад: салоҳият, рамзҳои Президент, китобҳо, мақолаҳо, филмҳо ва ҷоизаҳо. Ҳар пайванд самти алоҳида дорад, бинобар ин корбар барои дарёфти маълумоти мушаххас маҷбур нест ҳамаи маводро пайдарпай бинад. Ҷудокунии визуалии бандҳо фаҳмидани сохторро осон мекунад.\n\nМодул муаррифии мухтасарро бо гузариш ба маълумоти муфассал муттаҳид месозад. Шарҳи ҳол, асарҳо ва маводи расонаӣ ба як мавзуъ тааллуқ доранд, вале тавассути гурӯҳҳои алоҳида пешниҳод мешаванд. Ин равиш саҳифаи умумиро фаҳмо нигоҳ медорад.\n\nРаванди истифода: корбар бо маълумоти асосӣ шинос шуда, сипас шарҳи ҳол ё гурӯҳи маводи зарурӣ, масалан китобҳо, мақолаҳо ё филмҳоро интихоб мекунад.\n\nАҳамият барои тиҷорат: сохтори монанд барои муаррифии роҳбарон, коршиносон, муассиси ширкат ё худи ташкилот мувофиқ аст. Таҷрибаи касбӣ, нашрияҳо, мусоҳибаҳо, лоиҳаҳо ва дастовардҳои тасдиқшударо дар бахшҳои алоҳида ҷой додан мумкин аст.",
+            },
+          },
+          {
+            slug: "footer",
+            title: {
+              ru: "Справочные разделы и подвал",
+              en: "Reference Sections and Footer",
+              tj: "Бахшҳои маълумотӣ ва поёни сомона",
+            },
+            imageSrc: "/images/projects/president/web-footer.png",
+            BannerSrc: "/images/projects/president/web-footer.png",
+            shortInfo: {
+              ru: "Дополнительный уровень навигации",
+              en: "An additional navigation layer",
+              tj: "Роҳҳои иловагии дастрасӣ",
+            },
+            fullInfo: {
+              ru: "Нижняя часть страницы содержит блок быстрых переходов к постоянной справочной информации: сведениям о Таджикистане, Конституции и государственным символам. Эти материалы выделены отдельно от новостной ленты, что подчёркивает их самостоятельное значение в структуре портала.\n\nПодвал формирует дополнительную карту основных разделов. Ссылки сгруппированы по направлениям «Президент», «Правительство» и «Исполнительный аппарат». Внутри групп доступны конкретные подразделы: биография, полномочия, члены правительства, заседания, структура аппарата и пресс-служба. Посетитель может перейти непосредственно к нужному подразделу, достигнув конца страницы.\n\nВ подвале также размещены идентификация ресурса, контактные сведения пресс-службы, ссылки на социальные каналы и RSS. Эти элементы объединяют справочную навигацию и способы дальнейшего получения информации.\n\nПользовательский сценарий: после просмотра страницы посетитель продолжает изучение портала через сгруппированные ссылки либо находит контактную информацию и внешние каналы.\n\nЦенность для бизнеса: такой подвал помогает организовать доступ к сведениям о компании, услугам, документам, подразделениям и контактам. Он особенно полезен на длинных страницах, где посетителю нужен следующий понятный шаг после основного содержимого.",
+              en: "The lower part of the page highlights quick links to lasting reference information: Tajikistan, the Constitution and state symbols. These resources sit outside the news feed, giving them a distinct place within the portal’s structure.\n\nThe footer provides an additional map of the main sections. Links are grouped under President, Government and Executive Office. Each group contains specific destinations, including biography, powers, government members, meetings, office structure and the press service. Visitors reaching the end of the page can move directly to a relevant subsection.\n\nThe footer also includes site identification, press service contact details, social media links and RSS. These elements combine reference navigation with further routes to information.\n\nUser journey: after reviewing the page, visitors continue through grouped links or find contact details and external information channels.\n\nBusiness value: this footer structure can organise access to company information, services, documents, departments and contacts. It is particularly useful on long pages, where visitors benefit from a clear next step after the main content.",
+              tj: "Дар қисми поёнии саҳифа пайвандҳои зуд ба иттилооти доимӣ ҷойгиранд: маълумот дар бораи Тоҷикистон, Конститутсия ва рамзҳои давлатӣ. Ин мавод аз хабарҳо ҷудо пешниҳод мешавад ва дар сохтори портал аҳамияти мустақил дорад.\n\nМенюи поёнӣ харитаи иловагии бахшҳои асосиро ташкил медиҳад. Пайвандҳо ба гурӯҳҳои «Президент», «Ҳукумат» ва «Дастгоҳи иҷроия» ҷудо шудаанд. Дар дохили онҳо зербахшҳои мушаххас, аз ҷумла шарҳи ҳол, салоҳият, аъзои Ҳукумат, маҷлисҳо, сохтори Дастгоҳ ва Хадамоти матбуот дастрасанд.\n\nҲамчунин дар ин қисм номи манбаъ, маълумоти тамоси Хадамоти матбуот, пайвандҳои шабакаҳои иҷтимоӣ ва RSS ҷой доранд. Онҳо роҳнамоии маълумотиро бо роҳҳои минбаъдаи гирифтани хабарҳо муттаҳид мекунанд.\n\nРаванди истифода: корбар пас аз дидани саҳифа тавассути пайвандҳои гурӯҳбандишуда омӯзиши порталро идома медиҳад ё маълумоти тамос ва каналҳои берунаро пайдо мекунад.\n\nАҳамият барои тиҷорат: чунин сохтор дастрасиро ба маълумоти ширкат, хизматрасониҳо, санадҳо, воҳидҳо ва роҳҳои тамос ташкил мекунад. Он махсусан барои саҳифаҳои дароз муфид аст, ки дар анҷоми онҳо ба корбар қадами навбатӣ лозим мешавад.",
+            },
+          },
+          {
+            slug: "letter",
+            title: {
+              ru: "Электронное обращение",
+              en: "Electronic Enquiries",
+              tj: "Муроҷиати электронӣ",
+            },
+            imageSrc: "/images/projects/president/web-letter.png",
+            BannerSrc: "/images/projects/president/web-letter.png",
+            shortInfo: {
+              ru: "Структурированная форма с вложениями",
+              en: "A structured form with attachments",
+              tj: "Шакли сохторёфта бо замимаҳо",
+            },
+            fullInfo: {
+              ru: "Модуль «Письмо президенту» предназначен для подготовки электронного обращения через интерфейс сайта. Перед формой размещён информационный текст с требованиями к обращениям, чтобы посетитель мог ознакомиться с условиями до заполнения данных.\n\nФорма разделяет информацию на понятные поля: ФИО, место работы, страна, город или населённый пункт, адрес, телефон и электронная почта. Для содержания обращения предусмотрены отдельные поля темы и сообщения. Такое разделение помогает оформлять обращения в едином формате и отличать контактные сведения от основного текста.\n\nДля дополнительных материалов предусмотрена кнопка добавления файла. В интерфейсе указан лимит 10 МБ. На предоставленном скриншоте присутствует виджет reCAPTCHA, предназначенный для противодействия автоматизированной отправке. Завершает форму кнопка «Отправить».\n\nПользовательский сценарий: посетитель знакомится с требованиями, заполняет сведения о себе, указывает тему и текст, при необходимости прикладывает документ и переходит к отправке.\n\nЦенность для бизнеса: подобный подход применим для обращений в поддержку, сервисных заявок и запросов с документами. Структурированные поля помогают заранее определить состав необходимой информации.",
+              en: "The “Letter to the President” module provides an interface for preparing an electronic enquiry. An introductory notice appears before the form so visitors can review the stated requirements before entering their information.\n\nThe form separates information into defined fields: full name, workplace, country, city or locality, address, telephone number and email address. Dedicated subject and message fields capture the enquiry itself. This distinction keeps contact information separate from the main message and establishes a consistent submission structure.\n\nAn attachment button allows supporting material to be added, with a displayed limit of 10 MB. The supplied screenshot also shows a reCAPTCHA widget intended to discourage automated submissions. A “Send” button completes the interface.\n\nUser journey: visitors read the requirements, enter their details, write a subject and message, attach a document if needed and proceed towards submission.\n\nBusiness value: a similar form can support customer enquiries, service requests and document-based applications. Structured fields define the information required at the outset.",
+              tj: "Модули «Нома ба Президент» барои омода кардани муроҷиати электронӣ тавассути сомона пешбинӣ шудааст. Пеш аз шакл матни иттилоотӣ бо талабот ба муроҷиатҳо ҷойгир аст, то корбар пеш аз ворид кардани маълумот бо онҳо шинос шавад.\n\nШакл маълумотро ба майдонҳои алоҳида ҷудо мекунад: ному насаб, ҷойи кор, кишвар, шаҳр ё маҳалли аҳолинишин, суроға, телефон ва почтаи электронӣ. Барои муҳтавои муроҷиат майдонҳои мавзуъ ва матни паём пешбинӣ шудаанд. Ин тақсимот маълумоти тамосро аз мазмуни асосӣ ҷудо карда, пешниҳоди муроҷиатҳоро ба тартиби ягона меорад.\n\nБарои маводи иловагӣ тугмаи замима кардани файл мавҷуд аст. Дар интерфейс ҳадди 10 МБ нишон дода шудааст. Дар скриншоти пешниҳодшуда виджети reCAPTCHA низ дида мешавад, ки барои муқовимат ба ирсоли худкор пешбинӣ шудааст. Дар охир тугмаи «Ирсол» ҷойгир аст.\n\nРаванди истифода: корбар талаботро мехонад, маълумоти худро ворид мекунад, мавзуъ ва матнро менависад, ҳангоми зарурат санадро замима намуда, ба ирсол мегузарад.\n\nАҳамият барои тиҷорат: чунин равиш барои муроҷиат ба дастгирӣ, дархостҳои хизматрасонӣ ва пешниҳоди санадҳо мувофиқ аст. Майдонҳои сохторёфта таркиби маълумоти заруриро пешакӣ муайян мекунанд.",
+            },
+          },
+          {
+            slug: "search",
+            title: {
+              ru: "Поиск",
+              en: "Site Search",
+              tj: "Ҷустуҷӯ",
+            },
+            imageSrc: "/images/projects/president/web-search.png",
+            BannerSrc: "/images/projects/president/web-search.png",
+            shortInfo: {
+              ru: "Результаты с контекстом и дополнительная навигация",
+              en: "Contextual results and supporting navigation",
+              tj: "Натиҷаҳо бо шарҳи кӯтоҳ ва роҳнамоии иловагӣ",
+            },
+            fullInfo: {
+              ru: "Модуль поиска предоставляет отдельный интерфейс для нахождения информации по текстовому запросу. В верхней части страницы расположено крупное поле, в котором сохраняется введённая фраза. Посетитель видит текущий запрос и может изменить его для следующего поиска.\n\nКаждый результат содержит заголовок и короткий фрагмент публикации. Совпадающие слова выделены в тексте, что помогает понять, почему материал появился в выдаче. Дополнительно показаны дата, время, место и категория — например, события или фотографии. Это позволяет различать материалы не только по названию, но и по формату и контексту.\n\nРядом с основным списком расположены календарь и блок событий, которые предоставляют дополнительные ориентиры для дальнейшего просмотра.\n\nПользовательский сценарий: посетитель вводит запрос, сравнивает заголовки и фрагменты результатов, уточняет дату или тип материала и открывает подходящую публикацию.\n\nЦенность для бизнеса: такой поиск полезен для корпоративных порталов, баз знаний и сайтов с большим архивом. Контекстные фрагменты и категории помогают посетителям осознанно выбирать материалы и находить нужные сведения среди большого количества страниц.",
+              en: "The search module provides a dedicated interface for finding information through a text query. A prominent field at the top retains the entered phrase, allowing visitors to see their current query and revise it for another search.\n\nEach result includes a headline and a short publication excerpt. Matching words are highlighted to show how the item relates to the query. Additional details include the date, time, location and content category, such as events or photographs. Visitors can therefore distinguish results by context and format as well as by title.\n\nA calendar and events block appear beside the main list, offering further browsing options.\n\nUser journey: visitors enter a query, compare result headlines and excerpts, check the date or content type, and open the most relevant publication.\n\nBusiness value: this search pattern suits corporate portals, knowledge bases and websites with extensive archives. Contextual excerpts and categories help visitors make informed choices when navigating a large collection of pages.",
+              tj: "Модули ҷустуҷӯ барои пайдо кардани иттилоот аз рӯйи дархости матнӣ интерфейси алоҳида пешниҳод мекунад. Дар қисми боло майдони калон ҷойгир аст, ки дар он ибораи воридшуда боқӣ мемонад. Корбар дархости ҷориро мебинад ва метавонад онро барои ҷустуҷӯи нав тағйир диҳад.\n\nҲар натиҷа сарлавҳа ва порчаи кӯтоҳи матн дорад. Калимаҳои мувофиқ ҷудо нишон дода мешаванд, то корбар робитаи маводро бо дархост фаҳмад. Сана, вақт, ҷой ва гурӯҳи мавод, масалан хабарҳо ё аксҳо, низ пешниҳод мешаванд. Ин маълумот барои фарқ кардани натиҷаҳо аз рӯйи навъ ва мазмун кумак мекунад.\n\nДар паҳлуи рӯйхат тақвим ва бахши рӯйдодҳо ҷойгиранд, ки роҳҳои иловагии идомаи тамошоро пешниҳод мекунанд.\n\nРаванди истифода: корбар дархостро ворид мекунад, сарлавҳаҳо ва порчаҳои матнро муқоиса менамояд, сана ё навъи маводро месанҷад ва натиҷаи мувофиқро мекушояд.\n\nАҳамият барои тиҷорат: чунин ҷустуҷӯ барои порталҳои корпоративӣ, пойгоҳҳои дониш ва сомонаҳои дорои бойгонии калон муфид аст. Порчаҳои матн ва гурӯҳбандӣ ба корбарон барои интихоби огоҳонаи мавод кумак мекунанд.",
+            },
           },
         ],
       },
@@ -55,7 +166,7 @@ export const ProductSite: ProductSiteItem[] = [
     bannerSrc: "/images/projects/sohktor/banner.svg",
     bannerFit: "contain",
     year: "2024",
-    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "sohktor",
     gallery: [
       "/images/projects/sohktor/gallery-1.png",
@@ -65,11 +176,162 @@ export const ProductSite: ProductSiteItem[] = [
       "/images/projects/sohktor/gallery-6.png",
       "/images/projects/sohktor/gallery-7.png",
     ],
+    projectComponents: [
+      {
+        tabName: {
+          ru: "Веб-приложение",
+          en: "Web application",
+          tj: "Барномаи веб",
+        },
+        items: [
+          {
+            slug: "login",
+            title: {
+              ru: "Вход в систему",
+              en: "Sign In",
+              tj: "Вуруд ба система",
+            },
+            imageSrc: "/images/projects/sohktor/login.png",
+            BannerSrc: "/images/projects/sohktor/login.png",
+            shortInfo: {
+              ru: "Авторизация сотрудников в едином электронном хранилище",
+              en: "Staff authentication for the unified electronic repository",
+              tj: "Воридшавии кормандон ба махзани ягонаи электронӣ",
+            },
+            fullInfo: {
+              ru: "Экран входа — начальная точка работы с единым электронным хранилищем Главного управления государственной противопожарной службы МВД (СХДО ВКД). В верхней части размещены геральдический знак службы и её полное название, что сразу обозначает ведомственную принадлежность системы. Заголовок «Маҳзани ягонаи электронӣ» подчёркивает, что это единая база данных для всех подразделений.\n\nФорма авторизации содержит два поля: «Эл. Почта / Логин» с иконкой конверта и «Пароль» с иконкой замка. Поля снабжены подсказками на таджикском языке, что помогает сотруднику ввести корректные данные. Крупная зелёная кнопка «Вход» завершает форму и визуально соответствует фирменному стилю службы.\n\nПользовательский сценарий: сотрудник открывает систему, вводит логин или электронную почту и пароль, после чего получает доступ к рабочему пространству согласно своей роли и подразделению.\n\nЦенность для бизнеса: единая точка входа с разграничением доступа обеспечивает безопасность ведомственных данных и позволяет вести учёт действий пользователей. Аналогичный подход применим для любой корпоративной или государственной системы, где важны контроль доступа и защита конфиденциальной информации.",
+              en: "The sign-in screen is the entry point to the unified electronic repository of the Main Directorate of the State Fire Service of the Ministry of Internal Affairs (SFS). The service emblem and its full name appear at the top, immediately identifying the institutional owner of the system. The heading “Unified electronic repository” emphasises that this is a single database shared across all divisions.\n\nThe authentication form contains two fields: “Email / Login” with an envelope icon and “Password” with a lock icon. Placeholder hints in Tajik help staff enter the correct details. A large green “Sign in” button completes the form and matches the service's visual identity.\n\nUser journey: a member of staff opens the system, enters a login or email and a password, and then gains access to the workspace according to their role and division.\n\nBusiness value: a single entry point with access control protects institutional data and enables an audit trail of user actions. The same pattern suits any corporate or government system where access control and protection of confidential information matter.",
+              tj: "Экрани вуруд нуқтаи оғози кор бо махзани ягонаи электронии Сарраёсати хадамоти давлатии оташнишонии ВКД (СХДО ВКД) мебошад. Дар қисми боло нишони хидмат ва номи пурраи он ҷойгиранд, ки мансубияти идоравии системаро дарҳол нишон медиҳанд. Сарлавҳаи «Маҳзани ягонаи электронӣ» таъкид мекунад, ки ин пойгоҳи ягонаи додаҳо барои ҳамаи воҳидҳо мебошад.\n\nШакли воридшавӣ ду майдон дорад: «Почтаи электронӣ ё Логин» бо нишонаи лифофа ва «Парол» бо нишонаи қулф. Майдонҳо бо ишораҳо ба забони тоҷикӣ муҷаҳҳазанд, ки ба корманд барои дуруст ворид кардани маълумот кумак мекунанд. Тугмаи калони сабзи «Вуруд» шаклро анҷом медиҳад ва ба сабки фирмавии хидмат мувофиқ аст.\n\nРаванди истифода: корманд системаро мекушояд, логин ё почтаи электронӣ ва паролро ворид мекунад ва сипас мувофиқи нақш ва воҳиди худ ба фазои корӣ дастрасӣ пайдо мекунад.\n\nАҳамият барои тиҷорат: нуқтаи ягонаи вуруд бо тақсими дастрасӣ амнияти додаҳои идоравиро таъмин мекунад ва имкони бақайдгирии амали корбаронро медиҳад. Чунин равиш барои ҳар системаи корпоративӣ ё давлатӣ, ки дар он назорати дастрасӣ ва ҳифзи маълумоти махфӣ муҳим аст, мувофиқ мебошад.",
+            },
+          },
+          {
+            slug: "workspace",
+            title: {
+              ru: "Главное рабочее пространство",
+              en: "Main Workspace",
+              tj: "Фазои асосии корӣ",
+            },
+            imageSrc: "/images/projects/sohktor/workspace.png",
+            BannerSrc: "/images/projects/sohktor/workspace.png",
+            shortInfo: {
+              ru: "Навигация по всем модулям учёта и отчётности",
+              en: "Navigation across all accounting and reporting modules",
+              tj: "Роҳнамоӣ дар ҳамаи модулҳои баҳисобгирӣ ва ҳисобот",
+            },
+            fullInfo: {
+              ru: "Рабочее пространство открывается сразу после входа и объединяет все инструменты системы в едином интерфейсе. Левая боковая панель содержит основное меню: «Частные объекты», «Государственные объекты», «Заключения», «Услуги», «КПО», «Предписания (частные)», «Предписания (государственные)», «Пожары», «Уголовные дела», «Отчёты», а также разделы настроек — «ШНБДС СХДО ВКД ҶТ», «Список услуг», «Инспекторы» и «Настройки». Пункты снабжены иконками для быстрого визуального распознавания.\n\nЦентральную часть занимает эмблема службы и полное название организации — «Единое электронное хранилище Главного управления государственной противопожарной службы МВД Республики Таджикистан». В правом верхнем углу отображаются имя пользователя и его роль («Администратор») с выпадающим меню профиля.\n\nПользовательский сценарий: авторизованный сотрудник выбирает нужный модуль в боковом меню и переходит к учёту объектов, регистрации пожаров, ведению уголовных дел или формированию отчётов. Раскрывающиеся пункты («Отчёты», «Настройки») группируют связанные разделы.\n\nЦенность для бизнеса: единое рабочее пространство с логичной группировкой модулей ускоряет работу сотрудников и снижает порог обучения. Такая структура подходит для любой ведомственной ERP-системы с большим числом функциональных разделов.",
+              en: "The workspace opens immediately after sign-in and brings all system tools together in one interface. The left sidebar holds the primary menu: Private Facilities, State Facilities, Conclusions, Services, Fire-Technical Inspection (FTI), Orders (private), Orders (state), Fires, Criminal Cases, Reports, plus configuration sections — the departmental register, Services List, Inspectors and Settings. Each item carries an icon for quick visual recognition.\n\nThe central area displays the service emblem and the full name of the organisation — “Unified electronic repository of the Main Directorate of the State Fire Service of the Ministry of Internal Affairs of the Republic of Tajikistan”. The top-right corner shows the user's name and role (“Administrator”) with a profile dropdown.\n\nUser journey: an authenticated employee selects the required module in the sidebar and moves on to facility accounting, fire registration, criminal-case handling or report generation. Expandable items (Reports, Settings) group related sections.\n\nBusiness value: a single workspace with a logical grouping of modules speeds up staff work and lowers the learning curve. This structure suits any departmental ERP system with a large number of functional sections.",
+              tj: "Фазои корӣ дарҳол пас аз вуруд кушода мешавад ва ҳамаи воситаҳои системаро дар як интерфейс муттаҳид мекунад. Панели чапи паҳлуӣ менюи асосиро дар бар мегирад: «Иншоотҳои хусусӣ», «Иншоотҳои давлатӣ», «Хулосаҳо», «Хизматрасониҳо», «КПО», «Амрнома (хусусӣ)», «Амрнома (давлатӣ)», «Сӯхторҳо», «Ҷиноятҳо», «Ҳисоботҳо», инчунин бахшҳои танзимот — «ШНБДС СХДО ВКД ҶТ», «Рӯйхати хизматрасониҳо», «Назоратчиён» ва «Танзимот». Бандҳо бо нишонаҳо барои шинохти зуди визуалӣ муҷаҳҳазанд.\n\nҚисми марказиро нишони хидмат ва номи пурраи ташкилот — «Маҳзани ягонаи электронии Сарраёсати Хадамоти Давлатии Оташнишонии ВКД Ҷумҳурии Тоҷикистон» — ишғол мекунад. Дар кунҷи болоии рост ном ва нақши корбар («Администратор») бо менюи профил нишон дода мешавад.\n\nРаванди истифода: корманди воридшуда модули заруриро дар менюи паҳлуӣ интихоб карда, ба баҳисобгирии иншоот, бақайдгирии сӯхтор, пешбурди парвандаҳои ҷиноятӣ ё таҳияи ҳисобот мегузарад. Бандҳои кушодашаванда («Ҳисоботҳо», «Танзимот») бахшҳои алоқамандро гурӯҳбандӣ мекунанд.\n\nАҳамият барои тиҷорат: фазои ягонаи корӣ бо гурӯҳбандии мантиқии модулҳо кори кормандонро тезонида, остонаи омӯзишро паст мекунад. Чунин сохтор барои ҳар системаи идоравии ERP бо шумораи зиёди бахшҳои функсионалӣ мувофиқ аст.",
+            },
+          },
+          {
+            slug: "fire-registration",
+            title: {
+              ru: "Регистрация пожара",
+              en: "Fire Registration",
+              tj: "Бақайдгирии сӯхтор",
+            },
+            imageSrc: "/images/projects/sohktor/fire-registration.png",
+            BannerSrc: "/images/projects/sohktor/fire-registration.png",
+            shortInfo: {
+              ru: "Структурированная карточка происшествия с вложениями",
+              en: "A structured incident record with attachments",
+              tj: "Корти сохторёфтаи ҳодиса бо замимаҳо",
+            },
+            fullInfo: {
+              ru: "Экран «Добавить» (Илова кунед) в разделе «Пожары» предназначен для регистрации нового происшествия. Форма разделена на две колонки, что помогает вводить большой объём данных без перегрузки интерфейса.\n\nВ левой колонке расположено дерево подразделений «КМДА» (СХДО, ШНБДС СХДО, РХДО г.Душанбе, РХДО обл.Хатлон, РХДО обл.Согд, ШХДО ГБАО, ШХДО Рашт, ШХДО районов республиканского подчинения), позволяющее выбрать ответственную структуру. Ниже размещены поля «Дата и время начала пожара», выпадающий список «Причина пожара», тип объекта («Навъи иншоот») и выбор конкретного объекта с кнопкой «+ Добавить», а также номер информационной книги (КА).\n\nПравая колонка содержит решения по пожару, принятые меры, поле следователя (НДСБ), загрузку файла «Лист пожара» (Варақаи сӯхтор) через кнопку выбора файла, чекбокс «Архивировано» и кнопки «Сохранить» (Сабт кардан) и «Назад» (Бозгашт).\n\nПользовательский сценарий: сотрудник выбирает подразделение, указывает время и причину пожара, привязывает объект, заполняет сведения о принятых решениях и следователе, прикладывает документ и сохраняет карточку.\n\nЦенность для бизнеса: единая структурированная форма обеспечивает полноту и единообразие учёта происшествий, а вложения и привязка к подразделению делают данные пригодными для последующей аналитики и отчётности.",
+              en: "The “Add” (Ilova kuned) screen in the Fires section is designed to register a new incident. The form is split into two columns, which helps enter a large volume of data without overloading the interface.\n\nThe left column contains the “KMDA” unit tree (SFS headquarters, the departmental register, city and regional fire directorates for Dushanbe, Khatlon and Sughd, GBAO, Rasht and the districts of republican subordination), letting the user pick the responsible structure. Below it are the “Fire start date and time” field, a “Fire cause” dropdown, the object type and a specific-object selector with an “+ Add” button, plus the information-book number.\n\nThe right column holds the decisions taken on the fire, the measures applied, an investigator field, a “Fire sheet” file upload through a file-picker button, an “Archived” checkbox and the “Save” and “Back” buttons.\n\nUser journey: an officer selects the division, enters the time and cause of the fire, links the facility, fills in details of the decisions taken and the investigator, attaches a document and saves the record.\n\nBusiness value: a single structured form ensures complete and consistent incident records, while attachments and the link to a division make the data suitable for later analytics and reporting.",
+              tj: "Экрани «Илова кунед» дар бахши «Сӯхторҳо» барои бақайдгирии ҳодисаи нав пешбинӣ шудааст. Шакл ба ду сутун ҷудо шудааст, ки ворид кардани ҳаҷми зиёди маълумотро бидуни вазнинии интерфейс осон мекунад.\n\nДар сутуни чап дарахти воҳидҳои «КМДА» (СХДО, ШНБДС СХДО, РХДО ш.Душанбе, РХДО в.Хатлон, РХДО в.Суғд, ШХДО ВМКБ, ШХДО Рашт, ШХДО ноҳияҳои тобеи марказ) ҷойгир аст, ки интихоби сохтори масъулро имкон медиҳад. Дар поён майдонҳои «Таърих, вақти сар задани сӯхтор», рӯйхати кушодашавандаи «Сабаби сӯхтор», навъи иншоот ва интихоби иншооти мушаххас бо тугмаи «+ Илова», инчунин рақами китоби ахборотӣ (КА) ҷой доранд.\n\nСутуни рост қарорҳо оид ба сӯхтор, чораҳои андешидашуда, майдони таҳқиқбаранда (НДСБ), боркунии файли «Варақаи сӯхтор» тавассути тугмаи интихоби файл, катакчаи «Архившуда» ва тугмаҳои «Сабт кардан» ва «Бозгашт»-ро дар бар мегирад.\n\nРаванди истифода: корманд воҳидро интихоб мекунад, вақт ва сабаби сӯхторро нишон медиҳад, иншоотро пайваст мекунад, маълумотро дар бораи қарорҳои қабулшуда ва таҳқиқбаранда пур карда, санадро замима мекунад ва кортро нигоҳ медорад.\n\nАҳамият барои тиҷорат: шакли ягонаи сохторёфта пуррагӣ ва якрангии баҳисобгирии ҳодисаҳоро таъмин мекунад, замимаҳо ва пайванд ба воҳид бошанд, додаҳоро барои таҳлил ва ҳисоботи минбаъда мувофиқ мегардонанд.",
+            },
+          },
+          {
+            slug: "criminal-cases",
+            title: {
+              ru: "Уголовные дела",
+              en: "Criminal Cases",
+              tj: "Парвандаҳои ҷиноятӣ",
+            },
+            imageSrc: "/images/projects/sohktor/criminal-cases.png",
+            BannerSrc: "/images/projects/sohktor/criminal-cases.png",
+            shortInfo: {
+              ru: "Учёт материалов проверки и уголовных дел по пожарам",
+              en: "Tracking of inquiry materials and fire-related criminal cases",
+              tj: "Баҳисобгирии маводи санҷиш ва парвандаҳои ҷиноятӣ",
+            },
+            fullInfo: {
+              ru: "Раздел «Уголовные дела» (Ҷиноятҳо) позволяет фиксировать материалы проверок и уголовные дела, связанные с пожарами. Форма «Добавить» построена в две колонки и логически продолжает карточку пожара.\n\nЛевая колонка содержит тип объекта, дерево подразделений «КМДА», текстовое поле с описанием происшествия (город и район, наименование объекта, причина, ущерб и виновники), поле следователя, инспектора или прокурора, рассматривавшего материал, а также поле статьи Уголовного кодекса, по которой возбуждено или отказано в возбуждении дела.\n\nПравая колонка включает дату проверки материалов или рассмотрения дела и назначения наказания, поле следователя (НДБС), выпадающий список «Статус исполнения» (Ҳолати иҷро), номер книги учёта уголовных дел (КЧ), способ регистрации, признак передачи в другое подразделение, загрузку файла «Лист уголовного дела» и чекбокс архивации. Форму завершают кнопки «Сохранить» и «Назад».\n\nПользовательский сценарий: сотрудник связывает уголовное дело с конкретным пожаром, указывает статью, ответственных лиц и статус исполнения, прикладывает материалы и сохраняет запись.\n\nЦенность для бизнеса: сквозная связь пожаров и уголовных дел даёт целостную картину правовых последствий происшествий и упрощает контроль исполнения. Похожая модель применима в любых системах, где инцидент порождает последующее делопроизводство.",
+              en: "The Criminal Cases section lets the service record inquiry materials and criminal cases linked to fires. The “Add” form uses two columns and logically follows on from the fire record.\n\nThe left column holds the object type, the “KMDA” unit tree, a text field describing the incident (city and district, facility name, cause, damage and responsible parties), a field for the investigator, inspector or prosecutor who reviewed the material, and a field for the Criminal Code article under which a case was opened or declined.\n\nThe right column includes the date the materials were checked or the case reviewed and the penalty assigned, an investigator field, an “Execution status” dropdown, the criminal-case book number, the registration method, a flag for transfer to another division, a “Criminal case sheet” file upload and an archive checkbox. “Save” and “Back” buttons complete the form.\n\nUser journey: an officer links a criminal case to a specific fire, specifies the article, the responsible persons and the execution status, attaches the materials and saves the record.\n\nBusiness value: an end-to-end link between fires and criminal cases gives a complete picture of the legal consequences of incidents and simplifies execution control. A similar model suits any system where an incident triggers subsequent case management.",
+              tj: "Бахши «Ҷиноятҳо» имкон медиҳад, ки маводи санҷишҳо ва парвандаҳои ҷиноятии марбут ба сӯхторҳо ба қайд гирифта шаванд. Шакли «Илова кунед» дар ду сутун сохта шуда, кортҳои сӯхторро мантиқан идома медиҳад.\n\nСутуни чап навъи иншоот, дарахти воҳидҳои «КМДА», майдони матнӣ бо тавсифи ҳодиса (шаҳру ноҳия, номи иншоот, сабаб, зарар ва шахсони сабабгор), майдони таҳқиқбаранда, муфаттиш ё прокуроре, ки маводро баррасӣ намудааст, инчунин майдони моддаи Кодекси ҷиноятиро, ки парванда аз рӯи он оғоз ё рад шудааст, дар бар мегирад.\n\nСутуни рост санаи санҷиши мавод ё баррасии парванда ва таъини ҷазо, майдони таҳқиқбаранда (НДБС), рӯйхати кушодашавандаи «Ҳолати иҷро», рақами китоби бақайдгирии ҷиноятҳо (КҶ), усули бақайдгирӣ, аломати гузариш ба воҳиди дигар, боркунии файли «Варақаи ҷиноят» ва катакчаи архивро дар бар мегирад. Шаклро тугмаҳои «Сабт кардан» ва «Бозгашт» анҷом медиҳанд.\n\nРаванди истифода: корманд парвандаи ҷиноятиро бо сӯхтори мушаххас пайваст мекунад, модда, шахсони масъул ва ҳолати иҷроро нишон медиҳад, маводро замима карда, сабтро нигоҳ медорад.\n\nАҳамият барои тиҷорат: пайванди фаросарии сӯхторҳо ва парвандаҳои ҷиноятӣ манзараи мукаммали оқибатҳои ҳуқуқии ҳодисаҳоро медиҳад ва назорати иҷроро осон мекунад. Модели монанд барои ҳар системае, ки дар он ҳодиса пешбурди минбаъдаро ба миён меорад, мувофиқ аст.",
+            },
+          },
+          {
+            slug: "fire-report",
+            title: {
+              ru: "Отчёт по пожарам",
+              en: "Fire Report",
+              tj: "Ҳисоботи сӯхторҳо",
+            },
+            imageSrc: "/images/projects/sohktor/fire-report.png",
+            BannerSrc: "/images/projects/sohktor/fire-report.png",
+            shortInfo: {
+              ru: "Сводная статистика ущерба с фильтрами и экспортом",
+              en: "Aggregate damage statistics with filters and export",
+              tj: "Омори ҷамъбастии зарар бо филтрҳо ва содирот",
+            },
+            fullInfo: {
+              ru: "Экран «Отчёт по пожарам» (Ҳисоботи Сӯхторҳо) формирует сводную статистику происшествий по заданным параметрам. Верхняя часть содержит развитый блок фильтров: подразделение «КМДА», дата начала и окончания периода, признак архива, причина пожара, способ регистрации, распространение пожара, гибель людей, телесные повреждения, принятые решения и меры, а также тип объекта.\n\nПод фильтрами расположены кнопки действий: «Поиск» (Ҷустуҷӯ), «Сравнить с прошлым годом» (Муқоиса бо соли гузашта) и «Экспорт в Excel» (Экспорт ба Excel). Результат представлен в виде итоговой таблицы с ключевыми показателями — количество пожаров, площадь пожара (кв. м), ущерб и спасённое имущество (в сомони). Ниже выводится круговая диаграмма «Распределение данных (%)», наглядно показывающая соотношение ущерба и спасённого имущества.\n\nПользовательский сценарий: аналитик задаёт период и фильтры, запускает поиск, оценивает показатели в таблице и на диаграмме, при необходимости сравнивает с прошлым годом и выгружает данные в Excel.\n\nЦенность для бизнеса: гибкая многопараметрическая отчётность превращает разрозненные записи о пожарах в управленческую информацию, поддерживает анализ динамики и обоснование решений. Подобный модуль востребован в любой системе, где нужны срезы данных, визуализация и экспорт.",
+              en: "The Fire Report screen builds aggregate incident statistics from the chosen parameters. The upper area contains a rich filter block: the “KMDA” division, the start and end dates of the period, an archive flag, the fire cause, the registration method, fire spread, loss of life, physical injuries, decisions and measures taken, and the object type.\n\nBelow the filters are the action buttons: “Search”, “Compare with last year” and “Export to Excel”. The result is shown as a summary table with the key indicators — the number of fires, the fire area (sq. m), the damage and the saved property (in somoni). A “Data distribution (%)” pie chart below the table clearly shows the ratio of damage to saved property.\n\nUser journey: an analyst sets the period and filters, runs the search, assesses the indicators in the table and the chart, optionally compares them with the previous year and exports the data to Excel.\n\nBusiness value: flexible multi-parameter reporting turns scattered fire records into management information, supporting trend analysis and decision justification. A similar module is in demand in any system that needs data slices, visualisation and export.",
+              tj: "Экрани «Ҳисоботи Сӯхторҳо» омори ҷамъбастии ҳодисаҳоро аз рӯи параметрҳои додашуда таҳия мекунад. Қисми боло блоки васеи филтрҳоро дар бар мегирад: воҳиди «КМДА», санаи аввал ва анҷоми давра, аломати архив, сабаби сӯхтор, усули бақайдгирӣ, паҳншавии сӯхтор, фавти одамон, ҷароҳати ҷисмонӣ, қарорҳо ва чораҳои қабулшуда, инчунин навъи иншоот.\n\nЗери филтрҳо тугмаҳои амал ҷойгиранд: «Ҷустуҷӯ», «Муқоиса бо соли гузашта» ва «Экспорт ба Excel». Натиҷа дар шакли ҷадвали ҷамъбастӣ бо нишондиҳандаҳои асосӣ — шумораи сӯхторҳо, масоҳати сӯхтор (метри мураббаъ), зарар ва амволи наҷотдодашуда (бо сомонӣ) — пешниҳод мешавад. Дар поён диаграммаи доиравии «Тақсимоти маълумот (%)» нисбати зарар ва амволи наҷотдодашударо ба таври равшан нишон медиҳад.\n\nРаванди истифода: таҳлилгар давра ва филтрҳоро таъин мекунад, ҷустуҷӯро оғоз менамояд, нишондиҳандаҳоро дар ҷадвал ва диаграмма арзёбӣ мекунад, ҳангоми зарурат бо соли гузашта муқоиса карда, додаҳоро ба Excel содир мекунад.\n\nАҳамият барои тиҷорат: ҳисоботи чандпараметрии фасеҳ сабтҳои парокандаи сӯхторро ба иттилооти идоракунӣ табдил медиҳад, таҳлили динамика ва асоснокии қарорҳоро дастгирӣ мекунад. Чунин модул дар ҳар системае, ки ба буришҳои додаҳо, тасвир ва содирот ниёз дорад, зарур аст.",
+            },
+          },
+          {
+            slug: "inspected-objects-report",
+            title: {
+              ru: "Отчёт по проверенным объектам",
+              en: "Inspected Objects Report",
+              tj: "Ҳисоботи иншоотҳои санҷишӣ",
+            },
+            imageSrc: "/images/projects/sohktor/inspected-objects-report.png",
+            BannerSrc: "/images/projects/sohktor/inspected-objects-report.png",
+            shortInfo: {
+              ru: "Распределение объектов по категориям пожарного риска",
+              en: "Facilities grouped by fire-risk category",
+              tj: "Тақсими иншоот аз рӯи категорияи хавфи сӯхтор",
+            },
+            fullInfo: {
+              ru: "Экран «Отчёт по проверенным объектам» (Ҳисоботи Иншоотҳои санҷишӣ) показывает распределение проверенных субъектов хозяйствования по степени пожарного риска. Блок фильтров включает степень риска, присвоенную субъекту, подразделение «КМДА», дату начала и окончания периода и признак архива.\n\nОсновной результат представлен таблицей с итоговыми показателями: общее количество объектов и разбивка по категориям риска — «Высокий», «Средний» и «Низкий» с указанием как абсолютных значений, так и процентных долей. Круговая диаграмма «Распределение данных (%)» визуализирует соотношение категорий риска цветовыми секторами. Внизу расположены кнопки «Поиск» и «Экспорт в Excel», а также детальная таблица с подробными сведениями о каждом проверенном объекте (наименование субъекта, адрес, основание проверки, даты проверок, инспектор и подразделение).\n\nПользовательский сценарий: инспектор выбирает степень риска и период, формирует отчёт, оценивает распределение объектов по категориям и выгружает данные для дальнейшей работы.\n\nЦенность для бизнеса: риск-ориентированная отчётность помогает планировать надзорные мероприятия и концентрировать ресурсы на наиболее опасных объектах. Модель risk-based выборки и визуализации применима в любой системе контроля и аудита.",
+              en: "The Inspected Objects Report screen shows how inspected business entities are distributed by fire-risk level. The filter block includes the risk level assigned to the entity, the “KMDA” division, the start and end dates of the period and an archive flag.\n\nThe main result is a table with summary figures: the total number of facilities and a breakdown by risk category — High, Medium and Low — with both absolute values and percentage shares. A “Data distribution (%)” pie chart visualises the ratio of risk categories with coloured sectors. At the bottom are “Search” and “Export to Excel” buttons, along with a detailed table with full information on each inspected facility (entity name, address, inspection grounds, inspection dates, inspector and division).\n\nUser journey: an inspector selects the risk level and period, generates the report, assesses the distribution of facilities across categories and exports the data for further work.\n\nBusiness value: risk-based reporting helps plan supervisory activities and concentrate resources on the most dangerous facilities. A risk-based sampling and visualisation model applies to any control and audit system.",
+              tj: "Экрани «Ҳисоботи Иншоотҳои санҷишӣ» тақсими субъектҳои хоҷагидории санҷидашударо аз рӯи дараҷаи хавфи сӯхтор нишон медиҳад. Блоки филтрҳо дараҷаи хавфи ба субъект додашуда, воҳиди «КМДА», санаи аввал ва анҷоми давра ва аломати архивро дар бар мегирад.\n\nНатиҷаи асосӣ дар ҷадвали дорои нишондиҳандаҳои ҷамъбастӣ пешниҳод мешавад: шумораи умумии иншоот ва тақсим аз рӯи категорияҳои хавф — «Баланд», «Миёна» ва «Паст» бо нишон додани ҳам қиматҳои мутлақ ва ҳам ҳиссаҳои фоизӣ. Диаграммаи доиравии «Тақсимоти маълумот (%)» нисбати категорияҳои хавфро бо секторҳои рангӣ тасвир мекунад. Дар поён тугмаҳои «Ҷустуҷӯ» ва «Экспорт ба Excel», инчунин ҷадвали муфассал бо маълумоти ҳар иншооти санҷидашуда (номи субъект, суроға, асоси санҷиш, санаҳои санҷиш, назоратчӣ ва воҳид) ҷойгиранд.\n\nРаванди истифода: назоратчӣ дараҷаи хавф ва давраро интихоб мекунад, ҳисоботро таҳия менамояд, тақсими иншоотро аз рӯи категорияҳо арзёбӣ карда, додаҳоро барои кори минбаъда содир мекунад.\n\nАҳамият барои тиҷорат: ҳисоботи ба хавф нигаронидашуда ба банақшагирии чорабиниҳои назоратӣ ва мутамарказ кардани захираҳо ба иншооти хавфноктарин кумак мекунад. Модели интихоб ва тасвири ба хавф асосёфта барои ҳар системаи назорат ва аудит мувофиқ аст.",
+            },
+          },
+          {
+            slug: "fire-register",
+            title: {
+              ru: "Реестр пожаров",
+              en: "Fire Register",
+              tj: "Феҳристи сӯхторҳо",
+            },
+            imageSrc: "/images/projects/sohktor/fire-register.png",
+            BannerSrc: "/images/projects/sohktor/fire-register.png",
+            shortInfo: {
+              ru: "Табличный список происшествий с поиском и пагинацией",
+              en: "A tabular list of incidents with search and pagination",
+              tj: "Рӯйхати ҷадвалии ҳодисаҳо бо ҷустуҷӯ ва саҳифабандӣ",
+            },
+            fullInfo: {
+              ru: "Реестр пожаров — это табличное представление всех зарегистрированных происшествий, дающее оператору полный обзор данных. В верхней части расположены строка поиска (Ҷустуҷӯ...), выпадающий фильтр по типу записи (Ҳамаи намуд), кнопка обновления и кнопка «+» для добавления новой записи, которая ведёт к форме регистрации пожара.\n\nОсновную область занимает широкая таблица с колонками: ИД, «КМДА», дата и время начала пожара, наименование и адрес объекта с его принадлежностью, причина пожара и виновники, площадь пожара (кв. м), ущерб и спасённое имущество (в сомони), номер информационной книги (КА), способ регистрации и сведения о распространении пожара. Горизонтальная прокрутка обеспечивает доступ ко всем полям, а чекбоксы в первой колонке позволяют выбирать записи для групповых операций.\n\nВнизу таблицы находится постраничная навигация с номерами страниц, кнопкой перехода к следующей и последней странице, а также селектор количества строк на странице.\n\nПользовательский сценарий: оператор ищет нужное происшествие по ключевым словам или фильтру, просматривает показатели в таблице, открывает запись для редактирования или добавляет новую через кнопку «+».\n\nЦенность для бизнеса: реестр с поиском, фильтрами и пагинацией обеспечивает быстрый доступ к большим объёмам данных и удобное ведение учёта. Такой паттерн является основой любой административной системы работы со списками записей.",
+              en: "The fire register is a tabular view of all recorded incidents that gives the operator a complete overview of the data. The top area holds a search field, a record-type dropdown filter, a refresh button and a “+” button for adding a new record, which opens the fire registration form.\n\nThe main area is a wide table with columns: ID, “KMDA”, the fire start date and time, the facility name and address with its affiliation, the fire cause and responsible parties, the fire area (sq. m), the damage and the saved property (in somoni), the information-book number, the registration method and details of the fire's spread. Horizontal scrolling provides access to all fields, while checkboxes in the first column let the user select records for bulk operations.\n\nAt the bottom of the table is pagination with page numbers, buttons to move to the next and last page, and a selector for the number of rows per page.\n\nUser journey: an operator searches for the required incident by keywords or filter, reviews the indicators in the table, opens a record for editing or adds a new one with the “+” button.\n\nBusiness value: a register with search, filters and pagination provides fast access to large volumes of data and convenient record keeping. This pattern is the foundation of any administrative system that works with lists of records.",
+              tj: "Феҳристи сӯхторҳо намоиши ҷадвалии ҳамаи ҳодисаҳои бақайдгирифташуда буда, ба оператор шарҳи мукаммали додаҳоро медиҳад. Дар қисми боло сатри ҷустуҷӯ (Ҷустуҷӯ...), филтри кушодашаванда аз рӯи навъи сабт (Ҳамаи намуд), тугмаи навсозӣ ва тугмаи «+» барои илова кардани сабти нав, ки ба шакли бақайдгирии сӯхтор мебарад, ҷойгиранд.\n\nМайдони асосиро ҷадвали васеъ бо сутунҳо ишғол мекунад: ИД, «КМДА», таърих ва вақти сар задани сӯхтор, ному нишонӣ ва суроғаи иншоот бо мансубияти он, сабаби сӯхтор ва шахсони сабабгор, масоҳати сӯхтор (метри мураббаъ), зарар ва амволи наҷотдодашуда (бо сомонӣ), рақами китоби ахборотӣ (КА), усули бақайдгирӣ ва маълумот дар бораи паҳншавии сӯхтор. Ҳаракати уфуқӣ дастрасӣ ба ҳамаи майдонҳоро таъмин мекунад, катакчаҳо дар сутуни аввал бошанд, интихоби сабтҳоро барои амалиёти гурӯҳӣ имкон медиҳанд.\n\nДар поёни ҷадвал саҳифабандӣ бо рақамҳои саҳифаҳо, тугмаҳои гузариш ба саҳифаи навбатӣ ва охирин, инчунин интихобкунандаи шумораи сатрҳо дар саҳифа ҷойгир аст.\n\nРаванди истифода: оператор ҳодисаи заруриро аз рӯи калимаҳои калидӣ ё филтр меҷӯяд, нишондиҳандаҳоро дар ҷадвал мебинад, сабтро барои таҳрир мекушояд ё сабти навро тавассути тугмаи «+» илова мекунад.\n\nАҳамият барои тиҷорат: феҳрист бо ҷустуҷӯ, филтрҳо ва саҳифабандӣ дастрасии зудро ба ҳаҷми зиёди додаҳо ва пешбурди осони баҳисобгириро таъмин мекунад. Чунин намуна асоси ҳар системаи маъмурии кор бо рӯйхати сабтҳо мебошад.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     imageSrc: "/images/projects/pic.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Docker", "REST API"],
+    tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
     slug: "digital-tajikistan",
     gallery: [
       "/images/projects/pic/gallery-1.png",
@@ -82,7 +344,7 @@ export const ProductSite: ProductSiteItem[] = [
   {
     imageSrc: "/images/projects/mavjisomon.webp",
     year: "2024",
-    tags: ["Node.js", "JavaScript", "MS SQL", "Bootstrap", "REST API"],
+    tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "mavji-somon",
     gallery: [
       "/images/projects/mavjisomon/gallery-1.png",
@@ -2217,7 +2479,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/livechat.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "JavaScript", "MS SQL", "Bootstrap", "WebSocket"],
+    tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "WebSocket"],
     slug: "livechat-tj",
     gallery: [
       "/images/projects/livechat/gallery-1.png",
@@ -2229,14 +2491,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/ttl.webp",
     year: "2024",
-    tags: [
-      "Node.js",
-      "ASP.NET Core",
-      "JavaScript",
-      "MS SQL",
-      "Bootstrap",
-      "REST API",
-    ],
+    tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "telecomm",
     gallery: [
       "/images/projects/ttl/gallery-1.png",
@@ -2249,13 +2504,13 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/navo.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "navo",
   },
   {
     imageSrc: "/images/projects/somontv.webp",
     year: "2024",
-    tags: ["ASP.NET Core", "React", "PostgreSQL", "Flutter", "Nginx"],
+    tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "somon-tv",
     gallery: [
       "/images/projects/somontv/gallery-1.png",
@@ -2267,7 +2522,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
   {
     imageSrc: "/images/projects/zudsms.webp",
     year: "2024",
-    tags: ["Node.js", "JavaScript", "MS SQL", "HTML5 / CSS3", "REST API"],
+    tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
     slug: "zudsms",
     gallery: [
       "/images/projects/zudSMS/gallery-1.png",
@@ -2281,13 +2536,11 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     imageSrc: "/images/projects/sunduk.webp",
     year: "2020",
     tags: [
-      "PHP-Framework Kohana",
+      "PHP (Kohana Framework)",
       "JavaScript",
-      "HTML5",
-      "CSS3",
-      "JQuery",
-      "Underscore.js",
-      "Сервер БД MySQL",
+      "jQuery",
+      "HTML5 / CSS3",
+      "MySQL",
     ],
     slug: "sunduk-tv",
     gallery: [
@@ -2304,7 +2557,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     tags: [
       "PHP (Laravel Framework)",
       "JavaScript",
-      "MS SQL",
+      "MySQL",
       "HTML5 / CSS3",
       "REST API",
     ],
@@ -2322,7 +2575,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     tags: [
       "PHP (Laravel Framework)",
       "JavaScript",
-      "MS SQL",
+      "MySQL",
       "HTML5 / CSS3",
       "REST API",
     ],
@@ -2334,7 +2587,7 @@ An important business module is the built-in billing system (PaymentGuide.tsx an
     tags: [
       "PHP (Laravel Framework)",
       "JavaScript",
-      "MS SQL",
+      "MySQL",
       "HTML5 / CSS3",
       "REST API",
     ],
