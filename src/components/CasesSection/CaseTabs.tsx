@@ -55,10 +55,14 @@ export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
         {activeGroup.items.map((item, idx) => {
           const href = item.slug ? `/${lang}/cases/${projectSlug}/${item.slug}` : '#';
           const cardTitle = item.slug
-            ? t(`projectComponents.${projectSlug}.${item.slug}.title`, item.title)
+            ? t(`projectComponents.${projectSlug}.${item.slug}.title`, {
+                defaultValue: item.title,
+              })
             : item.title;
           const cardShortInfo = item.slug
-            ? t(`projectComponents.${projectSlug}.${item.slug}.shortInfo`, item.shortInfo)
+            ? t(`projectComponents.${projectSlug}.${item.slug}.shortInfo`, {
+                defaultValue: item.shortInfo,
+              })
             : item.shortInfo;
           return (
             <Link key={idx} href={href} className={styles.card}>
