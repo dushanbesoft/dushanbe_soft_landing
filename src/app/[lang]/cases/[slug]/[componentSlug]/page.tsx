@@ -144,11 +144,13 @@ export default async function ComponentDetailsPage({
   }
 
   let component = null;
+  let componentGroup = null;
   if (project.projectComponents) {
     for (const group of project.projectComponents) {
       const found = group.items.find((item) => item.slug === componentSlug);
       if (found) {
         component = found;
+        componentGroup = group;
         break;
       }
     }
@@ -202,7 +204,12 @@ export default async function ComponentDetailsPage({
               // backgroundSize: "cover",
             }}
           ></div> */}
-          <img src={component.imageSrc}  className={styles.hero} alt="imageSrc" />
+          <img 
+            src={component.imageSrc}  
+            className={styles.hero} 
+            style={componentGroup?.platform === "mobile" ? { maxHeight: "80vh", maxWidth: "450px", objectFit: "contain", margin: "0 auto", display: "block" } : undefined}
+            alt="imageSrc" 
+          />
 
           {hasSiblings && prevSlug && (
             <Link
