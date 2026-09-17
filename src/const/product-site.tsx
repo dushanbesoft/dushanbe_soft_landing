@@ -10,7 +10,7 @@ export interface ProductSiteItem {
   gallery?: string[];
   projectComponents?: {
     tabName: TranslatedString;
-    platform?: string; 
+    platform?: string;
     items: {
       slug: string;
       title: TranslatedString;
@@ -199,6 +199,159 @@ export const ProductSite: ProductSiteItem[] = [
             },
           },
           {
+            slug: "announcement-component",
+            title: {
+              ru: "Блок объявлений",
+              en: "Announcements Block",
+              tj: "Блоки эълонҳо",
+            },
+            imageSrc:
+              "/images/projects/pic/web/announcement-on-the-homepage.png",
+            BannerSrc:
+              "/images/projects/pic/web/announcement-on-the-homepage.png",
+            shortInfo: {
+              ru: "Актуальные объявления и тендеры проекта",
+              en: "Current project announcements and tenders",
+              tj: "Эълонҳо ва тендерҳои ҷории лоиҳа",
+            },
+            fullInfo: {
+              ru: "Интерактивный блок объявлений позволяет оперативно информировать посетителей сайта о предстоящих событиях, вакансиях, конкурсах и открытых тендерах в рамках проекта. Каждое объявление оформлено в виде карточки с датой, кратким описанием и ссылкой для подробного ознакомления. Это обеспечивает прозрачность процессов закупок и найма, а также упрощает доступ заинтересованных лиц к важной информации.",
+              en: "The interactive announcements block allows visitors to be promptly informed about upcoming events, vacancies, competitions, and open tenders within the project. Each announcement is designed as a card with a date, a brief description, and a link for detailed reading. This ensures the transparency of procurement and hiring processes, and also simplifies access to important information for interested parties.",
+              tj: "Блоки интерактивии эълонҳо имкон медиҳад, ки меҳмонони сомона фавран дар бораи рӯйдодҳои дарпешистода, ҷойҳои холӣ, озмунҳо ва тендерҳои кушода дар доираи лоиҳа огоҳ карда шаванд. Ҳар як эълон дар шакли корт бо сана, тавсифи кӯтоҳ ва истинод барои шиносоии муфассал таҳия шудааст. Ин шаффофияти равандҳои харид ва кирояро таъмин мекунад ва инчунин дастрасии шахсони ҳавасмандро ба иттилооти муҳим осон менамояд.",
+            },
+          },
+          {
+            slug: "complaint-mechanism",
+            title: {
+              ru: "Механизм подачи жалоб",
+              en: "Complaint Handling Mechanism",
+              tj: "Механизми баррасии шикоятҳо",
+            },
+            imageSrc:
+              "/images/projects/pic/web/complaint-handling-mechanism-on-the-homepage.png",
+            BannerSrc:
+              "/images/projects/pic/web/complaint-handling-mechanism-on-the-homepage.png",
+            shortInfo: {
+              ru: "Форма обратной связи для граждан",
+              en: "Feedback form for citizens",
+              tj: "Шакли алоқаи баръакс барои шаҳрвандон",
+            },
+            fullInfo: {
+              ru: "В соответствии с требованиями Всемирного банка и государственными стандартами прозрачности, на портале реализован блок Механизма подачи и рассмотрения жалоб (GRM). Граждане и заинтересованные стороны могут легко найти инструкции и прямую форму для отправки обращений, отзывов или жалоб. Форма обеспечивает конфиденциальность и позволяет прикреплять файлы, что гарантирует соблюдение социальных и экологических стандартов проекта.",
+              en: "In accordance with World Bank requirements and state transparency standards, the portal features a Grievance Redress Mechanism (GRM) block. Citizens and stakeholders can easily find instructions and a direct form to submit appeals, feedback, or complaints. The form ensures confidentiality and allows for file attachments, guaranteeing compliance with the social and environmental standards of the project.",
+              tj: "Мутобиқи талаботи Бонки ҷаҳонӣ ва стандартҳои давлатии шаффофият, дар портал блоки Механизми баррасӣ ва ҳалли шикоятҳо (GRM) амалӣ карда шудааст. Шаҳрвандон ва ҷонибҳои манфиатдор метавонанд дастурҳо ва шакли мустақимро барои ирсоли муроҷиатҳо, фикру мулоҳизаҳо ё шикоятҳо ба осонӣ пайдо кунанд. Шакл махфиятро таъмин мекунад ва имкон медиҳад, ки файлҳо замима карда шаванд, ки риояи стандартҳои иҷтимоӣ ва экологии лоиҳаро кафолат медиҳад.",
+            },
+          },
+          {
+            slug: "news-homepage-component",
+            title: {
+              ru: "Лента новостей на главной",
+              en: "News Feed on Homepage",
+              tj: "Лентаи хабарҳо дар саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/pic/web/news-on-the-homepage.png",
+            BannerSrc: "/images/projects/pic/web/news-on-the-homepage.png",
+            shortInfo: {
+              ru: "Последние новости и события проекта",
+              en: "Latest project news and events",
+              tj: "Навтарин хабарҳо ва рӯйдодҳои лоиҳа",
+            },
+            fullInfo: {
+              ru: "Новостной блок на главной странице автоматически подтягивает самые свежие публикации, чтобы держать посетителей в курсе хода реализации проекта. Интерфейс представлен в виде стильной карусели или сетки карточек с превью изображений, датой и заголовком. При клике на карточку пользователь переходит на полную страницу статьи. Блок спроектирован так, чтобы привлекать внимание, но не перегружать главную страницу текстом.",
+              en: "The news block on the homepage automatically pulls the latest publications to keep visitors updated on the project's progress. The interface is presented as a stylish carousel or a grid of cards with image previews, date, and title. Clicking on a card takes the user to the full article page. The block is designed to attract attention without overloading the main page with text.",
+              tj: "Блоки хабарҳо дар саҳифаи асосӣ ба таври худкор нашрҳои навтаринро мегирад, то меҳмононро аз ҷараёни татбиқи лоиҳа огоҳ созад. Интерфейс дар шакли карусели услубӣ ё шабакаи кортҳо бо пешнамоиши тасвирҳо, сана ва сарлавҳа пешниҳод шудааст. Бо пахш кардани корт, корбар ба саҳифаи пурраи мақола мегузарад. Блок тавре тарҳрезӣ шудааст, ки таваҷҷӯҳро ҷалб кунад, аммо саҳифаи асосиро бо матн аз ҳад зиёд пур накунад.",
+            },
+          },
+          {
+            slug: "president-component",
+            title: {
+              ru: "Цитаты и выступления Лидера Нации",
+              en: "Quotes and Speeches of the Leader of the Nation",
+              tj: "Иқтибосҳо ва суханрониҳои Пешвои Миллат",
+            },
+            imageSrc:
+              "/images/projects/pic/web/prezedent-component-on-the-homepage.png",
+            BannerSrc:
+              "/images/projects/pic/web/prezedent-component-on-the-homepage.png",
+            shortInfo: {
+              ru: "Раздел с важными заявлениями и цитатами Главы государства",
+              en: "Section with important statements and quotes from the Head of State",
+              tj: "Бахши изҳорот ва иқтибосҳои муҳими Роҳбари давлат",
+            },
+            fullInfo: {
+              ru: "На главной странице портала выделен специальный блок, посвященный Основателю мира и национального единства — Лидеру нации, Президенту Республики Таджикистан уважаемому Эмомали Рахмону. В этом блоке размещаются ключевые цитаты, выдержки из посланий Парламенту и важные государственные инициативы в сфере цифровизации. Блок оформлен в строгом государственном стиле с использованием качественных фотографий и официальной символики, что подчеркивает высокий статус проекта и его значимость на национальном уровне.",
+              en: "A special block on the portal's homepage is dedicated to the Founder of Peace and National Unity — Leader of the Nation, President of the Republic of Tajikistan, Emomali Rahmon. This block features key quotes, excerpts from addresses to the Parliament, and important state initiatives in the field of digitalization. The block is designed in a strict state style using high-quality photographs and official symbols, which emphasizes the high status of the project and its importance at the national level.",
+              tj: "Дар саҳифаи асосии портал блоки махсус бахшида ба Асосгузори сулҳу ваҳдати миллӣ — Пешвои миллат, Президенти Ҷумҳурии Тоҷикистон муҳтарам Эмомалӣ Раҳмон ҷудо карда шудааст. Дар ин блок иқтибосҳои калидӣ, порчаҳо аз паёмҳо ба Парлумон ва ташаббусҳои муҳими давлатӣ дар соҳаи рақамикунонӣ ҷойгир карда мешаванд. Блок дар услуби қатъии давлатӣ бо истифода аз аксҳои баландсифат ва рамзҳои расмӣ таҳия шудааст, ки мақоми баланди лоиҳа ва аҳамияти онро дар сатҳи миллӣ таъкид мекунад.",
+            },
+          },
+
+          {
+            slug: "projects-homepage-component",
+            title: {
+              ru: "Ключевые подпроекты",
+              en: "Key Subprojects",
+              tj: "Зерлоиҳаҳои калидӣ",
+            },
+            imageSrc:
+              "/images/projects/pic/web/projects-component-on-the-homepage.png",
+            BannerSrc:
+              "/images/projects/pic/web/projects-component-on-the-homepage.png",
+            shortInfo: {
+              ru: "Направления и инициативы TDF",
+              en: "Directions and initiatives of TDF",
+              tj: "Самтҳо ва ташаббусҳои TDF",
+            },
+            fullInfo: {
+              ru: "Секция проектов демонстрирует основные направления деятельности и подпроекты, реализуемые в рамках Tajikistan Digital Foundations. Блок визуализирует инициативы с помощью иконок, кратких описаний и индикаторов статуса. Это позволяет посетителям быстро понять масштаб государственного проекта, охватывающего различные аспекты цифровой экономики: от инфраструктуры до электронного правительства и развития цифровых навыков.",
+              en: "The projects section demonstrates the main areas of activity and subprojects implemented under the Tajikistan Digital Foundations. The block visualizes initiatives using icons, brief descriptions, and status indicators. This allows visitors to quickly understand the scale of the state project, covering various aspects of the digital economy: from infrastructure to e-government and the development of digital skills.",
+              tj: "Бахши лоиҳаҳо самтҳои асосии фаъолият ва зерлоиҳаҳоеро, ки дар доираи Tajikistan Digital Foundations амалӣ мешаванд, намоиш медиҳад. Блок ташаббусҳоро бо истифода аз нишонаҳо, тавсифҳои кӯтоҳ ва нишондиҳандаҳои ҳолат визуализатсия мекунад. Ин ба меҳмонон имкон медиҳад, ки миқёси лоиҳаи давлатиро, ки ҷанбаҳои гуногуни иқтисодиёти рақамиро фаро мегирад: аз инфрасохтор то ҳукумати электронӣ ва рушди малакаҳои рақамӣ, зуд дарк кунанд.",
+            },
+          },
+          {
+            slug: "statistics-component",
+            title: {
+              ru: "Статистика и показатели",
+              en: "Statistics and Indicators",
+              tj: "Омор ва нишондиҳандаҳо",
+            },
+            imageSrc:
+              "/images/projects/pic/web/statistics-and-indicators-on-the-homepage.png",
+            BannerSrc:
+              "/images/projects/pic/web/statistics-and-indicators-on-the-homepage.png",
+            shortInfo: {
+              ru: "Ключевые цифры и достижения проекта",
+              en: "Key figures and achievements of the project",
+              tj: "Рақамҳои калидӣ ва дастовардҳои лоиҳа",
+            },
+            fullInfo: {
+              ru: "Блок статистики наглядно отображает ключевые индикаторы успешности проекта. С помощью анимированных счетчиков и инфографики выводятся такие данные, как количество обученных специалистов, реализованные сервисы электронного правительства, объем инвестиций или охват населения цифровыми услугами. Цифровые показатели повышают доверие к проекту и демонстрируют реальные результаты работы понятным и визуально привлекательным способом.",
+              en: "The statistics block clearly displays key success indicators of the project. Using animated counters and infographics, it shows data such as the number of trained specialists, implemented e-government services, investment volume, or population coverage with digital services. Numerical indicators increase trust in the project and demonstrate real results in an understandable and visually appealing way.",
+              tj: "Блоки омор нишондиҳандаҳои калидии муваффақияти лоиҳаро ба таври аёнӣ намоиш медиҳад. Бо ёрии ҳисобкунакҳои аниматсионӣ ва инфографика маълумотҳо ба монанди шумораи мутахассисони омӯзонидашуда, хидматрасониҳои амалишудаи ҳукумати электронӣ, ҳаҷми сармоягузорӣ ё фарогирии аҳолӣ бо хидматрасониҳои рақамӣ нишон дода мешаванд. Нишондиҳандаҳои рақамӣ эътимодро ба лоиҳа баланд мебардоранд ва натиҷаҳои воқеии корро бо роҳи фаҳмо ва ҷолиб намоиш медиҳанд.",
+            },
+          },
+
+          {
+            slug: "footer-component",
+            title: {
+              ru: "Подвал сайта",
+              en: "Website Footer",
+              tj: "Поёни сомона",
+            },
+            imageSrc: "/images/projects/pic/web/footer-component.png",
+            BannerSrc: "/images/projects/pic/web/footer-component.png",
+            shortInfo: {
+              ru: "Контактная информация и полезные ссылки",
+              en: "Contact information and useful links",
+              tj: "Маълумоти тамос ва истинодҳои муфид",
+            },
+            fullInfo: {
+              ru: "Информативный подвал (Footer) портала содержит всю необходимую вспомогательную информацию. Здесь размещены контактные данные (адрес, телефон, email), продублировано основное навигационное меню для удобства пользователей, а также иконки социальных сетей для перехода на официальные страницы проекта. Дополнительно в подвале могут располагаться логотипы партнеров, информация об авторских правах и ссылки на политику конфиденциальности.",
+              en: "The informative footer of the portal contains all the necessary supporting information. It houses contact details (address, phone, email), a duplicated main navigation menu for user convenience, and social media icons for accessing official project pages. Additionally, the footer may contain partner logos, copyright information, and links to the privacy policy.",
+              tj: "Қисми поёнии (Footer) иттилоотии портал тамоми маълумоти ёрирасони заруриро дар бар мегирад. Дар ин ҷо маълумоти тамос (суроға, телефон, почтаи электронӣ) ҷойгир шудааст, менюи асосии навигатсионӣ барои роҳати корбарон такрор карда шудааст, инчунин нишонаҳои шабакаҳои иҷтимоӣ барои гузариш ба саҳифаҳои расмии лоиҳа мавҷуданд. Илова бар ин, дар поён метавонанд логотипҳои шарикон, маълумот дар бораи ҳуқуқи муаллиф ва истинодҳо ба сиёсати махфият ҷойгир карда шаванд.",
+            },
+          },
+
+          {
             slug: "news",
             title: {
               ru: "Новости",
@@ -218,6 +371,28 @@ export const ProductSite: ProductSiteItem[] = [
               tj: "Бахши «Хабарҳо» нашрҳоро дар бораи ҷараёни лоиҳа ба тартиб меорад. Зери сарлавҳаи «News» ва пайраҳаи навигатсионӣ майдони ҷустуҷӯи хабарҳо ҷойгир аст ва дар поён — варақаи «All News» ва лентаи мавод. Ҳар хабар ҳамчун корт бо акси чорабинӣ, нишонаи гурӯҳи «News», санаи нашр, сарлавҳа ва пайванди «More Details» таҳия шудааст. Дар экран маводи вохӯриҳои корӣ ва машваратҳо оид ба лоиҳа пешниҳод шудааст, ки ҳамроҳии мунтазами иттилоотиро нишон медиҳад.\n\nРаванди истифода: корбар лентаи хабарҳоро аз назар мегузаронад, ҳангоми зарурат дархостро тавассути ҷустуҷӯ мушаххас мекунад ва нашри ҷолибро бо пайванди «More Details» мекушояд.\n\nАҳамият барои тиҷорат: модули хабарҳо шаффофиятро дастгирӣ мекунад ва шунавандагонро аз ҷараёни корҳо огоҳ месозад. Формати ягонаи кортҳо бо сана ва акс дарки ҷараёни нашрҳоро осон мекунад ва таассуроти майдончаи фаъол ва мунтазам навшавандаро эҷод менамояд.",
             },
           },
+
+          {
+            slug: "announcements-page",
+            title: {
+              ru: "Страница объявлений",
+              en: "Announcements Page",
+              tj: "Саҳифаи эълонҳо",
+            },
+            imageSrc: "/images/projects/pic/web/announcements-page.png",
+            BannerSrc: "/images/projects/pic/web/announcements-page.png",
+            shortInfo: {
+              ru: "Развернутый список всех тендеров и объявлений",
+              en: "Detailed list of all tenders and announcements",
+              tj: "Рӯйхати муфассали ҳамаи тендерҳо ва эълонҳо",
+            },
+            fullInfo: {
+              ru: "На странице объявлений собран полный архив всех актуальных и прошедших тендеров, вакансий и важных уведомлений в рамках проекта. Пользователи могут использовать встроенный поиск и фильтры для быстрого нахождения нужной информации. Каждое объявление содержит подробное описание, сроки и необходимые документы для скачивания.",
+              en: "The announcements page contains a complete archive of all current and past tenders, vacancies, and important notifications within the project. Users can utilize built-in search and filters to quickly find the necessary information. Each announcement includes a detailed description, deadlines, and required documents for download.",
+              tj: "Дар саҳифаи эълонҳо бойгонии пурраи ҳамаи тендерҳо, ҷойҳои холӣ ва огоҳиномаҳои муҳими ҷорӣ ва гузашта дар доираи лоиҳа ҷамъ оварда шудааст. Истифодабарандагон метавонанд аз ҷустуҷӯ ва филтрҳои дарунсохт барои зуд ёфтани маълумоти зарурӣ истифода баранд. Ҳар як эълон тавсифи муфассал, мӯҳлатҳо ва ҳуҷҷатҳои заруриро барои зеркашӣ дар бар мегирад.",
+            },
+          },
+
           {
             slug: "projects",
             title: {
@@ -276,6 +451,92 @@ export const ProductSite: ProductSiteItem[] = [
               ru: "Раздел «Структура» отображает организационную схему учреждения. В верхней части размещён полный заголовок о структуре Государственного учреждения при Исполнительном аппарате Президента и хлебные крошки. Ниже, под подзаголовком «Leadership», расположена иерархическая диаграмма: на вершине — «Director», под ним «Director’s Assistant» и «HR Specialist», далее — подразделения «ICT Department», «Deputy Director», «Accounting» и «Purchasing Department» с указанием ключевых должностей (координатор, специалист по мониторингу и оценке, главный бухгалтер, главный специалист по закупкам). Блоки соединены линиями, отражающими подчинённость.\n\nПользовательский сценарий: посетитель изучает схему сверху вниз, определяет состав подразделений и находит должность или отдел, отвечающий за интересующее направление.\n\nЦенность для бизнеса: визуальная организационная схема наглядно показывает состав и иерархию организации. Такой формат полезен для институциональных сайтов, где важно продемонстрировать прозрачную структуру управления и распределение ответственности.",
               en: "The Structure section displays the institution’s organisational chart. The top holds the full heading about the structure of the State Institution under the Executive Office of the President, together with breadcrumbs. Below, under the “Leadership” subheading, is a hierarchical diagram: at the top is the Director, followed by the Director’s Assistant and HR Specialist, then the ICT Department, Deputy Director, Accounting and Purchasing Department units with key positions indicated (coordinator, monitoring and evaluation specialist, chief accountant, chief procurement specialist). The blocks are connected by lines reflecting the reporting order.\n\nUser journey: the visitor studies the chart from top to bottom, identifies the composition of the units and finds the position or department responsible for the area of interest.\n\nBusiness value: a visual organisational chart clearly shows an organisation’s composition and hierarchy. This format is useful for institutional sites where it is important to demonstrate a transparent management structure and the distribution of responsibility.",
               tj: "Бахши «Сохтор» нақшаи ташкилии муассисаро намоиш медиҳад. Дар қисми боло сарлавҳаи пурра дар бораи сохтори Муассисаи давлатии назди Дастгоҳи иҷроияи Президент ва пайраҳаи навигатсионӣ ҷойгиранд. Дар поён, зери зерсарлавҳаи «Leadership», диаграммаи зинавӣ ҷой дорад: дар боло «Director», зери он «Director’s Assistant» ва «HR Specialist», сипас воҳидҳои «ICT Department», «Deputy Director», «Accounting» ва «Purchasing Department» бо нишон додани вазифаҳои асосӣ (ҳамоҳангсоз, мутахассиси мониторинг ва арзёбӣ, саршумордор, сармутахассиси харид). Блокҳо бо хатҳое, ки тобеиятро инъикос мекунанд, пайваст шудаанд.\n\nРаванди истифода: корбар нақшаро аз боло ба поён меомӯзад, ҳайати воҳидҳоро муайян мекунад ва вазифа ё шуъбаи масъули самти дилхоҳро меёбад.\n\nАҳамият барои тиҷорат: нақшаи аёнии ташкилӣ ҳайат ва зинанизоми созмонро равшан нишон медиҳад. Ин формат барои сомонаҳои институтсионалӣ муфид аст, ки дар онҳо нишон додани сохтори шаффофи идоракунӣ ва тақсими масъулият муҳим аст.",
+            },
+          },
+          {
+            slug: "structure-content-page",
+            title: {
+              ru: "Страница структуры",
+              en: "Structure Page",
+              tj: "Саҳифаи сохтор",
+            },
+            imageSrc: "/images/projects/pic/web/structure-content-page.png",
+            BannerSrc: "/images/projects/pic/web/structure-content-page.png",
+            shortInfo: {
+              ru: "Организационная иерархия",
+              en: "Organizational hierarchy",
+              tj: "Зинанизоми ташкилӣ",
+            },
+            fullInfo: {
+              ru: "На странице структуры подробно расписана иерархия и внутреннее устройство организации. Блок визуализирует связи между руководством, департаментами и отдельными специалистами. Интерактивная схема позволяет пользователям лучше понять распределение обязанностей и быстро найти нужный отдел.",
+              en: "The structure page details the hierarchy and internal organization of the institution. The block visualizes the relationships between management, departments, and individual specialists. An interactive chart allows users to better understand the distribution of responsibilities and quickly find the required department.",
+              tj: "Дар саҳифаи сохтор зинанизом ва сохтори дохилии ташкилот ба таври муфассал баён шудааст. Блок робитаҳои байни роҳбарият, раёсатҳо ва мутахассисони алоҳидаро намоиш медиҳад. Нақшаи интерактивӣ ба корбарон имкон медиҳад, ки тақсимоти вазифаҳоро беҳтар дарк кунанд ва шуъбаи лозимиро зуд пайдо намоянд.",
+            },
+          },
+          {
+            slug: "achievement-on-the-aboutpage",
+            title: {
+              ru: "Достижения",
+              en: "Achievements",
+              tj: "Дастовардҳо",
+            },
+            imageSrc:
+              "/images/projects/pic/web/achievement-on-the-aboutpage.png",
+            BannerSrc:
+              "/images/projects/pic/web/achievement-on-the-aboutpage.png",
+            shortInfo: {
+              ru: "Успехи и награды проекта",
+              en: "Project successes and awards",
+              tj: "Муваффақиятҳо ва ҷоизаҳои лоиҳа",
+            },
+            fullInfo: {
+              ru: "Раздел «Достижения» демонстрирует ключевые успехи и награды проекта. В нем представлены значимые вехи развития, полученные сертификаты и признание на национальном или международном уровне. Это повышает доверие к платформе и подчеркивает ее успешность и важность.",
+              en: "The Achievements section showcases the key successes and awards of the project. It features significant milestones, certificates received, and recognition at the national or international level. This builds trust in the platform and highlights its success and importance.",
+              tj: "Бахши «Дастовардҳо» муваффақиятҳои калидӣ ва ҷоизаҳои лоиҳаро намоиш медиҳад. Дар он марҳилаҳои муҳими рушд, сертификатҳои гирифташуда ва эътироф дар сатҳи миллӣ ё байналмилалӣ пешниҳод шудаанд. Ин эътимодро ба платформа баланд мебардорад ва муваффақият ва аҳамияти онро таъкид мекунад.",
+            },
+          },
+          {
+            slug: "results-project-on-the-aboutpage",
+            title: {
+              ru: "Результаты проекта",
+              en: "Project Results",
+              tj: "Натиҷаҳои лоиҳа",
+            },
+            imageSrc:
+              "/images/projects/pic/web/results-project-on-the-aboutpage.png",
+            BannerSrc:
+              "/images/projects/pic/web/results-project-on-the-aboutpage.png",
+            shortInfo: {
+              ru: "Итоги и показатели эффективности",
+              en: "Outcomes and performance indicators",
+              tj: "Натиҷаҳо ва нишондиҳандаҳои самаранокӣ",
+            },
+            fullInfo: {
+              ru: "В разделе «Результаты проекта» подводятся итоги работы платформы. Здесь публикуются количественные и качественные показатели эффективности, успешные кейсы внедрения, статистика удовлетворенности пользователей и отчеты о проделанной работе. Это обеспечивает полную прозрачность и демонстрирует реальную пользу проекта для общества.",
+              en: "The Project Results section summarizes the outcomes of the platform's operation. It publishes quantitative and qualitative performance indicators, successful implementation cases, user satisfaction statistics, and progress reports. This ensures full transparency and demonstrates the real benefits of the project to society.",
+              tj: "Дар бахши «Натиҷаҳои лоиҳа» натиҷаҳои кори платформа ҷамъбаст карда мешаванд. Дар ин ҷо нишондиҳандаҳои миқдорӣ ва сифатии самаранокӣ, ҳолатҳои муваффақи амалисозӣ, омори қаноатмандии корбарон ва ҳисоботҳо дар бораи корҳои анҷомёфта нашр карда мешаванд. Ин шаффофияти пурраро таъмин мекунад ва манфиати воқеии лоиҳаро барои ҷомеа намоиш медиҳад.",
+            },
+          },
+          {
+            slug: "contacts-and-benefit-on-the-aboutpage",
+            title: {
+              ru: "Контакты и преимущества",
+              en: "Contacts and Benefits",
+              tj: "Тамосҳо ва афзалиятҳо",
+            },
+            imageSrc:
+              "/images/projects/pic/web/contacts-and-benefit-on-the-aboutpage.png",
+            BannerSrc:
+              "/images/projects/pic/web/contacts-and-benefit-on-the-aboutpage.png",
+            shortInfo: {
+              ru: "Связь с нами и плюсы проекта",
+              en: "Contact us and project benefits",
+              tj: "Тамос бо мо ва бартариҳои лоиҳа",
+            },
+            fullInfo: {
+              ru: "Блок «Контакты и преимущества» объединяет контактную информацию для обратной связи с описанием главных достоинств проекта. Пользователи могут легко найти телефоны, адреса и электронную почту, а также ознакомиться с ключевыми выгодами от использования платформы: удобством, безопасностью и инновационным подходом.",
+              en: "The Contacts and Benefits block combines contact information for feedback with a description of the project's main advantages. Users can easily find phone numbers, addresses, and emails, as well as learn about the key benefits of using the platform: convenience, security, and an innovative approach.",
+              tj: "Блоки «Тамосҳо ва афзалиятҳо» маълумоти тамосро барои алоқаи баръакс бо тавсифи бартариҳои асосии лоиҳа муттаҳид мекунад. Истифодабарандагон метавонанд телефонҳо, суроғаҳо ва почтаи электрониро ба осонӣ пайдо кунанд, инчунин бо манфиатҳои калидии истифодаи платформа: роҳатӣ, амният ва бархӯрди инноватсионӣ шинос шаванд.",
             },
           },
         ],
@@ -1802,373 +2063,374 @@ To easily navigate dozens of TV channels, a flexible classifier is provided abov
         ],
       },
       {
-        
         tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели админ" },
         items: [
           {
             slug: "order",
-              title: {
-                ru: "Подписки и Заказы",
-                en: "Subscriptions and Orders",
-                tj: "Обунаҳо ва Фармоишҳо",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/order1.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/order1.png",
-              shortInfo: {
-                ru: "Управление подписками пользователей",
-                en: "User subscription management",
-                tj: "Идоракунии обунаҳои корбарон",
-              },
-              fullInfo: {
-                ru: `Модуль управления заказами позволяет администраторам контролировать все активные подписки пользователей. Система предоставляет детализированную информацию о каждом заказе: статус оплаты, срок действия подписки и выбранный тарифный план.
+            title: {
+              ru: "Подписки и Заказы",
+              en: "Subscriptions and Orders",
+              tj: "Обунаҳо ва Фармоишҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/order1.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/order1.png",
+            shortInfo: {
+              ru: "Управление подписками пользователей",
+              en: "User subscription management",
+              tj: "Идоракунии обунаҳои корбарон",
+            },
+            fullInfo: {
+              ru: `Модуль управления заказами позволяет администраторам контролировать все активные подписки пользователей. Система предоставляет детализированную информацию о каждом заказе: статус оплаты, срок действия подписки и выбранный тарифный план.
 
 Администраторы могут вручную продлевать подписки, отменять заказы в случае мошенничества и формировать отчетность по продажам за определенный период.`,
-                en: `The order management module allows administrators to control all active user subscriptions. The system provides detailed information about each order: payment status, subscription expiration date, and the selected tariff plan.
+              en: `The order management module allows administrators to control all active user subscriptions. The system provides detailed information about each order: payment status, subscription expiration date, and the selected tariff plan.
 
 Administrators can manually renew subscriptions, cancel orders in case of fraud, and generate sales reports for a specific period.`,
-                tj: `Модули идоракунии фармоишҳо ба маъмурон имкон медиҳад, ки ҳамаи обунаҳои фаъоли корбаронро назорат кунанд. Система маълумоти муфассалро дар бораи ҳар як фармоиш пешниҳод мекунад: ҳолати пардохт, мӯҳлати эътибори обуна ва нақшаи тарифии интихобшуда.
+              tj: `Модули идоракунии фармоишҳо ба маъмурон имкон медиҳад, ки ҳамаи обунаҳои фаъоли корбаронро назорат кунанд. Система маълумоти муфассалро дар бораи ҳар як фармоиш пешниҳод мекунад: ҳолати пардохт, мӯҳлати эътибори обуна ва нақшаи тарифии интихобшуда.
 
 Маъмурон метавонанд обунаҳоро дастӣ тамдид кунанд, фармоишҳоро дар сурати қаллобӣ бекор кунанд ва ҳисоботи фурӯшро барои давраи муайян таҳия кунанд.`,
-              },
             },
+          },
           {
             slug: "payment",
-              title: {
-                ru: "Финансовые транзакции",
-                en: "Financial Transactions",
-                tj: "Амалиётҳои молиявӣ",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/payment.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/payment.png",
-              shortInfo: {
-                ru: "История платежей и чеков",
-                en: "Payment and receipt history",
-                tj: "Таърихи пардохтҳо ва чекҳо",
-              },
-              fullInfo: {
-                ru: `В разделе транзакций собрана полная финансовая история платформы. Администраторы могут отслеживать каждый платеж, проверять статусы (успешно, ожидание, ошибка) и просматривать электронные чеки.
+            title: {
+              ru: "Финансовые транзакции",
+              en: "Financial Transactions",
+              tj: "Амалиётҳои молиявӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/payment.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/payment.png",
+            shortInfo: {
+              ru: "История платежей и чеков",
+              en: "Payment and receipt history",
+              tj: "Таърихи пардохтҳо ва чекҳо",
+            },
+            fullInfo: {
+              ru: `В разделе транзакций собрана полная финансовая история платформы. Администраторы могут отслеживать каждый платеж, проверять статусы (успешно, ожидание, ошибка) и просматривать электронные чеки.
 
 Модуль интегрирован с системой уведомлений: при сбое платежа пользователь автоматически получает напоминание. Также доступен экспорт транзакций в форматы CSV/Excel для бухгалтерского учета.`,
-                en: `The transaction section contains the full financial history of the platform. Administrators can track every payment, check statuses (success, pending, error), and view electronic receipts.
+              en: `The transaction section contains the full financial history of the platform. Administrators can track every payment, check statuses (success, pending, error), and view electronic receipts.
 
 The module is integrated with the notification system: in case of a payment failure, the user automatically receives a reminder. Export of transactions to CSV/Excel formats for accounting is also available.`,
-                tj: `Дар бахши транзаксияҳо таърихи пурраи молиявии платформа ҷамъ оварда шудааст. Маъмурон метавонанд ҳар як пардохтро пайгирӣ кунанд, ҳолатҳоро (муваффақ, интизорӣ, хатогӣ) тафтиш кунанд ва чекҳои электрониро бинанд.
+              tj: `Дар бахши транзаксияҳо таърихи пурраи молиявии платформа ҷамъ оварда шудааст. Маъмурон метавонанд ҳар як пардохтро пайгирӣ кунанд, ҳолатҳоро (муваффақ, интизорӣ, хатогӣ) тафтиш кунанд ва чекҳои электрониро бинанд.
 
 Модул бо системаи огоҳиномаҳо ҳамгиро шудааст: дар сурати нокомии пардохт корбар ба таври худкор ёдраскунӣ мегирад. Содироти транзаксияҳо ба форматҳои CSV/Excel барои баҳисобгирии муҳосибӣ инчунин дастрас аст.`,
-              },
             },
+          },
           {
             slug: "total-balance",
-              title: {
-                ru: "Аналитика доходов",
-                en: "Revenue Analytics",
-                tj: "Таҳлили даромадҳо",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/total-balance.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/total-balance.png",
-              shortInfo: {
-                ru: "Дашборд финансовых метрик",
-                en: "Financial metrics dashboard",
-                tj: "Дашборди ченакҳои молиявӣ",
-              },
-              fullInfo: {
-                ru: `Интерактивный дашборд для отслеживания общего баланса и выручки проекта. Графики показывают динамику доходов по дням, неделям и месяцам, позволяя оценивать эффективность маркетинговых кампаний.
+            title: {
+              ru: "Аналитика доходов",
+              en: "Revenue Analytics",
+              tj: "Таҳлили даромадҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/total-balance.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/total-balance.png",
+            shortInfo: {
+              ru: "Дашборд финансовых метрик",
+              en: "Financial metrics dashboard",
+              tj: "Дашборди ченакҳои молиявӣ",
+            },
+            fullInfo: {
+              ru: `Интерактивный дашборд для отслеживания общего баланса и выручки проекта. Графики показывают динамику доходов по дням, неделям и месяцам, позволяя оценивать эффективность маркетинговых кампаний.
 
 Система автоматически рассчитывает средний чек (ARPU), общую стоимость жизни клиента (LTV) и предоставляет сводку по самым прибыльным тарифным планам платформы.`,
-                en: `An interactive dashboard for tracking the total balance and revenue of the project. Charts show income dynamics by day, week, and month, allowing the evaluation of marketing campaign effectiveness.
+              en: `An interactive dashboard for tracking the total balance and revenue of the project. Charts show income dynamics by day, week, and month, allowing the evaluation of marketing campaign effectiveness.
 
 The system automatically calculates the average check (ARPU), total customer lifetime value (LTV), and provides a summary of the platform's most profitable tariff plans.`,
-                tj: `Дашборди интерактивӣ барои пайгирии тавозуни умумӣ ва даромади лоиҳа. Графикҳо динамикаи даромадро аз рӯи рӯз, ҳафта ва моҳ нишон медиҳанд ва имкон медиҳанд самаранокии маъракаҳои маркетингиро арзёбӣ кунанд.
+              tj: `Дашборди интерактивӣ барои пайгирии тавозуни умумӣ ва даромади лоиҳа. Графикҳо динамикаи даромадро аз рӯи рӯз, ҳафта ва моҳ нишон медиҳанд ва имкон медиҳанд самаранокии маъракаҳои маркетингиро арзёбӣ кунанд.
 
 Система чеки миёна (ARPU), арзиши умумии ҳаёти муштарӣ (LTV) -ро ба таври худкор ҳисоб мекунад ва хулосаи нақшаҳои тарифии аз ҳама фоидаовари платформаро пешниҳод мекунад.`,
-              },
             },
+          },
           {
             slug: "payment-system",
-              title: {
-                ru: "Платежные шлюзы",
-                en: "Payment Gateways",
-                tj: "Шлюзҳои пардохт",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/payment-system.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/payment-system.png",
-              shortInfo: {
-                ru: "Интеграция с банками и кошельками",
-                en: "Integration with banks and wallets",
-                tj: "Ҳамгироӣ бо бонкҳо ва ҳамёнҳо",
-              },
-              fullInfo: {
-                ru: `Модуль настройки платежных систем позволяет гибко управлять способами оплаты для пользователей. Поддерживается интеграция с популярными местными и международными шлюзами (Корти Милли, Alif, Visa, Mastercard, электронные кошельки).
+            title: {
+              ru: "Платежные шлюзы",
+              en: "Payment Gateways",
+              tj: "Шлюзҳои пардохт",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/payment-system.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/payment-system.png",
+            shortInfo: {
+              ru: "Интеграция с банками и кошельками",
+              en: "Integration with banks and wallets",
+              tj: "Ҳамгироӣ бо бонкҳо ва ҳамёнҳо",
+            },
+            fullInfo: {
+              ru: `Модуль настройки платежных систем позволяет гибко управлять способами оплаты для пользователей. Поддерживается интеграция с популярными местными и международными шлюзами (Корти Милли, Alif, Visa, Mastercard, электронные кошельки).
 
 Администратор может в один клик включать или отключать определенные способы оплаты, настраивать комиссии и проверять состояние API-соединения с банковскими серверами.`,
-                en: `The payment systems configuration module allows flexible management of payment methods for users. Integration with popular local and international gateways (Corti Milli, Alif, Visa, Mastercard, e-wallets) is supported.
+              en: `The payment systems configuration module allows flexible management of payment methods for users. Integration with popular local and international gateways (Corti Milli, Alif, Visa, Mastercard, e-wallets) is supported.
 
 An administrator can enable or disable specific payment methods in one click, set up commissions, and check the status of the API connection with bank servers.`,
-                tj: `Модули танзимоти системаҳои пардохт имкон медиҳад, ки усулҳои пардохт барои корбарон ба таври чандир идора карда шаванд. Ҳамгироӣ бо шлюзҳои машҳури маҳаллӣ ва байналмилалӣ (Корти Миллӣ, Alif, Visa, Mastercard, ҳамёнҳои электронӣ) дастгирӣ карда мешавад.
+              tj: `Модули танзимоти системаҳои пардохт имкон медиҳад, ки усулҳои пардохт барои корбарон ба таври чандир идора карда шаванд. Ҳамгироӣ бо шлюзҳои машҳури маҳаллӣ ва байналмилалӣ (Корти Миллӣ, Alif, Visa, Mastercard, ҳамёнҳои электронӣ) дастгирӣ карда мешавад.
 
 Маъмур метавонад бо як клик усулҳои муайяни пардохтро фаъол ё ғайрифаъол кунад, комиссияҳоро танзим кунад ва ҳолати пайвасти API-ро бо серверҳои бонкӣ тафтиш кунад.`,
-              },
             },
+          },
           {
             slug: "products",
-              title: {
-                ru: "Тарифные планы",
-                en: "Tariff Plans",
-                tj: "Нақшаҳои тарифӣ",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/products.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/products.png",
-              shortInfo: {
-                ru: "Создание и управление подписками",
-                en: "Creating and managing subscriptions",
-                tj: "Эҷод ва идоракунии обунаҳо",
-              },
-              fullInfo: {
-                ru: `Гибкий конструктор продуктов, позволяющий создавать разнообразные тарифные планы. Можно настроить длительность подписки (день, месяц, год), стоимость, а также доступный в рамках тарифа контент (только VOD, только Live TV или всё вместе).
+            title: {
+              ru: "Тарифные планы",
+              en: "Tariff Plans",
+              tj: "Нақшаҳои тарифӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/products.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/products.png",
+            shortInfo: {
+              ru: "Создание и управление подписками",
+              en: "Creating and managing subscriptions",
+              tj: "Эҷод ва идоракунии обунаҳо",
+            },
+            fullInfo: {
+              ru: `Гибкий конструктор продуктов, позволяющий создавать разнообразные тарифные планы. Можно настроить длительность подписки (день, месяц, год), стоимость, а также доступный в рамках тарифа контент (только VOD, только Live TV или всё вместе).
 
 Система поддерживает создание акционных тарифов со скидкой и настройку триального (пробного) периода для привлечения новых пользователей на платформу.`,
-                en: `A flexible product builder that allows the creation of various tariff plans. You can configure subscription duration (day, month, year), cost, and content available within the tariff (VOD only, Live TV only, or everything together).
+              en: `A flexible product builder that allows the creation of various tariff plans. You can configure subscription duration (day, month, year), cost, and content available within the tariff (VOD only, Live TV only, or everything together).
 
 The system supports the creation of discounted promotional tariffs and the setup of a trial period to attract new users to the platform.`,
-                tj: `Конструктори чандири маҳсулот, ки имкон медиҳад нақшаҳои тарифии гуногун эҷод карда шаванд. Шумо метавонед давомнокии обуна (рӯз, моҳ, сол), арзиш ва мундариҷаи дар доираи тариф дастрасро (танҳо VOD, танҳо Live TV ё ҳама якҷоя) танзим кунед.
+              tj: `Конструктори чандири маҳсулот, ки имкон медиҳад нақшаҳои тарифии гуногун эҷод карда шаванд. Шумо метавонед давомнокии обуна (рӯз, моҳ, сол), арзиш ва мундариҷаи дар доираи тариф дастрасро (танҳо VOD, танҳо Live TV ё ҳама якҷоя) танзим кунед.
 
 Система эҷоди тарифҳои аксиягӣ бо тахфиф ва танзими давраи озмоиширо барои ҷалби корбарони нав ба платформа дастгирӣ мекунад.`,
-              },
             },
+          },
           {
             slug: "type-product",
-              title: {
-                ru: "Типы продуктов",
-                en: "Product Types",
-                tj: "Намудҳои маҳсулот",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/type-product.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/type-product.png",
-              shortInfo: {
-                ru: "Категоризация услуг",
-                en: "Service categorization",
-                tj: "Категориябандии хидматҳо",
-              },
-              fullInfo: {
-                ru: `Модуль для управления базовыми типами предлагаемых услуг. Позволяет логически разделять предложения на платформе: подписки на кинотеатр, пакеты телеканалов, покупка отдельных фильмов (PPV) или доступ к эксклюзивным трансляциям.
+            title: {
+              ru: "Типы продуктов",
+              en: "Product Types",
+              tj: "Намудҳои маҳсулот",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/type-product.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/type-product.png",
+            shortInfo: {
+              ru: "Категоризация услуг",
+              en: "Service categorization",
+              tj: "Категориябандии хидматҳо",
+            },
+            fullInfo: {
+              ru: `Модуль для управления базовыми типами предлагаемых услуг. Позволяет логически разделять предложения на платформе: подписки на кинотеатр, пакеты телеканалов, покупка отдельных фильмов (PPV) или доступ к эксклюзивным трансляциям.
 
 Правильная настройка типов продуктов обеспечивает корректную работу рекомендательных алгоритмов и упрощает навигацию пользователей при выборе подходящего тарифа.`,
-                en: `A module for managing the basic types of offered services. It allows logical separation of offers on the platform: cinema subscriptions, TV channel packages, pay-per-view (PPV) movies, or access to exclusive broadcasts.
+              en: `A module for managing the basic types of offered services. It allows logical separation of offers on the platform: cinema subscriptions, TV channel packages, pay-per-view (PPV) movies, or access to exclusive broadcasts.
 
 Proper configuration of product types ensures the correct operation of recommendation algorithms and simplifies user navigation when choosing a suitable tariff.`,
-                tj: `Модул барои идоракунии намудҳои асосии хидматҳои пешниҳодшуда. Ба таври мантиқӣ тақсим кардани пешниҳодҳоро дар платформа имкон медиҳад: обунаҳо ба кинотеатр, бастаҳои шабакаҳои телевизионӣ, хариди филмҳои алоҳида (PPV) ё дастрасӣ ба пахшҳои эксклюзивӣ.
+              tj: `Модул барои идоракунии намудҳои асосии хидматҳои пешниҳодшуда. Ба таври мантиқӣ тақсим кардани пешниҳодҳоро дар платформа имкон медиҳад: обунаҳо ба кинотеатр, бастаҳои шабакаҳои телевизионӣ, хариди филмҳои алоҳида (PPV) ё дастрасӣ ба пахшҳои эксклюзивӣ.
 
 Танзими дурусти намудҳои маҳсулот кори дурусти алгоритмҳои тавсиявиро таъмин мекунад ва паймоиши корбаронро ҳангоми интихоби тарифи мувофиқ осон мекунад.`,
-              },
             },
+          },
           {
             slug: "promotional-campaigns",
-              title: {
-                ru: "Маркетинг и Промо",
-                en: "Marketing and Promos",
-                tj: "Маркетинг ва Промо",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/promotional-campaigns.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/promotional-campaigns.png",
-              shortInfo: {
-                ru: "Скидки, баннеры и пуш-уведомления",
-                en: "Discounts, banners, and push notifications",
-                tj: "Тахфифҳо, баннерҳо ва огоҳиномаҳои push",
-              },
-              fullInfo: {
-                ru: `Мощный инструмент для проведения рекламных кампаний. Администраторы могут создавать промокоды на скидку, настраивать динамические баннеры для Главного экрана приложения и запускать массовые email/push рассылки.
+            title: {
+              ru: "Маркетинг и Промо",
+              en: "Marketing and Promos",
+              tj: "Маркетинг ва Промо",
+            },
+            imageSrc:
+              "/images/projects/mavjisomon/admin/promotional-campaigns.png",
+            BannerSrc:
+              "/images/projects/mavjisomon/admin/promotional-campaigns.png",
+            shortInfo: {
+              ru: "Скидки, баннеры и пуш-уведомления",
+              en: "Discounts, banners, and push notifications",
+              tj: "Тахфифҳо, баннерҳо ва огоҳиномаҳои push",
+            },
+            fullInfo: {
+              ru: `Мощный инструмент для проведения рекламных кампаний. Администраторы могут создавать промокоды на скидку, настраивать динамические баннеры для Главного экрана приложения и запускать массовые email/push рассылки.
 
 Для каждой кампании можно задать точные сроки действия, лимиты активаций и целевую аудиторию (например, только неактивные пользователи). Встроенная аналитика показывает конверсию каждого запущенного промо.`,
-                en: `A powerful tool for running advertising campaigns. Administrators can create discount promo codes, set up dynamic banners for the application's Main Screen, and launch mass email/push campaigns.
+              en: `A powerful tool for running advertising campaigns. Administrators can create discount promo codes, set up dynamic banners for the application's Main Screen, and launch mass email/push campaigns.
 
 For each campaign, exact validity periods, activation limits, and a target audience (e.g., only inactive users) can be set. Built-in analytics show the conversion rate of each launched promo.`,
-                tj: `Воситаи пуриқтидор барои гузаронидани маъракаҳои таблиғотӣ. Маъмурон метавонанд промокодҳои тахфифӣ эҷод кунанд, баннерҳои динамикиро барои Экрани асосии барнома танзим кунанд ва фиристодани оммавии email/push-ро оғоз кунанд.
+              tj: `Воситаи пуриқтидор барои гузаронидани маъракаҳои таблиғотӣ. Маъмурон метавонанд промокодҳои тахфифӣ эҷод кунанд, баннерҳои динамикиро барои Экрани асосии барнома танзим кунанд ва фиристодани оммавии email/push-ро оғоз кунанд.
 
 Барои ҳар як маърака, мӯҳлатҳои дақиқи амал, маҳдудиятҳои фаъолсозӣ ва аудиторияи мақсаднок (масалан, танҳо корбарони ғайрифаъол) метавонанд муқаррар карда шаванд. Таҳлили дарунсохт конверсияи ҳар як промои оғозшударо нишон медиҳад.`,
-              },
             },
+          },
           {
             slug: "chanals",
-              title: {
-                ru: "Телеканалы",
-                en: "TV Channels",
-                tj: "Шабакаҳои телевизионӣ",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/chanals.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/chanals.png",
-              shortInfo: {
-                ru: "Управление потоками Live TV",
-                en: "Live TV stream management",
-                tj: "Идоракунии ҷараёнҳои Live TV",
-              },
-              fullInfo: {
-                ru: `Основной раздел для управления сеткой вещания. Позволяет добавлять новые телеканалы, указывать URL-адреса HLS-потоков, загружать логотипы и назначать категории (Новостные, Спортивные, Детские).
+            title: {
+              ru: "Телеканалы",
+              en: "TV Channels",
+              tj: "Шабакаҳои телевизионӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/chanals.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/chanals.png",
+            shortInfo: {
+              ru: "Управление потоками Live TV",
+              en: "Live TV stream management",
+              tj: "Идоракунии ҷараёнҳои Live TV",
+            },
+            fullInfo: {
+              ru: `Основной раздел для управления сеткой вещания. Позволяет добавлять новые телеканалы, указывать URL-адреса HLS-потоков, загружать логотипы и назначать категории (Новостные, Спортивные, Детские).
 
 Система поддерживает резервирование потоков (fallback URL) для обеспечения бесперебойного вещания. Здесь же настраивается привязка канала к телепрограмме (EPG) и активируется функция записи архива (Catch-up).`,
-                en: `The main section for managing the broadcasting grid. It allows adding new TV channels, specifying HLS stream URLs, uploading logos, and assigning categories (News, Sports, Kids).
+              en: `The main section for managing the broadcasting grid. It allows adding new TV channels, specifying HLS stream URLs, uploading logos, and assigning categories (News, Sports, Kids).
 
 The system supports stream redundancy (fallback URL) to ensure uninterrupted broadcasting. Channel mapping to the TV guide (EPG) and activation of the archive recording function (Catch-up) are also configured here.`,
-                tj: `Бахши асосӣ барои идоракунии шабакаи пахш. Илова кардани шабакаҳои нави телевизионӣ, нишон додани URL-адресҳои ҷараёнҳои HLS, боркунии логотипҳо ва таъин кардани категорияҳо (Ахбор, Варзиш, Кӯдакон)-ро имкон медиҳад.
+              tj: `Бахши асосӣ барои идоракунии шабакаи пахш. Илова кардани шабакаҳои нави телевизионӣ, нишон додани URL-адресҳои ҷараёнҳои HLS, боркунии логотипҳо ва таъин кардани категорияҳо (Ахбор, Варзиш, Кӯдакон)-ро имкон медиҳад.
 
 Система захиракунии ҷараёнҳоро (fallback URL) барои таъмини пахши бефосила дастгирӣ мекунад. Пайвасти шабака ба барномаи телевизионӣ (EPG) ва фаъолсозии функсияи сабти бойгонӣ (Catch-up) низ дар ин ҷо танзим карда мешавад.`,
-              },
             },
+          },
           {
             slug: "epg-provider",
-              title: {
-                ru: "EPG Провайдеры",
-                en: "EPG Providers",
-                tj: "Провайдерҳои EPG",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
-              shortInfo: {
-                ru: "Интеграция телепрограмм (XMLTV)",
-                en: "TV guide integration (XMLTV)",
-                tj: "Ҳамгироии барномаҳои телевизионӣ (XMLTV)",
-              },
-              fullInfo: {
-                ru: `Модуль настройки источников телепрограммы. Платформа поддерживает автоматический парсинг XMLTV-файлов от различных поставщиков метаданных. Администратор может добавить несколько ссылок на источники EPG и задать частоту их обновления (например, каждые 12 часов).
+            title: {
+              ru: "EPG Провайдеры",
+              en: "EPG Providers",
+              tj: "Провайдерҳои EPG",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
+            shortInfo: {
+              ru: "Интеграция телепрограмм (XMLTV)",
+              en: "TV guide integration (XMLTV)",
+              tj: "Ҳамгироии барномаҳои телевизионӣ (XMLTV)",
+            },
+            fullInfo: {
+              ru: `Модуль настройки источников телепрограммы. Платформа поддерживает автоматический парсинг XMLTV-файлов от различных поставщиков метаданных. Администратор может добавить несколько ссылок на источники EPG и задать частоту их обновления (например, каждые 12 часов).
 
 Умный алгоритм сопоставления помогает автоматически привязать программы передач к существующим телеканалам по ID или названию, минимизируя ручной труд контент-менеджеров.`,
-                en: `The TV guide sources configuration module. The platform supports automatic parsing of XMLTV files from various metadata providers. An administrator can add multiple EPG source links and set their update frequency (e.g., every 12 hours).
+              en: `The TV guide sources configuration module. The platform supports automatic parsing of XMLTV files from various metadata providers. An administrator can add multiple EPG source links and set their update frequency (e.g., every 12 hours).
 
 A smart matching algorithm helps automatically link broadcast programs to existing TV channels by ID or name, minimizing the manual work of content managers.`,
-                tj: `Модули танзими манбаъҳои барномаи телевизионӣ. Платформа парсинги автоматии файлҳои XMLTV-ро аз таъминкунандагони гуногуни метамаълумот дастгирӣ мекунад. Маъмур метавонад якчанд истинод ба манбаъҳои EPG илова кунад ва басомади навсозии онҳоро (масалан, ҳар 12 соат) муқаррар кунад.
+              tj: `Модули танзими манбаъҳои барномаи телевизионӣ. Платформа парсинги автоматии файлҳои XMLTV-ро аз таъминкунандагони гуногуни метамаълумот дастгирӣ мекунад. Маъмур метавонад якчанд истинод ба манбаъҳои EPG илова кунад ва басомади навсозии онҳоро (масалан, ҳар 12 соат) муқаррар кунад.
 
 Алгоритми интеллектуалии муқоисакунӣ барои ба таври худкор пайваст кардани барномаҳои пахш ба шабакаҳои телевизионии мавҷуда аз рӯи ID ё ном кӯмак мекунад ва кори дастии менеҷерҳои мундариҷаро кам мекунад.`,
-              },
             },
+          },
           {
             slug: "radio",
-              title: {
-                ru: "Радиостанции",
-                en: "Radio Stations",
-                tj: "Истгоҳҳои радио",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/radio.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/radio.png",
-              shortInfo: {
-                ru: "Каталог аудио-потоков",
-                en: "Audio stream catalog",
-                tj: "Каталоги ҷараёнҳои аудио",
-              },
-              fullInfo: {
-                ru: `Раздел для администрирования онлайн-радиостанций. Функционал аналогичен управлению телеканалами, но оптимизирован для аудио-стримов (Icecast/Shoutcast). Можно загружать обложки радиостанций, указывать жанры и битрейт потока.
+            title: {
+              ru: "Радиостанции",
+              en: "Radio Stations",
+              tj: "Истгоҳҳои радио",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/radio.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/radio.png",
+            shortInfo: {
+              ru: "Каталог аудио-потоков",
+              en: "Audio stream catalog",
+              tj: "Каталоги ҷараёнҳои аудио",
+            },
+            fullInfo: {
+              ru: `Раздел для администрирования онлайн-радиостанций. Функционал аналогичен управлению телеканалами, но оптимизирован для аудио-стримов (Icecast/Shoutcast). Можно загружать обложки радиостанций, указывать жанры и битрейт потока.
 
 Радио-модуль платформы потребляет минимум трафика, и через эту панель можно настраивать приоритет станций, чтобы самые популярные из них отображались на главном экране приложения.`,
-                en: `A section for administrating online radio stations. The functionality is similar to TV channel management but optimized for audio streams (Icecast/Shoutcast). You can upload radio station covers, specify genres, and stream bitrates.
+              en: `A section for administrating online radio stations. The functionality is similar to TV channel management but optimized for audio streams (Icecast/Shoutcast). You can upload radio station covers, specify genres, and stream bitrates.
 
 The platform's radio module consumes minimal traffic, and through this panel, you can prioritize stations so that the most popular ones appear on the application's main screen.`,
-                tj: `Бахш барои маъмурияти истгоҳҳои радиои онлайн. Функсияҳо ба идоракунии шабакаҳои телевизионӣ монанданд, аммо барои ҷараёнҳои аудиоӣ (Icecast/Shoutcast) оптимизатсия шудаанд. Шумо метавонед муқоваҳои истгоҳҳои радиоро бор кунед, жанрҳо ва битрейти ҷараёнро нишон диҳед.
+              tj: `Бахш барои маъмурияти истгоҳҳои радиои онлайн. Функсияҳо ба идоракунии шабакаҳои телевизионӣ монанданд, аммо барои ҷараёнҳои аудиоӣ (Icecast/Shoutcast) оптимизатсия шудаанд. Шумо метавонед муқоваҳои истгоҳҳои радиоро бор кунед, жанрҳо ва битрейти ҷараёнро нишон диҳед.
 
 Модули радиои платформа ҳадди ақали трафикро сарф мекунад ва тавассути ин панел шумо метавонед афзалияти истгоҳҳоро танзим кунед, то маъмултаринҳо дар экрани асосии барнома пайдо шаванд.`,
-              },
             },
+          },
           {
             slug: "video-content",
-              title: {
-                ru: "Библиотека фильмов (VOD)",
-                en: "Movie Library (VOD)",
-                tj: "Китобхонаи филмҳо (VOD)",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/video-content.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/video-content.png",
-              shortInfo: {
-                ru: "Управление каталогом видео",
-                en: "Video catalog management",
-                tj: "Идоракунии каталоги видео",
-              },
-              fullInfo: {
-                ru: `Сердце контентного раздела платформы. Здесь осуществляется загрузка новых фильмов, сериалов и мультфильмов на сервер. Плеер поддерживает множественные звуковые дорожки и субтитры — их можно прикрепить к видеофайлу прямо через панель.
+            title: {
+              ru: "Библиотека фильмов (VOD)",
+              en: "Movie Library (VOD)",
+              tj: "Китобхонаи филмҳо (VOD)",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/video-content.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/video-content.png",
+            shortInfo: {
+              ru: "Управление каталогом видео",
+              en: "Video catalog management",
+              tj: "Идоракунии каталоги видео",
+            },
+            fullInfo: {
+              ru: `Сердце контентного раздела платформы. Здесь осуществляется загрузка новых фильмов, сериалов и мультфильмов на сервер. Плеер поддерживает множественные звуковые дорожки и субтитры — их можно прикрепить к видеофайлу прямо через панель.
 
 Каждому фильму присваивается подробное описание, рейтинг (IMDb/Кинопоиск), список актеров и режиссеров. Встроенный поиск и фильтры позволяют быстро находить нужный контент в базе из тысяч видео.`,
-                en: `The heart of the platform's content section. Here, new movies, series, and cartoons are uploaded to the server. The player supports multiple audio tracks and subtitles—they can be attached to the video file directly through the panel.
+              en: `The heart of the platform's content section. Here, new movies, series, and cartoons are uploaded to the server. The player supports multiple audio tracks and subtitles—they can be attached to the video file directly through the panel.
 
 Each movie is assigned a detailed description, rating (IMDb/Kinopoisk), and a list of actors and directors. Built-in search and filters allow you to quickly find the needed content in a database of thousands of videos.`,
-                tj: `Қалби бахши мундариҷаи платформа. Дар ин ҷо филмҳо, сериалҳо ва мултфилмҳои нав ба сервер бор карда мешаванд. Плеер якчанд роҳҳои аудио ва субтитрҳоро дастгирӣ мекунад — онҳоро бевосита тавассути панел ба файли видео пайваст кардан мумкин аст.
+              tj: `Қалби бахши мундариҷаи платформа. Дар ин ҷо филмҳо, сериалҳо ва мултфилмҳои нав ба сервер бор карда мешаванд. Плеер якчанд роҳҳои аудио ва субтитрҳоро дастгирӣ мекунад — онҳоро бевосита тавассути панел ба файли видео пайваст кардан мумкин аст.
 
 Ба ҳар як филм тавсифи муфассал, рейтинг (IMDb/Kinopoisk), рӯйхати актёрҳо ва коргардонҳо дода мешавад. Ҷустуҷӯ ва филтрҳои дарунсохт ба шумо имкон медиҳанд, ки мундариҷаи лозимиро дар пойгоҳи маълумоти ҳазорҳо видео зуд пайдо кунед.`,
-              },
             },
+          },
           {
             slug: "parental-control",
-              title: {
-                ru: "Родительский контроль",
-                en: "Parental Control",
-                tj: "Назорати волидайн",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/parental-control.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/parental-control.png",
-              shortInfo: {
-                ru: "Возрастные ограничения",
-                en: "Age restrictions",
-                tj: "Маҳдудиятҳои синну солӣ",
-              },
-              fullInfo: {
-                ru: `Модуль обеспечения безопасности контента для детей. Администраторы могут задавать возрастные рейтинги (0+, 12+, 18+) для всего каталога фильмов и телеканалов.
+            title: {
+              ru: "Родительский контроль",
+              en: "Parental Control",
+              tj: "Назорати волидайн",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/parental-control.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/parental-control.png",
+            shortInfo: {
+              ru: "Возрастные ограничения",
+              en: "Age restrictions",
+              tj: "Маҳдудиятҳои синну солӣ",
+            },
+            fullInfo: {
+              ru: `Модуль обеспечения безопасности контента для детей. Администраторы могут задавать возрастные рейтинги (0+, 12+, 18+) для всего каталога фильмов и телеканалов.
 
 Пользователи в своих приложениях могут установить PIN-код на профиль. Если профиль защищен, контент со взрослым рейтингом будет скрыт из поиска и рекомендаций, а при попытке прямого доступа система потребует ввод PIN-кода, настроенного в этой панели.`,
-                en: `A module for ensuring content safety for children. Administrators can set age ratings (0+, 12+, 18+) for the entire catalog of movies and TV channels.
+              en: `A module for ensuring content safety for children. Administrators can set age ratings (0+, 12+, 18+) for the entire catalog of movies and TV channels.
 
 Users can set a PIN code for their profile in their apps. If a profile is protected, adult-rated content will be hidden from search and recommendations, and upon attempting direct access, the system will require entering the PIN code configured in this panel.`,
-                tj: `Модул барои таъмини бехатарии мундариҷа барои кӯдакон. Маъмурон метавонанд рейтингҳои синну солиро (0+, 12+, 18+) барои тамоми каталоги филмҳо ва шабакаҳои телевизионӣ муқаррар кунанд.
+              tj: `Модул барои таъмини бехатарии мундариҷа барои кӯдакон. Маъмурон метавонанд рейтингҳои синну солиро (0+, 12+, 18+) барои тамоми каталоги филмҳо ва шабакаҳои телевизионӣ муқаррар кунанд.
 
 Корбарон метавонанд дар барномаҳои худ ба профили худ рамзи PIN гузоранд. Агар профил ҳифз карда шавад, мундариҷаи дорои рейтинги калонсолон аз ҷустуҷӯ ва тавсияҳо пинҳон мешавад ва ҳангоми кӯшиши дастрасии мустақим система ворид кардани рамзи PIN-и дар ин панел танзимшударо талаб мекунад.`,
-              },
             },
+          },
           {
             slug: "type-films",
-              title: {
-                ru: "Категории видео",
-                en: "Video Categories",
-                tj: "Категорияҳои видео",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/type-films.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/type-films.png",
-              shortInfo: {
-                ru: "Структура контента",
-                en: "Content structure",
-                tj: "Сохтори мундариҷа",
-              },
-              fullInfo: {
-                ru: `Раздел для глобальной классификации видеобазы. Позволяет создавать и редактировать макро-категории: Фильмы, Сериалы, Аниме, Документальное кино, Таджикфильм и т.д.
+            title: {
+              ru: "Категории видео",
+              en: "Video Categories",
+              tj: "Категорияҳои видео",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/type-films.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/type-films.png",
+            shortInfo: {
+              ru: "Структура контента",
+              en: "Content structure",
+              tj: "Сохтори мундариҷа",
+            },
+            fullInfo: {
+              ru: `Раздел для глобальной классификации видеобазы. Позволяет создавать и редактировать макро-категории: Фильмы, Сериалы, Аниме, Документальное кино, Таджикфильм и т.д.
 
 Каждой категории можно присвоить иконку и определить ее место в главном меню приложений. Правильная иерархия категорий является основой для интуитивно понятного UI, позволяя зрителям легко ориентироваться в огромном массиве медиа.`,
-                en: `A section for global classification of the video database. Allows creating and editing macro-categories: Movies, Series, Anime, Documentaries, Tajikfilm, etc.
+              en: `A section for global classification of the video database. Allows creating and editing macro-categories: Movies, Series, Anime, Documentaries, Tajikfilm, etc.
 
 Each category can be assigned an icon and its place in the main menu of the applications can be defined. A proper category hierarchy is the foundation for an intuitive UI, allowing viewers to easily navigate through a huge array of media.`,
-                tj: `Бахш барои таснифи глобалии пойгоҳи видео. Барои эҷод ва таҳрири макро-категорияҳо имкон медиҳад: Филмҳо, Сериалҳо, Аниме, Кинои ҳуҷҷатӣ, Тоҷикфилм ва ғ.
+              tj: `Бахш барои таснифи глобалии пойгоҳи видео. Барои эҷод ва таҳрири макро-категорияҳо имкон медиҳад: Филмҳо, Сериалҳо, Аниме, Кинои ҳуҷҷатӣ, Тоҷикфилм ва ғ.
 
 Ба ҳар як категория метавонад нишона таъин карда шавад ва ҷои онро дар менюи асосии барномаҳо муайян кардан мумкин аст. Иерархияи дурусти категорияҳо асоси UI-и интуитивӣ мебошад, ки ба тамошобинон имкон медиҳад, ки дар массиви бузурги медиа ба осонӣ ҳаракат кунанд.`,
-              },
             },
+          },
           {
             slug: "genre",
-              title: {
-                ru: "Жанры контента",
-                en: "Content Genres",
-                tj: "Жанрҳои мундариҷа",
-              },
-              imageSrc: "/images/projects/mavjisomon/admin/genre.png",
-              BannerSrc: "/images/projects/mavjisomon/admin/genre.png",
-              shortInfo: {
-                ru: "Тегирование фильмов и сериалов",
-                en: "Tagging movies and series",
-                tj: "Теггузории филмҳо ва сериалҳо",
-              },
-              fullInfo: {
-                ru: `Инструмент для глубокого тегирования контента. В этой вкладке создается база жанров (Боевики, Комедии, Драма, Фантастика), которые затем прикрепляются к конкретным фильмам.
+            title: {
+              ru: "Жанры контента",
+              en: "Content Genres",
+              tj: "Жанрҳои мундариҷа",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/genre.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/genre.png",
+            shortInfo: {
+              ru: "Тегирование фильмов и сериалов",
+              en: "Tagging movies and series",
+              tj: "Теггузории филмҳо ва сериалҳо",
+            },
+            fullInfo: {
+              ru: `Инструмент для глубокого тегирования контента. В этой вкладке создается база жанров (Боевики, Комедии, Драма, Фантастика), которые затем прикрепляются к конкретным фильмам.
 
 Наличие детальной жанровой разметки критически важно для работы модуля поиска и системы рекомендаций «Похожие фильмы». Администраторы могут объединять жанры в подборки для создания тематических коллекций на Главном экране (например, «Ужасы на Хэллоуин»).`,
-                en: `A tool for deep content tagging. In this tab, a database of genres (Action, Comedy, Drama, Sci-Fi) is created, which are then attached to specific movies.
+              en: `A tool for deep content tagging. In this tab, a database of genres (Action, Comedy, Drama, Sci-Fi) is created, which are then attached to specific movies.
 
 Having detailed genre markup is critically important for the operation of the search module and the 'Similar Movies' recommendation system. Administrators can combine genres into selections to create thematic collections on the Main Screen (e.g., 'Halloween Horror').`,
-                tj: `Восита барои теггузории амиқи мундариҷа. Дар ин ҷадвал пойгоҳи жанрҳо (Ҷангӣ, Комедия, Драма, Фантастика) эҷод карда мешавад, ки баъдан ба филмҳои мушаххас пайваст карда мешаванд.
+              tj: `Восита барои теггузории амиқи мундариҷа. Дар ин ҷадвал пойгоҳи жанрҳо (Ҷангӣ, Комедия, Драма, Фантастика) эҷод карда мешавад, ки баъдан ба филмҳои мушаххас пайваст карда мешаванд.
 
 Доштани аломатгузории муфассали жанрӣ барои кори модули ҷустуҷӯ ва системаи тавсияҳои «Филмҳои монанд» хеле муҳим аст. Маъмурон метавонанд жанрҳоро ба интихобҳо муттаҳид кунанд, то коллексияҳои мавзӯиро дар Экрани асосӣ эҷод кунанд (масалан, «Даҳшат дар Ҳеллоуин»).`,
-              },
             },
+          },
           {
             slug: "actors",
             title: {
@@ -2549,8 +2811,10 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
               en: "Movie Filtering",
               tj: "Филтркунии филмҳо",
             },
-            imageSrc: "/images/projects/mavjisomon/mobile/filter-modal-for-films.jpg",
-            BannerSrc: "/images/projects/mavjisomon/mobile/filter-modal-for-films.jpg",
+            imageSrc:
+              "/images/projects/mavjisomon/mobile/filter-modal-for-films.jpg",
+            BannerSrc:
+              "/images/projects/mavjisomon/mobile/filter-modal-for-films.jpg",
             shortInfo: {
               ru: "Умные фильтры для поиска контента",
               en: "Smart filters for content search",
@@ -2629,8 +2893,10 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
               en: "Security Settings",
               tj: "Танзимоти амният",
             },
-            imageSrc: "/images/projects/mavjisomon/mobile/security-settings.jpg",
-            BannerSrc: "/images/projects/mavjisomon/mobile/security-settings.jpg",
+            imageSrc:
+              "/images/projects/mavjisomon/mobile/security-settings.jpg",
+            BannerSrc:
+              "/images/projects/mavjisomon/mobile/security-settings.jpg",
             shortInfo: {
               ru: "Родительский контроль и пароли",
               en: "Parental control and passwords",
@@ -2642,7 +2908,6 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
               tj: `Бахши танзимоти амният вазифаҳои тағир додани парол, танзими PIN-код барои назорати волидайн ва дидани сессияҳои фаъолро пешниҳод мекунад. Ин ҳифзи ҳисобро аз дастрасии беиҷозат ва назорати мундариҷаи барои кӯдакон дастрасро таъмин мекунад.`,
             },
           },
-        
         ],
       },
       {
@@ -2652,84 +2917,84 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
           tj: "Smart TV (TV Box)",
         },
         items: [
-//           {
-//             slug: "tv-interface-navigation",
-//             title: {
-//               ru: "TV Интерфейс и Навигация",
-//               en: "TV Interface and Navigation",
-//               tj: "Интерфейси TV ва Навигатсия",
-//             },
-//             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-//             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-//             shortInfo: {
-//               ru: "D-Pad фокус и MainScreen.tsx",
-//               en: "D-Pad focus and MainScreen.tsx",
-//               tj: "Фокуси D-Pad ва MainScreen.tsx",
-//             },
-//             fullInfo: {
-//               ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
+          //           {
+          //             slug: "tv-interface-navigation",
+          //             title: {
+          //               ru: "TV Интерфейс и Навигация",
+          //               en: "TV Interface and Navigation",
+          //               tj: "Интерфейси TV ва Навигатсия",
+          //             },
+          //             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+          //             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+          //             shortInfo: {
+          //               ru: "D-Pad фокус и MainScreen.tsx",
+          //               en: "D-Pad focus and MainScreen.tsx",
+          //               tj: "Фокуси D-Pad ва MainScreen.tsx",
+          //             },
+          //             fullInfo: {
+          //               ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
 
-// Вся навигация, включая переход между боковым меню и основным контентом, построена на обработке событий onFocus и onBlur. Каждая карточка фильма (MediaCard.tsx) плавно увеличивается при наведении фокуса, используя нативные анимации для создания эффекта глубины и отзывчивости. Поддерживается сборка как под классический Android TV, так и под телевизоры на базе Tizen (через Webpack-сборку rnv).`,
-//               en: `The project for smart TVs and set-top boxes is written in a specialized version of React Native TV (react-native-tvos) using strict TypeScript typing. The main difference from the mobile version is the full orientation towards control via remote control (D-Pad).
+          // Вся навигация, включая переход между боковым меню и основным контентом, построена на обработке событий onFocus и onBlur. Каждая карточка фильма (MediaCard.tsx) плавно увеличивается при наведении фокуса, используя нативные анимации для создания эффекта глубины и отзывчивости. Поддерживается сборка как под классический Android TV, так и под телевизоры на базе Tizen (через Webpack-сборку rnv).`,
+          //               en: `The project for smart TVs and set-top boxes is written in a specialized version of React Native TV (react-native-tvos) using strict TypeScript typing. The main difference from the mobile version is the full orientation towards control via remote control (D-Pad).
 
-// All navigation, including transitions between the side menu and main content, is built on handling onFocus and onBlur events. Each movie card (MediaCard.tsx) smoothly enlarges on focus, using native animations to create a sense of depth and responsiveness. Builds are supported for both classic Android TV and Tizen-based TVs (via Webpack rnv build).`,
-//               tj: `Лоиҳа барои телевизорҳои интеллектуалӣ ва приставкаҳо дар версияи махсусгардонидашудаи React Native TV (react-native-tvos) бо истифода аз чопкунии қатъии TypeScript навишта шудааст. Фарқи асосӣ аз версияи мобилӣ тамоюли пурра ба идоракунӣ тавассути пульти фосилавӣ (D-Pad) мебошад.
+          // All navigation, including transitions between the side menu and main content, is built on handling onFocus and onBlur events. Each movie card (MediaCard.tsx) smoothly enlarges on focus, using native animations to create a sense of depth and responsiveness. Builds are supported for both classic Android TV and Tizen-based TVs (via Webpack rnv build).`,
+          //               tj: `Лоиҳа барои телевизорҳои интеллектуалӣ ва приставкаҳо дар версияи махсусгардонидашудаи React Native TV (react-native-tvos) бо истифода аз чопкунии қатъии TypeScript навишта шудааст. Фарқи асосӣ аз версияи мобилӣ тамоюли пурра ба идоракунӣ тавассути пульти фосилавӣ (D-Pad) мебошад.
 
-// Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.`,
-//             },
-//           },
-//           {
-//             slug: "catalog-details",
-//             title: {
-//               ru: "Каталог и Детали",
-//               en: "Catalog and Details",
-//               tj: "Каталог ва Тафсилот",
-//             },
-//             imageSrc: "/images/projects/mavjisomon/gallery-6.png",
-//             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-//             shortInfo: {
-//               ru: "VideosScreen & DetailsScreen",
-//               en: "VideosScreen & DetailsScreen",
-//               tj: "VideosScreen & DetailsScreen",
-//             },
-//             fullInfo: {
-//               ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
+          // Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.`,
+          //             },
+          //           },
+          //           {
+          //             slug: "catalog-details",
+          //             title: {
+          //               ru: "Каталог и Детали",
+          //               en: "Catalog and Details",
+          //               tj: "Каталог ва Тафсилот",
+          //             },
+          //             imageSrc: "/images/projects/mavjisomon/gallery-6.png",
+          //             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+          //             shortInfo: {
+          //               ru: "VideosScreen & DetailsScreen",
+          //               en: "VideosScreen & DetailsScreen",
+          //               tj: "VideosScreen & DetailsScreen",
+          //             },
+          //             fullInfo: {
+          //               ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
 
-// Страница деталей фильма (DetailsScreen.tsx) представляет собой полноценный кинотеатральный хаб: она подгружает высококачественные фоновые постеры, выводит подробные метаданные (рейтинг, жанр, описание) и включает список рекомендаций. Пользователь может добавить фильм в «Избранное» (FavoritesScreen.tsx) для быстрого доступа с любого устройства.`,
-//               en: `The TV app implements deep categorization of content into several sections: Live channels (TvChannelsScreen.tsx), movie catalogs, and series (VideosScreen.tsx). To optimize the rendering of large lists on weak set-top boxes, list virtualization and image lazy loading techniques are used.
+          // Страница деталей фильма (DetailsScreen.tsx) представляет собой полноценный кинотеатральный хаб: она подгружает высококачественные фоновые постеры, выводит подробные метаданные (рейтинг, жанр, описание) и включает список рекомендаций. Пользователь может добавить фильм в «Избранное» (FavoritesScreen.tsx) для быстрого доступа с любого устройства.`,
+          //               en: `The TV app implements deep categorization of content into several sections: Live channels (TvChannelsScreen.tsx), movie catalogs, and series (VideosScreen.tsx). To optimize the rendering of large lists on weak set-top boxes, list virtualization and image lazy loading techniques are used.
 
-// The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it loads high-quality background posters, displays detailed metadata (rating, genre, description), and includes a list of recommendations. The user can add a movie to "Favorites" (FavoritesScreen.tsx) for quick access from any device.`,
-//               tj: `Барномаи телевизионӣ гурӯҳбандии амиқи мундариҷаро ба якчанд бахшҳо амалӣ мекунад: Шабакаҳои Live (TvChannelsScreen.tsx), каталогҳои филмҳо ва сериалҳо (VideosScreen.tsx). Барои беҳтар кардани визуализатсияи рӯйхатҳои калон дар приставкаҳои заифи телевизионӣ, усулҳои виртуализатсияи рӯйхат ва боркунии танбал (lazy loading) тасвирҳо истифода мешаванд.
+          // The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it loads high-quality background posters, displays detailed metadata (rating, genre, description), and includes a list of recommendations. The user can add a movie to "Favorites" (FavoritesScreen.tsx) for quick access from any device.`,
+          //               tj: `Барномаи телевизионӣ гурӯҳбандии амиқи мундариҷаро ба якчанд бахшҳо амалӣ мекунад: Шабакаҳои Live (TvChannelsScreen.tsx), каталогҳои филмҳо ва сериалҳо (VideosScreen.tsx). Барои беҳтар кардани визуализатсияи рӯйхатҳои калон дар приставкаҳои заифи телевизионӣ, усулҳои виртуализатсияи рӯйхат ва боркунии танбал (lazy loading) тасвирҳо истифода мешаванд.
 
-// Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.`,
-//             },
-//           },
-//           {
-//             slug: "payment-player",
-//             title: {
-//               ru: "Оплата и Плеер",
-//               en: "Payment and Player",
-//               tj: "Пардохт ва Плеер",
-//             },
-//             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-//             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-//             shortInfo: {
-//               ru: "PlayerScreen & PaymentGuide",
-//               en: "PlayerScreen & PaymentGuide",
-//               tj: "PlayerScreen & PaymentGuide",
-//             },
-//             fullInfo: {
-//               ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
+          // Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.`,
+          //             },
+          //           },
+          //           {
+          //             slug: "payment-player",
+          //             title: {
+          //               ru: "Оплата и Плеер",
+          //               en: "Payment and Player",
+          //               tj: "Пардохт ва Плеер",
+          //             },
+          //             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+          //             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+          //             shortInfo: {
+          //               ru: "PlayerScreen & PaymentGuide",
+          //               en: "PlayerScreen & PaymentGuide",
+          //               tj: "PlayerScreen & PaymentGuide",
+          //             },
+          //             fullInfo: {
+          //               ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
 
-// Важным бизнес-модулем является встроенная система биллинга (PaymentGuide.tsx и ProductsScreen.tsx). Пользователям больше не нужно заходить на сайт с компьютера — они могут просматривать доступные тарифы, изучать инструкции по пополнению баланса через локальные терминалы и управлять своей подпиской прямо на большом экране, используя только пульт ДУ.`,
-//               en: `A specially adapted native TV player (PlayerScreen.tsx) is used to play Live TV and VOD content on TVs. It ensures stable stream decoding without buffering, hardware decoding support, and remote control button handling (play/pause/rewind).
+          // Важным бизнес-модулем является встроенная система биллинга (PaymentGuide.tsx и ProductsScreen.tsx). Пользователям больше не нужно заходить на сайт с компьютера — они могут просматривать доступные тарифы, изучать инструкции по пополнению баланса через локальные терминалы и управлять своей подпиской прямо на большом экране, используя только пульт ДУ.`,
+          //               en: `A specially adapted native TV player (PlayerScreen.tsx) is used to play Live TV and VOD content on TVs. It ensures stable stream decoding without buffering, hardware decoding support, and remote control button handling (play/pause/rewind).
 
-// An important business module is the built-in billing system (PaymentGuide.tsx and ProductsScreen.tsx). Users no longer need to visit the site from a computer — they can view available tariffs, study instructions for topping up their balance via local terminals, and manage their subscription right on the big screen, using only the remote control.`,
-//               tj: `Плеери махсус мутобиқшудаи телевизионии нативӣ (PlayerScreen.tsx) барои намоиши мундариҷаи Live TV ва VOD дар телевизорҳо истифода мешавад. Он рамзкушоии устувори ҷараёнро бидуни буферизатсия, дастгирии рамзкушоии сахтафзор ва коркарди тугмаҳои пульт (навозиш/таваққуф/қафо) таъмин мекунад.
+          // An important business module is the built-in billing system (PaymentGuide.tsx and ProductsScreen.tsx). Users no longer need to visit the site from a computer — they can view available tariffs, study instructions for topping up their balance via local terminals, and manage their subscription right on the big screen, using only the remote control.`,
+          //               tj: `Плеери махсус мутобиқшудаи телевизионии нативӣ (PlayerScreen.tsx) барои намоиши мундариҷаи Live TV ва VOD дар телевизорҳо истифода мешавад. Он рамзкушоии устувори ҷараёнро бидуни буферизатсия, дастгирии рамзкушоии сахтафзор ва коркарди тугмаҳои пульт (навозиш/таваққуф/қафо) таъмин мекунад.
 
-// Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.`,
-//             },
-//           },
+          // Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.`,
+          //             },
+          //           },
           {
             slug: "tv-loading",
             title: {
@@ -3318,7 +3583,11 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     ],
     projectComponents: [
       {
-        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        tabName: {
+          ru: "Веб-платформа",
+          en: "Web Platform",
+          tj: "Веб-платформа",
+        },
         items: [
           {
             slug: "home",
