@@ -23,8 +23,8 @@ export interface ProductSiteItem {
 
 export const ProductSite: ProductSiteItem[] = [
   {
-    imageSrc: "/images/projects/president/banner.svg",
-    bannerSrc: "/images/projects/president/banner.svg",
+    imageSrc: "/images/projects/president/banner_main.jpg",
+    bannerSrc: "/images/projects/president/banner_main.jpg",
     year: "2024",
     tags: ["React", "Redux", "Laravel", "MySQL", "REST API"],
     slug: "president",
