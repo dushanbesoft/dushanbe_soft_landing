@@ -24,9 +24,10 @@ interface CaseTabsProps {
   groups: TabGroup[];
   lang: string;
   projectSlug: string;
+  projectTitle?: string;
 }
 
-export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
+export default function CaseTabs({ groups, lang, projectSlug, projectTitle }: CaseTabsProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   if (!groups || groups.length === 0) return null;
@@ -42,6 +43,7 @@ export default function CaseTabs({ groups, lang, projectSlug }: CaseTabsProps) {
       }
     >
       <div className={styles.tabHeader}>
+        {projectTitle && <h1 className={styles.projectTitle}>{projectTitle}</h1>}
         <div className={styles.tabButtons}>
           {groups.map((group, idx) => (
             <button

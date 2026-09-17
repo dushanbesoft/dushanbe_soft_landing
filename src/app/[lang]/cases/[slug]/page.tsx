@@ -167,16 +167,15 @@ export default async function CaseDetailsPage({
             <span>{t("cases.all_projects")}</span>
           </Link>
 
-          <div className={styles.heroContent}>
-            {/* <div className={styles.yearBadge}>
-              <span className={styles.yearText}>{project.year}</span>
-            </div> */}
-            <h1 className={styles.title}>{title}</h1>
-          </div>
+          {!projectComponents && (
+            <div className={styles.heroContent}>
+              <h1 className={styles.title}>{title}</h1>
+            </div>
+          )}
 
           {projectComponents ? (
             <div style={{ marginTop: '40px', width: '100%' }}>
-              <CaseTabs groups={projectComponents} lang={lang} projectSlug={slug} />
+              <CaseTabs groups={projectComponents} lang={lang} projectSlug={slug} projectTitle={title} />
             </div>
           ) : (
             <>
