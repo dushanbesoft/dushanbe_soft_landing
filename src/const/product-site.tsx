@@ -163,6 +163,126 @@ export const ProductSite: ProductSiteItem[] = [
     ],
   },
   {
+    imageSrc: "/images/projects/pic.webp",
+    year: "2024",
+    tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
+    slug: "digital-tajikistan",
+    gallery: [
+      "/images/projects/pic/gallery-1.png",
+      "/images/projects/pic/gallery-2.png",
+      "/images/projects/pic/gallery-3.png",
+      "/images/projects/pic/gallery-4.png",
+      "/images/projects/pic/gallery-5.png",
+    ],
+    projectComponents: [
+      {
+        tabName: { ru: "Портал", en: "Portal", tj: "Портал" },
+        items: [
+          {
+            slug: "home",
+            title: {
+              ru: "Главная страница",
+              en: "Homepage",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/pic/gallery-1.png",
+            BannerSrc: "/images/projects/pic/gallery-1.png",
+            shortInfo: {
+              ru: "Презентация государственного проекта и партнёры",
+              en: "State project presentation and partners",
+              tj: "Муаррифии лоиҳаи давлатӣ ва шарикон",
+            },
+            fullInfo: {
+              ru: "Главная страница портала «Tajikistan Digital Foundations» представляет государственный проект цифровой трансформации. В шапке размещены государственный герб, полное название учреждения — Государственное учреждение «Центр реализации проектов цифровых основ Таджикистана» при Исполнительном аппарате Президента — и логотип TDF. Горизонтальное меню объединяет разделы «Главная», «Новости», «Объявления», «Проекты», «Государственные символы», «Структура», «FAQ» и «О нас». Дополнительно в шапке доступны инструменты доступности (увеличение шрифта, версия для слабовидящих), переключатель языка и поиск. Центральную область занимает крупный баннер с изображением здания правительства и цифровым фоном, заголовком «Tajikistan Digital Foundations Project» и кнопкой «Learn more». Под баннером бегущая строка перечисляет направления проекта, а нижняя полоса содержит логотипы партнёров: Всемирный банк, профильные министерства и организации.\n\nПользовательский сценарий: посетитель знакомится с сутью проекта из баннера, переходит к подробностям кнопкой «Learn more» либо выбирает нужный раздел — новости, проекты или структуру — через основное меню.\n\nЦенность для бизнеса: подобная главная страница подходит государственным и институциональным порталам, где важно одновременно представить миссию, обозначить направления работы и показать партнёрскую поддержку. Инструменты доступности и мультиязычность делают ресурс пригодным для широкой аудитории.",
+              en: "The homepage of the Tajikistan Digital Foundations portal presents the state digital transformation project. The header contains the national emblem, the institution’s full name — State Institution “Project Implementation Center for the Digital Foundations of Tajikistan” under the Executive Office of the President — and the TDF logo. A horizontal menu brings together Home, News, Announcements, Projects, State Symbols, Structure, FAQ and About Us. The header also offers accessibility tools (font enlargement, a low-vision version), a language switcher and search. The centre holds a large banner with an image of the government building on a digital background, the headline “Tajikistan Digital Foundations Project” and a Learn more button. A ticker below the banner lists the project directions, while a bottom strip shows partner logos: the World Bank, relevant ministries and organisations.\n\nUser journey: the visitor grasps the essence of the project from the banner, moves to details via Learn more, or selects a relevant section — news, projects or structure — through the main menu.\n\nBusiness value: such a homepage suits government and institutional portals where it is important to present the mission, outline areas of work and show partner support at once. Accessibility tools and multilingual support make the resource fit for a wide audience.",
+              tj: "Саҳифаи асосии портали «Tajikistan Digital Foundations» лоиҳаи давлатии дигаргунсозии рақамиро муаррифӣ мекунад. Дар қисми боло нишони давлатӣ, номи пурраи муассиса — Муассисаи давлатии «Маркази татбиқи лоиҳаҳои асосҳои рақамии Тоҷикистон» назди Дастгоҳи иҷроияи Президент — ва нишони TDF ҷойгиранд. Менюи уфуқӣ бахшҳои «Асосӣ», «Хабарҳо», «Эълонҳо», «Лоиҳаҳо», «Рамзҳои давлатӣ», «Сохтор», «FAQ» ва «Дар бораи мо»-ро муттаҳид мекунад. Ҳамчунин дар қисми боло абзорҳои дастрасӣ (калон кардани шрифт, версия барои камбинойон), интихобкунандаи забон ва ҷустуҷӯ дастрасанд. Қисми марказиро баннери калон бо тасвири бинои ҳукумат дар заминаи рақамӣ, сарлавҳаи «Tajikistan Digital Foundations Project» ва тугмаи «Learn more» ишғол мекунад. Дар зери баннер сатри давон самтҳои лоиҳаро номбар мекунад ва навори поёнӣ нишонаҳои шариконро дар бар мегирад: Бонки ҷаҳонӣ, вазоратҳо ва созмонҳои дахлдор.\n\nРаванди истифода: корбар моҳияти лоиҳаро аз баннер дарк мекунад, бо тугмаи «Learn more» ба тафсилот мегузарад ё бахши заруриро — хабарҳо, лоиҳаҳо ё сохтор — тавассути менюи асосӣ интихоб менамояд.\n\nАҳамият барои тиҷорат: чунин саҳифаи асосӣ барои порталҳои давлатӣ ва институтсионалӣ мувофиқ аст, ки дар онҳо ҳамзамон пешниҳоди рисолат, нишон додани самтҳои кор ва дастгирии шарикон муҳим аст. Абзорҳои дастрасӣ ва бисёрзабонӣ манбаъро барои шунавандагони васеъ мувофиқ мегардонанд.",
+            },
+          },
+          {
+            slug: "news",
+            title: {
+              ru: "Новости",
+              en: "News",
+              tj: "Хабарҳо",
+            },
+            imageSrc: "/images/projects/pic/gallery-2.png",
+            BannerSrc: "/images/projects/pic/gallery-2.png",
+            shortInfo: {
+              ru: "Лента публикаций с поиском",
+              en: "Publication feed with search",
+              tj: "Лентаи нашрҳо бо ҷустуҷӯ",
+            },
+            fullInfo: {
+              ru: "Раздел «Новости» организует публикации о ходе проекта. Под заголовком «News» и хлебными крошками расположено поле поиска по новостям, а ниже — вкладка «All News» и лента материалов. Каждая новость оформлена карточкой с фотографией мероприятия, меткой категории «News», датой публикации, заголовком и ссылкой «More Details». На экране представлены материалы о рабочих встречах и совещаниях по проекту, что показывает регулярное информационное сопровождение.\n\nПользовательский сценарий: посетитель просматривает ленту новостей, при необходимости уточняет запрос через поиск и открывает интересующую публикацию по ссылке «More Details».\n\nЦенность для бизнеса: новостной модуль поддерживает прозрачность и информирует аудиторию о ходе работ. Единый формат карточек с датой и фотографией облегчает восприятие потока публикаций и создаёт впечатление активной, регулярно обновляемой площадки.",
+              en: "The News section organises publications on the project’s progress. Below the “News” heading and breadcrumbs is a news search field, followed by an All News tab and a feed of materials. Each news item is a card with an event photograph, a “News” category tag, a publication date, a headline and a More Details link. The screen shows materials about working meetings and project sessions, reflecting regular information coverage.\n\nUser journey: the visitor browses the news feed, refines the query through search if needed and opens the relevant publication via the More Details link.\n\nBusiness value: a news module supports transparency and keeps the audience informed about the progress of work. A uniform card format with date and photograph makes the stream of publications easy to follow and conveys the impression of an active, regularly updated platform.",
+              tj: "Бахши «Хабарҳо» нашрҳоро дар бораи ҷараёни лоиҳа ба тартиб меорад. Зери сарлавҳаи «News» ва пайраҳаи навигатсионӣ майдони ҷустуҷӯи хабарҳо ҷойгир аст ва дар поён — варақаи «All News» ва лентаи мавод. Ҳар хабар ҳамчун корт бо акси чорабинӣ, нишонаи гурӯҳи «News», санаи нашр, сарлавҳа ва пайванди «More Details» таҳия шудааст. Дар экран маводи вохӯриҳои корӣ ва машваратҳо оид ба лоиҳа пешниҳод шудааст, ки ҳамроҳии мунтазами иттилоотиро нишон медиҳад.\n\nРаванди истифода: корбар лентаи хабарҳоро аз назар мегузаронад, ҳангоми зарурат дархостро тавассути ҷустуҷӯ мушаххас мекунад ва нашри ҷолибро бо пайванди «More Details» мекушояд.\n\nАҳамият барои тиҷорат: модули хабарҳо шаффофиятро дастгирӣ мекунад ва шунавандагонро аз ҷараёни корҳо огоҳ месозад. Формати ягонаи кортҳо бо сана ва акс дарки ҷараёни нашрҳоро осон мекунад ва таассуроти майдончаи фаъол ва мунтазам навшавандаро эҷод менамояд.",
+            },
+          },
+          {
+            slug: "projects",
+            title: {
+              ru: "Проекты",
+              en: "Projects",
+              tj: "Лоиҳаҳо",
+            },
+            imageSrc: "/images/projects/pic/gallery-3.png",
+            BannerSrc: "/images/projects/pic/gallery-3.png",
+            shortInfo: {
+              ru: "Карточка проекта со статусом и прогрессом",
+              en: "Project card with status and progress",
+              tj: "Корти лоиҳа бо ҳолат ва пешрафт",
+            },
+            fullInfo: {
+              ru: "Раздел «Проекты» представляет инициативы учреждения в виде структурированных карточек. Под заголовком «Projects» размещено поле поиска по проектам. Карточка проекта содержит статусную метку «Active», категорию, название «Tajikistan Digital Foundations Project», изображение и краткое описание. Отдельно вынесены ключевые параметры: индикатор прогресса с процентом выполнения, срок реализации и общий бюджет. Кнопка «Read More» ведёт к подробной странице проекта.\n\nПользовательский сценарий: посетитель оценивает статус и прогресс проекта по карточке, сопоставляет сроки и бюджет и открывает подробную информацию для более глубокого изучения.\n\nЦенность для бизнеса: карточка проекта с прогрессом, сроками и бюджетом наглядно демонстрирует подотчётность и ход исполнения. Такой формат полезен для организаций, реализующих программы и гранты, где важно показывать статус инициатив прозрачно и единообразно.",
+              en: "The Projects section presents the institution’s initiatives as structured cards. A project search field sits below the “Projects” heading. The project card contains an “Active” status label, a category, the name “Tajikistan Digital Foundations Project”, an image and a short description. Key parameters are shown separately: a progress indicator with a completion percentage, an implementation deadline and the total budget. A Read More button leads to the detailed project page.\n\nUser journey: the visitor assesses the project’s status and progress from the card, compares the timeline and budget, and opens the detailed information for closer study.\n\nBusiness value: a project card with progress, deadlines and budget clearly demonstrates accountability and execution. This format is useful for organisations running programmes and grants, where it is important to show the status of initiatives transparently and consistently.",
+              tj: "Бахши «Лоиҳаҳо» ташаббусҳои муассисаро дар шакли кортҳои сохторёфта пешниҳод мекунад. Зери сарлавҳаи «Projects» майдони ҷустуҷӯи лоиҳаҳо ҷойгир аст. Корти лоиҳа нишонаи ҳолати «Active», гурӯҳ, номи «Tajikistan Digital Foundations Project», тасвир ва тавсифи кӯтоҳро дар бар мегирад. Параметрҳои асосӣ алоҳида нишон дода шудаанд: нишондиҳандаи пешрафт бо фоизи иҷро, мӯҳлати татбиқ ва буҷети умумӣ. Тугмаи «Read More» ба саҳифаи муфассали лоиҳа мебарад.\n\nРаванди истифода: корбар ҳолат ва пешрафти лоиҳаро аз рӯйи корт арзёбӣ мекунад, мӯҳлат ва буҷетро муқоиса менамояд ва барои омӯзиши амиқтар маълумоти муфассалро мекушояд.\n\nАҳамият барои тиҷорат: корти лоиҳа бо пешрафт, мӯҳлат ва буҷет ҳисоботдиҳӣ ва ҷараёни иҷроро аён нишон медиҳад. Ин формат барои созмонҳое, ки барномаҳо ва грантҳоро амалӣ мекунанд ва бояд ҳолати ташаббусҳоро шаффоф ва якхела нишон диҳанд, муфид аст.",
+            },
+          },
+          {
+            slug: "state-symbols",
+            title: {
+              ru: "Государственные символы",
+              en: "State Symbols",
+              tj: "Рамзҳои давлатӣ",
+            },
+            imageSrc: "/images/projects/pic/gallery-4.png",
+            BannerSrc: "/images/projects/pic/gallery-4.png",
+            shortInfo: {
+              ru: "Справочный раздел о символах государства",
+              en: "Reference section on state symbols",
+              tj: "Бахши маълумотӣ дар бораи рамзҳои давлат",
+            },
+            fullInfo: {
+              ru: "Раздел «Государственные символы» представляет официальную справочную информацию. Под заголовком «State Symbols» и хлебными крошками расположены вкладки «State Emblem», «State Flag» и «National Anthem», разделяющие содержимое по типам символов. В активной вкладке выводятся выдержка из Закона Республики Таджикистан о государственных символах, заголовок «State Emblem» и изображение государственного герба. Такой формат объединяет нормативный текст и визуальное представление символа.\n\nПользовательский сценарий: посетитель выбирает нужный символ через вкладки, знакомится с официальным описанием и рассматривает изображение.\n\nЦенность для бизнеса: справочный раздел с вкладками удобен для представления официальной или регламентной информации, которая должна быть точной и структурированной. Аналогичный подход применим для страниц о нормативах, стандартах и официальной символике организации.",
+              en: "The State Symbols section presents official reference information. Below the “State Symbols” heading and breadcrumbs are the State Emblem, State Flag and National Anthem tabs, separating the content by symbol type. The active tab shows an excerpt from the Law of the Republic of Tajikistan on state symbols, the “State Emblem” heading and an image of the national emblem. This format combines the regulatory text with a visual representation of the symbol.\n\nUser journey: the visitor selects the relevant symbol through the tabs, reads the official description and views the image.\n\nBusiness value: a tabbed reference section is convenient for presenting official or regulatory information that must be accurate and structured. A similar approach suits pages about regulations, standards and an organisation’s official symbols.",
+              tj: "Бахши «Рамзҳои давлатӣ» маълумоти расмии маълумотиро пешниҳод мекунад. Зери сарлавҳаи «State Symbols» ва пайраҳаи навигатсионӣ варақаҳои «State Emblem», «State Flag» ва «National Anthem» ҷойгиранд, ки мундариҷаро аз рӯйи навъи рамзҳо ҷудо мекунанд. Дар варақаи фаъол порчае аз Қонуни Ҷумҳурии Тоҷикистон дар бораи рамзҳои давлатӣ, сарлавҳаи «State Emblem» ва тасвири нишони давлатӣ намоиш дода мешавад. Ин формат матни меъёриро бо пешниҳоди аёнии рамз муттаҳид мекунад.\n\nРаванди истифода: корбар рамзи заруриро тавассути варақаҳо интихоб мекунад, бо тавсифи расмӣ шинос мешавад ва тасвирро аз назар мегузаронад.\n\nАҳамият барои тиҷорат: бахши маълумотӣ бо варақаҳо барои пешниҳоди иттилооти расмӣ ё меъёрӣ, ки бояд дақиқ ва сохторёфта бошад, қулай аст. Равиши монанд барои саҳифаҳо оид ба меъёрҳо, стандартҳо ва рамзҳои расмии созмон мувофиқ аст.",
+            },
+          },
+          {
+            slug: "structure",
+            title: {
+              ru: "Структура",
+              en: "Structure",
+              tj: "Сохтор",
+            },
+            imageSrc: "/images/projects/pic/gallery-5.png",
+            BannerSrc: "/images/projects/pic/gallery-5.png",
+            shortInfo: {
+              ru: "Организационная схема учреждения",
+              en: "Organisational chart of the institution",
+              tj: "Нақшаи ташкилии муассиса",
+            },
+            fullInfo: {
+              ru: "Раздел «Структура» отображает организационную схему учреждения. В верхней части размещён полный заголовок о структуре Государственного учреждения при Исполнительном аппарате Президента и хлебные крошки. Ниже, под подзаголовком «Leadership», расположена иерархическая диаграмма: на вершине — «Director», под ним «Director’s Assistant» и «HR Specialist», далее — подразделения «ICT Department», «Deputy Director», «Accounting» и «Purchasing Department» с указанием ключевых должностей (координатор, специалист по мониторингу и оценке, главный бухгалтер, главный специалист по закупкам). Блоки соединены линиями, отражающими подчинённость.\n\nПользовательский сценарий: посетитель изучает схему сверху вниз, определяет состав подразделений и находит должность или отдел, отвечающий за интересующее направление.\n\nЦенность для бизнеса: визуальная организационная схема наглядно показывает состав и иерархию организации. Такой формат полезен для институциональных сайтов, где важно продемонстрировать прозрачную структуру управления и распределение ответственности.",
+              en: "The Structure section displays the institution’s organisational chart. The top holds the full heading about the structure of the State Institution under the Executive Office of the President, together with breadcrumbs. Below, under the “Leadership” subheading, is a hierarchical diagram: at the top is the Director, followed by the Director’s Assistant and HR Specialist, then the ICT Department, Deputy Director, Accounting and Purchasing Department units with key positions indicated (coordinator, monitoring and evaluation specialist, chief accountant, chief procurement specialist). The blocks are connected by lines reflecting the reporting order.\n\nUser journey: the visitor studies the chart from top to bottom, identifies the composition of the units and finds the position or department responsible for the area of interest.\n\nBusiness value: a visual organisational chart clearly shows an organisation’s composition and hierarchy. This format is useful for institutional sites where it is important to demonstrate a transparent management structure and the distribution of responsibility.",
+              tj: "Бахши «Сохтор» нақшаи ташкилии муассисаро намоиш медиҳад. Дар қисми боло сарлавҳаи пурра дар бораи сохтори Муассисаи давлатии назди Дастгоҳи иҷроияи Президент ва пайраҳаи навигатсионӣ ҷойгиранд. Дар поён, зери зерсарлавҳаи «Leadership», диаграммаи зинавӣ ҷой дорад: дар боло «Director», зери он «Director’s Assistant» ва «HR Specialist», сипас воҳидҳои «ICT Department», «Deputy Director», «Accounting» ва «Purchasing Department» бо нишон додани вазифаҳои асосӣ (ҳамоҳангсоз, мутахассиси мониторинг ва арзёбӣ, саршумордор, сармутахассиси харид). Блокҳо бо хатҳое, ки тобеиятро инъикос мекунанд, пайваст шудаанд.\n\nРаванди истифода: корбар нақшаро аз боло ба поён меомӯзад, ҳайати воҳидҳоро муайян мекунад ва вазифа ё шуъбаи масъули самти дилхоҳро меёбад.\n\nАҳамият барои тиҷорат: нақшаи аёнии ташкилӣ ҳайат ва зинанизоми созмонро равшан нишон медиҳад. Ин формат барои сомонаҳои институтсионалӣ муфид аст, ки дар онҳо нишон додани сохтори шаффофи идоракунӣ ва тақсими масъулият муҳим аст.",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     imageSrc: "/images/projects/sohktor/banner.svg",
     bannerSrc: "/images/projects/sohktor/banner.svg",
     bannerFit: "contain",
@@ -323,126 +443,6 @@ export const ProductSite: ProductSiteItem[] = [
               ru: "Реестр пожаров — это табличное представление всех зарегистрированных происшествий, дающее оператору полный обзор данных. В верхней части расположены строка поиска (Ҷустуҷӯ...), выпадающий фильтр по типу записи (Ҳамаи намуд), кнопка обновления и кнопка «+» для добавления новой записи, которая ведёт к форме регистрации пожара.\n\nОсновную область занимает широкая таблица с колонками: ИД, «КМДА», дата и время начала пожара, наименование и адрес объекта с его принадлежностью, причина пожара и виновники, площадь пожара (кв. м), ущерб и спасённое имущество (в сомони), номер информационной книги (КА), способ регистрации и сведения о распространении пожара. Горизонтальная прокрутка обеспечивает доступ ко всем полям, а чекбоксы в первой колонке позволяют выбирать записи для групповых операций.\n\nВнизу таблицы находится постраничная навигация с номерами страниц, кнопкой перехода к следующей и последней странице, а также селектор количества строк на странице.\n\nПользовательский сценарий: оператор ищет нужное происшествие по ключевым словам или фильтру, просматривает показатели в таблице, открывает запись для редактирования или добавляет новую через кнопку «+».\n\nЦенность для бизнеса: реестр с поиском, фильтрами и пагинацией обеспечивает быстрый доступ к большим объёмам данных и удобное ведение учёта. Такой паттерн является основой любой административной системы работы со списками записей.",
               en: "The fire register is a tabular view of all recorded incidents that gives the operator a complete overview of the data. The top area holds a search field, a record-type dropdown filter, a refresh button and a “+” button for adding a new record, which opens the fire registration form.\n\nThe main area is a wide table with columns: ID, “KMDA”, the fire start date and time, the facility name and address with its affiliation, the fire cause and responsible parties, the fire area (sq. m), the damage and the saved property (in somoni), the information-book number, the registration method and details of the fire's spread. Horizontal scrolling provides access to all fields, while checkboxes in the first column let the user select records for bulk operations.\n\nAt the bottom of the table is pagination with page numbers, buttons to move to the next and last page, and a selector for the number of rows per page.\n\nUser journey: an operator searches for the required incident by keywords or filter, reviews the indicators in the table, opens a record for editing or adds a new one with the “+” button.\n\nBusiness value: a register with search, filters and pagination provides fast access to large volumes of data and convenient record keeping. This pattern is the foundation of any administrative system that works with lists of records.",
               tj: "Феҳристи сӯхторҳо намоиши ҷадвалии ҳамаи ҳодисаҳои бақайдгирифташуда буда, ба оператор шарҳи мукаммали додаҳоро медиҳад. Дар қисми боло сатри ҷустуҷӯ (Ҷустуҷӯ...), филтри кушодашаванда аз рӯи навъи сабт (Ҳамаи намуд), тугмаи навсозӣ ва тугмаи «+» барои илова кардани сабти нав, ки ба шакли бақайдгирии сӯхтор мебарад, ҷойгиранд.\n\nМайдони асосиро ҷадвали васеъ бо сутунҳо ишғол мекунад: ИД, «КМДА», таърих ва вақти сар задани сӯхтор, ному нишонӣ ва суроғаи иншоот бо мансубияти он, сабаби сӯхтор ва шахсони сабабгор, масоҳати сӯхтор (метри мураббаъ), зарар ва амволи наҷотдодашуда (бо сомонӣ), рақами китоби ахборотӣ (КА), усули бақайдгирӣ ва маълумот дар бораи паҳншавии сӯхтор. Ҳаракати уфуқӣ дастрасӣ ба ҳамаи майдонҳоро таъмин мекунад, катакчаҳо дар сутуни аввал бошанд, интихоби сабтҳоро барои амалиёти гурӯҳӣ имкон медиҳанд.\n\nДар поёни ҷадвал саҳифабандӣ бо рақамҳои саҳифаҳо, тугмаҳои гузариш ба саҳифаи навбатӣ ва охирин, инчунин интихобкунандаи шумораи сатрҳо дар саҳифа ҷойгир аст.\n\nРаванди истифода: оператор ҳодисаи заруриро аз рӯи калимаҳои калидӣ ё филтр меҷӯяд, нишондиҳандаҳоро дар ҷадвал мебинад, сабтро барои таҳрир мекушояд ё сабти навро тавассути тугмаи «+» илова мекунад.\n\nАҳамият барои тиҷорат: феҳрист бо ҷустуҷӯ, филтрҳо ва саҳифабандӣ дастрасии зудро ба ҳаҷми зиёди додаҳо ва пешбурди осони баҳисобгириро таъмин мекунад. Чунин намуна асоси ҳар системаи маъмурии кор бо рӯйхати сабтҳо мебошад.",
-            },
-          },
-        ],
-      },
-    ],
-  },
-  {
-    imageSrc: "/images/projects/pic.webp",
-    year: "2024",
-    tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
-    slug: "digital-tajikistan",
-    gallery: [
-      "/images/projects/pic/gallery-1.png",
-      "/images/projects/pic/gallery-2.png",
-      "/images/projects/pic/gallery-3.png",
-      "/images/projects/pic/gallery-4.png",
-      "/images/projects/pic/gallery-5.png",
-    ],
-    projectComponents: [
-      {
-        tabName: { ru: "Портал", en: "Portal", tj: "Портал" },
-        items: [
-          {
-            slug: "home",
-            title: {
-              ru: "Главная страница",
-              en: "Homepage",
-              tj: "Саҳифаи асосӣ",
-            },
-            imageSrc: "/images/projects/pic/gallery-1.png",
-            BannerSrc: "/images/projects/pic/gallery-1.png",
-            shortInfo: {
-              ru: "Презентация государственного проекта и партнёры",
-              en: "State project presentation and partners",
-              tj: "Муаррифии лоиҳаи давлатӣ ва шарикон",
-            },
-            fullInfo: {
-              ru: "Главная страница портала «Tajikistan Digital Foundations» представляет государственный проект цифровой трансформации. В шапке размещены государственный герб, полное название учреждения — Государственное учреждение «Центр реализации проектов цифровых основ Таджикистана» при Исполнительном аппарате Президента — и логотип TDF. Горизонтальное меню объединяет разделы «Главная», «Новости», «Объявления», «Проекты», «Государственные символы», «Структура», «FAQ» и «О нас». Дополнительно в шапке доступны инструменты доступности (увеличение шрифта, версия для слабовидящих), переключатель языка и поиск. Центральную область занимает крупный баннер с изображением здания правительства и цифровым фоном, заголовком «Tajikistan Digital Foundations Project» и кнопкой «Learn more». Под баннером бегущая строка перечисляет направления проекта, а нижняя полоса содержит логотипы партнёров: Всемирный банк, профильные министерства и организации.\n\nПользовательский сценарий: посетитель знакомится с сутью проекта из баннера, переходит к подробностям кнопкой «Learn more» либо выбирает нужный раздел — новости, проекты или структуру — через основное меню.\n\nЦенность для бизнеса: подобная главная страница подходит государственным и институциональным порталам, где важно одновременно представить миссию, обозначить направления работы и показать партнёрскую поддержку. Инструменты доступности и мультиязычность делают ресурс пригодным для широкой аудитории.",
-              en: "The homepage of the Tajikistan Digital Foundations portal presents the state digital transformation project. The header contains the national emblem, the institution’s full name — State Institution “Project Implementation Center for the Digital Foundations of Tajikistan” under the Executive Office of the President — and the TDF logo. A horizontal menu brings together Home, News, Announcements, Projects, State Symbols, Structure, FAQ and About Us. The header also offers accessibility tools (font enlargement, a low-vision version), a language switcher and search. The centre holds a large banner with an image of the government building on a digital background, the headline “Tajikistan Digital Foundations Project” and a Learn more button. A ticker below the banner lists the project directions, while a bottom strip shows partner logos: the World Bank, relevant ministries and organisations.\n\nUser journey: the visitor grasps the essence of the project from the banner, moves to details via Learn more, or selects a relevant section — news, projects or structure — through the main menu.\n\nBusiness value: such a homepage suits government and institutional portals where it is important to present the mission, outline areas of work and show partner support at once. Accessibility tools and multilingual support make the resource fit for a wide audience.",
-              tj: "Саҳифаи асосии портали «Tajikistan Digital Foundations» лоиҳаи давлатии дигаргунсозии рақамиро муаррифӣ мекунад. Дар қисми боло нишони давлатӣ, номи пурраи муассиса — Муассисаи давлатии «Маркази татбиқи лоиҳаҳои асосҳои рақамии Тоҷикистон» назди Дастгоҳи иҷроияи Президент — ва нишони TDF ҷойгиранд. Менюи уфуқӣ бахшҳои «Асосӣ», «Хабарҳо», «Эълонҳо», «Лоиҳаҳо», «Рамзҳои давлатӣ», «Сохтор», «FAQ» ва «Дар бораи мо»-ро муттаҳид мекунад. Ҳамчунин дар қисми боло абзорҳои дастрасӣ (калон кардани шрифт, версия барои камбинойон), интихобкунандаи забон ва ҷустуҷӯ дастрасанд. Қисми марказиро баннери калон бо тасвири бинои ҳукумат дар заминаи рақамӣ, сарлавҳаи «Tajikistan Digital Foundations Project» ва тугмаи «Learn more» ишғол мекунад. Дар зери баннер сатри давон самтҳои лоиҳаро номбар мекунад ва навори поёнӣ нишонаҳои шариконро дар бар мегирад: Бонки ҷаҳонӣ, вазоратҳо ва созмонҳои дахлдор.\n\nРаванди истифода: корбар моҳияти лоиҳаро аз баннер дарк мекунад, бо тугмаи «Learn more» ба тафсилот мегузарад ё бахши заруриро — хабарҳо, лоиҳаҳо ё сохтор — тавассути менюи асосӣ интихоб менамояд.\n\nАҳамият барои тиҷорат: чунин саҳифаи асосӣ барои порталҳои давлатӣ ва институтсионалӣ мувофиқ аст, ки дар онҳо ҳамзамон пешниҳоди рисолат, нишон додани самтҳои кор ва дастгирии шарикон муҳим аст. Абзорҳои дастрасӣ ва бисёрзабонӣ манбаъро барои шунавандагони васеъ мувофиқ мегардонанд.",
-            },
-          },
-          {
-            slug: "news",
-            title: {
-              ru: "Новости",
-              en: "News",
-              tj: "Хабарҳо",
-            },
-            imageSrc: "/images/projects/pic/gallery-2.png",
-            BannerSrc: "/images/projects/pic/gallery-2.png",
-            shortInfo: {
-              ru: "Лента публикаций с поиском",
-              en: "Publication feed with search",
-              tj: "Лентаи нашрҳо бо ҷустуҷӯ",
-            },
-            fullInfo: {
-              ru: "Раздел «Новости» организует публикации о ходе проекта. Под заголовком «News» и хлебными крошками расположено поле поиска по новостям, а ниже — вкладка «All News» и лента материалов. Каждая новость оформлена карточкой с фотографией мероприятия, меткой категории «News», датой публикации, заголовком и ссылкой «More Details». На экране представлены материалы о рабочих встречах и совещаниях по проекту, что показывает регулярное информационное сопровождение.\n\nПользовательский сценарий: посетитель просматривает ленту новостей, при необходимости уточняет запрос через поиск и открывает интересующую публикацию по ссылке «More Details».\n\nЦенность для бизнеса: новостной модуль поддерживает прозрачность и информирует аудиторию о ходе работ. Единый формат карточек с датой и фотографией облегчает восприятие потока публикаций и создаёт впечатление активной, регулярно обновляемой площадки.",
-              en: "The News section organises publications on the project’s progress. Below the “News” heading and breadcrumbs is a news search field, followed by an All News tab and a feed of materials. Each news item is a card with an event photograph, a “News” category tag, a publication date, a headline and a More Details link. The screen shows materials about working meetings and project sessions, reflecting regular information coverage.\n\nUser journey: the visitor browses the news feed, refines the query through search if needed and opens the relevant publication via the More Details link.\n\nBusiness value: a news module supports transparency and keeps the audience informed about the progress of work. A uniform card format with date and photograph makes the stream of publications easy to follow and conveys the impression of an active, regularly updated platform.",
-              tj: "Бахши «Хабарҳо» нашрҳоро дар бораи ҷараёни лоиҳа ба тартиб меорад. Зери сарлавҳаи «News» ва пайраҳаи навигатсионӣ майдони ҷустуҷӯи хабарҳо ҷойгир аст ва дар поён — варақаи «All News» ва лентаи мавод. Ҳар хабар ҳамчун корт бо акси чорабинӣ, нишонаи гурӯҳи «News», санаи нашр, сарлавҳа ва пайванди «More Details» таҳия шудааст. Дар экран маводи вохӯриҳои корӣ ва машваратҳо оид ба лоиҳа пешниҳод шудааст, ки ҳамроҳии мунтазами иттилоотиро нишон медиҳад.\n\nРаванди истифода: корбар лентаи хабарҳоро аз назар мегузаронад, ҳангоми зарурат дархостро тавассути ҷустуҷӯ мушаххас мекунад ва нашри ҷолибро бо пайванди «More Details» мекушояд.\n\nАҳамият барои тиҷорат: модули хабарҳо шаффофиятро дастгирӣ мекунад ва шунавандагонро аз ҷараёни корҳо огоҳ месозад. Формати ягонаи кортҳо бо сана ва акс дарки ҷараёни нашрҳоро осон мекунад ва таассуроти майдончаи фаъол ва мунтазам навшавандаро эҷод менамояд.",
-            },
-          },
-          {
-            slug: "projects",
-            title: {
-              ru: "Проекты",
-              en: "Projects",
-              tj: "Лоиҳаҳо",
-            },
-            imageSrc: "/images/projects/pic/gallery-3.png",
-            BannerSrc: "/images/projects/pic/gallery-3.png",
-            shortInfo: {
-              ru: "Карточка проекта со статусом и прогрессом",
-              en: "Project card with status and progress",
-              tj: "Корти лоиҳа бо ҳолат ва пешрафт",
-            },
-            fullInfo: {
-              ru: "Раздел «Проекты» представляет инициативы учреждения в виде структурированных карточек. Под заголовком «Projects» размещено поле поиска по проектам. Карточка проекта содержит статусную метку «Active», категорию, название «Tajikistan Digital Foundations Project», изображение и краткое описание. Отдельно вынесены ключевые параметры: индикатор прогресса с процентом выполнения, срок реализации и общий бюджет. Кнопка «Read More» ведёт к подробной странице проекта.\n\nПользовательский сценарий: посетитель оценивает статус и прогресс проекта по карточке, сопоставляет сроки и бюджет и открывает подробную информацию для более глубокого изучения.\n\nЦенность для бизнеса: карточка проекта с прогрессом, сроками и бюджетом наглядно демонстрирует подотчётность и ход исполнения. Такой формат полезен для организаций, реализующих программы и гранты, где важно показывать статус инициатив прозрачно и единообразно.",
-              en: "The Projects section presents the institution’s initiatives as structured cards. A project search field sits below the “Projects” heading. The project card contains an “Active” status label, a category, the name “Tajikistan Digital Foundations Project”, an image and a short description. Key parameters are shown separately: a progress indicator with a completion percentage, an implementation deadline and the total budget. A Read More button leads to the detailed project page.\n\nUser journey: the visitor assesses the project’s status and progress from the card, compares the timeline and budget, and opens the detailed information for closer study.\n\nBusiness value: a project card with progress, deadlines and budget clearly demonstrates accountability and execution. This format is useful for organisations running programmes and grants, where it is important to show the status of initiatives transparently and consistently.",
-              tj: "Бахши «Лоиҳаҳо» ташаббусҳои муассисаро дар шакли кортҳои сохторёфта пешниҳод мекунад. Зери сарлавҳаи «Projects» майдони ҷустуҷӯи лоиҳаҳо ҷойгир аст. Корти лоиҳа нишонаи ҳолати «Active», гурӯҳ, номи «Tajikistan Digital Foundations Project», тасвир ва тавсифи кӯтоҳро дар бар мегирад. Параметрҳои асосӣ алоҳида нишон дода шудаанд: нишондиҳандаи пешрафт бо фоизи иҷро, мӯҳлати татбиқ ва буҷети умумӣ. Тугмаи «Read More» ба саҳифаи муфассали лоиҳа мебарад.\n\nРаванди истифода: корбар ҳолат ва пешрафти лоиҳаро аз рӯйи корт арзёбӣ мекунад, мӯҳлат ва буҷетро муқоиса менамояд ва барои омӯзиши амиқтар маълумоти муфассалро мекушояд.\n\nАҳамият барои тиҷорат: корти лоиҳа бо пешрафт, мӯҳлат ва буҷет ҳисоботдиҳӣ ва ҷараёни иҷроро аён нишон медиҳад. Ин формат барои созмонҳое, ки барномаҳо ва грантҳоро амалӣ мекунанд ва бояд ҳолати ташаббусҳоро шаффоф ва якхела нишон диҳанд, муфид аст.",
-            },
-          },
-          {
-            slug: "state-symbols",
-            title: {
-              ru: "Государственные символы",
-              en: "State Symbols",
-              tj: "Рамзҳои давлатӣ",
-            },
-            imageSrc: "/images/projects/pic/gallery-4.png",
-            BannerSrc: "/images/projects/pic/gallery-4.png",
-            shortInfo: {
-              ru: "Справочный раздел о символах государства",
-              en: "Reference section on state symbols",
-              tj: "Бахши маълумотӣ дар бораи рамзҳои давлат",
-            },
-            fullInfo: {
-              ru: "Раздел «Государственные символы» представляет официальную справочную информацию. Под заголовком «State Symbols» и хлебными крошками расположены вкладки «State Emblem», «State Flag» и «National Anthem», разделяющие содержимое по типам символов. В активной вкладке выводятся выдержка из Закона Республики Таджикистан о государственных символах, заголовок «State Emblem» и изображение государственного герба. Такой формат объединяет нормативный текст и визуальное представление символа.\n\nПользовательский сценарий: посетитель выбирает нужный символ через вкладки, знакомится с официальным описанием и рассматривает изображение.\n\nЦенность для бизнеса: справочный раздел с вкладками удобен для представления официальной или регламентной информации, которая должна быть точной и структурированной. Аналогичный подход применим для страниц о нормативах, стандартах и официальной символике организации.",
-              en: "The State Symbols section presents official reference information. Below the “State Symbols” heading and breadcrumbs are the State Emblem, State Flag and National Anthem tabs, separating the content by symbol type. The active tab shows an excerpt from the Law of the Republic of Tajikistan on state symbols, the “State Emblem” heading and an image of the national emblem. This format combines the regulatory text with a visual representation of the symbol.\n\nUser journey: the visitor selects the relevant symbol through the tabs, reads the official description and views the image.\n\nBusiness value: a tabbed reference section is convenient for presenting official or regulatory information that must be accurate and structured. A similar approach suits pages about regulations, standards and an organisation’s official symbols.",
-              tj: "Бахши «Рамзҳои давлатӣ» маълумоти расмии маълумотиро пешниҳод мекунад. Зери сарлавҳаи «State Symbols» ва пайраҳаи навигатсионӣ варақаҳои «State Emblem», «State Flag» ва «National Anthem» ҷойгиранд, ки мундариҷаро аз рӯйи навъи рамзҳо ҷудо мекунанд. Дар варақаи фаъол порчае аз Қонуни Ҷумҳурии Тоҷикистон дар бораи рамзҳои давлатӣ, сарлавҳаи «State Emblem» ва тасвири нишони давлатӣ намоиш дода мешавад. Ин формат матни меъёриро бо пешниҳоди аёнии рамз муттаҳид мекунад.\n\nРаванди истифода: корбар рамзи заруриро тавассути варақаҳо интихоб мекунад, бо тавсифи расмӣ шинос мешавад ва тасвирро аз назар мегузаронад.\n\nАҳамият барои тиҷорат: бахши маълумотӣ бо варақаҳо барои пешниҳоди иттилооти расмӣ ё меъёрӣ, ки бояд дақиқ ва сохторёфта бошад, қулай аст. Равиши монанд барои саҳифаҳо оид ба меъёрҳо, стандартҳо ва рамзҳои расмии созмон мувофиқ аст.",
-            },
-          },
-          {
-            slug: "structure",
-            title: {
-              ru: "Структура",
-              en: "Structure",
-              tj: "Сохтор",
-            },
-            imageSrc: "/images/projects/pic/gallery-5.png",
-            BannerSrc: "/images/projects/pic/gallery-5.png",
-            shortInfo: {
-              ru: "Организационная схема учреждения",
-              en: "Organisational chart of the institution",
-              tj: "Нақшаи ташкилии муассиса",
-            },
-            fullInfo: {
-              ru: "Раздел «Структура» отображает организационную схему учреждения. В верхней части размещён полный заголовок о структуре Государственного учреждения при Исполнительном аппарате Президента и хлебные крошки. Ниже, под подзаголовком «Leadership», расположена иерархическая диаграмма: на вершине — «Director», под ним «Director’s Assistant» и «HR Specialist», далее — подразделения «ICT Department», «Deputy Director», «Accounting» и «Purchasing Department» с указанием ключевых должностей (координатор, специалист по мониторингу и оценке, главный бухгалтер, главный специалист по закупкам). Блоки соединены линиями, отражающими подчинённость.\n\nПользовательский сценарий: посетитель изучает схему сверху вниз, определяет состав подразделений и находит должность или отдел, отвечающий за интересующее направление.\n\nЦенность для бизнеса: визуальная организационная схема наглядно показывает состав и иерархию организации. Такой формат полезен для институциональных сайтов, где важно продемонстрировать прозрачную структуру управления и распределение ответственности.",
-              en: "The Structure section displays the institution’s organisational chart. The top holds the full heading about the structure of the State Institution under the Executive Office of the President, together with breadcrumbs. Below, under the “Leadership” subheading, is a hierarchical diagram: at the top is the Director, followed by the Director’s Assistant and HR Specialist, then the ICT Department, Deputy Director, Accounting and Purchasing Department units with key positions indicated (coordinator, monitoring and evaluation specialist, chief accountant, chief procurement specialist). The blocks are connected by lines reflecting the reporting order.\n\nUser journey: the visitor studies the chart from top to bottom, identifies the composition of the units and finds the position or department responsible for the area of interest.\n\nBusiness value: a visual organisational chart clearly shows an organisation’s composition and hierarchy. This format is useful for institutional sites where it is important to demonstrate a transparent management structure and the distribution of responsibility.",
-              tj: "Бахши «Сохтор» нақшаи ташкилии муассисаро намоиш медиҳад. Дар қисми боло сарлавҳаи пурра дар бораи сохтори Муассисаи давлатии назди Дастгоҳи иҷроияи Президент ва пайраҳаи навигатсионӣ ҷойгиранд. Дар поён, зери зерсарлавҳаи «Leadership», диаграммаи зинавӣ ҷой дорад: дар боло «Director», зери он «Director’s Assistant» ва «HR Specialist», сипас воҳидҳои «ICT Department», «Deputy Director», «Accounting» ва «Purchasing Department» бо нишон додани вазифаҳои асосӣ (ҳамоҳангсоз, мутахассиси мониторинг ва арзёбӣ, саршумордор, сармутахассиси харид). Блокҳо бо хатҳое, ки тобеиятро инъикос мекунанд, пайваст шудаанд.\n\nРаванди истифода: корбар нақшаро аз боло ба поён меомӯзад, ҳайати воҳидҳоро муайян мекунад ва вазифа ё шуъбаи масъули самти дилхоҳро меёбад.\n\nАҳамият барои тиҷорат: нақшаи аёнии ташкилӣ ҳайат ва зинанизоми созмонро равшан нишон медиҳад. Ин формат барои сомонаҳои институтсионалӣ муфид аст, ки дар онҳо нишон додани сохтори шаффофи идоракунӣ ва тақсими масъулият муҳим аст.",
             },
           },
         ],
