@@ -467,11 +467,20 @@ export const ProductSite: ProductSiteItem[] = [
         items: [
           {
             slug: "web-hero",
-            title: { ru: "Главный экран и Каналы", en: "Main Screen and Channels", tj: "Экрани асосӣ ва Шабакаҳо" },
+            title: {
+              ru: "Главный экран и Каналы",
+              en: "Main Screen and Channels",
+              tj: "Экрани асосӣ ва Шабакаҳо",
+            },
             imageSrc: "/images/projects/mavjisomon/web-hero4.png",
             BannerSrc: "/images/projects/mavjisomon/web-hero4.png",
-            shortInfo: { ru: "Карусель новинок и Live TV", en: "Carousel of new releases and Live TV", tj: "Карусели навгониҳо ва Live TV" },
-            fullInfo: { ru: `Архитектура и функциональность первого экрана главной страницы
+            shortInfo: {
+              ru: "Карусель новинок и Live TV",
+              en: "Carousel of new releases and Live TV",
+              tj: "Карусели навгониҳо ва Live TV",
+            },
+            fullInfo: {
+              ru: `Архитектура и функциональность первого экрана главной страницы
 
 Верхняя часть главной страницы сайта представляет собой продуманный интерфейс для быстрого доступа к контенту. В шапке (Header) расположено главное меню с разделами: «Фильмы», «Сериалы», «Мультфильмы», «Таджикские фильмы», «Репортажи», «Радио» и «ТВ». Также здесь реализован глобальный поиск, переключатель языков, смена темы (светлая/темная) и виджет профиля пользователя с отображением текущего баланса.
 
@@ -562,16 +571,25 @@ Connecting classic TV format and modern streaming:
 
     Скролли уфуқӣ: Лентаи паймон бо логотипҳои шабакаҳо.
     Кортҳои интерактивии шабакаҳо: Нишонаи "Дар эфир" ва номи барномаи ҷорӣ бо нишондиҳандаи пешрафт.
-    Гузариши фаврӣ ба стрим: Пахши мустақим бо таъхири кам (low-latency streaming).`
+    Гузариши фаврӣ ба стрим: Пахши мустақим бо таъхири кам (low-latency streaming).`,
             },
           },
           {
             slug: "web-platforms",
-            title: { ru: "Поддерживаемые Платформы", en: "Supported Platforms", tj: "Платформаҳои Дастгиришаванда" },
+            title: {
+              ru: "Поддерживаемые Платформы",
+              en: "Supported Platforms",
+              tj: "Платформаҳои Дастгиришаванда",
+            },
             imageSrc: "/images/projects/mavjisomon/web-platform4.png",
             BannerSrc: "/images/projects/mavjisomon/web-platform4.png",
-            shortInfo: { ru: "Интеграция с ОС", en: "OS Integration", tj: "Ҳамгироӣ бо ОС" },
-            fullInfo: { ru: `Проект Mavji Somon не ограничивается только веб-версией, и этот компонент интерфейса наглядно демонстрирует полную кроссплатформенность сервиса. На сайте представлен лаконичный блок с узнаваемыми монохромными иконками трех главных экосистем: Android, iOS (Apple) и Smart TV.
+            shortInfo: {
+              ru: "Интеграция с ОС",
+              en: "OS Integration",
+              tj: "Ҳамгироӣ бо ОС",
+            },
+            fullInfo: {
+              ru: `Проект Mavji Somon не ограничивается только веб-версией, и этот компонент интерфейса наглядно демонстрирует полную кроссплатформенность сервиса. На сайте представлен лаконичный блок с узнаваемыми монохромными иконками трех главных экосистем: Android, iOS (Apple) и Smart TV.
 
 Наличие этого блока информирует пользователей о том, что для каждой из этих операционных систем разработано специализированное нативное приложение. Веб-сайт служит не только как самостоятельный портал для просмотра видео, но и как центральная точка входа, откуда пользователи могут узнать о доступности сервиса на своих любимых устройствах и подготовиться к переходу на мобильный или ТВ-формат просмотра.
 
@@ -621,17 +639,26 @@ The minimalist icon block on the website acts as a direct navigation bridge redi
  Профили ягона ва писандидаҳо: Рӯйхатҳои шахсӣ ва таърихи ҷустуҷӯ фавран пас аз авторизатсия дар ҳама ҷо дастрасанд.
  Битрейти адаптивӣ: Алгоритмҳо сифати видеоро ба таври худкор танзим мекунанд.
 
-Блоки минималистии нишонаҳо дар вебсайт ҳамчун пули навигатсионӣ хизмат мекунад: клик кардан ба логотип корбарро ба мағозаҳои расмӣ (Google Play, App Store) равона мекунад ё дастури насбро дар телевизор тавассути рамзи QR мекушояд.`
+Блоки минималистии нишонаҳо дар вебсайт ҳамчун пули навигатсионӣ хизмат мекунад: клик кардан ба логотип корбарро ба мағозаҳои расмӣ (Google Play, App Store) равона мекунад ё дастури насбро дар телевизор тавассути рамзи QR мекушояд.`,
             },
           },
           {
             slug: "web-recommendations-top",
-            title: { ru: "Главная страница и Каталог", en: "Home Page and Catalog", tj: "Саҳифаи асосӣ ва Каталог" },
+            title: {
+              ru: "Главная страница и Каталог",
+              en: "Home Page and Catalog",
+              tj: "Саҳифаи асосӣ ва Каталог",
+            },
             imageSrc: "/images/projects/mavjisomon/web-recommendations-top.png",
             BannerSrc:
               "/images/projects/mavjisomon/web-recommendations-top.png",
-            shortInfo: { ru: "Умная система подборок", en: "Smart recommendations system", tj: "Системаи тавсияҳои ҳушманд" },
-            fullInfo: { ru: `Архитектура контентной витрины и визуальная эргономика Mavji Somon
+            shortInfo: {
+              ru: "Умная система подборок",
+              en: "Smart recommendations system",
+              tj: "Системаи тавсияҳои ҳушманд",
+            },
+            fullInfo: {
+              ru: `Архитектура контентной витрины и визуальная эргономика Mavji Somon
 
 Главная страница Mavji Somon спроектирована так, чтобы максимально упростить зрителю поиск интересного контента среди тысяч фильмов и сериалов. Верхняя навигационная панель обеспечивает быстрый доступ к основным разделам («Фильмы», «Сериалы», «Мультфильмы», «ТВ» и др.), а также содержит инструменты поиска и смены языка.
 
@@ -730,16 +757,25 @@ Using a deep dark palette is a standard in modern premium streaming.`,
 
 4. Эстетикаи Dark Mode ва таваҷҷӯҳ ба муҳтавои медиа
 
-Истифодаи палитраи торик стандарти стриминги муосир аст.`
+Истифодаи палитраи торик стандарти стриминги муосир аст.`,
             },
           },
           {
             slug: "web-allfilms",
-            title: { ru: "Каталог: Все фильмы", en: "Catalog: All Movies", tj: "Каталог: Ҳамаи филмҳо" },
+            title: {
+              ru: "Каталог: Все фильмы",
+              en: "Catalog: All Movies",
+              tj: "Каталог: Ҳамаи филмҳо",
+            },
             imageSrc: "/images/projects/mavjisomon/web-allfilms.png",
             BannerSrc: "/images/projects/mavjisomon/web-allfilms.png",
-            shortInfo: { ru: "Полный архив и удобные фильтры", en: "Complete archive and convenient filters", tj: "Бойгонии пурра ва филтрҳои қулай" },
-            fullInfo: { ru: `Архитектура каталога «Все фильмы»: навигация, фильтрация и визуальная организация
+            shortInfo: {
+              ru: "Полный архив и удобные фильтры",
+              en: "Complete archive and convenient filters",
+              tj: "Бойгонии пурра ва филтрҳои қулай",
+            },
+            fullInfo: {
+              ru: `Архитектура каталога «Все фильмы»: навигация, фильтрация и визуальная организация
 
 Раздел «Все фильмы» представляет собой обширный архив кинематографа, доступный на платформе. Здесь собран весь кинофонд сервиса, удобно организованный для быстрого поиска.
 
@@ -827,7 +863,7 @@ Each catalog element is a dynamic interaction point:
 Ҳар як унсури каталог нуқтаи интерактивии динамикӣ мебошад:
 
     Оверлейи динамикӣ ҳангоми ҳаракати муш (Hover).
-    Гузариши фаврӣ ба амал: Тугмаҳои бозикунии фаврии трейлер ва илова кардани филм ба рӯйхати шахсӣ.`
+    Гузариши фаврӣ ба амал: Тугмаҳои бозикунии фаврии трейлер ва илова кардани филм ба рӯйхати шахсӣ.`,
             },
           },
 
@@ -836,8 +872,13 @@ Each catalog element is a dynamic interaction point:
             title: "Свобода выбора",
             imageSrc: "/images/projects/mavjisomon/web-freedom3.png",
             BannerSrc: "/images/projects/mavjisomon/web-freedom3.png",
-            shortInfo: { ru: "Просмотр на любом устройстве", en: "Watch on any device", tj: "Тамошо дар ҳама гуна дастгоҳ" },
-            fullInfo: { ru: `Блок «Свобода выбора»: продуктовая философия, визуальный сторителлинг и кросс-девайсный опыт
+            shortInfo: {
+              ru: "Просмотр на любом устройстве",
+              en: "Watch on any device",
+              tj: "Тамошо дар ҳама гуна дастгоҳ",
+            },
+            fullInfo: {
+              ru: `Блок «Свобода выбора»: продуктовая философия, визуальный сторителлинг и кросс-девайсный опыт
 
 Блок «Свобода выбора» — это важный маркетинговый и информационный компонент лендинга, подчеркивающий идеологию сервиса: «Сотни каналов, фильмы и сериалы в высоком качестве — доступны в любое время и в любых условиях, независимо от устройства или места».
 
@@ -918,16 +959,25 @@ Behind the attractive appearance of the block is a demonstration of the coordina
 
     Синхронизатсияи сессияи абрӣ: Тамошобин метавонад филмро дар барномаи мобилӣ таваққуф кунад ва тамошоро аз ҳамон сония дар ТВ-и ҳушманд дар хона давом диҳад.
     Тарҳрезии вебии ҷавобгӯ (Responsive Web Design): Блок бо истифодаи шабакаҳои чандир ва графикаи векторӣ тарҳрезӣ шудааст.
-    Мултипрофил барои тамоми оила: Консепсияи дастрасии ҳамзамон кафолат медиҳад, ки ҳар як аъзои оила контенти дӯстдоштаи худро дар баробари дигарон тамошо кунад.`
+    Мултипрофил барои тамоми оила: Консепсияи дастрасии ҳамзамон кафолат медиҳад, ки ҳар як аъзои оила контенти дӯстдоштаи худро дар баробари дигарон тамошо кунад.`,
             },
           },
           {
             slug: "web-footer",
-            title: { ru: "Футер (Подвал сайта)", en: "Footer (Site Footer)", tj: "Футер (Поёни сайт)" },
+            title: {
+              ru: "Футер (Подвал сайта)",
+              en: "Footer (Site Footer)",
+              tj: "Футер (Поёни сайт)",
+            },
             imageSrc: "/images/projects/mavjisomon/web-footer3.png",
             BannerSrc: "/images/projects/mavjisomon/web-footer3.png",
-            shortInfo: { ru: "Навигационный хаб", en: "Navigation hub", tj: "Хаби навигатсионӣ" },
-            fullInfo: { ru: `Архитектура футера Mavji Somon: навигационный хаб, юридическая надежность и каналы связи
+            shortInfo: {
+              ru: "Навигационный хаб",
+              en: "Navigation hub",
+              tj: "Хаби навигатсионӣ",
+            },
+            fullInfo: {
+              ru: `Архитектура футера Mavji Somon: навигационный хаб, юридическая надежность и каналы связи
 
 Футер сайта Mavji Somon спроектирован как исчерпывающий навигационный и информационный хаб, выполненный в строгом темном дизайне. В левой колонке размещен официальный логотип с описанием «Государственная услуга IPTV Официальное вещание», а также кнопки-ссылки для быстрого скачивания приложений из Google Play и App Store.
 
@@ -1030,7 +1080,7 @@ The page is completed by a concise lower subscript:
 Саҳифа бо як навиштаҷоти мухтасари поёнӣ ба итмом мерасад:
 
     Ҳуқуқи муаллиф: Огоҳиномаи стандартӣ "© Mavji Somon. Ҳамаи ҳуқуқҳо маҳфузанд".
-    Рафтори адаптивӣ: Дар дастгоҳҳои мобилӣ, сутунҳо ба аккордеони амудӣ табдил меёбанд.`
+    Рафтори адаптивӣ: Дар дастгоҳҳои мобилӣ, сутунҳо ба аккордеони амудӣ табдил меёбанд.`,
             },
           },
           {
@@ -1038,8 +1088,13 @@ The page is completed by a concise lower subscript:
             title: "Раздел: Фильмы (Hero Banner)",
             imageSrc: "/images/projects/mavjisomon/web-film-page.png",
             BannerSrc: "/images/projects/mavjisomon/web-film-page.png",
-            shortInfo: { ru: "Главные премьеры и категории", en: "Main premieres and categories", tj: "Нахустнамоишҳои асосӣ ва категорияҳо" },
-            fullInfo: { ru: `Архитектура страницы раздела «Фильмы»: визуальное вовлечение и гибридная навигация
+            shortInfo: {
+              ru: "Главные премьеры и категории",
+              en: "Main premieres and categories",
+              tj: "Нахустнамоишҳои асосӣ ва категорияҳо",
+            },
+            fullInfo: {
+              ru: `Архитектура страницы раздела «Фильмы»: визуальное вовлечение и гибридная навигация
 
 Страница раздела «Фильмы» встречает пользователя массивным и эффектным Hero Banner (главным слайдером). Этот блок является визитной карточкой категории, где транслируются самые горячие новинки, эксклюзивные премьеры или громкие блокбастеры (как, например, релиз «НОРМАЛ»).
 
@@ -1142,17 +1197,26 @@ This multi-level structure creates an ideal user path.`,
 
 4. Тавозуни эмотсионалӣ ва амалии UX
 
-Ин сохтори бисёрсатҳа роҳи идеалии корбарро эҷод мекунад.`
+Ин сохтори бисёрсатҳа роҳи идеалии корбарро эҷод мекунад.`,
             },
           },
 
           {
             slug: "web-serials-page",
-            title: { ru: "Раздел: Сериалы", en: "Section: Series", tj: "Бахш: Силсилафилмҳо" },
+            title: {
+              ru: "Раздел: Сериалы",
+              en: "Section: Series",
+              tj: "Бахш: Силсилафилмҳо",
+            },
             imageSrc: "/images/projects/mavjisomon/web-serials-page.jpg",
             BannerSrc: "/images/projects/mavjisomon/web-serials-page.jpg",
-            shortInfo: { ru: "Многосерийный контент", en: "Multi-part content", tj: "Муҳтавои бисёрқисмӣ" },
-            fullInfo: { ru: `Архитектура раздела «Сериалы»: динамика премьер, сериальная навигация и культура binge-watching
+            shortInfo: {
+              ru: "Многосерийный контент",
+              en: "Multi-part content",
+              tj: "Муҳтавои бисёрқисмӣ",
+            },
+            fullInfo: {
+              ru: `Архитектура раздела «Сериалы»: динамика премьер, сериальная навигация и культура binge-watching
 
 Раздел «Сериалы» выстроен по аналогии с фильмами, предоставляя пользователю интуитивно понятный доступ к многосерийному контенту. Главный акцент здесь сделан на Hero Banner, который анонсирует громкие премьеры или новые сезоны (например, сериал «ГНЕВ»). Это позволяет сразу вовлечь зрителя в самые свежие релизы платформы.
 
@@ -1255,16 +1319,25 @@ The unified visual code of the section eliminates barriers between selection and
 
 4. Экосистемаи нигоҳдории таваҷҷӯҳ ва таҷрибаи муттасил
 
-Коди ягонаи визуалии бахш монеаҳои байни интихоб ва бозиро бартараф мекунад.`
+Коди ягонаи визуалии бахш монеаҳои байни интихоб ва бозиро бартараф мекунад.`,
             },
           },
           {
             slug: "web-mult-page",
-            title: { ru: "Раздел: Мультфильмы", en: "Section: Cartoons", tj: "Бахш: Филмҳои тасвирӣ" },
+            title: {
+              ru: "Раздел: Мультфильмы",
+              en: "Section: Cartoons",
+              tj: "Бахш: Филмҳои тасвирӣ",
+            },
             imageSrc: "/images/projects/mavjisomon/web-mult-page.png",
             BannerSrc: "/images/projects/mavjisomon/web-mult-page.png",
-            shortInfo: { ru: "Детский и семейный контент", en: "Kids and family content", tj: "Муҳтавои кӯдакона ва оилавӣ" },
-            fullInfo: { ru: `Архитектура раздела «Мультфильмы»: семейный стриминг, возрастная безопасность и яркий UX
+            shortInfo: {
+              ru: "Детский и семейный контент",
+              en: "Kids and family content",
+              tj: "Муҳтавои кӯдакона ва оилавӣ",
+            },
+            fullInfo: {
+              ru: `Архитектура раздела «Мультфильмы»: семейный стриминг, возрастная безопасность и яркий UX
 
 Раздел «Мультфильмы» — это безопасное и яркое пространство для детского и семейного просмотра. Центральный слайдер (Hero Banner) здесь чаще всего используется для продвижения красочных анимационных новинок. 
 
@@ -1297,7 +1370,8 @@ The unified visual code of the section eliminates barriers between selection and
 
     Изоляция от взрослого контента: Архитектура раздела исключает попадание баннеров фильмов с возрастным цензом 16+ и 18+ в поле зрения ребенка, формируя доверительную цифровую среду.
 
-    Создание детских плейлистов: Кнопка быстрого добавления позволяет родителям формировать закрытые списки воспроизведения «Для детей», обеспечивая контролируемый и полезный просмотр без непредвиденных переходов.`, en: `Architecture of the "Cartoons" section: family streaming, age safety, and bright UX
+    Создание детских плейлистов: Кнопка быстрого добавления позволяет родителям формировать закрытые списки воспроизведения «Для детей», обеспечивая контролируемый и полезный просмотр без непредвиденных переходов.`,
+              en: `Architecture of the "Cartoons" section: family streaming, age safety, and bright UX
 
 The "Cartoons" section is a safe and bright space for kids and family viewing. The central slider (Hero Banner) here is often used to promote colorful animated new releases.
 
@@ -1329,7 +1403,8 @@ The interactive tag ribbon, located right under the Hero slider, takes on the ro
 The "Cartoons" section serves as the foundation of the child safety ecosystem on Mavji Somon.
 
     Isolation from adult content: The architecture of the section excludes banners of films with an age rating of 16+ and 18+ from the child's field of vision, forming a trusting digital environment.
-    Creation of children's playlists: The quick add button allows parents to form closed "For Children" playlists, providing controlled and useful viewing without unexpected transitions.`, tj: `Меъмории бахши "Филмҳои тасвирӣ": стриминги оилавӣ, бехатарии синну сол ва UX-и дурахшон
+    Creation of children's playlists: The quick add button allows parents to form closed "For Children" playlists, providing controlled and useful viewing without unexpected transitions.`,
+              tj: `Меъмории бахши "Филмҳои тасвирӣ": стриминги оилавӣ, бехатарии синну сол ва UX-и дурахшон
 
 Бахши "Филмҳои тасвирӣ" фазои бехатар ва дурахшон барои тамошои кӯдакон ва оила мебошад. Слайдери марказӣ (Hero Banner) дар ин ҷо аксаран барои пешбурди навгониҳои рангини аниматсионӣ истифода мешавад.
 
@@ -1361,15 +1436,25 @@ The "Cartoons" section serves as the foundation of the child safety ecosystem on
 Бахши "Филмҳои тасвирӣ" ҳамчун асоси экосистемаи бехатарии кӯдакон дар Mavji Somon хизмат мекунад.
 
     Ҷудокунӣ аз контенти калонсолон: Меъмории бахш воридшавии баннерҳои филмҳоро бо рейтинги 16+ ва 18+ ба майдони диди кӯдак истисно мекунад.
-    Эҷоди плейлистҳои кӯдакона: Тугмаи иловаи зуд ба волидайн имкон медиҳад, ки плейлистҳои пӯшидаи "Барои кӯдакон"-ро эҷод кунанд.` },
+    Эҷоди плейлистҳои кӯдакона: Тугмаи иловаи зуд ба волидайн имкон медиҳад, ки плейлистҳои пӯшидаи "Барои кӯдакон"-ро эҷод кунанд.`,
+            },
           },
           {
             slug: "web-tajik-page",
-            title: { ru: "Раздел: Таджикские фильмы", en: "Section: Tajik Movies", tj: "Бахш: Филмҳои тоҷикӣ" },
+            title: {
+              ru: "Раздел: Таджикские фильмы",
+              en: "Section: Tajik Movies",
+              tj: "Бахш: Филмҳои тоҷикӣ",
+            },
             imageSrc: "/images/projects/mavjisomon/web-tajik-page.png",
             BannerSrc: "/images/projects/mavjisomon/web-tajik-page.png",
-            shortInfo: { ru: "Национальный кинематограф", en: "National cinema", tj: "Кинематографи миллӣ" },
-            fullInfo: { ru: `Раздел «Таджикские фильмы»: национальное наследие, реставрация классики и современный кинопрокат
+            shortInfo: {
+              ru: "Национальный кинематограф",
+              en: "National cinema",
+              tj: "Кинематографи миллӣ",
+            },
+            fullInfo: {
+              ru: `Раздел «Таджикские фильмы»: национальное наследие, реставрация классики и современный кинопрокат
 
 Раздел «Таджикские фильмы» — это уникальная фича и гордость платформы Mavji Somon. Он посвящен сохранению и популяризации национального кинематографа. На главном баннере раздела бережно промоутируется бессмертная классика, например, легендарный фильм 1957 года «Я ВСТРЕТИЛ ДЕВУШКУ». 
 
@@ -1400,7 +1485,8 @@ Hero-слайдер раздела спроектирован с особым в
 
 4. Значение для экосистемы Mavji Somon
 
-Наличие столь проработанного раздела подчеркивает статус Mavji Somon как государственной IPTV-платформы, нацеленной не только на трансляцию глобальных франшиз, но и на развитие внутреннего медиарынка, поддержку отечественных авторов и сохранение национального культурного кода в цифровой среде.`, en: `The "Tajik Movies" section: national heritage, restoration of classics, and modern cinema
+Наличие столь проработанного раздела подчеркивает статус Mavji Somon как государственной IPTV-платформы, нацеленной не только на трансляцию глобальных франшиз, но и на развитие внутреннего медиарынка, поддержку отечественных авторов и сохранение национального культурного кода в цифровой среде.`,
+              en: `The "Tajik Movies" section: national heritage, restoration of classics, and modern cinema
 
 The "Tajik Movies" section is a unique feature and pride of the Mavji Somon platform. It is dedicated to preserving and promoting national cinema. The main banner of the section carefully promotes immortal classics, such as the legendary 1957 film "I MET A GIRL".
 
@@ -1431,7 +1517,8 @@ The national cinema catalog is structured so that the viewer can easily move bet
 
 4. Significance for the Mavji Somon ecosystem
 
-The presence of such a well-developed section emphasizes the status of Mavji Somon as a state IPTV platform aimed at preserving the national cultural code in the digital environment.`, tj: `Бахши "Филмҳои тоҷикӣ": мероси миллӣ, барқарорсозии классика ва кинематографи муосир
+The presence of such a well-developed section emphasizes the status of Mavji Somon as a state IPTV platform aimed at preserving the national cultural code in the digital environment.`,
+              tj: `Бахши "Филмҳои тоҷикӣ": мероси миллӣ, барқарорсозии классика ва кинематографи муосир
 
 Бахши "Филмҳои тоҷикӣ" хусусияти беназир ва ифтихори платформаи Mavji Somon мебошад. Он ба ҳифз ва таблиғи кинематографи миллӣ бахшида шудааст. Дар баннери асосии бахш классикаи безавол, ба мисли филми афсонавии соли 1957 "МАН ДУХТАРЕРО ВОХӮРДАМ" пешбарӣ карда мешавад.
 
@@ -1462,15 +1549,25 @@ The presence of such a well-developed section emphasizes the status of Mavji Som
 
 4. Аҳамият барои экосистемаи Mavji Somon
 
-Мавҷудияти чунин бахши хуб таҳияшуда мақоми Mavji Somon-ро ҳамчун платформаи давлатии IPTV, ки ба ҳифзи коди фарҳанги миллӣ дар муҳити рақамӣ нигаронида шудааст, таъкид мекунад.` },
+Мавҷудияти чунин бахши хуб таҳияшуда мақоми Mavji Somon-ро ҳамчун платформаи давлатии IPTV, ки ба ҳифзи коди фарҳанги миллӣ дар муҳити рақамӣ нигаронида шудааст, таъкид мекунад.`,
+            },
           },
           {
             slug: "web-radio",
-            title: { ru: "Радио и Аудио трансляции", en: "Radio and Audio broadcasts", tj: "Радио ва пахшҳои аудиоӣ" },
+            title: {
+              ru: "Радио и Аудио трансляции",
+              en: "Radio and Audio broadcasts",
+              tj: "Радио ва пахшҳои аудиоӣ",
+            },
             imageSrc: "/images/projects/mavjisomon/web-radio3.png",
             BannerSrc: "/images/projects/mavjisomon/web-radio3.png",
-            shortInfo: { ru: "Национальные радиостанции", en: "National radio stations", tj: "Шабакаҳои радиоии миллӣ" },
-            fullInfo: { ru: `Раздел «Радио»: аудиальное измерение, национальный эфир и мультимедийная экосистема
+            shortInfo: {
+              ru: "Национальные радиостанции",
+              en: "National radio stations",
+              tj: "Шабакаҳои радиоии миллӣ",
+            },
+            fullInfo: {
+              ru: `Раздел «Радио»: аудиальное измерение, национальный эфир и мультимедийная экосистема
 
 Раздел «Радио» расширяет медийные возможности платформы Mavji Somon, превращая ее из классического онлайн-кинотеатра в универсальный мультимедийный хаб. Пользователям доступны прямые трансляции популярных таджикских радиостанций, таких как «Овози тоҷик», Радио «Тоҷикистон» и «Садои Душанбе».
 
@@ -1571,16 +1668,25 @@ The technical implementation of audio broadcasts guarantees continuous sound whe
 Татбиқи техникии пахши аудио кафолат медиҳад, ки овоз ҳангоми ҳаракати озод дар сайт қатъ намегардад:
 
     Мини-плеери шинокунанда: Ҳангоми оғози пахш, панели идоракунии паймон дар поёни экран ҷойгир мешавад.
-    Меъмории Single Page Application (SPA): Корбар метавонад ҳамзамон радио гӯш кунад ва китобхонаи филмҳоро варақ занад.`
+    Меъмории Single Page Application (SPA): Корбар метавонад ҳамзамон радио гӯш кунад ва китобхонаи филмҳоро варақ занад.`,
             },
           },
           {
             slug: "web-tv",
-            title: { ru: "ТВ Каналы и Прямой эфир", en: "TV Channels and Live Broadcast", tj: "Шабакаҳои ТВ ва Пахши мустақим" },
+            title: {
+              ru: "ТВ Каналы и Прямой эфир",
+              en: "TV Channels and Live Broadcast",
+              tj: "Шабакаҳои ТВ ва Пахши мустақим",
+            },
             imageSrc: "/images/projects/mavjisomon/web-tv3.png",
             BannerSrc: "/images/projects/mavjisomon/web-tv3.png",
-            shortInfo: { ru: "Онлайн ТВ и телепрограмма", en: "Online TV and TV program", tj: "ТВ онлайн ва барномаи телевизионӣ" },
-            fullInfo: { ru: `Раздел «Все каналы»: ядро IPTV-вещания, интеграция EPG и эргономика эфирной сетки
+            shortInfo: {
+              ru: "Онлайн ТВ и телепрограмма",
+              en: "Online TV and TV program",
+              tj: "ТВ онлайн ва барномаи телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Раздел «Все каналы»: ядро IPTV-вещания, интеграция EPG и эргономика эфирной сетки
 
 Раздел «Все каналы» предоставляет зрителям возможность смотреть прямой эфир главных национальных телеканалов, таких как «Тоҷикистон», «Сафина» и многих других. Этот функционал является сердцем платформы Mavji Somon, обеспечивая бесперебойную трансляцию IPTV в высоком качестве.
 
@@ -1689,53 +1795,395 @@ To easily navigate dozens of TV channels, a flexible classifier is provided abov
 Барои бароҳатии ҳадди аксар дар паймоиш, дар болои шабакаи асосӣ таснифгари чандир пешбинӣ шудааст:
 
     Сегментатсия аз рӯи самт: Корбар метавонад фавран каналҳоро аз рӯи мавзӯъҳо филтр кунад.
-    Рӯйхати шахсии "Шабакаҳои дӯстдошта": Имконияти часпондани каналҳои зуд-зуд тамошошаванда дар боло.`
+    Рӯйхати шахсии "Шабакаҳои дӯстдошта": Имконияти часпондани каналҳои зуд-зуд тамошошаванда дар боло.`,
             },
           },
         ],
       },
       {
+        
         tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели админ" },
         items: [
           {
-            slug: "user-management",
-            title: { ru: "Управление пользователями", en: "User Management", tj: "Идоракунии корбарон" },
-              imageSrc: "/images/projects/mavjisomon/gallery-1.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "CRM и биллинг подписчиков", en: "CRM and subscriber billing", tj: "CRM ва биллинги муштариён" },
-              fullInfo: { ru: `Модуль управления пользователями представляет собой полноценную CRM-систему, разработанную специально для нужд телеком-провайдера. Администраторы могут в реальном времени просматривать статус подписок, историю платежей и детали устройств каждого абонента. Система интегрирована с биллинговой платформой для автоматического списания абонентской платы.
+            slug: "order",
+              title: {
+                ru: "Подписки и Заказы",
+                en: "Subscriptions and Orders",
+                tj: "Обунаҳо ва Фармоишҳо",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/order1.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/order1.png",
+              shortInfo: {
+                ru: "Управление подписками пользователей",
+                en: "User subscription management",
+                tj: "Идоракунии обунаҳои корбарон",
+              },
+              fullInfo: {
+                ru: `Модуль управления заказами позволяет администраторам контролировать все активные подписки пользователей. Система предоставляет детализированную информацию о каждом заказе: статус оплаты, срок действия подписки и выбранный тарифный план.
 
-Дополнительно реализованы функции глубокой аналитики: когортный анализ, отслеживание оттока (churn rate) и активности пользователей. Для технической поддержки предусмотрен функционал быстрой блокировки, сброса паролей и отправки персональных push-уведомлений на устройства клиентов.`,
-              en: `The user management module is a full-fledged CRM system designed specifically for the needs of a telecom provider. Administrators can view subscription statuses, payment histories, and device details of each subscriber in real time. The system is integrated with the billing platform for automatic subscription fee deduction.
+Администраторы могут вручную продлевать подписки, отменять заказы в случае мошенничества и формировать отчетность по продажам за определенный период.`,
+                en: `The order management module allows administrators to control all active user subscriptions. The system provides detailed information about each order: payment status, subscription expiration date, and the selected tariff plan.
 
-Additionally, deep analytics functions are implemented: cohort analysis, churn rate tracking, and user activity monitoring. For technical support, there is functionality for quick blocking, password resets, and sending personalized push notifications to client devices.`,
-              tj: `Модули идоракунии корбарон як системаи мукаммали CRM мебошад, ки махсус барои эҳтиёҷоти провайдери телеком таҳия шудааст. Маъмурон метавонанд ҳолати обунаҳо, таърихи пардохтҳо ва тафсилоти дастгоҳҳои ҳар як муштариро дар вақти воқеӣ бубинанд. Система бо платформаи биллингӣ барои ба таври худкор ситонидани ҳаққи абонентӣ ҳамгиро шудааст.
+Administrators can manually renew subscriptions, cancel orders in case of fraud, and generate sales reports for a specific period.`,
+                tj: `Модули идоракунии фармоишҳо ба маъмурон имкон медиҳад, ки ҳамаи обунаҳои фаъоли корбаронро назорат кунанд. Система маълумоти муфассалро дар бораи ҳар як фармоиш пешниҳод мекунад: ҳолати пардохт, мӯҳлати эътибори обуна ва нақшаи тарифии интихобшуда.
 
-Илова бар ин, вазифаҳои таҳлилии амиқ амалӣ карда шуданд: таҳлили когортӣ, пайгирии рехтани муштариён (churn rate) ва фаъолияти корбарон. Барои дастгирии техникӣ функсияи зуд масдуд кардан, барқарор кардани паролҳо ва фиристодани огоҳиномаҳои шахсии push ба дастгоҳҳои мизоҷон пешбинӣ шудааст.` },
-          },
+Маъмурон метавонанд обунаҳоро дастӣ тамдид кунанд, фармоишҳоро дар сурати қаллобӣ бекор кунанд ва ҳисоботи фурӯшро барои давраи муайян таҳия кунанд.`,
+              },
+            },
           {
-            slug: "content-management",
-            title: { ru: "Управление контентом (CMS)", en: "Content Management (CMS)", tj: "Идоракунии мундариҷа (CMS)" },
-              imageSrc: "/images/projects/mavjisomon/gallery-2.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "Организация базы в 130 000+ фильмов", en: "Organizing a database of 130,000+ movies", tj: "Ташкили пойгоҳи дорои 130 000+ филм" },
-              fullInfo: { ru: `CMS-модуль разработан для обработки огромных массивов медиаданных. Загрузка новых фильмов и сериалов автоматизирована: администраторам достаточно указать ID из популярных кинобаз, и система сама скачает постеры, трейлеры, описания и список актеров. Поддерживается массовое редактирование и транскодирование видеофайлов в несколько разрешений (HLS).
+            slug: "payment",
+              title: {
+                ru: "Финансовые транзакции",
+                en: "Financial Transactions",
+                tj: "Амалиётҳои молиявӣ",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/payment.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/payment.png",
+              shortInfo: {
+                ru: "История платежей и чеков",
+                en: "Payment and receipt history",
+                tj: "Таърихи пардохтҳо ва чекҳо",
+              },
+              fullInfo: {
+                ru: `В разделе транзакций собрана полная финансовая история платформы. Администраторы могут отслеживать каждый платеж, проверять статусы (успешно, ожидание, ошибка) и просматривать электронные чеки.
 
-Для удобной навигации клиентов контент-менеджеры могут создавать кастомные подборки, сортировать элементы по жанрам и годам выпуска, а также управлять приоритетом выдачи контента на Главном экране приложения с помощью визуального drag-and-drop интерфейса.`,
-              en: `The CMS module is designed to process huge arrays of media data. Uploading new movies and series is automated: administrators only need to specify the ID from popular movie databases, and the system will download posters, trailers, descriptions, and cast lists itself. Bulk editing and transcoding of video files into multiple resolutions (HLS) are supported.
+Модуль интегрирован с системой уведомлений: при сбое платежа пользователь автоматически получает напоминание. Также доступен экспорт транзакций в форматы CSV/Excel для бухгалтерского учета.`,
+                en: `The transaction section contains the full financial history of the platform. Administrators can track every payment, check statuses (success, pending, error), and view electronic receipts.
 
-For convenient client navigation, content managers can create custom collections, sort elements by genres and release years, and manage the priority of content output on the application's Main Screen using a visual drag-and-drop interface.`,
-              tj: `Модули CMS барои коркарди массивҳои бузурги маълумоти медиа таҳия шудааст. Боркунии филмҳо ва сериалҳои нав автоматикунонида шудааст: ба маъмурон танҳо лозим аст, ки ID-ро аз пойгоҳҳои машҳури кино нишон диҳанд ва система худаш постерҳо, трейлерҳо, тавсифҳо ва рӯйхати актёрҳоро зеркашӣ мекунад. Таҳрири оммавӣ ва транскодинги файлҳои видеоӣ ба якчанд қарорҳо (HLS) дастгирӣ карда мешавад.
+The module is integrated with the notification system: in case of a payment failure, the user automatically receives a reminder. Export of transactions to CSV/Excel formats for accounting is also available.`,
+                tj: `Дар бахши транзаксияҳо таърихи пурраи молиявии платформа ҷамъ оварда шудааст. Маъмурон метавонанд ҳар як пардохтро пайгирӣ кунанд, ҳолатҳоро (муваффақ, интизорӣ, хатогӣ) тафтиш кунанд ва чекҳои электрониро бинанд.
 
-Барои паймоиши қулайи мизоҷон, менеҷерҳои мундариҷа метавонанд интихобҳои фармоишӣ эҷод кунанд, унсурҳоро аз рӯи жанрҳо ва солҳои барориш ҷудо кунанд, инчунин афзалияти баровардани мундариҷаро дар Экрани асосии барнома бо истифода аз интерфейси визуалии drag-and-drop идора кунанд.` },
-          },
+Модул бо системаи огоҳиномаҳо ҳамгиро шудааст: дар сурати нокомии пардохт корбар ба таври худкор ёдраскунӣ мегирад. Содироти транзаксияҳо ба форматҳои CSV/Excel барои баҳисобгирии муҳосибӣ инчунин дастрас аст.`,
+              },
+            },
           {
-            slug: "live-tv-management",
-            title: { ru: "Управление Live TV", en: "Live TV Management", tj: "Идоракунии Live TV" },
-              imageSrc: "/images/projects/mavjisomon/gallery-1.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "Мониторинг 2500+ телеканалов", en: "Monitoring 2500+ TV channels", tj: "Мониторинги 2500+ шабакаҳои телевизионӣ" },
-              fullInfo: { ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+            slug: "total-balance",
+              title: {
+                ru: "Аналитика доходов",
+                en: "Revenue Analytics",
+                tj: "Таҳлили даромадҳо",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/total-balance.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/total-balance.png",
+              shortInfo: {
+                ru: "Дашборд финансовых метрик",
+                en: "Financial metrics dashboard",
+                tj: "Дашборди ченакҳои молиявӣ",
+              },
+              fullInfo: {
+                ru: `Интерактивный дашборд для отслеживания общего баланса и выручки проекта. Графики показывают динамику доходов по дням, неделям и месяцам, позволяя оценивать эффективность маркетинговых кампаний.
+
+Система автоматически рассчитывает средний чек (ARPU), общую стоимость жизни клиента (LTV) и предоставляет сводку по самым прибыльным тарифным планам платформы.`,
+                en: `An interactive dashboard for tracking the total balance and revenue of the project. Charts show income dynamics by day, week, and month, allowing the evaluation of marketing campaign effectiveness.
+
+The system automatically calculates the average check (ARPU), total customer lifetime value (LTV), and provides a summary of the platform's most profitable tariff plans.`,
+                tj: `Дашборди интерактивӣ барои пайгирии тавозуни умумӣ ва даромади лоиҳа. Графикҳо динамикаи даромадро аз рӯи рӯз, ҳафта ва моҳ нишон медиҳанд ва имкон медиҳанд самаранокии маъракаҳои маркетингиро арзёбӣ кунанд.
+
+Система чеки миёна (ARPU), арзиши умумии ҳаёти муштарӣ (LTV) -ро ба таври худкор ҳисоб мекунад ва хулосаи нақшаҳои тарифии аз ҳама фоидаовари платформаро пешниҳод мекунад.`,
+              },
+            },
+          {
+            slug: "payment-system",
+              title: {
+                ru: "Платежные шлюзы",
+                en: "Payment Gateways",
+                tj: "Шлюзҳои пардохт",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/payment-system.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/payment-system.png",
+              shortInfo: {
+                ru: "Интеграция с банками и кошельками",
+                en: "Integration with banks and wallets",
+                tj: "Ҳамгироӣ бо бонкҳо ва ҳамёнҳо",
+              },
+              fullInfo: {
+                ru: `Модуль настройки платежных систем позволяет гибко управлять способами оплаты для пользователей. Поддерживается интеграция с популярными местными и международными шлюзами (Корти Милли, Alif, Visa, Mastercard, электронные кошельки).
+
+Администратор может в один клик включать или отключать определенные способы оплаты, настраивать комиссии и проверять состояние API-соединения с банковскими серверами.`,
+                en: `The payment systems configuration module allows flexible management of payment methods for users. Integration with popular local and international gateways (Corti Milli, Alif, Visa, Mastercard, e-wallets) is supported.
+
+An administrator can enable or disable specific payment methods in one click, set up commissions, and check the status of the API connection with bank servers.`,
+                tj: `Модули танзимоти системаҳои пардохт имкон медиҳад, ки усулҳои пардохт барои корбарон ба таври чандир идора карда шаванд. Ҳамгироӣ бо шлюзҳои машҳури маҳаллӣ ва байналмилалӣ (Корти Миллӣ, Alif, Visa, Mastercard, ҳамёнҳои электронӣ) дастгирӣ карда мешавад.
+
+Маъмур метавонад бо як клик усулҳои муайяни пардохтро фаъол ё ғайрифаъол кунад, комиссияҳоро танзим кунад ва ҳолати пайвасти API-ро бо серверҳои бонкӣ тафтиш кунад.`,
+              },
+            },
+          {
+            slug: "products",
+              title: {
+                ru: "Тарифные планы",
+                en: "Tariff Plans",
+                tj: "Нақшаҳои тарифӣ",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/products.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/products.png",
+              shortInfo: {
+                ru: "Создание и управление подписками",
+                en: "Creating and managing subscriptions",
+                tj: "Эҷод ва идоракунии обунаҳо",
+              },
+              fullInfo: {
+                ru: `Гибкий конструктор продуктов, позволяющий создавать разнообразные тарифные планы. Можно настроить длительность подписки (день, месяц, год), стоимость, а также доступный в рамках тарифа контент (только VOD, только Live TV или всё вместе).
+
+Система поддерживает создание акционных тарифов со скидкой и настройку триального (пробного) периода для привлечения новых пользователей на платформу.`,
+                en: `A flexible product builder that allows the creation of various tariff plans. You can configure subscription duration (day, month, year), cost, and content available within the tariff (VOD only, Live TV only, or everything together).
+
+The system supports the creation of discounted promotional tariffs and the setup of a trial period to attract new users to the platform.`,
+                tj: `Конструктори чандири маҳсулот, ки имкон медиҳад нақшаҳои тарифии гуногун эҷод карда шаванд. Шумо метавонед давомнокии обуна (рӯз, моҳ, сол), арзиш ва мундариҷаи дар доираи тариф дастрасро (танҳо VOD, танҳо Live TV ё ҳама якҷоя) танзим кунед.
+
+Система эҷоди тарифҳои аксиягӣ бо тахфиф ва танзими давраи озмоиширо барои ҷалби корбарони нав ба платформа дастгирӣ мекунад.`,
+              },
+            },
+          {
+            slug: "type-product",
+              title: {
+                ru: "Типы продуктов",
+                en: "Product Types",
+                tj: "Намудҳои маҳсулот",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/type-product.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/type-product.png",
+              shortInfo: {
+                ru: "Категоризация услуг",
+                en: "Service categorization",
+                tj: "Категориябандии хидматҳо",
+              },
+              fullInfo: {
+                ru: `Модуль для управления базовыми типами предлагаемых услуг. Позволяет логически разделять предложения на платформе: подписки на кинотеатр, пакеты телеканалов, покупка отдельных фильмов (PPV) или доступ к эксклюзивным трансляциям.
+
+Правильная настройка типов продуктов обеспечивает корректную работу рекомендательных алгоритмов и упрощает навигацию пользователей при выборе подходящего тарифа.`,
+                en: `A module for managing the basic types of offered services. It allows logical separation of offers on the platform: cinema subscriptions, TV channel packages, pay-per-view (PPV) movies, or access to exclusive broadcasts.
+
+Proper configuration of product types ensures the correct operation of recommendation algorithms and simplifies user navigation when choosing a suitable tariff.`,
+                tj: `Модул барои идоракунии намудҳои асосии хидматҳои пешниҳодшуда. Ба таври мантиқӣ тақсим кардани пешниҳодҳоро дар платформа имкон медиҳад: обунаҳо ба кинотеатр, бастаҳои шабакаҳои телевизионӣ, хариди филмҳои алоҳида (PPV) ё дастрасӣ ба пахшҳои эксклюзивӣ.
+
+Танзими дурусти намудҳои маҳсулот кори дурусти алгоритмҳои тавсиявиро таъмин мекунад ва паймоиши корбаронро ҳангоми интихоби тарифи мувофиқ осон мекунад.`,
+              },
+            },
+          {
+            slug: "promotional-campaigns",
+              title: {
+                ru: "Маркетинг и Промо",
+                en: "Marketing and Promos",
+                tj: "Маркетинг ва Промо",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/promotional-campaigns.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/promotional-campaigns.png",
+              shortInfo: {
+                ru: "Скидки, баннеры и пуш-уведомления",
+                en: "Discounts, banners, and push notifications",
+                tj: "Тахфифҳо, баннерҳо ва огоҳиномаҳои push",
+              },
+              fullInfo: {
+                ru: `Мощный инструмент для проведения рекламных кампаний. Администраторы могут создавать промокоды на скидку, настраивать динамические баннеры для Главного экрана приложения и запускать массовые email/push рассылки.
+
+Для каждой кампании можно задать точные сроки действия, лимиты активаций и целевую аудиторию (например, только неактивные пользователи). Встроенная аналитика показывает конверсию каждого запущенного промо.`,
+                en: `A powerful tool for running advertising campaigns. Administrators can create discount promo codes, set up dynamic banners for the application's Main Screen, and launch mass email/push campaigns.
+
+For each campaign, exact validity periods, activation limits, and a target audience (e.g., only inactive users) can be set. Built-in analytics show the conversion rate of each launched promo.`,
+                tj: `Воситаи пуриқтидор барои гузаронидани маъракаҳои таблиғотӣ. Маъмурон метавонанд промокодҳои тахфифӣ эҷод кунанд, баннерҳои динамикиро барои Экрани асосии барнома танзим кунанд ва фиристодани оммавии email/push-ро оғоз кунанд.
+
+Барои ҳар як маърака, мӯҳлатҳои дақиқи амал, маҳдудиятҳои фаъолсозӣ ва аудиторияи мақсаднок (масалан, танҳо корбарони ғайрифаъол) метавонанд муқаррар карда шаванд. Таҳлили дарунсохт конверсияи ҳар як промои оғозшударо нишон медиҳад.`,
+              },
+            },
+          {
+            slug: "chanals",
+              title: {
+                ru: "Телеканалы",
+                en: "TV Channels",
+                tj: "Шабакаҳои телевизионӣ",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/chanals.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/chanals.png",
+              shortInfo: {
+                ru: "Управление потоками Live TV",
+                en: "Live TV stream management",
+                tj: "Идоракунии ҷараёнҳои Live TV",
+              },
+              fullInfo: {
+                ru: `Основной раздел для управления сеткой вещания. Позволяет добавлять новые телеканалы, указывать URL-адреса HLS-потоков, загружать логотипы и назначать категории (Новостные, Спортивные, Детские).
+
+Система поддерживает резервирование потоков (fallback URL) для обеспечения бесперебойного вещания. Здесь же настраивается привязка канала к телепрограмме (EPG) и активируется функция записи архива (Catch-up).`,
+                en: `The main section for managing the broadcasting grid. It allows adding new TV channels, specifying HLS stream URLs, uploading logos, and assigning categories (News, Sports, Kids).
+
+The system supports stream redundancy (fallback URL) to ensure uninterrupted broadcasting. Channel mapping to the TV guide (EPG) and activation of the archive recording function (Catch-up) are also configured here.`,
+                tj: `Бахши асосӣ барои идоракунии шабакаи пахш. Илова кардани шабакаҳои нави телевизионӣ, нишон додани URL-адресҳои ҷараёнҳои HLS, боркунии логотипҳо ва таъин кардани категорияҳо (Ахбор, Варзиш, Кӯдакон)-ро имкон медиҳад.
+
+Система захиракунии ҷараёнҳоро (fallback URL) барои таъмини пахши бефосила дастгирӣ мекунад. Пайвасти шабака ба барномаи телевизионӣ (EPG) ва фаъолсозии функсияи сабти бойгонӣ (Catch-up) низ дар ин ҷо танзим карда мешавад.`,
+              },
+            },
+          {
+            slug: "epg-provider",
+              title: {
+                ru: "EPG Провайдеры",
+                en: "EPG Providers",
+                tj: "Провайдерҳои EPG",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/epg-provider.png",
+              shortInfo: {
+                ru: "Интеграция телепрограмм (XMLTV)",
+                en: "TV guide integration (XMLTV)",
+                tj: "Ҳамгироии барномаҳои телевизионӣ (XMLTV)",
+              },
+              fullInfo: {
+                ru: `Модуль настройки источников телепрограммы. Платформа поддерживает автоматический парсинг XMLTV-файлов от различных поставщиков метаданных. Администратор может добавить несколько ссылок на источники EPG и задать частоту их обновления (например, каждые 12 часов).
+
+Умный алгоритм сопоставления помогает автоматически привязать программы передач к существующим телеканалам по ID или названию, минимизируя ручной труд контент-менеджеров.`,
+                en: `The TV guide sources configuration module. The platform supports automatic parsing of XMLTV files from various metadata providers. An administrator can add multiple EPG source links and set their update frequency (e.g., every 12 hours).
+
+A smart matching algorithm helps automatically link broadcast programs to existing TV channels by ID or name, minimizing the manual work of content managers.`,
+                tj: `Модули танзими манбаъҳои барномаи телевизионӣ. Платформа парсинги автоматии файлҳои XMLTV-ро аз таъминкунандагони гуногуни метамаълумот дастгирӣ мекунад. Маъмур метавонад якчанд истинод ба манбаъҳои EPG илова кунад ва басомади навсозии онҳоро (масалан, ҳар 12 соат) муқаррар кунад.
+
+Алгоритми интеллектуалии муқоисакунӣ барои ба таври худкор пайваст кардани барномаҳои пахш ба шабакаҳои телевизионии мавҷуда аз рӯи ID ё ном кӯмак мекунад ва кори дастии менеҷерҳои мундариҷаро кам мекунад.`,
+              },
+            },
+          {
+            slug: "radio",
+              title: {
+                ru: "Радиостанции",
+                en: "Radio Stations",
+                tj: "Истгоҳҳои радио",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/radio.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/radio.png",
+              shortInfo: {
+                ru: "Каталог аудио-потоков",
+                en: "Audio stream catalog",
+                tj: "Каталоги ҷараёнҳои аудио",
+              },
+              fullInfo: {
+                ru: `Раздел для администрирования онлайн-радиостанций. Функционал аналогичен управлению телеканалами, но оптимизирован для аудио-стримов (Icecast/Shoutcast). Можно загружать обложки радиостанций, указывать жанры и битрейт потока.
+
+Радио-модуль платформы потребляет минимум трафика, и через эту панель можно настраивать приоритет станций, чтобы самые популярные из них отображались на главном экране приложения.`,
+                en: `A section for administrating online radio stations. The functionality is similar to TV channel management but optimized for audio streams (Icecast/Shoutcast). You can upload radio station covers, specify genres, and stream bitrates.
+
+The platform's radio module consumes minimal traffic, and through this panel, you can prioritize stations so that the most popular ones appear on the application's main screen.`,
+                tj: `Бахш барои маъмурияти истгоҳҳои радиои онлайн. Функсияҳо ба идоракунии шабакаҳои телевизионӣ монанданд, аммо барои ҷараёнҳои аудиоӣ (Icecast/Shoutcast) оптимизатсия шудаанд. Шумо метавонед муқоваҳои истгоҳҳои радиоро бор кунед, жанрҳо ва битрейти ҷараёнро нишон диҳед.
+
+Модули радиои платформа ҳадди ақали трафикро сарф мекунад ва тавассути ин панел шумо метавонед афзалияти истгоҳҳоро танзим кунед, то маъмултаринҳо дар экрани асосии барнома пайдо шаванд.`,
+              },
+            },
+          {
+            slug: "video-content",
+              title: {
+                ru: "Библиотека фильмов (VOD)",
+                en: "Movie Library (VOD)",
+                tj: "Китобхонаи филмҳо (VOD)",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/video-content.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/video-content.png",
+              shortInfo: {
+                ru: "Управление каталогом видео",
+                en: "Video catalog management",
+                tj: "Идоракунии каталоги видео",
+              },
+              fullInfo: {
+                ru: `Сердце контентного раздела платформы. Здесь осуществляется загрузка новых фильмов, сериалов и мультфильмов на сервер. Плеер поддерживает множественные звуковые дорожки и субтитры — их можно прикрепить к видеофайлу прямо через панель.
+
+Каждому фильму присваивается подробное описание, рейтинг (IMDb/Кинопоиск), список актеров и режиссеров. Встроенный поиск и фильтры позволяют быстро находить нужный контент в базе из тысяч видео.`,
+                en: `The heart of the platform's content section. Here, new movies, series, and cartoons are uploaded to the server. The player supports multiple audio tracks and subtitles—they can be attached to the video file directly through the panel.
+
+Each movie is assigned a detailed description, rating (IMDb/Kinopoisk), and a list of actors and directors. Built-in search and filters allow you to quickly find the needed content in a database of thousands of videos.`,
+                tj: `Қалби бахши мундариҷаи платформа. Дар ин ҷо филмҳо, сериалҳо ва мултфилмҳои нав ба сервер бор карда мешаванд. Плеер якчанд роҳҳои аудио ва субтитрҳоро дастгирӣ мекунад — онҳоро бевосита тавассути панел ба файли видео пайваст кардан мумкин аст.
+
+Ба ҳар як филм тавсифи муфассал, рейтинг (IMDb/Kinopoisk), рӯйхати актёрҳо ва коргардонҳо дода мешавад. Ҷустуҷӯ ва филтрҳои дарунсохт ба шумо имкон медиҳанд, ки мундариҷаи лозимиро дар пойгоҳи маълумоти ҳазорҳо видео зуд пайдо кунед.`,
+              },
+            },
+          {
+            slug: "parental-control",
+              title: {
+                ru: "Родительский контроль",
+                en: "Parental Control",
+                tj: "Назорати волидайн",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/parental-control.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/parental-control.png",
+              shortInfo: {
+                ru: "Возрастные ограничения",
+                en: "Age restrictions",
+                tj: "Маҳдудиятҳои синну солӣ",
+              },
+              fullInfo: {
+                ru: `Модуль обеспечения безопасности контента для детей. Администраторы могут задавать возрастные рейтинги (0+, 12+, 18+) для всего каталога фильмов и телеканалов.
+
+Пользователи в своих приложениях могут установить PIN-код на профиль. Если профиль защищен, контент со взрослым рейтингом будет скрыт из поиска и рекомендаций, а при попытке прямого доступа система потребует ввод PIN-кода, настроенного в этой панели.`,
+                en: `A module for ensuring content safety for children. Administrators can set age ratings (0+, 12+, 18+) for the entire catalog of movies and TV channels.
+
+Users can set a PIN code for their profile in their apps. If a profile is protected, adult-rated content will be hidden from search and recommendations, and upon attempting direct access, the system will require entering the PIN code configured in this panel.`,
+                tj: `Модул барои таъмини бехатарии мундариҷа барои кӯдакон. Маъмурон метавонанд рейтингҳои синну солиро (0+, 12+, 18+) барои тамоми каталоги филмҳо ва шабакаҳои телевизионӣ муқаррар кунанд.
+
+Корбарон метавонанд дар барномаҳои худ ба профили худ рамзи PIN гузоранд. Агар профил ҳифз карда шавад, мундариҷаи дорои рейтинги калонсолон аз ҷустуҷӯ ва тавсияҳо пинҳон мешавад ва ҳангоми кӯшиши дастрасии мустақим система ворид кардани рамзи PIN-и дар ин панел танзимшударо талаб мекунад.`,
+              },
+            },
+          {
+            slug: "type-films",
+              title: {
+                ru: "Категории видео",
+                en: "Video Categories",
+                tj: "Категорияҳои видео",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/type-films.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/type-films.png",
+              shortInfo: {
+                ru: "Структура контента",
+                en: "Content structure",
+                tj: "Сохтори мундариҷа",
+              },
+              fullInfo: {
+                ru: `Раздел для глобальной классификации видеобазы. Позволяет создавать и редактировать макро-категории: Фильмы, Сериалы, Аниме, Документальное кино, Таджикфильм и т.д.
+
+Каждой категории можно присвоить иконку и определить ее место в главном меню приложений. Правильная иерархия категорий является основой для интуитивно понятного UI, позволяя зрителям легко ориентироваться в огромном массиве медиа.`,
+                en: `A section for global classification of the video database. Allows creating and editing macro-categories: Movies, Series, Anime, Documentaries, Tajikfilm, etc.
+
+Each category can be assigned an icon and its place in the main menu of the applications can be defined. A proper category hierarchy is the foundation for an intuitive UI, allowing viewers to easily navigate through a huge array of media.`,
+                tj: `Бахш барои таснифи глобалии пойгоҳи видео. Барои эҷод ва таҳрири макро-категорияҳо имкон медиҳад: Филмҳо, Сериалҳо, Аниме, Кинои ҳуҷҷатӣ, Тоҷикфилм ва ғ.
+
+Ба ҳар як категория метавонад нишона таъин карда шавад ва ҷои онро дар менюи асосии барномаҳо муайян кардан мумкин аст. Иерархияи дурусти категорияҳо асоси UI-и интуитивӣ мебошад, ки ба тамошобинон имкон медиҳад, ки дар массиви бузурги медиа ба осонӣ ҳаракат кунанд.`,
+              },
+            },
+          {
+            slug: "genre",
+              title: {
+                ru: "Жанры контента",
+                en: "Content Genres",
+                tj: "Жанрҳои мундариҷа",
+              },
+              imageSrc: "/images/projects/mavjisomon/admin/genre.png",
+              BannerSrc: "/images/projects/mavjisomon/admin/genre.png",
+              shortInfo: {
+                ru: "Тегирование фильмов и сериалов",
+                en: "Tagging movies and series",
+                tj: "Теггузории филмҳо ва сериалҳо",
+              },
+              fullInfo: {
+                ru: `Инструмент для глубокого тегирования контента. В этой вкладке создается база жанров (Боевики, Комедии, Драма, Фантастика), которые затем прикрепляются к конкретным фильмам.
+
+Наличие детальной жанровой разметки критически важно для работы модуля поиска и системы рекомендаций «Похожие фильмы». Администраторы могут объединять жанры в подборки для создания тематических коллекций на Главном экране (например, «Ужасы на Хэллоуин»).`,
+                en: `A tool for deep content tagging. In this tab, a database of genres (Action, Comedy, Drama, Sci-Fi) is created, which are then attached to specific movies.
+
+Having detailed genre markup is critically important for the operation of the search module and the 'Similar Movies' recommendation system. Administrators can combine genres into selections to create thematic collections on the Main Screen (e.g., 'Halloween Horror').`,
+                tj: `Восита барои теггузории амиқи мундариҷа. Дар ин ҷадвал пойгоҳи жанрҳо (Ҷангӣ, Комедия, Драма, Фантастика) эҷод карда мешавад, ки баъдан ба филмҳои мушаххас пайваст карда мешаванд.
+
+Доштани аломатгузории муфассали жанрӣ барои кори модули ҷустуҷӯ ва системаи тавсияҳои «Филмҳои монанд» хеле муҳим аст. Маъмурон метавонанд жанрҳоро ба интихобҳо муттаҳид кунанд, то коллексияҳои мавзӯиро дар Экрани асосӣ эҷод кунанд (масалан, «Даҳшат дар Ҳеллоуин»).`,
+              },
+            },
+          {
+            slug: "actors",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/actors.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/actors.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
 
 В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
               en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
@@ -1743,20 +2191,245 @@ For convenient client navigation, content managers can create custom collections
 The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
               tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
 
-Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.` },
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "most-interesting",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/most-interesting.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/most-interesting.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "directory",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/directory.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/directory.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "clients",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/clients.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/clients.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "subscription",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/subscription.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/subscription.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "statistic-video-content",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc:
+              "/images/projects/mavjisomon/admin/statistic-video-content.png",
+            BannerSrc:
+              "/images/projects/mavjisomon/admin/statistic-video-content.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "statistic-chanals",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/statistic-chanals.png",
+            BannerSrc:
+              "/images/projects/mavjisomon/admin/statistic-chanals.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "statistic-radio",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/statistic-radio.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/statistic-radio.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
+          },
+          {
+            slug: "setting",
+            title: {
+              ru: "Управление Live TV",
+              en: "Live TV Management",
+              tj: "Идоракунии Live TV",
+            },
+            imageSrc: "/images/projects/mavjisomon/admin/setting.png",
+            BannerSrc: "/images/projects/mavjisomon/admin/setting.png",
+            shortInfo: {
+              ru: "Мониторинг 2500+ телеканалов",
+              en: "Monitoring 2500+ TV channels",
+              tj: "Мониторинги 2500+ шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Панель управления Live TV обеспечивает мониторинг трансляций более 2500 телеканалов в реальном времени. Система автоматически проверяет доступность HLS-потоков и отправляет уведомления техникам при падении сигнала. Администраторы могут управлять расписанием телепередач (EPG), привязывая XMLTV-источники к соответствующим каналам.
+
+В модуле реализована функция архива (Catch-up TV), позволяющая настраивать глубину записи эфира для каждого канала индивидуально. Также предусмотрена категоризация телеканалов (Новости, Спорт, Кино) для удобного отображения в клиентских приложениях.`,
+              en: `The Live TV control panel provides real-time monitoring of broadcasts from over 2500 TV channels. The system automatically checks the availability of HLS streams and sends notifications to technicians if the signal drops. Administrators can manage TV schedules (EPG) by linking XMLTV sources to corresponding channels.
+
+The module implements an archive function (Catch-up TV), allowing the depth of broadcast recording to be configured for each channel individually. Categorization of TV channels (News, Sports, Cinema) is also provided for convenient display in client applications.`,
+              tj: `Панели идоракунии Live TV мониторинги пахши беш аз 2500 шабакаи телевизиониро дар вақти воқеӣ таъмин мекунад. Система мавҷудияти ҷараёнҳои HLS-ро ба таври худкор тафтиш мекунад ва ҳангоми гум шудани сигнал ба техникҳо огоҳинома мефиристад. Маъмурон метавонанд ҷадвали барномаҳои телевизиониро (EPG) тавассути пайваст кардани манбаъҳои XMLTV ба шабакаҳои мувофиқ идора кунанд.
+
+Модул функсияи бойгониро (Catch-up TV) амалӣ мекунад, ки имкон медиҳад умқи сабти эфир барои ҳар як шабака ба таври инфиродӣ танзим карда шавад. Категориябандии шабакаҳои телевизионӣ (Ахбор, Варзиш, Кино) инчунин барои намоиши қулай дар барномаҳои муштарӣ пешбинӣ шудааст.`,
+            },
           },
         ],
       },
       {
-        tabName: { ru: "Мобильные приложения", en: "Mobile Apps", tj: "Барномаҳои мобилӣ" },
+        tabName: {
+          ru: "Мобильные приложения",
+          en: "Mobile Apps",
+          tj: "Барномаҳои мобилӣ",
+        },
         items: [
           {
             slug: "main-screen-navigation",
-            title: { ru: "Главный экран и Навигация", en: "Main Screen and Navigation", tj: "Экрани асосӣ ва Навигатсия" },
-              imageSrc: "/images/projects/mavjisomon/gallery-3.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "MainScreen.js & Redux", en: "MainScreen.js & Redux", tj: "MainScreen.js & Redux" },
-              fullInfo: { ru: `Интерфейс мобильного приложения полностью построен на кросс-платформенном фреймворке React Native, что обеспечивает нативную производительность как на iOS, так и на Android устройствах. В качестве главного архитектурного паттерна управления состоянием используется Redux, что позволяет глобально контролировать авторизацию (authReducer) и подгрузку медиа-контента.
+            title: {
+              ru: "Главный экран и Навигация",
+              en: "Main Screen and Navigation",
+              tj: "Экрани асосӣ ва Навигатсия",
+            },
+            imageSrc: "/images/projects/mavjisomon/gallery-3.png",
+            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            shortInfo: {
+              ru: "MainScreen.js & Redux",
+              en: "MainScreen.js & Redux",
+              tj: "MainScreen.js & Redux",
+            },
+            fullInfo: {
+              ru: `Интерфейс мобильного приложения полностью построен на кросс-платформенном фреймворке React Native, что обеспечивает нативную производительность как на iOS, так и на Android устройствах. В качестве главного архитектурного паттерна управления состоянием используется Redux, что позволяет глобально контролировать авторизацию (authReducer) и подгрузку медиа-контента.
 
 Главный экран (MainScreen) включает в себя динамическую, плавно анимированную карусель баннеров на базе Animated.FlatList. Под каруселью реализованы горизонтальные списки (FlatList) для различных подборок: популярные фильмы, сериалы, таджикское кино и прямые эфиры (Live TV). Данные эффективно кэшируются через Async Storage, снижая нагрузку на сервер при частых запусках.`,
               en: `The mobile application interface is entirely built on the React Native cross-platform framework, which ensures native performance on both iOS and Android devices. Redux is used as the main architectural pattern for state management, allowing global control over authorization (authReducer) and media content loading.
@@ -1764,15 +2437,25 @@ The module implements an archive function (Catch-up TV), allowing the depth of b
 The Main Screen includes a dynamic, smoothly animated banner carousel based on Animated.FlatList. Horizontal lists (FlatList) for various collections are implemented under the carousel: popular movies, series, Tajik cinema, and live broadcasts (Live TV). Data is efficiently cached via Async Storage, reducing server load during frequent launches.`,
               tj: `Интерфейси барномаи мобилӣ пурра дар чаҳорчӯбаи кросс-платформаи React Native сохта шудааст, ки иҷрои маҳаллиро ҳам дар дастгоҳҳои iOS ва ҳам Android таъмин мекунад. Redux ҳамчун намунаи асосии меъмории идоракунии ҳолат истифода мешавад, ки имкон медиҳад авторизтсия (authReducer) ва боркунии мундариҷаи медиавӣ ба таври глобалӣ назорат карда шавад.
 
-Экрани асосӣ (MainScreen) карусели динамикӣ ва ҳамвор аниматсияшудаи баннерҳоро дар асоси Animated.FlatList дар бар мегирад. Дар зери карусел рӯйхатҳои уфуқӣ (FlatList) барои интихобҳои гуногун амалӣ карда мешаванд: филмҳои машҳур, сериалҳо, кинои тоҷик ва пахшҳои мустақим (Live TV). Маълумот тавассути Async Storage ба таври муассир кэш карда мешавад ва сарбории серверро ҳангоми оғози зуд-зуд коҳиш медиҳад.` },
+Экрани асосӣ (MainScreen) карусели динамикӣ ва ҳамвор аниматсияшудаи баннерҳоро дар асоси Animated.FlatList дар бар мегирад. Дар зери карусел рӯйхатҳои уфуқӣ (FlatList) барои интихобҳои гуногун амалӣ карда мешаванд: филмҳои машҳур, сериалҳо, кинои тоҷик ва пахшҳои мустақим (Live TV). Маълумот тавассути Async Storage ба таври муассир кэш карда мешавад ва сарбории серверро ҳангоми оғози зуд-зуд коҳиш медиҳад.`,
+            },
           },
           {
             slug: "video-player-epg",
-            title: { ru: "Видеоплеер и EPG", en: "Video Player and EPG", tj: "Плеери Видео ва EPG" },
-              imageSrc: "/images/projects/mavjisomon/gallery-4.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "VPlayerScreen & HistoryTracking", en: "VPlayerScreen & HistoryTracking", tj: "VPlayerScreen & HistoryTracking" },
-              fullInfo: { ru: `Стриминговое воспроизведение видеоконтента осуществляется за счет интеграции мощной библиотеки react-native-video. Плеер поддерживает адаптивный битрейт (HLS), что позволяет плавно переключать качество видео в зависимости от текущей скорости мобильного интернета пользователя. Доступен функционал «Картинка в картинке» (PiP) для фонового просмотра.
+            title: {
+              ru: "Видеоплеер и EPG",
+              en: "Video Player and EPG",
+              tj: "Плеери Видео ва EPG",
+            },
+            imageSrc: "/images/projects/mavjisomon/gallery-4.png",
+            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            shortInfo: {
+              ru: "VPlayerScreen & HistoryTracking",
+              en: "VPlayerScreen & HistoryTracking",
+              tj: "VPlayerScreen & HistoryTracking",
+            },
+            fullInfo: {
+              ru: `Стриминговое воспроизведение видеоконтента осуществляется за счет интеграции мощной библиотеки react-native-video. Плеер поддерживает адаптивный битрейт (HLS), что позволяет плавно переключать качество видео в зависимости от текущей скорости мобильного интернета пользователя. Доступен функционал «Картинка в картинке» (PiP) для фонового просмотра.
 
 Отдельное внимание уделено интеграции с Live-телеканалами: в приложении реализован удобный интерфейс телепрограммы (EPGScreen), который синхронизируется с сервером по API. Модуль истории (HistoryTrackingScreen) автоматически запоминает временную метку (таймкод) при закрытии фильма, чтобы зритель мог продолжить просмотр с того же места на любом из своих устройств.`,
               en: `Streaming playback of video content is carried out through the integration of the powerful react-native-video library. The player supports adaptive bitrate (HLS), allowing smooth switching of video quality depending on the user's current mobile internet speed. Picture-in-Picture (PiP) functionality is available for background viewing.
@@ -1780,15 +2463,25 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
 Special attention is paid to integration with Live TV channels: the application implements a convenient TV guide interface (EPGScreen), which is synchronized with the server via API. The history module (HistoryTrackingScreen) automatically remembers the time stamp (timecode) when closing a movie, so the viewer can continue watching from the same place on any of their devices.`,
               tj: `Пахши ҷараёнии мундариҷаи видеоӣ тавассути ҳамгироии китобхонаи пуриқтидори react-native-video амалӣ карда мешавад. Плеер битрейти адаптивиро (HLS) дастгирӣ мекунад, ки имкон медиҳад сифати видео вобаста ба суръати ҷории интернети мобилии корбар ба таври ҳамвор иваз карда шавад. Функсияи «Тасвир дар тасвир» (PiP) барои тамошои заминавӣ дастрас аст.
 
-Таваҷҷӯҳи махсус ба ҳамгироӣ бо шабакаҳои телевизионии Live дода шудааст: дар барнома интерфейси қулайи барномаи телевизионӣ (EPGScreen) амалӣ карда шудааст, ки бо сервер тавассути API ҳамоҳанг карда мешавад. Модули таърих (HistoryTrackingScreen) ҳангоми пӯшидани филм тамғаи вақтро (таймкод) ба таври худкор дар хотир нигоҳ медорад, то тамошобин тавонад аз ҳамон ҷо дар ҳама гуна дастгоҳҳои худ тамошоро идома диҳад.` },
+Таваҷҷӯҳи махсус ба ҳамгироӣ бо шабакаҳои телевизионии Live дода шудааст: дар барнома интерфейси қулайи барномаи телевизионӣ (EPGScreen) амалӣ карда шудааст, ки бо сервер тавассути API ҳамоҳанг карда мешавад. Модули таърих (HistoryTrackingScreen) ҳангоми пӯшидани филм тамғаи вақтро (таймкод) ба таври худкор дар хотир нигоҳ медорад, то тамошобин тавонад аз ҳамон ҷо дар ҳама гуна дастгоҳҳои худ тамошоро идома диҳад.`,
+            },
           },
           {
             slug: "security-radio",
-            title: { ru: "Безопасность и Радио", en: "Security and Radio", tj: "Бехатарӣ ва Радио" },
-              imageSrc: "/images/projects/mavjisomon/gallery-3.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "SecurityScreen & MusicPlayer", en: "SecurityScreen & MusicPlayer", tj: "SecurityScreen & MusicPlayer" },
-              fullInfo: { ru: `Для защиты профиля пользователя и платных подписок внедрен модуль безопасности (SecurityScreen), использующий нативный функционал биометрии через react-native-biometrics. Пользователь может мгновенно авторизоваться с помощью Face ID или Touch ID, не вводя пароль при каждом запуске.
+            title: {
+              ru: "Безопасность и Радио",
+              en: "Security and Radio",
+              tj: "Бехатарӣ ва Радио",
+            },
+            imageSrc: "/images/projects/mavjisomon/gallery-3.png",
+            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            shortInfo: {
+              ru: "SecurityScreen & MusicPlayer",
+              en: "SecurityScreen & MusicPlayer",
+              tj: "SecurityScreen & MusicPlayer",
+            },
+            fullInfo: {
+              ru: `Для защиты профиля пользователя и платных подписок внедрен модуль безопасности (SecurityScreen), использующий нативный функционал биометрии через react-native-biometrics. Пользователь может мгновенно авторизоваться с помощью Face ID или Touch ID, не вводя пароль при каждом запуске.
 
 В приложении также реализованы независимые медиа-модули для прослушивания локального радио (RadioScreen) и музыки (MusicPlayer). Музыкальный плеер поддерживает фоновое воспроизведение и управление через системный экран блокировки. UI-компоненты построены с использованием react-native-vector-icons и кастомных стилей для создания уникального пользовательского опыта.`,
               en: `To protect user profiles and paid subscriptions, a security module (SecurityScreen) was introduced, using native biometrics functionality via react-native-biometrics. The user can instantly log in using Face ID or Touch ID without entering a password at every launch.
@@ -1796,20 +2489,34 @@ Special attention is paid to integration with Live TV channels: the application 
 The application also features independent media modules for listening to local radio (RadioScreen) and music (MusicPlayer). The music player supports background playback and control via the system lock screen. UI components are built using react-native-vector-icons and custom styles to create a unique user experience.`,
               tj: `Барои муҳофизати профили корбар ва обунаҳои пулакӣ модули бехатарӣ (SecurityScreen) ҷорӣ карда шуд, ки функсияҳои нативии биометрияро тавассути react-native-biometrics истифода мебарад. Корбар метавонад бо истифода аз Face ID ё Touch ID бидуни ворид кардани парол ҳангоми ҳар як оғоз фавран ворид шавад.
 
-Барнома инчунин модулҳои мустақили медиавиро барои гӯш кардани радиои маҳаллӣ (RadioScreen) ва мусиқӣ (MusicPlayer) дар бар мегирад. Плеери мусиқӣ навозиши заминавӣ ва назоратро тавассути экрани қулфи система дастгирӣ мекунад. Компонентҳои UI бо истифода аз react-native-vector-icons ва услубҳои фармоишӣ барои эҷоди таҷрибаи беназири корбар сохта шудаанд.` },
+Барнома инчунин модулҳои мустақили медиавиро барои гӯш кардани радиои маҳаллӣ (RadioScreen) ва мусиқӣ (MusicPlayer) дар бар мегирад. Плеери мусиқӣ навозиши заминавӣ ва назоратро тавассути экрани қулфи система дастгирӣ мекунад. Компонентҳои UI бо истифода аз react-native-vector-icons ва услубҳои фармоишӣ барои эҷоди таҷрибаи беназири корбар сохта шудаанд.`,
+            },
           },
         ],
       },
       {
-        tabName: { ru: "Smart TV (TV Box)", en: "Smart TV (TV Box)", tj: "Smart TV (TV Box)" },
+        tabName: {
+          ru: "Smart TV (TV Box)",
+          en: "Smart TV (TV Box)",
+          tj: "Smart TV (TV Box)",
+        },
         items: [
           {
             slug: "tv-interface-navigation",
-            title: { ru: "TV Интерфейс и Навигация", en: "TV Interface and Navigation", tj: "Интерфейси TV ва Навигатсия" },
-              imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "D-Pad фокус и MainScreen.tsx", en: "D-Pad focus and MainScreen.tsx", tj: "Фокуси D-Pad ва MainScreen.tsx" },
-              fullInfo: { ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
+            title: {
+              ru: "TV Интерфейс и Навигация",
+              en: "TV Interface and Navigation",
+              tj: "Интерфейси TV ва Навигатсия",
+            },
+            imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            shortInfo: {
+              ru: "D-Pad фокус и MainScreen.tsx",
+              en: "D-Pad focus and MainScreen.tsx",
+              tj: "Фокуси D-Pad ва MainScreen.tsx",
+            },
+            fullInfo: {
+              ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
 
 Вся навигация, включая переход между боковым меню и основным контентом, построена на обработке событий onFocus и onBlur. Каждая карточка фильма (MediaCard.tsx) плавно увеличивается при наведении фокуса, используя нативные анимации для создания эффекта глубины и отзывчивости. Поддерживается сборка как под классический Android TV, так и под телевизоры на базе Tizen (через Webpack-сборку rnv).`,
               en: `The project for smart TVs and set-top boxes is written in a specialized version of React Native TV (react-native-tvos) using strict TypeScript typing. The main difference from the mobile version is the full orientation towards control via remote control (D-Pad).
@@ -1817,15 +2524,25 @@ The application also features independent media modules for listening to local r
 All navigation, including transitions between the side menu and main content, is built on handling onFocus and onBlur events. Each movie card (MediaCard.tsx) smoothly enlarges on focus, using native animations to create a sense of depth and responsiveness. Builds are supported for both classic Android TV and Tizen-based TVs (via Webpack rnv build).`,
               tj: `Лоиҳа барои телевизорҳои интеллектуалӣ ва приставкаҳо дар версияи махсусгардонидашудаи React Native TV (react-native-tvos) бо истифода аз чопкунии қатъии TypeScript навишта шудааст. Фарқи асосӣ аз версияи мобилӣ тамоюли пурра ба идоракунӣ тавассути пульти фосилавӣ (D-Pad) мебошад.
 
-Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.` },
+Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.`,
+            },
           },
           {
             slug: "catalog-details",
-            title: { ru: "Каталог и Детали", en: "Catalog and Details", tj: "Каталог ва Тафсилот" },
-              imageSrc: "/images/projects/mavjisomon/gallery-6.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "VideosScreen & DetailsScreen", en: "VideosScreen & DetailsScreen", tj: "VideosScreen & DetailsScreen" },
-              fullInfo: { ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
+            title: {
+              ru: "Каталог и Детали",
+              en: "Catalog and Details",
+              tj: "Каталог ва Тафсилот",
+            },
+            imageSrc: "/images/projects/mavjisomon/gallery-6.png",
+            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            shortInfo: {
+              ru: "VideosScreen & DetailsScreen",
+              en: "VideosScreen & DetailsScreen",
+              tj: "VideosScreen & DetailsScreen",
+            },
+            fullInfo: {
+              ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
 
 Страница деталей фильма (DetailsScreen.tsx) представляет собой полноценный кинотеатральный хаб: она подгружает высококачественные фоновые постеры, выводит подробные метаданные (рейтинг, жанр, описание) и включает список рекомендаций. Пользователь может добавить фильм в «Избранное» (FavoritesScreen.tsx) для быстрого доступа с любого устройства.`,
               en: `The TV app implements deep categorization of content into several sections: Live channels (TvChannelsScreen.tsx), movie catalogs, and series (VideosScreen.tsx). To optimize the rendering of large lists on weak set-top boxes, list virtualization and image lazy loading techniques are used.
@@ -1833,15 +2550,25 @@ All navigation, including transitions between the side menu and main content, is
 The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it loads high-quality background posters, displays detailed metadata (rating, genre, description), and includes a list of recommendations. The user can add a movie to "Favorites" (FavoritesScreen.tsx) for quick access from any device.`,
               tj: `Барномаи телевизионӣ гурӯҳбандии амиқи мундариҷаро ба якчанд бахшҳо амалӣ мекунад: Шабакаҳои Live (TvChannelsScreen.tsx), каталогҳои филмҳо ва сериалҳо (VideosScreen.tsx). Барои беҳтар кардани визуализатсияи рӯйхатҳои калон дар приставкаҳои заифи телевизионӣ, усулҳои виртуализатсияи рӯйхат ва боркунии танбал (lazy loading) тасвирҳо истифода мешаванд.
 
-Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.` },
+Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.`,
+            },
           },
           {
             slug: "payment-player",
-            title: { ru: "Оплата и Плеер", en: "Payment and Player", tj: "Пардохт ва Плеер" },
-              imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-              BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-              shortInfo: { ru: "PlayerScreen & PaymentGuide", en: "PlayerScreen & PaymentGuide", tj: "PlayerScreen & PaymentGuide" },
-              fullInfo: { ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
+            title: {
+              ru: "Оплата и Плеер",
+              en: "Payment and Player",
+              tj: "Пардохт ва Плеер",
+            },
+            imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            shortInfo: {
+              ru: "PlayerScreen & PaymentGuide",
+              en: "PlayerScreen & PaymentGuide",
+              tj: "PlayerScreen & PaymentGuide",
+            },
+            fullInfo: {
+              ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
 
 Важным бизнес-модулем является встроенная система биллинга (PaymentGuide.tsx и ProductsScreen.tsx). Пользователям больше не нужно заходить на сайт с компьютера — они могут просматривать доступные тарифы, изучать инструкции по пополнению баланса через локальные терминалы и управлять своей подпиской прямо на большом экране, используя только пульт ДУ.`,
               en: `A specially adapted native TV player (PlayerScreen.tsx) is used to play Live TV and VOD content on TVs. It ensures stable stream decoding without buffering, hardware decoding support, and remote control button handling (play/pause/rewind).
@@ -1849,7 +2576,8 @@ The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it l
 An important business module is the built-in billing system (PaymentGuide.tsx and ProductsScreen.tsx). Users no longer need to visit the site from a computer — they can view available tariffs, study instructions for topping up their balance via local terminals, and manage their subscription right on the big screen, using only the remote control.`,
               tj: `Плеери махсус мутобиқшудаи телевизионии нативӣ (PlayerScreen.tsx) барои намоиши мундариҷаи Live TV ва VOD дар телевизорҳо истифода мешавад. Он рамзкушоии устувори ҷараёнро бидуни буферизатсия, дастгирии рамзкушоии сахтафзор ва коркарди тугмаҳои пульт (навозиш/таваққуф/қафо) таъмин мекунад.
 
-Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.` },
+Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.`,
+            },
           },
         ],
       },
