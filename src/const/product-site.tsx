@@ -10,6 +10,7 @@ export interface ProductSiteItem {
   gallery?: string[];
   projectComponents?: {
     tabName: TranslatedString;
+    platform?: string; 
     items: {
       slug: string;
       title: TranslatedString;
@@ -2413,16 +2414,17 @@ The module implements an archive function (Catch-up TV), allowing the depth of b
           en: "Mobile Apps",
           tj: "Барномаҳои мобилӣ",
         },
+        platform: "mobile",
         items: [
           {
-            slug: "main-screen-navigation",
+            slug: "home-page",
             title: {
               ru: "Главный экран и Навигация",
               en: "Main Screen and Navigation",
               tj: "Экрани асосӣ ва Навигатсия",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-3.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/mobile/home-page.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/home-page.jpg",
             shortInfo: {
               ru: "MainScreen.js & Redux",
               en: "MainScreen.js & Redux",
@@ -2441,57 +2443,206 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
             },
           },
           {
-            slug: "video-player-epg",
+            slug: "list-films",
             title: {
-              ru: "Видеоплеер и EPG",
-              en: "Video Player and EPG",
-              tj: "Плеери Видео ва EPG",
+              ru: "Каталог фильмов",
+              en: "Movie Catalog",
+              tj: "Каталоги филмҳо",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-4.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/mobile/list-films.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/list-films.jpg",
             shortInfo: {
-              ru: "VPlayerScreen & HistoryTracking",
-              en: "VPlayerScreen & HistoryTracking",
-              tj: "VPlayerScreen & HistoryTracking",
+              ru: "Отображение списков фильмов с пагинацией",
+              en: "Movie list display with pagination",
+              tj: "Намоиши рӯйхати филмҳо бо саҳифабандӣ",
             },
             fullInfo: {
-              ru: `Стриминговое воспроизведение видеоконтента осуществляется за счет интеграции мощной библиотеки react-native-video. Плеер поддерживает адаптивный битрейт (HLS), что позволяет плавно переключать качество видео в зависимости от текущей скорости мобильного интернета пользователя. Доступен функционал «Картинка в картинке» (PiP) для фонового просмотра.
-
-Отдельное внимание уделено интеграции с Live-телеканалами: в приложении реализован удобный интерфейс телепрограммы (EPGScreen), который синхронизируется с сервером по API. Модуль истории (HistoryTrackingScreen) автоматически запоминает временную метку (таймкод) при закрытии фильма, чтобы зритель мог продолжить просмотр с того же места на любом из своих устройств.`,
-              en: `Streaming playback of video content is carried out through the integration of the powerful react-native-video library. The player supports adaptive bitrate (HLS), allowing smooth switching of video quality depending on the user's current mobile internet speed. Picture-in-Picture (PiP) functionality is available for background viewing.
-
-Special attention is paid to integration with Live TV channels: the application implements a convenient TV guide interface (EPGScreen), which is synchronized with the server via API. The history module (HistoryTrackingScreen) automatically remembers the time stamp (timecode) when closing a movie, so the viewer can continue watching from the same place on any of their devices.`,
-              tj: `Пахши ҷараёнии мундариҷаи видеоӣ тавассути ҳамгироии китобхонаи пуриқтидори react-native-video амалӣ карда мешавад. Плеер битрейти адаптивиро (HLS) дастгирӣ мекунад, ки имкон медиҳад сифати видео вобаста ба суръати ҷории интернети мобилии корбар ба таври ҳамвор иваз карда шавад. Функсияи «Тасвир дар тасвир» (PiP) барои тамошои заминавӣ дастрас аст.
-
-Таваҷҷӯҳи махсус ба ҳамгироӣ бо шабакаҳои телевизионии Live дода шудааст: дар барнома интерфейси қулайи барномаи телевизионӣ (EPGScreen) амалӣ карда шудааст, ки бо сервер тавассути API ҳамоҳанг карда мешавад. Модули таърих (HistoryTrackingScreen) ҳангоми пӯшидани филм тамғаи вақтро (таймкод) ба таври худкор дар хотир нигоҳ медорад, то тамошобин тавонад аз ҳамон ҷо дар ҳама гуна дастгоҳҳои худ тамошоро идома диҳад.`,
+              ru: `Экран каталога предоставляет пользователям доступ к обширной библиотеке фильмов. Реализован бесконечный скроллинг (Infinite Scroll) с помощью FlatList навигации React Native, что гарантирует плавную загрузку обложек и метаданных даже на медленном интернет-соединении. Дизайн адаптирован для удобного просмотра на мобильных экранах с сеткой в несколько столбцов.`,
+              en: `The catalog screen provides users with access to an extensive movie library. Infinite scrolling is implemented using React Native's FlatList, ensuring smooth loading of covers and metadata even on slow internet connections. The design is adapted for comfortable viewing on mobile screens with a multi-column grid layout.`,
+              tj: `Экрани каталог ба корбарон дастрасиро ба китобхонаи васеи филмҳо фароҳам меорад. Ҳаракати беохир (Infinite Scroll) бо истифода аз паймоиши FlatList-и React Native амалӣ карда шудааст, ки боркунии ҳамвори муқоваҳо ва метамаълумотро ҳатто дар пайвастҳои сусти интернет кафолат медиҳад. Тарҳ барои тамошои бароҳат дар экранҳои мобилӣ бо шабакаи бисёрсутуна мутобиқ карда шудааст.`,
             },
           },
           {
-            slug: "security-radio",
+            slug: "list-chanals",
             title: {
-              ru: "Безопасность и Радио",
-              en: "Security and Radio",
-              tj: "Бехатарӣ ва Радио",
+              ru: "Каталог телеканалов",
+              en: "TV Channels Catalog",
+              tj: "Каталоги шабакаҳои телевизионӣ",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-3.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/mobile/list-chanals.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/list-chanals.jpg",
             shortInfo: {
-              ru: "SecurityScreen & MusicPlayer",
-              en: "SecurityScreen & MusicPlayer",
-              tj: "SecurityScreen & MusicPlayer",
+              ru: "Список телеканалов с программой передач",
+              en: "List of TV channels with EPG",
+              tj: "Рӯйхати шабакаҳои телевизионӣ бо барномаи гуфторҳо",
             },
             fullInfo: {
-              ru: `Для защиты профиля пользователя и платных подписок внедрен модуль безопасности (SecurityScreen), использующий нативный функционал биометрии через react-native-biometrics. Пользователь может мгновенно авторизоваться с помощью Face ID или Touch ID, не вводя пароль при каждом запуске.
-
-В приложении также реализованы независимые медиа-модули для прослушивания локального радио (RadioScreen) и музыки (MusicPlayer). Музыкальный плеер поддерживает фоновое воспроизведение и управление через системный экран блокировки. UI-компоненты построены с использованием react-native-vector-icons и кастомных стилей для создания уникального пользовательского опыта.`,
-              en: `To protect user profiles and paid subscriptions, a security module (SecurityScreen) was introduced, using native biometrics functionality via react-native-biometrics. The user can instantly log in using Face ID or Touch ID without entering a password at every launch.
-
-The application also features independent media modules for listening to local radio (RadioScreen) and music (MusicPlayer). The music player supports background playback and control via the system lock screen. UI components are built using react-native-vector-icons and custom styles to create a unique user experience.`,
-              tj: `Барои муҳофизати профили корбар ва обунаҳои пулакӣ модули бехатарӣ (SecurityScreen) ҷорӣ карда шуд, ки функсияҳои нативии биометрияро тавассути react-native-biometrics истифода мебарад. Корбар метавонад бо истифода аз Face ID ё Touch ID бидуни ворид кардани парол ҳангоми ҳар як оғоз фавран ворид шавад.
-
-Барнома инчунин модулҳои мустақили медиавиро барои гӯш кардани радиои маҳаллӣ (RadioScreen) ва мусиқӣ (MusicPlayer) дар бар мегирад. Плеери мусиқӣ навозиши заминавӣ ва назоратро тавассути экрани қулфи система дастгирӣ мекунад. Компонентҳои UI бо истифода аз react-native-vector-icons ва услубҳои фармоишӣ барои эҷоди таҷрибаи беназири корбар сохта шудаанд.`,
+              ru: `Каталог телеканалов позволяет быстро переключаться между прямыми трансляциями. В списке отображается логотип телеканала и текущая программа передач (EPG). Интерфейс оптимизирован для минимальной задержки при загрузке расписания, а состояние воспроизведения синхронизировано через глобальное хранилище.`,
+              en: `The TV channel catalog allows for quick switching between live broadcasts. The list displays the channel logo and the current electronic program guide (EPG). The interface is optimized for minimal latency when loading schedules, and the playback state is synchronized via the global store.`,
+              tj: `Каталоги шабакаҳои телевизионӣ имкон медиҳад, ки зуд байни пахшҳои мустақим гузаред. Дар рӯйхат логотипи шабака ва барномаи телевизионии ҷорӣ (EPG) нишон дода мешавад. Интерфейс барои таъхири ҳадди аққал ҳангоми боркунии ҷадвал беҳтар карда шудааст ва ҳолати бозикунӣ тавассути анбори глобалӣ ҳамоҳанг карда мешавад.`,
             },
           },
+          {
+            slug: "list-radio",
+            title: {
+              ru: "Радиостанции",
+              en: "Radio Stations",
+              tj: "Истгоҳҳои радио",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/list-radio.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/list-radio.jpg",
+            shortInfo: {
+              ru: "Прослушивание локальных радиостанций",
+              en: "Listening to local radio stations",
+              tj: "Гӯш кардани истгоҳҳои радиои маҳаллӣ",
+            },
+            fullInfo: {
+              ru: `Раздел Радио предлагает доступ к популярным национальным радиостанциям. Аудио воспроизводится в фоновом режиме с поддержкой нативных элементов управления на экране блокировки устройства. Реализована быстрая подгрузка аудиопотоков с отображением текущей станции.`,
+              en: `The Radio section offers access to popular national radio stations. Audio plays in the background with support for native lock screen controls on the device. Quick loading of audio streams is implemented with the display of the current station.`,
+              tj: `Бахши Радио дастрасиро ба истгоҳҳои миллии маъмул пешниҳод мекунад. Аудио дар реҷаи заминавӣ бо дастгирии идоракунии маҳаллӣ дар экрани қулфи дастгоҳ навохта мешавад. Боркунии зуди ҷараёнҳои аудиоӣ бо намоиши истгоҳи ҷорӣ амалӣ карда шудааст.`,
+            },
+          },
+          {
+            slug: "player-film",
+            title: {
+              ru: "Плеер фильмов",
+              en: "Movie Player",
+              tj: "Плеери филмҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/player-film.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/player-film.jpg",
+            shortInfo: {
+              ru: "Видеоплеер для просмотра кино",
+              en: "Video player for watching movies",
+              tj: "Плеери видеоӣ барои тамошои кино",
+            },
+            fullInfo: {
+              ru: `Нативный видеоплеер для просмотра фильмов и сериалов. Поддерживает выбор качества видео, перемотку, субтитры и переключение аудиодорожек. Пользовательский интерфейс проигрывателя создан с использованием кастомных контролов поверх видео, что обеспечивает единый пользовательский опыт.`,
+              en: `A native video player for watching movies and TV series. It supports video quality selection, rewinding, subtitles, and audio track switching. The player's UI is built with custom controls overlaid on the video, ensuring a consistent user experience.`,
+              tj: `Плеери видеоии маҳаллӣ барои тамошои филмҳо ва сериалҳо. Он интихоби сифати видео, баргардонидан, субтитрҳо ва ивазкунии роҳчаҳои аудиоиро дастгирӣ мекунад. Интерфейси корбарии плеер бо идоракунии махсус дар болои видео сохта шудааст, ки таҷрибаи ягонаи корбариро таъмин мекунад.`,
+            },
+          },
+          {
+            slug: "player-chanal",
+            title: {
+              ru: "ТВ плеер",
+              en: "Live TV Player",
+              tj: "Плеери ТВ",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/player-chanal.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/player-chanal.jpg",
+            shortInfo: {
+              ru: "Плеер для прямых эфиров",
+              en: "Player for live broadcasts",
+              tj: "Плеер барои пахшҳои мустақим",
+            },
+            fullInfo: {
+              ru: `Специализированный плеер для трансляции телеканалов. Включает отображение текущей передачи из EPG, возможность переключения качества трансляции (HLS) и поддержку полноэкранного режима. Интерфейс плеера позволяет быстро переключаться на соседние телеканалы.`,
+              en: `A specialized player for broadcasting TV channels. It includes the display of the current program from the EPG, the ability to switch broadcast quality (HLS), and fullscreen mode support. The player interface allows for quick switching to neighboring TV channels.`,
+              tj: `Плеери махсусгардонидашуда барои пахши шабакаҳои телевизионӣ. Он намоиши барномаи ҷориро аз EPG, имконияти иваз кардани сифати пахш (HLS) ва дастгирии реҷаи пурраэкраниро дар бар мегирад. Интерфейси плеер имкон медиҳад, ки зуд ба шабакаҳои телевизионии ҳамсоя гузаред.`,
+            },
+          },
+          {
+            slug: "filter-modal-for-films",
+            title: {
+              ru: "Фильтрация фильмов",
+              en: "Movie Filtering",
+              tj: "Филтркунии филмҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/filter-modal-for-films.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/filter-modal-for-films.jpg",
+            shortInfo: {
+              ru: "Умные фильтры для поиска контента",
+              en: "Smart filters for content search",
+              tj: "Филтрҳои ҳушманд барои ҷустуҷӯи мундариҷа",
+            },
+            fullInfo: {
+              ru: `Модальное окно фильтрации позволяет пользователям сортировать фильмы и сериалы по жанрам, году выпуска, стране производства и рейтингу. Реализован удобный интерфейс с мгновенным применением параметров фильтрации и подсчетом количества доступных результатов.`,
+              en: `The filtering modal window allows users to sort movies and series by genre, release year, country of origin, and rating. It features a user-friendly interface with instant application of filter parameters and a calculation of the number of available results.`,
+              tj: `Равзанаи модалии филтркунӣ ба корбарон имкон медиҳад, ки филмҳо ва сериалҳоро аз рӯи жанр, соли барориш, кишвари истеҳсолкунанда ва рейтинг ҷудо кунанд. Интерфейси қулай бо татбиқи фаврии параметрҳои филтр ва ҳисоб кардани миқдори натиҷаҳои дастрас амалӣ карда шудааст.`,
+            },
+          },
+          {
+            slug: "favorites-page",
+            title: {
+              ru: "Избранное",
+              en: "Favorites",
+              tj: "Баргузидаҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/favorites-page.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/favorites-page.jpg",
+            shortInfo: {
+              ru: "Сохраненный контент пользователя",
+              en: "User's saved content",
+              tj: "Мундариҷаи захирашудаи корбар",
+            },
+            fullInfo: {
+              ru: `Раздел 'Избранное' содержит все сохраненные фильмы, сериалы и телеканалы пользователя. Данные синхронизируются с сервером, что позволяет иметь доступ к любимому контенту с любого устройства. Вкладка обеспечивает быстрый переход к просмотру.`,
+              en: `The 'Favorites' section contains all of the user's saved movies, series, and TV channels. The data is synchronized with the server, allowing access to favorite content from any device. The tab provides a quick jump back to watching.`,
+              tj: `Бахши 'Баргузидаҳо' ҳамаи филмҳо, сериалҳо ва шабакаҳои телевизионии захирашудаи корбарро дар бар мегирад. Маълумот бо сервер ҳамоҳанг карда мешавад, ки имкон медиҳад дастрасӣ ба мундариҷаи дӯстдошта аз ҳама гуна дастгоҳ таъмин карда шавад. Зербахш гузариши зудро барои тамошо фароҳам меорад.`,
+            },
+          },
+          {
+            slug: "list-tarifs",
+            title: {
+              ru: "Тарифные планы",
+              en: "Subscription Plans",
+              tj: "Нақшаҳои тарифӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/list-tarifs.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/list-tarifs.jpg",
+            shortInfo: {
+              ru: "Управление подписками",
+              en: "Subscription management",
+              tj: "Идоракунии обунаҳо",
+            },
+            fullInfo: {
+              ru: `Экран отображает доступные тарифные планы для доступа к премиум-контенту. Пользователь может ознакомиться с условиями тарифа, периодом действия и стоимостью. Интегрирована система оплаты через популярные мобильные платежные шлюзы.`,
+              en: `The screen displays available subscription plans for accessing premium content. Users can view tariff conditions, validity periods, and prices. A payment system integrated via popular mobile payment gateways is provided.`,
+              tj: `Экран нақшаҳои тарифии дастрасро барои дастрасӣ ба мундариҷаи премиум нишон медиҳад. Корбар метавонад бо шартҳои тариф, давраи эътибор ва арзиши он шинос шавад. Системаи пардохт тавассути шлюзҳои маъмули пардохтҳои мобилӣ муттаҳид карда шудааст.`,
+            },
+          },
+          {
+            slug: "profile-user",
+            title: {
+              ru: "Профиль пользователя",
+              en: "User Profile",
+              tj: "Профили корбар",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/profile-user.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/profile-user.jpg",
+            shortInfo: {
+              ru: "Личный кабинет",
+              en: "Personal account",
+              tj: "Кабинети шахсӣ",
+            },
+            fullInfo: {
+              ru: `В профиле пользователя собрана вся персональная информация, текущий баланс и история транзакций. Интерфейс позволяет редактировать личные данные, управлять подключенными устройствами и обращаться в службу поддержки.`,
+              en: `The user profile gathers all personal information, current balance, and transaction history. The interface allows users to edit personal data, manage connected devices, and contact customer support.`,
+              tj: `Дар профили корбар тамоми маълумоти шахсӣ, тавозуни ҷорӣ ва таърихи муомилот ҷамъоварӣ шудаанд. Интерфейс имкон медиҳад, ки маълумоти шахсӣ таҳрир карда шавад, дастгоҳҳои пайвастшуда идора карда шаванд ва ба хадамоти дастгирӣ муроҷиат карда шавад.`,
+            },
+          },
+          {
+            slug: "security-settings",
+            title: {
+              ru: "Настройки безопасности",
+              en: "Security Settings",
+              tj: "Танзимоти амният",
+            },
+            imageSrc: "/images/projects/mavjisomon/mobile/security-settings.jpg",
+            BannerSrc: "/images/projects/mavjisomon/mobile/security-settings.jpg",
+            shortInfo: {
+              ru: "Родительский контроль и пароли",
+              en: "Parental control and passwords",
+              tj: "Назорати волидайн ва паролҳо",
+            },
+            fullInfo: {
+              ru: `Раздел настроек безопасности предоставляет функции изменения пароля, настройки PIN-кода для родительского контроля и просмотра активных сессий. Это обеспечивает защиту аккаунта от несанкционированного доступа и контроль за контентом, доступным детям.`,
+              en: `The security settings section provides features for changing passwords, setting up a PIN code for parental control, and viewing active sessions. This ensures account protection against unauthorized access and control over content available to children.`,
+              tj: `Бахши танзимоти амният вазифаҳои тағир додани парол, танзими PIN-код барои назорати волидайн ва дидани сессияҳои фаъолро пешниҳод мекунад. Ин ҳифзи ҳисобро аз дастрасии беиҷозат ва назорати мундариҷаи барои кӯдакон дастрасро таъмин мекунад.`,
+            },
+          },
+        
         ],
       },
       {
@@ -2501,82 +2652,302 @@ The application also features independent media modules for listening to local r
           tj: "Smart TV (TV Box)",
         },
         items: [
+//           {
+//             slug: "tv-interface-navigation",
+//             title: {
+//               ru: "TV Интерфейс и Навигация",
+//               en: "TV Interface and Navigation",
+//               tj: "Интерфейси TV ва Навигатсия",
+//             },
+//             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+//             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+//             shortInfo: {
+//               ru: "D-Pad фокус и MainScreen.tsx",
+//               en: "D-Pad focus and MainScreen.tsx",
+//               tj: "Фокуси D-Pad ва MainScreen.tsx",
+//             },
+//             fullInfo: {
+//               ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
+
+// Вся навигация, включая переход между боковым меню и основным контентом, построена на обработке событий onFocus и onBlur. Каждая карточка фильма (MediaCard.tsx) плавно увеличивается при наведении фокуса, используя нативные анимации для создания эффекта глубины и отзывчивости. Поддерживается сборка как под классический Android TV, так и под телевизоры на базе Tizen (через Webpack-сборку rnv).`,
+//               en: `The project for smart TVs and set-top boxes is written in a specialized version of React Native TV (react-native-tvos) using strict TypeScript typing. The main difference from the mobile version is the full orientation towards control via remote control (D-Pad).
+
+// All navigation, including transitions between the side menu and main content, is built on handling onFocus and onBlur events. Each movie card (MediaCard.tsx) smoothly enlarges on focus, using native animations to create a sense of depth and responsiveness. Builds are supported for both classic Android TV and Tizen-based TVs (via Webpack rnv build).`,
+//               tj: `Лоиҳа барои телевизорҳои интеллектуалӣ ва приставкаҳо дар версияи махсусгардонидашудаи React Native TV (react-native-tvos) бо истифода аз чопкунии қатъии TypeScript навишта шудааст. Фарқи асосӣ аз версияи мобилӣ тамоюли пурра ба идоракунӣ тавассути пульти фосилавӣ (D-Pad) мебошад.
+
+// Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.`,
+//             },
+//           },
+//           {
+//             slug: "catalog-details",
+//             title: {
+//               ru: "Каталог и Детали",
+//               en: "Catalog and Details",
+//               tj: "Каталог ва Тафсилот",
+//             },
+//             imageSrc: "/images/projects/mavjisomon/gallery-6.png",
+//             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+//             shortInfo: {
+//               ru: "VideosScreen & DetailsScreen",
+//               en: "VideosScreen & DetailsScreen",
+//               tj: "VideosScreen & DetailsScreen",
+//             },
+//             fullInfo: {
+//               ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
+
+// Страница деталей фильма (DetailsScreen.tsx) представляет собой полноценный кинотеатральный хаб: она подгружает высококачественные фоновые постеры, выводит подробные метаданные (рейтинг, жанр, описание) и включает список рекомендаций. Пользователь может добавить фильм в «Избранное» (FavoritesScreen.tsx) для быстрого доступа с любого устройства.`,
+//               en: `The TV app implements deep categorization of content into several sections: Live channels (TvChannelsScreen.tsx), movie catalogs, and series (VideosScreen.tsx). To optimize the rendering of large lists on weak set-top boxes, list virtualization and image lazy loading techniques are used.
+
+// The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it loads high-quality background posters, displays detailed metadata (rating, genre, description), and includes a list of recommendations. The user can add a movie to "Favorites" (FavoritesScreen.tsx) for quick access from any device.`,
+//               tj: `Барномаи телевизионӣ гурӯҳбандии амиқи мундариҷаро ба якчанд бахшҳо амалӣ мекунад: Шабакаҳои Live (TvChannelsScreen.tsx), каталогҳои филмҳо ва сериалҳо (VideosScreen.tsx). Барои беҳтар кардани визуализатсияи рӯйхатҳои калон дар приставкаҳои заифи телевизионӣ, усулҳои виртуализатсияи рӯйхат ва боркунии танбал (lazy loading) тасвирҳо истифода мешаванд.
+
+// Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.`,
+//             },
+//           },
+//           {
+//             slug: "payment-player",
+//             title: {
+//               ru: "Оплата и Плеер",
+//               en: "Payment and Player",
+//               tj: "Пардохт ва Плеер",
+//             },
+//             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
+//             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+//             shortInfo: {
+//               ru: "PlayerScreen & PaymentGuide",
+//               en: "PlayerScreen & PaymentGuide",
+//               tj: "PlayerScreen & PaymentGuide",
+//             },
+//             fullInfo: {
+//               ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
+
+// Важным бизнес-модулем является встроенная система биллинга (PaymentGuide.tsx и ProductsScreen.tsx). Пользователям больше не нужно заходить на сайт с компьютера — они могут просматривать доступные тарифы, изучать инструкции по пополнению баланса через локальные терминалы и управлять своей подпиской прямо на большом экране, используя только пульт ДУ.`,
+//               en: `A specially adapted native TV player (PlayerScreen.tsx) is used to play Live TV and VOD content on TVs. It ensures stable stream decoding without buffering, hardware decoding support, and remote control button handling (play/pause/rewind).
+
+// An important business module is the built-in billing system (PaymentGuide.tsx and ProductsScreen.tsx). Users no longer need to visit the site from a computer — they can view available tariffs, study instructions for topping up their balance via local terminals, and manage their subscription right on the big screen, using only the remote control.`,
+//               tj: `Плеери махсус мутобиқшудаи телевизионии нативӣ (PlayerScreen.tsx) барои намоиши мундариҷаи Live TV ва VOD дар телевизорҳо истифода мешавад. Он рамзкушоии устувори ҷараёнро бидуни буферизатсия, дастгирии рамзкушоии сахтафзор ва коркарди тугмаҳои пульт (навозиш/таваққуф/қафо) таъмин мекунад.
+
+// Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.`,
+//             },
+//           },
           {
-            slug: "tv-interface-navigation",
+            slug: "tv-loading",
             title: {
-              ru: "TV Интерфейс и Навигация",
-              en: "TV Interface and Navigation",
-              tj: "Интерфейси TV ва Навигатсия",
+              ru: "Экран загрузки",
+              en: "Loading Screen",
+              tj: "Экрани боркунӣ",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/tv/loading.jpg",
+            BannerSrc: "/images/projects/mavjisomon/tv/loading.jpg",
             shortInfo: {
-              ru: "D-Pad фокус и MainScreen.tsx",
-              en: "D-Pad focus and MainScreen.tsx",
-              tj: "Фокуси D-Pad ва MainScreen.tsx",
+              ru: "Сплеш-скрин и инициализация приложения",
+              en: "Splash screen and app initialization",
+              tj: "Экрани ибтидоӣ ва оғози барнома",
             },
             fullInfo: {
-              ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
-
-Вся навигация, включая переход между боковым меню и основным контентом, построена на обработке событий onFocus и onBlur. Каждая карточка фильма (MediaCard.tsx) плавно увеличивается при наведении фокуса, используя нативные анимации для создания эффекта глубины и отзывчивости. Поддерживается сборка как под классический Android TV, так и под телевизоры на базе Tizen (через Webpack-сборку rnv).`,
-              en: `The project for smart TVs and set-top boxes is written in a specialized version of React Native TV (react-native-tvos) using strict TypeScript typing. The main difference from the mobile version is the full orientation towards control via remote control (D-Pad).
-
-All navigation, including transitions between the side menu and main content, is built on handling onFocus and onBlur events. Each movie card (MediaCard.tsx) smoothly enlarges on focus, using native animations to create a sense of depth and responsiveness. Builds are supported for both classic Android TV and Tizen-based TVs (via Webpack rnv build).`,
-              tj: `Лоиҳа барои телевизорҳои интеллектуалӣ ва приставкаҳо дар версияи махсусгардонидашудаи React Native TV (react-native-tvos) бо истифода аз чопкунии қатъии TypeScript навишта шудааст. Фарқи асосӣ аз версияи мобилӣ тамоюли пурра ба идоракунӣ тавассути пульти фосилавӣ (D-Pad) мебошад.
-
-Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.`,
+              ru: `При запуске TV-приложения пользователи видят фирменный сплеш-скрин. На этом этапе происходит базовая инициализация: проверка авторизации, подгрузка начальных метаданных и конфигурации серверов. Экран загрузки помогает скрасить время ожидания, обеспечивая плавный переход к главному интерфейсу.`,
+              en: `Upon launching the TV app, users are greeted with a branded splash screen. During this phase, basic initialization occurs: authorization checks, loading of initial metadata, and server configuration. The loading screen helps pass the waiting time, ensuring a smooth transition to the main interface.`,
+              tj: `Ҳангоми оғози барномаи телевизионӣ, корбарон экрани ибтидоии брендиро мебинанд. Дар ин марҳила, оғози асосӣ рух медиҳад: санҷиши авторизтсия, боркунии метамаълумоти ибтидоӣ ва конфигуратсияи сервер. Экрани боркунӣ барои гузаронидани вақти интизорӣ кӯмак мекунад ва гузариши ҳамворро ба интерфейси асосӣ таъмин мекунад.`,
             },
           },
           {
-            slug: "catalog-details",
+            slug: "tv-navbar",
             title: {
-              ru: "Каталог и Детали",
-              en: "Catalog and Details",
-              tj: "Каталог ва Тафсилот",
+              ru: "Боковая навигация",
+              en: "Sidebar Navigation",
+              tj: "Навигатсияи паҳлӯӣ",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-6.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/tv/navbar.jpg",
+            BannerSrc: "/images/projects/mavjisomon/tv/navbar.jpg",
             shortInfo: {
-              ru: "VideosScreen & DetailsScreen",
-              en: "VideosScreen & DetailsScreen",
-              tj: "VideosScreen & DetailsScreen",
+              ru: "Меню для смарт-телевизоров",
+              en: "Menu for smart TVs",
+              tj: "Меню барои телевизорҳои ҳушманд",
             },
             fullInfo: {
-              ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
-
-Страница деталей фильма (DetailsScreen.tsx) представляет собой полноценный кинотеатральный хаб: она подгружает высококачественные фоновые постеры, выводит подробные метаданные (рейтинг, жанр, описание) и включает список рекомендаций. Пользователь может добавить фильм в «Избранное» (FavoritesScreen.tsx) для быстрого доступа с любого устройства.`,
-              en: `The TV app implements deep categorization of content into several sections: Live channels (TvChannelsScreen.tsx), movie catalogs, and series (VideosScreen.tsx). To optimize the rendering of large lists on weak set-top boxes, list virtualization and image lazy loading techniques are used.
-
-The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it loads high-quality background posters, displays detailed metadata (rating, genre, description), and includes a list of recommendations. The user can add a movie to "Favorites" (FavoritesScreen.tsx) for quick access from any device.`,
-              tj: `Барномаи телевизионӣ гурӯҳбандии амиқи мундариҷаро ба якчанд бахшҳо амалӣ мекунад: Шабакаҳои Live (TvChannelsScreen.tsx), каталогҳои филмҳо ва сериалҳо (VideosScreen.tsx). Барои беҳтар кардани визуализатсияи рӯйхатҳои калон дар приставкаҳои заифи телевизионӣ, усулҳои виртуализатсияи рӯйхат ва боркунии танбал (lazy loading) тасвирҳо истифода мешаванд.
-
-Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.`,
+              ru: `Боковая навигационная панель оптимизирована для использования пульта дистанционного управления (D-Pad). Она плавно выезжает при наведении фокуса на левую часть экрана и содержит основные разделы: Поиск, Фильмы, ТВ каналы, Радио, Избранное и Настройки. Элементы меню имеют четкие визуальные состояния для облегчения навигации.`,
+              en: `The side navigation panel is optimized for remote control (D-Pad) usage. It smoothly slides out when focus is brought to the left side of the screen and contains the main sections: Search, Movies, TV Channels, Radio, Favorites, and Settings. Menu items feature clear visual states to facilitate navigation.`,
+              tj: `Панели навигатсияи паҳлӯӣ барои истифода бо пульти фосилавӣ (D-Pad) беҳтар карда шудааст. Он ҳангоми равона кардани фокус ба тарафи чапи экран ба таври ҳамвор берун мешавад ва бахшҳои асосиро дар бар мегирад: Ҷустуҷӯ, Филмҳо, Шабакаҳои ТВ, Радио, Баргузидаҳо ва Танзимот. Унсурҳои меню дорои ҳолатҳои визуалии равшан барои осон кардани навигатсия мебошанд.`,
             },
           },
           {
-            slug: "payment-player",
+            slug: "tv-film-page",
             title: {
-              ru: "Оплата и Плеер",
-              en: "Payment and Player",
-              tj: "Пардохт ва Плеер",
+              ru: "Карточка фильма",
+              en: "Movie Card",
+              tj: "Корти филм",
             },
-            imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-            BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
+            imageSrc: "/images/projects/mavjisomon/tv/film-page.jpg",
+            BannerSrc: "/images/projects/mavjisomon/tv/film-page.jpg",
             shortInfo: {
-              ru: "PlayerScreen & PaymentGuide",
-              en: "PlayerScreen & PaymentGuide",
-              tj: "PlayerScreen & PaymentGuide",
+              ru: "Детальная информация о кино",
+              en: "Detailed movie information",
+              tj: "Маълумоти муфассал дар бораи кино",
             },
             fullInfo: {
-              ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
-
-Важным бизнес-модулем является встроенная система биллинга (PaymentGuide.tsx и ProductsScreen.tsx). Пользователям больше не нужно заходить на сайт с компьютера — они могут просматривать доступные тарифы, изучать инструкции по пополнению баланса через локальные терминалы и управлять своей подпиской прямо на большом экране, используя только пульт ДУ.`,
-              en: `A specially adapted native TV player (PlayerScreen.tsx) is used to play Live TV and VOD content on TVs. It ensures stable stream decoding without buffering, hardware decoding support, and remote control button handling (play/pause/rewind).
-
-An important business module is the built-in billing system (PaymentGuide.tsx and ProductsScreen.tsx). Users no longer need to visit the site from a computer — they can view available tariffs, study instructions for topping up their balance via local terminals, and manage their subscription right on the big screen, using only the remote control.`,
-              tj: `Плеери махсус мутобиқшудаи телевизионии нативӣ (PlayerScreen.tsx) барои намоиши мундариҷаи Live TV ва VOD дар телевизорҳо истифода мешавад. Он рамзкушоии устувори ҷараёнро бидуни буферизатсия, дастгирии рамзкушоии сахтафзор ва коркарди тугмаҳои пульт (навозиш/таваққуф/қафо) таъмин мекунад.
-
-Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.`,
+              ru: `Страница фильма на Smart TV разработана так, чтобы максимально использовать площадь большого экрана. На заднем фоне отображается высококачественный постер, а поверх него выводится ключевая информация: название, жанр, описание и рейтинг. Пользователь может начать просмотр, добавить фильм в избранное или посмотреть трейлер.`,
+              en: `The movie page on Smart TV is designed to maximize the use of a large screen. A high-quality poster is displayed in the background, with key information overlaid: title, genre, description, and rating. The user can start watching, add the movie to favorites, or watch the trailer.`,
+              tj: `Саҳифаи филм дар Smart TV тавре тарҳрезӣ шудааст, ки масоҳати экрани калонро ҳадди аксар истифода барад. Дар замина постери баландсифат намоиш дода мешавад ва дар болои он маълумоти калидӣ ҷойгир аст: ном, жанр, тавсиф ва рейтинг. Корбар метавонад тамошоро оғоз кунад, филмро ба баргузидаҳо илова кунад ё трейлерро бинад.`,
+            },
+          },
+          {
+            slug: "tv-live-page",
+            title: {
+              ru: "Прямой эфир (Live TV)",
+              en: "Live TV",
+              tj: "Пахши мустақим (Live TV)",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/tv-page.jpg",
+            BannerSrc: "/images/projects/mavjisomon/tv/tv-page.jpg",
+            shortInfo: {
+              ru: "Просмотр телеканалов на ТВ",
+              en: "Watching TV channels",
+              tj: "Тамошои шабакаҳои телевизионӣ",
+            },
+            fullInfo: {
+              ru: `Интерфейс просмотра прямых трансляций адаптирован для телевизоров. Во время просмотра можно легко вызвать меню телеканалов, чтобы переключиться на другую станцию, не прерывая эфир. Плеер поддерживает аппаратное ускорение и быструю обработку потоков для предотвращения задержек (буферизации).`,
+              en: `The live broadcast viewing interface is tailored for TVs. While watching, users can easily bring up the TV channels menu to switch to another station without interrupting the current broadcast. The player supports hardware acceleration and fast stream processing to prevent buffering.`,
+              tj: `Интерфейси тамошои пахшҳои мустақим барои телевизорҳо мутобиқ карда шудааст. Ҳангоми тамошо, корбарон метавонанд ба осонӣ менюи шабакаҳои телевизиониро даъват кунанд, то ба истгоҳи дигар бидуни қатъи пахши ҷорӣ гузаранд. Плеер суръатбахшии сахтафзор ва коркарди зуди ҷараёнҳоро барои пешгирии буферизатсия дастгирӣ мекунад.`,
+            },
+          },
+          {
+            slug: "tv-radio-page",
+            title: {
+              ru: "Радио",
+              en: "Radio",
+              tj: "Радио",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/radio-page.jpg",
+            BannerSrc: "/images/projects/mavjisomon/tv/radio-page.jpg",
+            shortInfo: {
+              ru: "Слушайте радио на Smart TV",
+              en: "Listen to radio on Smart TV",
+              tj: "Радиоро дар Smart TV гӯш кунед",
+            },
+            fullInfo: {
+              ru: `Удобный интерфейс для прослушивания радиостанций на телевизоре. На экране отображается красивый визуализатор звука или логотип станции, пока аудио воспроизводится. Меню позволяет легко перемещаться по списку радиостанций с помощью пульта дистанционного управления.`,
+              en: `A user-friendly interface for listening to radio stations on the TV. The screen displays a beautiful audio visualizer or the station's logo while the audio plays. The menu makes it easy to navigate through the list of radio stations using the remote control.`,
+              tj: `Интерфейси қулай барои гӯш кардани истгоҳҳои радио дар телевизор. Дар экран визуализатори зебои садо ё логотипи истгоҳ ҳангоми навохтани аудио намоиш дода мешавад. Меню имкон медиҳад, ки тавассути пульти фосилавӣ дар рӯйхати истгоҳҳои радио ба осонӣ паймоиш кунед.`,
+            },
+          },
+          {
+            slug: "tv-home-page",
+            title: {
+              ru: "Главная страница",
+              en: "Home Page",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/home-page.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/home-page.png",
+            shortInfo: {
+              ru: "Витрина контента",
+              en: "Content showcase",
+              tj: "Намоишгоҳи мундариҷа",
+            },
+            fullInfo: {
+              ru: `Главная страница приложения для Smart TV предлагает пользователям удобный доступ к самому актуальному контенту. Здесь собраны рекомендации, новинки кино, популярные телеканалы и продолжение просмотра. Интерфейс адаптирован для навигации с пульта.`,
+              en: `The main page of the Smart TV application offers users convenient access to the most relevant content. Here you can find recommendations, new movies, popular TV channels, and continue watching. The interface is adapted for remote control navigation.`,
+              tj: `Саҳифаи асосии барнома барои Smart TV ба корбарон дастрасии қулай ба мундариҷаи муҳимтаринро пешниҳод мекунад. Дар ин ҷо тавсияҳо, филмҳои нав, шабакаҳои телевизионии маъмул ва идомаи тамошо ҷамъ оварда шудаанд. Интерфейс барои навигатсия бо пульт мутобиқ карда шудааст.`,
+            },
+          },
+          {
+            slug: "tv-favorites",
+            title: {
+              ru: "Избранное",
+              en: "Favorites",
+              tj: "Баргузидаҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/fovarits.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/fovarits.png",
+            shortInfo: {
+              ru: "Сохраненный контент",
+              en: "Saved content",
+              tj: "Мундариҷаи захирашуда",
+            },
+            fullInfo: {
+              ru: `Раздел «Избранное» позволяет пользователям быстро находить сохраненные телеканалы, любимые фильмы и сериалы. Контент легко добавляется и удаляется в один клик. Это делает использование приложения персонализированным и комфортным для каждого.`,
+              en: `The "Favorites" section allows users to quickly find saved TV channels, favorite movies, and series. Content is easily added and removed with one click. This makes using the application personalized and comfortable for everyone.`,
+              tj: `Бахши "Баргузидаҳо" ба корбарон имкон медиҳад, ки шабакаҳои телевизионии захирашуда, филмҳо ва сериалҳои дӯстдоштаи худро зуд пайдо кунанд. Мундариҷа ба осонӣ бо як клик илова ва нест карда мешавад. Ин истифодаи барномаро барои ҳар як шахс фардӣ ва бароҳат месозад.`,
+            },
+          },
+          {
+            slug: "tv-list-tarifs",
+            title: {
+              ru: "Тарифы",
+              en: "Tariffs",
+              tj: "Тарифҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/list-tarifs.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/list-tarifs.png",
+            shortInfo: {
+              ru: "Управление подписками",
+              en: "Subscription management",
+              tj: "Идоракунии обунаҳо",
+            },
+            fullInfo: {
+              ru: `В разделе «Тарифы» пользователи могут ознакомиться с доступными вариантами подписок, их стоимостью и условиями. Здесь же можно активировать нужный пакет услуг прямо с экрана телевизора, без необходимости использовать телефон или компьютер.`,
+              en: `In the "Tariffs" section, users can review available subscription options, their costs, and conditions. Here you can also activate the necessary service package right from the TV screen, without needing to use a phone or computer.`,
+              tj: `Дар бахши "Тарифҳо" корбарон метавонанд бо имконоти дастраси обуна, арзиш ва шартҳои онҳо шинос шаванд. Дар ҳамин ҷо шумо инчунин метавонед бастаи хидматрасонии лозимиро бевосита аз экрани телевизор, бе зарурати истифодаи телефон ё компютер фаъол кунед.`,
+            },
+          },
+          {
+            slug: "tv-multilingualism",
+            title: {
+              ru: "Мультиязычность",
+              en: "Multilingualism",
+              tj: "Бисёрзабонӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/multilingualism1.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/multilingualism1.png",
+            shortInfo: {
+              ru: "Выбор языка интерфейса",
+              en: "Interface language selection",
+              tj: "Интихоби забони интерфейс",
+            },
+            fullInfo: {
+              ru: `Приложение полностью поддерживает мультиязычность, предоставляя интерфейс на нескольких языках, включая русский, таджикский и английский. Это расширяет аудиторию сервиса и делает его интуитивно понятным для пользователей из разных стран и регионов.`,
+              en: `The application fully supports multilingualism, providing an interface in several languages, including Russian, Tajik, and English. This expands the service's audience and makes it intuitive for users from different countries and regions.`,
+              tj: `Барнома пурра бисёрзабониро дастгирӣ мекунад ва интерфейсро бо якчанд забонҳо, аз ҷумла русӣ, тоҷикӣ ва англисӣ пешниҳод мекунад. Ин аудиторияи хидматро васеъ мекунад ва онро барои корбарон аз кишварҳо ва минтақаҳои гуногун интуитивӣ мегардонад.`,
+            },
+          },
+          {
+            slug: "tv-profile",
+            title: {
+              ru: "Профиль пользователя",
+              en: "User Profile",
+              tj: "Профили корбар",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/profile-user1.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/profile-user1.png",
+            shortInfo: {
+              ru: "Личный кабинет",
+              en: "Personal account",
+              tj: "Кабинаи шахсӣ",
+            },
+            fullInfo: {
+              ru: `Профиль пользователя на Smart TV позволяет управлять личными данными, просматривать баланс и историю платежей. Через удобное меню профиля можно также настроить параметры аккаунта, переключаться между детским и взрослым профилем.`,
+              en: `The user profile on Smart TV allows you to manage personal data, view balance, and payment history. Through the convenient profile menu, you can also configure account settings, switch between children's and adult profiles.`,
+              tj: `Профили корбар дар Smart TV имкон медиҳад, ки маълумоти шахсиро идора кунед, тавозун ва таърихи пардохтҳоро бинед. Тавассути менюи қулайи профил, шумо инчунин метавонед танзимоти ҳисобро танзим кунед, байни профили кӯдакона ва калонсолон гузаред.`,
+            },
+          },
+          {
+            slug: "tv-about",
+            title: {
+              ru: "О приложении",
+              en: "About App",
+              tj: "Дар бораи барнома",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/about-page.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/about-page.png",
+            shortInfo: {
+              ru: "Информация и поддержка",
+              en: "Information and support",
+              tj: "Маълумот ва дастгирӣ",
+            },
+            fullInfo: {
+              ru: `Раздел «О приложении» предоставляет важную информацию для пользователей: номер версии, контакты службы технической поддержки и ссылки на правовые документы. Это помогает оперативно решать возникающие вопросы и повышает доверие к сервису.`,
+              en: `The "About App" section provides important information for users: version number, technical support contacts, and links to legal documents. This helps to quickly resolve any issues and increases trust in the service.`,
+              tj: `Бахши "Дар бораи барнома" маълумоти муҳимро барои корбарон пешниҳод мекунад: рақами версия, тамосҳои хадамоти дастгирии техникӣ ва истинодҳо ба ҳуҷҷатҳои ҳуқуқӣ. Ин барои саривақт ҳал кардани масъалаҳои бамиёномада кӯмак мекунад ва эътимодро ба хидмат баланд мебардорад.`,
             },
           },
         ],
