@@ -2830,6 +2830,126 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
               tj: `Интерфейси қулай барои гӯш кардани истгоҳҳои радио дар телевизор. Дар экран визуализатори зебои садо ё логотипи истгоҳ ҳангоми навохтани аудио намоиш дода мешавад. Меню имкон медиҳад, ки тавассути пульти фосилавӣ дар рӯйхати истгоҳҳои радио ба осонӣ паймоиш кунед.`,
             },
           },
+          {
+            slug: "tv-home-page",
+            title: {
+              ru: "Главная страница",
+              en: "Home Page",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/home-page.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/home-page.png",
+            shortInfo: {
+              ru: "Витрина контента",
+              en: "Content showcase",
+              tj: "Намоишгоҳи мундариҷа",
+            },
+            fullInfo: {
+              ru: `Главная страница приложения для Smart TV предлагает пользователям удобный доступ к самому актуальному контенту. Здесь собраны рекомендации, новинки кино, популярные телеканалы и продолжение просмотра. Интерфейс адаптирован для навигации с пульта.`,
+              en: `The main page of the Smart TV application offers users convenient access to the most relevant content. Here you can find recommendations, new movies, popular TV channels, and continue watching. The interface is adapted for remote control navigation.`,
+              tj: `Саҳифаи асосии барнома барои Smart TV ба корбарон дастрасии қулай ба мундариҷаи муҳимтаринро пешниҳод мекунад. Дар ин ҷо тавсияҳо, филмҳои нав, шабакаҳои телевизионии маъмул ва идомаи тамошо ҷамъ оварда шудаанд. Интерфейс барои навигатсия бо пульт мутобиқ карда шудааст.`,
+            },
+          },
+          {
+            slug: "tv-favorites",
+            title: {
+              ru: "Избранное",
+              en: "Favorites",
+              tj: "Баргузидаҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/fovarits.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/fovarits.png",
+            shortInfo: {
+              ru: "Сохраненный контент",
+              en: "Saved content",
+              tj: "Мундариҷаи захирашуда",
+            },
+            fullInfo: {
+              ru: `Раздел «Избранное» позволяет пользователям быстро находить сохраненные телеканалы, любимые фильмы и сериалы. Контент легко добавляется и удаляется в один клик. Это делает использование приложения персонализированным и комфортным для каждого.`,
+              en: `The "Favorites" section allows users to quickly find saved TV channels, favorite movies, and series. Content is easily added and removed with one click. This makes using the application personalized and comfortable for everyone.`,
+              tj: `Бахши "Баргузидаҳо" ба корбарон имкон медиҳад, ки шабакаҳои телевизионии захирашуда, филмҳо ва сериалҳои дӯстдоштаи худро зуд пайдо кунанд. Мундариҷа ба осонӣ бо як клик илова ва нест карда мешавад. Ин истифодаи барномаро барои ҳар як шахс фардӣ ва бароҳат месозад.`,
+            },
+          },
+          {
+            slug: "tv-list-tarifs",
+            title: {
+              ru: "Тарифы",
+              en: "Tariffs",
+              tj: "Тарифҳо",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/list-tarifs.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/list-tarifs.png",
+            shortInfo: {
+              ru: "Управление подписками",
+              en: "Subscription management",
+              tj: "Идоракунии обунаҳо",
+            },
+            fullInfo: {
+              ru: `В разделе «Тарифы» пользователи могут ознакомиться с доступными вариантами подписок, их стоимостью и условиями. Здесь же можно активировать нужный пакет услуг прямо с экрана телевизора, без необходимости использовать телефон или компьютер.`,
+              en: `In the "Tariffs" section, users can review available subscription options, their costs, and conditions. Here you can also activate the necessary service package right from the TV screen, without needing to use a phone or computer.`,
+              tj: `Дар бахши "Тарифҳо" корбарон метавонанд бо имконоти дастраси обуна, арзиш ва шартҳои онҳо шинос шаванд. Дар ҳамин ҷо шумо инчунин метавонед бастаи хидматрасонии лозимиро бевосита аз экрани телевизор, бе зарурати истифодаи телефон ё компютер фаъол кунед.`,
+            },
+          },
+          {
+            slug: "tv-multilingualism",
+            title: {
+              ru: "Мультиязычность",
+              en: "Multilingualism",
+              tj: "Бисёрзабонӣ",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/multilingualism1.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/multilingualism1.png",
+            shortInfo: {
+              ru: "Выбор языка интерфейса",
+              en: "Interface language selection",
+              tj: "Интихоби забони интерфейс",
+            },
+            fullInfo: {
+              ru: `Приложение полностью поддерживает мультиязычность, предоставляя интерфейс на нескольких языках, включая русский, таджикский и английский. Это расширяет аудиторию сервиса и делает его интуитивно понятным для пользователей из разных стран и регионов.`,
+              en: `The application fully supports multilingualism, providing an interface in several languages, including Russian, Tajik, and English. This expands the service's audience and makes it intuitive for users from different countries and regions.`,
+              tj: `Барнома пурра бисёрзабониро дастгирӣ мекунад ва интерфейсро бо якчанд забонҳо, аз ҷумла русӣ, тоҷикӣ ва англисӣ пешниҳод мекунад. Ин аудиторияи хидматро васеъ мекунад ва онро барои корбарон аз кишварҳо ва минтақаҳои гуногун интуитивӣ мегардонад.`,
+            },
+          },
+          {
+            slug: "tv-profile",
+            title: {
+              ru: "Профиль пользователя",
+              en: "User Profile",
+              tj: "Профили корбар",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/profile-user1.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/profile-user1.png",
+            shortInfo: {
+              ru: "Личный кабинет",
+              en: "Personal account",
+              tj: "Кабинаи шахсӣ",
+            },
+            fullInfo: {
+              ru: `Профиль пользователя на Smart TV позволяет управлять личными данными, просматривать баланс и историю платежей. Через удобное меню профиля можно также настроить параметры аккаунта, переключаться между детским и взрослым профилем.`,
+              en: `The user profile on Smart TV allows you to manage personal data, view balance, and payment history. Through the convenient profile menu, you can also configure account settings, switch between children's and adult profiles.`,
+              tj: `Профили корбар дар Smart TV имкон медиҳад, ки маълумоти шахсиро идора кунед, тавозун ва таърихи пардохтҳоро бинед. Тавассути менюи қулайи профил, шумо инчунин метавонед танзимоти ҳисобро танзим кунед, байни профили кӯдакона ва калонсолон гузаред.`,
+            },
+          },
+          {
+            slug: "tv-about",
+            title: {
+              ru: "О приложении",
+              en: "About App",
+              tj: "Дар бораи барнома",
+            },
+            imageSrc: "/images/projects/mavjisomon/tv/about-page.png",
+            BannerSrc: "/images/projects/mavjisomon/tv/about-page.png",
+            shortInfo: {
+              ru: "Информация и поддержка",
+              en: "Information and support",
+              tj: "Маълумот ва дастгирӣ",
+            },
+            fullInfo: {
+              ru: `Раздел «О приложении» предоставляет важную информацию для пользователей: номер версии, контакты службы технической поддержки и ссылки на правовые документы. Это помогает оперативно решать возникающие вопросы и повышает доверие к сервису.`,
+              en: `The "About App" section provides important information for users: version number, technical support contacts, and links to legal documents. This helps to quickly resolve any issues and increases trust in the service.`,
+              tj: `Бахши "Дар бораи барнома" маълумоти муҳимро барои корбарон пешниҳод мекунад: рақами версия, тамосҳои хадамоти дастгирии техникӣ ва истинодҳо ба ҳуҷҷатҳои ҳуқуқӣ. Ин барои саривақт ҳал кардани масъалаҳои бамиёномада кӯмак мекунад ва эътимодро ба хидмат баланд мебардорад.`,
+            },
+          },
         ],
       },
     ],
