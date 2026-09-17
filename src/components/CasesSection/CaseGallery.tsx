@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './CaseGallery.module.css';
+import tabStyles from './CaseTabs.module.css';
 
 interface CaseGalleryProps {
   images: string[];
@@ -76,26 +77,28 @@ export default function CaseGallery({ images, captions, title, labels }: CaseGal
 
   return (
     <>
-      <div className={styles.grid}>
+      <div className={tabStyles.grid}>
         {images.map((src, idx) => (
           <button
             key={idx}
             type="button"
-            className={styles.item}
+            className={`${tabStyles.card} ${styles.itemReset}`}
             onClick={() => setOpenIndex(idx)}
             aria-label={`${title} — ${captionAt(idx)}`}
           >
-            <span className={styles.thumbWrapper}>
+            <span className={tabStyles.imageWrapper}>
               <Image
                 src={src}
                 alt={`${title} — ${captionAt(idx)}`}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className={styles.thumb}
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                className={tabStyles.image}
               />
             </span>
             {captions && captions[idx] && (
-              <span className={styles.caption}>{captions[idx]}</span>
+              <span className={tabStyles.caption}>
+                <span className={tabStyles.cardShortInfo}>{captions[idx]}</span>
+              </span>
             )}
           </button>
         ))}
