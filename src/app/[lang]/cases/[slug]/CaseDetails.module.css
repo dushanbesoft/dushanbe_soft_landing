@@ -181,7 +181,7 @@
   .contentWrapper {
     padding: 20px 15px;
     width: 100%;
-    gap: 30px;
+    gap: 0px;
   }
   .descriptionSection {
     max-width: 100%;
