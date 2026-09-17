@@ -218,6 +218,11 @@ export default async function CaseDetailsPage({
                     images={gallery}
                     captions={galleryCaptions}
                     title={title}
+                    labels={{
+                      prev: t("cases.gallery_prev"),
+                      next: t("cases.gallery_next"),
+                      close: t("cases.gallery_close"),
+                    }}
                   />
                 </div>
               )}

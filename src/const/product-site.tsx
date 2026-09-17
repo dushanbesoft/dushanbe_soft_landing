@@ -24,8 +24,8 @@ export interface ProductSiteItem {
 
 export const ProductSite: ProductSiteItem[] = [
   {
-    imageSrc: "/images/projects/president/banner.svg",
-    bannerSrc: "/images/projects/president/banner.svg",
+    imageSrc: "/images/projects/president/banner_main.jpg",
+    bannerSrc: "/images/projects/president/banner_main.jpg",
     year: "2024",
     tags: ["React", "Redux", "Laravel", "MySQL", "REST API"],
     slug: "president",
@@ -340,6 +340,113 @@ export const ProductSite: ProductSiteItem[] = [
       "/images/projects/pic/gallery-3.png",
       "/images/projects/pic/gallery-4.png",
       "/images/projects/pic/gallery-5.png",
+    ],
+    projectComponents: [
+      {
+        tabName: { ru: "Портал", en: "Portal", tj: "Портал" },
+        items: [
+          {
+            slug: "home",
+            title: {
+              ru: "Главная страница",
+              en: "Homepage",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/pic/gallery-1.png",
+            BannerSrc: "/images/projects/pic/gallery-1.png",
+            shortInfo: {
+              ru: "Презентация государственного проекта и партнёры",
+              en: "State project presentation and partners",
+              tj: "Муаррифии лоиҳаи давлатӣ ва шарикон",
+            },
+            fullInfo: {
+              ru: "Главная страница портала «Tajikistan Digital Foundations» представляет государственный проект цифровой трансформации. В шапке размещены государственный герб, полное название учреждения — Государственное учреждение «Центр реализации проектов цифровых основ Таджикистана» при Исполнительном аппарате Президента — и логотип TDF. Горизонтальное меню объединяет разделы «Главная», «Новости», «Объявления», «Проекты», «Государственные символы», «Структура», «FAQ» и «О нас». Дополнительно в шапке доступны инструменты доступности (увеличение шрифта, версия для слабовидящих), переключатель языка и поиск. Центральную область занимает крупный баннер с изображением здания правительства и цифровым фоном, заголовком «Tajikistan Digital Foundations Project» и кнопкой «Learn more». Под баннером бегущая строка перечисляет направления проекта, а нижняя полоса содержит логотипы партнёров: Всемирный банк, профильные министерства и организации.\n\nПользовательский сценарий: посетитель знакомится с сутью проекта из баннера, переходит к подробностям кнопкой «Learn more» либо выбирает нужный раздел — новости, проекты или структуру — через основное меню.\n\nЦенность для бизнеса: подобная главная страница подходит государственным и институциональным порталам, где важно одновременно представить миссию, обозначить направления работы и показать партнёрскую поддержку. Инструменты доступности и мультиязычность делают ресурс пригодным для широкой аудитории.",
+              en: "The homepage of the Tajikistan Digital Foundations portal presents the state digital transformation project. The header contains the national emblem, the institution’s full name — State Institution “Project Implementation Center for the Digital Foundations of Tajikistan” under the Executive Office of the President — and the TDF logo. A horizontal menu brings together Home, News, Announcements, Projects, State Symbols, Structure, FAQ and About Us. The header also offers accessibility tools (font enlargement, a low-vision version), a language switcher and search. The centre holds a large banner with an image of the government building on a digital background, the headline “Tajikistan Digital Foundations Project” and a Learn more button. A ticker below the banner lists the project directions, while a bottom strip shows partner logos: the World Bank, relevant ministries and organisations.\n\nUser journey: the visitor grasps the essence of the project from the banner, moves to details via Learn more, or selects a relevant section — news, projects or structure — through the main menu.\n\nBusiness value: such a homepage suits government and institutional portals where it is important to present the mission, outline areas of work and show partner support at once. Accessibility tools and multilingual support make the resource fit for a wide audience.",
+              tj: "Саҳифаи асосии портали «Tajikistan Digital Foundations» лоиҳаи давлатии дигаргунсозии рақамиро муаррифӣ мекунад. Дар қисми боло нишони давлатӣ, номи пурраи муассиса — Муассисаи давлатии «Маркази татбиқи лоиҳаҳои асосҳои рақамии Тоҷикистон» назди Дастгоҳи иҷроияи Президент — ва нишони TDF ҷойгиранд. Менюи уфуқӣ бахшҳои «Асосӣ», «Хабарҳо», «Эълонҳо», «Лоиҳаҳо», «Рамзҳои давлатӣ», «Сохтор», «FAQ» ва «Дар бораи мо»-ро муттаҳид мекунад. Ҳамчунин дар қисми боло абзорҳои дастрасӣ (калон кардани шрифт, версия барои камбинойон), интихобкунандаи забон ва ҷустуҷӯ дастрасанд. Қисми марказиро баннери калон бо тасвири бинои ҳукумат дар заминаи рақамӣ, сарлавҳаи «Tajikistan Digital Foundations Project» ва тугмаи «Learn more» ишғол мекунад. Дар зери баннер сатри давон самтҳои лоиҳаро номбар мекунад ва навори поёнӣ нишонаҳои шариконро дар бар мегирад: Бонки ҷаҳонӣ, вазоратҳо ва созмонҳои дахлдор.\n\nРаванди истифода: корбар моҳияти лоиҳаро аз баннер дарк мекунад, бо тугмаи «Learn more» ба тафсилот мегузарад ё бахши заруриро — хабарҳо, лоиҳаҳо ё сохтор — тавассути менюи асосӣ интихоб менамояд.\n\nАҳамият барои тиҷорат: чунин саҳифаи асосӣ барои порталҳои давлатӣ ва институтсионалӣ мувофиқ аст, ки дар онҳо ҳамзамон пешниҳоди рисолат, нишон додани самтҳои кор ва дастгирии шарикон муҳим аст. Абзорҳои дастрасӣ ва бисёрзабонӣ манбаъро барои шунавандагони васеъ мувофиқ мегардонанд.",
+            },
+          },
+          {
+            slug: "news",
+            title: {
+              ru: "Новости",
+              en: "News",
+              tj: "Хабарҳо",
+            },
+            imageSrc: "/images/projects/pic/gallery-2.png",
+            BannerSrc: "/images/projects/pic/gallery-2.png",
+            shortInfo: {
+              ru: "Лента публикаций с поиском",
+              en: "Publication feed with search",
+              tj: "Лентаи нашрҳо бо ҷустуҷӯ",
+            },
+            fullInfo: {
+              ru: "Раздел «Новости» организует публикации о ходе проекта. Под заголовком «News» и хлебными крошками расположено поле поиска по новостям, а ниже — вкладка «All News» и лента материалов. Каждая новость оформлена карточкой с фотографией мероприятия, меткой категории «News», датой публикации, заголовком и ссылкой «More Details». На экране представлены материалы о рабочих встречах и совещаниях по проекту, что показывает регулярное информационное сопровождение.\n\nПользовательский сценарий: посетитель просматривает ленту новостей, при необходимости уточняет запрос через поиск и открывает интересующую публикацию по ссылке «More Details».\n\nЦенность для бизнеса: новостной модуль поддерживает прозрачность и информирует аудиторию о ходе работ. Единый формат карточек с датой и фотографией облегчает восприятие потока публикаций и создаёт впечатление активной, регулярно обновляемой площадки.",
+              en: "The News section organises publications on the project’s progress. Below the “News” heading and breadcrumbs is a news search field, followed by an All News tab and a feed of materials. Each news item is a card with an event photograph, a “News” category tag, a publication date, a headline and a More Details link. The screen shows materials about working meetings and project sessions, reflecting regular information coverage.\n\nUser journey: the visitor browses the news feed, refines the query through search if needed and opens the relevant publication via the More Details link.\n\nBusiness value: a news module supports transparency and keeps the audience informed about the progress of work. A uniform card format with date and photograph makes the stream of publications easy to follow and conveys the impression of an active, regularly updated platform.",
+              tj: "Бахши «Хабарҳо» нашрҳоро дар бораи ҷараёни лоиҳа ба тартиб меорад. Зери сарлавҳаи «News» ва пайраҳаи навигатсионӣ майдони ҷустуҷӯи хабарҳо ҷойгир аст ва дар поён — варақаи «All News» ва лентаи мавод. Ҳар хабар ҳамчун корт бо акси чорабинӣ, нишонаи гурӯҳи «News», санаи нашр, сарлавҳа ва пайванди «More Details» таҳия шудааст. Дар экран маводи вохӯриҳои корӣ ва машваратҳо оид ба лоиҳа пешниҳод шудааст, ки ҳамроҳии мунтазами иттилоотиро нишон медиҳад.\n\nРаванди истифода: корбар лентаи хабарҳоро аз назар мегузаронад, ҳангоми зарурат дархостро тавассути ҷустуҷӯ мушаххас мекунад ва нашри ҷолибро бо пайванди «More Details» мекушояд.\n\nАҳамият барои тиҷорат: модули хабарҳо шаффофиятро дастгирӣ мекунад ва шунавандагонро аз ҷараёни корҳо огоҳ месозад. Формати ягонаи кортҳо бо сана ва акс дарки ҷараёни нашрҳоро осон мекунад ва таассуроти майдончаи фаъол ва мунтазам навшавандаро эҷод менамояд.",
+            },
+          },
+          {
+            slug: "projects",
+            title: {
+              ru: "Проекты",
+              en: "Projects",
+              tj: "Лоиҳаҳо",
+            },
+            imageSrc: "/images/projects/pic/gallery-3.png",
+            BannerSrc: "/images/projects/pic/gallery-3.png",
+            shortInfo: {
+              ru: "Карточка проекта со статусом и прогрессом",
+              en: "Project card with status and progress",
+              tj: "Корти лоиҳа бо ҳолат ва пешрафт",
+            },
+            fullInfo: {
+              ru: "Раздел «Проекты» представляет инициативы учреждения в виде структурированных карточек. Под заголовком «Projects» размещено поле поиска по проектам. Карточка проекта содержит статусную метку «Active», категорию, название «Tajikistan Digital Foundations Project», изображение и краткое описание. Отдельно вынесены ключевые параметры: индикатор прогресса с процентом выполнения, срок реализации и общий бюджет. Кнопка «Read More» ведёт к подробной странице проекта.\n\nПользовательский сценарий: посетитель оценивает статус и прогресс проекта по карточке, сопоставляет сроки и бюджет и открывает подробную информацию для более глубокого изучения.\n\nЦенность для бизнеса: карточка проекта с прогрессом, сроками и бюджетом наглядно демонстрирует подотчётность и ход исполнения. Такой формат полезен для организаций, реализующих программы и гранты, где важно показывать статус инициатив прозрачно и единообразно.",
+              en: "The Projects section presents the institution’s initiatives as structured cards. A project search field sits below the “Projects” heading. The project card contains an “Active” status label, a category, the name “Tajikistan Digital Foundations Project”, an image and a short description. Key parameters are shown separately: a progress indicator with a completion percentage, an implementation deadline and the total budget. A Read More button leads to the detailed project page.\n\nUser journey: the visitor assesses the project’s status and progress from the card, compares the timeline and budget, and opens the detailed information for closer study.\n\nBusiness value: a project card with progress, deadlines and budget clearly demonstrates accountability and execution. This format is useful for organisations running programmes and grants, where it is important to show the status of initiatives transparently and consistently.",
+              tj: "Бахши «Лоиҳаҳо» ташаббусҳои муассисаро дар шакли кортҳои сохторёфта пешниҳод мекунад. Зери сарлавҳаи «Projects» майдони ҷустуҷӯи лоиҳаҳо ҷойгир аст. Корти лоиҳа нишонаи ҳолати «Active», гурӯҳ, номи «Tajikistan Digital Foundations Project», тасвир ва тавсифи кӯтоҳро дар бар мегирад. Параметрҳои асосӣ алоҳида нишон дода шудаанд: нишондиҳандаи пешрафт бо фоизи иҷро, мӯҳлати татбиқ ва буҷети умумӣ. Тугмаи «Read More» ба саҳифаи муфассали лоиҳа мебарад.\n\nРаванди истифода: корбар ҳолат ва пешрафти лоиҳаро аз рӯйи корт арзёбӣ мекунад, мӯҳлат ва буҷетро муқоиса менамояд ва барои омӯзиши амиқтар маълумоти муфассалро мекушояд.\n\nАҳамият барои тиҷорат: корти лоиҳа бо пешрафт, мӯҳлат ва буҷет ҳисоботдиҳӣ ва ҷараёни иҷроро аён нишон медиҳад. Ин формат барои созмонҳое, ки барномаҳо ва грантҳоро амалӣ мекунанд ва бояд ҳолати ташаббусҳоро шаффоф ва якхела нишон диҳанд, муфид аст.",
+            },
+          },
+          {
+            slug: "state-symbols",
+            title: {
+              ru: "Государственные символы",
+              en: "State Symbols",
+              tj: "Рамзҳои давлатӣ",
+            },
+            imageSrc: "/images/projects/pic/gallery-4.png",
+            BannerSrc: "/images/projects/pic/gallery-4.png",
+            shortInfo: {
+              ru: "Справочный раздел о символах государства",
+              en: "Reference section on state symbols",
+              tj: "Бахши маълумотӣ дар бораи рамзҳои давлат",
+            },
+            fullInfo: {
+              ru: "Раздел «Государственные символы» представляет официальную справочную информацию. Под заголовком «State Symbols» и хлебными крошками расположены вкладки «State Emblem», «State Flag» и «National Anthem», разделяющие содержимое по типам символов. В активной вкладке выводятся выдержка из Закона Республики Таджикистан о государственных символах, заголовок «State Emblem» и изображение государственного герба. Такой формат объединяет нормативный текст и визуальное представление символа.\n\nПользовательский сценарий: посетитель выбирает нужный символ через вкладки, знакомится с официальным описанием и рассматривает изображение.\n\nЦенность для бизнеса: справочный раздел с вкладками удобен для представления официальной или регламентной информации, которая должна быть точной и структурированной. Аналогичный подход применим для страниц о нормативах, стандартах и официальной символике организации.",
+              en: "The State Symbols section presents official reference information. Below the “State Symbols” heading and breadcrumbs are the State Emblem, State Flag and National Anthem tabs, separating the content by symbol type. The active tab shows an excerpt from the Law of the Republic of Tajikistan on state symbols, the “State Emblem” heading and an image of the national emblem. This format combines the regulatory text with a visual representation of the symbol.\n\nUser journey: the visitor selects the relevant symbol through the tabs, reads the official description and views the image.\n\nBusiness value: a tabbed reference section is convenient for presenting official or regulatory information that must be accurate and structured. A similar approach suits pages about regulations, standards and an organisation’s official symbols.",
+              tj: "Бахши «Рамзҳои давлатӣ» маълумоти расмии маълумотиро пешниҳод мекунад. Зери сарлавҳаи «State Symbols» ва пайраҳаи навигатсионӣ варақаҳои «State Emblem», «State Flag» ва «National Anthem» ҷойгиранд, ки мундариҷаро аз рӯйи навъи рамзҳо ҷудо мекунанд. Дар варақаи фаъол порчае аз Қонуни Ҷумҳурии Тоҷикистон дар бораи рамзҳои давлатӣ, сарлавҳаи «State Emblem» ва тасвири нишони давлатӣ намоиш дода мешавад. Ин формат матни меъёриро бо пешниҳоди аёнии рамз муттаҳид мекунад.\n\nРаванди истифода: корбар рамзи заруриро тавассути варақаҳо интихоб мекунад, бо тавсифи расмӣ шинос мешавад ва тасвирро аз назар мегузаронад.\n\nАҳамият барои тиҷорат: бахши маълумотӣ бо варақаҳо барои пешниҳоди иттилооти расмӣ ё меъёрӣ, ки бояд дақиқ ва сохторёфта бошад, қулай аст. Равиши монанд барои саҳифаҳо оид ба меъёрҳо, стандартҳо ва рамзҳои расмии созмон мувофиқ аст.",
+            },
+          },
+          {
+            slug: "structure",
+            title: {
+              ru: "Структура",
+              en: "Structure",
+              tj: "Сохтор",
+            },
+            imageSrc: "/images/projects/pic/gallery-5.png",
+            BannerSrc: "/images/projects/pic/gallery-5.png",
+            shortInfo: {
+              ru: "Организационная схема учреждения",
+              en: "Organisational chart of the institution",
+              tj: "Нақшаи ташкилии муассиса",
+            },
+            fullInfo: {
+              ru: "Раздел «Структура» отображает организационную схему учреждения. В верхней части размещён полный заголовок о структуре Государственного учреждения при Исполнительном аппарате Президента и хлебные крошки. Ниже, под подзаголовком «Leadership», расположена иерархическая диаграмма: на вершине — «Director», под ним «Director’s Assistant» и «HR Specialist», далее — подразделения «ICT Department», «Deputy Director», «Accounting» и «Purchasing Department» с указанием ключевых должностей (координатор, специалист по мониторингу и оценке, главный бухгалтер, главный специалист по закупкам). Блоки соединены линиями, отражающими подчинённость.\n\nПользовательский сценарий: посетитель изучает схему сверху вниз, определяет состав подразделений и находит должность или отдел, отвечающий за интересующее направление.\n\nЦенность для бизнеса: визуальная организационная схема наглядно показывает состав и иерархию организации. Такой формат полезен для институциональных сайтов, где важно продемонстрировать прозрачную структуру управления и распределение ответственности.",
+              en: "The Structure section displays the institution’s organisational chart. The top holds the full heading about the structure of the State Institution under the Executive Office of the President, together with breadcrumbs. Below, under the “Leadership” subheading, is a hierarchical diagram: at the top is the Director, followed by the Director’s Assistant and HR Specialist, then the ICT Department, Deputy Director, Accounting and Purchasing Department units with key positions indicated (coordinator, monitoring and evaluation specialist, chief accountant, chief procurement specialist). The blocks are connected by lines reflecting the reporting order.\n\nUser journey: the visitor studies the chart from top to bottom, identifies the composition of the units and finds the position or department responsible for the area of interest.\n\nBusiness value: a visual organisational chart clearly shows an organisation’s composition and hierarchy. This format is useful for institutional sites where it is important to demonstrate a transparent management structure and the distribution of responsibility.",
+              tj: "Бахши «Сохтор» нақшаи ташкилии муассисаро намоиш медиҳад. Дар қисми боло сарлавҳаи пурра дар бораи сохтори Муассисаи давлатии назди Дастгоҳи иҷроияи Президент ва пайраҳаи навигатсионӣ ҷойгиранд. Дар поён, зери зерсарлавҳаи «Leadership», диаграммаи зинавӣ ҷой дорад: дар боло «Director», зери он «Director’s Assistant» ва «HR Specialist», сипас воҳидҳои «ICT Department», «Deputy Director», «Accounting» ва «Purchasing Department» бо нишон додани вазифаҳои асосӣ (ҳамоҳангсоз, мутахассиси мониторинг ва арзёбӣ, саршумордор, сармутахассиси харид). Блокҳо бо хатҳое, ки тобеиятро инъикос мекунанд, пайваст шудаанд.\n\nРаванди истифода: корбар нақшаро аз боло ба поён меомӯзад, ҳайати воҳидҳоро муайян мекунад ва вазифа ё шуъбаи масъули самти дилхоҳро меёбад.\n\nАҳамият барои тиҷорат: нақшаи аёнии ташкилӣ ҳайат ва зинанизоми созмонро равшан нишон медиҳад. Ин формат барои сомонаҳои институтсионалӣ муфид аст, ки дар онҳо нишон додани сохтори шаффофи идоракунӣ ва тақсими масъулият муҳим аст.",
+            },
+          },
+        ],
+      },
     ],
   },
   {
@@ -2737,6 +2844,219 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "/images/projects/livechat/gallery-2.png",
       "/images/projects/livechat/gallery-3.png",
       "/images/projects/livechat/gallery-4.png",
+      "/images/projects/livechat/gallery-5.png",
+      "/images/projects/livechat/gallery-6.png",
+      "/images/projects/livechat/gallery-7.png",
+      "/images/projects/livechat/gallery-8.png",
+      "/images/projects/livechat/gallery-9.png",
+      "/images/projects/livechat/gallery-10.png",
+    ],
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: [
+          {
+            slug: "hero",
+            title: {
+              ru: "Первый экран",
+              en: "Hero Section",
+              tj: "Экрани аввал",
+            },
+            imageSrc: "/images/projects/livechat/gallery-1.png",
+            BannerSrc: "/images/projects/livechat/gallery-1.png",
+            shortInfo: {
+              ru: "Оффер продукта и призыв к действию",
+              en: "Product offer and call to action",
+              tj: "Пешниҳоди маҳсулот ва даъват ба амал",
+            },
+            fullInfo: {
+              ru: "Первый экран лендинга LiveChat формирует первое впечатление о продукте. В шапке размещены логотип с названием сервиса, горизонтальное меню из разделов «Функции», «Тарифы», «Интеграции» и «Поддержка», переключатель языка, кнопка «Войти» и выделенная кнопка «Попробовать бесплатно». Над заголовком расположена метка «Бесплатный пробный период — без карты», которая сразу снимает барьер для начала работы. Центральный заголовок «Онлайн-чат для связи с вашими клиентами» и подзаголовок о росте числа заявок без дополнительных расходов на маркетинг объясняют суть предложения. Ниже размещены две кнопки — «Электронная почта» и «Попробовать бесплатно» — и три коротких аргумента: без кредитной карты, установка за 5 минут и отмена в любой момент.\n\nПользовательский сценарий: посетитель считывает суть предложения из заголовка, оценивает отсутствие рисков по трём подписям и переходит к бесплатному запуску одной кнопкой либо оставляет электронную почту для связи.\n\nЦенность для бизнеса: продуманный первый экран концентрирует внимание на главном оффере и целевом действии. Для SaaS-продукта такой блок повышает конверсию посетителя в пробную регистрацию, а явные гарантии («без карты», «отмена в любой момент») снижают сомнения на входе.",
+              en: "The LiveChat landing hero shapes the first impression of the product. The header contains the service logo and name, a horizontal menu with Features, Pricing, Integrations and Support, a language switcher, a Log in button and a highlighted Try for free button. A badge above the headline — “Free trial — no card required” — removes the entry barrier immediately. The central headline “Online chat to connect with your customers” and the subheading about increasing leads without extra marketing costs explain the value proposition. Below are two action buttons — Email and Try for free — and three short arguments: no credit card, five-minute setup and cancel anytime.\n\nUser journey: the visitor grasps the offer from the headline, checks the risk-free promises in the three captions and starts a free trial with one button, or leaves an email address for contact.\n\nBusiness value: a focused hero concentrates attention on the core offer and target action. For a SaaS product this block raises the visitor-to-trial conversion rate, while explicit guarantees (“no card”, “cancel anytime”) reduce hesitation at the entry point.",
+              tj: "Экрани аввали лендинги LiveChat таассуроти аввалро дар бораи маҳсулот ташкил медиҳад. Дар қисми боло нишон ва номи хизматрасонӣ, менюи уфуқӣ бо бахшҳои «Функсияҳо», «Тарифҳо», «Интегратсияҳо» ва «Дастгирӣ», интихобкунандаи забон, тугмаи «Ворид шудан» ва тугмаи барҷастаи «Ройгон санҷидан» ҷойгиранд. Болои сарлавҳа нишонаи «Давраи санҷиши ройгон — бе корт» ҷой дорад, ки монеаи оғозро дарҳол бартараф мекунад. Сарлавҳаи марказӣ «Чати онлайн барои алоқа бо мизоҷони шумо» ва зерсарлавҳа дар бораи афзоиши шумораи дархостҳо бе харҷи иловагӣ ба маркетинг моҳияти пешниҳодро мефаҳмонанд. Дар поён ду тугма — «Почтаи электронӣ» ва «Ройгон санҷидан» — ва се далели кӯтоҳ ҷойгиранд: бе корти қарзӣ, насб дар 5 дақиқа ва бекоркунӣ дар ҳар лаҳза.\n\nРаванди истифода: корбар моҳияти пешниҳодро аз сарлавҳа дарк мекунад, набудани хатарро аз рӯйи се навишт арзёбӣ мекунад ва бо як тугма ба оғози ройгон мегузарад ё почтаи электрониро барои алоқа мегузорад.\n\nАҳамият барои тиҷорат: экрани аввали хуб таҳияшуда таваҷҷуҳро ба пешниҳоди асосӣ ва амали мақсаднок ҷамъ меорад. Барои маҳсулоти SaaS чунин блок табдили корбарро ба сабти санҷишӣ баланд мебардорад, кафолатҳои возеҳ («бе корт», «бекоркунӣ дар ҳар лаҳза») бошанд, шакро дар вуруд кам мекунанд.",
+            },
+          },
+          {
+            slug: "solution",
+            title: {
+              ru: "Решение",
+              en: "Solution",
+              tj: "Ҳалли масъала",
+            },
+            imageSrc: "/images/projects/livechat/gallery-2.png",
+            BannerSrc: "/images/projects/livechat/gallery-2.png",
+            shortInfo: {
+              ru: "Наглядная презентация продукта",
+              en: "Visual product presentation",
+              tj: "Муаррифии аёнии маҳсулот",
+            },
+            fullInfo: {
+              ru: "Блок «Решение» раскрывает продукт через крупную визуальную карточку. Слева расположены метка раздела «Решение», заголовок «LiveChat — решение, которое вас выделит!» и описание, объясняющее лёгкую интеграцию виджета в любой сайт. Центральную область занимает наглядный макет: на экране ноутбука показан рабочий кабинет оператора со списком диалогов, активной перепиской и панелью информации о посетителе, а рядом — телефон с виджетом чата на стороне клиента. Карточка снабжена подписью «#1 Чат для сайта, Telegram и WhatsApp», списком преимуществ (быстрая установка, 14 дней бесплатно, простое управление, без привязки к карте), кнопками «Начать бесплатно» и «Посмотреть демо» и адресом livechat.tj.\n\nПользовательский сценарий: посетитель видит, как выглядит продукт с обеих сторон — глазами оператора и глазами клиента, оценивает интерфейс диалогов и переходит к бесплатному старту или демонстрации.\n\nЦенность для бизнеса: демонстрация реального интерфейса снижает неопределённость и укрепляет доверие к продукту. Единый макет «оператор + клиент» показывает полный цикл общения, что помогает посетителю быстрее понять, как инструмент будет работать в его бизнесе.",
+              en: "The Solution block presents the product through a large visual card. On the left are the section label “Solution”, the headline “LiveChat — the solution that sets you apart!” and a description explaining how easily the widget integrates into any website. The centre holds an illustrative mockup: a laptop screen shows the operator workspace with a dialogue list, an active conversation and a visitor information panel, while a phone beside it displays the chat widget on the customer side. The card includes the caption “#1 Chat for websites, Telegram and WhatsApp”, a benefits list (fast setup, 14 days free, simple management, no card required), Start for free and Watch demo buttons, and the livechat.tj address.\n\nUser journey: the visitor sees the product from both sides — the operator’s view and the customer’s view — assesses the dialogue interface and moves to a free start or a demo.\n\nBusiness value: showing the real interface reduces uncertainty and builds trust in the product. A single “operator + customer” mockup illustrates the full communication cycle, helping the visitor understand faster how the tool will work in their own business.",
+              tj: "Блоки «Ҳалли масъала» маҳсулотро тавассути корти калони аёнӣ ошкор мекунад. Дар тарафи чап нишонаи бахши «Ҳалли масъала», сарлавҳаи «LiveChat — ҳалле, ки шуморо мумтоз мекунад!» ва тавсифе, ки интегратсияи осони виҷетро ба ҳар сомона мефаҳмонад, ҷойгиранд. Қисми марказиро макети аёнӣ ишғол мекунад: дар экрани ноутбук кабинети кории оператор бо рӯйхати муколамаҳо, мукотибаи фаъол ва лавҳаи маълумот дар бораи меҳмон нишон дода шудааст, дар паҳлу бошад — телефон бо виҷети чат дар ҷониби мизоҷ. Корт бо навишти «#1 Чат барои сомона, Telegram ва WhatsApp», рӯйхати бартариҳо (насби зуд, 14 рӯз ройгон, идоракунии осон, бе корт), тугмаҳои «Ройгон оғоз кардан» ва «Дидани демо» ва суроғаи livechat.tj муҷаҳҳаз аст.\n\nРаванди истифода: корбар мебинад, ки маҳсулот аз ду ҷониб чӣ гуна ба назар мерасад — аз чашми оператор ва аз чашми мизоҷ, интерфейси муколамаҳоро арзёбӣ мекунад ва ба оғози ройгон ё намоиш мегузарад.\n\nАҳамият барои тиҷорат: намоиши интерфейси воқеӣ номуайяниро кам карда, эътимодро ба маҳсулот мустаҳкам мекунад. Макети ягонаи «оператор + мизоҷ» давраи пурраи муоширатро нишон медиҳад ва ба корбар кумак мекунад, ки зудтар фаҳмад, ки абзор дар тиҷорати ӯ чӣ гуна кор мекунад.",
+            },
+          },
+          {
+            slug: "features",
+            title: {
+              ru: "Функции",
+              en: "Features",
+              tj: "Функсияҳо",
+            },
+            imageSrc: "/images/projects/livechat/gallery-3.png",
+            BannerSrc: "/images/projects/livechat/gallery-3.png",
+            shortInfo: {
+              ru: "Набор ключевых возможностей сервиса",
+              en: "Core capabilities of the service",
+              tj: "Маҷмуи имкониятҳои асосии хизматрасонӣ",
+            },
+            fullInfo: {
+              ru: "Раздел «Функции» представляет возможности сервиса в виде сетки карточек. Над сеткой размещены метка «Функции», заголовок «Всё для эффективной поддержки клиентов» и подзаголовок о наборе инструментов, который растёт вместе с бизнесом. Шесть карточек с иконками описывают отдельные возможности: «Мгновенный ответ» (быстрая реакция удерживает клиентов на сайте), «Умный виджет» (автоматическая подстройка под поведение пользователя), «Аналитика и отчёты» (число чатов, время ответа и эффективность агентов), «Командная работа» (одновременная работа нескольких агентов и передача диалогов), «Шаблоны ответов» (готовые заготовки для частых вопросов) и «Интеграции с CRM» (подключение внешних платформ).\n\nПользовательский сценарий: посетитель бегло просматривает карточки, находит функции, важные именно для его задач — например, аналитику или командную работу — и формирует представление о полноте продукта.\n\nЦенность для бизнеса: структурированный перечень возможностей помогает потенциальному клиенту сопоставить продукт со своими требованиями. Единый формат карточек делает сравнение функций наглядным и облегчает решение о подключении.",
+              en: "The Features section presents the service’s capabilities as a grid of cards. Above the grid are the Features label, the headline “Everything for effective customer support” and a subheading about a toolset that grows with the business. Six icon cards describe individual capabilities: Instant reply (a fast reaction keeps customers on the site), Smart widget (automatic adaptation to user behaviour), Analytics and reports (chat volume, response time and agent performance), Teamwork (several agents working at once and handing over dialogues), Reply templates (ready-made snippets for frequent questions) and CRM integrations (connecting external platforms).\n\nUser journey: the visitor scans the cards, finds the features relevant to their own tasks — for example analytics or teamwork — and forms a view of how complete the product is.\n\nBusiness value: a structured list of capabilities helps a prospective customer match the product to their requirements. A uniform card format makes feature comparison clear and eases the decision to sign up.",
+              tj: "Бахши «Функсияҳо» имкониятҳои хизматрасониро дар шакли шабакаи кортҳо пешниҳод мекунад. Болои шабака нишонаи «Функсияҳо», сарлавҳаи «Ҳама чиз барои дастгирии самараноки мизоҷон» ва зерсарлавҳа дар бораи маҷмуи абзорҳое, ки ҳамроҳи тиҷорат меафзояд, ҷойгиранд. Шаш корт бо нишонаҳо имкониятҳои алоҳидаро тавсиф мекунанд: «Ҷавоби фаврӣ» (аксуламали зуд мизоҷонро дар сомона нигоҳ медорад), «Виҷети зирак» (мутобиқшавии худкор ба рафтори корбар), «Таҳлил ва ҳисоботҳо» (шумораи чатҳо, вақти ҷавоб ва самаранокии агентҳо), «Кори дастаҷамъӣ» (кори ҳамзамони якчанд агент ва интиқоли муколамаҳо), «Шаблонҳои ҷавоб» (заготовкаҳои тайёр барои саволҳои зуд-зуд) ва «Интегратсия бо CRM» (пайвасткунии платформаҳои беруна).\n\nРаванди истифода: корбар кортҳоро бо назари сатҳӣ аз назар мегузаронад, функсияҳои барои вазифаҳои ӯ муҳимро — масалан таҳлил ё кори дастаҷамъӣ — меёбад ва тасаввурот дар бораи пуррагии маҳсулот ташкил медиҳад.\n\nАҳамият барои тиҷорат: рӯйхати сохтории имкониятҳо ба мизоҷи эҳтимолӣ кумак мекунад, ки маҳсулотро бо талаботи худ мувофиқ созад. Формати ягонаи кортҳо муқоисаи функсияҳоро аён мекунад ва қарори пайвастшавиро осон менамояд.",
+            },
+          },
+          {
+            slug: "how-it-works",
+            title: {
+              ru: "Как это работает",
+              en: "How It Works",
+              tj: "Чӣ тавр кор мекунад",
+            },
+            imageSrc: "/images/projects/livechat/gallery-4.png",
+            BannerSrc: "/images/projects/livechat/gallery-4.png",
+            shortInfo: {
+              ru: "Четыре шага до первого диалога",
+              en: "Four steps to the first dialogue",
+              tj: "Чор қадам то муколамаи аввал",
+            },
+            fullInfo: {
+              ru: "Блок «Как это работает» объясняет запуск сервиса через последовательность из четырёх шагов. Над схемой размещены метка «Как это работает», заголовок «Как работает онлайн-чат для сайта?» и пояснение «Четыре простых шага до первого диалога». Каждый шаг оформлен отдельной карточкой с иконкой, номером и кратким текстом: ШАГ 1 — на сайте устанавливается код чата; ШАГ 2 — после установки появляется всплывающее окно; ШАГ 3 — менеджеры отвечают на вопросы клиентов; ШАГ 4 — посетитель совершает покупку или оформляет заказ. Крупные полупрозрачные цифры фона подчёркивают порядок действий.\n\nПользовательский сценарий: посетитель последовательно читает шаги и получает целостное представление о процессе — от установки кода до оформления заказа, снимая опасение о сложности внедрения.\n\nЦенность для бизнеса: пошаговое объяснение превращает абстрактный продукт в понятный процесс. Демонстрация того, что подключение сводится к простому коду и приводит к продаже, снижает воспринимаемую сложность и подталкивает к пробному запуску.",
+              en: "The How It Works block explains getting started through a sequence of four steps. Above the diagram are the How it works label, the headline “How does online chat for a website work?” and the note “Four simple steps to the first dialogue”. Each step is a separate card with an icon, a number and short text: Step 1 — the chat code is installed on the site; Step 2 — a pop-up window appears after installation; Step 3 — managers answer customer questions; Step 4 — the visitor makes a purchase or places an order. Large semi-transparent background numbers emphasise the order of actions.\n\nUser journey: the visitor reads the steps in order and gains a complete picture of the process — from installing the code to placing an order — dispelling concern about implementation complexity.\n\nBusiness value: a step-by-step explanation turns an abstract product into a clear process. Showing that setup comes down to a simple snippet and leads to a sale lowers the perceived complexity and encourages a trial.",
+              tj: "Блоки «Чӣ тавр кор мекунад» оғози хизматрасониро тавассути пайдарпайии чор қадам мефаҳмонад. Болои нақша нишонаи «Чӣ тавр кор мекунад», сарлавҳаи «Чати онлайн барои сомона чӣ тавр кор мекунад?» ва тавзеҳи «Чор қадами содда то муколамаи аввал» ҷойгиранд. Ҳар қадам ҳамчун корти алоҳида бо нишона, рақам ва матни кӯтоҳ таҳия шудааст: Қадами 1 — коди чат дар сомона насб мешавад; Қадами 2 — пас аз насб равзанаи пайдошаванда зоҳир мегардад; Қадами 3 — менеҷерон ба саволҳои мизоҷон ҷавоб медиҳанд; Қадами 4 — меҳмон харид мекунад ё фармоиш медиҳад. Рақамҳои калони нимшаффофи замина тартиби амалҳоро таъкид мекунанд.\n\nРаванди истифода: корбар қадамҳоро пайдарпай мехонад ва тасаввури мукаммал дар бораи ҷараён — аз насби код то расмигардонии фармоиш — пайдо мекунад, ки нигаронӣ дар бораи мураккабии татбиқро бартараф месозад.\n\nАҳамият барои тиҷорат: тавзеҳи қадам ба қадам маҳсулоти абстрактиро ба ҷараёни фаҳмо табдил медиҳад. Нишон додани он, ки пайвастшавӣ ба як коди содда табдил меёбад ва ба фурӯш меорад, мураккабии эҳсосшавандаро кам мекунад ва ба оғози санҷишӣ ҳавасманд менамояд.",
+            },
+          },
+          {
+            slug: "customization",
+            title: {
+              ru: "Кастомизация",
+              en: "Customization",
+              tj: "Танзими фардӣ",
+            },
+            imageSrc: "/images/projects/livechat/gallery-5.png",
+            BannerSrc: "/images/projects/livechat/gallery-5.png",
+            shortInfo: {
+              ru: "Настройка виджета под фирменный стиль",
+              en: "Widget tailored to brand style",
+              tj: "Танзими виҷет мутобиқи услуби бренд",
+            },
+            fullInfo: {
+              ru: "Блок «Кастомизация» показывает возможности оформления виджета под бренд. Слева размещены метка «Кастомизация», заголовок «Адаптируйте дизайн онлайн-чата под фирменный стиль вашего сайта» и описание о гибкой настройке без знания кода. Ниже — список из четырёх пунктов с отметками: выбор цветовой схемы и шрифтов, настройка позиции виджета на странице, загрузка логотипа и аватара оператора, персонализированные приветственные сообщения. Справа расположен макет чат-интерфейса, демонстрирующий, как выглядит настроенный виджет в работе.\n\nПользовательский сценарий: посетитель изучает перечень настроек, убеждается, что виджет можно адаптировать под собственный сайт без разработчиков, и соотносит эти возможности с требованиями своего бренда.\n\nЦенность для бизнеса: гибкое оформление снимает опасение, что сторонний виджет будет выбиваться из дизайна сайта. Возможность настройки без кода расширяет круг пользователей, которым продукт подходит без привлечения технических специалистов.",
+              en: "The Customization block shows how the widget can be styled to match a brand. On the left are the Customization label, the headline “Adapt the online chat design to your website’s brand style” and a description of flexible, code-free configuration. Below is a four-item checklist: choosing a colour scheme and fonts, setting the widget position on the page, uploading a logo and operator avatar, and personalised welcome messages. On the right, a chat-interface mockup demonstrates how the configured widget looks in action.\n\nUser journey: the visitor reviews the settings list, confirms that the widget can be adapted to their own site without developers and matches these options against their brand requirements.\n\nBusiness value: flexible styling removes the concern that a third-party widget will clash with the site design. Code-free configuration widens the pool of users for whom the product fits without involving technical specialists.",
+              tj: "Блоки «Танзими фардӣ» имкониятҳои ороиши виҷетро мутобиқи бренд нишон медиҳад. Дар тарафи чап нишонаи «Танзими фардӣ», сарлавҳаи «Тарҳи чати онлайнро мутобиқи услуби брендии сомонаи худ созед» ва тавсиф дар бораи танзими фасеҳ бе донистани код ҷойгиранд. Дар поён рӯйхати чор банд бо аломатҳо: интихоби нақшаи рангҳо ва шрифтҳо, танзими мавқеи виҷет дар саҳифа, боркунии нишона ва аватари оператор, паёмҳои хушомадгӯии фардикунонидашуда. Дар тарафи рост макети интерфейси чат ҷойгир аст, ки нишон медиҳад виҷети танзимшуда дар кор чӣ гуна ба назар мерасад.\n\nРаванди истифода: корбар рӯйхати танзимҳоро меомӯзад, боварӣ ҳосил мекунад, ки виҷетро бе барномасозон мутобиқи сомонаи худ созед ва ин имкониятҳоро бо талаботи бренди худ муқоиса мекунад.\n\nАҳамият барои тиҷорат: ороиши фасеҳ нигарониро дар бораи он, ки виҷети бегона аз тарҳи сомона фарқ мекунад, бартараф месозад. Имкони танзим бе код доираи корбаронеро, ки маҳсулот бе ҷалби мутахассисони техникӣ мувофиқ аст, васеъ мекунад.",
+            },
+          },
+          {
+            slug: "pricing",
+            title: {
+              ru: "Тарифы",
+              en: "Pricing",
+              tj: "Тарифҳо",
+            },
+            imageSrc: "/images/projects/livechat/gallery-6.png",
+            BannerSrc: "/images/projects/livechat/gallery-6.png",
+            shortInfo: {
+              ru: "Три тарифных плана с сравнением",
+              en: "Three pricing plans compared",
+              tj: "Се нақшаи тарифӣ бо муқоиса",
+            },
+            fullInfo: {
+              ru: "Раздел «Тарифы» представляет три плана подписки в виде параллельных карточек. Над ними размещены метка «Тарифы», заголовок «Выберите подходящий план» и подзаголовок «Начните бесплатно, масштабируйтесь по мере роста бизнеса». План «Старт» рассчитан на малый бизнес и стартапы (1 агент, 100 чатов в месяц, базовый виджет, email-поддержка, история чатов 30 дней). Центральный план «Профи» помечен значком «Популярный» и выделен тёмным фоном (до 5 агентов, безлимит чатов, аналитика и отчёты, все интеграции, шаблоны ответов, приоритетная поддержка). План «Бизнес» ориентирован на крупные компании (безлимит агентов, всё из тарифа «Профи», API-доступ, SLA-гарантия, персональный менеджер, выделенный сервер). Каждая карточка снабжена кнопкой действия.\n\nПользовательский сценарий: посетитель сравнивает планы по составу возможностей, ориентируется на выделенный рекомендованный тариф и выбирает вариант, соответствующий размеру команды и объёму задач.\n\nЦенность для бизнеса: наглядное сравнение тарифов помогает клиенту самостоятельно выбрать подходящий уровень и видеть путь роста. Выделение среднего плана как рекомендованного направляет выбор и повышает вероятность подписки на оптимальный вариант.",
+              en: "The Pricing section presents three subscription plans as parallel cards. Above them are the Pricing label, the headline “Choose the right plan” and the subheading “Start free and scale as your business grows”. The Start plan targets small businesses and startups (1 agent, 100 chats per month, a basic widget, email support, 30-day chat history). The central Pro plan carries a Popular badge and stands out with a dark background (up to 5 agents, unlimited chats, analytics and reports, all integrations, reply templates, priority support). The Business plan is aimed at large companies (unlimited agents, everything from Pro, API access, an SLA guarantee, a personal manager, a dedicated server). Each card includes an action button.\n\nUser journey: the visitor compares the plans by their feature sets, is guided by the highlighted recommended tier and selects the option that matches their team size and task volume.\n\nBusiness value: a clear plan comparison lets the customer choose the right level themselves and see a growth path. Highlighting the middle plan as recommended steers the choice and increases the likelihood of subscribing to the optimal option.",
+              tj: "Бахши «Тарифҳо» се нақшаи обунаро дар шакли кортҳои параллелӣ пешниҳод мекунад. Болои онҳо нишонаи «Тарифҳо», сарлавҳаи «Нақшаи мувофиқро интихоб кунед» ва зерсарлавҳаи «Ройгон оғоз кунед, ҳамроҳи рушди тиҷорат миқёсро васеъ намоед» ҷойгиранд. Нақшаи «Оғоз» барои тиҷорати хурд ва стартапҳо пешбинӣ шудааст (1 агент, 100 чат дар як моҳ, виҷети асосӣ, дастгирии email, таърихи чатҳо 30 рӯз). Нақшаи марказии «Профи» бо нишонаи «Маъмул» қайд шуда, бо заминаи торик барҷаста аст (то 5 агент, чатҳои бемаҳдуд, таҳлил ва ҳисоботҳо, ҳамаи интегратсияҳо, шаблонҳои ҷавоб, дастгирии афзалиятнок). Нақшаи «Бизнес» ба ширкатҳои калон нигаронида шудааст (агентҳои бемаҳдуд, ҳама чиз аз «Профи», дастрасии API, кафолати SLA, менеҷери шахсӣ, сервери ҷудошуда). Ҳар корт бо тугмаи амал муҷаҳҳаз аст.\n\nРаванди истифода: корбар нақшаҳоро аз рӯйи ҳайати имкониятҳо муқоиса мекунад, ба тарифи тавсияшудаи барҷаста нигаронида мешавад ва вариантеро, ки ба андозаи даста ва ҳаҷми вазифаҳо мувофиқ аст, интихоб мекунад.\n\nАҳамият барои тиҷорат: муқоисаи аёнии тарифҳо ба мизоҷ кумак мекунад, ки сатҳи мувофиқро мустақилона интихоб кунад ва роҳи рушдро бинад. Барҷаста кардани нақшаи миёна ҳамчун тавсияшуда интихобро равона карда, эҳтимоли обунаро ба варианти беҳтарин баланд мебардорад.",
+            },
+          },
+          {
+            slug: "integrations",
+            title: {
+              ru: "Интеграции",
+              en: "Integrations",
+              tj: "Интегратсияҳо",
+            },
+            imageSrc: "/images/projects/livechat/gallery-7.png",
+            BannerSrc: "/images/projects/livechat/gallery-7.png",
+            shortInfo: {
+              ru: "Подключение к внешним платформам",
+              en: "Connecting to external platforms",
+              tj: "Пайвастшавӣ ба платформаҳои беруна",
+            },
+            fullInfo: {
+              ru: "Раздел «Интеграции» показывает, с какими системами связывается сервис. Над сеткой размещены метка «Интеграции», заголовок «Подключайтесь к любым платформам» и подзаголовок о встраивании в существующий стек инструментов. Четыре карточки с иконками и бейджами описывают направления интеграции: «Мессенджеры» (10+ каналов, приём обращений в едином интерфейсе оператора), «CRM-системы» (15+ платформ, автоматическая передача данных о клиентах и сделках), «Конструкторы сайтов» (любая CMS, установка виджета без программистов) и «Собственный API» (REST & Webhooks, встраивание в любой продукт или рабочий процесс).\n\nПользовательский сценарий: посетитель проверяет, поддерживает ли сервис нужные ему каналы и системы — мессенджеры, CRM или собственную платформу — и оценивает совместимость с текущей инфраструктурой.\n\nЦенность для бизнеса: явное перечисление интеграций отвечает на частый вопрос о совместимости до начала работы. Возможность подключить мессенджеры, CRM и собственный API через один инструмент снижает риск, что продукт не впишется в имеющиеся процессы.",
+              en: "The Integrations section shows which systems the service connects to. Above the grid are the Integrations label, the headline “Connect to any platform” and a subheading about fitting into an existing toolset. Four cards with icons and badges describe the integration directions: Messengers (10+ channels, receiving enquiries in a single operator interface), CRM systems (15+ platforms, automatic transfer of customer and deal data), Website builders (any CMS, installing the widget without programmers) and Own API (REST & Webhooks, embedding into any product or workflow).\n\nUser journey: the visitor checks whether the service supports the channels and systems they need — messengers, CRM or their own platform — and assesses compatibility with their current infrastructure.\n\nBusiness value: an explicit list of integrations answers the common compatibility question before work begins. Being able to connect messengers, CRM and a custom API through one tool reduces the risk that the product will not fit existing processes.",
+              tj: "Бахши «Интегратсияҳо» нишон медиҳад, ки хизматрасонӣ бо кадом системаҳо пайваст мешавад. Болои шабака нишонаи «Интегратсияҳо», сарлавҳаи «Ба ҳар платформа пайваст шавед» ва зерсарлавҳа дар бораи ворид шудан ба маҷмуи мавҷудаи абзорҳо ҷойгиранд. Чор корт бо нишонаҳо ва бейҷҳо самтҳои интегратсияро тавсиф мекунанд: «Мессенҷерҳо» (10+ канал, қабули муроҷиатҳо дар интерфейси ягонаи оператор), «Системаҳои CRM» (15+ платформа, интиқоли худкори маълумот дар бораи мизоҷон ва аҳдҳо), «Конструкторҳои сомона» (ҳар CMS, насби виҷет бе барномасозон) ва «API-и худӣ» (REST & Webhooks, ворид шудан ба ҳар маҳсулот ё ҷараёни корӣ).\n\nРаванди истифода: корбар месанҷад, ки оё хизматрасонӣ каналҳо ва системаҳои ба ӯ лозимиро — мессенҷерҳо, CRM ё платформаи худиро — дастгирӣ мекунад ва мутобиқатро бо инфрасохтори ҷории худ арзёбӣ менамояд.\n\nАҳамият барои тиҷорат: рӯйхати возеҳи интегратсияҳо ба саволи маъмул дар бораи мутобиқат пеш аз оғози кор ҷавоб медиҳад. Имкони пайваст кардани мессенҷерҳо, CRM ва API-и худӣ тавассути як абзор хатари он, ки маҳсулот ба ҷараёнҳои мавҷуда мувофиқ намеояд, кам мекунад.",
+            },
+          },
+          {
+            slug: "benefits",
+            title: {
+              ru: "Преимущества",
+              en: "Benefits",
+              tj: "Бартариҳо",
+            },
+            imageSrc: "/images/projects/livechat/gallery-8.png",
+            BannerSrc: "/images/projects/livechat/gallery-8.png",
+            shortInfo: {
+              ru: "Ключевые выгоды для бизнеса",
+              en: "Key benefits for business",
+              tj: "Фоидаҳои асосӣ барои тиҷорат",
+            },
+            fullInfo: {
+              ru: "Блок «Преимущества» отвечает на вопрос, зачем бизнесу онлайн-чат. Над карточками размещены метка «Преимущества» и заголовок «Для чего нужен онлайн-чат». Три карточки с иконками раскрывают основные выгоды: «Рост продаж» (вовлечение посетителей в разговор до того, как они покинут сайт, и конвертация интереса в заявки), «Сокращение расходов» (один менеджер ведёт несколько диалогов одновременно, снижая затраты на поддержку) и «Больше клиентов» (оперативное решение вопросов до того, как посетитель уйдёт к конкурентам). Ниже начинается блок поддержки с заголовком «Мы всегда рядом».\n\nПользовательский сценарий: посетитель сопоставляет описанные выгоды со своими бизнес-целями — увеличением продаж, экономией на поддержке или удержанием клиентов — и укрепляется в решении попробовать продукт.\n\nЦенность для бизнеса: формулировка выгод на языке результата (продажи, расходы, клиенты) переводит технические функции в понятную коммерческую пользу. Это помогает лицам, принимающим решение, обосновать внедрение инструмента.",
+              en: "The Benefits block answers why a business needs online chat. Above the cards are the Benefits label and the headline “Why you need online chat”. Three icon cards spell out the main benefits: Sales growth (engaging visitors in conversation before they leave the site and converting interest into leads), Cost reduction (one manager handling several dialogues at once, lowering support costs) and More customers (resolving questions promptly before a visitor moves to a competitor). Below, the support block begins with the headline “We’re always here”.\n\nUser journey: the visitor matches the stated benefits against their own business goals — growing sales, saving on support or retaining customers — and grows more confident in trying the product.\n\nBusiness value: framing benefits in terms of outcomes (sales, costs, customers) translates technical features into clear commercial value. This helps decision-makers justify adopting the tool.",
+              tj: "Блоки «Бартариҳо» ба саволи он, ки чаро ба тиҷорат чати онлайн лозим аст, ҷавоб медиҳад. Болои кортҳо нишонаи «Бартариҳо» ва сарлавҳаи «Чати онлайн барои чӣ лозим аст» ҷойгиранд. Се корт бо нишонаҳо фоидаҳои асосиро ошкор мекунанд: «Рушди фурӯш» (ҷалби меҳмонон ба сӯҳбат пеш аз он ки сомонаро тарк кунанд ва табдили таваҷҷуҳ ба дархостҳо), «Кам кардани харҷ» (як менеҷер якчанд муколамаро ҳамзамон мебарад ва хароҷоти дастгириро паст мекунад) ва «Мизоҷони бештар» (ҳалли фаврии саволҳо пеш аз он ки меҳмон ба рақибон равад). Дар поён блоки дастгирӣ бо сарлавҳаи «Мо ҳамеша дар назди шумо» оғоз мешавад.\n\nРаванди истифода: корбар фоидаҳои тавсифшударо бо ҳадафҳои тиҷоратии худ — афзоиши фурӯш, сарфа дар дастгирӣ ё нигоҳ доштани мизоҷон — муқоиса мекунад ва дар қарори санҷидани маҳсулот устувортар мешавад.\n\nАҳамият барои тиҷорат: баёни фоидаҳо бо забони натиҷа (фурӯш, харҷ, мизоҷон) функсияҳои техникиро ба манфиати возеҳи тиҷоратӣ табдил медиҳад. Ин ба шахсони қароргиранда кумак мекунад, ки татбиқи абзорро асоснок созанд.",
+            },
+          },
+          {
+            slug: "support-faq",
+            title: {
+              ru: "Поддержка и FAQ",
+              en: "Support and FAQ",
+              tj: "Дастгирӣ ва FAQ",
+            },
+            imageSrc: "/images/projects/livechat/gallery-9.png",
+            BannerSrc: "/images/projects/livechat/gallery-9.png",
+            shortInfo: {
+              ru: "Каналы связи и частые вопросы",
+              en: "Contact channels and frequent questions",
+              tj: "Каналҳои алоқа ва саволҳои маъмул",
+            },
+            fullInfo: {
+              ru: "Раздел «Поддержка» объединяет каналы связи и ответы на частые вопросы. Над блоком размещены метка «Поддержка», заголовок «Мы всегда рядом» и подзаголовок о выборе удобного способа связи. Три карточки описывают доступные каналы: «Email поддержка» с адресом support@livechat.ru, «Онлайн-чат 24/7» с ссылкой «Открыть чат» и «Документация» с адресом docs.livechat.ru. Ниже расположен блок «Часто задаваемые вопросы» в две колонки: нужны ли технические знания для установки, можно ли попробовать бесплатно, как отменить подписку и какие мессенджеры поддерживаются — с краткими ответами по каждому пункту.\n\nПользовательский сценарий: посетитель выбирает удобный способ связи или находит ответ на свой вопрос в блоке FAQ, не покидая страницу и не обращаясь в поддержку.\n\nЦенность для бизнеса: сочетание каналов поддержки и FAQ снимает типовые возражения перед покупкой и уменьшает нагрузку на команду. Явные ответы на вопросы об установке, оплате и отмене подписки повышают доверие и ускоряют принятие решения.",
+              en: "The Support section combines contact channels with answers to frequent questions. Above the block are the Support label, the headline “We’re always here” and a subheading about choosing a convenient way to get in touch. Three cards describe the available channels: Email support with the address support@livechat.ru, 24/7 live chat with an “Open chat” link, and Documentation with the docs.livechat.ru address. Below is a two-column “Frequently asked questions” block: whether technical knowledge is needed for setup, whether it can be tried for free, how to cancel a subscription and which messengers are supported — each with a short answer.\n\nUser journey: the visitor chooses a convenient contact channel or finds the answer to their question in the FAQ block without leaving the page or contacting support.\n\nBusiness value: combining support channels with an FAQ removes common pre-purchase objections and reduces the load on the team. Clear answers about setup, payment and cancellation build trust and speed up the decision.",
+              tj: "Бахши «Дастгирӣ» каналҳои алоқа ва ҷавобҳо ба саволҳои маъмулро муттаҳид мекунад. Болои блок нишонаи «Дастгирӣ», сарлавҳаи «Мо ҳамеша дар назди шумо» ва зерсарлавҳа дар бораи интихоби роҳи қулаи алоқа ҷойгиранд. Се корт каналҳои дастрасро тавсиф мекунанд: «Дастгирии email» бо суроғаи support@livechat.ru, «Чати онлайн 24/7» бо пайванди «Кушодани чат» ва «Ҳуҷҷатнигорӣ» бо суроғаи docs.livechat.ru. Дар поён блоки «Саволҳои зуд-зуд додашаванда» дар ду сутун ҷойгир аст: оё барои насб донишҳои техникӣ лозим аст, оё онро ройгон санҷидан мумкин аст, чӣ тавр обунаро бекор кардан ва кадом мессенҷерҳо дастгирӣ мешаванд — бо ҷавобҳои кӯтоҳ ба ҳар банд.\n\nРаванди истифода: корбар роҳи қулаи алоқаро интихоб мекунад ё ҷавоби саволи худро дар блоки FAQ меёбад, бе он ки саҳифаро тарк кунад ё ба дастгирӣ муроҷиат намояд.\n\nАҳамият барои тиҷорат: якҷоякунии каналҳои дастгирӣ ва FAQ эродҳои маъмулро пеш аз харид бартараф месозад ва сарбории дастаро кам мекунад. Ҷавобҳои возеҳ дар бораи насб, пардохт ва бекоркунии обуна эътимодро баланд мебардоранд ва қабули қарорро суръат мебахшанд.",
+            },
+          },
+          {
+            slug: "why-footer",
+            title: {
+              ru: "Почему LiveChat и подвал",
+              en: "Why LiveChat and Footer",
+              tj: "Чаро LiveChat ва поёни сомона",
+            },
+            imageSrc: "/images/projects/livechat/gallery-10.png",
+            BannerSrc: "/images/projects/livechat/gallery-10.png",
+            shortInfo: {
+              ru: "Итоговый призыв и карта сайта",
+              en: "Closing call and site map",
+              tj: "Даъвати ниҳоӣ ва харитаи сомона",
+            },
+            fullInfo: {
+              ru: "Завершающий блок объединяет итоговый призыв к действию и подвал сайта. В верхней части на тёмном фоне размещены метка «Почему LiveChat», заголовок «Почему стоит купить онлайн-чат от LiveChat?» и подзаголовок о том, что всё необходимое собрано в одном продукте. Ниже расположен ряд тегов-возможностей: мультиязычность, загрузка виджета, отправка файлов, шаблоны быстрых ответов и отправка картинки в чате, а также кнопка «Начать бесплатно». Подвал формирует карту сайта: логотип с кратким описанием и три колонки ссылок — «Продукт» (функции, тарифы, интеграции, безопасность), «Компания» (о нас, блог, документация, контакты) и «Начать» (регистрация, вход, демо, партнёрство). Внизу — строка авторских прав и ссылки на конфиденциальность и условия.\n\nПользовательский сценарий: посетитель, дочитавший страницу до конца, получает последний аргумент и целевую кнопку либо переходит к нужному разделу через сгруппированные ссылки подвала.\n\nЦенность для бизнеса: финальный блок закрепляет ключевые преимущества и предлагает понятное действие тем, кто дошёл до конца страницы. Подвал обеспечивает навигацию по всем разделам и служебным страницам, помогая посетителю продолжить путь после основного контента.",
+              en: "The closing block combines a final call to action with the site footer. At the top, on a dark background, are the Why LiveChat label, the headline “Why buy online chat from LiveChat?” and a subheading stating that everything needed is gathered in one product. Below is a row of capability tags — multilingual support, widget upload, file sending, quick-reply templates and sending images in chat — together with a Start for free button. The footer forms a site map: a logo with a short description and three link columns — Product (features, pricing, integrations, security), Company (about us, blog, documentation, contacts) and Get started (registration, log in, demo, partnership). At the bottom are a copyright line and links to privacy and terms.\n\nUser journey: a visitor who has read the page to the end receives a final argument and a target button, or moves to a relevant section through the grouped footer links.\n\nBusiness value: the final block reinforces the key advantages and offers a clear action to those who reach the end of the page. The footer provides navigation across all sections and utility pages, helping the visitor continue after the main content.",
+              tj: "Блоки хотимавӣ даъвати ниҳоӣ ба амал ва поёни сомонаро муттаҳид мекунад. Дар қисми боло дар заминаи торик нишонаи «Чаро LiveChat», сарлавҳаи «Чаро арзиши харидани чати онлайн аз LiveChat?» ва зерсарлавҳа дар бораи он, ки ҳама чизи зарурӣ дар як маҳсулот ҷамъ шудааст, ҷойгиранд. Дар поён қатори тегҳои имконият: бисёрзабонӣ, боркунии виҷет, ирсоли файлҳо, шаблонҳои ҷавоби зуд ва ирсоли расм дар чат, инчунин тугмаи «Ройгон оғоз кардан» ҷой доранд. Поёни сомона харитаи сомонаро ташкил медиҳад: нишона бо тавсифи кӯтоҳ ва се сутуни пайвандҳо — «Маҳсулот» (функсияҳо, тарифҳо, интегратсияҳо, амният), «Ширкат» (дар бораи мо, блог, ҳуҷҷатнигорӣ, тамосҳо) ва «Оғоз» (сабтином, ворид, демо, шарикӣ). Дар поён сатри ҳуқуқи муаллиф ва пайвандҳо ба махфият ва шартҳо ҷойгиранд.\n\nРаванди истифода: меҳмоне, ки саҳифаро то охир хондааст, далели охирин ва тугмаи мақсаднокро мегирад ё тавассути пайвандҳои гурӯҳбандишудаи поён ба бахши зарурӣ мегузарад.\n\nАҳамият барои тиҷорат: блоки ниҳоӣ бартариҳои асосиро мустаҳкам мекунад ва ба онҳое, ки то охири саҳифа расидаанд, амали возеҳ пешниҳод менамояд. Поёни сомона роҳнамоиро дар ҳамаи бахшҳо ва саҳифаҳои хидматӣ таъмин мекунад ва ба меҳмон кумак менамояд, ки пас аз мундариҷаи асосӣ роҳро идома диҳад.",
+            },
+          },
+        ],
+      },
     ],
   },
   {
@@ -2750,6 +3070,113 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "/images/projects/ttl/gallery-3.png",
       "/images/projects/ttl/gallery-4.png",
       "/images/projects/ttl/gallery-5.png",
+    ],
+    projectComponents: [
+      {
+        tabName: { ru: "Веб-сайт", en: "Website", tj: "Веб-сайт" },
+        items: [
+          {
+            slug: "home",
+            title: {
+              ru: "Главная страница",
+              en: "Homepage",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/ttl/gallery-1.png",
+            BannerSrc: "/images/projects/ttl/gallery-1.png",
+            shortInfo: {
+              ru: "Слайдер и витрина услуг оператора",
+              en: "Slider and provider service showcase",
+              tj: "Слайдер ва намоишгоҳи хизматрасониҳои оператор",
+            },
+            fullInfo: {
+              ru: "Главная страница сайта провайдера ТТЛ представляет ключевые услуги оператора. В шапке размещены логотип, номер службы поддержки 4884, основное меню («Услуги», «Интернет для дома», «Телевидение ТТЛ-ТВ», «Телефония (NGN/SIP)», «Для бизнеса»), а также верхние ссылки на новости, акции и контакты, иконки соцсетей, переключатель языка, кнопка смены темы и «Личный кабинет». Верхнюю область занимает слайдер с рекламой «ТТЛ-ТВ» — «Смотри 172 канала + более 2000 фильмов» — изображением телевизора и точками навигации. Ниже расположен блок «Услуги» из трёх карточек: интерактивное телевидение «ТТЛ-ТВ» с ценой и составом пакета каналов, «Домашний» (телефония NGN/SIP) с тарификацией вызовов и «Навин 30» (безлимитный интернет) с меткой «Новый» и таблицей скоростей.\n\nПользовательский сценарий: посетитель знакомится с акцией в слайдере, сравнивает три основные услуги по цене и характеристикам и переходит к нужному тарифу или разделу через меню.\n\nЦенность для бизнеса: главная страница телеком-оператора совмещает продвижение акций и наглядную витрину тарифов. Единый формат карточек с ценой и параметрами помогает абоненту быстро сопоставить услуги и упрощает выбор пакета.",
+              en: "The homepage of the TTL provider’s site presents the operator’s key services. The header contains the logo, the support number 4884, the main menu (Services, Home Internet, TTL-TV Television, Telephony (NGN/SIP), For Business), and top links to news, promotions and contacts, along with social icons, a language switcher, a theme toggle and a Personal Account button. The upper area holds a slider advertising “TTL-TV” — “Watch 172 channels + over 2000 films” — with a TV image and navigation dots. Below is a Services block of three cards: interactive television “TTL-TV” with its price and channel-package composition, “Home” (NGN/SIP telephony) with call rates, and “Navin 30” (unlimited internet) with a “New” tag and a speed table.\n\nUser journey: the visitor sees the promotion in the slider, compares the three main services by price and characteristics, and moves to the relevant plan or section through the menu.\n\nBusiness value: a telecom operator’s homepage combines promotion of offers with a clear showcase of plans. A uniform card format with price and parameters helps the subscriber quickly compare services and simplifies choosing a package.",
+              tj: "Саҳифаи асосии сомонаи провайдери ТТЛ хизматрасониҳои асосии операторро пешниҳод мекунад. Дар қисми боло нишон, рақами хадамоти дастгирӣ 4884, менюи асосӣ («Хизматрасониҳо», «Интернет барои хона», «Телевизиони ТТЛ-ТВ», «Телефония (NGN/SIP)», «Барои тиҷорат»), инчунин пайвандҳои болоӣ ба хабарҳо, аксияҳо ва тамосҳо, нишонаҳои шабакаҳои иҷтимоӣ, интихобкунандаи забон, тугмаи иваз кардани мавзуъ ва «Кабинети шахсӣ» ҷойгиранд. Қисми болоро слайдер бо таблиғи «ТТЛ-ТВ» — «172 канал + беш аз 2000 филмро тамошо кун» — тасвири телевизор ва нуқтаҳои роҳнамоӣ ишғол мекунад. Дар поён блоки «Хизматрасониҳо» аз се корт ҷойгир аст: телевизиони интерактивии «ТТЛ-ТВ» бо нарх ва ҳайати бастаи каналҳо, «Хонагӣ» (телефонияи NGN/SIP) бо нархгузории зангҳо ва «Навин 30» (интернети бемаҳдуд) бо нишонаи «Нав» ва ҷадвали суръатҳо.\n\nРаванди истифода: корбар бо аксия дар слайдер шинос мешавад, се хизмати асосиро аз рӯйи нарх ва хусусиятҳо муқоиса мекунад ва тавассути меню ба тарифи зарурӣ ё бахш мегузарад.\n\nАҳамият барои тиҷорат: саҳифаи асосии оператори телеком таблиғи аксияҳо ва намоишгоҳи аёнии тарифҳоро муттаҳид мекунад. Формати ягонаи кортҳо бо нарх ва параметрҳо ба муштарӣ кумак мекунад, ки хизматрасониҳоро зуд муқоиса кунад ва интихоби бастаро осон менамояд.",
+            },
+          },
+          {
+            slug: "tv",
+            title: {
+              ru: "Телевидение ТТЛ-ТВ",
+              en: "TTL-TV Television",
+              tj: "Телевизиони ТТЛ-ТВ",
+            },
+            imageSrc: "/images/projects/ttl/gallery-3.png",
+            BannerSrc: "/images/projects/ttl/gallery-3.png",
+            shortInfo: {
+              ru: "Тариф на ТВ с составом каналов",
+              en: "TV plan with channel breakdown",
+              tj: "Тарифи ТВ бо ҳайати каналҳо",
+            },
+            fullInfo: {
+              ru: "Страница «Телевидение ТТЛ-ТВ» подробно раскрывает услугу интерактивного телевидения. В верхней части, под хлебными крошками, размещён баннер с названием «ТТЛ-ТВ», подписью «Смотри 172 канала + более 2000 фильмов» и изображением телевизора. Ниже расположен блок «Тариф»: слева карточка с названием, ценой 25 смн/месяц и кнопкой «Подключить», справа — детализированная таблица состава пакета по жанрам: национальные, музыкальные, детские, познавательные, спортивные, новостные, развлекательные, кино и собственные телеканалы с указанием количества по каждой категории.\n\nПользовательский сценарий: посетитель оценивает наполнение пакета по жанрам, сопоставляет количество каналов с ценой и оформляет подключение кнопкой «Подключить».\n\nЦенность для бизнеса: детальная разбивка тарифа по категориям каналов делает предложение прозрачным и помогает абоненту принять решение на основе фактического состава пакета. Такой формат подходит для любых подписочных услуг с составным наполнением.",
+              en: "The TTL-TV Television page details the interactive television service. At the top, below the breadcrumbs, is a banner with the name “TTL-TV”, the caption “Watch 172 channels + over 2000 films” and a TV image. Below is a Plan block: on the left a card with the name, the price of 25 SMN/month and a Connect button; on the right a detailed table of the package composition by genre — national, music, children’s, educational, sports, news, entertainment, film and in-house channels, with the count for each category.\n\nUser journey: the visitor assesses the package contents by genre, compares the channel count against the price and signs up via the Connect button.\n\nBusiness value: a detailed breakdown of the plan by channel category makes the offer transparent and helps the subscriber decide based on the actual package composition. This format suits any subscription service with a composite offering.",
+              tj: "Саҳифаи «Телевизиони ТТЛ-ТВ» хизмати телевизиони интерактивиро муфассал ошкор мекунад. Дар қисми боло, зери пайраҳаи навигатсионӣ, баннер бо номи «ТТЛ-ТВ», навишти «172 канал + беш аз 2000 филмро тамошо кун» ва тасвири телевизор ҷойгир аст. Дар поён блоки «Тариф» ҷой дорад: дар тарафи чап корт бо ном, нархи 25 смн/моҳ ва тугмаи «Пайваст кардан», дар тарафи рост — ҷадвали муфассали ҳайати баста аз рӯйи жанрҳо: каналҳои миллӣ, мусиқӣ, кӯдакона, маърифатӣ, варзишӣ, хабарӣ, фароғатӣ, кино ва каналҳои худӣ бо нишон додани шумора барои ҳар гурӯҳ.\n\nРаванди истифода: корбар мундариҷаи бастаро аз рӯйи жанрҳо арзёбӣ мекунад, шумораи каналҳоро бо нарх муқоиса менамояд ва бо тугмаи «Пайваст кардан» пайвастшавиро расмӣ мегардонад.\n\nАҳамият барои тиҷорат: тақсими муфассали тариф аз рӯйи гурӯҳҳои каналҳо пешниҳодро шаффоф мекунад ва ба муштарӣ кумак менамояд, ки дар асоси ҳайати воқеии баста қарор қабул кунад. Ин формат барои ҳар хизмати обунавӣ бо мундариҷаи таркибӣ мувофиқ аст.",
+            },
+          },
+          {
+            slug: "telephony",
+            title: {
+              ru: "Телефония (NGN/SIP)",
+              en: "Telephony (NGN/SIP)",
+              tj: "Телефония (NGN/SIP)",
+            },
+            imageSrc: "/images/projects/ttl/gallery-4.png",
+            BannerSrc: "/images/projects/ttl/gallery-4.png",
+            shortInfo: {
+              ru: "Тариф домашней телефонии",
+              en: "Home telephony plan",
+              tj: "Тарифи телефонияи хонагӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Телефония (NGN/SIP)» представляет услугу голосовой связи. Под хлебными крошками размещён баннер с заголовком «Телефония (NGN/SIP)», подписью «Качественная и удобная связь» и изображением IP-телефона. Ниже расположен блок «Тариф»: карточка «Домашний» с ценой 4 смн/месяц и кнопкой «Подключить», а рядом — таблица тарификации: подключение к сети, выделение телефонного номера и все входящие вызовы бесплатны, исходящие внутри сети и на номера других операторов тарифицируются поминутно. Далее на странице начинается блок преимуществ услуги.\n\nПользовательский сценарий: посетитель изучает стоимость подключения и вызовов, убеждается в бесплатности входящих и подключает услугу.\n\nЦенность для бизнеса: прозрачная поминутная тарификация с явным выделением бесплатных позиций снимает вопросы о скрытых платежах. Наглядная таблица помогает абоненту заранее оценить расходы на связь.",
+              en: "The Telephony (NGN/SIP) page presents the voice communication service. Below the breadcrumbs is a banner with the heading “Telephony (NGN/SIP)”, the caption “Quality and convenient communication” and an image of an IP phone. Below is a Plan block: a “Home” card with the price of 4 SMN/month and a Connect button, and next to it a rate table: network connection, phone number allocation and all incoming calls are free, while outgoing calls within the network and to other operators’ numbers are charged per minute. Further down, the service benefits block begins.\n\nUser journey: the visitor studies the connection and call costs, confirms that incoming calls are free and connects the service.\n\nBusiness value: transparent per-minute charging with clearly marked free items removes questions about hidden fees. A clear table helps the subscriber estimate communication costs in advance.",
+              tj: "Саҳифаи «Телефония (NGN/SIP)» хизмати алоқаи овозиро пешниҳод мекунад. Зери пайраҳаи навигатсионӣ баннер бо сарлавҳаи «Телефония (NGN/SIP)», навишти «Алоқаи босифат ва қулай» ва тасвири телефони IP ҷойгир аст. Дар поён блоки «Тариф» ҷой дорад: корти «Хонагӣ» бо нархи 4 смн/моҳ ва тугмаи «Пайваст кардан», дар паҳлу — ҷадвали нархгузорӣ: пайвастшавӣ ба шабака, ҷудо кардани рақами телефон ва ҳамаи зангҳои воридотӣ ройгонанд, занги баромада дар дохили шабака ва ба рақамҳои операторони дигар дақиқа ба дақиқа ҳисоб карда мешаванд. Сипас дар саҳифа блоки бартариҳои хизмат оғоз меёбад.\n\nРаванди истифода: корбар арзиши пайвастшавӣ ва занггоҳро меомӯзад, ройгон будани занги воридотиро тасдиқ мекунад ва хизматро пайваст менамояд.\n\nАҳамият барои тиҷорат: нархгузории шаффофи дақиқавӣ бо нишон додани возеҳи мавридҳои ройгон саволҳоро дар бораи пардохтҳои пинҳонӣ бартараф месозад. Ҷадвали аёнӣ ба муштарӣ кумак мекунад, ки хароҷоти алоқаро пешакӣ арзёбӣ намояд.",
+            },
+          },
+          {
+            slug: "business",
+            title: {
+              ru: "Для бизнеса",
+              en: "For Business",
+              tj: "Барои тиҷорат",
+            },
+            imageSrc: "/images/projects/ttl/gallery-5.png",
+            BannerSrc: "/images/projects/ttl/gallery-5.png",
+            shortInfo: {
+              ru: "Корпоративные услуги оператора",
+              en: "Operator's corporate services",
+              tj: "Хизматрасониҳои корпоративии оператор",
+            },
+            fullInfo: {
+              ru: "Страница «Для бизнеса» ориентирована на корпоративных клиентов оператора. Под хлебными крошками размещён баннер с заголовком «Умные решения для вашего бизнеса!», подписью «Со специальными условиями» и деловым изображением. Ниже расположен блок «Услуги» из трёх карточек: «NGN/SIP» (корпоративная телефония с ежемесячной платой за номер и тарификацией вызовов), «Домен» (регистрация и годовая абонентская плата) и «Почта» (регистрация и ежемесячная плата за электронный ящик). Каждая карточка содержит цену и перечень позиций.\n\nПользовательский сценарий: представитель бизнеса просматривает набор корпоративных услуг, сопоставляет условия телефонии, домена и почты и выбирает подходящие сервисы для своей организации.\n\nЦенность для бизнеса: отдельная страница для корпоративного сегмента с телефонией, доменом и почтой показывает, что оператор закрывает базовые ИТ-потребности компаний. Структурированные карточки с ценами облегчают подбор пакета услуг для организации.",
+              en: "The For Business page targets the operator’s corporate clients. Below the breadcrumbs is a banner with the heading “Smart solutions for your business!”, the caption “With special terms” and a business image. Below is a Services block of three cards: “NGN/SIP” (corporate telephony with a monthly per-number fee and call rates), “Domain” (registration and an annual subscription fee) and “Mail” (registration and a monthly fee per mailbox). Each card contains a price and a list of items.\n\nUser journey: a business representative reviews the set of corporate services, compares the terms for telephony, domain and mail, and selects the services suitable for their organisation.\n\nBusiness value: a dedicated page for the corporate segment with telephony, domain and mail shows that the operator covers companies’ basic IT needs. Structured cards with prices make it easier to assemble a service package for an organisation.",
+              tj: "Саҳифаи «Барои тиҷорат» ба муштариёни корпоративии оператор нигаронида шудааст. Зери пайраҳаи навигатсионӣ баннер бо сарлавҳаи «Ҳалли зирак барои тиҷорати шумо!», навишти «Бо шартҳои махсус» ва тасвири корӣ ҷойгир аст. Дар поён блоки «Хизматрасониҳо» аз се корт ҷой дорад: «NGN/SIP» (телефонияи корпоративӣ бо пардохти моҳонаи рақам ва нархгузории занггоҳ), «Домен» (сабтином ва пардохти солонаи обунавӣ) ва «Почта» (сабтином ва пардохти моҳона барои қуттии электронӣ). Ҳар корт нарх ва рӯйхати мавридҳоро дар бар мегирад.\n\nРаванди истифода: намояндаи тиҷорат маҷмуи хизматрасониҳои корпоративиро аз назар мегузаронад, шартҳои телефония, домен ва почтаро муқоиса мекунад ва хизматҳои мувофиқро барои созмони худ интихоб менамояд.\n\nАҳамият барои тиҷорат: саҳифаи алоҳида барои бахши корпоративӣ бо телефония, домен ва почта нишон медиҳад, ки оператор ниёзҳои асосии ТИ-и ширкатҳоро мепӯшонад. Кортҳои сохторёфта бо нархҳо интихоби бастаи хизматрасониро барои созмон осон мекунанд.",
+            },
+          },
+          {
+            slug: "request-contacts",
+            title: {
+              ru: "Заявка и контакты",
+              en: "Request and Contacts",
+              tj: "Дархост ва тамосҳо",
+            },
+            imageSrc: "/images/projects/ttl/gallery-2.png",
+            BannerSrc: "/images/projects/ttl/gallery-2.png",
+            shortInfo: {
+              ru: "Форма заявки и подвал сайта",
+              en: "Request form and site footer",
+              tj: "Шакли дархост ва поёни сомона",
+            },
+            fullInfo: {
+              ru: "Блок «Заявка на консультацию» и подвал завершают страницу и обеспечивают связь с оператором. Форма заявки размещена на карточке с изображением: заголовок «Заявка на консультацию», пояснение о перезвоне в течение дня, поля «Ваше имя» и «Контактный телефон», группа флажков «Какие услуги желаете подключить?» (домашний интернет, интерактивное ТВ, местная телефония), уведомление о согласии на обработку персональных данных и кнопка «Отправить». Подвал формирует карту сайта: колонки с контактами, разделами о компании, услугами, ссылками на соцсети и номером службы поддержки 4884, а также лицензионные сведения, реквизиты ЗАО «Телекомм Технолоджи» и адрес.\n\nПользовательский сценарий: посетитель оставляет имя и телефон, отмечает интересующие услуги и отправляет заявку либо находит нужную информацию и контакты в подвале.\n\nЦенность для бизнеса: короткая форма с выбором услуг превращает интерес посетителя в заявку и передаёт менеджеру уже квалифицированный запрос. Подвал с лицензиями и реквизитами повышает доверие и служит навигацией по всем разделам сайта.",
+              en: "The “Consultation request” block and the footer complete the page and provide contact with the operator. The request form sits on a card with an image: the heading “Consultation request”, a note about a callback within the day, the fields “Your name” and “Contact phone”, a checkbox group “Which services would you like to connect?” (home internet, interactive TV, local telephony), a notice of consent to personal data processing and a Submit button. The footer forms a site map: columns with contacts, company sections, services, social links and the support number 4884, together with licensing details, the registration data of Telecomm Technology JSC and the address.\n\nUser journey: the visitor enters a name and phone number, marks the services of interest and submits the request, or finds the needed information and contacts in the footer.\n\nBusiness value: a short form with service selection turns a visitor’s interest into a request and hands the manager an already qualified enquiry. A footer with licences and registration data builds trust and serves as navigation across all sections of the site.",
+              tj: "Блоки «Дархост барои машварат» ва поёни сомона саҳифаро анҷом медиҳанд ва алоқаро бо оператор таъмин мекунанд. Шакли дархост дар корт бо тасвир ҷойгир аст: сарлавҳаи «Дархост барои машварат», тавзеҳ дар бораи занг задан дар давоми рӯз, майдонҳои «Номи шумо» ва «Телефони алоқа», гурӯҳи байрақчаҳои «Кадом хизматҳоро пайваст кардан мехоҳед?» (интернети хонагӣ, ТВ-и интерактивӣ, телефонияи маҳаллӣ), огоҳӣ дар бораи ризоият ба коркарди маълумоти шахсӣ ва тугмаи «Ирсол». Поёни сомона харитаи сомонаро ташкил медиҳад: сутунҳо бо тамосҳо, бахшҳо дар бораи ширкат, хизматрасониҳо, пайвандҳо ба шабакаҳои иҷтимоӣ ва рақами хадамоти дастгирӣ 4884, инчунин маълумоти иҷозатнома, реквизитҳои ҶСП «Телекомм Технолоджи» ва суроға.\n\nРаванди истифода: корбар ном ва телефонро мегузорад, хизматҳои ҷолибро қайд мекунад ва дархостро ирсол менамояд ё маълумот ва тамосҳои заруриро дар поёни сомона меёбад.\n\nАҳамият барои тиҷорат: шакли кӯтоҳ бо интихоби хизматҳо таваҷҷуҳи корбарро ба дархост табдил медиҳад ва ба менеҷер дархости аллакай баҳододашударо медиҳад. Поёни сомона бо иҷозатномаҳо ва реквизитҳо эътимодро баланд мебардорад ва ҳамчун роҳнамоӣ дар ҳамаи бахшҳои сомона хизмат мекунад.",
+            },
+          },
+        ],
+      },
     ],
   },
   {
@@ -2769,6 +3196,93 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "/images/projects/somontv/gallery-3.png",
       "/images/projects/somontv/gallery-4.png",
     ],
+    projectComponents: [
+      {
+        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        items: [
+          {
+            slug: "home",
+            title: {
+              ru: "Главная витрина",
+              en: "Home Showcase",
+              tj: "Намоишгоҳи асосӣ",
+            },
+            imageSrc: "/images/projects/somontv/gallery-1.png",
+            BannerSrc: "/images/projects/somontv/gallery-1.png",
+            shortInfo: {
+              ru: "Слайдер, фильтры и подборки контента",
+              en: "Slider, filters and content rows",
+              tj: "Слайдер, филтрҳо ва интихобҳои мундариҷа",
+            },
+            fullInfo: {
+              ru: "Главная страница онлайн-кинотеатра Somon TV построена как витрина видеоконтента в тёмной теме. В шапке размещены логотип, горизонтальное меню разделов («Фильмы», «Сериалы», «Мультсериалы», «Мультфильмы», «Радио», «Музыка», «ТВ»), переключатель языка и кнопка «Войти». Верхнюю область занимает крупный промо-слайдер с постерами премьер и стрелками переключения. Под ним расположена панель фильтров: жанр, год, страна и поле поиска. Ниже контент организован горизонтальными подборками с заголовками «Рекомендуем Вам посмотреть», «Новинки» и «Самое интересное»; каждый фильм представлен постером, названием и меткой «Подписка».\n\nПользовательский сценарий: посетитель просматривает промо-слайдер, выбирает фильм из тематических подборок или уточняет поиск через фильтры по жанру, году и стране, после чего переходит к просмотру.\n\nЦенность для бизнеса: главная страница медиасервиса совмещает продвижение премьер и персональные подборки, удерживая внимание пользователя. Фильтры и ряды рекомендаций помогают быстро находить контент в большом каталоге и повышают вовлечённость и число просмотров.",
+              en: "The homepage of the Somon TV online cinema is built as a video-content showcase in a dark theme. The header contains the logo, a horizontal section menu (Films, Series, Animated Series, Cartoons, Radio, Music, TV), a language switcher and a Log in button. The upper area holds a large promo slider with premiere posters and switching arrows. Below it is a filter panel: genre, year, country and a search field. Further down, content is organised into horizontal rows headed “Recommended for you”, “New releases” and “Most interesting”; each film is shown with a poster, a title and a “Subscription” label.\n\nUser journey: the visitor browses the promo slider, selects a film from the themed rows or refines the search through the genre, year and country filters, and then proceeds to watch.\n\nBusiness value: a media service’s homepage combines premiere promotion with personal recommendations, holding the user’s attention. Filters and recommendation rows help find content quickly in a large catalogue and increase engagement and the number of views.",
+              tj: "Саҳифаи асосии кинотеатри онлайни Somon TV ҳамчун намоишгоҳи мундариҷаи видеоӣ дар мавзуи торик сохта шудааст. Дар қисми боло нишон, менюи уфуқии бахшҳо («Филмҳо», «Сериалҳо», «Мултсериалҳо», «Мултфилмҳо», «Радио», «Мусиқӣ», «ТВ»), интихобкунандаи забон ва тугмаи «Ворид шудан» ҷойгиранд. Қисми болоро слайдери калони таблиғотӣ бо постерҳои премьераҳо ва тирчаҳои гузариш ишғол мекунад. Дар зери он лавҳаи филтрҳо ҷой дорад: жанр, сол, кишвар ва майдони ҷустуҷӯ. Дар поён мундариҷа бо интихобҳои уфуқӣ бо сарлавҳаҳои «Ба шумо тавсия медиҳем», «Навигариҳо» ва «Ҷолибтарин» ташкил шудааст; ҳар филм бо постер, ном ва нишонаи «Обуна» пешниҳод мешавад.\n\nРаванди истифода: корбар слайдери таблиғотиро мебинад, филмро аз интихобҳои мавзуӣ интихоб мекунад ё ҷустуҷӯро тавассути филтрҳои жанр, сол ва кишвар мушаххас менамояд ва сипас ба тамошо мегузарад.\n\nАҳамият барои тиҷорат: саҳифаи асосии хизмати расонаӣ таблиғи премьераҳо ва тавсияҳои шахсиро муттаҳид карда, таваҷҷуҳи корбарро нигоҳ медорад. Филтрҳо ва қаторҳои тавсия ба зуд ёфтани мундариҷа дар феҳристи калон кумак мекунанд ва ҷалбшавӣ ва шумораи тамошоҳоро баланд мебардоранд.",
+            },
+          },
+          {
+            slug: "catalog",
+            title: {
+              ru: "Каталог фильмов",
+              en: "Film Catalogue",
+              tj: "Феҳристи филмҳо",
+            },
+            imageSrc: "/images/projects/somontv/gallery-4.png",
+            BannerSrc: "/images/projects/somontv/gallery-4.png",
+            shortInfo: {
+              ru: "Сетка постеров с постраничной навигацией",
+              en: "Poster grid with pagination",
+              tj: "Шабакаи постерҳо бо навигатсияи саҳифавӣ",
+            },
+            fullInfo: {
+              ru: "Раздел каталога представляет полный список фильмов в виде плотной сетки постеров. Заголовок «Все» обозначает текущую выборку, а карточки размещены рядами по несколько элементов в строке. Каждая карточка содержит постер, название и метку «Подписка», что делает представление единообразным. Внизу расположена постраничная навигация с большим числом страниц, отражающая масштаб библиотеки контента. В подвале — логотип, иконки соцсетей, значки приложений для Android, Android TV и iOS, а также ссылки на разделы «О нас», «Контакты», «Условия», «Вопросы и ответы» и контактные данные.\n\nПользовательский сценарий: посетитель пролистывает сетку постеров, ориентируется по обложкам и названиям, переходит между страницами каталога и открывает выбранный фильм.\n\nЦенность для бизнеса: сеточный каталог с постраничной навигацией эффективно организует большую библиотеку и делает её удобной для просмотра. Единый формат карточек и наличие приложений для разных платформ подчёркивают масштаб и доступность сервиса.",
+              en: "The catalogue section presents the full list of films as a dense grid of posters. The heading “All” marks the current selection, with cards arranged in rows of several items each. Each card contains a poster, a title and a “Subscription” label, keeping the layout uniform. Pagination with a large number of pages at the bottom reflects the scale of the content library. The footer holds the logo, social icons, app badges for Android, Android TV and iOS, and links to About us, Contacts, Terms, Q&A and contact details.\n\nUser journey: the visitor scrolls through the poster grid, navigates by covers and titles, moves between catalogue pages and opens a chosen film.\n\nBusiness value: a grid catalogue with pagination efficiently organises a large library and makes it convenient to browse. A uniform card format and apps for different platforms emphasise the scale and availability of the service.",
+              tj: "Бахши феҳрист рӯйхати пурраи филмҳоро дар шакли шабакаи зичи постерҳо пешниҳод мекунад. Сарлавҳаи «Ҳама» интихоби ҷориро нишон медиҳад ва кортҳо дар қаторҳо бо якчанд унсур дар ҳар сатр ҷойгир шудаанд. Ҳар корт постер, ном ва нишонаи «Обуна»-ро дар бар мегирад, ки пешниҳодро якхела мекунад. Дар поён навигатсияи саҳифавӣ бо шумораи зиёди саҳифаҳо ҷойгир аст, ки миқёси китобхонаи мундариҷаро инъикос мекунад. Дар поёни сомона — нишон, нишонаҳои шабакаҳои иҷтимоӣ, аломатҳои барномаҳо барои Android, Android TV ва iOS, инчунин пайвандҳо ба бахшҳои «Дар бораи мо», «Тамосҳо», «Шартҳо», «Саволу ҷавоб» ва маълумоти тамос.\n\nРаванди истифода: корбар шабакаи постерҳоро варақгардон мекунад, аз рӯйи муқова ва номҳо равона мешавад, байни саҳифаҳои феҳрист мегузарад ва филми интихобшударо мекушояд.\n\nАҳамият барои тиҷорат: феҳристи шабакавӣ бо навигатсияи саҳифавӣ китобхонаи калонро самаранок ташкил мекунад ва тамошои онро қулай менамояд. Формати ягонаи кортҳо ва мавҷудияти барномаҳо барои платформаҳои гуногун миқёс ва дастрасии хизматро таъкид мекунанд.",
+            },
+          },
+          {
+            slug: "music",
+            title: {
+              ru: "Музыка",
+              en: "Music",
+              tj: "Мусиқӣ",
+            },
+            imageSrc: "/images/projects/somontv/gallery-2.png",
+            BannerSrc: "/images/projects/somontv/gallery-2.png",
+            shortInfo: {
+              ru: "Раздел музыкальных сборников и клипов",
+              en: "Section of music collections and clips",
+              tj: "Бахши маҷмуаҳо ва клипҳои мусиқӣ",
+            },
+            fullInfo: {
+              ru: "Раздел «Музыка» организует музыкальный контент по тому же принципу, что и видеокаталог. В шапке к меню добавлены кнопка «30 дня подписки бесплатно» и аватар пользователя. Панель фильтров включает категорию, жанр, год и поиск. Основную область занимает сетка карточек со сборниками, концертами и альбомами: обложка, название и год выпуска. Представлены как таджикские сборники и концерты, так и популярные исполнители. Внизу — постраничная навигация и подвал с приложениями и контактами.\n\nПользовательский сценарий: посетитель выбирает категорию или жанр, просматривает сетку музыкальных сборников по обложкам и годам и открывает интересующий материал для прослушивания.\n\nЦенность для бизнеса: единый принцип оформления для видео и музыки обеспечивает целостный пользовательский опыт внутри одного сервиса. Расширение контента за пределы фильмов увеличивает время, проводимое пользователем на платформе, и ценность подписки.",
+              en: "The Music section organises musical content on the same principle as the video catalogue. The header adds a “30 days free subscription” button and a user avatar to the menu. The filter panel includes category, genre, year and search. The main area holds a grid of cards with collections, concerts and albums: cover, title and release year. Both Tajik collections and concerts and popular performers are featured. At the bottom are pagination and a footer with apps and contacts.\n\nUser journey: the visitor selects a category or genre, browses the grid of music collections by covers and years, and opens the material of interest to listen.\n\nBusiness value: a single design principle for video and music provides a coherent user experience within one service. Extending content beyond films increases the time users spend on the platform and the value of the subscription.",
+              tj: "Бахши «Мусиқӣ» мундариҷаи мусиқиро бо ҳамон принсипе, ки феҳристи видеоӣ дорад, ташкил мекунад. Дар қисми боло ба меню тугмаи «30 рӯз обунаи ройгон» ва аватари корбар илова шудааст. Лавҳаи филтрҳо гурӯҳ, жанр, сол ва ҷустуҷӯро дар бар мегирад. Қисми асосиро шабакаи кортҳо бо маҷмуаҳо, консертҳо ва албомҳо ишғол мекунад: муқова, ном ва соли барориш. Ҳам маҷмуаҳо ва консертҳои тоҷикӣ ва ҳам ҳунармандони машҳур пешниҳод шудаанд. Дар поён — навигатсияи саҳифавӣ ва поёни сомона бо барномаҳо ва тамосҳо.\n\nРаванди истифода: корбар гурӯҳ ё жанрро интихоб мекунад, шабакаи маҷмуаҳои мусиқиро аз рӯйи муқова ва солҳо аз назар мегузаронад ва маводи ҷолибро барои гӯш кардан мекушояд.\n\nАҳамият барои тиҷорат: принсипи ягонаи ороиш барои видео ва мусиқӣ таҷрибаи мукаммали корбарро дар дохили як хизмат таъмин мекунад. Васеъ кардани мундариҷа берун аз филмҳо вақти дар платформа сарфшавандаи корбар ва арзиши обунаро зиёд мекунад.",
+            },
+          },
+          {
+            slug: "radio",
+            title: {
+              ru: "Радио",
+              en: "Radio",
+              tj: "Радио",
+            },
+            imageSrc: "/images/projects/somontv/gallery-3.png",
+            BannerSrc: "/images/projects/somontv/gallery-3.png",
+            shortInfo: {
+              ru: "Подборки радиостанций с логотипами",
+              en: "Radio station rows with logos",
+              tj: "Интихобҳои радиоҳо бо нишонаҳо",
+            },
+            fullInfo: {
+              ru: "Раздел «Радио» предоставляет доступ к прослушиванию радиостанций. Контент организован горизонтальными рядами: «Избранное» и «Популярные». Каждая станция представлена квадратной плиткой с логотипом, что делает выбор визуальным и узнаваемым. Ряды снабжены стрелками прокрутки для перехода к дополнительным станциям. В подборке присутствуют как международные, так и местные радиостанции. Внизу расположены значки мобильных приложений и служебные ссылки подвала.\n\nПользовательский сценарий: посетитель находит нужную станцию по логотипу в рядах «Избранное» или «Популярные», при необходимости прокручивает список стрелками и запускает прослушивание.\n\nЦенность для бизнеса: раздел радио дополняет видео- и музыкальный контент и превращает сервис в универсальную развлекательную платформу. Визуальный выбор станций по логотипам упрощает навигацию и делает раздел удобным для быстрого запуска эфира.",
+              en: "The Radio section provides access to listening to radio stations. Content is organised into horizontal rows: “Favourites” and “Popular”. Each station is shown as a square tile with a logo, making selection visual and recognisable. The rows have scroll arrows for reaching additional stations. The selection features both international and local radio stations. At the bottom are mobile app badges and the footer’s utility links.\n\nUser journey: the visitor finds the desired station by its logo in the Favourites or Popular rows, scrolls the list with the arrows if needed, and starts listening.\n\nBusiness value: the radio section complements video and music content and turns the service into a universal entertainment platform. Choosing stations visually by their logos simplifies navigation and makes the section convenient for quickly starting a broadcast.",
+              tj: "Бахши «Радио» дастрасиро ба гӯш кардани радиоҳо фароҳам меорад. Мундариҷа бо қаторҳои уфуқӣ ташкил шудааст: «Дӯстдошта» ва «Маъмул». Ҳар радио ҳамчун чоркунҷаи хишти бо нишона пешниҳод мешавад, ки интихобро аёнӣ ва шинохта мекунад. Қаторҳо бо тирчаҳои варақгардонӣ барои гузариш ба радиоҳои иловагӣ муҷаҳҳазанд. Дар интихоб ҳам радиоҳои байналмилалӣ ва ҳам маҳаллӣ ҳастанд. Дар поён нишонаҳои барномаҳои мобилӣ ва пайвандҳои хидматии поёни сомона ҷойгиранд.\n\nРаванди истифода: корбар радиои заруриро аз рӯйи нишона дар қаторҳои «Дӯстдошта» ё «Маъмул» меёбад, ҳангоми зарурат рӯйхатро бо тирчаҳо варақгардон мекунад ва гӯш карданро оғоз менамояд.\n\nАҳамият барои тиҷорат: бахши радио мундариҷаи видеоӣ ва мусиқиро пурра мекунад ва хизматро ба платформаи универсалии фароғатӣ табдил медиҳад. Интихоби аёнии радиоҳо аз рӯйи нишонаҳо навигатсияро осон мекунад ва бахшро барои оғози зуди пахш қулай мегардонад.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     imageSrc: "/images/projects/zudsms.webp",
@@ -2781,6 +3295,113 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "/images/projects/zudSMS/gallery-3.png",
       "/images/projects/zudSMS/gallery-4.png",
       "/images/projects/zudSMS/gallery-5.png",
+    ],
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: [
+          {
+            slug: "hero-use-cases",
+            title: {
+              ru: "Первый экран и сферы применения",
+              en: "Hero and Use Cases",
+              tj: "Экрани аввал ва соҳаҳои истифода",
+            },
+            imageSrc: "/images/projects/zudSMS/gallery-1.png",
+            BannerSrc: "/images/projects/zudSMS/gallery-1.png",
+            shortInfo: {
+              ru: "Оффер, показатели и отрасли применения",
+              en: "Offer, metrics and applicable industries",
+              tj: "Пешниҳод, нишондиҳандаҳо ва соҳаҳо",
+            },
+            fullInfo: {
+              ru: "Первый экран лендинга ЗудСМС представляет сервис массовой SMS-рассылки. В шапке размещены логотип с подписью «SMS рассылка», меню разделов («Главная», «Преимущества», «Пакеты», «Контакты», «API Документация»), переключатель языков RU/EN/TJ и кнопка «Личный кабинет». На зелёном баннере расположены название сервиса, заголовок «Рассылка SMS в Таджикистане для бизнеса» и пояснение о рассылке на номера всех мобильных операторов. Под текстом вынесены три показателя: доставляемость 98%, более 1000 клиентов и поддержка 24/7. Ниже, в блоке «Сферы применения», размещена сетка из восьми карточек с иконками отраслей: страховые компании, интернет-магазины, такси и доставка, медицинские центры, банки и платёжные системы, образовательные учреждения, туристические агентства, салоны и рестораны.\n\nПользовательский сценарий: посетитель считывает суть услуги и ключевые показатели, а затем в блоке отраслей находит свою сферу и убеждается, что сервис подходит под его задачи.\n\nЦенность для бизнеса: сочетание оффера, доказательных цифр и перечня отраслей быстро формирует доверие и показывает применимость услуги. Карточки сфер применения помогают посетителю из любой отрасли соотнести сервис со своими сценариями коммуникации с клиентами.",
+              en: "The ZudSMS landing hero presents the mass SMS distribution service. The header contains the logo with the caption “SMS distribution”, a section menu (Home, Advantages, Packages, Contacts, API Documentation), an RU/EN/TJ language switcher and a Personal Account button. The green banner holds the service name, the headline “SMS distribution in Tajikistan for business” and a note about sending to the numbers of all mobile operators. Below the text are three metrics: 98% deliverability, over 1000 clients and 24/7 support. Further down, the Use Cases block contains a grid of eight cards with industry icons: insurance companies, online stores, taxi and delivery, medical centres, banks and payment systems, educational institutions, travel agencies, and salons and restaurants.\n\nUser journey: the visitor grasps the essence of the service and its key metrics, then finds their own field among the industry cards and confirms the service suits their tasks.\n\nBusiness value: combining an offer, evidence figures and a list of industries quickly builds trust and shows the service’s applicability. Use-case cards help a visitor from any industry relate the service to their own customer-communication scenarios.",
+              tj: "Экрани аввали лендинги ЗудСМС хизмати паҳнкунии оммавии SMS-ро пешниҳод мекунад. Дар қисми боло нишон бо навишти «SMS рассылка», менюи бахшҳо («Асосӣ», «Бартариҳо», «Пакетҳо», «Тамосҳо», «Ҳуҷҷатнигории API»), интихобкунандаи забонҳои RU/EN/TJ ва тугмаи «Кабинети шахсӣ» ҷойгиранд. Дар баннери сабз номи хизмат, сарлавҳаи «Паҳнкунии SMS дар Тоҷикистон барои тиҷорат» ва тавзеҳ дар бораи паҳнкунӣ ба рақамҳои ҳамаи операторони мобилӣ ҷой доранд. Зери матн се нишондиҳанда оварда шудааст: расонидан 98%, беш аз 1000 муштарӣ ва дастгирии 24/7. Дар поён, дар блоки «Соҳаҳои истифода», шабакаи ҳашт корт бо нишонаҳои соҳаҳо ҷойгир аст: ширкатҳои суғуртавӣ, мағозаҳои интернетӣ, такси ва расонидан, марказҳои тиббӣ, бонкҳо ва системаҳои пардохт, муассисаҳои таълимӣ, агентиҳои сайёҳӣ, салонҳо ва тарабхонаҳо.\n\nРаванди истифода: корбар моҳияти хизмат ва нишондиҳандаҳои асосиро дарк мекунад ва сипас дар блоки соҳаҳо соҳаи худро меёбад ва боварӣ ҳосил мекунад, ки хизмат ба вазифаҳои ӯ мувофиқ аст.\n\nАҳамият барои тиҷорат: якҷоякунии пешниҳод, рақамҳои исботӣ ва рӯйхати соҳаҳо зуд эътимодро ташкил медиҳад ва мувофиқати хизматро нишон медиҳад. Кортҳои соҳаҳои истифода ба корбар аз ҳар соҳа кумак мекунанд, ки хизматро бо сенарияҳои муоширати худ бо мизоҷон мувофиқ созад.",
+            },
+          },
+          {
+            slug: "demo",
+            title: {
+              ru: "Демо-отправка SMS",
+              en: "SMS Demo",
+              tj: "Демо-ирсоли SMS",
+            },
+            imageSrc: "/images/projects/zudSMS/gallery-5.png",
+            BannerSrc: "/images/projects/zudSMS/gallery-5.png",
+            shortInfo: {
+              ru: "Интерактивный предпросмотр сообщения",
+              en: "Interactive message preview",
+              tj: "Пешнамоиши интерактивии паём",
+            },
+            fullInfo: {
+              ru: "Блок «Живой демо-пример» показывает работу сервиса в интерактивном виде. Слева размещены метка «Живой демо-пример», заголовок «SMS-рассылка для вашего бизнеса» и пояснение о создании персонализированных рассылок с мгновенной доставкой. Под текстом расположена карточка предпросмотра с полями «Имя отправителя» (заполнено значением ZudSMS), «Текст сообщения» со счётчиком символов 0/160 и кнопкой «Отправить». Справа изображён макет телефона с чатом ZudSMS, где показаны примеры сообщений: скидка, код подтверждения, напоминание о записи и статус заказа. Ниже начинается блок «Тарифные пакеты».\n\nПользовательский сценарий: посетитель вводит имя отправителя и текст, видит ограничение по длине сообщения и наглядно представляет, как рассылка будет выглядеть на телефоне получателя.\n\nЦенность для бизнеса: интерактивный демонстрационный блок позволяет оценить сервис до регистрации и снижает барьер для пробного использования. Предпросмотр с примерами реальных сценариев (коды, напоминания, статусы) помогает посетителю понять практическую пользу рассылки.",
+              en: "The “Live demo example” block shows how the service works interactively. On the left are the “Live demo example” label, the headline “SMS distribution for your business” and a note about creating personalised campaigns with instant delivery. Below the text is a preview card with the fields “Sender name” (filled with ZudSMS), “Message text” with a 0/160 character counter and a Send button. On the right is a phone mockup with a ZudSMS chat showing sample messages: a discount, a confirmation code, an appointment reminder and an order status. Below, the Pricing Packages block begins.\n\nUser journey: the visitor enters a sender name and text, sees the message length limit and gets a clear idea of how the campaign will look on the recipient’s phone.\n\nBusiness value: an interactive demo block lets the service be assessed before registration and lowers the barrier to trial use. A preview with real-scenario examples (codes, reminders, statuses) helps the visitor understand the practical benefit of the service.",
+              tj: "Блоки «Намунаи зиндаи демо» кори хизматро дар шакли интерактивӣ нишон медиҳад. Дар тарафи чап нишонаи «Намунаи зиндаи демо», сарлавҳаи «Паҳнкунии SMS барои тиҷорати шумо» ва тавзеҳ дар бораи эҷоди паҳнкунии фардикунонидашуда бо расонидани фаврӣ ҷойгиранд. Зери матн корти пешнамоиш бо майдонҳои «Номи фиристанда» (бо ZudSMS пур карда шуда), «Матни паём» бо ҳисобкунаки аломатҳо 0/160 ва тугмаи «Ирсол» ҷой дорад. Дар тарафи рост макети телефон бо чати ZudSMS тасвир шудааст, ки намунаҳои паёмҳо: тахфиф, коди тасдиқ, ёдоварӣ дар бораи навбат ва ҳолати фармоишро нишон медиҳад. Дар поён блоки «Пакетҳои тарифӣ» оғоз меёбад.\n\nРаванди истифода: корбар номи фиристанда ва матнро ворид мекунад, маҳдудияти дарозии паёмро мебинад ва аён тасаввур мекунад, ки паҳнкунӣ дар телефони гиранда чӣ гуна ба назар мерасад.\n\nАҳамият барои тиҷорат: блоки намоишии интерактивӣ имкон медиҳад, ки хизмат пеш аз сабтином арзёбӣ шавад ва монеаро барои истифодаи санҷишӣ кам мекунад. Пешнамоиш бо намунаҳои сенарияҳои воқеӣ (кодҳо, ёдовариҳо, ҳолатҳо) ба корбар кумак мекунад, ки фоидаи амалии паҳнкуниро дарк намояд.",
+            },
+          },
+          {
+            slug: "advantages",
+            title: {
+              ru: "Преимущества",
+              en: "Advantages",
+              tj: "Бартариҳо",
+            },
+            imageSrc: "/images/projects/zudSMS/gallery-2.png",
+            BannerSrc: "/images/projects/zudSMS/gallery-2.png",
+            shortInfo: {
+              ru: "Причины выбрать сервис рассылки",
+              en: "Reasons to choose the service",
+              tj: "Сабабҳои интихоби хизмат",
+            },
+            fullInfo: {
+              ru: "Раздел «Наши преимущества» аргументирует выбор сервиса. Над сеткой размещены название бренда, заголовок «Наши преимущества» и подзаголовок о запуске рассылки SMS в Таджикистане. Шесть карточек с иконками раскрывают ключевые доводы: низкая стоимость за 1 SMS (конкурентные цены для эффективного маркетинга), высокая скорость и эффективность (мгновенная доставка с максимальным охватом), отправка всем операторам (поддержка всех мобильных операторов без ограничений), использование своих шаблонов (создание и сохранение персонализированных заготовок), автоматизированная рассылка через API (интеграция с системой клиента) и надёжность и безопасность (защищённая платформа с гарантией конфиденциальности).\n\nПользовательский сценарий: посетитель просматривает карточки преимуществ и выделяет для себя значимые аргументы — например, цену, скорость, охват операторов или API-интеграцию.\n\nЦенность для бизнеса: структурированный перечень преимуществ отвечает на основные критерии выбора SMS-сервиса и снимает возражения. Акцент на цене, охвате и API одновременно закрывает потребности маркетинга и технической интеграции.",
+              en: "The “Our advantages” section justifies choosing the service. Above the grid are the brand name, the headline “Our advantages” and a subheading about launching SMS distribution in Tajikistan. Six icon cards spell out the key arguments: low cost per SMS (competitive prices for effective marketing), high speed and efficiency (instant delivery with maximum reach), sending to all operators (support for all mobile operators without restrictions), using your own templates (creating and saving personalised snippets), automated distribution via API (integration with the client’s system) and reliability and security (a secure platform with a confidentiality guarantee).\n\nUser journey: the visitor reviews the advantage cards and singles out the arguments that matter to them — for example price, speed, operator reach or API integration.\n\nBusiness value: a structured list of advantages addresses the main criteria for choosing an SMS service and removes objections. Emphasising price, reach and API at once covers both marketing needs and technical integration.",
+              tj: "Бахши «Бартариҳои мо» интихоби хизматро асоснок мекунад. Болои шабака номи бренд, сарлавҳаи «Бартариҳои мо» ва зерсарлавҳа дар бораи оғози паҳнкунии SMS дар Тоҷикистон ҷойгиранд. Шаш корт бо нишонаҳо далелҳои асосиро ошкор мекунанд: арзиши пасти 1 SMS (нархҳои рақобатпазир барои маркетинги самаранок), суръати баланд ва самаранокӣ (расонидани фаврӣ бо фарогирии ҳадди аксар), ирсол ба ҳамаи операторон (дастгирии ҳамаи операторони мобилӣ бе маҳдудият), истифодаи шаблонҳои худӣ (эҷод ва нигоҳдории заготовкаҳои фардикунонидашуда), паҳнкунии худкор тавассути API (интегратсия бо системаи муштарӣ) ва боэътимодӣ ва амният (платформаи ҳифзшуда бо кафолати махфият).\n\nРаванди истифода: корбар кортҳои бартариҳоро аз назар мегузаронад ва далелҳои муҳимро барои худ ҷудо мекунад — масалан нарх, суръат, фарогирии операторон ё интегратсияи API.\n\nАҳамият барои тиҷорат: рӯйхати сохтории бартариҳо ба меъёрҳои асосии интихоби хизмати SMS ҷавоб медиҳад ва эродҳоро бартараф месозад. Таъкид ба нарх, фарогирӣ ва API ҳамзамон ниёзҳои маркетинг ва интегратсияи техникиро мепӯшонад.",
+            },
+          },
+          {
+            slug: "packages",
+            title: {
+              ru: "Тарифные пакеты",
+              en: "Pricing Packages",
+              tj: "Пакетҳои тарифӣ",
+            },
+            imageSrc: "/images/projects/zudSMS/gallery-3.png",
+            BannerSrc: "/images/projects/zudSMS/gallery-3.png",
+            shortInfo: {
+              ru: "Линейка пакетов по объёму SMS",
+              en: "Range of packages by SMS volume",
+              tj: "Хатти пакетҳо аз рӯйи ҳаҷми SMS",
+            },
+            fullInfo: {
+              ru: "Раздел «Тарифные пакеты» представляет линейку предложений, отличающихся объёмом сообщений и ценой. Пакеты оформлены цветными карточками с иконкой, названием, количеством SMS, стоимостью в сомони и сроком действия «1 месяц»; каждую карточку завершает кнопка «Выбрать пакет». В линейке представлены «Плюс» (2 000 SMS), «Старт» (5 000 SMS), «Базовый» (10 000 SMS), «Стандарт» (25 000 SMS), «Бизнес» (50 000 SMS) и «Про» (100 000 SMS), а также стартовые варианты. Отдельные пакеты выделены метками «Больше возможностей», «Популярный», «Лучший выбор» и «Самый популярный».\n\nПользовательский сценарий: посетитель сопоставляет объём сообщений и цену, ориентируется на выделенные рекомендованные пакеты и выбирает вариант под планируемый объём рассылок.\n\nЦенность для бизнеса: широкая линейка пакетов охватывает клиентов с разным объёмом рассылок — от первых сообщений до крупных кампаний. Цветовое выделение и метки-рекомендации направляют выбор и помогают клиенту быстрее определиться с подходящим тарифом.",
+              en: "The Pricing Packages section presents a range of offers differing in message volume and price. Packages are laid out as coloured cards with an icon, a name, an SMS count, a price in somoni and a “1 month” validity period; each card ends with a Select package button. The range includes “Plus” (2,000 SMS), “Start” (5,000 SMS), “Basic” (10,000 SMS), “Standard” (25,000 SMS), “Business” (50,000 SMS) and “Pro” (100,000 SMS), as well as starter options. Individual packages are marked with “More features”, “Popular”, “Best choice” and “Most popular” labels.\n\nUser journey: the visitor compares message volume and price, is guided by the highlighted recommended packages and selects an option for their planned distribution volume.\n\nBusiness value: a broad range of packages covers clients with different distribution volumes — from first messages to large campaigns. Colour highlighting and recommendation labels steer the choice and help the client settle on a suitable plan faster.",
+              tj: "Бахши «Пакетҳои тарифӣ» хатти пешниҳодҳоеро пешниҳод мекунад, ки бо ҳаҷми паём ва нарх фарқ мекунанд. Пакетҳо ҳамчун кортҳои рангин бо нишона, ном, шумораи SMS, арзиш бо сомонӣ ва мӯҳлати амали «1 моҳ» таҳия шудаанд; ҳар кортро тугмаи «Интихоби пакет» анҷом медиҳад. Дар хат «Плюс» (2 000 SMS), «Старт» (5 000 SMS), «Базавӣ» (10 000 SMS), «Стандарт» (25 000 SMS), «Бизнес» (50 000 SMS) ва «Про» (100 000 SMS), инчунин вариантҳои ибтидоӣ пешниҳод шудаанд. Пакетҳои алоҳида бо нишонаҳои «Имкониятҳои бештар», «Маъмул», «Интихоби беҳтарин» ва «Маъмултарин» барҷаста шудаанд.\n\nРаванди истифода: корбар ҳаҷми паём ва нархро муқоиса мекунад, ба пакетҳои тавсияшудаи барҷаста нигаронида мешавад ва вариантро барои ҳаҷми банақшагирифтаи паҳнкунӣ интихоб менамояд.\n\nАҳамият барои тиҷорат: хатти васеи пакетҳо муштариёнро бо ҳаҷми гуногуни паҳнкунӣ фаро мегирад — аз паёмҳои аввал то маъракаҳои калон. Барҷастагии рангӣ ва нишонаҳои тавсия интихобро равона мекунанд ва ба муштарӣ кумак менамоянд, ки зудтар тарифи мувофиқро муайян созад.",
+            },
+          },
+          {
+            slug: "contacts-payments",
+            title: {
+              ru: "Контакты и оплата",
+              en: "Contacts and Payment",
+              tj: "Тамосҳо ва пардохт",
+            },
+            imageSrc: "/images/projects/zudSMS/gallery-4.png",
+            BannerSrc: "/images/projects/zudSMS/gallery-4.png",
+            shortInfo: {
+              ru: "Форма связи, платёжные системы и подвал",
+              en: "Contact form, payment systems and footer",
+              tj: "Шакли алоқа, системаҳои пардохт ва поён",
+            },
+            fullInfo: {
+              ru: "Завершающий блок объединяет форму связи, доступные способы оплаты и подвал сайта. Слева расположена форма обратной связи с кнопкой «Отправить», справа — реквизиты «ИП Душанбе-Софт» с адресом в Душанбе. Отдельным блоком «Платёжные системы» показаны четыре способа оплаты в виде карточек с логотипами: ALIF (платёжная система), Корти Милли (национальная карта), Душанбе Сити (городская платёжная система) и VISA (международная карта). Ниже размещён баннер LiveChat, а в подвале — логотип с блоком «О компании», колонка «Навигация» (главная, преимущества, пакеты, контакты) и колонка «Контакты» с телефоном, почтой и адресом; в самом низу — строка авторских прав.\n\nПользовательский сценарий: посетитель отправляет обращение через форму, проверяет доступные способы оплаты и находит контактные данные и реквизиты в подвале.\n\nЦенность для бизнеса: явное указание платёжных систем, включая локальные карты и международную VISA, снимает вопрос об удобстве оплаты. Форма связи и подробные реквизиты повышают доверие и упрощают переход от интереса к обращению.",
+              en: "The closing block combines a contact form, available payment methods and the site footer. On the left is a feedback form with a Send button; on the right are the “IE Dushanbe-Soft” details with an address in Dushanbe. A separate “Payment systems” block shows four payment methods as cards with logos: ALIF (payment system), Korti Milli (national card), Dushanbe City (municipal payment system) and VISA (international card). Below is a LiveChat banner, while the footer holds a logo with an “About the company” block, a Navigation column (home, advantages, packages, contacts) and a Contacts column with phone, email and address; a copyright line sits at the very bottom.\n\nUser journey: the visitor sends an enquiry through the form, checks the available payment methods and finds the contact details and company data in the footer.\n\nBusiness value: explicitly listing payment systems, including local cards and international VISA, removes questions about payment convenience. A contact form and detailed company data build trust and ease the move from interest to enquiry.",
+              tj: "Блоки хотимавӣ шакли алоқа, роҳҳои дастраси пардохт ва поёни сомонаро муттаҳид мекунад. Дар тарафи чап шакли алоқаи баръакс бо тугмаи «Ирсол», дар тарафи рост — реквизитҳои «Соҳибкори инфиродии Душанбе-Софт» бо суроға дар Душанбе ҷойгиранд. Дар блоки алоҳидаи «Системаҳои пардохт» чор роҳи пардохт дар шакли кортҳо бо нишонаҳо нишон дода шудаанд: ALIF (системаи пардохт), Корти Миллӣ (корти миллӣ), Душанбе Сити (системаи пардохти шаҳрӣ) ва VISA (корти байналмилалӣ). Дар поён баннери LiveChat ҷойгир аст ва дар поёни сомона — нишон бо блоки «Дар бораи ширкат», сутуни «Навигатсия» (асосӣ, бартариҳо, пакетҳо, тамосҳо) ва сутуни «Тамосҳо» бо телефон, почта ва суроға; дар поёнтарин — сатри ҳуқуқи муаллиф.\n\nРаванди истифода: корбар муроҷиатро тавассути шакл ирсол мекунад, роҳҳои дастраси пардохтро месанҷад ва маълумоти тамос ва реквизитҳоро дар поёни сомона меёбад.\n\nАҳамият барои тиҷорат: нишон додани возеҳи системаҳои пардохт, аз ҷумла кортҳои маҳаллӣ ва VISA-и байналмилалӣ, саволро дар бораи қулаии пардохт бартараф месозад. Шакли алоқа ва реквизитҳои муфассал эътимодро баланд мебардоранд ва гузаришро аз таваҷҷуҳ ба муроҷиат осон мекунанд.",
+            },
+          },
+        ],
+      },
     ],
   },
   {
@@ -2801,6 +3422,113 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "/images/projects/sandukTV/gallery-4.png",
       "/images/projects/sandukTV/gallery-5.png",
     ],
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: [
+          {
+            slug: "hero",
+            title: {
+              ru: "Первый экран",
+              en: "Hero Section",
+              tj: "Экрани аввал",
+            },
+            imageSrc: "/images/projects/sandukTV/gallery-1.png",
+            BannerSrc: "/images/projects/sandukTV/gallery-1.png",
+            shortInfo: {
+              ru: "Оффер IPTV, акция и логотипы каналов",
+              en: "IPTV offer, promo and channel logos",
+              tj: "Пешниҳоди IPTV, аксия ва нишонаҳои каналҳо",
+            },
+            fullInfo: {
+              ru: "Первый экран лендинга Sunduk TV представляет услугу интерактивного телевидения. В шапке на тёмно-синем фоне размещены логотип, меню разделов («Стоимость», «Как подключить», «Преимущества», «Контакты»), ссылка «Начать чат» и выделенная кнопка «Подключить». Слева расположены заголовок «Российское интерактивное ТВ в UltraHD!», описание о более чем 310 каналах русского, украинского и балтийского телевидения на любых устройствах, упоминание встроенного кинотеатра, а также кнопки «Подключить» и «Попробовать бесплатно». Справа — промо-баннер со сценой домашнего просмотра, акцией «скидка 30% на все абонементы» и скидкой на приставку, под которым выстроены логотипы популярных телеканалов и подпись о числе каналов.\n\nПользовательский сценарий: посетитель считывает суть предложения и качество (UltraHD, число каналов), обращает внимание на акцию и переходит к подключению или бесплатному пробному доступу.\n\nЦенность для бизнеса: первый экран IPTV-сервиса совмещает чёткий оффер, доказательство ассортимента (логотипы каналов) и акционный стимул. Двойной призыв — «Подключить» и «Попробовать бесплатно» — охватывает и готовых к покупке, и сомневающихся посетителей.",
+              en: "The Sunduk TV landing hero presents the interactive television service. On a dark-blue background, the header contains the logo, a section menu (Pricing, How to connect, Advantages, Contacts), a “Start chat” link and a highlighted Connect button. On the left are the headline “Russian interactive TV in UltraHD!”, a description of over 310 Russian, Ukrainian and Baltic channels on any device, a mention of a built-in cinema, and the Connect and Try for free buttons. On the right is a promo banner with a home-viewing scene, a “30% off all subscriptions” promotion and a set-top box discount, below which the logos of popular channels are lined up with a caption about the number of channels.\n\nUser journey: the visitor grasps the essence of the offer and the quality (UltraHD, channel count), notes the promotion and moves to connect or to free trial access.\n\nBusiness value: an IPTV service hero combines a clear offer, proof of the range (channel logos) and a promotional incentive. A dual call to action — Connect and Try for free — covers both ready-to-buy and hesitant visitors.",
+              tj: "Экрани аввали лендинги Sunduk TV хизмати телевизиони интерактивиро пешниҳод мекунад. Дар қисми боло дар заминаи кабуди торик нишон, менюи бахшҳо («Арзиш», «Чӣ тавр пайваст кардан», «Бартариҳо», «Тамосҳо»), пайванди «Оғози чат» ва тугмаи барҷастаи «Пайваст кардан» ҷойгиранд. Дар тарафи чап сарлавҳаи «Телевизиони интерактивии русӣ дар UltraHD!», тавсиф дар бораи беш аз 310 канали телевизиони русӣ, украинӣ ва балтикӣ дар ҳама дастгоҳҳо, зикри кинотеатри дарунсохт, инчунин тугмаҳои «Пайваст кардан» ва «Ройгон санҷидан» ҷой доранд. Дар тарафи рост — баннери таблиғотӣ бо саҳнаи тамошои хонагӣ, аксияи «тахфифи 30% ба ҳамаи абонементҳо» ва тахфиф ба приставка, ки дар зери он нишонаҳои каналҳои машҳур ва навишт дар бораи шумораи каналҳо ҷойгиранд.\n\nРаванди истифода: корбар моҳияти пешниҳод ва сифатро (UltraHD, шумораи каналҳо) дарк мекунад, ба аксия таваҷҷуҳ мекунад ва ба пайвастшавӣ ё дастрасии санҷишии ройгон мегузарад.\n\nАҳамият барои тиҷорат: экрани аввали хизмати IPTV пешниҳоди возеҳ, исботи гуногунӣ (нишонаҳои каналҳо) ва ҳавасмандии аксияро муттаҳид мекунад. Даъвати дугона — «Пайваст кардан» ва «Ройгон санҷидан» — ҳам меҳмонони ба харид тайёр ва ҳам дудилаву шаккокро фаро мегирад.",
+            },
+          },
+          {
+            slug: "pricing",
+            title: {
+              ru: "Стоимость",
+              en: "Pricing",
+              tj: "Арзиш",
+            },
+            imageSrc: "/images/projects/sandukTV/gallery-4.png",
+            BannerSrc: "/images/projects/sandukTV/gallery-4.png",
+            shortInfo: {
+              ru: "Пакеты по срокам со скидкой и допопцией",
+              en: "Term packages with discount and add-on",
+              tj: "Пакетҳо аз рӯйи мӯҳлат бо тахфиф ва иловагӣ",
+            },
+            fullInfo: {
+              ru: "Раздел «Стоимость» представляет тарифы по длительности подписки. В верхней части размещён блок дополнительной опции: флажок добавления пульта «IPTVplayer Magic Remote» с ценой и условием автоматической скидки 50% при заказе на 12 или 24 месяца, а также изображение устройства. Ниже — четыре карточки пакетов по срокам: 30, 180, 365 и 730 дней. В каждой карточке показаны срок, зачёркнутая исходная цена и итоговая цена со скидкой в евро, а также кнопка «Подключить». Под пакетами расположено предложение заказать бесплатное тестирование на 7 дней для тех, кто не определился.\n\nПользовательский сценарий: посетитель сравнивает цены по срокам, видит выгоду от длинных подписок, при необходимости добавляет пульт и оформляет подключение либо выбирает бесплатное тестирование.\n\nЦенность для бизнеса: тарифы по срокам с наглядной скидкой мотивируют выбирать длительные подписки, а дополнительная опция увеличивает средний чек. Предложение бесплатного теста снижает барьер для сомневающихся и помогает конвертировать их в абонентов.",
+              en: "The Pricing section presents plans by subscription length. At the top is an add-on block: a checkbox to add the “IPTVplayer Magic Remote” with its price and a condition of an automatic 50% discount when ordering for 12 or 24 months, along with an image of the device. Below are four term-based package cards: 30, 180, 365 and 730 days. Each card shows the term, the crossed-out original price and the final discounted price in euros, plus a Connect button. Below the packages is an offer to order a free 7-day trial for those who are undecided.\n\nUser journey: the visitor compares prices by term, sees the benefit of longer subscriptions, adds the remote if needed and completes the connection, or chooses the free trial.\n\nBusiness value: term-based plans with a visible discount motivate choosing longer subscriptions, while the add-on option increases the average order value. A free-trial offer lowers the barrier for the undecided and helps convert them into subscribers.",
+              tj: "Бахши «Арзиш» тарифҳоро аз рӯйи давомнокии обуна пешниҳод мекунад. Дар қисми боло блоки имконоти иловагӣ ҷойгир аст: байрақчаи илова кардани пулти «IPTVplayer Magic Remote» бо нарх ва шарти тахфифи худкори 50% ҳангоми фармоиш ба 12 ё 24 моҳ, инчунин тасвири дастгоҳ. Дар поён — чор корти пакет аз рӯйи мӯҳлат: 30, 180, 365 ва 730 рӯз. Дар ҳар корт мӯҳлат, нархи хатзадаи ибтидоӣ ва нархи ниҳоии тахфифдор бо евро, инчунин тугмаи «Пайваст кардан» нишон дода шудааст. Дар зери пакетҳо пешниҳоди фармоиши санҷиши ройгон барои 7 рӯз барои онҳое, ки муайян карда наметавонанд, ҷойгир аст.\n\nРаванди истифода: корбар нархҳоро аз рӯйи мӯҳлат муқоиса мекунад, фоидаи обунаҳои дарозро мебинад, ҳангоми зарурат пултро илова мекунад ва пайвастшавиро расмӣ мегардонад ё санҷиши ройгонро интихоб менамояд.\n\nАҳамият барои тиҷорат: тарифҳо аз рӯйи мӯҳлат бо тахфифи аён ба интихоби обунаҳои дароз ҳавасманд мекунанд ва имконоти иловагӣ маблағи миёнаи фармоишро зиёд мекунад. Пешниҳоди санҷиши ройгон монеаро барои дудилаҳо кам мекунад ва ба табдили онҳо ба муштарӣ кумак менамояд.",
+            },
+          },
+          {
+            slug: "advantages",
+            title: {
+              ru: "Преимущества",
+              en: "Advantages",
+              tj: "Бартариҳо",
+            },
+            imageSrc: "/images/projects/sandukTV/gallery-2.png",
+            BannerSrc: "/images/projects/sandukTV/gallery-2.png",
+            shortInfo: {
+              ru: "Возможности сервиса и отзывы",
+              en: "Service features and reviews",
+              tj: "Имкониятҳои хизмат ва тақризҳо",
+            },
+            fullInfo: {
+              ru: "Раздел «Преимущества интерактивного телевидения от SundukTV» раскрывает функциональные возможности сервиса. В сетке с иконками перечислены ключевые особенности: более 310 каналов в FullHD и UltraHD, возможность поставить эфир на паузу или перемотать, архив телепередач на 14 дней с доступом к кинотеатру, каналы для взрослых, просмотр на трёх устройствах одновременно и национальные каналы Германии, Украины, Латвии и Литвы. Ниже начинается блок отзывов с карточками оценок в виде звёзд и коротких комментариев абонентов.\n\nПользовательский сценарий: посетитель изучает функции сервиса, выделяет важные для себя (тайм-шифт, архив, мультиэкран) и подкрепляет решение отзывами других абонентов.\n\nЦенность для бизнеса: перечень функциональных преимуществ вместе с отзывами объединяет рациональные и социальные аргументы. Такое сочетание помогает посетителю убедиться и в возможностях сервиса, и в удовлетворённости действующих клиентов.",
+              en: "The “Advantages of interactive television from SundukTV” section reveals the service’s features. An icon grid lists the key capabilities: over 310 channels in FullHD and UltraHD, the ability to pause or rewind live broadcasts, a 14-day programme archive with cinema access, adult channels, viewing on three devices at once, and national channels of Germany, Ukraine, Latvia and Lithuania. Below, a reviews block begins with cards showing star ratings and short subscriber comments.\n\nUser journey: the visitor studies the service’s features, singles out those important to them (time-shift, archive, multiscreen) and reinforces the decision with reviews from other subscribers.\n\nBusiness value: a list of functional advantages together with reviews combines rational and social arguments. This mix helps the visitor be convinced both of the service’s capabilities and of the satisfaction of existing customers.",
+              tj: "Бахши «Бартариҳои телевизиони интерактивӣ аз SundukTV» имкониятҳои функсионалии хизматро ошкор мекунад. Дар шабака бо нишонаҳо хусусиятҳои асосӣ номбар шудаанд: беш аз 310 канал дар FullHD ва UltraHD, имкони таваққуф ё бозгардонии пахши мустақим, бойгонии барномаҳо барои 14 рӯз бо дастрасӣ ба кинотеатр, каналҳо барои калонсолон, тамошо дар се дастгоҳ ҳамзамон ва каналҳои миллии Олмон, Украина, Латвия ва Литва. Дар поён блоки тақризҳо бо кортҳои баҳо дар шакли ситораҳо ва шарҳҳои кӯтоҳи муштариён оғоз меёбад.\n\nРаванди истифода: корбар функсияҳои хизматро меомӯзад, барои худ муҳимҳоро (тайм-шифт, бойгонӣ, бисёрэкран) ҷудо мекунад ва қарорро бо тақризҳои дигар муштариён мустаҳкам менамояд.\n\nАҳамият барои тиҷорат: рӯйхати бартариҳои функсионалӣ ҳамроҳи тақризҳо далелҳои оқилона ва иҷтимоиро муттаҳид мекунад. Ин омезиш ба корбар кумак мекунад, ки ҳам ба имкониятҳои хизмат ва ҳам ба қаноатмандии муштариёни амалкунанда боварӣ ҳосил кунад.",
+            },
+          },
+          {
+            slug: "testimonials-dealers",
+            title: {
+              ru: "Отзывы и дилеры",
+              en: "Reviews and Dealers",
+              tj: "Тақризҳо ва дилерҳо",
+            },
+            imageSrc: "/images/projects/sandukTV/gallery-5.png",
+            BannerSrc: "/images/projects/sandukTV/gallery-5.png",
+            shortInfo: {
+              ru: "Отзывы абонентов и география сети",
+              en: "Subscriber reviews and network reach",
+              tj: "Тақризҳои муштариён ва ҷуғрофияи шабака",
+            },
+            fullInfo: {
+              ru: "Блок объединяет отзывы абонентов и масштаб дилерской сети. Отзывы оформлены карточками на тёмно-синем фоне: каждая содержит оценку в виде звёзд, короткий текст комментария, фотографию и имя абонента (Мария, Марк, Татьяна). Ниже на фоне карты мира размещён крупный тезис «Более 60 дилеров в 18 странах!», подчёркивающий международное присутствие сервиса.\n\nПользовательский сценарий: посетитель читает отзывы реальных абонентов, оценивает выставленные оценки и видит географический охват сети, что усиливает доверие к сервису.\n\nЦенность для бизнеса: сочетание персонализированных отзывов и показателя охвата (дилеры в 18 странах) работает как социальное доказательство и демонстрация масштаба. Это помогает снять сомнения и представить сервис как проверенный и распространённый.",
+              en: "The block combines subscriber reviews with the scale of the dealer network. Reviews are laid out as cards on a dark-blue background: each contains a star rating, a short comment, a photograph and the subscriber’s name (Maria, Mark, Tatyana). Below, against a world-map background, is a bold statement “Over 60 dealers in 18 countries!”, emphasising the service’s international presence.\n\nUser journey: the visitor reads reviews from real subscribers, assesses the given ratings and sees the network’s geographic reach, which strengthens trust in the service.\n\nBusiness value: combining personalised reviews with a reach metric (dealers in 18 countries) works as social proof and a demonstration of scale. This helps remove doubts and present the service as trusted and widespread.",
+              tj: "Блок тақризҳои муштариён ва миқёси шабакаи дилериро муттаҳид мекунад. Тақризҳо ҳамчун кортҳо дар заминаи кабуди торик таҳия шудаанд: ҳар яке баҳо дар шакли ситораҳо, матни кӯтоҳи шарҳ, акс ва номи муштарӣ (Мария, Марк, Татяна)-ро дар бар мегирад. Дар поён дар заминаи харитаи ҷаҳон тезиси калони «Беш аз 60 дилер дар 18 кишвар!» ҷойгир аст, ки ҳузури байналмилалии хизматро таъкид мекунад.\n\nРаванди истифода: корбар тақризҳои муштариёни воқеиро мехонад, баҳоҳои гузошташударо арзёбӣ мекунад ва фарогирии ҷуғрофии шабакаро мебинад, ки эътимодро ба хизмат тақвият медиҳад.\n\nАҳамият барои тиҷорат: якҷоякунии тақризҳои фардикунонидашуда ва нишондиҳандаи фарогирӣ (дилерҳо дар 18 кишвар) ҳамчун далели иҷтимоӣ ва намоиши миқёс кор мекунад. Ин ба бартараф кардани шакҳо кумак мекунад ва хизматро ҳамчун санҷидашуда ва паҳншуда муаррифӣ менамояд.",
+            },
+          },
+          {
+            slug: "faq-footer",
+            title: {
+              ru: "Вопросы и подвал",
+              en: "FAQ and Footer",
+              tj: "Саволҳо ва поёни сомона",
+            },
+            imageSrc: "/images/projects/sandukTV/gallery-3.png",
+            BannerSrc: "/images/projects/sandukTV/gallery-3.png",
+            shortInfo: {
+              ru: "Частые вопросы и контакты по странам",
+              en: "FAQ and contacts by country",
+              tj: "Саволҳои маъмул ва тамосҳо аз рӯйи кишварҳо",
+            },
+            fullInfo: {
+              ru: "Завершающий блок объединяет часто задаваемые вопросы и подвал сайта. Раздел FAQ оформлен списком раскрывающихся пунктов со знаком «плюс»: есть ли задержка у прямого эфира, что делать, если не найдены ответы, предоставляется ли бесплатный пробный доступ, можно ли скачать передачу и каковы минимальные требования к интернету. Подвал содержит логотип, краткое описание сервиса, повтор навигационных ссылок и кнопки «Подключить», а также телефоны поддержки по странам (Великобритания, США, Германия, Израиль). В самом низу — копирайт и ссылки на условия и cookie.\n\nПользовательский сценарий: посетитель находит ответ на свой вопрос в списке FAQ, а при необходимости связи выбирает телефон нужной страны в подвале.\n\nЦенность для бизнеса: раздел FAQ снимает типовые возражения о качестве эфира, пробном доступе и технических требованиях, уменьшая нагрузку на поддержку. Контакты по нескольким странам подчёркивают международный охват и упрощают связь для аудитории из разных регионов.",
+              en: "The closing block combines frequently asked questions with the site footer. The FAQ section is laid out as a list of expandable items marked with a plus sign: whether there is a delay in live broadcasts, what to do if answers are not found, whether free trial access is provided, whether a programme can be downloaded and what the minimum internet requirements are. The footer contains the logo, a short service description, a repeat of the navigation links and Connect button, and support phone numbers by country (UK, USA, Germany, Israel). At the very bottom are the copyright and links to terms and cookies.\n\nUser journey: the visitor finds the answer to their question in the FAQ list and, if contact is needed, chooses the phone number for the relevant country in the footer.\n\nBusiness value: the FAQ section removes typical objections about broadcast quality, trial access and technical requirements, reducing the load on support. Contacts for several countries emphasise the international reach and ease contact for audiences from different regions.",
+              tj: "Блоки хотимавӣ саволҳои зуд-зуд додашаванда ва поёни сомонаро муттаҳид мекунад. Бахши FAQ ҳамчун рӯйхати бандҳои кушодашаванда бо аломати «плюс» таҳия шудааст: оё дар пахши мустақим таъхир ҳаст, агар ҷавоб ёфт нашавад чӣ бояд кард, оё дастрасии санҷишии ройгон дода мешавад, оё барномаро зеркашӣ кардан мумкин аст ва талаботи ҳадди ақали интернет чист. Поёни сомона нишон, тавсифи кӯтоҳи хизмат, такрори пайвандҳои навигатсионӣ ва тугмаи «Пайваст кардан», инчунин телефонҳои дастгирӣ аз рӯйи кишварҳо (Британияи Кабир, ИМА, Олмон, Исроил)-ро дар бар мегирад. Дар поёнтарин — ҳуқуқи муаллиф ва пайвандҳо ба шартҳо ва cookie.\n\nРаванди истифода: корбар ҷавоби саволи худро дар рӯйхати FAQ меёбад ва ҳангоми зарурати алоқа телефони кишвари заруриро дар поёни сомона интихоб мекунад.\n\nАҳамият барои тиҷорат: бахши FAQ эродҳои маъмулро дар бораи сифати пахш, дастрасии санҷишӣ ва талаботи техникӣ бартараф месозад ва сарбории дастгириро кам мекунад. Тамосҳо аз рӯйи якчанд кишвар фарогирии байналмилалиро таъкид мекунанд ва алоқаро барои шунавандагони минтақаҳои гуногун осон менамоянд.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     imageSrc: "/images/projects/onlinepay.webp",
@@ -2818,6 +3546,93 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "/images/projects/onlinepay/gallery-2.png",
       "/images/projects/onlinepay/gallery-3.png",
       "/images/projects/onlinepay/gallery-4.png",
+    ],
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: [
+          {
+            slug: "hero",
+            title: {
+              ru: "Первый экран",
+              en: "Hero Section",
+              tj: "Экрани аввал",
+            },
+            imageSrc: "/images/projects/onlinepay/gallery-1.png",
+            BannerSrc: "/images/projects/onlinepay/gallery-1.png",
+            shortInfo: {
+              ru: "Оффер приёма платежей для бизнеса",
+              en: "Payment acceptance offer for business",
+              tj: "Пешниҳоди қабули пардохт барои тиҷорат",
+            },
+            fullInfo: {
+              ru: "Первый экран лендинга OnlinePay представляет платёжный сервис Merchant для приёма онлайн-платежей. В шапке размещены логотип, переключатель языка и кнопка «Login». На фиолетовом баннере расположены крупный заголовок «Merchant», подзаголовок о самом быстром и безопасном сервисе приёма платежей и кнопка «Get Offer». Справа — тематическая иллюстрация с командой, графиками и элементами оплаты, задающая деловой контекст. Ниже начинается блок «About Service» с описанием услуги приёма платежей через локальные банковские карты.\n\nПользовательский сценарий: посетитель считывает суть предложения — быстрый и безопасный приём платежей — и переходит к получению коммерческого предложения кнопкой «Get Offer» либо входит в кабинет через «Login».\n\nЦенность для бизнеса: первый экран платёжного сервиса лаконично формулирует ценность (скорость и безопасность приёма платежей) и предлагает целевое действие. Для B2B-продукта акцент на надёжности и понятная кнопка запроса оффера помогают начать диалог с потенциальным клиентом.",
+              en: "The OnlinePay landing hero presents the Merchant payment service for accepting online payments. The header contains the logo, a language switcher and a Login button. On the purple banner are the large headline “Merchant”, a subheading about the fastest and most secure payment-acceptance service, and a Get Offer button. On the right is a themed illustration with a team, charts and payment elements, setting a business context. Below, the About Service block begins with a description of accepting payments through local bank cards.\n\nUser journey: the visitor grasps the essence of the offer — fast and secure payment acceptance — and moves to request a commercial offer via Get Offer, or logs into the cabinet through Login.\n\nBusiness value: a payment service’s hero concisely states the value (speed and security of payment acceptance) and offers a target action. For a B2B product, emphasising reliability and a clear offer-request button helps start a dialogue with a prospective client.",
+              tj: "Экрани аввали лендинги OnlinePay хизмати пардохтии Merchant-ро барои қабули пардохтҳои онлайн пешниҳод мекунад. Дар қисми боло нишон, интихобкунандаи забон ва тугмаи «Login» ҷойгиранд. Дар баннери бунафш сарлавҳаи калони «Merchant», зерсарлавҳа дар бораи хизмати зудтарин ва бехатартарини қабули пардохт ва тугмаи «Get Offer» ҷой доранд. Дар тарафи рост — тасвири мавзуӣ бо даста, графикҳо ва унсурҳои пардохт, ки заминаи кориро муайян мекунад. Дар поён блоки «About Service» бо тавсифи хизмати қабули пардохт тавассути кортҳои бонкии маҳаллӣ оғоз меёбад.\n\nРаванди истифода: корбар моҳияти пешниҳод — қабули зуд ва бехатари пардохтро дарк мекунад ва бо тугмаи «Get Offer» ба гирифтани пешниҳоди тиҷоратӣ мегузарад ё тавассути «Login» ба кабинет ворид мешавад.\n\nАҳамият барои тиҷорат: экрани аввали хизмати пардохтӣ арзишро (суръат ва бехатарии қабули пардохт) мухтасар баён мекунад ва амали мақсаднок пешниҳод менамояд. Барои маҳсулоти B2B таъкид ба боэътимодӣ ва тугмаи возеҳи дархости пешниҳод ба оғози муколама бо мизоҷи эҳтимолӣ кумак мекунад.",
+            },
+          },
+          {
+            slug: "about-service",
+            title: {
+              ru: "О сервисе Merchant",
+              en: "About the Merchant Service",
+              tj: "Дар бораи хизмати Merchant",
+            },
+            imageSrc: "/images/projects/onlinepay/gallery-2.png",
+            BannerSrc: "/images/projects/onlinepay/gallery-2.png",
+            shortInfo: {
+              ru: "Назначение и интеграция сервиса",
+              en: "Service purpose and integration",
+              tj: "Таъинот ва интегратсияи хизмат",
+            },
+            fullInfo: {
+              ru: "Блок «About Service» подробно описывает услугу Merchant. Слева расположена красочная иллюстрация с иконками электронной коммерции (покупки, доставка, оплата, поддержка) и указывающей рукой. Справа — заголовок «Merchant» с меткой раздела и текст: сервис даёт возможность принимать платежи за товары и услуги через локальные банковские карты, ориентирован на простое подключение независимо от масштаба бизнеса и наличия технических специалистов, предлагает готовые модули для популярных CMS и биллинговых систем, а также интеграцию силами собственных специалистов. Завершает блок кнопка «Documentation».\n\nПользовательский сценарий: посетитель изучает назначение сервиса и способы интеграции, оценивает наличие готовых модулей под свою платформу и при необходимости переходит к документации.\n\nЦенность для бизнеса: развёрнутое описание с акцентом на простоту подключения и готовые модули снимает опасения о технической сложности интеграции платежей. Ссылка на документацию адресует техническую аудиторию, ускоряя принятие решения.",
+              en: "The About Service block describes the Merchant service in detail. On the left is a colourful illustration with e-commerce icons (shopping, delivery, payment, support) and a pointing hand. On the right are the “Merchant” heading with a section label and text: the service enables accepting payments for goods and services through local bank cards, is aimed at easy setup regardless of business scale or the availability of technical staff, offers ready-made modules for popular CMS and billing systems, and provides integration by its own specialists. A Documentation button completes the block.\n\nUser journey: the visitor studies the service’s purpose and integration options, assesses whether ready-made modules exist for their platform and moves to the documentation if needed.\n\nBusiness value: a detailed description emphasising easy setup and ready-made modules removes concerns about the technical complexity of payment integration. A documentation link addresses the technical audience and speeds up the decision.",
+              tj: "Блоки «About Service» хизмати Merchant-ро муфассал тавсиф мекунад. Дар тарафи чап тасвири рангин бо нишонаҳои тиҷорати электронӣ (харид, расонидан, пардохт, дастгирӣ) ва дасти ишоракунанда ҷойгир аст. Дар тарафи рост — сарлавҳаи «Merchant» бо нишонаи бахш ва матн: хизмат имкони қабули пардохтро барои молу хизматрасонӣ тавассути кортҳои бонкии маҳаллӣ медиҳад, ба пайвастшавии осон новобаста аз миқёси тиҷорат ва мавҷудияти мутахассисони техникӣ нигаронида шудааст, модулҳои тайёр барои CMS ва системаҳои биллинги маъмул, инчунин интегратсияро бо мутахассисони худӣ пешниҳод мекунад. Блокро тугмаи «Documentation» анҷом медиҳад.\n\nРаванди истифода: корбар таъиноти хизмат ва роҳҳои интегратсияро меомӯзад, мавҷудияти модулҳои тайёрро барои платформаи худ арзёбӣ мекунад ва ҳангоми зарурат ба ҳуҷҷатнигорӣ мегузарад.\n\nАҳамият барои тиҷорат: тавсифи муфассал бо таъкид ба пайвастшавии осон ва модулҳои тайёр нигарониро дар бораи мураккабии техникии интегратсияи пардохт бартараф месозад. Пайванд ба ҳуҷҷатнигорӣ ба шунавандагони техникӣ нигаронида шуда, қабули қарорро суръат мебахшад.",
+            },
+          },
+          {
+            slug: "steps",
+            title: {
+              ru: "Три шага подключения",
+              en: "Three Steps to Connect",
+              tj: "Се қадами пайвастшавӣ",
+            },
+            imageSrc: "/images/projects/onlinepay/gallery-3.png",
+            BannerSrc: "/images/projects/onlinepay/gallery-3.png",
+            shortInfo: {
+              ru: "Процесс подключения приёма платежей",
+              en: "Process of enabling payment acceptance",
+              tj: "Ҷараёни фаъолсозии қабули пардохт",
+            },
+            fullInfo: {
+              ru: "Блок «Only 3 steps to accept payments» объясняет процесс подключения. Три карточки с иконками и номерами описывают последовательность шагов: заполнить заявку на сайте, получить персональное предложение от банков-партнёров и подписать договор с одним из банков-партнёров. Ниже начинается раздел «Capability» с демонстрацией личного кабинета продавца: на макете показан рабочий стол «Overview» с графиком транзакций за период, а рядом мобильная версия того же интерфейса.\n\nПользовательский сценарий: посетитель последовательно читает три шага и понимает путь подключения — от заявки до подписания договора, а затем видит, как выглядит рабочий кабинет после подключения.\n\nЦенность для бизнеса: пошаговое объяснение превращает процесс подключения к банковскому эквайрингу в понятную и короткую последовательность. Демонстрация реального интерфейса кабинета снижает неопределённость и показывает результат подключения ещё до начала работы.",
+              en: "The “Only 3 steps to accept payments” block explains the connection process. Three cards with icons and numbers describe the sequence: fill in the application form on the website, receive a personal offer from the partner banks and sign an agreement with one of the partner banks. Below, the Capability section begins with a demonstration of the seller’s personal cabinet: the mockup shows the Overview dashboard with a transaction chart for a period, alongside a mobile version of the same interface.\n\nUser journey: the visitor reads the three steps in order and understands the connection path — from application to signing the agreement — then sees how the working cabinet looks after connection.\n\nBusiness value: a step-by-step explanation turns the process of connecting to bank acquiring into a clear and short sequence. Demonstrating the real cabinet interface reduces uncertainty and shows the result of connection even before work begins.",
+              tj: "Блоки «Only 3 steps to accept payments» ҷараёни пайвастшавиро мефаҳмонад. Се корт бо нишонаҳо ва рақамҳо пайдарпайиро тавсиф мекунанд: пур кардани дархост дар сомона, гирифтани пешниҳоди шахсӣ аз бонкҳои шарик ва имзои шартнома бо яке аз бонкҳои шарик. Дар поён бахши «Capability» бо намоиши кабинети шахсии фурӯшанда оғоз меёбад: дар макет мизи кории «Overview» бо графики транзаксияҳо барои давра, дар паҳлу версияи мобилии ҳамон интерфейс нишон дода шудааст.\n\nРаванди истифода: корбар се қадамро пайдарпай мехонад ва роҳи пайвастшавиро — аз дархост то имзои шартнома дарк мекунад, сипас мебинад, ки кабинети корӣ пас аз пайвастшавӣ чӣ гуна ба назар мерасад.\n\nАҳамият барои тиҷорат: тавзеҳи қадам ба қадам ҷараёни пайвастшавиро ба эквайринги бонкӣ ба пайдарпайии возеҳ ва кӯтоҳ табдил медиҳад. Намоиши интерфейси воқеии кабинет номуайяниро кам мекунад ва натиҷаи пайвастшавиро ҳатто пеш аз оғози кор нишон медиҳад.",
+            },
+          },
+          {
+            slug: "cabinet-footer",
+            title: {
+              ru: "Личный кабинет и подвал",
+              en: "Personal Cabinet and Footer",
+              tj: "Кабинети шахсӣ ва поёни сомона",
+            },
+            imageSrc: "/images/projects/onlinepay/gallery-4.png",
+            BannerSrc: "/images/projects/onlinepay/gallery-4.png",
+            shortInfo: {
+              ru: "Возможности кабинета продавца и контакты",
+              en: "Seller cabinet features and contacts",
+              tj: "Имкониятҳои кабинети фурӯшанда ва тамосҳо",
+            },
+            fullInfo: {
+              ru: "Раздел «Capability» и подвал завершают страницу. Слева расположен макет личного кабинета продавца на десктопе и телефоне с экраном «Overview» и графиком транзакций. Справа — заголовок «The Merchant service provides access to the Seller's Personal cabinet» и описание возможностей кабинета: раздел уведомлений с новостями системы и отзывами, раздел платежей со статистикой успешных и сформированных операций, а также персональные настройки с данными администратора, сменой пароля и указанием email для уведомлений о поступлениях. В подвале размещены блок «About Us» с информацией о банке и социальными иконками, а также блок «Contacts» с адресом, телефонами и email; внизу — строка авторских прав.\n\nПользовательский сценарий: посетитель изучает функции кабинета — уведомления, статистику платежей и настройки, — а затем находит контактные данные банка в подвале для связи.\n\nЦенность для бизнеса: описание кабинета с уведомлениями, статистикой и настройками показывает, что после подключения продавец получает полноценный инструмент управления платежами. Подробные контакты в подвале подкрепляют доверие и упрощают переход к обращению.",
+              en: "The Capability section and the footer complete the page. On the left is a mockup of the seller’s personal cabinet on desktop and phone with the Overview screen and a transaction chart. On the right are the heading “The Merchant service provides access to the Seller's Personal cabinet” and a description of the cabinet’s features: a notifications section with system news and reviews, a payments section with statistics on successful and generated operations, and personal settings with the administrator’s data, password change and an email for payment notifications. The footer holds an About Us block with bank information and social icons, and a Contacts block with an address, phone numbers and email; a copyright line sits at the bottom.\n\nUser journey: the visitor studies the cabinet’s features — notifications, payment statistics and settings — then finds the bank’s contact details in the footer to get in touch.\n\nBusiness value: a description of the cabinet with notifications, statistics and settings shows that after connection the seller receives a full-fledged payment management tool. Detailed footer contacts reinforce trust and ease the move to an enquiry.",
+              tj: "Бахши «Capability» ва поёни сомона саҳифаро анҷом медиҳанд. Дар тарафи чап макети кабинети шахсии фурӯшанда дар десктоп ва телефон бо экрани «Overview» ва графики транзаксияҳо ҷойгир аст. Дар тарафи рост — сарлавҳаи «The Merchant service provides access to the Seller's Personal cabinet» ва тавсифи имкониятҳои кабинет: бахши огоҳиномаҳо бо хабарҳои система ва тақризҳо, бахши пардохтҳо бо омори амалиётҳои муваффақ ва ташаккулёфта, инчунин танзимоти шахсӣ бо маълумоти маъмур, иваз кардани парол ва нишон додани email барои огоҳиномаҳо дар бораи воридот. Дар поёни сомона блоки «About Us» бо маълумоти бонк ва нишонаҳои иҷтимоӣ, инчунин блоки «Contacts» бо суроға, телефонҳо ва email ҷойгиранд; дар поён — сатри ҳуқуқи муаллиф.\n\nРаванди истифода: корбар функсияҳои кабинетро — огоҳиномаҳо, омори пардохтҳо ва танзимотро меомӯзад, сипас маълумоти тамоси бонкро дар поёни сомона барои алоқа меёбад.\n\nАҳамият барои тиҷорат: тавсифи кабинет бо огоҳиномаҳо, омор ва танзимот нишон медиҳад, ки пас аз пайвастшавӣ фурӯшанда абзори мукаммали идораи пардохтҳоро мегирад. Тамосҳои муфассал дар поёни сомона эътимодро тақвият медиҳанд ва гузаришро ба муроҷиат осон мекунанд.",
+            },
+          },
+        ],
+      },
     ],
   },
   {

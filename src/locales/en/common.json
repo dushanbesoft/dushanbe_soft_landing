@@ -80,7 +80,7 @@
     "livechat": {
       "title": "LiveChat TJ - Online Chat",
       "subtitle": "LiveChat TJ",
-      "description": "Web service and online consultation platform for business, providing real-time communication between organizations and clients. The platform helps automate customer support, improve service quality and increase sales through instant messaging.",
+      "description": "A web service and online chat widget for business that connects your website visitors with your team in real time. LiveChat TJ automates customer support, improves service quality, and helps increase sales through instant messaging.",
       "tags": [
         "System architecture development",
         "High system stability",
@@ -271,7 +271,10 @@
     "about_project": "About the project",
     "what_was_done": "What was done",
     "technologies": "Technologies",
-    "gallery": "Gallery"
+    "gallery": "Gallery",
+    "gallery_prev": "Previous image",
+    "gallery_next": "Next image",
+    "gallery_close": "Close viewer"
   },
   "projects": {
     "president": {
@@ -302,7 +305,19 @@
     },
     "livechat-tj": {
       "title": "LiveChat TJ - Online Chat",
-      "description": "A web service and online consulting platform for businesses that provides real-time communication between organizations and customers. The platform helps automate customer support, improve service quality, and increase sales through instant messaging."
+      "description": "LiveChat TJ is a web service and online chat platform for businesses that provides real-time communication between companies and their customers. The platform automates customer support, improves service quality, and helps increase sales through instant messaging.",
+      "gallery": [
+        "LiveChat landing hero: the “Online chat to connect with your customers” headline and the Try for free button",
+        "Solution block: preview of the LiveChat operator dialogs panel on a laptop and the chat widget on a phone",
+        "Features section: capability cards — instant reply, smart widget, analytics, teamwork, reply templates and CRM integrations",
+        "How it works block: four steps to connect the online chat to your website",
+        "Customization section: adapting the online chat design to your brand style with an operator interface preview",
+        "Pricing section: Starter, Pro and Business plans with their feature lists",
+        "Integrations section: connecting messengers, CRM systems, website builders and a custom API",
+        "Benefits block: sales growth, lower costs and attracting more customers",
+        "Support section: contact options (email, 24/7 chat, documentation) and frequently asked questions",
+        "“Why LiveChat” section highlighting key features together with the site footer"
+      ]
     },
     "telecomm": {
       "title": "Telecomm Technology",
