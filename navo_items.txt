@@ -1,0 +1,287 @@
+    projectComponents: [
+      {
+        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        items: [
+          {
+            slug: "footer-page",
+            title: {
+              ru: "Подвал сайта",
+              en: "Footer",
+              tj: "Поёни сомона",
+            },
+            imageSrc: "/images/projects/navo/footer-page.png",
+            BannerSrc: "/images/projects/navo/footer-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Подвал сайта»",
+              en: "Overview of the «Footer» section",
+              tj: "Баррасии бахши «Поёни сомона»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Подвал сайта». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Footer» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Поёни сомона»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "header-page",
+            title: {
+              ru: "Шапка сайта",
+              en: "Header",
+              tj: "Сарлавҳаи сомона",
+            },
+            imageSrc: "/images/projects/navo/header-page.png",
+            BannerSrc: "/images/projects/navo/header-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Шапка сайта»",
+              en: "Overview of the «Header» section",
+              tj: "Баррасии бахши «Сарлавҳаи сомона»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Шапка сайта». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Header» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Сарлавҳаи сомона»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-categories-page",
+            title: {
+              ru: "Главная: Категории",
+              en: "Main: Categories",
+              tj: "Асосӣ: Категорияҳо",
+            },
+            imageSrc: "/images/projects/navo/main-categories-page.png",
+            BannerSrc: "/images/projects/navo/main-categories-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Категории»",
+              en: "Overview of the «Main: Categories» section",
+              tj: "Баррасии бахши «Асосӣ: Категорияҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Категории». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Categories» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Категорияҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-contacts-page",
+            title: {
+              ru: "Главная: Контакты",
+              en: "Main: Contacts",
+              tj: "Асосӣ: Тамосҳо",
+            },
+            imageSrc: "/images/projects/navo/main-contacts-page.png",
+            BannerSrc: "/images/projects/navo/main-contacts-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Контакты»",
+              en: "Overview of the «Main: Contacts» section",
+              tj: "Баррасии бахши «Асосӣ: Тамосҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Контакты». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Contacts» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Тамосҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-media-pictupe-page",
+            title: {
+              ru: "Главная: Фотогалерея",
+              en: "Main: Photo Gallery",
+              tj: "Асосӣ: Аксҳо",
+            },
+            imageSrc: "/images/projects/navo/main-media-pictupe-page.png",
+            BannerSrc: "/images/projects/navo/main-media-pictupe-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Фотогалерея»",
+              en: "Overview of the «Main: Photo Gallery» section",
+              tj: "Баррасии бахши «Асосӣ: Аксҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Фотогалерея». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Photo Gallery» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Аксҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-media-video-page",
+            title: {
+              ru: "Главная: Видеогалерея",
+              en: "Main: Video Gallery",
+              tj: "Асосӣ: Видеоҳо",
+            },
+            imageSrc: "/images/projects/navo/main-media-video-page.png",
+            BannerSrc: "/images/projects/navo/main-media-video-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Видеогалерея»",
+              en: "Overview of the «Main: Video Gallery» section",
+              tj: "Баррасии бахши «Асосӣ: Видеоҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Видеогалерея». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Video Gallery» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Видеоҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-music-page",
+            title: {
+              ru: "Главная: Музыка",
+              en: "Main: Music",
+              tj: "Асосӣ: Мусиқӣ",
+            },
+            imageSrc: "/images/projects/navo/main-music-page.png",
+            BannerSrc: "/images/projects/navo/main-music-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Музыка»",
+              en: "Overview of the «Main: Music» section",
+              tj: "Баррасии бахши «Асосӣ: Мусиқӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Музыка». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Music» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Мусиқӣ»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-podcasts-page",
+            title: {
+              ru: "Главная: Подкасты",
+              en: "Main: Podcasts",
+              tj: "Асосӣ: Подкастҳо",
+            },
+            imageSrc: "/images/projects/navo/main-podcasts-page.png",
+            BannerSrc: "/images/projects/navo/main-podcasts-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Подкасты»",
+              en: "Overview of the «Main: Podcasts» section",
+              tj: "Баррасии бахши «Асосӣ: Подкастҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Подкасты». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Podcasts» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Подкастҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-programs-page",
+            title: {
+              ru: "Главная: Программы",
+              en: "Main: Programs",
+              tj: "Асосӣ: Барномаҳо",
+            },
+            imageSrc: "/images/projects/navo/main-programs-page.png",
+            BannerSrc: "/images/projects/navo/main-programs-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Программы»",
+              en: "Overview of the «Main: Programs» section",
+              tj: "Баррасии бахши «Асосӣ: Барномаҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Программы». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Programs» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Барномаҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "media-page",
+            title: {
+              ru: "Медиа",
+              en: "Media",
+              tj: "Медиа",
+            },
+            imageSrc: "/images/projects/navo/media-page.png",
+            BannerSrc: "/images/projects/navo/media-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Медиа»",
+              en: "Overview of the «Media» section",
+              tj: "Баррасии бахши «Медиа»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Медиа». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Media» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Медиа»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "news-page",
+            title: {
+              ru: "Новости",
+              en: "News",
+              tj: "Хабарҳо",
+            },
+            imageSrc: "/images/projects/navo/news-page.png",
+            BannerSrc: "/images/projects/navo/news-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Новости»",
+              en: "Overview of the «News» section",
+              tj: "Баррасии бахши «Хабарҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Новости». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «News» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Хабарҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "peam-page",
+            title: {
+              ru: "Послания",
+              en: "Messages",
+              tj: "Паёмҳо",
+            },
+            imageSrc: "/images/projects/navo/peam-page.png",
+            BannerSrc: "/images/projects/navo/peam-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Послания»",
+              en: "Overview of the «Messages» section",
+              tj: "Баррасии бахши «Паёмҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Послания». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Messages» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Паёмҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "podcasts-page",
+            title: {
+              ru: "Подкасты",
+              en: "Podcasts",
+              tj: "Подкастҳо",
+            },
+            imageSrc: "/images/projects/navo/podcasts-page.png",
+            BannerSrc: "/images/projects/navo/podcasts-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Подкасты»",
+              en: "Overview of the «Podcasts» section",
+              tj: "Баррасии бахши «Подкастҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Подкасты». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Podcasts» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Подкастҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "programs-page",
+            title: {
+              ru: "Программы",
+              en: "Programs",
+              tj: "Барномаҳо",
+            },
+            imageSrc: "/images/projects/navo/programs-page.png",
+            BannerSrc: "/images/projects/navo/programs-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Программы»",
+              en: "Overview of the «Programs» section",
+              tj: "Баррасии бахши «Барномаҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Программы». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Programs» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Барномаҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+        ],
+      },
+    ],
