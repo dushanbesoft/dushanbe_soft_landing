@@ -541,6 +541,411 @@ export const ProductSite: ProductSiteItem[] = [
           },
         ],
       },
+      {
+        tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели маъмурият" },
+        items: [
+          {
+            slug: "control-panel-page",
+            title: {
+              ru: "Панель управления",
+              en: "Control Panel",
+              tj: "Панели идоракунӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/control-panel-page.png",
+            BannerSrc: "/images/projects/pic/admin/control-panel-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Панель управления»",
+              en: "Management of the «Control Panel» section",
+              tj: "Идоракунии бахши «Панели идоракунӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Панель управления». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Control Panel». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Панели идоракунӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "users-page",
+            title: {
+              ru: "Пользователи",
+              en: "Users",
+              tj: "Истифодабарандагон",
+            },
+            imageSrc: "/images/projects/pic/admin/users-page.png",
+            BannerSrc: "/images/projects/pic/admin/users-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Пользователи»",
+              en: "Management of the «Users» section",
+              tj: "Идоракунии бахши «Истифодабарандагон»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Пользователи». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Users». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Истифодабарандагон» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "roles-page",
+            title: {
+              ru: "Роли",
+              en: "Roles",
+              tj: "Нақшҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/roles-page.png",
+            BannerSrc: "/images/projects/pic/admin/roles-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Роли»",
+              en: "Management of the «Roles» section",
+              tj: "Идоракунии бахши «Нақшҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Роли». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Roles». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Нақшҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "news-categories-page",
+            title: {
+              ru: "Категории новостей",
+              en: "News Categories",
+              tj: "Категорияҳои хабарҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/news-categories-page.png",
+            BannerSrc: "/images/projects/pic/admin/news-categories-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Категории новостей»",
+              en: "Management of the «News Categories» section",
+              tj: "Идоракунии бахши «Категорияҳои хабарҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Категории новостей». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «News Categories». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Категорияҳои хабарҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "news-page",
+            title: {
+              ru: "Новости",
+              en: "News",
+              tj: "Хабарҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/news-page.png",
+            BannerSrc: "/images/projects/pic/admin/news-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Новости»",
+              en: "Management of the «News» section",
+              tj: "Идоракунии бахши «Хабарҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Новости». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «News». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Хабарҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "projects-page",
+            title: {
+              ru: "Проекты",
+              en: "Projects",
+              tj: "Лоиҳаҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/projects-page.png",
+            BannerSrc: "/images/projects/pic/admin/projects-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Проекты»",
+              en: "Management of the «Projects» section",
+              tj: "Идоракунии бахши «Лоиҳаҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Проекты». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Projects». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Лоиҳаҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "announcements-page",
+            title: {
+              ru: "Объявления",
+              en: "Announcements",
+              tj: "Эълонҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/announcements-page.png",
+            BannerSrc: "/images/projects/pic/admin/announcements-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Объявления»",
+              en: "Management of the «Announcements» section",
+              tj: "Идоракунии бахши «Эълонҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Объявления». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Announcements». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Эълонҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "appeals-page",
+            title: {
+              ru: "Обращения",
+              en: "Appeals",
+              tj: "Муроҷиатҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/appeals-page.png",
+            BannerSrc: "/images/projects/pic/admin/appeals-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Обращения»",
+              en: "Management of the «Appeals» section",
+              tj: "Идоракунии бахши «Муроҷиатҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Обращения». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Appeals». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Муроҷиатҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "crm-complaints-and-Inquiries-page",
+            title: {
+              ru: "CRM: Жалобы и запросы",
+              en: "CRM: Complaints and Inquiries",
+              tj: "CRM: Шикоятҳо ва дархостҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
+            BannerSrc: "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
+            shortInfo: {
+              ru: "Управление разделом «CRM: Жалобы и запросы»",
+              en: "Management of the «CRM: Complaints and Inquiries» section",
+              tj: "Идоракунии бахши «CRM: Шикоятҳо ва дархостҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «CRM: Жалобы и запросы». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «CRM: Complaints and Inquiries». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «CRM: Шикоятҳо ва дархостҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "action-log-page",
+            title: {
+              ru: "Журнал действий",
+              en: "Action Log",
+              tj: "Журнали амалҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/action-log-page.png",
+            BannerSrc: "/images/projects/pic/admin/action-log-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Журнал действий»",
+              en: "Management of the «Action Log» section",
+              tj: "Идоракунии бахши «Журнали амалҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Журнал действий». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Action Log». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Журнали амалҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "procurement-methods-page",
+            title: {
+              ru: "Методы закупок",
+              en: "Procurement Methods",
+              tj: "Усулҳои харид",
+            },
+            imageSrc: "/images/projects/pic/admin/procurement-methods-page.png",
+            BannerSrc: "/images/projects/pic/admin/procurement-methods-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Методы закупок»",
+              en: "Management of the «Procurement Methods» section",
+              tj: "Идоракунии бахши «Усулҳои харид»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Методы закупок». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Procurement Methods». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Усулҳои харид» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "public-procurement-portal-page",
+            title: {
+              ru: "Портал госзакупок",
+              en: "Public Procurement Portal",
+              tj: "Портали хариди давлатӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/public-procurement-portal-page.png",
+            BannerSrc: "/images/projects/pic/admin/public-procurement-portal-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Портал госзакупок»",
+              en: "Management of the «Public Procurement Portal» section",
+              tj: "Идоракунии бахши «Портали хариди давлатӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Портал госзакупок». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Public Procurement Portal». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Портали хариди давлатӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "about-us-page",
+            title: {
+              ru: "О нас",
+              en: "About Us",
+              tj: "Дар бораи мо",
+            },
+            imageSrc: "/images/projects/pic/admin/about-us-page.png",
+            BannerSrc: "/images/projects/pic/admin/about-us-page.png",
+            shortInfo: {
+              ru: "Управление разделом «О нас»",
+              en: "Management of the «About Us» section",
+              tj: "Идоракунии бахши «Дар бораи мо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «О нас». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «About Us». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Дар бораи мо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "partners-page",
+            title: {
+              ru: "Партнеры",
+              en: "Partners",
+              tj: "Шарикон",
+            },
+            imageSrc: "/images/projects/pic/admin/partners-page.png",
+            BannerSrc: "/images/projects/pic/admin/partners-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Партнеры»",
+              en: "Management of the «Partners» section",
+              tj: "Идоракунии бахши «Шарикон»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Партнеры». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Partners». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Шарикон» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "state-symbols-page",
+            title: {
+              ru: "Государственные символы",
+              en: "State Symbols",
+              tj: "Рамзҳои давлатӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/state-symbols-page.png",
+            BannerSrc: "/images/projects/pic/admin/state-symbols-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Государственные символы»",
+              en: "Management of the «State Symbols» section",
+              tj: "Идоракунии бахши «Рамзҳои давлатӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Государственные символы». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «State Symbols». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Рамзҳои давлатӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "organizational-structure-page",
+            title: {
+              ru: "Организационная структура",
+              en: "Organizational Structure",
+              tj: "Сохтори ташкилӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/organizational-structure-page.png",
+            BannerSrc: "/images/projects/pic/admin/organizational-structure-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Организационная структура»",
+              en: "Management of the «Organizational Structure» section",
+              tj: "Идоракунии бахши «Сохтори ташкилӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Организационная структура». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Organizational Structure». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Сохтори ташкилӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "menu-page",
+            title: {
+              ru: "Управление меню",
+              en: "Menu Management",
+              tj: "Идоракунии меню",
+            },
+            imageSrc: "/images/projects/pic/admin/menu-page.png",
+            BannerSrc: "/images/projects/pic/admin/menu-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Управление меню»",
+              en: "Management of the «Menu Management» section",
+              tj: "Идоракунии бахши «Идоракунии меню»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Управление меню». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Menu Management». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Идоракунии меню» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "questions-and-answers-page",
+            title: {
+              ru: "Вопросы и ответы",
+              en: "Q&A",
+              tj: "Саволҳо ва ҷавобҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/questions-and-answers-page.png",
+            BannerSrc: "/images/projects/pic/admin/questions-and-answers-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Вопросы и ответы»",
+              en: "Management of the «Q&A» section",
+              tj: "Идоракунии бахши «Саволҳо ва ҷавобҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Вопросы и ответы». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Q&A». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Саволҳо ва ҷавобҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "administrator's-guide-page",
+            title: {
+              ru: "Руководство администратора",
+              en: "Administrator's Guide",
+              tj: "Роҳнамои маъмур",
+            },
+            imageSrc: "/images/projects/pic/admin/administrator's-guide-page.png",
+            BannerSrc: "/images/projects/pic/admin/administrator's-guide-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Руководство администратора»",
+              en: "Management of the «Administrator's Guide» section",
+              tj: "Идоракунии бахши «Роҳнамои маъмур»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Руководство администратора». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Administrator's Guide». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Роҳнамои маъмур» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "settings-page",
+            title: {
+              ru: "Настройки",
+              en: "Settings",
+              tj: "Танзимот",
+            },
+            imageSrc: "/images/projects/pic/admin/settings-page.png",
+            BannerSrc: "/images/projects/pic/admin/settings-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Настройки»",
+              en: "Management of the «Settings» section",
+              tj: "Идоракунии бахши «Танзимот»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Настройки». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Settings». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Танзимот» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+        ],
+      },
     ],
   },
   {
@@ -3569,6 +3974,293 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "navo",
+    projectComponents: [
+      {
+        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        items: [
+          {
+            slug: "footer-page",
+            title: {
+              ru: "Подвал сайта",
+              en: "Footer",
+              tj: "Поёни сомона",
+            },
+            imageSrc: "/images/projects/navo/footer-page.png",
+            BannerSrc: "/images/projects/navo/footer-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Подвал сайта»",
+              en: "Overview of the «Footer» section",
+              tj: "Баррасии бахши «Поёни сомона»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Подвал сайта». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Footer» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Поёни сомона»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "header-page",
+            title: {
+              ru: "Шапка сайта",
+              en: "Header",
+              tj: "Сарлавҳаи сомона",
+            },
+            imageSrc: "/images/projects/navo/header-page.png",
+            BannerSrc: "/images/projects/navo/header-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Шапка сайта»",
+              en: "Overview of the «Header» section",
+              tj: "Баррасии бахши «Сарлавҳаи сомона»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Шапка сайта». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Header» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Сарлавҳаи сомона»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-categories-page",
+            title: {
+              ru: "Главная: Категории",
+              en: "Main: Categories",
+              tj: "Асосӣ: Категорияҳо",
+            },
+            imageSrc: "/images/projects/navo/main-categories-page.png",
+            BannerSrc: "/images/projects/navo/main-categories-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Категории»",
+              en: "Overview of the «Main: Categories» section",
+              tj: "Баррасии бахши «Асосӣ: Категорияҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Категории». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Categories» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Категорияҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-contacts-page",
+            title: {
+              ru: "Главная: Контакты",
+              en: "Main: Contacts",
+              tj: "Асосӣ: Тамосҳо",
+            },
+            imageSrc: "/images/projects/navo/main-contacts-page.png",
+            BannerSrc: "/images/projects/navo/main-contacts-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Контакты»",
+              en: "Overview of the «Main: Contacts» section",
+              tj: "Баррасии бахши «Асосӣ: Тамосҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Контакты». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Contacts» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Тамосҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-media-pictupe-page",
+            title: {
+              ru: "Главная: Фотогалерея",
+              en: "Main: Photo Gallery",
+              tj: "Асосӣ: Аксҳо",
+            },
+            imageSrc: "/images/projects/navo/main-media-pictupe-page.png",
+            BannerSrc: "/images/projects/navo/main-media-pictupe-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Фотогалерея»",
+              en: "Overview of the «Main: Photo Gallery» section",
+              tj: "Баррасии бахши «Асосӣ: Аксҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Фотогалерея». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Photo Gallery» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Аксҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-media-video-page",
+            title: {
+              ru: "Главная: Видеогалерея",
+              en: "Main: Video Gallery",
+              tj: "Асосӣ: Видеоҳо",
+            },
+            imageSrc: "/images/projects/navo/main-media-video-page.png",
+            BannerSrc: "/images/projects/navo/main-media-video-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Видеогалерея»",
+              en: "Overview of the «Main: Video Gallery» section",
+              tj: "Баррасии бахши «Асосӣ: Видеоҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Видеогалерея». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Video Gallery» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Видеоҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-music-page",
+            title: {
+              ru: "Главная: Музыка",
+              en: "Main: Music",
+              tj: "Асосӣ: Мусиқӣ",
+            },
+            imageSrc: "/images/projects/navo/main-music-page.png",
+            BannerSrc: "/images/projects/navo/main-music-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Музыка»",
+              en: "Overview of the «Main: Music» section",
+              tj: "Баррасии бахши «Асосӣ: Мусиқӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Музыка». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Music» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Мусиқӣ»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-podcasts-page",
+            title: {
+              ru: "Главная: Подкасты",
+              en: "Main: Podcasts",
+              tj: "Асосӣ: Подкастҳо",
+            },
+            imageSrc: "/images/projects/navo/main-podcasts-page.png",
+            BannerSrc: "/images/projects/navo/main-podcasts-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Подкасты»",
+              en: "Overview of the «Main: Podcasts» section",
+              tj: "Баррасии бахши «Асосӣ: Подкастҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Подкасты». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Podcasts» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Подкастҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "main-programs-page",
+            title: {
+              ru: "Главная: Программы",
+              en: "Main: Programs",
+              tj: "Асосӣ: Барномаҳо",
+            },
+            imageSrc: "/images/projects/navo/main-programs-page.png",
+            BannerSrc: "/images/projects/navo/main-programs-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Главная: Программы»",
+              en: "Overview of the «Main: Programs» section",
+              tj: "Баррасии бахши «Асосӣ: Барномаҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Главная: Программы». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Main: Programs» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Асосӣ: Барномаҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "media-page",
+            title: {
+              ru: "Медиа",
+              en: "Media",
+              tj: "Медиа",
+            },
+            imageSrc: "/images/projects/navo/media-page.png",
+            BannerSrc: "/images/projects/navo/media-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Медиа»",
+              en: "Overview of the «Media» section",
+              tj: "Баррасии бахши «Медиа»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Медиа». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Media» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Медиа»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "news-page",
+            title: {
+              ru: "Новости",
+              en: "News",
+              tj: "Хабарҳо",
+            },
+            imageSrc: "/images/projects/navo/news-page.png",
+            BannerSrc: "/images/projects/navo/news-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Новости»",
+              en: "Overview of the «News» section",
+              tj: "Баррасии бахши «Хабарҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Новости». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «News» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Хабарҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "peam-page",
+            title: {
+              ru: "Послания",
+              en: "Messages",
+              tj: "Паёмҳо",
+            },
+            imageSrc: "/images/projects/navo/peam-page.png",
+            BannerSrc: "/images/projects/navo/peam-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Послания»",
+              en: "Overview of the «Messages» section",
+              tj: "Баррасии бахши «Паёмҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Послания». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Messages» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Паёмҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "podcasts-page",
+            title: {
+              ru: "Подкасты",
+              en: "Podcasts",
+              tj: "Подкастҳо",
+            },
+            imageSrc: "/images/projects/navo/podcasts-page.png",
+            BannerSrc: "/images/projects/navo/podcasts-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Подкасты»",
+              en: "Overview of the «Podcasts» section",
+              tj: "Баррасии бахши «Подкастҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Подкасты». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Podcasts» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Подкастҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+          {
+            slug: "programs-page",
+            title: {
+              ru: "Программы",
+              en: "Programs",
+              tj: "Барномаҳо",
+            },
+            imageSrc: "/images/projects/navo/programs-page.png",
+            BannerSrc: "/images/projects/navo/programs-page.png",
+            shortInfo: {
+              ru: "Обзор раздела «Программы»",
+              en: "Overview of the «Programs» section",
+              tj: "Баррасии бахши «Барномаҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел демонстрирует функционал и визуальное оформление страницы «Программы». Дизайн спроектирован с учетом современных стандартов пользовательского опыта (UX) и интерфейса (UI), обеспечивая удобную навигацию и доступ к контенту.",
+              en: "This section showcases the functionality and visual design of the «Programs» page. The design is built according to modern user experience (UX) and interface (UI) standards, ensuring convenient navigation and content access.",
+              tj: "Ин бахш вазифаҳо ва ороиши визуалии саҳифаи «Барномаҳо»-ро намоиш медиҳад. Тарроҳӣ бо назардошти стандартҳои муосири таҷрибаи корбар (UX) ва интерфейс (UI) таҳия шудааст ва роҳнамоии қулай ва дастрасиро ба мундариҷа таъмин мекунад.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     imageSrc: "/images/projects/somontv.webp",

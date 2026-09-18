@@ -1,0 +1,405 @@
+      {
+        tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели маъмурият" },
+        items: [
+          {
+            slug: "about-us-page",
+            title: {
+              ru: "О нас",
+              en: "About Us",
+              tj: "Дар бораи мо",
+            },
+            imageSrc: "/images/projects/pic/admin/about-us-page.png",
+            BannerSrc: "/images/projects/pic/admin/about-us-page.png",
+            shortInfo: {
+              ru: "Управление разделом «О нас»",
+              en: "Management of the «About Us» section",
+              tj: "Идоракунии бахши «Дар бораи мо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «О нас». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «About Us». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Дар бораи мо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "action-log-page",
+            title: {
+              ru: "Журнал действий",
+              en: "Action Log",
+              tj: "Журнали амалҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/action-log-page.png",
+            BannerSrc: "/images/projects/pic/admin/action-log-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Журнал действий»",
+              en: "Management of the «Action Log» section",
+              tj: "Идоракунии бахши «Журнали амалҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Журнал действий». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Action Log». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Журнали амалҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "administrator's-guide-page",
+            title: {
+              ru: "Руководство администратора",
+              en: "Administrator's Guide",
+              tj: "Роҳнамои маъмур",
+            },
+            imageSrc: "/images/projects/pic/admin/administrator's-guide-page.png",
+            BannerSrc: "/images/projects/pic/admin/administrator's-guide-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Руководство администратора»",
+              en: "Management of the «Administrator's Guide» section",
+              tj: "Идоракунии бахши «Роҳнамои маъмур»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Руководство администратора». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Administrator's Guide». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Роҳнамои маъмур» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "announcements-page",
+            title: {
+              ru: "Объявления",
+              en: "Announcements",
+              tj: "Эълонҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/announcements-page.png",
+            BannerSrc: "/images/projects/pic/admin/announcements-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Объявления»",
+              en: "Management of the «Announcements» section",
+              tj: "Идоракунии бахши «Эълонҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Объявления». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Announcements». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Эълонҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "appeals-page",
+            title: {
+              ru: "Обращения",
+              en: "Appeals",
+              tj: "Муроҷиатҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/appeals-page.png",
+            BannerSrc: "/images/projects/pic/admin/appeals-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Обращения»",
+              en: "Management of the «Appeals» section",
+              tj: "Идоракунии бахши «Муроҷиатҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Обращения». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Appeals». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Муроҷиатҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "control-panel-page",
+            title: {
+              ru: "Панель управления",
+              en: "Control Panel",
+              tj: "Панели идоракунӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/control-panel-page.png",
+            BannerSrc: "/images/projects/pic/admin/control-panel-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Панель управления»",
+              en: "Management of the «Control Panel» section",
+              tj: "Идоракунии бахши «Панели идоракунӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Панель управления». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Control Panel». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Панели идоракунӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "crm-complaints-and-Inquiries-page",
+            title: {
+              ru: "CRM: Жалобы и запросы",
+              en: "CRM: Complaints and Inquiries",
+              tj: "CRM: Шикоятҳо ва дархостҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
+            BannerSrc: "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
+            shortInfo: {
+              ru: "Управление разделом «CRM: Жалобы и запросы»",
+              en: "Management of the «CRM: Complaints and Inquiries» section",
+              tj: "Идоракунии бахши «CRM: Шикоятҳо ва дархостҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «CRM: Жалобы и запросы». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «CRM: Complaints and Inquiries». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «CRM: Шикоятҳо ва дархостҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "menu-page",
+            title: {
+              ru: "Управление меню",
+              en: "Menu Management",
+              tj: "Идоракунии меню",
+            },
+            imageSrc: "/images/projects/pic/admin/menu-page.png",
+            BannerSrc: "/images/projects/pic/admin/menu-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Управление меню»",
+              en: "Management of the «Menu Management» section",
+              tj: "Идоракунии бахши «Идоракунии меню»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Управление меню». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Menu Management». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Идоракунии меню» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "news-categories-page",
+            title: {
+              ru: "Категории новостей",
+              en: "News Categories",
+              tj: "Категорияҳои хабарҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/news-categories-page.png",
+            BannerSrc: "/images/projects/pic/admin/news-categories-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Категории новостей»",
+              en: "Management of the «News Categories» section",
+              tj: "Идоракунии бахши «Категорияҳои хабарҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Категории новостей». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «News Categories». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Категорияҳои хабарҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "news-page",
+            title: {
+              ru: "Новости",
+              en: "News",
+              tj: "Хабарҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/news-page.png",
+            BannerSrc: "/images/projects/pic/admin/news-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Новости»",
+              en: "Management of the «News» section",
+              tj: "Идоракунии бахши «Хабарҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Новости». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «News». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Хабарҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "organizational-structure-page",
+            title: {
+              ru: "Организационная структура",
+              en: "Organizational Structure",
+              tj: "Сохтори ташкилӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/organizational-structure-page.png",
+            BannerSrc: "/images/projects/pic/admin/organizational-structure-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Организационная структура»",
+              en: "Management of the «Organizational Structure» section",
+              tj: "Идоракунии бахши «Сохтори ташкилӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Организационная структура». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Organizational Structure». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Сохтори ташкилӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "partners-page",
+            title: {
+              ru: "Партнеры",
+              en: "Partners",
+              tj: "Шарикон",
+            },
+            imageSrc: "/images/projects/pic/admin/partners-page.png",
+            BannerSrc: "/images/projects/pic/admin/partners-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Партнеры»",
+              en: "Management of the «Partners» section",
+              tj: "Идоракунии бахши «Шарикон»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Партнеры». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Partners». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Шарикон» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "procurement-methods-page",
+            title: {
+              ru: "Методы закупок",
+              en: "Procurement Methods",
+              tj: "Усулҳои харид",
+            },
+            imageSrc: "/images/projects/pic/admin/procurement-methods-page.png",
+            BannerSrc: "/images/projects/pic/admin/procurement-methods-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Методы закупок»",
+              en: "Management of the «Procurement Methods» section",
+              tj: "Идоракунии бахши «Усулҳои харид»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Методы закупок». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Procurement Methods». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Усулҳои харид» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "projects-page",
+            title: {
+              ru: "Проекты",
+              en: "Projects",
+              tj: "Лоиҳаҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/projects-page.png",
+            BannerSrc: "/images/projects/pic/admin/projects-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Проекты»",
+              en: "Management of the «Projects» section",
+              tj: "Идоракунии бахши «Лоиҳаҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Проекты». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Projects». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Лоиҳаҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "public-procurement-portal-page",
+            title: {
+              ru: "Портал госзакупок",
+              en: "Public Procurement Portal",
+              tj: "Портали хариди давлатӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/public-procurement-portal-page.png",
+            BannerSrc: "/images/projects/pic/admin/public-procurement-portal-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Портал госзакупок»",
+              en: "Management of the «Public Procurement Portal» section",
+              tj: "Идоракунии бахши «Портали хариди давлатӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Портал госзакупок». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Public Procurement Portal». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Портали хариди давлатӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "questions-and-answers-page",
+            title: {
+              ru: "Вопросы и ответы",
+              en: "Q&A",
+              tj: "Саволҳо ва ҷавобҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/questions-and-answers-page.png",
+            BannerSrc: "/images/projects/pic/admin/questions-and-answers-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Вопросы и ответы»",
+              en: "Management of the «Q&A» section",
+              tj: "Идоракунии бахши «Саволҳо ва ҷавобҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Вопросы и ответы». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Q&A». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Саволҳо ва ҷавобҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "roles-page",
+            title: {
+              ru: "Роли",
+              en: "Roles",
+              tj: "Нақшҳо",
+            },
+            imageSrc: "/images/projects/pic/admin/roles-page.png",
+            BannerSrc: "/images/projects/pic/admin/roles-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Роли»",
+              en: "Management of the «Roles» section",
+              tj: "Идоракунии бахши «Нақшҳо»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Роли». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Roles». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Нақшҳо» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "settings-page",
+            title: {
+              ru: "Настройки",
+              en: "Settings",
+              tj: "Танзимот",
+            },
+            imageSrc: "/images/projects/pic/admin/settings-page.png",
+            BannerSrc: "/images/projects/pic/admin/settings-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Настройки»",
+              en: "Management of the «Settings» section",
+              tj: "Идоракунии бахши «Танзимот»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Настройки». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Settings». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Танзимот» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "state-symbols-page",
+            title: {
+              ru: "Государственные символы",
+              en: "State Symbols",
+              tj: "Рамзҳои давлатӣ",
+            },
+            imageSrc: "/images/projects/pic/admin/state-symbols-page.png",
+            BannerSrc: "/images/projects/pic/admin/state-symbols-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Государственные символы»",
+              en: "Management of the «State Symbols» section",
+              tj: "Идоракунии бахши «Рамзҳои давлатӣ»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Государственные символы». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «State Symbols». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Рамзҳои давлатӣ» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+          {
+            slug: "users-page",
+            title: {
+              ru: "Пользователи",
+              en: "Users",
+              tj: "Истифодабарандагон",
+            },
+            imageSrc: "/images/projects/pic/admin/users-page.png",
+            BannerSrc: "/images/projects/pic/admin/users-page.png",
+            shortInfo: {
+              ru: "Управление разделом «Пользователи»",
+              en: "Management of the «Users» section",
+              tj: "Идоракунии бахши «Истифодабарандагон»",
+            },
+            fullInfo: {
+              ru: "Этот раздел административной панели позволяет управлять данными для «Пользователи». Пользователь с соответствующими правами может просматривать, добавлять, редактировать или удалять записи, обеспечивая актуальность информации на портале.",
+              en: "This section of the admin panel allows you to manage data for «Users». A user with appropriate permissions can view, add, edit, or delete records, ensuring the portal's information is up-to-date.",
+              tj: "Ин бахши панели маъмурият имкон медиҳад, ки маълумот барои «Истифодабарандагон» идора карда шавад. Истифодабаранда бо ҳуқуқҳои мувофиқ метавонад сабтҳоро бинад, илова кунад, таҳрир намояд ё нест кунад ва муҳимияти иттилоотро дар портал таъмин намояд.",
+            },
+          },
+        ],
+      },
