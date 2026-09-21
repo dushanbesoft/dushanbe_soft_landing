@@ -4366,7 +4366,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     ],
   },
   {
-    imageSrc: "/images/projects/zudsms.webp",
+    imageSrc: "/images/projects/zudsms.png",
     year: "2024",
     tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
     slug: "zudsms",
