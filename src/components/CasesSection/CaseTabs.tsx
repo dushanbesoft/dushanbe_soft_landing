@@ -10,6 +10,7 @@ interface ComponentItem {
   slug?: string;
   title: TranslatedString;
   imageSrc: string;
+  imageFit?: "cover" | "contain";
   shortInfo: TranslatedString;
   fullInfo: TranslatedString;
 }
@@ -70,6 +71,7 @@ export default function CaseTabs({ groups, lang, projectSlug, projectTitle }: Ca
                   alt={getTranslated(item.title, lang)}
                   fill
                   className={styles.image}
+                  style={item.imageFit ? { objectFit: item.imageFit } : undefined}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
