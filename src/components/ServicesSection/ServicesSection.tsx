@@ -15,8 +15,8 @@ const services = [
     icon: <img src="/icons/mobile.svg" alt="Мобильная разработка" style={{width: "100%", height: "100%", objectFit: "contain"}}/>
   },
   {
-    title: "AI Интеграция",
-    description: "Внедрение искусственного интеллекта: чатботы, компьютерное зрение, NLP и предиктивная аналитика.",
+    title: "Web3 & Blockchain",
+    description: "Разработка Web3 Blockchain проектов и смарт контрактов на Solidity. Таких сервисов как Bridge, AMM. Liqiudity, Swap, Launchpad, кошельки и т.д.",
     icon: <img src="/icons/ai.svg" alt="AI Интеграция" style={{width: "100%", height: "100%", objectFit: "contain"}}/>
   },
   {
