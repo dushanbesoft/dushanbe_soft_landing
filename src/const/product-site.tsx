@@ -1,4 +1,7 @@
 import { TranslatedString } from "../utils/translation";
+import { livechatAccountScreens } from "./livechat-account-screens";
+import { zudsmsLandingScreens } from "./zudsms-landing-screens";
+import { zudsmsAccountScreens } from "./zudsms-account-screens";
 
 export interface ProductSiteItem {
   imageSrc: string;
@@ -15,6 +18,7 @@ export interface ProductSiteItem {
       slug: string;
       title: TranslatedString;
       imageSrc: string;
+      imageFit?: "cover" | "contain";
       BannerSrc: string;
       shortInfo: TranslatedString;
       fullInfo: TranslatedString;
@@ -29,11 +33,6 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["React", "Redux", "Laravel", "MySQL", "REST API"],
     slug: "president",
-    // gallery: [
-    //   "/images/projects/president/banner.png",
-    //   "/images/projects/president/gallery-1.png",
-    //   "/images/projects/president/gallery-2.png",
-    // ],
     projectComponents: [
       {
         tabName: { ru: "Web-сайт", en: "Website", tj: "Веб-сайт" },
@@ -45,17 +44,17 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Homepage",
               tj: "Саҳифаи асосӣ",
             },
-            imageSrc: "/images/projects/president/web-home.png",
-            BannerSrc: "/images/projects/president/web-home.png",
+            imageSrc: "/images/projects/president/homepage.webp",
+            BannerSrc: "/images/projects/president/homepage.webp",
             shortInfo: {
               ru: "Ключевые события и навигация по порталу",
               en: "Featured events and portal navigation",
               tj: "Рӯйдодҳои муҳим ва роҳнамоии портал",
             },
             fullInfo: {
-              ru: "Главная страница prezident.tj объединяет основные точки входа в информационную систему. В верхней части расположены логотип и название учреждения, благодаря которым посетитель сразу понимает назначение ресурса. Основное меню предоставляет доступ к разделам «Таджикистан», «Государственные символы», «Лидер нации», «Президент», «Правительство» и «Исполнительный аппарат».\n\nЦентральный элемент страницы — слайдер ключевых событий. Каждый представленный материал сопровождается крупной фотографией, заголовком, датой и временем публикации. Дополнительный индикатор обозначает количество фотографий. Стрелки и точки навигации позволяют выбирать элементы слайдера, а ссылка в заголовке ведёт к соответствующей публикации. Такой формат объединяет визуальную презентацию и переход к подробной информации.\n\nВ шапке предусмотрены переключатель языковых версий, поиск по сайту, настройка размера текста и ссылки на социальные каналы. Отдельная кнопка «Письмо президенту» выделяет сценарий обращения и делает его доступным из общей навигации. В интерфейсе представлены таджикский, русский, английский и арабский языки.\n\nПользовательский сценарий: посетитель знакомится с главным событием, открывает заинтересовавшую публикацию либо выбирает другой путь — тематический раздел, поиск или форму обращения.\n\nЦенность для бизнеса: подобная главная страница подходит организациям, которым необходимо одновременно представлять бренд, публиковать важные сообщения и обеспечивать доступ к большому количеству разделов. Она может объединять новости компании, ключевые проекты, направления деятельности и кнопку связи с командой.",
-              en: "The prezident.tj homepage brings together the main entry points into the portal. The institutional logo and name identify the resource at the top of the page. The primary menu provides access to Tajikistan, State Symbols, Leader of the Nation, President, Government and Executive Office sections.\n\nThe central component is a featured event slider. Each item combines a large photograph, headline, publication date and time. An additional indicator displays the number of photographs. Arrows and navigation dots provide controls for selecting slides, while the headline links to the relevant publication. This connects visual presentation with access to detailed information.\n\nThe header also includes language selection, site search, text size controls and social media links. A separate “Letter to the President” button makes the enquiry journey visible within the shared navigation. The interface presents Tajik, Russian, English and Arabic language options.\n\nUser journey: visitors review a featured event and open its publication, or choose another route through a section link, search or the enquiry form.\n\nBusiness value: this homepage structure suits organisations that need to introduce their brand, highlight important announcements and provide access to numerous sections. A corporate version could combine company news, major projects, business areas and a prominent contact button.",
-              tj: "Саҳифаи асосии prezident.tj роҳҳои асосии дастрасӣ ба иттилооти порталро муттаҳид мекунад. Дар қисми боло нишон ва номи ниҳод ҷойгиранд, то корбар мақсади сомонаро зуд дарк намояд. Менюи асосӣ ба бахшҳои «Тоҷикистон», «Рамзҳои давлатӣ», «Пешвои миллат», «Президент», «Ҳукумат» ва «Дастгоҳи иҷроия» роҳ медиҳад.\n\nУнсури марказии саҳифа слайдери рӯйдодҳои муҳим мебошад. Ҳар мавод бо акси калон, сарлавҳа, сана ва вақти нашр пешниҳод мешавад. Нишондиҳандаи иловагӣ шумораи аксҳоро нишон медиҳад. Тирчаҳо ва нуқтаҳои роҳнамоӣ барои интихоби маводи слайдер пешбинӣ шудаанд, пайванди сарлавҳа бошад, ба хабари дахлдор мебарад.\n\nДар қисми боло интихоби забон, ҷустуҷӯ, танзими андозаи матн ва пайвандҳои шабакаҳои иҷтимоӣ ҷой доранд. Тугмаи алоҳидаи «Нома ба Президент» роҳи дастрасӣ ба шакли муроҷиатро намоён мекунад. Дар интерфейс забонҳои тоҷикӣ, русӣ, англисӣ ва арабӣ пешниҳод шудаанд.\n\nРаванди истифода: корбар бо рӯйдоди асосӣ шинос мешавад ва маводи ҷолибро мекушояд ё ба бахши дигар, ҷустуҷӯ ва шакли муроҷиат мегузарад.\n\nАҳамият барои тиҷорат: чунин саҳифа барои ташкилоте мувофиқ аст, ки мехоҳад бренд, хабарҳои муҳим ва бахшҳои зиёди сомонаро дар як муҳит пешниҳод кунад. Дар сомонаи ширкат ин сохтор метавонад хабарҳо, лоиҳаҳои асосӣ, самтҳои фаъолият ва тугмаи тамосро муттаҳид намояд.",
+              ru: "Главная страница prezident.tj объединяет основные точки входа в информационную систему. В верхней части расположены логотип и название учреждения, а основное меню открывает разделы «Таджикистан», «Государственные символы», «Лидер нации», «Президент», «Правительство» и «Исполнительный аппарат».\n\nЦентральный элемент страницы — слайдер ключевых событий. Каждый материал сопровождается крупной фотографией, заголовком, датой и временем публикации; стрелки и точки навигации позволяют переключать слайды. В шапке доступны переключатели таджикской, русской, английской и арабской версий, поиск, настройка размера текста и ссылки на социальные каналы. Отдельная кнопка «Письмо президенту» делает сценарий обращения заметным в общей навигации.\n\nПользовательский сценарий: посетитель знакомится с главным событием, открывает заинтересовавшую публикацию либо переходит в тематический раздел, к поиску или форме обращения.\n\nЦенность для бизнеса: такая главная страница подходит организациям, которым важно одновременно представить бренд, публиковать существенные сообщения и обеспечить быстрый доступ к большому числу разделов.",
+              en: "The prezident.tj homepage brings together the portal’s primary entry points. The logo and institutional name sit at the top, while the main navigation provides access to Tajikistan, State Symbols, Leader of the Nation, President, Government and Executive Office sections.\n\nThe page is centred around a featured event slider. Every item combines a large photograph with a headline, publication date and time; arrows and navigation dots let visitors switch slides. The header includes Tajik, Russian, English and Arabic language options, site search, text-size controls and social links. A dedicated “Letter to the President” button makes the enquiry route prominent within the shared navigation.\n\nUser journey: visitors review the main event, open the relevant publication, or continue through a topical section, search or the enquiry form.\n\nBusiness value: this homepage approach suits organisations that need to introduce their brand, publish important updates and provide fast access to a broad set of sections.",
+              tj: "Саҳифаи асосии prezident.tj роҳҳои асосии дастрасӣ ба иттилооти порталро муттаҳид мекунад. Дар қисми боло нишон ва номи ниҳод ҷойгиранд, менюи асосӣ бошад ба бахшҳои «Тоҷикистон», «Рамзҳои давлатӣ», «Пешвои миллат», «Президент», «Ҳукумат» ва «Дастгоҳи иҷроия» роҳ медиҳад.\n\nУнсури марказии саҳифа слайдери рӯйдодҳои муҳим мебошад. Ҳар мавод бо акси калон, сарлавҳа, сана ва вақти нашр пешниҳод мешавад; тирчаҳо ва нуқтаҳои роҳнамоӣ барои иваз кардани слайдҳо хизмат мекунанд. Дар қисми боло интихоби забонҳои тоҷикӣ, русӣ, англисӣ ва арабӣ, ҷустуҷӯ, танзими андозаи матн ва пайвандҳои шабакаҳои иҷтимоӣ мавҷуданд. Тугмаи алоҳидаи «Нома ба Президент» роҳи муроҷиатро дар навигатсияи умумӣ намоён мекунад.\n\nРаванди истифода: корбар бо рӯйдоди асосӣ шинос мешавад, маводи ҷолибро мекушояд ё ба бахши мавзуӣ, ҷустуҷӯ ва шакли муроҷиат мегузарад.\n\nАҳамият барои тиҷорат: чунин саҳифа барои ташкилоте мувофиқ аст, ки мехоҳад бренд, хабарҳои муҳим ва дастрасии зуд ба бахшҳои зиёди сомонаро дар як муҳит пешниҳод кунад.",
             },
           },
           {
@@ -65,17 +64,97 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Events",
               tj: "Рӯйдодҳо",
             },
-            imageSrc: "/images/projects/president/web-events.png",
-            BannerSrc: "/images/projects/president/web-events.png",
+            imageSrc: "/images/projects/president/events.webp",
+            BannerSrc: "/images/projects/president/events.webp",
             shortInfo: {
               ru: "Каталог публикаций, календарь и тематическая навигация",
               en: "Publication directory, calendar and topic navigation",
               tj: "Феҳристи мавод, тақвим ва роҳнамоии мавзуӣ",
             },
             fullInfo: {
-              ru: "Модуль «События» организует текущие публикации и предоставляет несколько способов ориентироваться в информационном потоке. В верхней части расположены категории: события, встречи, выступления, поездки, документы, послания, телеграммы и телефонные разговоры. Такое разделение позволяет выбирать материалы по их содержанию и формату.\n\nПубликации представлены компактным списком в две колонки. Каждая запись включает заголовок и сопровождающие сведения: дату, время и место события. Благодаря этому посетитель может оценить актуальность и содержание материала без открытия каждой страницы. Заголовок служит точкой перехода к подробной публикации.\n\nПравая колонка содержит календарь с месяцем, годом, сеткой дат и кнопкой сброса. Этот интерфейс предназначен для выбора временного контекста при работе с публикациями. Ниже расположен тематический каталог: внутренняя политика, международные структуры и двусторонние отношения. Вложенные направления предлагают более точный переход к интересующей теме. Кнопка «Подробнее» под списком служит входом к дополнительным материалам.\n\nПользовательский сценарий: посетитель выбирает тип публикации, просматривает заголовки и даты, затем открывает материал. Для уточнения направления поиска предусмотрены календарь и тематические ссылки.\n\nЦенность для бизнеса: аналогичный модуль подходит для корпоративного пресс-центра, отраслевого портала или архива мероприятий. Он позволяет структурировать новости по типам, направлениям деятельности и времени публикации.",
-              en: "The Events module organises current publications and offers several ways to browse the information. Categories at the top include events, meetings, speeches, visits, documents, addresses, telegrams and telephone conversations. This structure separates material by subject and publication type.\n\nEntries appear in a compact two-column list. Each includes a headline and supporting details such as the date, time and event location. Visitors can assess the subject and timing of an item without opening every page. The headline provides access to the complete publication.\n\nThe right-hand column contains a calendar with a month, year, date grid and reset button. This interface is intended to provide a date-based browsing option. Below it, a topic directory groups domestic policy, international organisations and bilateral relations, with links to more specific subjects. A “Read more” button beneath the list offers access to further material.\n\nUser journey: visitors select a publication category, review headlines and dates, and open an item. Calendar controls and topic links provide additional ways to narrow their area of interest.\n\nBusiness value: a similar module suits corporate newsrooms, industry portals and event archives. It can organise publications by content type, business area and date.",
-              tj: "Модули «Рӯйдодҳо» маводи ҷориро ба тартиб оварда, чанд роҳи пайдо кардани иттилоотро пешниҳод мекунад. Дар қисми боло хабарҳо, вохӯриҳо, суханрониҳо, сафарҳо, санадҳо, паём, барқияҳо ва суҳбатҳои телефонӣ ҷудо шудаанд. Ин гурӯҳбандӣ интихоби маводро аз рӯйи мазмун ва навъ осон мекунад.\n\nМавод дар рӯйхати ду сутун пешниҳод мешавад. Ҳар сабт сарлавҳа, сана, вақт ва ҷойи рӯйдодро дар бар мегирад. Корбар метавонад пеш аз кушодани саҳифа мавзуъ ва вақти нашри онро арзёбӣ намояд. Сарлавҳа барои гузариш ба матни муфассал хизмат мекунад.\n\nДар сутуни рост тақвим бо моҳ, сол, рӯзҳо ва тугмаи бозсозӣ ҷойгир аст. Он барои интихоби сана ҳангоми кор бо мавод пешбинӣ шудааст. Дар поён гурӯҳҳои мавзуӣ — сиёсати дохилӣ, сохторҳои байналмилалӣ ва муносибатҳои дуҷониба — пешниҳод мешаванд. Зербахшҳо ба мавзуъҳои мушаххастар роҳ медиҳанд. Тугмаи маълумоти бештар дастрасӣ ба маводи иловагиро пешниҳод мекунад.\n\nРаванди истифода: корбар навъи маводро интихоб мекунад, сарлавҳа ва санаҳоро мебинад ва хабари заруриро мекушояд. Барои муайян кардани самти ҷустуҷӯ тақвим ва пайвандҳои мавзуӣ мавҷуданд.\n\nАҳамият барои тиҷорат: ин сохтор барои маркази матбуоти ширкат, портали соҳавӣ ва бойгонии чорабиниҳо мувофиқ аст. Маводро аз рӯйи навъ, самти фаъолият ва вақт ташкил кардан мумкин аст.",
+              ru: "Раздел «События» организует текущие публикации и предлагает несколько способов ориентироваться в информационном потоке. В верхней части расположены категории событий, встреч, выступлений, поездок, документов, посланий, телеграмм и телефонных разговоров — посетитель выбирает материалы по теме и формату.\n\nПубликации представлены в двухколоночном списке: у каждого материала есть заголовок, дата, время и место события. Справа расположен календарь с выбором месяца и года, а ниже — тематический каталог по направлениям внутренней политики, международных структур и двусторонних отношений. Такая структура помогает быстро сузить область просмотра.\n\nПользовательский сценарий: посетитель выбирает категорию, просматривает заголовки и даты, при необходимости уточняет период через календарь и открывает нужную публикацию.\n\nЦенность для бизнеса: аналогичный модуль подойдёт для корпоративного пресс-центра, отраслевого портала или архива мероприятий — он структурирует новости по типу, теме и времени публикации.",
+              en: "The Events section organises current publications and provides several ways to navigate the information flow. Categories at the top cover events, meetings, speeches, visits, documents, addresses, telegrams and telephone conversations, allowing visitors to choose material by topic and format.\n\nPublications are displayed in a two-column list, with every item showing a headline, date, time and event location. A calendar on the right allows month and year selection, while the topic directory beneath it groups domestic policy, international organisations and bilateral relations. This structure helps visitors narrow the information they want to explore.\n\nUser journey: visitors choose a category, review headlines and dates, refine the period with the calendar if needed, and open the relevant publication.\n\nBusiness value: a similar module suits a corporate newsroom, industry portal or event archive, structuring updates by type, topic and publication time.",
+              tj: "Бахши «Рӯйдодҳо» маводи ҷориро ба тартиб оварда, чанд роҳи пайдо кардани иттилоотро пешниҳод мекунад. Дар қисми боло гурӯҳҳои рӯйдодҳо, вохӯриҳо, суханрониҳо, сафарҳо, санадҳо, паёмҳо, барқияҳо ва суҳбатҳои телефонӣ ҷойгир шудаанд; корбар маводро аз рӯйи мавзуъ ва навъ интихоб мекунад.\n\nМавод дар рӯйхати ду сутун пешниҳод мешавад: ҳар сабт сарлавҳа, сана, вақт ва ҷойи рӯйдодро дар бар мегирад. Дар тарафи рост тақвим бо интихоби моҳ ва сол, инчунин феҳристи мавзуӣ аз рӯйи сиёсати дохилӣ, сохторҳои байналмилалӣ ва муносибатҳои дуҷониба ҷойгир аст. Чунин сохтор барои маҳдуд кардани доираи ҷустуҷӯ кумак мекунад.\n\nРаванди истифода: корбар гурӯҳро интихоб мекунад, сарлавҳаҳо ва санаҳоро мебинад, ҳангоми зарурат давраро аз рӯйи тақвим муайян мекунад ва маводи лозимаро мекушояд.\n\nАҳамият барои тиҷорат: чунин модул барои маркази матбуоти ширкат, портали соҳавӣ ё бойгонии чорабиниҳо мувофиқ буда, хабарҳоро аз рӯйи навъ, мавзуъ ва вақти нашр ба тартиб меорад.",
+            },
+          },
+          {
+            slug: "photo-gallery",
+            title: {
+              ru: "Фотогалерея событий",
+              en: "Event Photo Gallery",
+              tj: "Галереяи аксҳои рӯйдодҳо",
+            },
+            imageSrc: "/images/projects/president/photo-gallery.webp",
+            BannerSrc: "/images/projects/president/photo-gallery.webp",
+            shortInfo: {
+              ru: "Визуальная летопись официальных мероприятий",
+              en: "A visual record of official events",
+              tj: "Сабти визуалии чорабиниҳои расмӣ",
+            },
+            fullInfo: {
+              ru: "Раздел «Видео и фото» представляет официальные события через крупную фотомозаику. Изображения различного размера собраны в единую композицию, благодаря чему посетитель видит несколько ключевых моментов мероприятия уже на первом экране.\n\nСетка объединяет общие планы, протокольные встречи, церемонии и рабочие эпизоды. Кнопка «Больше» открывает путь к дополнительным материалам, а следующий тематический блок продолжает знакомство с информацией о президенте.\n\nПользовательский сценарий: посетитель быстро просматривает визуальную хронику, выбирает интересующий материал и переходит к более полной фотоподборке.\n\nЦенность для бизнеса: такой формат подходит для пресс-центров, корпоративных сайтов и событийных архивов. Он позволяет эмоционально представить мероприятия, сохранить контекст и повысить заметность визуальных материалов.",
+              en: "The Video and Photo section presents official events through a prominent photo mosaic. Images in different sizes form a single composition, letting visitors see several key moments of an event on the first screen.\n\nThe grid combines wide shots, protocol meetings, ceremonies and working moments. A “More” button leads to additional material, while the next thematic block continues the introduction to information about the president.\n\nUser journey: visitors scan the visual record, choose the material that interests them and continue to a fuller photo selection.\n\nBusiness value: this format suits press centres, corporate websites and event archives. It presents events with emotional impact, preserves context and gives visual material greater prominence.",
+              tj: "Бахши «Видео ва акс» рӯйдодҳои расмиро тавассути мозаикаи калони аксҳо муаррифӣ мекунад. Тасвирҳои андозаашон гуногун ба як композитсия муттаҳид мешаванд, то корбар дар экрани аввал чанд лаҳзаи асосии чорабиниро бинад.\n\nШабака нақшаҳои умумӣ, вохӯриҳои расмӣ, маросимҳо ва лаҳзаҳои кориро муттаҳид мекунад. Тугмаи «Бештар» ба маводи иловагӣ роҳ медиҳад ва бахши мавзуии минбаъда шиносоиро бо маълумот дар бораи президент идома медиҳад.\n\nРаванди истифода: корбар хроникаи визуалиро зуд тамошо мекунад, маводи ҷолибро интихоб менамояд ва ба маҷмуаи пурратари аксҳо мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои марказҳои матбуотӣ, сомонаҳои корпоративӣ ва бойгонии чорабиниҳо мувофиқ аст. Он рӯйдодҳоро таъсирбахш муаррифӣ карда, контекстро нигоҳ медорад ва намоёнии маводи визуалиро баланд мекунад.",
+            },
+          },
+          {
+            slug: "event-detail",
+            title: {
+              ru: "Публикация с фотогалереей",
+              en: "Publication with Photo Gallery",
+              tj: "Интишор бо галереяи аксҳо",
+            },
+            imageSrc: "/images/projects/president/event-detail.webp",
+            BannerSrc: "/images/projects/president/event-detail.webp",
+            shortInfo: {
+              ru: "Материал события с серией фотографий и лентой новостей",
+              en: "An event story with a photo series and news feed",
+              tj: "Маводи рӯйдод бо силсилаи аксҳо ва лентаи хабарҳо",
+            },
+            fullInfo: {
+              ru: "Страница публикации объединяет заголовок события, дату, место проведения и последовательную фотогалерею. Над материалом расположены хлебные крошки, которые показывают путь от главной страницы к выбранному разделу и конкретной публикации.\n\nОсновная область отведена под фотографии мероприятия: крупная сетка помогает рассмотреть официальную встречу, церемониальные моменты и рабочие эпизоды. Кнопка «Поделиться» даёт посетителю быстрый способ распространить материал. В правой колонке находится лента других событий с датами и количеством изображений, поэтому после просмотра публикации можно сразу перейти к следующей новости.\n\nПользовательский сценарий: посетитель открывает публикацию из ленты, просматривает фотоподборку, при необходимости делится ссылкой и продолжает изучать другие события через боковую навигацию.\n\nЦенность для бизнеса: такой формат подходит для новостных порталов, пресс-служб и корпоративных сайтов. Он сочетает подробный материал, визуальное подтверждение события и рекомендации для дальнейшего просмотра.",
+              en: "The publication page combines an event headline, date, location and a sequential photo gallery. Breadcrumbs above the content show the path from the homepage to the selected section and the current publication.\n\nThe main area is dedicated to event photography: a large grid gives context to the official meeting, ceremonial moments and working scenes. A Share button provides a direct way to distribute the material. The right column contains other events with dates and image counts, allowing visitors to move to the next story after viewing the publication.\n\nUser journey: visitors open the story from the feed, review the photo selection, share the link if needed and continue through other events in the side navigation.\n\nBusiness value: this layout suits news portals, press offices and corporate websites. It brings together the full story, visual evidence of an event and recommendations for further reading.",
+              tj: "Саҳифаи интишор сарлавҳаи рӯйдод, сана, ҷойи баргузорӣ ва галереяи пайдарпайи аксҳоро муттаҳид мекунад. Дар болои мавод пайвандҳои роҳнамо ҷойгиранд, ки роҳро аз саҳифаи асосӣ то бахши интихобшуда ва интишори ҷориро нишон медиҳанд.\n\nҚисми асосӣ барои аксҳои чорабинӣ пешбинӣ шудааст: шабакаи калон имкони дидани вохӯрии расмӣ, лаҳзаҳои маросимӣ ва ҷараёни кориро медиҳад. Тугмаи «Мубодила» роҳи зуд барои паҳн кардани маводро фароҳам меорад. Дар сутуни рост рӯйхати дигар рӯйдодҳо бо сана ва шумораи аксҳо ҷойгир аст, то корбар баъд аз дидани мавод ба хабари навбатӣ гузарад.\n\nРаванди истифода: корбар интишорро аз лента мекушояд, маҷмуаи аксҳоро тамошо мекунад, дар ҳолати зарурӣ пайвандро мубодила намуда, тавассути навигатсияи паҳлӯӣ дигар рӯйдодҳоро меомӯзад.\n\nАҳамият барои тиҷорат: чунин тарҳ барои порталҳои хабарӣ, хадамоти матбуотӣ ва сомонаҳои корпоративӣ мувофиқ аст. Он маводи муфассал, тасдиқи визуалии рӯйдод ва роҳҳои идомаи тамошоро муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "photo-catalog",
+            title: {
+              ru: "Каталог фото и видео",
+              en: "Photo and Video Catalogue",
+              tj: "Феҳристи аксҳо ва видео",
+            },
+            imageSrc: "/images/projects/president/photo-catalog.webp",
+            BannerSrc: "/images/projects/president/photo-catalog.webp",
+            shortInfo: {
+              ru: "Поиск и структурированный архив медиаматериалов",
+              en: "Searchable, structured media archive",
+              tj: "Бойгонии сохторёфтаи маводи расонаӣ бо ҷустуҷӯ",
+            },
+            fullInfo: {
+              ru: "Каталог галереи объединяет фото- и видеоматериалы в одном разделе. Вкладки помогают переключаться между форматами, а большая строка поиска предназначена для быстрого нахождения нужной публикации по ключевым словам.\n\nКаждый элемент списка содержит миниатюру, заголовок, дату и количество фотографий. Справа расположены календарь для выбора периода и лента актуальных событий, поэтому посетитель может находить материалы одновременно по запросу, дате и тематической связи с другими публикациями.\n\nПользовательский сценарий: посетитель выбирает нужный тип медиа, использует поиск либо календарь, открывает интересующую фотоподборку и продолжает просмотр через боковую ленту.\n\nЦенность для бизнеса: такой каталог подходит для медиатеки компании, пресс-центра или архива проектов. Он помогает сохранить большой объём материалов понятным и доступным для поиска.",
+              en: "The gallery catalogue brings photo and video material together in one section. Tabs let visitors switch between formats, while a prominent search field supports finding the right publication by keywords.\n\nEach list item includes a thumbnail, headline, date and image count. A calendar on the right lets visitors select a period, and the current-events feed provides additional thematic routes to related publications. This means material can be found by query, date or connection to other stories.\n\nUser journey: visitors choose a media type, use search or the calendar, open the photo selection that interests them and continue through the side feed.\n\nBusiness value: this catalogue format suits a company media library, press centre or project archive. It keeps a large collection organised and easy to search.",
+              tj: "Феҳристи галерея маводи аксӣ ва видеоро дар як бахш муттаҳид мекунад. Варақаҳо барои гузаштан байни форматҳо кумак мекунанд, сатри калони ҷустуҷӯ бошад барои зуд пайдо кардани интишори лозим аз рӯйи калимаҳои калидӣ пешбинӣ шудааст.\n\nҲар унсури рӯйхат тасвири хурд, сарлавҳа, сана ва шумораи аксҳоро дар бар мегирад. Дар тарафи рост тақвим барои интихоби давра ва лентаи рӯйдодҳои ҷорӣ ҷойгир аст, бинобар ин корбар метавонад маводро аз рӯйи дархост, сана ё робита бо дигар интишорҳо пайдо кунад.\n\nРаванди истифода: корбар навъи расонаро интихоб мекунад, аз ҷустуҷӯ ё тақвим истифода мебарад, маҷмуаи аксҳои ҷолибро мекушояд ва тавассути лентаи паҳлӯӣ тамошоро идома медиҳад.\n\nАҳамият барои тиҷорат: чунин феҳрист барои китобхонаи расонаии ширкат, маркази матбуотӣ ё бойгонии лоиҳаҳо мувофиқ аст. Он маҷмуаи калони маводро ба тартиб оварда, ҷустуҷӯро осон мекунад.",
+            },
+          },
+          {
+            slug: "video-catalog",
+            title: {
+              ru: "Видеоархив",
+              en: "Video Archive",
+              tj: "Бойгонии видео",
+            },
+            imageSrc: "/images/projects/president/video-catalog.webp",
+            BannerSrc: "/images/projects/president/video-catalog.webp",
+            shortInfo: {
+              ru: "Хронологический список видеопубликаций с поиском",
+              en: "A searchable chronological list of video publications",
+              tj: "Рӯйхати хронологии видеоҳо бо ҷустуҷӯ",
+            },
+            fullInfo: {
+              ru: "Видеоархив использует общую структуру галереи, но фокусируется на видеопубликациях. Активная вкладка «Видео» отделяет этот формат от фотоархива, а поисковая строка позволяет находить материал по названию или ключевым словам.\n\nОсновной список выстроен по дате: каждая запись показывает заголовок, время и место публикации. Справа календарь задаёт временной фильтр, а лента событий даёт переходы к актуальным материалам. Благодаря этому архив остаётся удобным даже при большом количестве видео.\n\nПользовательский сценарий: посетитель выбирает вкладку видео, ищет ролик по запросу или просматривает список по датам, затем уточняет период через календарь или открывает связанное событие из боковой колонки.\n\nЦенность для бизнеса: подобный архив подходит организациям, которые регулярно публикуют обращения, трансляции, интервью или отчёты. Он упорядочивает медиаконтент и делает исторические материалы доступными для поиска.",
+              en: "The video archive uses the gallery’s shared structure but focuses on video publications. The active Video tab separates this format from the photo archive, while the search field lets visitors find material by title or keyword.\n\nThe main list is arranged chronologically, with each entry displaying a headline, time and publication location. A calendar on the right provides a time filter, and the events feed offers routes to current material. This keeps the archive easy to use even with a large number of videos.\n\nUser journey: visitors select the video tab, search by query or browse entries by date, then refine the period with the calendar or open a related event from the side column.\n\nBusiness value: this archive suits organisations that regularly publish addresses, broadcasts, interviews or reports. It organises media content and makes historic material searchable.",
+              tj: "Бойгонии видео сохтори умумии галереяро истифода мебарад, вале ба интишорҳои видеоӣ равона шудааст. Варақаи фаъоли «Видео» ин форматро аз бойгонии аксҳо ҷудо мекунад ва сатри ҷустуҷӯ барои пайдо кардани мавод аз рӯйи ном ё калимаи калидӣ хизмат мекунад.\n\nРӯйхати асосӣ аз рӯйи сана тартиб дода шудааст: ҳар сабт сарлавҳа, вақт ва ҷойи интишорро нишон медиҳад. Тақвим дар тарафи рост филтри вақтро пешниҳод мекунад ва лентаи рӯйдодҳо ба маводи ҷорӣ роҳ медиҳад. Аз ин рӯ бойгонӣ ҳатто ҳангоми зиёд будани видеоҳо ҳам барои истифода қулай мемонад.\n\nРаванди истифода: корбар варақаи видеоро интихоб мекунад, роликро аз рӯйи дархост меҷӯяд ё рӯйхатро аз рӯйи сана мебинад, сипас давраро тавассути тақвим муайян мекунад ё рӯйдоди алоқамандро аз сутуни паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин бойгонӣ барои ташкилотҳое мувофиқ аст, ки муроҷиатҳо, пахшҳо, мусоҳибаҳо ё ҳисоботҳоро мунтазам нашр мекунанд. Он муҳтавои расонаиро ба тартиб оварда, маводи таърихиро барои ҷустуҷӯ дастрас мекунад.",
             },
           },
           {
@@ -85,77 +164,717 @@ export const ProductSite: ProductSiteItem[] = [
               en: "President Section",
               tj: "Бахши «Президент»",
             },
-            imageSrc: "/images/projects/president/web-president.png",
-            BannerSrc: "/images/projects/president/web-president.png",
+            imageSrc: "/images/projects/president/president-profile.webp",
+            BannerSrc: "/images/projects/president/president-profile.webp",
             shortInfo: {
-              ru: "Тематическая структура информации",
-              en: "A structured information hub",
-              tj: "Сохтори мавзуии иттилоот",
+              ru: "Профиль и тематическая навигация по материалам",
+              en: "Profile and thematic navigation",
+              tj: "Профил ва роҳнамоии мавзуӣ аз рӯйи мавод",
             },
             fullInfo: {
-              ru: "Раздел «Президент» объединяет сведения о персоне и связанные с ней материалы в самостоятельный информационный блок. Основную область занимает крупная фотография, под которой размещены имя, должность и ссылка на биографию. Это создаёт понятную начальную точку для знакомства с разделом.\n\nБоковая навигация разделяет информацию на категории: полномочия, символы президента, книги, статьи, фильмы и награды. Каждый пункт представляет отдельное направление, поэтому посетителю не требуется просматривать весь массив материалов для поиска конкретной информации. Визуальное разделение пунктов помогает быстро ориентироваться в структуре.\n\nМодуль сочетает краткое представление и переходы к подробным сведениям. Биографическая информация, публикации и медиаматериалы связаны общей темой, но представлены через отдельные категории. Такой подход позволяет сохранять обзорную страницу компактной и понятной.\n\nПользовательский сценарий: посетитель знакомится с основными сведениями, затем выбирает биографию либо интересующий тип материалов — например, книги, статьи или фильмы.\n\nЦенность для бизнеса: аналогичную структуру можно использовать для профилей руководителей и экспертов, истории основателя компании или представления организации. В отдельных категориях могут размещаться профессиональный опыт, публикации, интервью, проекты и подтверждённые достижения.",
-              en: "The President section brings together information about the person and related material within a dedicated area. A large photograph occupies the main space, followed by the name, position and a biography link. This provides a clear starting point for exploring the section.\n\nSide navigation divides the information into powers, presidential symbols, books, articles, films and awards. Each link represents a distinct category, allowing visitors to choose the information they need without browsing the entire collection. Visual separators make the navigation easier to scan.\n\nThe module combines a concise introduction with routes to more detailed information. Biography, publications and media share a common subject but remain organised into separate categories. This keeps the overview page focused while providing access to a broader collection.\n\nUser journey: visitors review the introductory information, then choose the biography or a particular content category, such as books, articles or films.\n\nBusiness value: a similar structure can present executives, experts, a company founder or an organisation. Separate categories could cover professional experience, publications, interviews, projects and verified achievements.",
-              tj: "Бахши «Президент» маълумот дар бораи шахсият ва маводи вобастаро дар як қисми мустақили портал ҷамъ меорад. Дар майдони асосӣ акси калон ҷойгир буда, зери он ном, вазифа ва пайванд ба шарҳи ҳол оварда шудаанд. Ин нуқтаи равшани оғоз барои шиносоӣ бо бахш мебошад.\n\nМенюи паҳлуӣ маълумотро ба гурӯҳҳо ҷудо мекунад: салоҳият, рамзҳои Президент, китобҳо, мақолаҳо, филмҳо ва ҷоизаҳо. Ҳар пайванд самти алоҳида дорад, бинобар ин корбар барои дарёфти маълумоти мушаххас маҷбур нест ҳамаи маводро пайдарпай бинад. Ҷудокунии визуалии бандҳо фаҳмидани сохторро осон мекунад.\n\nМодул муаррифии мухтасарро бо гузариш ба маълумоти муфассал муттаҳид месозад. Шарҳи ҳол, асарҳо ва маводи расонаӣ ба як мавзуъ тааллуқ доранд, вале тавассути гурӯҳҳои алоҳида пешниҳод мешаванд. Ин равиш саҳифаи умумиро фаҳмо нигоҳ медорад.\n\nРаванди истифода: корбар бо маълумоти асосӣ шинос шуда, сипас шарҳи ҳол ё гурӯҳи маводи зарурӣ, масалан китобҳо, мақолаҳо ё филмҳоро интихоб мекунад.\n\nАҳамият барои тиҷорат: сохтори монанд барои муаррифии роҳбарон, коршиносон, муассиси ширкат ё худи ташкилот мувофиқ аст. Таҷрибаи касбӣ, нашрияҳо, мусоҳибаҳо, лоиҳаҳо ва дастовардҳои тасдиқшударо дар бахшҳои алоҳида ҷой додан мумкин аст.",
+              ru: "Раздел «Президент» представляет профильную страницу с крупной официальной фотографией, именем и ссылкой на биографию. Такой блок даёт посетителю ясную точку входа для знакомства с персоной и связанными материалами.\n\nБоковая навигация разделяет информацию на самостоятельные категории: полномочия, символы президента, книги, статьи, фильмы и награды. Каждая ссылка ведёт к отдельному направлению, поэтому пользователю не нужно просматривать весь массив материалов для поиска конкретной темы.\n\nПользовательский сценарий: посетитель знакомится с основными сведениями, затем открывает биографию или выбирает интересующий тип материалов — например, книги, публикации или фильмы.\n\nЦенность для бизнеса: похожая структура может использоваться для страниц руководителей, экспертов, основателей компании или представителей организации. Она объединяет краткое представление с понятным переходом к достижениям, публикациям и медиа.",
+              en: "The President section provides a profile page with a prominent official photograph, name and biography link. This gives visitors a clear starting point for learning about the person and related material.\n\nSide navigation separates the information into dedicated categories: powers, presidential symbols, books, articles, films and awards. Each link leads to a specific topic, so visitors do not have to browse the entire collection to find what they need.\n\nUser journey: visitors review the core information, then open the biography or select a material type such as books, publications or films.\n\nBusiness value: a similar structure can be used for executive, expert, founder or organisation-profile pages. It combines a concise introduction with clear routes to achievements, publications and media.",
+              tj: "Бахши «Президент» саҳифаи профилиро бо акси расмии калон, ном ва пайванд ба шарҳи ҳол пешниҳод мекунад. Чунин блок ба корбар нуқтаи равшани оғоз барои шиносоӣ бо шахсият ва маводи вобастаро медиҳад.\n\nНавигатсияи паҳлӯӣ маълумотро ба гурӯҳҳои алоҳида ҷудо мекунад: салоҳиятҳо, рамзҳои президент, китобҳо, мақолаҳо, филмҳо ва ҷоизаҳо. Ҳар пайванд ба самти мушаххас мебарад, бинобар ин барои пайдо кардани мавзуи лозим корбар маҷбур нест тамоми маҷмуаро бинад.\n\nРаванди истифода: корбар бо маълумоти асосӣ шинос шуда, сипас шарҳи ҳол ё навъи маводи ҷолиб — масалан китобҳо, интишорҳо ё филмҳоро интихоб мекунад.\n\nАҳамият барои тиҷорат: сохтори монандро барои саҳифаҳои роҳбарон, коршиносон, муассисони ширкат ё намояндагони ташкилот истифода бурдан мумкин аст. Он муаррифии кӯтоҳро бо гузаришҳои равшан ба дастовардҳо, интишорҳо ва маводи расонаӣ муттаҳид мекунад.",
             },
           },
           {
             slug: "footer",
             title: {
-              ru: "Справочные разделы и подвал",
-              en: "Reference Sections and Footer",
-              tj: "Бахшҳои маълумотӣ ва поёни сомона",
+              ru: "Новости и подвал",
+              en: "News Feed and Footer",
+              tj: "Лентаи хабарҳо ва поёни сомона",
             },
-            imageSrc: "/images/projects/president/web-footer.png",
-            BannerSrc: "/images/projects/president/web-footer.png",
+            imageSrc: "/images/projects/president/footer.webp",
+            BannerSrc: "/images/projects/president/footer.webp",
             shortInfo: {
-              ru: "Дополнительный уровень навигации",
-              en: "An additional navigation layer",
-              tj: "Роҳҳои иловагии дастрасӣ",
+              ru: "Завершающая навигация, контакты и социальные каналы",
+              en: "Closing navigation, contacts and social channels",
+              tj: "Роҳнамоии анҷомӣ, тамосҳо ва шабакаҳои иҷтимоӣ",
             },
             fullInfo: {
-              ru: "Нижняя часть страницы содержит блок быстрых переходов к постоянной справочной информации: сведениям о Таджикистане, Конституции и государственным символам. Эти материалы выделены отдельно от новостной ленты, что подчёркивает их самостоятельное значение в структуре портала.\n\nПодвал формирует дополнительную карту основных разделов. Ссылки сгруппированы по направлениям «Президент», «Правительство» и «Исполнительный аппарат». Внутри групп доступны конкретные подразделы: биография, полномочия, члены правительства, заседания, структура аппарата и пресс-служба. Посетитель может перейти непосредственно к нужному подразделу, достигнув конца страницы.\n\nВ подвале также размещены идентификация ресурса, контактные сведения пресс-службы, ссылки на социальные каналы и RSS. Эти элементы объединяют справочную навигацию и способы дальнейшего получения информации.\n\nПользовательский сценарий: после просмотра страницы посетитель продолжает изучение портала через сгруппированные ссылки либо находит контактную информацию и внешние каналы.\n\nЦенность для бизнеса: такой подвал помогает организовать доступ к сведениям о компании, услугам, документам, подразделениям и контактам. Он особенно полезен на длинных страницах, где посетителю нужен следующий понятный шаг после основного содержимого.",
-              en: "The lower part of the page highlights quick links to lasting reference information: Tajikistan, the Constitution and state symbols. These resources sit outside the news feed, giving them a distinct place within the portal’s structure.\n\nThe footer provides an additional map of the main sections. Links are grouped under President, Government and Executive Office. Each group contains specific destinations, including biography, powers, government members, meetings, office structure and the press service. Visitors reaching the end of the page can move directly to a relevant subsection.\n\nThe footer also includes site identification, press service contact details, social media links and RSS. These elements combine reference navigation with further routes to information.\n\nUser journey: after reviewing the page, visitors continue through grouped links or find contact details and external information channels.\n\nBusiness value: this footer structure can organise access to company information, services, documents, departments and contacts. It is particularly useful on long pages, where visitors benefit from a clear next step after the main content.",
-              tj: "Дар қисми поёнии саҳифа пайвандҳои зуд ба иттилооти доимӣ ҷойгиранд: маълумот дар бораи Тоҷикистон, Конститутсия ва рамзҳои давлатӣ. Ин мавод аз хабарҳо ҷудо пешниҳод мешавад ва дар сохтори портал аҳамияти мустақил дорад.\n\nМенюи поёнӣ харитаи иловагии бахшҳои асосиро ташкил медиҳад. Пайвандҳо ба гурӯҳҳои «Президент», «Ҳукумат» ва «Дастгоҳи иҷроия» ҷудо шудаанд. Дар дохили онҳо зербахшҳои мушаххас, аз ҷумла шарҳи ҳол, салоҳият, аъзои Ҳукумат, маҷлисҳо, сохтори Дастгоҳ ва Хадамоти матбуот дастрасанд.\n\nҲамчунин дар ин қисм номи манбаъ, маълумоти тамоси Хадамоти матбуот, пайвандҳои шабакаҳои иҷтимоӣ ва RSS ҷой доранд. Онҳо роҳнамоии маълумотиро бо роҳҳои минбаъдаи гирифтани хабарҳо муттаҳид мекунанд.\n\nРаванди истифода: корбар пас аз дидани саҳифа тавассути пайвандҳои гурӯҳбандишуда омӯзиши порталро идома медиҳад ё маълумоти тамос ва каналҳои берунаро пайдо мекунад.\n\nАҳамият барои тиҷорат: чунин сохтор дастрасиро ба маълумоти ширкат, хизматрасониҳо, санадҳо, воҳидҳо ва роҳҳои тамос ташкил мекунад. Он махсусан барои саҳифаҳои дароз муфид аст, ки дар анҷоми онҳо ба корбар қадами навбатӣ лозим мешавад.",
+              ru: "В нижней части страницы размещена компактная лента новостей: каждая запись показывает заголовок, дату и количество фотографий. Кнопка «Все новости» даёт посетителю понятный переход к полному архиву публикаций.\n\nПодвал выступает дополнительной картой портала. Ссылки сгруппированы по направлениям «Президент», «Правительство» и «Исполнительный аппарат»; рядом размещены официальные социальные каналы и контактные сведения пресс-службы. Логотип и название ресурса сохраняют идентификацию сайта в завершающем блоке.\n\nПользовательский сценарий: после просмотра материала посетитель открывает полный список новостей, переходит в нужный тематический раздел, находит контакты или выбирает официальный канал в социальных сетях.\n\nЦенность для бизнеса: такой подвал полезен для крупных сайтов с глубокой структурой. Он помогает не потерять пользователя в конце страницы, обеспечивает быстрый доступ к ключевым разделам и повышает доверие благодаря контактам и официальным каналам.",
+              en: "The lower part of the page contains a compact news feed, where each entry shows a headline, date and image count. A “All News” button gives visitors a clear route to the complete publication archive.\n\nThe footer acts as an additional site map. Links are grouped under President, Government and Executive Office, alongside official social channels and press-service contact details. The logo and site name maintain the resource’s identity in the closing block.\n\nUser journey: after viewing the content, visitors can open the full news list, move to a relevant topic, find contacts or choose an official social channel.\n\nBusiness value: this footer pattern is useful for large websites with a deep structure. It provides clear next steps at the end of a page, rapid access to key sections and added trust through official contacts and channels.",
+              tj: "Дар қисми поёнии саҳифа лентаи кӯтоҳи хабарҳо ҷойгир аст: ҳар сабт сарлавҳа, сана ва шумораи аксҳоро нишон медиҳад. Тугмаи «Ҳамаи хабарҳо» ба корбар роҳи равшан барои гузаштан ба бойгонии пурраи интишорҳоро медиҳад.\n\nПоёни сомона ҳамчун харитаи иловагии портал хизмат мекунад. Пайвандҳо ба гурӯҳҳои «Президент», «Ҳукумат» ва «Дастгоҳи иҷроия» ҷудо шудаанд; дар паҳлуи онҳо каналҳои расмии иҷтимоӣ ва маълумоти тамоси хадамоти матбуот ҷойгиранд. Нишон ва номи манбаъ шинохти сомонаро дар блоки анҷомӣ нигоҳ медоранд.\n\nРаванди истифода: корбар пас аз тамошои мавод рӯйхати пурраи хабарҳоро мекушояд, ба бахши мавзуии лозим мегузарад, тамосҳоро меёбад ё канали расмиро дар шабакаҳои иҷтимоӣ интихоб мекунад.\n\nАҳамият барои тиҷорат: чунин поёни сомона барои сайтҳои калон бо сохтори амиқ муфид аст. Он дар анҷоми саҳифа қадамҳои равшан пешниҳод мекунад, дастрасии зуд ба бахшҳои муҳимро таъмин намуда, бо тамосҳо ва каналҳои расмӣ эътимодро зиёд мекунад.",
             },
           },
           {
-            slug: "letter",
+            slug: "tajikistan-overview",
             title: {
-              ru: "Электронное обращение",
-              en: "Electronic Enquiries",
-              tj: "Муроҷиати электронӣ",
+              ru: "Раздел «Таджикистан»",
+              en: "Tajikistan Section",
+              tj: "Бахши «Тоҷикистон»",
             },
-            imageSrc: "/images/projects/president/web-letter.png",
-            BannerSrc: "/images/projects/president/web-letter.png",
+            imageSrc: "/images/projects/president/tajikistan-overview.webp",
+            BannerSrc: "/images/projects/president/tajikistan-overview.webp",
             shortInfo: {
-              ru: "Структурированная форма с вложениями",
-              en: "A structured form with attachments",
-              tj: "Шакли сохторёфта бо замимаҳо",
+              ru: "Справочные материалы о стране с тематической навигацией",
+              en: "Reference material about the country with topical navigation",
+              tj: "Маводи маълумотӣ дар бораи кишвар бо роҳнамоии мавзуӣ",
             },
             fullInfo: {
-              ru: "Модуль «Письмо президенту» предназначен для подготовки электронного обращения через интерфейс сайта. Перед формой размещён информационный текст с требованиями к обращениям, чтобы посетитель мог ознакомиться с условиями до заполнения данных.\n\nФорма разделяет информацию на понятные поля: ФИО, место работы, страна, город или населённый пункт, адрес, телефон и электронная почта. Для содержания обращения предусмотрены отдельные поля темы и сообщения. Такое разделение помогает оформлять обращения в едином формате и отличать контактные сведения от основного текста.\n\nДля дополнительных материалов предусмотрена кнопка добавления файла. В интерфейсе указан лимит 10 МБ. На предоставленном скриншоте присутствует виджет reCAPTCHA, предназначенный для противодействия автоматизированной отправке. Завершает форму кнопка «Отправить».\n\nПользовательский сценарий: посетитель знакомится с требованиями, заполняет сведения о себе, указывает тему и текст, при необходимости прикладывает документ и переходит к отправке.\n\nЦенность для бизнеса: подобный подход применим для обращений в поддержку, сервисных заявок и запросов с документами. Структурированные поля помогают заранее определить состав необходимой информации.",
-              en: "The “Letter to the President” module provides an interface for preparing an electronic enquiry. An introductory notice appears before the form so visitors can review the stated requirements before entering their information.\n\nThe form separates information into defined fields: full name, workplace, country, city or locality, address, telephone number and email address. Dedicated subject and message fields capture the enquiry itself. This distinction keeps contact information separate from the main message and establishes a consistent submission structure.\n\nAn attachment button allows supporting material to be added, with a displayed limit of 10 MB. The supplied screenshot also shows a reCAPTCHA widget intended to discourage automated submissions. A “Send” button completes the interface.\n\nUser journey: visitors read the requirements, enter their details, write a subject and message, attach a document if needed and proceed towards submission.\n\nBusiness value: a similar form can support customer enquiries, service requests and document-based applications. Structured fields define the information required at the outset.",
-              tj: "Модули «Нома ба Президент» барои омода кардани муроҷиати электронӣ тавассути сомона пешбинӣ шудааст. Пеш аз шакл матни иттилоотӣ бо талабот ба муроҷиатҳо ҷойгир аст, то корбар пеш аз ворид кардани маълумот бо онҳо шинос шавад.\n\nШакл маълумотро ба майдонҳои алоҳида ҷудо мекунад: ному насаб, ҷойи кор, кишвар, шаҳр ё маҳалли аҳолинишин, суроға, телефон ва почтаи электронӣ. Барои муҳтавои муроҷиат майдонҳои мавзуъ ва матни паём пешбинӣ шудаанд. Ин тақсимот маълумоти тамосро аз мазмуни асосӣ ҷудо карда, пешниҳоди муроҷиатҳоро ба тартиби ягона меорад.\n\nБарои маводи иловагӣ тугмаи замима кардани файл мавҷуд аст. Дар интерфейс ҳадди 10 МБ нишон дода шудааст. Дар скриншоти пешниҳодшуда виджети reCAPTCHA низ дида мешавад, ки барои муқовимат ба ирсоли худкор пешбинӣ шудааст. Дар охир тугмаи «Ирсол» ҷойгир аст.\n\nРаванди истифода: корбар талаботро мехонад, маълумоти худро ворид мекунад, мавзуъ ва матнро менависад, ҳангоми зарурат санадро замима намуда, ба ирсол мегузарад.\n\nАҳамият барои тиҷорат: чунин равиш барои муроҷиат ба дастгирӣ, дархостҳои хизматрасонӣ ва пешниҳоди санадҳо мувофиқ аст. Майдонҳои сохторёфта таркиби маълумоти заруриро пешакӣ муайян мекунанд.",
+              ru: "Раздел «Таджикистан» собирает справочные материалы о стране в одной структуре. Вкладки позволяют перейти к темам государственной независимости, Конституции, истории судебной системы, органам государственной власти, судопроизводству и национальной валюте.\n\nОсновная область отображает подробный текст выбранной темы, а хлебные крошки показывают положение страницы в структуре портала. Справа располагается лента событий с датами и количеством изображений, поэтому справочный раздел остаётся связанным с текущими новостями.\n\nПользовательский сценарий: посетитель выбирает интересующую тему, читает материал, переключается между вкладками и при необходимости открывает актуальную публикацию из боковой ленты.\n\nЦенность для бизнеса: подобная структура подходит для разделов «О компании», базы знаний и нормативной информации. Она делает объёмный текст удобным для чтения и объединяет постоянные сведения с актуальным контентом.",
+              en: "The Tajikistan section brings together reference material about the country in one structure. Tabs lead to topics including state independence, the Constitution, the history of the judicial system, public authorities, legal proceedings and the national currency.\n\nThe main area displays detailed text for the selected topic, while breadcrumbs show the page’s location within the portal. An events feed on the right includes dates and image counts, keeping the reference area connected to current news.\n\nUser journey: visitors choose a topic, read the material, switch between tabs and, when needed, open a current publication from the side feed.\n\nBusiness value: this structure works well for About pages, knowledge bases and regulatory information. It makes long-form content easier to read and combines lasting reference information with current updates.",
+              tj: "Бахши «Тоҷикистон» маводи маълумотиро дар бораи кишвар дар як сохтор ҷамъ меорад. Варақаҳо ба мавзуъҳои истиқлолияти давлатӣ, Конститутсия, таърихи низоми судӣ, мақомоти давлатӣ, судопарварӣ ва пули миллӣ роҳ медиҳанд.\n\nҚисми асосӣ матни муфассали мавзуи интихобшударо намоиш медиҳад ва пайвандҳои роҳнамо ҷойи саҳифаро дар сохтори портал нишон медиҳанд. Дар тарафи рост лентаи рӯйдодҳо бо сана ва шумораи аксҳо ҷойгир аст, ки бахши маълумотиро бо хабарҳои ҷорӣ мепайвандад.\n\nРаванди истифода: корбар мавзуи ҷолибро интихоб мекунад, матнро мехонад, байни варақаҳо мегузарад ва ҳангоми зарурат интишори ҷориро аз лентаи паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин сохтор барои бахшҳои «Дар бораи ширкат», пойгоҳҳои дониш ва маълумоти меъёрӣ мувофиқ аст. Он матни калонҳаҷмро барои хондан қулай карда, маълумоти доимиро бо маводи ҷорӣ муттаҳид мекунад.",
             },
           },
           {
-            slug: "search",
+            slug: "constitution",
             title: {
-              ru: "Поиск",
-              en: "Site Search",
-              tj: "Ҷустуҷӯ",
+              ru: "Конституция",
+              en: "Constitution",
+              tj: "Конститутсия",
             },
-            imageSrc: "/images/projects/president/web-search.png",
-            BannerSrc: "/images/projects/president/web-search.png",
+            imageSrc: "/images/projects/president/constitution.webp",
+            BannerSrc: "/images/projects/president/constitution.webp",
             shortInfo: {
-              ru: "Результаты с контекстом и дополнительная навигация",
-              en: "Contextual results and supporting navigation",
-              tj: "Натиҷаҳо бо шарҳи кӯтоҳ ва роҳнамоии иловагӣ",
+              ru: "Материалы о Конституции в структуре раздела «Таджикистан»",
+              en: "Constitution material within the Tajikistan section",
+              tj: "Мавод оид ба Конститутсия дар бахши «Тоҷикистон»",
             },
             fullInfo: {
-              ru: "Модуль поиска предоставляет отдельный интерфейс для нахождения информации по текстовому запросу. В верхней части страницы расположено крупное поле, в котором сохраняется введённая фраза. Посетитель видит текущий запрос и может изменить его для следующего поиска.\n\nКаждый результат содержит заголовок и короткий фрагмент публикации. Совпадающие слова выделены в тексте, что помогает понять, почему материал появился в выдаче. Дополнительно показаны дата, время, место и категория — например, события или фотографии. Это позволяет различать материалы не только по названию, но и по формату и контексту.\n\nРядом с основным списком расположены календарь и блок событий, которые предоставляют дополнительные ориентиры для дальнейшего просмотра.\n\nПользовательский сценарий: посетитель вводит запрос, сравнивает заголовки и фрагменты результатов, уточняет дату или тип материала и открывает подходящую публикацию.\n\nЦенность для бизнеса: такой поиск полезен для корпоративных порталов, баз знаний и сайтов с большим архивом. Контекстные фрагменты и категории помогают посетителям осознанно выбирать материалы и находить нужные сведения среди большого количества страниц.",
-              en: "The search module provides a dedicated interface for finding information through a text query. A prominent field at the top retains the entered phrase, allowing visitors to see their current query and revise it for another search.\n\nEach result includes a headline and a short publication excerpt. Matching words are highlighted to show how the item relates to the query. Additional details include the date, time, location and content category, such as events or photographs. Visitors can therefore distinguish results by context and format as well as by title.\n\nA calendar and events block appear beside the main list, offering further browsing options.\n\nUser journey: visitors enter a query, compare result headlines and excerpts, check the date or content type, and open the most relevant publication.\n\nBusiness value: this search pattern suits corporate portals, knowledge bases and websites with extensive archives. Contextual excerpts and categories help visitors make informed choices when navigating a large collection of pages.",
-              tj: "Модули ҷустуҷӯ барои пайдо кардани иттилоот аз рӯйи дархости матнӣ интерфейси алоҳида пешниҳод мекунад. Дар қисми боло майдони калон ҷойгир аст, ки дар он ибораи воридшуда боқӣ мемонад. Корбар дархости ҷориро мебинад ва метавонад онро барои ҷустуҷӯи нав тағйир диҳад.\n\nҲар натиҷа сарлавҳа ва порчаи кӯтоҳи матн дорад. Калимаҳои мувофиқ ҷудо нишон дода мешаванд, то корбар робитаи маводро бо дархост фаҳмад. Сана, вақт, ҷой ва гурӯҳи мавод, масалан хабарҳо ё аксҳо, низ пешниҳод мешаванд. Ин маълумот барои фарқ кардани натиҷаҳо аз рӯйи навъ ва мазмун кумак мекунад.\n\nДар паҳлуи рӯйхат тақвим ва бахши рӯйдодҳо ҷойгиранд, ки роҳҳои иловагии идомаи тамошоро пешниҳод мекунанд.\n\nРаванди истифода: корбар дархостро ворид мекунад, сарлавҳаҳо ва порчаҳои матнро муқоиса менамояд, сана ё навъи маводро месанҷад ва натиҷаи мувофиқро мекушояд.\n\nАҳамият барои тиҷорат: чунин ҷустуҷӯ барои порталҳои корпоративӣ, пойгоҳҳои дониш ва сомонаҳои дорои бойгонии калон муфид аст. Порчаҳои матн ва гурӯҳбандӣ ба корбарон барои интихоби огоҳонаи мавод кумак мекунанд.",
+              ru: "Страница «Конституция» раскрывает отдельную тему внутри справочного раздела «Таджикистан». Хлебные крошки фиксируют путь к материалу, а активная вкладка выделяет текущую тему среди связанных разделов о стране, государственном устройстве и национальной валюте.\n\nОсновная часть предназначена для развёрнутого текстового материала: заголовок, логически разделённые абзацы и спокойная типографика делают большой объём информации удобным для последовательного чтения. Боковая лента событий сохраняет доступ к актуальным публикациям без выхода из раздела.\n\nПользовательский сценарий: посетитель переходит к Конституции из тематического меню, читает материал, затем выбирает другую вкладку или открывает актуальное событие из боковой колонки.\n\nЦенность для бизнеса: подобная страница подходит для нормативной документации, политик компании, справочных материалов и юридических разделов. Она сохраняет фокус на содержании, не лишая пользователя навигации по связанным темам.",
+              en: "The Constitution page presents a dedicated topic within the Tajikistan reference section. Breadcrumbs establish the route to the material, while the active tab distinguishes the current topic among related areas covering the country, state structure and national currency.\n\nThe main area is designed for long-form content: a heading, logically separated paragraphs and restrained typography make a substantial amount of information comfortable to read. The events feed at the side keeps current publications available without leaving the section.\n\nUser journey: visitors open the Constitution from the topic menu, read the material, then choose another tab or open a current event from the side column.\n\nBusiness value: this type of page suits regulatory documentation, company policies, reference material and legal sections. It keeps the focus on content while preserving navigation through related topics.",
+              tj: "Саҳифаи «Конститутсия» мавзуи алоҳидаро дар дохили бахши маълумотии «Тоҷикистон» пешниҳод мекунад. Пайвандҳои роҳнамо роҳи расидан ба маводро нишон медиҳанд ва варақаи фаъол мавзуи ҷориро аз бахшҳои вобаста дар бораи кишвар, сохтори давлатӣ ва пули миллӣ ҷудо мекунад.\n\nҚисми асосӣ барои матни калонҳаҷм пешбинӣ шудааст: сарлавҳа, параграфҳои мантиқан ҷудошуда ва ҳуруфчинии ором хондани ҳаҷми зиёди иттилоотро қулай мегардонанд. Лентаи рӯйдодҳо дар паҳлӯ дастрасиро ба интишорҳои ҷорӣ бе баромадан аз бахш нигоҳ медорад.\n\nРаванди истифода: корбар аз менюи мавзуӣ ба Конститутсия мегузарад, матнро мехонад, сипас варақаи дигарро интихоб мекунад ё рӯйдоди ҷориро аз сутуни паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин саҳифа барои ҳуҷҷатҳои меъёрӣ, сиёсатҳои ширкат, маводи маълумотӣ ва бахшҳои ҳуқуқӣ мувофиқ аст. Он диққатро ба муҳтаво нигоҳ дошта, ҳамзамон роҳнамоӣ ба мавзуъҳои вобастаро таъмин мекунад.",
+            },
+          },
+          {
+            slug: "peace-experience",
+            title: {
+              ru: "Таджикский опыт мира",
+              en: "Tajik Experience of Peace",
+              tj: "Таҷрибаи сулҳи тоҷикон",
+            },
+            imageSrc: "/images/projects/president/peace-experience.webp",
+            BannerSrc: "/images/projects/president/peace-experience.webp",
+            shortInfo: {
+              ru: "Справочный материал о мире, согласии и международном сотрудничестве",
+              en: "Reference material on peace, unity and international cooperation",
+              tj: "Маводи маълумотӣ дар бораи сулҳ, ваҳдат ва ҳамкории байналмилалӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Таджикский опыт мира» раскрывает тематический материал в составе раздела «Таджикистан». Активная вкладка и хлебные крошки показывают контекст публикации и позволяют вернуться к соседним направлениям справочного раздела.\n\nОсновной текст разбит на последовательные абзацы, что помогает воспринимать объёмный историко-аналитический материал. Боковая лента событий сохраняет доступ к свежим публикациям и связывает постоянный справочный контент с текущей информационной повесткой портала.\n\nПользовательский сценарий: посетитель выбирает тему из вкладок, знакомится с материалом, затем возвращается к общему разделу или открывает актуальное событие в боковой колонке.\n\nЦенность для бизнеса: такой формат подойдёт для страниц о ценностях компании, истории организации, социальных инициативах и аналитических публикациях. Чёткая структура помогает представлять сложные темы последовательно и без перегрузки интерфейса.",
+              en: "The Tajik Experience of Peace page presents focused material within the Tajikistan section. The active tab and breadcrumbs establish the publication’s context and provide routes back to neighbouring reference topics.\n\nThe main text is divided into a sequence of paragraphs, making a substantial historical and analytical article easier to follow. The events feed at the side maintains access to recent publications and connects lasting reference content with the portal’s current information flow.\n\nUser journey: visitors select the topic from the tabs, read the material, then return to the main section or open a current event from the side column.\n\nBusiness value: this layout suits pages about company values, organisational history, social initiatives and analytical publications. Its clear structure supports presenting complex topics without overloading the interface.",
+              tj: "Саҳифаи «Таҷрибаи сулҳи тоҷикон» маводи мавзуиро дар доираи бахши «Тоҷикистон» пешниҳод мекунад. Варақаи фаъол ва пайвандҳои роҳнамо контексти интишорро нишон дода, барои бозгашт ба мавзуъҳои ҳамсоя роҳ медиҳанд.\n\nМатни асосӣ ба параграфҳои пайдарпай ҷудо шудааст, ки дарки маводи калонҳаҷми таърихӣ ва таҳлилиро осон мекунад. Лентаи рӯйдодҳо дар паҳлӯ дастрасиро ба интишорҳои нав нигоҳ дошта, маълумоти доимиро бо ҷараёни иттилоотии ҷории портал мепайвандад.\n\nРаванди истифода: корбар мавзуъро аз варақаҳо интихоб мекунад, матнро мехонад, сипас ба бахши умумӣ бармегардад ё рӯйдоди ҷориро аз сутуни паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин тарҳ барои саҳифаҳо дар бораи арзишҳои ширкат, таърихи ташкилот, ташаббусҳои иҷтимоӣ ва интишорҳои таҳлилӣ мувофиқ аст. Сохтори равшан имкон медиҳад мавзуъҳои мураккаб бидуни изофабори интерфейс пайдарпай пешниҳод шаванд.",
+            },
+          },
+          {
+            slug: "statehood",
+            title: {
+              ru: "Укрепление государственной власти",
+              en: "Strengthening Statehood",
+              tj: "Таҳкими ҳокимияти давлатӣ",
+            },
+            imageSrc: "/images/projects/president/statehood.webp",
+            BannerSrc: "/images/projects/president/statehood.webp",
+            shortInfo: {
+              ru: "Тематический материал о государственном строительстве",
+              en: "Topical material on state building",
+              tj: "Маводи мавзуӣ дар бораи давлатдорӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Укрепление государственной власти» — самостоятельная тема в справочном разделе «Таджикистан». Активная вкладка сразу обозначает выбранное направление, а хлебные крошки помогают сохранить ориентацию в многоуровневой структуре портала.\n\nДлинный текст размещён в основной колонке с комфортной шириной строки и разделением на абзацы. Это создаёт спокойный формат для чтения исторических и аналитических материалов. Справа остаётся лента событий, которая обеспечивает быстрый доступ к актуальным публикациям.\n\nПользовательский сценарий: посетитель открывает тему из набора вкладок, последовательно знакомится с материалом и при необходимости переключается на смежный раздел либо переходит к свежей новости.\n\nЦенность для бизнеса: такой подход применим к разделам о стратегии, истории бренда, устойчивом развитии или корпоративном управлении. Он позволяет органично сочетать объёмное содержимое с постоянной навигацией по сайту.",
+              en: "The Strengthening Statehood page is a dedicated topic within the Tajikistan reference section. The active tab immediately identifies the selected area, while breadcrumbs help visitors stay oriented within the portal’s multi-level structure.\n\nLong-form text appears in the main column with a comfortable line length and paragraph separation. This creates a calm reading format for historical and analytical material. The events feed on the right keeps current publications readily available.\n\nUser journey: visitors open the topic from the tab set, read the material in sequence, then switch to a related section or move to a recent news item if needed.\n\nBusiness value: this approach is suitable for strategy, brand-history, sustainability or corporate-governance sections. It combines substantial content with persistent site navigation in a natural way.",
+              tj: "Саҳифаи «Таҳкими ҳокимияти давлатӣ» мавзуи алоҳида дар бахши маълумотии «Тоҷикистон» мебошад. Варақаи фаъол самти интихобшударо фавран нишон медиҳад ва пайвандҳои роҳнамо барои нигоҳ доштани самтгирӣ дар сохтори бисёрсатҳаи портал кумак мекунанд.\n\nМатни калонҳаҷм дар сутуни асосӣ бо паҳнои қулайи сатр ва ҷудокунии параграфҳо ҷойгир шудааст. Ин барои хондани маводи таърихӣ ва таҳлилӣ формати ором фароҳам меорад. Дар тарафи рост лентаи рӯйдодҳо дастрасии зуд ба интишорҳои ҷориро нигоҳ медорад.\n\nРаванди истифода: корбар мавзуъро аз маҷмуаи варақаҳо мекушояд, маводро пайдарпай мехонад ва ҳангоми зарурат ба бахши вобаста мегузарад ё хабари навро мекушояд.\n\nАҳамият барои тиҷорат: чунин равиш барои бахшҳо дар бораи стратегия, таърихи бренд, рушди устувор ё идоракунии корпоративӣ мувофиқ аст. Он муҳтавои калонҳаҷмро бо роҳнамоии доимии сайт ба таври табиӣ муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "judicial-power",
+            title: {
+              ru: "Судебная власть",
+              en: "Judicial Power",
+              tj: "Ҳокимияти судӣ",
+            },
+            imageSrc: "/images/projects/president/judicial-power.webp",
+            BannerSrc: "/images/projects/president/judicial-power.webp",
+            shortInfo: {
+              ru: "Справочный материал о судебной системе страны",
+              en: "Reference material on the country’s judicial system",
+              tj: "Маводи маълумотӣ дар бораи низоми судии кишвар",
+            },
+            fullInfo: {
+              ru: "Страница «Судебная власть» представляет отдельный информационный материал внутри раздела «Таджикистан». Активная вкладка и хлебные крошки помогают посетителю понять текущую тему и быстро перейти к связанным государственным и правовым разделам.\n\nКонтентная колонка организована для чтения длинного текста: заголовок, абзацы и свободное пространство поддерживают понятную иерархию. В правой части страницы сохранена лента событий с датами и количеством фотографий, поэтому пользователь может перейти к свежим материалам в любой момент.\n\nПользовательский сценарий: посетитель открывает тему о судебной системе, изучает справочный материал и продолжает навигацию через вкладки или список актуальных событий.\n\nЦенность для бизнеса: аналогичная структура подходит для юридических разделов, политик, условий использования и баз знаний. Она делает сложную нормативную информацию наглядной и поддерживает переход к связанным материалам.",
+              en: "The Judicial Power page presents dedicated reference material within the Tajikistan section. The active tab and breadcrumbs help visitors understand the current topic and quickly reach related government and legal sections.\n\nThe content column is organised for reading long-form text: a heading, paragraphs and generous spacing maintain a clear hierarchy. An events feed with dates and image counts remains on the right, so visitors can move to recent material at any point.\n\nUser journey: visitors open the judicial-system topic, review the reference material and continue through tabs or the current-events list.\n\nBusiness value: a similar structure suits legal sections, policies, terms of use and knowledge bases. It makes complex regulatory information clear and supports movement to related material.",
+              tj: "Саҳифаи «Ҳокимияти судӣ» маводи маълумотии алоҳидаро дар дохили бахши «Тоҷикистон» пешниҳод мекунад. Варақаи фаъол ва пайвандҳои роҳнамо ба корбар барои фаҳмидани мавзуи ҷорӣ ва гузаштан ба бахшҳои вобастаи давлатӣ ва ҳуқуқӣ кумак мекунанд.\n\nСутуни муҳтаво барои хондани матни калонҳаҷм ташкил шудааст: сарлавҳа, параграфҳо ва фазои озод иерархияи равшанро нигоҳ медоранд. Дар қисми рости саҳифа лентаи рӯйдодҳо бо сана ва шумораи аксҳо боқӣ мемонад, то корбар дар ҳар лаҳза ба маводи нав гузарад.\n\nРаванди истифода: корбар мавзуи низоми судиро мекушояд, маводи маълумотиро меомӯзад ва тавассути варақаҳо ё рӯйхати рӯйдодҳои ҷорӣ роҳнамоиро идома медиҳад.\n\nАҳамият барои тиҷорат: сохтори монанд барои бахшҳои ҳуқуқӣ, сиёсатҳо, шартҳои истифода ва пойгоҳҳои дониш мувофиқ аст. Он маълумоти мураккаби меъёриро равшан нишон дода, гузариш ба маводи вобастаро таъмин мекунад.",
+            },
+          },
+          {
+            slug: "national-currency",
+            title: {
+              ru: "Национальная валюта",
+              en: "National Currency",
+              tj: "Пули миллӣ",
+            },
+            imageSrc: "/images/projects/president/national-currency.webp",
+            BannerSrc: "/images/projects/president/national-currency.webp",
+            shortInfo: {
+              ru: "Справочный материал о национальной денежной системе",
+              en: "Reference material on the national monetary system",
+              tj: "Маводи маълумотӣ дар бораи низоми пулии миллӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Национальная валюта» завершает набор тематических материалов раздела «Таджикистан». Активная вкладка, хлебные крошки и единая навигация позволяют посетителю воспринимать её как часть общей системы справочной информации о стране.\n\nВ основной колонке размещён подробный текст с отдельным подзаголовком и последовательными абзацами. Боковая лента событий сохраняет на странице динамический элемент, связывая историческую и экономическую информацию с актуальными публикациями портала.\n\nПользовательский сценарий: посетитель открывает тему о валюте, читает материал, затем переключается между смежными вкладками или переходит к новости из боковой ленты.\n\nЦенность для бизнеса: такой формат подходит для финансовых разделов, справочных материалов о продукте, FAQ и образовательного контента. Он помогает представить сложную тему в спокойной, последовательной и легко читаемой форме.",
+              en: "The National Currency page completes the collection of thematic material in the Tajikistan section. The active tab, breadcrumbs and shared navigation show that it belongs to the portal’s wider reference system about the country.\n\nThe main column contains detailed text with a distinct subheading and sequential paragraphs. The events feed keeps a dynamic element on the page, connecting historical and economic information to the portal’s current publications.\n\nUser journey: visitors open the currency topic, read the material, then switch between related tabs or move to a news item from the side feed.\n\nBusiness value: this layout is suitable for financial sections, product reference material, FAQs and educational content. It presents complex topics in a calm, sequential and easy-to-read format.",
+              tj: "Саҳифаи «Пули миллӣ» маҷмуаи маводи мавзуии бахши «Тоҷикистон»-ро пурра мекунад. Варақаи фаъол, пайвандҳои роҳнамо ва навигатсияи ягона нишон медиҳанд, ки он қисми низоми умумии маълумотӣ дар бораи кишвар мебошад.\n\nДар сутуни асосӣ матни муфассал бо зерсарлавҳаи ҷудогона ва параграфҳои пайдарпай ҷойгир аст. Лентаи рӯйдодҳо дар саҳифа унсури динамикиро нигоҳ дошта, маълумоти таърихӣ ва иқтисодиро бо интишорҳои ҷории портал мепайвандад.\n\nРаванди истифода: корбар мавзуи пулро мекушояд, матнро мехонад, сипас байни варақаҳои вобаста мегузарад ё ба хабар аз лентаи паҳлӯӣ меравад.\n\nАҳамият барои тиҷорат: чунин формат барои бахшҳои молиявӣ, маводи маълумотӣ оид ба маҳсулот, FAQ ва муҳтавои омӯзишӣ мувофиқ аст. Он мавзуъҳои мураккабро дар шакли ором, пайдарпай ва осон барои хондан пешниҳод мекунад.",
+            },
+          },
+          {
+            slug: "state-flag",
+            title: {
+              ru: "Государственный флаг",
+              en: "National Flag",
+              tj: "Парчами давлатӣ",
+            },
+            imageSrc: "/images/projects/president/state-flag.webp",
+            BannerSrc: "/images/projects/president/state-flag.webp",
+            shortInfo: {
+              ru: "Символика флага и положение о его использовании",
+              en: "Flag symbolism and rules for its use",
+              tj: "Рамзҳои парчам ва тартиби истифодаи он",
+            },
+            fullInfo: {
+              ru: "Страница «Государственный флаг» открывает раздел государственной символики. Вкладки позволяют перейти к флагу, гербу и национальному гимну, а активное состояние подчёркивает текущую тему.\n\nГлавную часть занимает крупное изображение флага, которое визуально поддерживает нормативный текст ниже: заголовок документа, дата принятия и последующие положения. Боковая лента событий остаётся доступной, соединяя справочный раздел с актуальными публикациями портала.\n\nПользовательский сценарий: посетитель знакомится с изображением флага и положением о нём, затем при необходимости переходит к гербу или гимну через вкладки либо к свежей новости из боковой колонки.\n\nЦенность для бизнеса: подобная страница подходит для брендбуков, стандартов использования фирменной символики и разделов с визуальными правилами. Она объединяет наглядный образ с ясной нормативной информацией.",
+              en: "The National Flag page opens the state-symbols section. Tabs provide routes to the flag, coat of arms and national anthem, while the active state highlights the current topic.\n\nA large flag image forms the main visual focus and supports the regulatory text below it: the document heading, adoption date and subsequent provisions. The events feed remains available at the side, connecting the reference area with the portal’s current publications.\n\nUser journey: visitors review the flag and its regulations, then move to the coat of arms or anthem through the tabs, or to a recent news item from the side column.\n\nBusiness value: a similar page works for brand books, rules for using identity elements and sections containing visual standards. It combines a clear visual asset with straightforward policy information.",
+              tj: "Саҳифаи «Парчами давлатӣ» бахши рамзҳои давлатиро мекушояд. Варақаҳо барои гузаштан ба парчам, нишон ва суруди миллӣ роҳ медиҳанд, ҳолати фаъол бошад мавзуи ҷориро ҷудо мекунад.\n\nТасвири калони парчам нуқтаи асосии визуалӣ мебошад ва матни меъёрии поёнро пурра мекунад: сарлавҳаи ҳуҷҷат, санаи қабул ва муқаррароти минбаъда. Лентаи рӯйдодҳо дар паҳлӯ дастрас буда, бахши маълумотиро бо интишорҳои ҷории портал мепайвандад.\n\nРаванди истифода: корбар бо тасвири парчам ва низомномаи он шинос мешавад, сипас тавассути варақаҳо ба нишон ё суруд мегузарад ё аз сутуни паҳлӯӣ хабари навро мекушояд.\n\nАҳамият барои тиҷорат: чунин саҳифа барои брендбукҳо, қоидаҳои истифодаи унсурҳои ҳувият ва бахшҳои дорои стандартҳои визуалӣ мувофиқ аст. Он дороии намоёнро бо маълумоти равшани меъёрӣ муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "state-emblem",
+            title: {
+              ru: "Государственный герб",
+              en: "State Emblem",
+              tj: "Нишони давлатӣ",
+            },
+            imageSrc: "/images/projects/president/state-emblem.webp",
+            BannerSrc: "/images/projects/president/state-emblem.webp",
+            shortInfo: {
+              ru: "Изображение герба и правила его применения",
+              en: "Emblem artwork and rules for its use",
+              tj: "Тасвири нишон ва қоидаҳои истифодаи он",
+            },
+            fullInfo: {
+              ru: "Страница «Государственный герб» продолжает раздел государственных символов. Вкладки объединяют материалы о флаге, гербе и национальном гимне, а активное состояние помогает быстро понять, какая тема открыта.\n\nВ центре страницы размещено крупное цветное изображение герба. Под ним находятся заголовок официального документа и положения, объясняющие правила применения символа. Справа сохранена лента текущих событий, которая даёт возможность продолжить работу с порталом без возврата на главную страницу.\n\nПользовательский сценарий: посетитель знакомится с изображением герба и официальными правилами, затем переходит к другим государственным символам через вкладки или открывает новость в боковой колонке.\n\nЦенность для бизнеса: такой подход полезен для страниц с корпоративной айдентикой, фирменными знаками и правилами использования визуальных элементов. Он сочетает точное изображение с поясняющим нормативным текстом.",
+              en: "The State Emblem page continues the state-symbols section. Tabs combine material about the flag, emblem and national anthem, while the active state makes the current topic immediately clear.\n\nA large, full-colour emblem is centred on the page. Below it are the official document heading and provisions explaining how the symbol may be used. The current-events feed remains available at the side, so visitors can continue using the portal without returning to the homepage.\n\nUser journey: visitors review the emblem and its official rules, then move to other state symbols through the tabs or open a news item from the side column.\n\nBusiness value: this approach is useful for corporate identity pages, brand marks and rules for using visual elements. It pairs an exact visual asset with explanatory policy text.",
+              tj: "Саҳифаи «Нишони давлатӣ» бахши рамзҳои давлатиро идома медиҳад. Варақаҳо маводи парчам, нишон ва суруди миллиро муттаҳид мекунанд, ҳолати фаъол бошад мавзуи кушодашударо фавран равшан месозад.\n\nДар маркази саҳифа тасвири калони рангаи нишон ҷойгир аст. Дар поён сарлавҳаи ҳуҷҷати расмӣ ва муқаррароте ҷой доранд, ки тартиби истифодаи рамзро шарҳ медиҳанд. Лентаи рӯйдодҳои ҷорӣ дар паҳлӯ дастрас боқӣ мемонад, то корбар бидуни бозгашт ба саҳифаи асосӣ кор бо порталро идома диҳад.\n\nРаванди истифода: корбар бо нишон ва қоидаҳои расмии он шинос мешавад, сипас тавассути варақаҳо ба дигар рамзҳои давлатӣ мегузарад ё хабарро аз сутуни паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин равиш барои саҳифаҳои ҳувияти корпоративӣ, нишонаҳои бренд ва қоидаҳои истифодаи унсурҳои визуалӣ муфид аст. Он дороии дақиқи визуалиро бо матни тавзеҳии меъёрӣ муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "national-anthem",
+            title: {
+              ru: "Национальный гимн",
+              en: "National Anthem",
+              tj: "Суруди миллӣ",
+            },
+            imageSrc: "/images/projects/president/national-anthem.webp",
+            BannerSrc: "/images/projects/president/national-anthem.webp",
+            shortInfo: {
+              ru: "Текст гимна и сведения об авторах",
+              en: "Anthem lyrics and author information",
+              tj: "Матни суруд ва маълумот дар бораи муаллифон",
+            },
+            fullInfo: {
+              ru: "Страница «Национальный гимн» завершает блок государственных символов. Активная вкладка выделяет раздел с текстом гимна, а соседние вкладки позволяют перейти к флагу и гербу без выхода из общей структуры.\n\nВ основной колонке размещены название гимна, имена авторов текста и музыки, а также строфы с раздельным форматированием. Такой подход делает длинный текст легко читаемым и сохраняет торжественный характер материала. Справа продолжается лента актуальных событий.\n\nПользовательский сценарий: посетитель открывает гимн, читает текст и сведения об авторах, затем возвращается к другим государственным символам через вкладки либо открывает новостную публикацию из боковой колонки.\n\nЦенность для бизнеса: подобный формат применим для миссии компании, корпоративного манифеста, ценностей бренда и других текстов, которые важно подать с аккуратной типографикой и ясной структурой.",
+              en: "The National Anthem page completes the state-symbols section. The active tab highlights the anthem lyrics, while neighbouring tabs provide routes to the flag and emblem without leaving the shared structure.\n\nThe main column includes the anthem title, the lyricist’s and composer’s names, and separately formatted verses. This approach keeps a long text easy to read while retaining the ceremonial character of the material. The current-events feed continues on the right.\n\nUser journey: visitors open the anthem, read its text and author information, then return to other state symbols through the tabs or open a news story from the side column.\n\nBusiness value: this format can support a company mission, corporate manifesto, brand values and other texts that benefit from careful typography and a clear structure.",
+              tj: "Саҳифаи «Суруди миллӣ» бахши рамзҳои давлатиро пурра мекунад. Варақаи фаъол бахшро бо матни суруд ҷудо менамояд, варақаҳои ҳамсоя бошанд ба парчам ва нишон бидуни баромадан аз сохтори умумӣ роҳ медиҳанд.\n\nДар сутуни асосӣ номи суруд, номҳои муаллифи матн ва оҳангсоз, инчунин бандҳои алоҳида форматшуда ҷойгиранд. Чунин равиш матни дарозро барои хондан осон гардонда, хусусияти тантанавии маводро нигоҳ медорад. Дар тарафи рост лентаи рӯйдодҳои ҷорӣ идома меёбад.\n\nРаванди истифода: корбар сурудро мекушояд, матн ва маълумот дар бораи муаллифонро мехонад, сипас тавассути варақаҳо ба дигар рамзҳои давлатӣ бармегардад ё хабари навро аз сутуни паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин формат барои рисолати ширкат, манифести корпоративӣ, арзишҳои бренд ва дигар матнҳое мувофиқ аст, ки ба ҳуруфчинии бодиққат ва сохтори равшан ниёз доранд.",
+            },
+          },
+          {
+            slug: "leader-of-nation",
+            title: {
+              ru: "Лидер нации",
+              en: "Leader of the Nation",
+              tj: "Пешвои миллат",
+            },
+            imageSrc: "/images/projects/president/leader-of-nation.webp",
+            BannerSrc: "/images/projects/president/leader-of-nation.webp",
+            shortInfo: {
+              ru: "Конституционный закон и материалы о статусе Лидера нации",
+              en: "Constitutional law and material on the Leader of the Nation",
+              tj: "Қонуни конститутсионӣ ва мавод оид ба мақоми Пешвои миллат",
+            },
+            fullInfo: {
+              ru: "Страница «Лидер нации» представляет конституционный закон в самостоятельном тематическом разделе портала. Хлебные крошки показывают путь от главной страницы, а крупный заголовок формирует ясную точку входа в нормативный материал.\n\nВ центральной части размещены название закона, реквизиты решений, вводная часть и статьи с выделенными заголовками. Такая композиция разделяет официальный документ на удобные для последовательного чтения фрагменты. Справа сохранена лента событий, обеспечивающая быстрый переход от справочного материала к актуальным публикациям.\n\nПользовательский сценарий: посетитель открывает раздел, знакомится с реквизитами и текстом закона, читает нужную статью и при необходимости переходит к новостям из боковой колонки.\n\nЦенность для бизнеса: аналогичная структура подходит для публикации уставов, политик, регламентов и других официальных документов. Она объединяет документный контент с понятной навигацией и актуальной информационной лентой.",
+              en: "The Leader of the Nation page presents a constitutional law in a dedicated portal section. Breadcrumbs show the route from the homepage, while the prominent title provides a clear entry point to the regulatory material.\n\nThe central area contains the law title, decision references, introductory text and articles with distinct headings. This composition breaks an official document into sections that are comfortable to read in sequence. The events feed remains on the right, providing a quick route from reference material to current publications.\n\nUser journey: visitors open the section, review the document references and text, read the required article and, when needed, move to news through the side column.\n\nBusiness value: the same structure suits statutes, policies, regulations and other official documents. It combines document content with understandable navigation and a current information feed.",
+              tj: "Саҳифаи «Пешвои миллат» қонуни конститутсиониро дар бахши мустақили мавзуии портал пешниҳод мекунад. Роҳнамои саҳифаҳо роҳро аз саҳифаи асосӣ нишон медиҳад ва сарлавҳаи калон нуқтаи равшани воридшавӣ ба маводи меъёриро фароҳам меорад.\n\nДар қисми марказӣ номи қонун, реквизитҳои қарорҳо, матни муқаддимавӣ ва моддаҳо бо сарлавҳаҳои ҷудогона ҷойгир шудаанд. Чунин тарҳ ҳуҷҷати расмиро ба қисмҳои барои хондани пайдарпай мувофиқ ҷудо мекунад. Дар тарафи рост лентаи рӯйдодҳо нигоҳ дошта шудааст, ки гузариши зудро аз маводи маълумотӣ ба интишорҳои ҷорӣ таъмин мекунад.\n\nРаванди истифода: корбар бахшро мекушояд, бо реквизитҳо ва матни қонун шинос мешавад, моддаи лозимро мехонад ва дар ҳолати зарурӣ аз сутуни паҳлӯӣ ба хабарҳо мегузарад.\n\nАҳамият барои тиҷорат: чунин сохтор барои интишори оинномаҳо, сиёсатҳо, низомномаҳо ва дигар ҳуҷҷатҳои расмӣ мувофиқ аст. Он муҳтавои ҳуҷҷатиро бо роҳнамоии фаҳмо ва лентаи иттилоотии ҷорӣ муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "presidential-powers",
+            title: {
+              ru: "Полномочия президента",
+              en: "Presidential Powers",
+              tj: "Салоҳиятҳои Президент",
+            },
+            imageSrc: "/images/projects/president/presidential-powers.webp",
+            BannerSrc: "/images/projects/president/presidential-powers.webp",
+            shortInfo: {
+              ru: "Перечень конституционных полномочий президента",
+              en: "A list of the president’s constitutional powers",
+              tj: "Рӯйхати салоҳиятҳои конститутсионии Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Президент» раскрывает блок конституционных полномочий в виде последовательного нумерованного списка. Хлебные крошки и заметный заголовок помогают быстро определить раздел, а тематические вкладки дают доступ к сведениям о президенте, его указах, рабочем графике, книгах, фильмах, статьях и выступлениях.\n\nОсновная колонка построена вокруг заголовка и пунктов, каждый из которых описывает отдельное полномочие. Свободное пространство и увеличенный межстрочный интервал делают объёмный официальный перечень удобным для изучения. Боковая лента событий остаётся на виду и связывает справочный материал с новостной частью портала.\n\nПользовательский сценарий: посетитель открывает раздел о президенте, последовательно просматривает полномочия, затем переходит к нужному тематическому материалу через вкладки или открывает актуальную публикацию справа.\n\nЦенность для бизнеса: такой формат подходит для страниц о руководстве, ролях, обязанностях и полномочиях организации. Он помогает подать сложную информацию структурированно, сохраняя быстрый доступ к связанному контенту.",
+              en: "The President page presents constitutional powers as a sequential numbered list. Breadcrumbs and a prominent title make the section easy to identify, while topical tabs provide access to material about the president, decrees, work schedule, books, films, articles and speeches.\n\nThe main column is built around a heading and individual list items, each describing a separate power. Generous white space and increased line spacing make the lengthy official list comfortable to review. The events feed remains visible at the side, linking the reference material with the portal’s news section.\n\nUser journey: visitors open the president section, review the powers in order, then move to the required topic through the tabs or open a current publication from the right column.\n\nBusiness value: this format suits pages about leadership, roles, responsibilities and authorities within an organisation. It presents complex information in a structured way while preserving quick access to related content.",
+              tj: "Саҳифаи «Президент» бахши салоҳиятҳои конститутсиониро дар шакли рӯйхати пайдарпайи рақамдор пешниҳод мекунад. Роҳнамои саҳифаҳо ва сарлавҳаи намоён барои зуд муайян кардани бахш кумак мекунанд, варақаҳои мавзуӣ бошад ба маълумот дар бораи президент, фармонҳо, ҷадвали корӣ, китобҳо, филмҳо, мақолаҳо ва суханрониҳо роҳ медиҳанд.\n\nСутуни асосӣ аз сарлавҳа ва бандҳои алоҳида иборат аст, ки ҳар кадом як салоҳиятро шарҳ медиҳанд. Фазои озод ва фосилаи васеи байни сатрҳо рӯйхати расмии ҳаҷмдорро барои мутолиа муносиб мегардонанд. Лентаи рӯйдодҳо дар паҳлӯ намоён боқӣ монда, маводи маълумотиро бо бахши хабарии портал мепайвандад.\n\nРаванди истифода: корбар бахши президентро мекушояд, салоҳиятҳоро пайдарпай мутолиа мекунад, сипас тавассути варақаҳо ба маводи мавзуии лозим мегузарад ё интишори ҷориро аз сутуни рост мекушояд.\n\nАҳамият барои тиҷорат: чунин формат барои саҳифаҳо оид ба роҳбарият, нақшҳо, вазифаҳо ва ваколатҳои ташкилот мувофиқ аст. Он маълумоти мураккабро бо тартиби равшан пешниҳод карда, дастрасии зудро ба муҳтавои вобаста нигоҳ медорад.",
+            },
+          },
+          {
+            slug: "presidential-standard",
+            title: {
+              ru: "Президентский штандарт",
+              en: "Presidential Standard",
+              tj: "Ливои Президент",
+            },
+            imageSrc: "/images/projects/president/presidential-standard.webp",
+            BannerSrc: "/images/projects/president/presidential-standard.webp",
+            shortInfo: {
+              ru: "Изображение и положение о президентском штандарте",
+              en: "The presidential standard and its official regulations",
+              tj: "Тасвир ва низомнома дар бораи Ливои Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Президентский штандарт» посвящена одному из официальных символов президента. Вкладки в разделе президентской символики помогают переключаться между штандартом и знаком президента, а верхняя навигация сохраняет связь с другими тематическими материалами портала.\n\nВ центре размещено крупное изображение штандарта с красной, белой и зелёной полосами, а ниже — название закона и статья, описывающая его внешний вид. Такое сочетание позволяет сначала увидеть символ, а затем перейти к его нормативному описанию. Боковая колонка с событиями остаётся доступной для перехода к свежим публикациям.\n\nПользовательский сценарий: посетитель открывает раздел о президентской символике, рассматривает штандарт, читает положение и при необходимости переключается на знак президента или на новостной материал.\n\nЦенность для бизнеса: этот подход применим к страницам с корпоративными знаками, церемониальными атрибутами и правилами их использования. Он объединяет точное визуальное представление с документально оформленной информацией.",
+              en: "The Presidential Standard page is dedicated to one of the president’s official symbols. Tabs in the presidential-symbols section let visitors switch between the standard and the presidential sign, while the top navigation keeps the page connected to other portal topics.\n\nA large image of the standard with red, white and green stripes is placed at the centre, followed by the law title and an article describing its appearance. This combination allows visitors to see the symbol first and then read its formal description. The events column remains available for moving to recent publications.\n\nUser journey: visitors open the presidential-symbols section, view the standard, read the regulation and, when necessary, switch to the presidential sign or a news item.\n\nBusiness value: this approach works for pages with corporate marks, ceremonial attributes and rules for using them. It combines an accurate visual representation with formally structured information.",
+              tj: "Саҳифаи «Ливои Президент» ба яке аз рамзҳои расмии президент бахшида шудааст. Варақаҳои бахши рамзҳои президентӣ барои гузаштан байни ливо ва нишони президент имкон медиҳанд, роҳнамоии болоӣ бошад робитаро бо дигар маводи мавзуии портал нигоҳ медорад.\n\nДар марказ тасвири калони ливо бо рахҳои сурх, сафед ва сабз ҷойгир шудааст; дар поён номи қонун ва моддае омадааст, ки намуди зоҳирии онро шарҳ медиҳад. Чунин муттаҳидсозӣ имкон медиҳад, ки корбар аввал рамзро бубинад ва баъдан тавсифи расмии онро мутолиа кунад. Сутуни рӯйдодҳо барои гузаштан ба интишорҳои нав дастрас боқӣ мемонад.\n\nРаванди истифода: корбар бахши рамзҳои президентиро мекушояд, ливоро мебинад, низомномаро мехонад ва дар ҳолати зарурӣ ба нишони президент ё хабари нав мегузарад.\n\nАҳамият барои тиҷорат: чунин равиш барои саҳифаҳо бо нишонаҳои корпоративӣ, унсурҳои тантанавӣ ва қоидаҳои истифодаи онҳо мувофиқ аст. Он пешниҳоди дақиқи визуалиро бо маълумоти расман сохторёфта муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "presidential-sign",
+            title: {
+              ru: "Знак президента",
+              en: "Presidential Sign",
+              tj: "Нишони Президент",
+            },
+            imageSrc: "/images/projects/president/presidential-sign.webp",
+            BannerSrc: "/images/projects/president/presidential-sign.webp",
+            shortInfo: {
+              ru: "Изображение и положение о знаке президента",
+              en: "The presidential sign and its official regulations",
+              tj: "Тасвир ва низомнома дар бораи Нишони Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Знак президента» продолжает раздел президентской символики. Вкладки позволяют переключаться между президентским штандартом и знаком, а хлебные крошки фиксируют положение материала внутри общего раздела «Президент».\n\nГлавный акцент сделан на крупном изображении знака: цепи с медальонами и центрального ордена. Под иллюстрацией размещены название закона и статья, описывающая знак президента. Такое построение помогает совместить внимательное рассмотрение символа с чтением официального документа. Справа остаётся лента актуальных событий.\n\nПользовательский сценарий: посетитель открывает знак президента, изучает его композицию и текст положения, затем при необходимости переходит к штандарту через вкладку либо выбирает новость из боковой колонки.\n\nЦенность для бизнеса: подобная подача подходит для корпоративных наград, знаков отличия, фирменных символов и связанных правил. Она делает сложный визуальный объект понятным и добавляет к нему структурированное документальное сопровождение.",
+              en: "The Presidential Sign page continues the presidential-symbols section. Tabs let visitors switch between the presidential standard and sign, while breadcrumbs establish the material’s place inside the broader President section.\n\nThe main focus is a large image of the sign: its chain of medallions and central order. The illustration is followed by the law title and an article describing the presidential sign. This layout pairs close inspection of the symbol with reading the official document. The current-events feed remains on the right.\n\nUser journey: visitors open the presidential sign, study its composition and the regulation text, then switch to the standard through the tab when needed or choose a news item from the side column.\n\nBusiness value: this presentation suits corporate awards, insignia, brand symbols and their associated policies. It makes a complex visual object understandable and provides it with structured documentary context.",
+              tj: "Саҳифаи «Нишони Президент» бахши рамзҳои президентиро идома медиҳад. Варақаҳо барои гузаштан байни ливои президент ва нишон имкон медиҳанд, роҳнамои саҳифаҳо бошад ҷойгиршавии маводро дар бахши умумии «Президент» нишон медиҳанд.\n\nТаваҷҷуҳи асосӣ ба тасвири калони нишон равона шудааст: занҷир бо медалонҳо ва ордени марказӣ. Пас аз тасвир номи қонун ва моддае ҷой доранд, ки нишони президентро тавсиф мекунанд. Чунин тарҳ баррасии бодиққати рамзро бо мутолиаи ҳуҷҷати расмӣ якҷо мекунад. Дар тарафи рост лентаи рӯйдодҳои ҷорӣ боқӣ мемонад.\n\nРаванди истифода: корбар нишони президентро мекушояд, таркиб ва матни низомномаро меомӯзад, сипас дар ҳолати зарурӣ тавассути варақа ба ливо мегузарад ё хабареро аз сутуни паҳлӯӣ интихоб мекунад.\n\nАҳамият барои тиҷорат: чунин пешниҳод барои ҷоизаҳои корпоративӣ, аломатҳои фарқкунанда, рамзҳои бренд ва қоидаҳои вобаста ба онҳо мувофиқ аст. Он объекти мураккаби визуалиро фаҳмо карда, онро бо заминаи ҳуҷҷатии сохторёфта пурра мекунад.",
+            },
+          },
+          {
+            slug: "biography",
+            title: {
+              ru: "Биография",
+              en: "Biography",
+              tj: "Шарҳи ҳол",
+            },
+            imageSrc: "/images/projects/president/biography.webp",
+            BannerSrc: "/images/projects/president/biography.webp",
+            shortInfo: {
+              ru: "Хронология жизни и деятельности президента",
+              en: "A timeline of the president’s life and work",
+              tj: "Рӯйхати марҳилаҳои ҳаёт ва фаъолияти президент",
+            },
+            fullInfo: {
+              ru: "Страница «Биография» представляет жизненный и профессиональный путь президента в хронологическом формате. Активная вкладка «Шарҳи ҳол» выделяет биографический раздел среди материалов о полномочиях, символике, книгах, фильмах, статьях и выступлениях.\n\nВ центральной колонке крупное имя открывает последовательность дат и ключевых этапов: образование, трудовая и общественная деятельность, а также последующие государственные должности. Короткие абзацы с привязкой к годам позволяют быстро ориентироваться в длинной биографической справке. Справа сохраняется лента актуальных событий портала.\n\nПользовательский сценарий: посетитель открывает биографию, читает хронологию от ранних этапов до последующих периодов деятельности, затем переключается на другие материалы о президенте или открывает новость из боковой колонки.\n\nЦенность для бизнеса: такой формат подходит для страниц о руководителях, истории компании, карьерных траекториях и ключевых вехах организации. Он делает большой объём справочной информации последовательным и удобным для восприятия.",
+              en: "The Biography page presents the president’s personal and professional path in a chronological format. The active Biography tab distinguishes this section among material about powers, symbols, books, films, articles and speeches.\n\nIn the central column, a prominent name introduces a sequence of dates and key stages: education, professional and public work, followed by state positions. Short year-based paragraphs make a lengthy biographical reference easy to navigate. The portal’s current-events feed remains on the right.\n\nUser journey: visitors open the biography, read the timeline from its early stages through later periods of activity, then switch to other material about the president or open a news item from the side column.\n\nBusiness value: this format works for leadership pages, company histories, career journeys and key organisational milestones. It makes a large amount of reference information sequential and comfortable to absorb.",
+              tj: "Саҳифаи «Шарҳи ҳол» роҳи зиндагӣ ва фаъолияти касбии президентро дар шакли хронологӣ пешниҳод мекунад. Варақаи фаъоли «Шарҳи ҳол» ин бахшро дар миёни мавод оид ба салоҳиятҳо, рамзҳо, китобҳо, филмҳо, мақолаҳо ва суханрониҳо ҷудо менамояд.\n\nДар сутуни марказӣ номи намоён силсилаи санаҳо ва марҳилаҳои муҳимро оғоз мекунад: таҳсил, фаъолияти меҳнатӣ ва ҷамъиятӣ, инчунин вазифаҳои давлатии минбаъда. Абзацҳои кӯтоҳ бо ишора ба солҳо барои роҳёбӣ дар маълумотномаи ҳаҷмдори биографӣ кумак мекунанд. Дар тарафи рост лентаи рӯйдодҳои ҷории портал боқӣ мемонад.\n\nРаванди истифода: корбар шарҳи ҳолро мекушояд, пайдарпаии марҳилаҳоро аз солҳои аввал то давраҳои минбаъдаи фаъолият мехонад, сипас ба дигар мавод оид ба президент мегузарад ё хабареро аз сутуни паҳлӯӣ мекушояд.\n\nАҳамият барои тиҷорат: чунин формат барои саҳифаҳо оид ба роҳбарон, таърихи ширкат, роҳҳои касбӣ ва марҳилаҳои муҳими ташкилот мувофиқ аст. Он ҳаҷми зиёди маълумоти маълумотиро пайдарпай ва барои дарк қулай мегардонад.",
+            },
+          },
+          {
+            slug: "books-catalog",
+            title: {
+              ru: "Книги президента",
+              en: "President’s Books",
+              tj: "Китобҳои Президент",
+            },
+            imageSrc: "/images/projects/president/books-catalog.webp",
+            BannerSrc: "/images/projects/president/books-catalog.webp",
+            shortInfo: {
+              ru: "Каталог книг с поиском, сортировкой и аннотациями",
+              en: "A book catalogue with search, sorting and annotations",
+              tj: "Феҳристи китобҳо бо ҷустуҷӯ, тартибдиҳӣ ва тавзеҳот",
+            },
+            fullInfo: {
+              ru: "Страница «Книги президента» оформлена как каталог изданий с быстрым поиском и сортировкой по дате. Вкладки разделяют книги президента и книги о президенте, помогая посетителю сразу выбрать нужную подборку.\n\nКарточки книг объединяют обложку, название, библиографические сведения и краткую аннотацию. Двухколоночная сетка позволяет сравнить несколько изданий на одном экране, а поле поиска ускоряет работу с большой коллекцией. Лента текущих событий остаётся доступной в правой колонке.\n\nПользовательский сценарий: посетитель выбирает тип изданий, вводит запрос или задаёт сортировку, знакомится с обложками и описаниями, затем открывает интересующую книгу либо переходит к другим материалам портала.\n\nЦенность для бизнеса: такая структура подходит для электронных библиотек, архивов публикаций, каталога документов и продуктовых коллекций. Она сочетает удобную фильтрацию с содержательными карточками и помогает быстро находить нужный материал.",
+              en: "The President’s Books page is designed as a publication catalogue with quick search and date sorting. Tabs separate books by the president from books about the president, helping visitors choose the relevant collection immediately.\n\nBook cards combine a cover, title, bibliographic details and a short annotation. A two-column grid makes it possible to compare several editions on one screen, while the search field speeds up work with a large collection. The current-events feed remains available in the right column.\n\nUser journey: visitors select a collection type, enter a query or set sorting, review covers and descriptions, then open the book of interest or move to other portal content.\n\nBusiness value: this structure suits digital libraries, publication archives, document catalogues and product collections. It combines convenient filtering with informative cards and helps users find the needed material quickly.",
+              tj: "Саҳифаи «Китобҳои Президент» ҳамчун феҳристи нашрияҳо бо ҷустуҷӯи зуд ва тартибдиҳӣ аз рӯи сана таҳия шудааст. Варақаҳо китобҳои президент ва китобҳои марбут ба президентро ҷудо мекунанд, то корбар фавран маҷмӯаи лозимро интихоб намояд.\n\nКортҳои китоб муқова, ном, маълумоти библиографӣ ва тавзеҳи кӯтоҳро муттаҳид мекунанд. Шабакаи дусутуна имкон медиҳад, ки якчанд нашрия дар як экран муқоиса шаванд, майдони ҷустуҷӯ бошад кор бо маҷмӯаи калонро метезонад. Лентаи рӯйдодҳои ҷорӣ дар сутуни рост дастрас мемонад.\n\nРаванди истифода: корбар навъи маҷмӯаро интихоб мекунад, дархост ворид мекунад ё тартибдиҳиро муайян месозад, муқоваҳо ва тавсифҳоро мебинад, сипас китоби ҷолибро мекушояд ё ба дигар муҳтавои портал мегузарад.\n\nАҳамият барои тиҷорат: чунин сохтор барои китобхонаҳои электронӣ, бойгониҳои нашрияҳо, феҳристҳои ҳуҷҷатҳо ва маҷмӯаҳои маҳсулот мувофиқ аст. Он филтркунии қулайро бо кортҳои пурмазмун муттаҳид намуда, барои зуд ёфтани маводи лозим кумак мекунад.",
+            },
+          },
+          {
+            slug: "books-about-president",
+            title: {
+              ru: "Книги о президенте",
+              en: "Books About the President",
+              tj: "Китобҳо дар бораи Президент",
+            },
+            imageSrc: "/images/projects/president/books-about-president.webp",
+            BannerSrc: "/images/projects/president/books-about-president.webp",
+            shortInfo: {
+              ru: "Каталог исследований и изданий о президенте",
+              en: "A catalogue of research and publications about the president",
+              tj: "Феҳристи таҳқиқот ва нашрияҳо дар бораи Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Книги о президенте» представляет отдельную подборку исследований и публикаций. Активная вкладка отделяет её от авторских книг президента, а поиск и сортировка по дате помогают быстро сузить каталог до нужных изданий.\n\nКарточки показывают обложки, названия, сведения об авторах и издательские данные, а также развёрнутые аннотации. Двухколоночное расположение даёт возможность видеть несколько работ одновременно и сравнивать их по теме. Справа остаётся новостная лента портала.\n\nПользовательский сценарий: посетитель открывает раздел книг о президенте, использует поиск или сортировку, знакомится с описаниями и выбирает интересующее издание; затем он может переключиться на авторские книги или продолжить чтение актуальных новостей.\n\nЦенность для бизнеса: подобный каталог полезен для библиографий, экспертных публикаций, отраслевых исследований и архивных коллекций. Он разделяет разные типы контента, облегчает поиск и показывает достаточно контекста ещё до открытия материала.",
+              en: "The Books About the President page presents a separate collection of research and publications. Its active tab distinguishes it from the president’s authored books, while search and date sorting help visitors narrow the catalogue to the editions they need.\n\nCards display covers, titles, author information, publishing details and extended annotations. A two-column arrangement makes multiple works visible at once and easy to compare by subject. The portal’s news feed remains on the right.\n\nUser journey: visitors open the books-about-the-president section, use search or sorting, review descriptions and select an edition of interest; they can then switch to authored books or continue reading current news.\n\nBusiness value: a catalogue like this is useful for bibliographies, expert publications, industry research and archival collections. It separates content types, simplifies discovery and provides enough context before visitors open an item.",
+              tj: "Саҳифаи «Китобҳо дар бораи Президент» маҷмӯаи ҷудогонаи таҳқиқот ва нашрияҳоро пешниҳод мекунад. Варақаи фаъол онро аз китобҳои муаллифии президент фарқ мекунад, ҷустуҷӯ ва тартибдиҳӣ аз рӯи сана бошад барои зуд маҳдуд кардани феҳрист ба нашрияҳои лозим кумак мекунанд.\n\nКортҳо муқоваҳо, номҳо, маълумот дар бораи муаллифон, маълумоти нашрӣ ва тавзеҳоти муфассалро нишон медиҳанд. Ҷойгиршавии дусутуна имкон медиҳад, ки якчанд асар ҳамзамон дида ва аз рӯи мавзуъ муқоиса шаванд. Дар тарафи рост лентаи хабарии портал боқӣ мемонад.\n\nРаванди истифода: корбар бахши китобҳо дар бораи президентро мекушояд, аз ҷустуҷӯ ё тартибдиҳӣ истифода мебарад, тавсифҳоро мехонад ва нашрияи ҷолибро интихоб мекунад; баъдан метавонад ба китобҳои муаллифӣ гузарад ё хондани хабарҳои ҷориро идома диҳад.\n\nАҳамият барои тиҷорат: чунин феҳрист барои библиографияҳо, нашрияҳои коршиносӣ, таҳқиқоти соҳавӣ ва маҷмӯаҳои бойгонӣ муфид аст. Он намудҳои гуногуни муҳтаворо ҷудо карда, ҷустуҷӯро осон ва пеш аз кушодани мавод маълумоти кофӣ медиҳад.",
+            },
+          },
+          {
+            slug: "films-catalog",
+            title: {
+              ru: "Фильмотека",
+              en: "Film Library",
+              tj: "Филмҳо",
+            },
+            imageSrc: "/images/projects/president/films-catalog.webp",
+            BannerSrc: "/images/projects/president/films-catalog.webp",
+            shortInfo: {
+              ru: "Каталог документальных фильмов с поиском и сортировкой",
+              en: "A documentary-film catalogue with search and sorting",
+              tj: "Феҳристи филмҳои ҳуҷҷатӣ бо ҷустуҷӯ ва тартибдиҳӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Фильмотека» собирает документальные фильмы в визуальную сетку. Верхние вкладки разделяют фильмы и фильмономахо, а строка поиска и сортировка по дате позволяют быстро перейти к нужной записи.\n\nКаждая карточка построена вокруг постера и краткого названия, поэтому каталог удобно просматривать как подборку обложек. Равномерная четырёхколоночная сетка поддерживает быстрый обзор нескольких работ, а боковая лента событий сохраняет доступ к актуальным публикациям сайта.\n\nПользовательский сценарий: посетитель выбирает нужную вкладку, вводит запрос или использует сортировку, просматривает постеры и открывает интересующий фильм; затем он может продолжить работу с новостями портала.\n\nЦенность для бизнеса: такой подход подходит для видеобиблиотек, медиаархивов, подборок лекций и продуктовых роликов. Он делает большую коллекцию наглядной, облегчает поиск и поддерживает единый стиль карточек.",
+              en: "The Film Library page collects documentary films in a visual grid. The top tabs separate films and film-related material, while search and date sorting let visitors reach the required entry quickly.\n\nEach card is built around a poster and a concise title, making the catalogue easy to browse as a cover collection. An even four-column grid supports rapid scanning of several works, and the events feed keeps current website publications within reach.\n\nUser journey: visitors choose a tab, enter a query or use sorting, browse posters and open a film of interest; they can then continue with the portal’s news.\n\nBusiness value: this approach suits video libraries, media archives, lecture collections and product videos. It makes a large collection easy to scan, simplifies discovery and maintains a consistent card style.",
+              tj: "Саҳифаи «Филмҳо» филмҳои ҳуҷҷатиро дар шабакаи визуалӣ ҷамъ меорад. Варақаҳои боло филмҳо ва маводи марбут ба филмро ҷудо мекунанд, сатри ҷустуҷӯ ва тартибдиҳӣ аз рӯи сана бошад ба сабти лозим зуд роҳ медиҳанд.\n\nҲар корт бар постер ва номи кӯтоҳ асос ёфтааст, бинобар ин феҳристро ҳамчун маҷмӯаи муқоваҳо қулай мутолиа кардан мумкин аст. Шабакаи баробари чорсутуна барои баррасии зуди якчанд асар кумак мекунад ва лентаи рӯйдодҳо дастрасиро ба интишорҳои ҷории сомона нигоҳ медорад.\n\nРаванди истифода: корбар варақаи лозимро интихоб мекунад, дархост ворид менамояд ё аз тартибдиҳӣ истифода мебарад, постерҳоро мебинад ва филми ҷолибро мекушояд; сипас метавонад корро бо хабарҳои портал идома диҳад.\n\nАҳамият барои тиҷорат: чунин равиш барои китобхонаҳои видеоӣ, бойгониҳои медиа, маҷмӯаҳои лексияҳо ва роликҳои маҳсулот мувофиқ аст. Он маҷмӯаи калонро барои баррасӣ равшан намуда, ҷустуҷӯро осон ва услуби ягонаи кортҳоро нигоҳ медорад.",
+            },
+          },
+          {
+            slug: "films-about-president",
+            title: {
+              ru: "Фильмы о президенте",
+              en: "Films About the President",
+              tj: "Филмҳо дар бораи Президент",
+            },
+            imageSrc: "/images/projects/president/films-about-president.webp",
+            BannerSrc: "/images/projects/president/films-about-president.webp",
+            shortInfo: {
+              ru: "Подборка фильмов о президенте с поиском и сортировкой",
+              en: "A film collection about the president with search and sorting",
+              tj: "Маҷмӯаи филмҳо дар бораи Президент бо ҷустуҷӯ ва тартибдиҳӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Фильмы о президенте» представляет отдельную подборку видеоматериалов. Активная вкладка отличает её от общего каталога фильмов, а поиск и сортировка по дате помогают быстро найти нужную ленту.\n\nОсновная часть построена как сетка постеров: на каждом изображении виден кадр или портрет, а подпись под ним указывает название фильма. Такое решение делает коллекцию наглядной и позволяет быстро просмотреть серии и отдельные работы. Боковая новостная колонка остаётся доступной в общем интерфейсе портала.\n\nПользовательский сценарий: посетитель открывает фильмы о президенте, вводит запрос или выбирает порядок сортировки, просматривает постеры и названия, затем открывает интересующий материал либо переключается на общий каталог фильмов.\n\nЦенность для бизнеса: аналогичный формат подходит для тематических медиаподборок, видеопортфолио, исторических архивов и образовательных серий. Он ясно отделяет коллекции друг от друга и помогает быстро ориентироваться в визуальном контенте.",
+              en: "The Films About the President page presents a separate collection of video material. Its active tab distinguishes it from the general film catalogue, while search and date sorting help visitors locate the required title quickly.\n\nThe main area is arranged as a poster grid: each image shows a frame or portrait, and the caption below identifies the film. This solution makes the collection visual and allows visitors to scan series and individual works quickly. The news column remains available within the shared portal interface.\n\nUser journey: visitors open the films-about-the-president section, enter a query or choose a sort order, review posters and titles, then open the material of interest or switch to the general film catalogue.\n\nBusiness value: a similar format suits themed media selections, video portfolios, historical archives and educational series. It clearly separates collections and helps users navigate visual content quickly.",
+              tj: "Саҳифаи «Филмҳо дар бораи Президент» маҷмӯаи ҷудогонаи маводи видеоиро пешниҳод мекунад. Варақаи фаъол онро аз феҳристи умумии филмҳо фарқ мекунад, ҷустуҷӯ ва тартибдиҳӣ аз рӯи сана бошад барои зуд ёфтани филми лозим кумак мекунанд.\n\nҚисми асосӣ ҳамчун шабакаи постерҳо сохта шудааст: ҳар тасвир кадр ё портретро нишон медиҳад ва имзои поён номи филмро муайян мекунад. Чунин роҳҳал маҷмӯаро намоён карда, барои баррасии зуди силсилаҳо ва асарҳои алоҳида имкон медиҳад. Сутуни хабарӣ дар интерфейси умумии портал дастрас мемонад.\n\nРаванди истифода: корбар бахши филмҳо дар бораи президентро мекушояд, дархост ворид мекунад ё тартиби ҷудокуниро интихоб менамояд, постерҳо ва номҳоро мебинад, сипас маводи ҷолибро мекушояд ё ба феҳристи умумии филмҳо мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои маҷмӯаҳои мавзуии медиа, видеопортфолио, бойгониҳои таърихӣ ва силсилаҳои таълимӣ мувофиқ аст. Он маҷмӯаҳоро равшан ҷудо карда, барои зуд роҳ ёфтан дар муҳтавои визуалӣ кумак мекунад.",
+            },
+          },
+          {
+            slug: "articles-bibliography",
+            title: {
+              ru: "Статьи",
+              en: "Articles",
+              tj: "Мақолаҳо",
+            },
+            imageSrc: "/images/projects/president/articles-bibliography.webp",
+            BannerSrc: "/images/projects/president/articles-bibliography.webp",
+            shortInfo: {
+              ru: "Библиографический список статей президента",
+              en: "A bibliographic list of the president’s articles",
+              tj: "Рӯйхати библиографии мақолаҳои Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Статьи» представляет библиографический список публикаций президента в периодических и научных изданиях. Крупный тематический заголовок и активная вкладка помогают сохранить контекст раздела, а нумерация формирует понятный порядок в длинном перечне.\n\nКаждая запись объединяет название материала, тип публикации, издание, дату и другие выходные данные. Компактная типографика позволяет разместить много библиографической информации на одном экране, сохранив возможность последовательного чтения. Справа продолжает работать лента актуальных событий.\n\nПользовательский сценарий: посетитель открывает раздел статей, просматривает нумерованный список и реквизиты публикаций, затем при необходимости переходит к другим тематическим вкладкам или к новости из боковой колонки.\n\nЦенность для бизнеса: такой формат подходит для списков публикаций экспертов, научных работ, пресс-материалов и архивов контента. Он систематизирует большой массив ссылок и делает его удобным для поиска и цитирования.",
+              en: "The Articles page presents a bibliographic list of the president’s publications in periodicals and academic collections. A prominent topic heading and the active tab preserve the section context, while numbering gives a long list a clear order.\n\nEach entry combines the title, publication type, source, date and other bibliographic details. Compact typography makes it possible to place substantial reference information on one screen while preserving sequential readability. The current-events feed continues on the right.\n\nUser journey: visitors open the articles section, review the numbered list and publication details, then move to other topical tabs or a news item from the side column when needed.\n\nBusiness value: this format suits lists of expert publications, research papers, press material and content archives. It systematises a large set of references and makes them convenient to search and cite.",
+              tj: "Саҳифаи «Мақолаҳо» рӯйхати библиографии интишорҳои президентро дар нашрияҳои даврӣ ва маҷмӯаҳои илмӣ пешниҳод мекунад. Сарлавҳаи намоёни мавзуӣ ва варақаи фаъол заминаи бахшро нигоҳ медоранд, рақамгузорӣ бошад ба рӯйхати дароз тартиби равшан медиҳад.\n\nҲар сабт ном, навъи интишор, манбаъ, сана ва дигар маълумоти библиографиро муттаҳид мекунад. Ҳуруфчинии фишурда имкон медиҳад, ки ҳаҷми зиёди маълумоти маълумотӣ дар як экран ҷой гирад ва хондани пайдарпай нигоҳ дошта шавад. Лентаи рӯйдодҳои ҷорӣ дар тарафи рост идома меёбад.\n\nРаванди истифода: корбар бахши мақолаҳоро мекушояд, рӯйхати рақамдор ва маълумоти интишорро мебинад, сипас дар ҳолати зарурӣ ба дигар варақаҳои мавзуӣ ё хабар аз сутуни паҳлӯӣ мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои рӯйхати интишорҳои коршиносон, корҳои илмӣ, маводи матбуотӣ ва бойгониҳои муҳтаво мувофиқ аст. Он маҷмӯи бузурги истинодҳоро ба низом дароварда, барои ҷустуҷӯ ва иқтибосоварӣ қулай мегардонад.",
+            },
+          },
+          {
+            slug: "awards",
+            title: {
+              ru: "Награды",
+              en: "Awards",
+              tj: "Ҷоизаҳо",
+            },
+            imageSrc: "/images/projects/president/awards.webp",
+            BannerSrc: "/images/projects/president/awards.webp",
+            shortInfo: {
+              ru: "Сведения о наградах и почётных званиях президента",
+              en: "Information about the president’s awards and honorary titles",
+              tj: "Маълумот дар бораи ҷоизаҳо ва унвонҳои фахрии Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Награды» посвящена государственным, международным и почётным званиям президента. Активная вкладка выделяет этот справочный раздел в общей структуре материалов о президенте, а основной заголовок сразу обозначает тему публикации.\n\nВ центральной колонке последовательно изложены сведения о награждениях, званиях и связанных с ними исторических обстоятельствах. Крупные абзацы помогают сохранить контекст каждой записи, а боковая лента событий оставляет доступными актуальные материалы портала.\n\nПользовательский сценарий: посетитель открывает раздел наград, читает описание присвоенных званий и связанных решений, затем при необходимости переходит к другим материалам о президенте или к свежей новости из правой колонки.\n\nЦенность для бизнеса: аналогичная структура подходит для страниц с достижениями руководителей, корпоративными наградами, сертификациями и историей признания. Она позволяет последовательно подать фактическую информацию в официальном и легко читаемом формате.",
+              en: "The Awards page is dedicated to the president’s state, international and honorary titles. The active tab highlights this reference section within the broader structure of presidential material, while the main heading immediately establishes the publication topic.\n\nThe central column presents information about awards, titles and their related historical context in sequence. Generous paragraphs preserve the context of each entry, and the side events feed keeps current portal material available.\n\nUser journey: visitors open the awards section, read about conferred titles and related decisions, then move to other presidential material or a recent news item from the right column when needed.\n\nBusiness value: a similar structure suits pages about leadership achievements, corporate awards, certifications and recognition history. It presents factual information sequentially in an official, easy-to-read format.",
+              tj: "Саҳифаи «Ҷоизаҳо» ба ҷоизаҳои давлатӣ, байналмилалӣ ва унвонҳои фахрии президент бахшида шудааст. Варақаи фаъол ин бахши маълумотиро дар сохтори умумии мавод оид ба президент ҷудо мекунад ва сарлавҳаи асосӣ фавран мавзуи нашрро муайян месозад.\n\nДар сутуни марказӣ маълумот дар бораи ҷоизасупорӣ, унвонҳо ва шароити таърихии вобаста ба онҳо пайдарпай баён шудааст. Абзацҳои калон заминаи ҳар сабтро нигоҳ медоранд ва лентаи рӯйдодҳо дар паҳлӯ маводи ҷории порталро дастрас мегузорад.\n\nРаванди истифода: корбар бахши ҷоизаҳоро мекушояд, тавсифи унвонҳои додашуда ва қарорҳои вобастаро мехонад, сипас дар ҳолати зарурӣ ба дигар мавод оид ба президент ё хабари нав аз сутуни рост мегузарад.\n\nАҳамият барои тиҷорат: чунин сохтор барои саҳифаҳо оид ба дастовардҳои роҳбарон, ҷоизаҳои корпоративӣ, сертификатҳо ва таърихи эътироф мувофиқ аст. Он маълумоти воқеиро пайдарпай, дар шакли расмӣ ва барои хондан осон пешниҳод мекунад.",
+            },
+          },
+          {
+            slug: "government-chair",
+            title: {
+              ru: "Председатель правительства",
+              en: "Chair of the Government",
+              tj: "Раиси Ҳукумат",
+            },
+            imageSrc: "/images/projects/president/government-chair.webp",
+            BannerSrc: "/images/projects/president/government-chair.webp",
+            shortInfo: {
+              ru: "Председатель правительства и конституционная роль правительства",
+              en: "The chair of government and the government’s constitutional role",
+              tj: "Раиси Ҳукумат ва нақши конститутсионии ҳукумат",
+            },
+            fullInfo: {
+              ru: "Страница «Председатель правительства» открывает раздел о правительстве и его устройстве. Вкладки обеспечивают переход к председателю, указам, членам и заседаниям правительства, а крупный заголовок формирует ясную структуру справочного материала.\n\nВ центре представлены имя председателя, официальный портрет и выдержка из конституционного закона о правительстве. Такая композиция объединяет персональную информацию с нормативным контекстом, сохраняя видимой боковую ленту актуальных событий.\n\nПользовательский сценарий: посетитель открывает раздел правительства, знакомится с председателем и основным положением закона, затем переходит к указам, составу или заседаниям через вкладки либо открывает свежую новость справа.\n\nЦенность для бизнеса: подобный формат подходит для страниц о руководстве организаций, управленческой структуре и регламентах. Он сочетает карточку ключевого лица с документальным описанием его роли и связанной навигацией.",
+              en: "The Chair of the Government page opens the section about the government and its structure. Tabs provide routes to the chair, decrees, members and government meetings, while a prominent heading creates a clear reference layout.\n\nThe centre contains the chair’s name, an official portrait and an excerpt from the constitutional law on the government. This composition combines personal information with regulatory context while keeping the current-events feed visible at the side.\n\nUser journey: visitors open the government section, learn about the chair and the main legal provision, then move to decrees, membership or meetings through the tabs, or open a recent news item on the right.\n\nBusiness value: a similar format suits pages about organisational leadership, management structure and regulations. It pairs a key-person card with documentary context and related navigation.",
+              tj: "Саҳифаи «Раиси Ҳукумат» бахшро оид ба ҳукумат ва сохтори он мекушояд. Варақаҳо ба раиси ҳукумат, фармонҳо, аъзо ва маҷлисҳои ҳукумат роҳ медиҳанд, сарлавҳаи намоён бошад сохтори равшани маводи маълумотиро ташкил мекунад.\n\nДар марказ номи раис, портрети расмӣ ва иқтибос аз қонуни конститутсионӣ дар бораи ҳукумат ҷойгир шудаанд. Чунин тарҳ маълумоти шахсиро бо заминаи меъёрӣ муттаҳид карда, лентаи рӯйдодҳои ҷориро дар паҳлӯ намоён нигоҳ медорад.\n\nРаванди истифода: корбар бахши ҳукуматро мекушояд, бо раиси ҳукумат ва муқаррароти асосии қонун шинос мешавад, сипас тавассути варақаҳо ба фармонҳо, ҳайат ё маҷлисҳо мегузарад ё хабари навро аз тарафи рост мекушояд.\n\nАҳамият барои тиҷорат: чунин формат барои саҳифаҳо оид ба роҳбарияти ташкилот, сохтори идоракунӣ ва низомномаҳо мувофиқ аст. Он корти шахси калидиро бо тавсифи ҳуҷҷатии нақш ва роҳнамоии вобаста муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "government-decree",
+            title: {
+              ru: "Постановление правительства",
+              en: "Government Decree",
+              tj: "Қарори Ҳукумат",
+            },
+            imageSrc: "/images/projects/president/government-decree.webp",
+            BannerSrc: "/images/projects/president/government-decree.webp",
+            shortInfo: {
+              ru: "Постановление о составе правительства и должностях",
+              en: "A decree on the government’s composition and offices",
+              tj: "Қарор дар бораи ҳайати ҳукумат ва вазифаҳо",
+            },
+            fullInfo: {
+              ru: "Страница «Постановление правительства» публикует официальный нормативный документ о составе правительства. Активная вкладка выделяет раздел среди материалов о председателе, членах и заседаниях, а хлебные крошки показывают место документа внутри структуры портала.\n\nВ основной области размещены государственный герб, реквизиты постановления, его название и текст с перечнем должностей. Центрированная шапка документа отделяет реквизиты от основного содержания и подчёркивает официальный характер материала. Боковая лента событий остаётся доступна для перехода к свежим новостям.\n\nПользовательский сценарий: посетитель открывает постановление, знакомится с датой, номером и текстом документа, просматривает состав и должности, затем переходит к другим разделам правительства через вкладки.\n\nЦенность для бизнеса: такой формат подходит для публикации решений, распоряжений, протоколов и организационных структур. Он делает официальный документ понятным, обеспечивает удобную навигацию и сохраняет весь важный контекст на одной странице.",
+              en: "The Government Decree page publishes an official regulatory document on the government’s composition. The active tab distinguishes it from material about the chair, members and meetings, while breadcrumbs show the document’s place inside the portal structure.\n\nThe main area includes the state emblem, decree details, its title and text with a list of offices. A centred document heading separates the references from the main content and emphasises the material’s official nature. The side events feed remains available for moving to recent news.\n\nUser journey: visitors open the decree, review its date, number and text, examine the composition and offices, then move to other government sections through the tabs.\n\nBusiness value: this format suits decisions, orders, minutes and organisational structures. It makes an official document understandable, provides convenient navigation and keeps all essential context on one page.",
+              tj: "Саҳифаи «Қарори Ҳукумат» ҳуҷҷати расмии меъёриро дар бораи ҳайати ҳукумат нашр мекунад. Варақаи фаъол онро аз мавод оид ба раис, аъзо ва маҷлисҳо ҷудо мекунад, роҳнамои саҳифаҳо бошад ҷойи ҳуҷҷатро дар сохтори портал нишон медиҳанд.\n\nДар қисми асосӣ нишони давлатӣ, реквизитҳои қарор, номи он ва матн бо рӯйхати вазифаҳо ҷойгир шудаанд. Сарлавҳаи марказии ҳуҷҷат реквизитҳоро аз муҳтавои асосӣ ҷудо карда, хусусияти расмии маводро таъкид мекунад. Лентаи рӯйдодҳо дар паҳлӯ барои гузаштан ба хабарҳои нав дастрас мемонад.\n\nРаванди истифода: корбар қарорро мекушояд, сана, рақам ва матни ҳуҷҷатро мехонад, ҳайат ва вазифаҳоро мебинад, сипас тавассути варақаҳо ба дигар бахшҳои ҳукумат мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои интишори қарорҳо, фармоишҳо, протоколҳо ва сохторҳои ташкилотӣ мувофиқ аст. Он ҳуҷҷати расмиро фаҳмо намуда, роҳнамоии қулай ва тамоми заминаи муҳимро дар як саҳифа нигоҳ медорад.",
+            },
+          },
+          {
+            slug: "government-members",
+            title: {
+              ru: "Состав правительства",
+              en: "Government Members",
+              tj: "Аъзои Ҳукумат",
+            },
+            imageSrc: "/images/projects/president/government-members.webp",
+            BannerSrc: "/images/projects/president/government-members.webp",
+            shortInfo: {
+              ru: "Руководители и члены правительства",
+              en: "Government leaders and members",
+              tj: "Роҳбарон ва аъзои ҳукумат",
+            },
+            fullInfo: {
+              ru: "Страница «Состав правительства» показывает организационную структуру через портреты и должности руководителей. Активная вкладка обозначает раздел со списком членов правительства, а соседние вкладки позволяют перейти к председателю, постановлениям и заседаниям.\n\nОсновная колонка выстроена вертикально: сначала председатель, затем заместители и другие участники состава. Под каждым портретом указаны должность и имя, благодаря чему посетитель быстро считывает иерархию. Лента событий в правой колонке остаётся доступной во время просмотра справочной информации.\n\nПользовательский сценарий: посетитель открывает состав правительства, знакомится с председателем и заместителями, последовательно просматривает карточки должностных лиц и при необходимости переходит к связанным документам или новостям.\n\nЦенность для бизнеса: такой формат применим для разделов «Команда», руководящих органов, департаментов и советов директоров. Он наглядно показывает структуру, связывает роли с людьми и легко расширяется новыми карточками.",
+              en: "The Government Members page presents the organisational structure through portraits and leadership roles. The active tab identifies the section listing government members, while neighbouring tabs lead to the chair, decrees and meetings.\n\nThe main column is arranged vertically: first the chair, followed by deputies and other members. Each portrait has a role and name beneath it, allowing visitors to read the hierarchy quickly. The events feed remains available in the right column while reference information is being reviewed.\n\nUser journey: visitors open the government-members page, learn about the chair and deputies, review official cards in sequence and, when needed, move to related documents or news.\n\nBusiness value: this format works for Team pages, governing bodies, departments and boards of directors. It makes structure visible, connects roles with people and scales easily with new cards.",
+              tj: "Саҳифаи «Аъзои Ҳукумат» сохтори ташкилиро тавассути портретҳо ва вазифаҳои роҳбарон нишон медиҳад. Варақаи фаъол бахши рӯйхати аъзои ҳукуматро муайян мекунад, варақаҳои ҳамсоя бошанд ба раис, қарорҳо ва маҷлисҳо роҳ медиҳанд.\n\nСутуни асосӣ ба таври амудӣ тартиб дода шудааст: аввал раис, баъдан муовинон ва дигар аъзо. Дар зери ҳар портрет вазифа ва ном оварда мешавад, ки ба корбар барои зуд дарк кардани зинабандӣ кумак мекунад. Лентаи рӯйдодҳо дар сутуни рост ҳангоми мутолиаи маълумоти расмӣ дастрас мемонад.\n\nРаванди истифода: корбар саҳифаи аъзои ҳукуматро мекушояд, бо раис ва муовинон шинос мешавад, кортҳои шахсони мансабдорро пайдарпай мебинад ва дар ҳолати зарурӣ ба ҳуҷҷатҳои вобаста ё хабарҳо мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои бахшҳои «Даста», мақомоти роҳбарӣ, шуъбаҳо ва шӯрои директорон мувофиқ аст. Он сохторро намоён карда, вазифаҳоро бо одамон мепайвандад ва бо кортҳои нав ба осонӣ васеъ мешавад.",
+            },
+          },
+          {
+            slug: "government-meetings",
+            title: {
+              ru: "Заседания правительства",
+              en: "Government Meetings",
+              tj: "Маҷлисҳои Ҳукумат",
+            },
+            imageSrc: "/images/projects/president/government-meetings.webp",
+            BannerSrc: "/images/projects/president/government-meetings.webp",
+            shortInfo: {
+              ru: "Архив заседаний правительства с фотоматериалами",
+              en: "An archive of government meetings with photo materials",
+              tj: "Бойгонии маҷлисҳои ҳукумат бо маводи аксӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Заседания правительства» собирает архив заседаний в формате новостных карточек. Активная вкладка выделяет этот раздел среди материалов о председателе, постановлениях и составе правительства, а каждая запись содержит фотографию, название, дату, место и количество изображений.\n\nВертикальный список делает архив удобным для последовательного просмотра: миниатюра слева даёт визуальный контекст, а текстовая часть справа содержит основные реквизиты публикации. Боковая колонка с актуальными событиями остаётся доступной на протяжении всего списка.\n\nПользовательский сценарий: посетитель открывает заседания, просматривает ленту по датам, ориентируется по фотографиям и числу материалов, затем открывает интересующую публикацию или переходит к другим разделам правительства.\n\nЦенность для бизнеса: такой формат подходит для архивов встреч, протокольных мероприятий, конференций и корпоративных событий. Он объединяет хронологию, визуальные доказательства и метаданные в понятный каталог.",
+              en: "The Government Meetings page collects a meeting archive in a news-card format. The active tab distinguishes this section from material about the chair, decrees and members, while each record includes a photo, title, date, location and image count.\n\nA vertical list makes the archive easy to browse in sequence: the thumbnail on the left provides visual context, while the text on the right contains the publication’s core details. The current-events column remains available throughout the list.\n\nUser journey: visitors open the meetings section, browse the timeline by date, use photos and material counts to orient themselves, then open a publication of interest or move to other government sections.\n\nBusiness value: this format suits archives of meetings, protocol events, conferences and corporate activities. It combines chronology, visual evidence and metadata in an understandable catalogue.",
+              tj: "Саҳифаи «Маҷлисҳои Ҳукумат» бойгонии маҷлисҳоро дар шакли кортҳои хабарӣ ҷамъ меорад. Варақаи фаъол ин бахшро аз мавод оид ба раис, қарорҳо ва аъзо ҷудо мекунад; ҳар сабт акс, ном, сана, ҷой ва шумораи тасвирҳоро дар бар мегирад.\n\nРӯйхати амудӣ бойгониро барои тамошои пайдарпай қулай мегардонад: тасвири хурд аз тарафи чап заминаи визуалӣ медиҳад, қисми матнӣ аз тарафи рост бошад маълумоти асосии нашрро дар бар мегирад. Сутуни рӯйдодҳои ҷорӣ дар тамоми рӯйхат дастрас мемонад.\n\nРаванди истифода: корбар бахши маҷлисҳоро мекушояд, лентаро аз рӯи санаҳо мебинад, аз рӯи аксҳо ва шумораи мавод роҳ меёбад, сипас нашри ҷолибро мекушояд ё ба дигар бахшҳои ҳукумат мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои бойгониҳои вохӯриҳо, чорабиниҳои протоколӣ, конфронсҳо ва рӯйдодҳои корпоративӣ мувофиқ аст. Он хронология, далелҳои визуалӣ ва метамаълумотро дар феҳристи фаҳмо муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "government-meeting-detail",
+            title: {
+              ru: "Публикация о заседании",
+              en: "Meeting Publication",
+              tj: "Нашр дар бораи маҷлис",
+            },
+            imageSrc: "/images/projects/president/government-meeting-detail.webp",
+            BannerSrc: "/images/projects/president/government-meeting-detail.webp",
+            shortInfo: {
+              ru: "Детальная публикация заседания с фотогалереей",
+              en: "A detailed meeting publication with a photo gallery",
+              tj: "Нашри муфассали маҷлис бо галереяи аксҳо",
+            },
+            fullInfo: {
+              ru: "Страница публикации о заседании правительства раскрывает одно событие в формате фотогалереи. Вверху размещены заголовок, дата, место и кнопка для просмотра материалов, а основную часть занимает крупный кадр заседания.\n\nПод главным изображением доступна лента миниатюр, которая показывает дополнительные фотографии и даёт быстрый переход между ними. Навигационные элементы на изображении и возможность загрузки расширяют работу с визуальными материалами, а правая колонка сохраняет ленту актуальных событий.\n\nПользовательский сценарий: посетитель открывает публикацию, знакомится с датой и местом, просматривает основное изображение и миниатюры, переключается между кадрами или загружает материал, затем переходит к другой новости.\n\nЦенность для бизнеса: такой шаблон подходит для отчётов о мероприятиях, кейсов, пресс-релизов и новостей с визуальными доказательствами. Он делает один материал самодостаточной страницей и аккуратно объединяет текстовые метаданные с галереей.",
+              en: "The government-meeting publication page presents one event as a photo gallery. The top area contains the title, date, location and a button for viewing material, while a large meeting photograph occupies the main area.\n\nA thumbnail strip below the hero image shows additional photos and provides quick transitions between them. On-image navigation and download capability extend the use of visual material, while the right column keeps the current-events feed available.\n\nUser journey: visitors open the publication, review the date and location, view the main image and thumbnails, switch between photos or download material, then move to another news story.\n\nBusiness value: this template suits event reports, case studies, press releases and news with visual evidence. It makes a single item a self-contained page and cleanly combines textual metadata with a gallery.",
+              tj: "Саҳифаи нашр дар бораи маҷлиси ҳукумат як рӯйдодро дар шакли галереяи аксҳо пешниҳод мекунад. Дар боло сарлавҳа, сана, ҷой ва тугмаи дидани мавод ҷойгиранд, қисми асосиро бошад тасвири калони маҷлис ишғол мекунад.\n\nДар зери тасвири асосӣ лентаи тасвирҳои хурд дастрас аст, ки аксҳои иловагиро нишон дода, гузариши зуд байни онҳоро фароҳам меорад. Унсурҳои роҳнамоӣ дар рӯи тасвир ва имкони боргирӣ кор бо маводи визуалиро васеъ мекунанд, сутуни рост бошад лентаи рӯйдодҳои ҷориро нигоҳ медорад.\n\nРаванди истифода: корбар нашрро мекушояд, сана ва ҷойро мебинад, тасвири асосӣ ва тасвирҳои хурдро тамошо мекунад, байни кадрҳо мегузарад ё маводро боргирӣ намуда, баъдан ба хабари дигар мегузарад.\n\nАҳамият барои тиҷорат: чунин қолаб барои ҳисоботҳо аз чорабиниҳо, кейсҳо, пресс-релизҳо ва хабарҳо бо далелҳои визуалӣ мувофиқ аст. Он як маводро ба саҳифаи мустақил табдил дода, метамаълумоти матниро бо галерея ба таври тоза муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "executive-office-head",
+            title: {
+              ru: "Руководитель исполнительного аппарата",
+              en: "Head of the Executive Office",
+              tj: "Роҳбари Дастгоҳи иҷроия",
+            },
+            imageSrc: "/images/projects/president/executive-office-head.webp",
+            BannerSrc: "/images/projects/president/executive-office-head.webp",
+            shortInfo: {
+              ru: "Портрет и биографическая справка руководителя аппарата",
+              en: "Portrait and biography of the executive office head",
+              tj: "Портрет ва шарҳи ҳоли роҳбари дастгоҳ",
+            },
+            fullInfo: {
+              ru: "Страница «Руководитель исполнительного аппарата» представляет профиль руководителя аппарата президента. Тематические вкладки позволяют перейти к руководителю, положениям, структуре, помощникам и пресс-службе, а крупный заголовок формирует отдельный информационный раздел.\n\nВ центре размещены имя, должность и официальный портрет, после которого следует биографическая справка с основными этапами образования и профессиональной деятельности. Такая последовательность сначала даёт визуальную идентификацию, а затем раскрывает опыт и карьерный путь. Справа остаётся лента актуальных событий портала.\n\nПользовательский сценарий: посетитель открывает профиль руководителя, видит должность и портрет, читает биографию, затем переходит к структуре аппарата, положениям или новостям через навигацию.\n\nЦенность для бизнеса: аналогичный формат подходит для профилей руководителей, представителей органов управления и ключевых экспертов. Он объединяет официальную фотографию, роль и структурированную биографию в одной понятной странице.",
+              en: "The Head of the Executive Office page presents the profile of the president’s executive-office leader. Topical tabs provide routes to the head, regulations, structure, assistants and press service, while a prominent heading forms a dedicated information area.\n\nThe centre contains the name, role and official portrait, followed by a biographical reference covering major stages of education and professional activity. This sequence provides visual identification first and then explains experience and career path. The portal’s current-events feed remains on the right.\n\nUser journey: visitors open the leader’s profile, see the role and portrait, read the biography, then move to the office structure, regulations or news through navigation.\n\nBusiness value: a similar format suits profiles of leaders, governance representatives and key experts. It combines an official photograph, role and structured biography on one understandable page.",
+              tj: "Саҳифаи «Роҳбари Дастгоҳи иҷроия» профили роҳбари дастгоҳи президенти ҷумҳуриро пешниҳод мекунад. Варақаҳои мавзуӣ ба роҳбар, низомнома, сохтор, ёварон ва хадамоти матбуот роҳ медиҳанд, сарлавҳаи калон бошад бахши мустақили иттилоотиро ташкил мекунад.\n\nДар марказ ном, вазифа ва портрети расмӣ ҷой доранд, баъдан шарҳи ҳол бо марҳилаҳои асосии таҳсил ва фаъолияти касбӣ меояд. Чунин пайдарпайӣ аввал шиносоии визуалӣ медиҳад ва сипас таҷриба ва роҳи касбиро мекушояд. Лентаи рӯйдодҳои ҷории портал дар тарафи рост боқӣ мемонад.\n\nРаванди истифода: корбар профили роҳбарро мекушояд, вазифа ва портретро мебинад, шарҳи ҳолро мехонад, сипас тавассути роҳнамоӣ ба сохтори дастгоҳ, низомнома ё хабарҳо мегузарад.\n\nАҳамият барои тиҷорат: чунин формат барои профилҳои роҳбарон, намояндагони мақомоти идоракунӣ ва коршиносони калидӣ мувофиқ аст. Он акси расмӣ, вазифа ва шарҳи ҳоли сохторёфтаро дар як саҳифаи фаҳмо муттаҳид мекунад.",
+            },
+          },
+          {
+            slug: "executive-office-regulations",
+            title: {
+              ru: "Положение об аппарате",
+              en: "Executive Office Regulations",
+              tj: "Низомнома",
+            },
+            imageSrc: "/images/projects/president/executive-office-regulations.webp",
+            BannerSrc: "/images/projects/president/executive-office-regulations.webp",
+            shortInfo: {
+              ru: "Положение об исполнительном аппарате президента",
+              en: "Regulations governing the president’s executive office",
+              tj: "Низомнома дар бораи Дастгоҳи иҷроияи Президент",
+            },
+            fullInfo: {
+              ru: "Страница «Положение об аппарате» публикует нормативный документ, регулирующий деятельность исполнительного аппарата президента. Хлебные крошки и активная вкладка помогают определить раздел, а реквизиты указа в верхней части фиксируют дату и номер основания документа.\n\nВ центральной колонке расположены название положения, вводный раздел и пронумерованные пункты. Такая структура отделяет официальные реквизиты от содержания и позволяет последовательно изучать задачи, полномочия и порядок работы аппарата. Лента актуальных событий сохраняется в правой колонке.\n\nПользовательский сценарий: посетитель открывает положение, сверяет реквизиты указа, читает общие положения и нужные пункты, затем переходит к структуре, помощникам или другим материалам раздела через вкладки.\n\nЦенность для бизнеса: подобная подача подходит для уставов, регламентов, положений о подразделениях и внутренних политик. Она делает длинный нормативный текст понятным, удобно делит его на разделы и сохраняет контекст документа.",
+              en: "The Executive Office Regulations page publishes the regulatory document governing the president’s executive office. Breadcrumbs and the active tab identify the section, while decree details in the upper area establish the document’s date and number.\n\nThe central column contains the regulations title, an introductory section and numbered provisions. This structure separates official references from the content and allows visitors to study the office’s responsibilities, powers and working order in sequence. The current-events feed remains in the right column.\n\nUser journey: visitors open the regulations, check the decree details, read the general provisions and required clauses, then move to the structure, assistants or other section material through the tabs.\n\nBusiness value: this presentation suits charters, regulations, departmental provisions and internal policies. It makes a long regulatory text understandable, divides it conveniently into sections and preserves the document context.",
+              tj: "Саҳифаи «Низомнома» ҳуҷҷати меъёриеро нашр мекунад, ки фаъолияти Дастгоҳи иҷроияи Президентро танзим менамояд. Роҳнамои саҳифаҳо ва варақаи фаъол бахшро муайян мекунанд, реквизитҳои фармон дар қисми боло бошад сана ва рақами асоси ҳуҷҷатро нишон медиҳанд.\n\nДар сутуни марказӣ номи низомнома, фасли муқаддимавӣ ва бандҳои рақамдор ҷойгир шудаанд. Чунин сохтор реквизитҳои расмиро аз муҳтаво ҷудо карда, барои мутолиаи пайдарпайи вазифаҳо, ваколатҳо ва тартиби кори дастгоҳ имкон медиҳад. Лентаи рӯйдодҳои ҷорӣ дар сутуни рост боқӣ мемонад.\n\nРаванди истифода: корбар низомномаро мекушояд, реквизитҳои фармонро месанҷад, муқаррароти умумӣ ва бандҳои лозимро мехонад, сипас тавассути варақаҳо ба сохтор, ёварон ё дигар маводи бахш мегузарад.\n\nАҳамият барои тиҷорат: чунин пешниҳод барои оинномаҳо, низомномаҳо, муқаррарот оид ба воҳидҳо ва сиёсатҳои дохилӣ мувофиқ аст. Он матни меъёрии дарозро фаҳмо намуда, онро ба бахшҳо қулай ҷудо мекунад ва заминаи ҳуҷҷатро нигоҳ медорад.",
+            },
+          },
+          {
+            slug: "executive-office-structure",
+            title: {
+              ru: "Структура исполнительного аппарата",
+              en: "Executive Office Structure",
+              tj: "Сохтор",
+            },
+            imageSrc: "/images/projects/president/executive-office-structure.webp",
+            BannerSrc: "/images/projects/president/executive-office-structure.webp",
+            shortInfo: {
+              ru: "Перечень подразделений исполнительного аппарата",
+              en: "A list of executive-office departments",
+              tj: "Рӯйхати воҳидҳои Дастгоҳи иҷроия",
+            },
+            fullInfo: {
+              ru: "Страница «Структура исполнительного аппарата» показывает состав аппарата президента в виде последовательного перечня подразделений и должностей. Активная вкладка «Структура» выделяет этот раздел среди материалов о руководителе, положении, помощниках и пресс-службе.\n\nОсновная колонка начинается с заголовка и далее перечисляет руководство аппарата, помощников по направлениям, секретариаты и профильные службы. Однотипное оформление строк делает длинную организационную структуру легко просматриваемой. Справа сохраняется лента актуальных событий портала.\n\nПользовательский сценарий: посетитель открывает структуру, быстро находит нужное направление или подразделение в списке, затем переходит к положению об аппарате, профилю руководителя или другим материалам через вкладки.\n\nЦенность для бизнеса: такой формат подходит для оргструктур компаний, ведомств, департаментов и проектных команд. Он помогает представить большое число ролей без перегруженной схемы и упрощает поиск ответственного направления.",
+              en: "The Executive Office Structure page presents the president’s office as a sequential list of departments and roles. The active Structure tab distinguishes this section from materials about the office head, regulations, advisers, and press service.\n\nThe main column begins with a heading and then lists the office leadership, advisers by area, secretariats, and specialist services. Consistent row styling makes a long organisational structure easy to scan, while the current-events feed remains available in the sidebar.\n\nUser journey: a visitor opens the structure, quickly finds the relevant department or responsibility area, and then uses the tabs to continue to the regulations, the head’s profile, or related materials.\n\nBusiness value: this pattern works well for company, agency, department, and project-team organisational structures. It presents many roles without an overloaded diagram and makes it easier to identify the responsible area.",
+              tj: "Саҳифаи «Сохтор» ҳайати дастгоҳи президентро ҳамчун рӯйхати пайдарпайи воҳидҳо ва вазифаҳо нишон медиҳад. Ҷадвали фаъоли «Сохтор» ин бахшро аз мавод дар бораи роҳбар, низомнома, ёрдамчиён ва хадамоти матбуот ҷудо мекунад.\n\nДар сутуни асосӣ аввал сарлавҳа ва сипас роҳбарияти дастгоҳ, ёрдамчиён аз рӯи самтҳо, котиботҳо ва хадамоти соҳавӣ оварда шудаанд. Тарзи ягонаи намоиши сатрҳо сохтори калони ташкилиро барои мутолиа осон мегардонад, дар ҳоле ки лентаи рӯйдодҳои нав дар канор нигоҳ дошта мешавад.\n\nСенарияи корбар: меҳмон саҳифаи сохторро мекушояд, дар рӯйхат воҳид ё самти заруриро зуд меёбад ва баъдан тавассути ҷадвалҳо ба низомнома, профили роҳбар ё маводи дигар мегузарад.\n\nАрзиши тиҷоратӣ: чунин формат барои сохторҳои ташкилии ширкатҳо, идораҳо, департаментҳо ва гурӯҳҳои лоиҳавӣ мувофиқ аст. Он имкон медиҳад, ки шумораи зиёди вазифаҳо бе нақшаи аз ҳад пурбор пешниҳод шуда, ҷустуҷӯи самти масъул осон гардад.",
+            },
+          },
+          {
+            slug: "executive-office-assistants",
+            title: {
+              ru: "Помощники президента",
+              en: "Presidential Assistants",
+              tj: "Ёрдамчиёни Президент",
+            },
+            imageSrc: "/images/projects/president/executive-office-assistants.webp",
+            BannerSrc: "/images/projects/president/executive-office-assistants.webp",
+            shortInfo: {
+              ru: "Профили помощников президента по направлениям",
+              en: "Profiles of presidential assistants by area",
+              tj: "Профилҳои ёрдамчиёни Президент аз рӯи самтҳо",
+            },
+            fullInfo: {
+              ru: "Страница «Помощники президента» представляет сотрудников исполнительного аппарата, отвечающих за отдельные направления. Активная вкладка выделяет раздел среди сведений о руководителе, положении, структуре и пресс-службе.\n\nВ центральной части размещены официальные портреты, имена и должности помощников. Карточки выстроены вертикально: сначала показан сотрудник, затем указана его функциональная область, что делает список удобным для последовательного просмотра. Справа сохраняется лента актуальных событий портала.\n\nПользовательский сценарий: посетитель открывает раздел, просматривает профили и быстро сопоставляет человека с направлением его работы, после чего переходит к структуре аппарата или другим связанным материалам через вкладки.\n\nЦенность для бизнеса: такой формат подходит для страниц команд, руководителей направлений и ключевых экспертов. Он сочетает визуальное представление, должность и зону ответственности, помогая посетителю быстрее найти нужный контакт.",
+              en: "The Presidential Assistants page presents executive-office staff responsible for individual areas. The active tab distinguishes this section from information about the office head, regulations, structure, and press service.\n\nThe central area contains official portraits, names, and roles of the assistants. The cards are arranged vertically: each staff member is shown first, followed by their responsibility area, making the list easy to review in sequence. The portal’s current-events feed remains on the right.\n\nUser journey: a visitor opens the section, reviews the profiles, quickly matches a person to their area of responsibility, and then moves to the office structure or other related material through the tabs.\n\nBusiness value: this format suits team, department-lead, and key-expert pages. It combines a visual profile, role, and responsibility area, helping visitors find the right contact sooner.",
+              tj: "Саҳифаи «Ёрдамчиёни Президент» кормандони Дастгоҳи иҷроияро, ки барои самтҳои ҷудогона масъуланд, муаррифӣ мекунад. Ҷадвали фаъол ин бахшро аз маълумот дар бораи роҳбар, низомнома, сохтор ва хадамоти матбуот ҷудо мекунад.\n\nДар қисми марказӣ портретҳои расмӣ, номҳо ва вазифаҳои ёрдамчиён ҷой доранд. Кортҳо ба таври амудӣ ҷойгир шудаанд: аввал корманд нишон дода мешавад, сипас самти фаъолияти ӯ оварда мешавад, ки мутолиаи пайдарпайи рӯйхатро осон мекунад. Лентаи рӯйдодҳои ҷории портал дар тарафи рост боқӣ мемонад.\n\nСенарияи корбар: меҳмон бахшро мекушояд, профилҳоро мебинад, шахсро бо самти масъулияташ зуд мувофиқ месозад ва баъдан тавассути ҷадвалҳо ба сохтори дастгоҳ ё маводи дигари алоқаманд мегузарад.\n\nАрзиши тиҷоратӣ: чунин формат барои саҳифаҳои дастаҳо, роҳбарони самтҳо ва коршиносони калидӣ мувофиқ аст. Он профили визуалӣ, вазифа ва доираи масъулиятро муттаҳид карда, ба меҳмон дар ёфтани тамоси зарурӣ кумак мекунад.",
+            },
+          },
+          {
+            slug: "executive-office-press-service",
+            title: {
+              ru: "Служба печати президента",
+              en: "Presidential Press Service",
+              tj: "Хадамоти матбуот",
+            },
+            imageSrc: "/images/projects/president/executive-office-press-service.webp",
+            BannerSrc: "/images/projects/president/executive-office-press-service.webp",
+            shortInfo: {
+              ru: "Информация о работе службы печати президента",
+              en: "Information about the presidential press service",
+              tj: "Маълумот дар бораи фаъолияти хадамоти матбуот",
+            },
+            fullInfo: {
+              ru: "Страница службы печати президента знакомит с её назначением, задачами и руководителем. Активная вкладка «Служба печати» выделяет раздел среди других материалов исполнительного аппарата.\n\nВ центральной колонке последовательно размещены вводный текст о работе службы, описание ключевых функций и блок с именем, должностью и портретом руководителя. Структура текста разбита на небольшие абзацы, поэтому официальная информация остаётся удобной для чтения. В правой колонке сохраняется лента актуальных новостей.\n\nПользовательский сценарий: посетитель читает, за какие направления отвечает служба, знакомится с руководителем и при необходимости переходит к структуре аппарата, профилям помощников или другим разделам через вкладки.\n\nЦенность для бизнеса: такой формат подходит для страниц пресс-служб, коммуникационных подразделений и отделов по связям с общественностью. Он объединяет описание функций и контактное лицо, повышая прозрачность и удобство навигации.",
+              en: "The Presidential Press Service page introduces its purpose, responsibilities, and head. The active Press Service tab distinguishes this section from other executive-office materials.\n\nThe central column presents an introduction to the service’s work, a description of its key functions, and a block with the head’s name, role, and portrait. The content is divided into short paragraphs so that official information remains easy to read. A current-news feed stays in the right column.\n\nUser journey: a visitor learns which areas the service covers, gets acquainted with its head, and uses the tabs to continue to the office structure, assistant profiles, or other sections when needed.\n\nBusiness value: this format suits press-office, communications, and public-relations pages. It combines a description of functions with a contact person, improving transparency and navigation.",
+              tj: "Саҳифаи хадамоти матбуоти президент бо таъинот, вазифаҳо ва роҳбари он шинос мекунад. Ҷадвали фаъоли «Хадамоти матбуот» ин бахшро аз дигар маводи Дастгоҳи иҷроия ҷудо менамояд.\n\nДар сутуни марказӣ матни муқаддимавӣ дар бораи фаъолияти хадамот, тавсифи вазифаҳои асосӣ ва блок бо ном, вазифа ва портрети роҳбар пайдарпай ҷойгир шудаанд. Матн ба бандҳои кӯтоҳ ҷудо шудааст, то маълумоти расмӣ барои хондан қулай бошад. Лентаи хабарҳои нав дар сутуни рост нигоҳ дошта мешавад.\n\nСенарияи корбар: меҳмон мефаҳмад, ки хадамот барои кадом самтҳо масъул аст, бо роҳбари он шинос мешавад ва ҳангоми зарурат тавассути ҷадвалҳо ба сохтори дастгоҳ, профилҳои ёрдамчиён ё бахшҳои дигар мегузарад.\n\nАрзиши тиҷоратӣ: чунин формат барои саҳифаҳои хадамоти матбуот, бахшҳои коммуникатсия ва равобит бо ҷомеа мувофиқ аст. Он тавсифи вазифаҳоро бо шахси тамос муттаҳид карда, шаффофият ва роҳнамоиро беҳтар мекунад.",
+            },
+          },
+          {
+            slug: "presidential-appeal-form",
+            title: {
+              ru: "Обращение к президенту",
+              en: "Appeal to the President",
+              tj: "Нома ба Президент",
+            },
+            imageSrc: "/images/projects/president/presidential-appeal-form.webp",
+            BannerSrc: "/images/projects/president/presidential-appeal-form.webp",
+            shortInfo: {
+              ru: "Форма для отправки личного обращения",
+              en: "Form for submitting a personal appeal",
+              tj: "Шакли ирсоли муроҷиати шахсӣ",
+            },
+            fullInfo: {
+              ru: "Страница «Обращение к президенту» предоставляет электронную форму для подачи личного обращения. В верхней части размещено пояснение о требованиях к содержанию и данным заявителя, а ниже начинается единая форма ввода.\n\nПоля формы собраны в последовательную структуру: имя, фамилия, страна, адрес, телефон, электронная почта, тема и текст обращения. Нейтральный фон, крупные скруглённые поля и заметные подписи помогают сосредоточиться на заполнении без лишних визуальных элементов.\n\nПользовательский сценарий: посетитель знакомится с правилами, указывает контактные данные, формулирует тему и текст обращения, затем передаёт его через форму.\n\nЦенность для бизнеса: такой интерфейс подходит для приёма обращений, запросов в службу поддержки, заявок и обратной связи. Чёткая последовательность полей снижает число ошибок, а структурированные данные упрощают последующую обработку обращений.",
+              en: "The Appeal to the President page provides an electronic form for submitting a personal appeal. The upper area explains requirements for the message and applicant data, followed by a single input form.\n\nThe fields follow a clear sequence: first name, surname, country, address, phone number, email, subject, and appeal text. A neutral background, large rounded inputs, and visible labels help visitors focus on completion without unnecessary visual elements.\n\nUser journey: the visitor reviews the rules, enters contact details, writes a subject and message, then submits the appeal through the form.\n\nBusiness value: this interface suits appeals, support requests, applications, and feedback collection. A clear field sequence reduces errors, while structured data simplifies the subsequent handling of submissions.",
+              tj: "Саҳифаи «Нома ба Президент» шакли электрониро барои ирсоли муроҷиати шахсӣ пешниҳод мекунад. Дар қисми боло шарҳи талабот ба муҳтавои муроҷиат ва маълумоти муроҷиаткунанда ҷойгир буда, баъдан шакли ягонаи воридкунӣ оғоз мешавад.\n\nМайдонҳои шакл пайдарпай ҷойгир шудаанд: ном, насаб, кишвар, суроға, рақами телефон, почтаи электронӣ, мавзуъ ва матни муроҷиат. Заминаи бетараф, майдонҳои калони гирдшуда ва нишонаҳои равшан имкон медиҳанд, ки корбар бидуни унсурҳои зиёдатии визуалӣ ба пуркунӣ диққат диҳад.\n\nСенарияи корбар: меҳмон бо қоидаҳо шинос мешавад, маълумоти тамосро ворид мекунад, мавзуъ ва матни муроҷиатро менависад ва сипас онро тавассути шакл мефиристад.\n\nАрзиши тиҷоратӣ: чунин интерфейс барои қабули муроҷиатҳо, дархостҳои дастгирӣ, аризаҳо ва бозхурд мувофиқ аст. Пайдарпайии возеҳи майдонҳо хатоҳоро кам мекунад ва маълумоти сохторёфта коркарди минбаъдаи муроҷиатҳоро осон мегардонад.",
+            },
+          },
+          {
+            slug: "presidential-appeal-attachments",
+            title: {
+              ru: "Вложения к обращению",
+              en: "Appeal Attachments",
+              tj: "Замимаҳо ба муроҷиат",
+            },
+            imageSrc: "/images/projects/president/presidential-appeal-attachments.webp",
+            BannerSrc: "/images/projects/president/presidential-appeal-attachments.webp",
+            shortInfo: {
+              ru: "Загрузка файлов и финальная отправка обращения",
+              en: "File upload and final appeal submission",
+              tj: "Боркунии файлҳо ва ирсоли ниҳоии муроҷиат",
+            },
+            fullInfo: {
+              ru: "Экран завершает форму обращения к президенту и показывает действия после заполнения основных полей. Пользователь может приложить подтверждающие файлы, сохранить черновик либо перейти к окончательной отправке.\n\nВ верхней части видны оставшиеся контактные поля и поле текста обращения. Ниже расположен блок вложений с ограничением размера файла, двумя строками загрузки и понятными состояниями выбора и удаления файла. Отдельно отображается проверка reCAPTCHA и основная кнопка отправки.\n\nПользовательский сценарий: посетитель прикрепляет необходимые документы, при необходимости сохраняет обращение, проходит проверку «Я не робот» и отправляет заполненную форму.\n\nЦенность для бизнеса: такой финальный этап подходит для сервисов заявок, обращений и документооборота. Возможность приложить материалы, сохранить результат и подтвердить отправку делает процесс надёжнее и повышает качество получаемых обращений.",
+              en: "This screen completes the Appeal to the President form and shows the steps after the main fields have been filled out. Visitors can attach supporting files, save a draft, or proceed to final submission.\n\nThe upper area shows the remaining contact fields and the appeal text field. Below is an attachments block with a file-size limit, two upload rows, and clear file-selection and removal states. A reCAPTCHA check and the primary submit button are displayed separately.\n\nUser journey: the visitor attaches required documents, saves the appeal if needed, passes the “I’m not a robot” check, and sends the completed form.\n\nBusiness value: this final stage suits application, appeal, and document-workflow services. The ability to attach materials, save progress, and confirm submission makes the process more reliable and improves the quality of incoming requests.",
+              tj: "Ин экран шакли муроҷиат ба Президентро анҷом дода, амалҳоро пас аз пур кардани майдонҳои асосӣ нишон медиҳад. Корбар метавонад файлҳои тасдиқкунандаро замима кунад, нусхаи кориро нигоҳ дорад ё ба ирсоли ниҳоӣ гузарад.\n\nДар қисми боло майдонҳои боқимондаи тамос ва майдони матни муроҷиат дида мешаванд. Дар поён блоки замимаҳо бо маҳдудияти ҳаҷми файл, ду сатри боркунӣ ва ҳолатҳои равшани интихоб ва ҳазфи файл ҷойгир аст. Санҷиши reCAPTCHA ва тугмаи асосии ирсол алоҳида нишон дода шудаанд.\n\nСенарияи корбар: меҳмон ҳуҷҷатҳои заруриро замима мекунад, ҳангоми зарурат муроҷиатро нигоҳ медорад, аз санҷиши «Ман робот нестам» мегузарад ва шакли пуршударо мефиристад.\n\nАрзиши тиҷоратӣ: чунин марҳилаи ниҳоӣ барои хизматҳои ариза, муроҷиат ва гардиши ҳуҷҷатҳо мувофиқ аст. Имкони замима кардани мавод, нигоҳ доштани натиҷа ва тасдиқи ирсол равандро боэътимодтар намуда, сифати муроҷиатҳои воридшавандаро беҳтар мекунад.",
+            },
+          },
+          {
+            slug: "search-results",
+            title: {
+              ru: "Результаты поиска",
+              en: "Search Results",
+              tj: "Натиҷаҳои ҷустуҷӯ",
+            },
+            imageSrc: "/images/projects/president/search-results.webp",
+            BannerSrc: "/images/projects/president/search-results.webp",
+            shortInfo: {
+              ru: "Поиск материалов портала по ключевому слову",
+              en: "Portal content search by keyword",
+              tj: "Ҷустуҷӯи маводи портал аз рӯи калимаи калидӣ",
+            },
+            fullInfo: {
+              ru: "Страница результатов поиска показывает материалы портала, найденные по запросу «Таджикистан». В верхней части размещена широкая строка поиска, а ниже — список публикаций с заголовком, фрагментом текста, датой и типом материала.\n\nРезультаты выстроены вертикально, поэтому посетитель может быстро просмотреть несколько совпадений и выбрать интересующую публикацию. В правой колонке размещены календарь, кнопка перехода к расписанию и лента актуальных событий, сохраняющие контекст портала во время поиска.\n\nПользовательский сценарий: посетитель вводит запрос, знакомится с заголовками и краткими фрагментами найденных материалов, затем открывает нужную публикацию для подробного чтения.\n\nЦенность для бизнеса: поиск делает большой контентный ресурс удобнее для навигации и сокращает путь к нужной информации. Формат подходит для новостных порталов, баз знаний, архивов и корпоративных сайтов с большим числом материалов.",
+              en: "The Search Results page displays portal materials found for the query “Tajikistan”. A wide search field sits at the top, followed by a list of publications with a title, text excerpt, date, and content type.\n\nThe results are arranged vertically so visitors can quickly review multiple matches and choose a relevant publication. The right column contains a calendar, a schedule link, and a current-events feed, preserving the portal context during a search.\n\nUser journey: the visitor enters a query, reviews titles and short excerpts of found materials, and opens the relevant publication for detailed reading.\n\nBusiness value: search makes a large content resource easier to navigate and shortens the route to needed information. This format suits news portals, knowledge bases, archives, and corporate sites with extensive content.",
+              tj: "Саҳифаи натиҷаҳои ҷустуҷӯ маводи порталро, ки аз рӯи дархости «Тоҷикистон» ёфт шудаанд, нишон медиҳад. Дар қисми боло сатри васеи ҷустуҷӯ ҷойгир аст ва дар поён рӯйхати нашрияҳо бо сарлавҳа, порае аз матн, сана ва навъи мавод оварда мешавад.\n\nНатиҷаҳо ба таври амудӣ ҷойгир шудаанд, то меҳмон чандин мувофиқатро зуд бинад ва нашрияи шавқоварро интихоб кунад. Дар сутуни рост тақвим, тугмаи гузариш ба ҷадвал ва лентаи рӯйдодҳои нав ҷой доранд, ки заминаи порталро ҳангоми ҷустуҷӯ нигоҳ медоранд.\n\nСенарияи корбар: меҳмон дархостро ворид мекунад, сарлавҳаҳо ва пораҳои кӯтоҳи маводи ёфтшударо мебинад ва барои мутолиаи муфассал нашрияи заруриро мекушояд.\n\nАрзиши тиҷоратӣ: ҷустуҷӯ манбаи дорои муҳтавои калонро барои роҳнамоӣ қулайтар намуда, роҳи расидан ба маълумоти заруриро кӯтоҳ мекунад. Чунин формат барои порталҳои хабарӣ, пойгоҳҳои дониш, бойгониҳо ва сомонаҳои корпоративӣ бо маводи зиёд мувофиқ аст.",
+            },
+          },
+          {
+            slug: "text-size-controls",
+            title: {
+              ru: "Настройка размера текста",
+              en: "Text Size Controls",
+              tj: "Танзими андозаи матн",
+            },
+            imageSrc: "/images/projects/president/text-size-controls.webp",
+            BannerSrc: "/images/projects/president/text-size-controls.webp",
+            shortInfo: {
+              ru: "Панель доступности для изменения размера шрифта",
+              en: "Accessibility controls for adjusting font size",
+              tj: "Панели дастрасӣ барои тағйири андозаи ҳарф",
+            },
+            fullInfo: {
+              ru: "Экран раздела «Таджикистан» демонстрирует встроенную панель настройки размера текста. В верхней части сайта рядом с языковыми настройками открывается компактное окно со шкалой от малого к большому размеру шрифта.\n\nОсновное содержание остаётся доступным: заголовок раздела, тематические вкладки, текст статьи и лента актуальных событий видны одновременно с настройкой. Такое решение позволяет изменить удобство чтения, не покидая текущую страницу и не теряя контекст.\n\nПользовательский сценарий: посетитель открывает панель доступности, выбирает комфортный размер текста и продолжает читать материал в обновлённом масштабе.\n\nЦенность для бизнеса: подобный инструмент делает портал удобнее для пользователей с разными особенностями зрения и предпочтениями чтения. Он повышает доступность цифрового сервиса и помогает соответствовать современным ожиданиям к инклюзивным интерфейсам.",
+              en: "This screen from the Tajikistan section demonstrates a built-in text-size control panel. In the top area next to the language settings, a compact window opens with a scale from smaller to larger font size.\n\nThe main content remains available: the section heading, topic tabs, article text, and current-events feed are visible alongside the control. This lets visitors adjust reading comfort without leaving the current page or losing context.\n\nUser journey: the visitor opens the accessibility panel, selects a comfortable text size, and continues reading the material at the updated scale.\n\nBusiness value: this tool makes a portal more convenient for people with different visual needs and reading preferences. It improves digital-service accessibility and supports modern expectations for inclusive interfaces.",
+              tj: "Ин экрани бахши «Тоҷикистон» панели дарунсохти танзими андозаи матнро нишон медиҳад. Дар қисми болоии сомона дар паҳлуи танзимоти забон равзанаи хурд бо миқёс аз ҳарфи хурд то калон кушода мешавад.\n\nМуҳтавои асосӣ дастрас боқӣ мемонад: сарлавҳаи бахш, ҷадвалҳои мавзуӣ, матни мақола ва лентаи рӯйдодҳои нав ҳамзамон бо танзим дида мешаванд. Ин қарор имкон медиҳад, ки бароҳатии хондан бе тарки саҳифаи ҷорӣ ва гум кардани замина тағйир дода шавад.\n\nСенарияи корбар: меҳмон панели дастрасиро мекушояд, андозаи мувофиқи матнро интихоб мекунад ва мутолиаи маводро дар миқёси нав идома медиҳад.\n\nАрзиши тиҷоратӣ: чунин абзор порталро барои корбарони дорои хусусиятҳои гуногуни биноӣ ва афзалиятҳои хондан қулайтар мекунад. Он дастрасии хизмати рақамиро беҳтар намуда, ба интизориҳои муосир аз интерфейсҳои фарогир мувофиқат мекунад.",
             },
           },
         ],
@@ -167,13 +886,6 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
     slug: "digital-tajikistan",
-    gallery: [
-      "/images/projects/pic/gallery-1.png",
-      "/images/projects/pic/gallery-2.png",
-      "/images/projects/pic/gallery-3.png",
-      "/images/projects/pic/gallery-4.png",
-      "/images/projects/pic/gallery-5.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Портал", en: "Portal", tj: "Портал" },
@@ -955,14 +1667,6 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "sohktor",
-    gallery: [
-      "/images/projects/sohktor/gallery-1.png",
-      "/images/projects/sohktor/gallery-2.png",
-      "/images/projects/sohktor/gallery-3.png",
-      "/images/projects/sohktor/gallery-5.png",
-      "/images/projects/sohktor/gallery-6.png",
-      "/images/projects/sohktor/gallery-7.png",
-    ],
     projectComponents: [
       {
         tabName: {
@@ -1120,14 +1824,6 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "mavji-somon",
-    gallery: [
-      "/images/projects/mavjisomon/gallery-1.png",
-      "/images/projects/mavjisomon/gallery-2.png",
-      "/images/projects/mavjisomon/gallery-3.png",
-      "/images/projects/mavjisomon/gallery-4.png",
-      "/images/projects/mavjisomon/gallery-5.png",
-      "/images/projects/mavjisomon/gallery-6.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Web-сайт", en: "Website", tj: "Веб-сайт" },
@@ -3629,222 +4325,1236 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "WebSocket"],
     slug: "livechat-tj",
-    gallery: [
-      "/images/projects/livechat/gallery-1.png",
-      "/images/projects/livechat/gallery-2.png",
-      "/images/projects/livechat/gallery-3.png",
-      "/images/projects/livechat/gallery-4.png",
-      "/images/projects/livechat/gallery-5.png",
-      "/images/projects/livechat/gallery-6.png",
-      "/images/projects/livechat/gallery-7.png",
-      "/images/projects/livechat/gallery-8.png",
-      "/images/projects/livechat/gallery-9.png",
-      "/images/projects/livechat/gallery-10.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
         items: [
           {
             slug: "hero",
-            title: {
-              ru: "Первый экран",
-              en: "Hero Section",
-              tj: "Экрани аввал",
-            },
-            imageSrc: "/images/projects/livechat/gallery-1.png",
-            BannerSrc: "/images/projects/livechat/gallery-1.png",
+            title: { ru: "Главный экран", en: "Main screen", tj: "Экрани асосӣ" },
+            imageSrc: "/images/projects/livechat/hero-1700.webp",
+            BannerSrc: "/images/projects/livechat/hero-1700.webp",
             shortInfo: {
-              ru: "Оффер продукта и призыв к действию",
-              en: "Product offer and call to action",
-              tj: "Пешниҳоди маҳсулот ва даъват ба амал",
+              ru: "Презентация онлайн-чата и начало бесплатного пробного периода",
+              en: "Online chat introduction and free trial entry point",
+              tj: "Муаррифии чати онлайн ва оғози давраи озмоишии ройгон",
             },
             fullInfo: {
-              ru: "Первый экран лендинга LiveChat формирует первое впечатление о продукте. В шапке размещены логотип с названием сервиса, горизонтальное меню из разделов «Функции», «Тарифы», «Интеграции» и «Поддержка», переключатель языка, кнопка «Войти» и выделенная кнопка «Попробовать бесплатно». Над заголовком расположена метка «Бесплатный пробный период — без карты», которая сразу снимает барьер для начала работы. Центральный заголовок «Онлайн-чат для связи с вашими клиентами» и подзаголовок о росте числа заявок без дополнительных расходов на маркетинг объясняют суть предложения. Ниже размещены две кнопки — «Электронная почта» и «Попробовать бесплатно» — и три коротких аргумента: без кредитной карты, установка за 5 минут и отмена в любой момент.\n\nПользовательский сценарий: посетитель считывает суть предложения из заголовка, оценивает отсутствие рисков по трём подписям и переходит к бесплатному запуску одной кнопкой либо оставляет электронную почту для связи.\n\nЦенность для бизнеса: продуманный первый экран концентрирует внимание на главном оффере и целевом действии. Для SaaS-продукта такой блок повышает конверсию посетителя в пробную регистрацию, а явные гарантии («без карты», «отмена в любой момент») снижают сомнения на входе.",
-              en: "The LiveChat landing hero shapes the first impression of the product. The header contains the service logo and name, a horizontal menu with Features, Pricing, Integrations and Support, a language switcher, a Log in button and a highlighted Try for free button. A badge above the headline — “Free trial — no card required” — removes the entry barrier immediately. The central headline “Online chat to connect with your customers” and the subheading about increasing leads without extra marketing costs explain the value proposition. Below are two action buttons — Email and Try for free — and three short arguments: no credit card, five-minute setup and cancel anytime.\n\nUser journey: the visitor grasps the offer from the headline, checks the risk-free promises in the three captions and starts a free trial with one button, or leaves an email address for contact.\n\nBusiness value: a focused hero concentrates attention on the core offer and target action. For a SaaS product this block raises the visitor-to-trial conversion rate, while explicit guarantees (“no card”, “cancel anytime”) reduce hesitation at the entry point.",
-              tj: "Экрани аввали лендинги LiveChat таассуроти аввалро дар бораи маҳсулот ташкил медиҳад. Дар қисми боло нишон ва номи хизматрасонӣ, менюи уфуқӣ бо бахшҳои «Функсияҳо», «Тарифҳо», «Интегратсияҳо» ва «Дастгирӣ», интихобкунандаи забон, тугмаи «Ворид шудан» ва тугмаи барҷастаи «Ройгон санҷидан» ҷойгиранд. Болои сарлавҳа нишонаи «Давраи санҷиши ройгон — бе корт» ҷой дорад, ки монеаи оғозро дарҳол бартараф мекунад. Сарлавҳаи марказӣ «Чати онлайн барои алоқа бо мизоҷони шумо» ва зерсарлавҳа дар бораи афзоиши шумораи дархостҳо бе харҷи иловагӣ ба маркетинг моҳияти пешниҳодро мефаҳмонанд. Дар поён ду тугма — «Почтаи электронӣ» ва «Ройгон санҷидан» — ва се далели кӯтоҳ ҷойгиранд: бе корти қарзӣ, насб дар 5 дақиқа ва бекоркунӣ дар ҳар лаҳза.\n\nРаванди истифода: корбар моҳияти пешниҳодро аз сарлавҳа дарк мекунад, набудани хатарро аз рӯйи се навишт арзёбӣ мекунад ва бо як тугма ба оғози ройгон мегузарад ё почтаи электрониро барои алоқа мегузорад.\n\nАҳамият барои тиҷорат: экрани аввали хуб таҳияшуда таваҷҷуҳро ба пешниҳоди асосӣ ва амали мақсаднок ҷамъ меорад. Барои маҳсулоти SaaS чунин блок табдили корбарро ба сабти санҷишӣ баланд мебардорад, кафолатҳои возеҳ («бе корт», «бекоркунӣ дар ҳар лаҳза») бошанд, шакро дар вуруд кам мекунанд.",
+              ru: `Архитектура и функциональность главного экрана LiveChat
+
+Первый экран лендинга представляет онлайн-чат для связи бизнеса с клиентами. Крупный заголовок «Онлайн-чат для связи с вашими клиентами» раскрывает назначение сервиса, а подзаголовок предлагает увеличивать количество заявок без дополнительных расходов на маркетинг. Композиция объединяет навигацию, презентацию продукта и форму бесплатного старта.
+
+1. Шапка и навигация по продукту
+
+На светлой панели расположены логотип LiveChat и ссылки «Функции», «Тарифы», «Интеграции» и «Поддержка». Справа находятся переключатель языка, действие «Войти» для существующих пользователей и зелёная кнопка «Попробовать бесплатно». Такое расположение даёт посетителю доступ к изучению возможностей, входу в кабинет и началу знакомства с сервисом.
+
+2. Визуальная подача основного предложения
+
+Тёмный фон с тонкой сеткой и мягким зелёным свечением выделяет центральный блок. Заголовок разделён на две строки: белая обозначает тип продукта, зелёная подчёркивает связь с клиентами. Над ним размещена метка «Бесплатный пробный период — без карты», которая сразу сообщает условие начала работы.
+
+3. Форма бесплатного старта
+
+Под описанием находятся поле «Электронная почта» и кнопка «Попробовать бесплатно» со стрелкой. Посетитель может указать адрес и перейти к началу работы с продуктом. Основное действие повторяет кнопку в шапке, оставаясь заметным рядом с предложением сервиса.
+
+4. Условия подключения и продолжение знакомства
+
+Под формой три короткие подписи с отметками: «Без кредитной карты», «Установка за 5 минут» и «Отмена в любой момент». Они поясняют заявленные условия пробного периода. В нижней части экрана начинается светлый раздел «Решение», который продолжает презентацию продукта.
+
+Такая структура помогает посетителю понять назначение LiveChat, ознакомиться с условиями и выбрать следующий шаг: изучить разделы сайта, войти в кабинет или начать бесплатный период.`,
+              en: `Architecture and functionality of the LiveChat main screen
+
+The landing page introduces online chat for communication between businesses and customers. The large headline explains the service’s purpose, while the subtitle presents the offer of more enquiries without additional marketing spending. The layout combines navigation, a product introduction and a free-start form.
+
+1. Header and product navigation
+
+The light header contains the LiveChat logo and links to Features, Pricing, Integrations and Support. A language selector, Sign in action and green Try for free button sit on the right. This arrangement provides access to product information, the account and the trial journey.
+
+2. Visual presentation of the main offer
+
+A dark background with a fine grid and soft green glow highlights the central content. The two-line headline uses white to introduce the product and green to emphasise customer communication. A “Free trial — no card required” badge above it immediately communicates an entry condition.
+
+3. Free-start form
+
+An Email field and a Try for free button with an arrow appear below the description. Visitors can enter their address and proceed towards getting started. The primary action repeats the header button and remains prominent beside the service’s offer.
+
+4. Entry conditions and further exploration
+
+Three checked captions below the form state “No credit card”, “Setup in 5 minutes” and “Cancel anytime”. They clarify the advertised trial conditions. The light Solution section begins at the bottom, continuing the product presentation.
+
+This structure helps visitors understand LiveChat, review the terms and choose their next step: explore the site, sign in or start a free trial.`,
+              tj: `Сохтор ва вазифаҳои экрани асосии LiveChat
+
+Экрани аввали лендинг чати онлайнро барои алоқаи тиҷорат бо мизоҷон муаррифӣ мекунад. Сарлавҳаи калон вазифаи хидматро мефаҳмонад ва зерсарлавҳа зиёд кардани дархостҳоро бе хароҷоти иловагии маркетинг пешниҳод менамояд. Тарҳ роҳнамоӣ, муаррифии маҳсулот ва шакли оғози ройгонро муттаҳид мекунад.
+
+1. Қисми боло ва роҳнамоии маҳсулот
+
+Дар панели равшан нишони LiveChat ва пайвандҳои «Имкониятҳо», «Тарифҳо», «Ҳамгироиҳо» ва «Дастгирӣ» ҷойгиранд. Дар тарафи рост интихоби забон, амали «Ворид шудан» ва тугмаи сабзи «Ройгон санҷед» мавҷуданд. Ин ҷойгиршавӣ ба маълумоти маҳсулот, кабинет ва оғози шиносоӣ дастрасӣ медиҳад.
+
+2. Намоиши пешниҳоди асосӣ
+
+Заминаи торик бо шабакаи борик ва равшании мулоими сабз блоки марказиро намоён мекунад. Сарлавҳаи дусатра навъи маҳсулотро бо ранги сафед ва алоқаро бо мизоҷон бо ранги сабз таъкид менамояд. Дар боло тамғаи «Давраи озмоишии ройгон — бе корт» шарти оғози корро нишон медиҳад.
+
+3. Шакли оғози ройгон
+
+Дар зери тавсиф майдони «Почтаи электронӣ» ва тугмаи «Ройгон санҷед» бо тирча ҷойгиранд. Корбар метавонад суроғаро ворид карда, ба оғози кор гузарад. Амали асосӣ тугмаи қисми болоро такрор мекунад ва дар назди пешниҳоди хидмат намоён мемонад.
+
+4. Шартҳои пайвастшавӣ ва идомаи шиносоӣ
+
+Дар зери шакл се навиштаҷоти кӯтоҳ бо аломатҳо мавҷуданд: «Бе корти бонкӣ», «Насб дар 5 дақиқа» ва «Бекоркунӣ дар ҳар вақт». Онҳо шартҳои пешниҳодшудаи давраи озмоиширо шарҳ медиҳанд. Дар поёни экран бахши равшани «Ҳал» оғоз ёфта, муаррифии маҳсулотро идома медиҳад.
+
+Чунин сохтор ба корбар барои фаҳмидани вазифаи LiveChat, шиносоӣ бо шартҳо ва интихоби қадами навбатӣ — омӯзиши сомона, воридшавӣ ба кабинет ё оғози давраи ройгон — кумак мекунад.`,
             },
           },
           {
             slug: "solution",
-            title: {
-              ru: "Решение",
-              en: "Solution",
-              tj: "Ҳалли масъала",
-            },
-            imageSrc: "/images/projects/livechat/gallery-2.png",
-            BannerSrc: "/images/projects/livechat/gallery-2.png",
+            title: { ru: "Решение для бизнеса", en: "Business solution", tj: "Ҳалли тиҷоратӣ" },
+            imageSrc: "/images/projects/livechat/solution-1700.webp",
+            BannerSrc: "/images/projects/livechat/solution-1700.webp",
             shortInfo: {
-              ru: "Наглядная презентация продукта",
-              en: "Visual product presentation",
-              tj: "Муаррифии аёнии маҳсулот",
+              ru: "Презентация сервиса, панели оператора и мобильного чат-виджета",
+              en: "Service introduction, operator panel and mobile chat widget",
+              tj: "Муаррифии хидмат, панели оператор ва виҷети чати мобилӣ",
             },
             fullInfo: {
-              ru: "Блок «Решение» раскрывает продукт через крупную визуальную карточку. Слева расположены метка раздела «Решение», заголовок «LiveChat — решение, которое вас выделит!» и описание, объясняющее лёгкую интеграцию виджета в любой сайт. Центральную область занимает наглядный макет: на экране ноутбука показан рабочий кабинет оператора со списком диалогов, активной перепиской и панелью информации о посетителе, а рядом — телефон с виджетом чата на стороне клиента. Карточка снабжена подписью «#1 Чат для сайта, Telegram и WhatsApp», списком преимуществ (быстрая установка, 14 дней бесплатно, простое управление, без привязки к карте), кнопками «Начать бесплатно» и «Посмотреть демо» и адресом livechat.tj.\n\nПользовательский сценарий: посетитель видит, как выглядит продукт с обеих сторон — глазами оператора и глазами клиента, оценивает интерфейс диалогов и переходит к бесплатному старту или демонстрации.\n\nЦенность для бизнеса: демонстрация реального интерфейса снижает неопределённость и укрепляет доверие к продукту. Единый макет «оператор + клиент» показывает полный цикл общения, что помогает посетителю быстрее понять, как инструмент будет работать в его бизнесе.",
-              en: "The Solution block presents the product through a large visual card. On the left are the section label “Solution”, the headline “LiveChat — the solution that sets you apart!” and a description explaining how easily the widget integrates into any website. The centre holds an illustrative mockup: a laptop screen shows the operator workspace with a dialogue list, an active conversation and a visitor information panel, while a phone beside it displays the chat widget on the customer side. The card includes the caption “#1 Chat for websites, Telegram and WhatsApp”, a benefits list (fast setup, 14 days free, simple management, no card required), Start for free and Watch demo buttons, and the livechat.tj address.\n\nUser journey: the visitor sees the product from both sides — the operator’s view and the customer’s view — assesses the dialogue interface and moves to a free start or a demo.\n\nBusiness value: showing the real interface reduces uncertainty and builds trust in the product. A single “operator + customer” mockup illustrates the full communication cycle, helping the visitor understand faster how the tool will work in their own business.",
-              tj: "Блоки «Ҳалли масъала» маҳсулотро тавассути корти калони аёнӣ ошкор мекунад. Дар тарафи чап нишонаи бахши «Ҳалли масъала», сарлавҳаи «LiveChat — ҳалле, ки шуморо мумтоз мекунад!» ва тавсифе, ки интегратсияи осони виҷетро ба ҳар сомона мефаҳмонад, ҷойгиранд. Қисми марказиро макети аёнӣ ишғол мекунад: дар экрани ноутбук кабинети кории оператор бо рӯйхати муколамаҳо, мукотибаи фаъол ва лавҳаи маълумот дар бораи меҳмон нишон дода шудааст, дар паҳлу бошад — телефон бо виҷети чат дар ҷониби мизоҷ. Корт бо навишти «#1 Чат барои сомона, Telegram ва WhatsApp», рӯйхати бартариҳо (насби зуд, 14 рӯз ройгон, идоракунии осон, бе корт), тугмаҳои «Ройгон оғоз кардан» ва «Дидани демо» ва суроғаи livechat.tj муҷаҳҳаз аст.\n\nРаванди истифода: корбар мебинад, ки маҳсулот аз ду ҷониб чӣ гуна ба назар мерасад — аз чашми оператор ва аз чашми мизоҷ, интерфейси муколамаҳоро арзёбӣ мекунад ва ба оғози ройгон ё намоиш мегузарад.\n\nАҳамият барои тиҷорат: намоиши интерфейси воқеӣ номуайяниро кам карда, эътимодро ба маҳсулот мустаҳкам мекунад. Макети ягонаи «оператор + мизоҷ» давраи пурраи муоширатро нишон медиҳад ва ба корбар кумак мекунад, ки зудтар фаҳмад, ки абзор дар тиҷорати ӯ чӣ гуна кор мекунад.",
+              ru: `Архитектура и функциональность блока «Решение»
+
+Раздел знакомит посетителя с LiveChat через описание продукта и крупный презентационный баннер. Заголовок «LiveChat — решение, которое вас выделит!» сопровождается пояснением о подключении виджета к сайту, гибкой настройке и аналитике. Светлый фон и свободное пространство отделяют вводный текст от демонстрации интерфейсов.
+
+1. Представление продукта и его назначения
+
+Метка «Решение» обозначает раздел, а короткий абзац раскрывает основные направления использования сервиса. Текст связывает интеграцию чата с задачей общения с клиентами и выделяет быстрое подключение, настройку и аналитику как составляющие одного инструмента.
+
+2. Демонстрация рабочего места оператора
+
+Правая часть баннера показывает ноутбук с панелью диалогов. Внутри интерфейса видны боковая навигация, список обращений, область переписки и сведения о посетителе. Такая композиция даёт представление о том, как оператор видит разговор и сопровождающий его контекст в одном рабочем пространстве.
+
+3. Мобильный виджет и преимущества подключения
+
+Рядом с ноутбуком расположен смартфон с клиентским окном чата. Два устройства показывают стороны одного процесса: работу сотрудника и общение посетителя с компанией. Слева на баннере перечислены быстрая установка, простое управление, 14 дней бесплатно и отсутствие привязки к карте; выше размещена подпись о чате для сайта, Telegram и WhatsApp.
+
+4. Призывы к началу работы
+
+Внутри презентационного изображения показаны элементы «Начать бесплатно» и «Посмотреть демо», а также адрес livechat.tj. Они дополняют знакомство с продуктом возможными следующими шагами. В шапке самого лендинга остаются навигация, вход и кнопка «Попробовать бесплатно».
+
+Блок помогает посетителю сопоставить предложение сервиса с его внешним видом. Демонстрация интерфейсов оператора и клиента делает назначение продукта понятнее, а краткий список преимуществ поддерживает переход к дальнейшему изучению или бесплатному старту.`,
+              en: `Architecture and functionality of the Solution section
+
+This section introduces LiveChat through a product description and a large presentation banner. The heading “LiveChat — a solution that sets you apart!” is followed by an explanation of website widget integration, flexible configuration and analytics. A light background and generous spacing separate the introduction from the interface showcase.
+
+1. Product purpose and positioning
+
+A Solution badge identifies the section, while a short paragraph outlines the service’s main capabilities. The text connects chat integration with customer communication and presents quick setup, configuration and analytics as parts of one tool.
+
+2. Operator workspace preview
+
+The right side of the banner shows a laptop displaying the conversations panel. The interface contains side navigation, an enquiry list, a messaging area and visitor information. This composition illustrates how an operator can view a conversation and its context within one workspace.
+
+3. Mobile widget and setup benefits
+
+A smartphone beside the laptop displays the customer chat window. The two devices represent both sides of the process: the employee’s workspace and the visitor’s conversation with the company. The left side lists quick setup, simple management, 14 days free and no card required, beneath a label mentioning website chat, Telegram and WhatsApp.
+
+4. Getting-started prompts
+
+The presentation image includes Start for free and View demo elements, together with the livechat.tj address. They introduce potential next steps after exploring the product. The landing page header retains navigation, sign-in and a Try for free button.
+
+The section helps visitors relate the service’s offer to its appearance. Showing operator and customer interfaces clarifies the product’s purpose, while a concise benefits list supports further exploration or a free start.`,
+              tj: `Сохтор ва вазифаҳои бахши «Ҳал»
+
+Бахш LiveChat-ро тавассути тавсифи маҳсулот ва баннери калони муаррифӣ пешниҳод мекунад. Сарлавҳаи «LiveChat — ҳалли фарқкунандаи шумо!» бо шарҳи пайваст кардани виҷет ба сомона, танзими чандир ва таҳлил ҳамроҳ аст. Заминаи равшан ва фазои холӣ матни муқаддимавиро аз намоиши интерфейсҳо ҷудо мекунанд.
+
+1. Муаррифии маҳсулот ва вазифаи он
+
+Тамғаи «Ҳал» бахшро муайян мекунад ва сархати кӯтоҳ имкониятҳои асосии хидматро шарҳ медиҳад. Матн ҳамгироии чатро бо вазифаи муошират бо мизоҷон пайваста, пайвастшавии зуд, танзим ва таҳлилро ҳамчун қисмҳои як абзор пешниҳод мекунад.
+
+2. Намоиши ҷойи кории оператор
+
+Дар тарафи рости баннер ноутбук бо панели муколамаҳо нишон дода шудааст. Дар интерфейс роҳнамоии паҳлуӣ, рӯйхати муроҷиатҳо, майдони паёмҳо ва маълумоти корбар дида мешаванд. Ин тарҳ нишон медиҳад, ки оператор чӣ гуна суҳбат ва маълумоти вобастаро дар як майдони корӣ мебинад.
+
+3. Виҷети мобилӣ ва бартариҳои пайвастшавӣ
+
+Дар назди ноутбук смартфон бо равзанаи чати мизоҷ ҷойгир аст. Ду дастгоҳ ду тарафи равандро нишон медиҳанд: кори корманд ва муоширати корбар бо ширкат. Дар тарафи чап насби зуд, идоракунии осон, 14 рӯзи ройгон ва набудани зарурати пайваст кардани корт номбар шудаанд. Дар боло чат барои сомона, Telegram ва WhatsApp зикр шудааст.
+
+4. Даъватҳо ба оғози кор
+
+Дар тасвири муаррифӣ унсурҳои «Ройгон оғоз кунед» ва «Намоишро бинед», инчунин суроғаи livechat.tj оварда шудаанд. Онҳо қадамҳои эҳтимолии навбатиро пешниҳод мекунанд. Дар қисми болоии худи лендинг роҳнамоӣ, воридшавӣ ва тугмаи «Ройгон санҷед» дастрасанд.
+
+Бахш ба корбар барои муқоиса кардани пешниҳоди хидмат бо намуди он кумак мекунад. Намоиши интерфейсҳои оператор ва мизоҷ вазифаи маҳсулотро равшантар месозад, рӯйхати кӯтоҳи бартариҳо бошад омӯзиши минбаъда ё оғози ройгонро дастгирӣ мекунад.`,
             },
           },
           {
             slug: "features",
-            title: {
-              ru: "Функции",
-              en: "Features",
-              tj: "Функсияҳо",
-            },
-            imageSrc: "/images/projects/livechat/gallery-3.png",
-            BannerSrc: "/images/projects/livechat/gallery-3.png",
+            title: { ru: "Функции", en: "Features", tj: "Имкониятҳо" },
+            imageSrc: "/images/projects/livechat/features-1700.webp",
+            BannerSrc: "/images/projects/livechat/features-1700.webp",
             shortInfo: {
-              ru: "Набор ключевых возможностей сервиса",
-              en: "Core capabilities of the service",
-              tj: "Маҷмуи имкониятҳои асосии хизматрасонӣ",
+              ru: "Инструменты поддержки клиентов, командной работы и аналитики",
+              en: "Tools for customer support, teamwork and analytics",
+              tj: "Абзорҳои дастгирии мизоҷон, кори даставӣ ва таҳлил",
             },
             fullInfo: {
-              ru: "Раздел «Функции» представляет возможности сервиса в виде сетки карточек. Над сеткой размещены метка «Функции», заголовок «Всё для эффективной поддержки клиентов» и подзаголовок о наборе инструментов, который растёт вместе с бизнесом. Шесть карточек с иконками описывают отдельные возможности: «Мгновенный ответ» (быстрая реакция удерживает клиентов на сайте), «Умный виджет» (автоматическая подстройка под поведение пользователя), «Аналитика и отчёты» (число чатов, время ответа и эффективность агентов), «Командная работа» (одновременная работа нескольких агентов и передача диалогов), «Шаблоны ответов» (готовые заготовки для частых вопросов) и «Интеграции с CRM» (подключение внешних платформ).\n\nПользовательский сценарий: посетитель бегло просматривает карточки, находит функции, важные именно для его задач — например, аналитику или командную работу — и формирует представление о полноте продукта.\n\nЦенность для бизнеса: структурированный перечень возможностей помогает потенциальному клиенту сопоставить продукт со своими требованиями. Единый формат карточек делает сравнение функций наглядным и облегчает решение о подключении.",
-              en: "The Features section presents the service’s capabilities as a grid of cards. Above the grid are the Features label, the headline “Everything for effective customer support” and a subheading about a toolset that grows with the business. Six icon cards describe individual capabilities: Instant reply (a fast reaction keeps customers on the site), Smart widget (automatic adaptation to user behaviour), Analytics and reports (chat volume, response time and agent performance), Teamwork (several agents working at once and handing over dialogues), Reply templates (ready-made snippets for frequent questions) and CRM integrations (connecting external platforms).\n\nUser journey: the visitor scans the cards, finds the features relevant to their own tasks — for example analytics or teamwork — and forms a view of how complete the product is.\n\nBusiness value: a structured list of capabilities helps a prospective customer match the product to their requirements. A uniform card format makes feature comparison clear and eases the decision to sign up.",
-              tj: "Бахши «Функсияҳо» имкониятҳои хизматрасониро дар шакли шабакаи кортҳо пешниҳод мекунад. Болои шабака нишонаи «Функсияҳо», сарлавҳаи «Ҳама чиз барои дастгирии самараноки мизоҷон» ва зерсарлавҳа дар бораи маҷмуи абзорҳое, ки ҳамроҳи тиҷорат меафзояд, ҷойгиранд. Шаш корт бо нишонаҳо имкониятҳои алоҳидаро тавсиф мекунанд: «Ҷавоби фаврӣ» (аксуламали зуд мизоҷонро дар сомона нигоҳ медорад), «Виҷети зирак» (мутобиқшавии худкор ба рафтори корбар), «Таҳлил ва ҳисоботҳо» (шумораи чатҳо, вақти ҷавоб ва самаранокии агентҳо), «Кори дастаҷамъӣ» (кори ҳамзамони якчанд агент ва интиқоли муколамаҳо), «Шаблонҳои ҷавоб» (заготовкаҳои тайёр барои саволҳои зуд-зуд) ва «Интегратсия бо CRM» (пайвасткунии платформаҳои беруна).\n\nРаванди истифода: корбар кортҳоро бо назари сатҳӣ аз назар мегузаронад, функсияҳои барои вазифаҳои ӯ муҳимро — масалан таҳлил ё кори дастаҷамъӣ — меёбад ва тасаввурот дар бораи пуррагии маҳсулот ташкил медиҳад.\n\nАҳамият барои тиҷорат: рӯйхати сохтории имкониятҳо ба мизоҷи эҳтимолӣ кумак мекунад, ки маҳсулотро бо талаботи худ мувофиқ созад. Формати ягонаи кортҳо муқоисаи функсияҳоро аён мекунад ва қарори пайвастшавиро осон менамояд.",
+              ru: `Архитектура и функциональность блока «Функции»
+
+Раздел представляет основные возможности LiveChat под заголовком «Всё для эффективной поддержки клиентов». Подзаголовок связывает набор инструментов с развитием бизнеса. Шесть карточек на светлом фоне организованы в два ряда по три: каждая содержит цветную иконку, название функции и короткое пояснение.
+
+1. Быстрый ответ и взаимодействие с посетителем
+
+Карточка «Мгновенный ответ» объясняет значение быстрой реакции для доверия и удержания клиента на сайте. «Умный виджет» описывает появление чата с учётом поведения посетителя. Вместе эти карточки представляют начальный этап общения: показать возможность связи в подходящий момент и помочь пользователю получить ответ.
+
+2. Аналитика и контроль обслуживания
+
+Карточка «Аналитика и отчёты» перечисляет показатели работы поддержки: количество чатов, время ответа и эффективность каждого агента. Описание связывает их с единым дашбордом, позволяя посетителю понять назначение аналитического инструмента без перехода к подробной демонстрации.
+
+3. Совместная работа и шаблоны ответов
+
+«Командная работа» представляет одновременную работу нескольких агентов, назначение чатов и передачу диалогов коллегам. Соседняя карточка «Шаблоны ответов» посвящена готовым сообщениям для частых вопросов. Эти возможности показывают, как распределять обращения внутри команды и сокращать повторяющийся ввод текста.
+
+4. Интеграции и структура представления
+
+Карточка «Интеграции с CRM» описывает подключение внешних платформ и объединение клиентских данных. Единое оформление всех шести карточек помогает сравнить направления: общение, аналитику, организацию команды и связь с другими сервисами. Цветные иконки служат визуальными ориентирами, а короткие абзацы позволяют быстро просмотреть содержание.
+
+Блок помогает посетителю соотнести возможности продукта с задачами своей поддержки и выбрать, какие инструменты изучить подробнее. В шапке доступны переходы к тарифам, интеграциям и бесплатному пробному периоду.`,
+              en: `Architecture and functionality of the Features section
+
+The section presents LiveChat’s core capabilities under the heading “Everything for effective customer support”. The subtitle connects the toolset with business growth. Six cards on a light background form two rows of three, each containing a coloured icon, a feature name and a short explanation.
+
+1. Fast replies and visitor interaction
+
+Instant replies explains the role of a quick response in building trust and retaining visitors. Smart widget describes showing chat according to visitor behaviour. Together, these cards introduce the first stage of communication: presenting a contact option at a suitable moment and helping visitors receive an answer.
+
+2. Analytics and service monitoring
+
+Analytics and reports lists support metrics: chat volume, response time and individual agent performance. The description connects these measures with a shared dashboard, explaining the purpose of the analytics tool without requiring a detailed demonstration.
+
+3. Collaboration and reply templates
+
+Teamwork introduces several agents working simultaneously, assigning chats and handing conversations to colleagues. Reply templates covers prepared messages for frequently asked questions. These capabilities show how a team can distribute enquiries and reduce repetitive typing.
+
+4. Integrations and presentation structure
+
+CRM integrations describes connecting external platforms and bringing customer data together. A consistent layout across all six cards helps visitors compare communication, analytics, team organisation and connections to other services. Coloured icons provide visual cues, while short paragraphs make the section easy to scan.
+
+The section helps visitors relate product capabilities to their support needs and decide which tools to explore further. The header provides access to pricing, integrations and the free trial.`,
+              tj: `Сохтор ва вазифаҳои бахши «Имкониятҳо»
+
+Бахш имкониятҳои асосии LiveChat-ро зери сарлавҳаи «Ҳама чиз барои дастгирии самараноки мизоҷон» муаррифӣ мекунад. Зерсарлавҳа маҷмуи абзорҳоро бо рушди тиҷорат мепайвандад. Шаш корт дар заминаи равшан дар ду қатори сетоӣ ҷойгиранд; ҳар кадом нишонаи ранга, номи имконият ва шарҳи кӯтоҳ дорад.
+
+1. Ҷавоби зуд ва ҳамкорӣ бо корбар
+
+Корти «Ҷавоби фаврӣ» аҳамияти вокуниши зудро барои эътимод ва нигоҳ доштани мизоҷ дар сомона шарҳ медиҳад. «Виҷети ҳушманд» пайдо шудани чатро бо назардошти рафтори корбар тавсиф мекунад. Ин ду корт оғози муоширатро нишон медиҳанд: пешниҳоди роҳи алоқа дар вақти мувофиқ ва кумак барои гирифтани ҷавоб.
+
+2. Таҳлил ва назорати хизматрасонӣ
+
+Корти «Таҳлил ва ҳисобот» нишондиҳандаҳои дастгириро номбар мекунад: шумораи чатҳо, вақти ҷавоб ва самаранокии ҳар оператор. Тавсиф онҳоро бо панели ягона мепайвандад ва вазифаи абзори таҳлилиро бе намоиши муфассал мефаҳмонад.
+
+3. Кори муштарак ва қолабҳои ҷавоб
+
+«Кори даставӣ» фаъолияти ҳамзамони чанд оператор, таъйини чатҳо ва супоридани муколамаҳоро ба ҳамкорон муаррифӣ мекунад. «Қолабҳои ҷавоб» ба паёмҳои омода барои саволҳои маъмул бахшида шудааст. Ин имкониятҳо тақсимоти муроҷиатҳо дар даста ва кам кардани воридкунии такрории матнро нишон медиҳанд.
+
+4. Ҳамгироиҳо ва сохтори муаррифӣ
+
+Корти «Ҳамгироӣ бо CRM» пайваст кардани платформаҳои беруна ва муттаҳидсозии маълумоти мизоҷонро шарҳ медиҳад. Ороиши ягонаи шаш корт муқоисаи самтҳои муошират, таҳлил, ташкили даста ва алоқа бо хидматҳои дигарро осон мекунад. Нишонаҳои ранга барои роҳнамоии визуалӣ ва сархатҳои кӯтоҳ барои баррасии зуд хизмат мекунанд.
+
+Бахш ба корбар барои муқоиса кардани имкониятҳои маҳсулот бо вазифаҳои дастгирии худ ва интихоби абзорҳо барои омӯзиши бештар кумак мекунад. Дар қисми боло гузариш ба тарифҳо, ҳамгироиҳо ва давраи озмоишии ройгон дастрас аст.`,
             },
           },
           {
             slug: "how-it-works",
-            title: {
-              ru: "Как это работает",
-              en: "How It Works",
-              tj: "Чӣ тавр кор мекунад",
-            },
-            imageSrc: "/images/projects/livechat/gallery-4.png",
-            BannerSrc: "/images/projects/livechat/gallery-4.png",
+            title: { ru: "Как это работает", en: "How it works", tj: "Тарзи кор" },
+            imageSrc: "/images/projects/livechat/how-it-works-1700.webp",
+            BannerSrc: "/images/projects/livechat/how-it-works-1700.webp",
             shortInfo: {
-              ru: "Четыре шага до первого диалога",
-              en: "Four steps to the first dialogue",
-              tj: "Чор қадам то муколамаи аввал",
+              ru: "Четыре шага от установки чата до консультации и оформления заказа",
+              en: "Four steps from chat installation to consultation and placing an order",
+              tj: "Чор қадам аз насби чат то машварат ва бақайдгирии фармоиш",
             },
             fullInfo: {
-              ru: "Блок «Как это работает» объясняет запуск сервиса через последовательность из четырёх шагов. Над схемой размещены метка «Как это работает», заголовок «Как работает онлайн-чат для сайта?» и пояснение «Четыре простых шага до первого диалога». Каждый шаг оформлен отдельной карточкой с иконкой, номером и кратким текстом: ШАГ 1 — на сайте устанавливается код чата; ШАГ 2 — после установки появляется всплывающее окно; ШАГ 3 — менеджеры отвечают на вопросы клиентов; ШАГ 4 — посетитель совершает покупку или оформляет заказ. Крупные полупрозрачные цифры фона подчёркивают порядок действий.\n\nПользовательский сценарий: посетитель последовательно читает шаги и получает целостное представление о процессе — от установки кода до оформления заказа, снимая опасение о сложности внедрения.\n\nЦенность для бизнеса: пошаговое объяснение превращает абстрактный продукт в понятный процесс. Демонстрация того, что подключение сводится к простому коду и приводит к продаже, снижает воспринимаемую сложность и подталкивает к пробному запуску.",
-              en: "The How It Works block explains getting started through a sequence of four steps. Above the diagram are the How it works label, the headline “How does online chat for a website work?” and the note “Four simple steps to the first dialogue”. Each step is a separate card with an icon, a number and short text: Step 1 — the chat code is installed on the site; Step 2 — a pop-up window appears after installation; Step 3 — managers answer customer questions; Step 4 — the visitor makes a purchase or places an order. Large semi-transparent background numbers emphasise the order of actions.\n\nUser journey: the visitor reads the steps in order and gains a complete picture of the process — from installing the code to placing an order — dispelling concern about implementation complexity.\n\nBusiness value: a step-by-step explanation turns an abstract product into a clear process. Showing that setup comes down to a simple snippet and leads to a sale lowers the perceived complexity and encourages a trial.",
-              tj: "Блоки «Чӣ тавр кор мекунад» оғози хизматрасониро тавассути пайдарпайии чор қадам мефаҳмонад. Болои нақша нишонаи «Чӣ тавр кор мекунад», сарлавҳаи «Чати онлайн барои сомона чӣ тавр кор мекунад?» ва тавзеҳи «Чор қадами содда то муколамаи аввал» ҷойгиранд. Ҳар қадам ҳамчун корти алоҳида бо нишона, рақам ва матни кӯтоҳ таҳия шудааст: Қадами 1 — коди чат дар сомона насб мешавад; Қадами 2 — пас аз насб равзанаи пайдошаванда зоҳир мегардад; Қадами 3 — менеҷерон ба саволҳои мизоҷон ҷавоб медиҳанд; Қадами 4 — меҳмон харид мекунад ё фармоиш медиҳад. Рақамҳои калони нимшаффофи замина тартиби амалҳоро таъкид мекунанд.\n\nРаванди истифода: корбар қадамҳоро пайдарпай мехонад ва тасаввури мукаммал дар бораи ҷараён — аз насби код то расмигардонии фармоиш — пайдо мекунад, ки нигаронӣ дар бораи мураккабии татбиқро бартараф месозад.\n\nАҳамият барои тиҷорат: тавзеҳи қадам ба қадам маҳсулоти абстрактиро ба ҷараёни фаҳмо табдил медиҳад. Нишон додани он, ки пайвастшавӣ ба як коди содда табдил меёбад ва ба фурӯш меорад, мураккабии эҳсосшавандаро кам мекунад ва ба оғози санҷишӣ ҳавасманд менамояд.",
+              ru: `Архитектура и функциональность блока «Как это работает»
+
+Раздел объясняет принцип работы онлайн-чата через последовательность из четырёх шагов. Над заголовком «Как работает онлайн-чат для сайта?» расположена тематическая метка, а под ним — пояснение «Четыре простых шага до первого диалога». Четыре карточки в два ряда объединяют этапы подключения, общения и целевого действия посетителя.
+
+1. Установка кода на сайт
+
+Первая карточка обозначает начальный этап: размещение кода чата на сайте. Иконка кода и подпись «Шаг 1» помогают быстро определить назначение действия. Краткая формулировка объясняет способ подключения, не перегружая презентационный блок техническими инструкциями.
+
+2. Появление окна общения
+
+Второй шаг описывает появление всплывающего окна после установки. Иконка сообщения связывает техническое подключение с видимым для посетителя результатом — возможностью обратиться к компании прямо на сайте.
+
+3. Ответы менеджеров
+
+Третья карточка показывает роль сотрудников: менеджеры отвечают на вопросы клиентов. Этот этап связывает чат с консультацией и подчёркивает участие команды в обработке обращений. Иконка людей визуально отличает работу менеджеров от установки и показа виджета.
+
+4. Покупка или оформление заказа
+
+Последняя карточка представляет целевое действие посетителя — покупку или заказ. Она завершает показанный сценарий, связывая консультацию с дальнейшим решением клиента. Нумерация, одинаковые карточки и крупные светлые цифры на фоне помогают читать последовательность слева направо и сверху вниз.
+
+Ниже начинается раздел кастомизации с предложением адаптировать дизайн чата под фирменный стиль сайта. Такой переход продолжает знакомство с продуктом: после объяснения порядка работы посетитель может изучить оформление виджета. Блок помогает понять путь от подключения до общения с клиентом и оценить роль чата в процессе продаж.`,
+              en: `Architecture and functionality of the How it works section
+
+The section explains website chat through a sequence of four steps. A category badge sits above “How does online chat for a website work?”, followed by the subtitle “Four simple steps to your first conversation”. Four cards in two rows bring together installation, communication and the visitor’s intended action.
+
+1. Installing the code
+
+The first card introduces placing the chat code on a website. A code icon and Step 1 label make its purpose easy to identify. The concise wording explains the connection method without overloading this presentation section with technical instructions.
+
+2. Displaying the chat window
+
+The second step describes a pop-up window appearing after installation. A message icon connects the technical setup with a visible result for visitors: a way to contact the company directly on its website.
+
+3. Replies from managers
+
+The third card introduces the team’s role: managers answer customer questions. This step connects chat with consultation and highlights staff involvement in handling enquiries. A people icon visually distinguishes the team’s work from installation and widget display.
+
+4. Purchase or order
+
+The final card presents the visitor’s intended action, a purchase or an order. It completes the illustrated journey by connecting consultation with the customer’s next decision. Numbering, consistent cards and large pale background digits guide reading from left to right and top to bottom.
+
+The customisation section begins below, introducing adaptation of the chat design to the website’s brand identity. This transition continues the product introduction: after learning the workflow, visitors can explore widget appearance. The section helps explain the route from installation to customer communication and the role of chat in the sales process.`,
+              tj: `Сохтор ва вазифаҳои бахши «Тарзи кор»
+
+Бахш принсипи кори чати сомонаро тавассути чор қадами пайдарпай шарҳ медиҳад. Дар болои сарлавҳаи «Чати онлайн барои сомона чӣ гуна кор мекунад?» тамғаи мавзуӣ ва дар поён шарҳи «Чор қадами одӣ то муколамаи аввал» ҷойгиранд. Чор корт дар ду қатор марҳилаҳои пайвастшавӣ, муошират ва амали мақсадноки корбарро муттаҳид мекунанд.
+
+1. Насби рамз дар сомона
+
+Корти аввал марҳилаи оғозро нишон медиҳад: ҷойгир кардани рамзи чат дар сомона. Нишонаи рамз ва навиштаҷоти «Қадами 1» вазифаи амалро равшан мекунанд. Матни кӯтоҳ роҳи пайвастшавиро бе дастурҳои зиёди техникӣ мефаҳмонад.
+
+2. Пайдо шудани равзанаи муошират
+
+Қадами дуюм пайдо шудани равзанаи поп-апро пас аз насб тавсиф мекунад. Нишонаи паём пайвастшавии техникиро бо натиҷаи намоён барои корбар — имкони муроҷиат ба ширкат дар худи сомона — мепайвандад.
+
+3. Ҷавобҳои менеҷерон
+
+Корти сеюм нақши кормандонро нишон медиҳад: менеҷерон ба саволҳои мизоҷон ҷавоб медиҳанд. Ин марҳила чатро бо машварат пайваста, иштироки дастаро дар баррасии муроҷиатҳо таъкид мекунад. Нишонаи одамон кори менеҷеронро аз насб ва намоиши виҷет фарқ мекунад.
+
+4. Харид ё бақайдгирии фармоиш
+
+Корти охирин амали мақсадноки корбар — харид ё фармоишро муаррифӣ мекунад. Он раванди нишоншударо анҷом дода, машваратро бо қарори минбаъдаи мизоҷ мепайвандад. Рақамгузорӣ, кортҳои якхела ва рақамҳои калони равшан дар замина хондани пайдарпайро аз чап ба рост ва аз боло ба поён осон мекунанд.
+
+Дар поён бахши танзими намуди чат бо пешниҳоди мутобиқ кардани тарҳ ба услуби фирмавии сомона оғоз мешавад. Ин гузариш шиносоиро бо маҳсулот идома медиҳад: пас аз фаҳмидани тарзи кор корбар метавонад намуди виҷетро омӯзад. Бахш роҳро аз насб то муошират бо мизоҷ ва нақши чатро дар раванди фурӯш мефаҳмонад.`,
             },
           },
           {
             slug: "customization",
-            title: {
-              ru: "Кастомизация",
-              en: "Customization",
-              tj: "Танзими фардӣ",
-            },
-            imageSrc: "/images/projects/livechat/gallery-5.png",
-            BannerSrc: "/images/projects/livechat/gallery-5.png",
+            title: { ru: "Кастомизация", en: "Customisation", tj: "Танзими намуди зоҳирӣ" },
+            imageSrc: "/images/projects/livechat/customization-1700.webp",
+            BannerSrc: "/images/projects/livechat/customization-1700.webp",
             shortInfo: {
-              ru: "Настройка виджета под фирменный стиль",
-              en: "Widget tailored to brand style",
-              tj: "Танзими виҷет мутобиқи услуби бренд",
+              ru: "Настройка оформления виджета и приветствий под фирменный стиль сайта",
+              en: "Widget appearance and greetings tailored to the website’s brand",
+              tj: "Мутобиқсозии намуди виҷет ва паёмҳои истиқболӣ ба услуби сомона",
             },
             fullInfo: {
-              ru: "Блок «Кастомизация» показывает возможности оформления виджета под бренд. Слева размещены метка «Кастомизация», заголовок «Адаптируйте дизайн онлайн-чата под фирменный стиль вашего сайта» и описание о гибкой настройке без знания кода. Ниже — список из четырёх пунктов с отметками: выбор цветовой схемы и шрифтов, настройка позиции виджета на странице, загрузка логотипа и аватара оператора, персонализированные приветственные сообщения. Справа расположен макет чат-интерфейса, демонстрирующий, как выглядит настроенный виджет в работе.\n\nПользовательский сценарий: посетитель изучает перечень настроек, убеждается, что виджет можно адаптировать под собственный сайт без разработчиков, и соотносит эти возможности с требованиями своего бренда.\n\nЦенность для бизнеса: гибкое оформление снимает опасение, что сторонний виджет будет выбиваться из дизайна сайта. Возможность настройки без кода расширяет круг пользователей, которым продукт подходит без привлечения технических специалистов.",
-              en: "The Customization block shows how the widget can be styled to match a brand. On the left are the Customization label, the headline “Adapt the online chat design to your website’s brand style” and a description of flexible, code-free configuration. Below is a four-item checklist: choosing a colour scheme and fonts, setting the widget position on the page, uploading a logo and operator avatar, and personalised welcome messages. On the right, a chat-interface mockup demonstrates how the configured widget looks in action.\n\nUser journey: the visitor reviews the settings list, confirms that the widget can be adapted to their own site without developers and matches these options against their brand requirements.\n\nBusiness value: flexible styling removes the concern that a third-party widget will clash with the site design. Code-free configuration widens the pool of users for whom the product fits without involving technical specialists.",
-              tj: "Блоки «Танзими фардӣ» имкониятҳои ороиши виҷетро мутобиқи бренд нишон медиҳад. Дар тарафи чап нишонаи «Танзими фардӣ», сарлавҳаи «Тарҳи чати онлайнро мутобиқи услуби брендии сомонаи худ созед» ва тавсиф дар бораи танзими фасеҳ бе донистани код ҷойгиранд. Дар поён рӯйхати чор банд бо аломатҳо: интихоби нақшаи рангҳо ва шрифтҳо, танзими мавқеи виҷет дар саҳифа, боркунии нишона ва аватари оператор, паёмҳои хушомадгӯии фардикунонидашуда. Дар тарафи рост макети интерфейси чат ҷойгир аст, ки нишон медиҳад виҷети танзимшуда дар кор чӣ гуна ба назар мерасад.\n\nРаванди истифода: корбар рӯйхати танзимҳоро меомӯзад, боварӣ ҳосил мекунад, ки виҷетро бе барномасозон мутобиқи сомонаи худ созед ва ин имкониятҳоро бо талаботи бренди худ муқоиса мекунад.\n\nАҳамият барои тиҷорат: ороиши фасеҳ нигарониро дар бораи он, ки виҷети бегона аз тарҳи сомона фарқ мекунад, бартараф месозад. Имкони танзим бе код доираи корбаронеро, ки маҳсулот бе ҷалби мутахассисони техникӣ мувофиқ аст, васеъ мекунад.",
+              ru: `Архитектура и функциональность блока «Кастомизация»
+
+Раздел представляет возможности адаптации онлайн-чата под фирменный стиль сайта. Слева расположены тематическая метка, заголовок «Адаптируйте дизайн онлайн-чата под фирменный стиль вашего сайта» и поясняющий текст. Справа показан пример интерфейса диалогов. Двухколоночная композиция объединяет описание настроек с визуальным представлением продукта.
+
+1. Цветовая схема, шрифты и готовые темы
+
+Вводный текст предлагает выбрать готовую тему или создать собственную конфигурацию без знания кода. Первый пункт списка выделяет настройку цветов и шрифтов. Это объясняет, как оформление чата можно согласовать с визуальным языком сайта, сохранив узнаваемость бренда в канале общения с клиентами.
+
+2. Расположение и персонализация виджета
+
+Следующие пункты описывают выбор позиции виджета на странице, загрузку логотипа и аватара оператора. Эти настройки охватывают как размещение точки входа в чат, так и представление компании и сотрудника в интерфейсе. Зелёные отметки помогают быстро просмотреть список возможностей.
+
+3. Приветственные сообщения
+
+Отдельный пункт посвящён персонализированным приветствиям. Он дополняет визуальные настройки содержанием первого контакта: компания может адаптировать приветственное сообщение к своей манере общения. Вместе оформление и текст помогают представить чат как часть общего пользовательского опыта сайта.
+
+4. Визуальный пример и продолжение знакомства
+
+Справа находится изображение панели диалогов со списком контактов, областью переписки и зелёными акцентами. Оно иллюстрирует внешний вид продукта, сопровождая перечень настроек. Внизу начинается раздел «Тарифы», который переводит посетителя от знакомства с возможностями к выбору подходящего плана.
+
+Блок помогает оценить, насколько сервис можно адаптировать к существующему оформлению сайта. Краткий список настроек и пример интерфейса дают основу для дальнейшего изучения продукта и обсуждения требований к его внешнему виду.`,
+              en: `Architecture and functionality of the Customisation section
+
+The section presents ways to adapt online chat to a website’s brand identity. A category badge, the heading “Adapt your online chat design to your website’s brand” and explanatory text appear on the left. A conversation interface preview sits on the right. This two-column layout pairs configuration options with a visual introduction to the product.
+
+1. Colours, fonts and ready-made themes
+
+The introduction offers ready-made themes or a custom configuration without coding. The first list item highlights colour and font selection. It explains how chat appearance can align with the website’s visual language and maintain brand recognition in customer communication.
+
+2. Widget placement and personalisation
+
+The next items describe choosing the widget’s position and uploading a company logo and operator avatar. These settings cover both the chat entry point and how the company and its staff appear in the interface. Green check marks make the capabilities easy to scan.
+
+3. Greeting messages
+
+A separate item introduces personalised greetings. It complements appearance settings with the content of the first interaction: the company can adapt its greeting to its communication style. Together, presentation and wording help make chat part of the website’s overall user experience.
+
+4. Visual example and further exploration
+
+The image on the right shows a conversation panel with a contact list, messages and green accents. It illustrates the product’s appearance alongside the configuration list. The Pricing section begins below, leading visitors from capabilities to choosing a suitable plan.
+
+The section helps visitors assess how the service could fit their existing website design. A concise settings list and interface example provide a basis for further product exploration and discussion of appearance requirements.`,
+              tj: `Сохтор ва вазифаҳои бахши «Танзими намуди зоҳирӣ»
+
+Бахш имкониятҳои мутобиқ кардани чати онлайнро ба услуби фирмавии сомона муаррифӣ мекунад. Дар тарафи чап тамғаи мавзуӣ, сарлавҳаи «Тарҳи чати онлайнро ба услуби фирмавии сомонаи худ мутобиқ кунед» ва матни шарҳдиҳанда ҷойгиранд. Дар тарафи рост намунаи интерфейси муколамаҳо нишон дода шудааст. Тарҳи дусутуна тавсифи танзимотро бо намоиши маҳсулот мепайвандад.
+
+1. Рангҳо, ҳуруф ва мавзуъҳои омода
+
+Матни муқаддимавӣ интихоби мавзуи омода ё сохтани танзимоти худиро бе донистани рамз пешниҳод мекунад. Банди аввал интихоби рангҳо ва ҳуруфро таъкид менамояд. Ин мефаҳмонад, ки чӣ гуна намуди чатро бо тарҳи сомона ҳамоҳанг карда, шинохташавии брендро дар муошират бо мизоҷон нигоҳ доштан мумкин аст.
+
+2. Ҷойгиршавӣ ва шахсисозии виҷет
+
+Бандҳои навбатӣ интихоби ҷойи виҷет дар саҳифа, боркунии нишони ширкат ва аватари операторро тавсиф мекунанд. Ин танзимот ҳам нуқтаи оғози чат ва ҳам муаррифии ширкату кормандро дар интерфейс фаро мегиранд. Аломатҳои сабз баррасии зуди рӯйхати имкониятҳоро осон мекунанд.
+
+3. Паёмҳои истиқболӣ
+
+Банди алоҳида ба паёмҳои истиқболии шахсисозишуда бахшида шудааст. Он танзимоти намуди зоҳириро бо мазмуни тамоси аввал пурра мекунад: ширкат метавонад паёми истиқболиро ба услуби муоширати худ мутобиқ намояд. Тарҳ ва матн якҷоя чатро ҳамчун қисми таҷрибаи умумии истифодаи сомона муаррифӣ мекунанд.
+
+4. Намунаи визуалӣ ва идомаи шиносоӣ
+
+Дар тарафи рост тасвири панели муколамаҳо бо рӯйхати тамосҳо, паёмҳо ва унсурҳои сабз ҷойгир аст. Он намуди маҳсулотро дар паҳлуи рӯйхати танзимот нишон медиҳад. Дар поён бахши «Тарифҳо» оғоз шуда, корбарро аз омӯзиши имкониятҳо ба интихоби нақшаи мувофиқ мебарад.
+
+Бахш барои арзёбии мутобиқати хидмат ба тарҳи мавҷудаи сомона кумак мекунад. Рӯйхати кӯтоҳи танзимот ва намунаи интерфейс барои омӯзиши минбаъдаи маҳсулот ва баррасии талаботи намуди зоҳирӣ асос медиҳанд.`,
             },
           },
           {
             slug: "pricing",
-            title: {
-              ru: "Тарифы",
-              en: "Pricing",
-              tj: "Тарифҳо",
-            },
-            imageSrc: "/images/projects/livechat/gallery-6.png",
-            BannerSrc: "/images/projects/livechat/gallery-6.png",
+            title: { ru: "Тарифы", en: "Pricing", tj: "Тарифҳо" },
+            imageSrc: "/images/projects/livechat/pricing-1700.webp",
+            BannerSrc: "/images/projects/livechat/pricing-1700.webp",
             shortInfo: {
-              ru: "Три тарифных плана с сравнением",
-              en: "Three pricing plans compared",
-              tj: "Се нақшаи тарифӣ бо муқоиса",
+              ru: "Сравнение планов «Старт», «Профи» и «Бизнес» для команд разного размера",
+              en: "Comparing Start, Pro and Business plans for different team sizes",
+              tj: "Муқоисаи нақшаҳои «Старт», «Профи» ва «Бизнес» барои дастаҳои гуногун",
             },
             fullInfo: {
-              ru: "Раздел «Тарифы» представляет три плана подписки в виде параллельных карточек. Над ними размещены метка «Тарифы», заголовок «Выберите подходящий план» и подзаголовок «Начните бесплатно, масштабируйтесь по мере роста бизнеса». План «Старт» рассчитан на малый бизнес и стартапы (1 агент, 100 чатов в месяц, базовый виджет, email-поддержка, история чатов 30 дней). Центральный план «Профи» помечен значком «Популярный» и выделен тёмным фоном (до 5 агентов, безлимит чатов, аналитика и отчёты, все интеграции, шаблоны ответов, приоритетная поддержка). План «Бизнес» ориентирован на крупные компании (безлимит агентов, всё из тарифа «Профи», API-доступ, SLA-гарантия, персональный менеджер, выделенный сервер). Каждая карточка снабжена кнопкой действия.\n\nПользовательский сценарий: посетитель сравнивает планы по составу возможностей, ориентируется на выделенный рекомендованный тариф и выбирает вариант, соответствующий размеру команды и объёму задач.\n\nЦенность для бизнеса: наглядное сравнение тарифов помогает клиенту самостоятельно выбрать подходящий уровень и видеть путь роста. Выделение среднего плана как рекомендованного направляет выбор и повышает вероятность подписки на оптимальный вариант.",
-              en: "The Pricing section presents three subscription plans as parallel cards. Above them are the Pricing label, the headline “Choose the right plan” and the subheading “Start free and scale as your business grows”. The Start plan targets small businesses and startups (1 agent, 100 chats per month, a basic widget, email support, 30-day chat history). The central Pro plan carries a Popular badge and stands out with a dark background (up to 5 agents, unlimited chats, analytics and reports, all integrations, reply templates, priority support). The Business plan is aimed at large companies (unlimited agents, everything from Pro, API access, an SLA guarantee, a personal manager, a dedicated server). Each card includes an action button.\n\nUser journey: the visitor compares the plans by their feature sets, is guided by the highlighted recommended tier and selects the option that matches their team size and task volume.\n\nBusiness value: a clear plan comparison lets the customer choose the right level themselves and see a growth path. Highlighting the middle plan as recommended steers the choice and increases the likelihood of subscribing to the optimal option.",
-              tj: "Бахши «Тарифҳо» се нақшаи обунаро дар шакли кортҳои параллелӣ пешниҳод мекунад. Болои онҳо нишонаи «Тарифҳо», сарлавҳаи «Нақшаи мувофиқро интихоб кунед» ва зерсарлавҳаи «Ройгон оғоз кунед, ҳамроҳи рушди тиҷорат миқёсро васеъ намоед» ҷойгиранд. Нақшаи «Оғоз» барои тиҷорати хурд ва стартапҳо пешбинӣ шудааст (1 агент, 100 чат дар як моҳ, виҷети асосӣ, дастгирии email, таърихи чатҳо 30 рӯз). Нақшаи марказии «Профи» бо нишонаи «Маъмул» қайд шуда, бо заминаи торик барҷаста аст (то 5 агент, чатҳои бемаҳдуд, таҳлил ва ҳисоботҳо, ҳамаи интегратсияҳо, шаблонҳои ҷавоб, дастгирии афзалиятнок). Нақшаи «Бизнес» ба ширкатҳои калон нигаронида шудааст (агентҳои бемаҳдуд, ҳама чиз аз «Профи», дастрасии API, кафолати SLA, менеҷери шахсӣ, сервери ҷудошуда). Ҳар корт бо тугмаи амал муҷаҳҳаз аст.\n\nРаванди истифода: корбар нақшаҳоро аз рӯйи ҳайати имкониятҳо муқоиса мекунад, ба тарифи тавсияшудаи барҷаста нигаронида мешавад ва вариантеро, ки ба андозаи даста ва ҳаҷми вазифаҳо мувофиқ аст, интихоб мекунад.\n\nАҳамият барои тиҷорат: муқоисаи аёнии тарифҳо ба мизоҷ кумак мекунад, ки сатҳи мувофиқро мустақилона интихоб кунад ва роҳи рушдро бинад. Барҷаста кардани нақшаи миёна ҳамчун тавсияшуда интихобро равона карда, эҳтимоли обунаро ба варианти беҳтарин баланд мебардорад.",
+              ru: `Архитектура и функциональность блока «Тарифы»
+
+Раздел помогает сопоставить возможности LiveChat с масштабом бизнеса. Под меткой «Тарифы» расположены заголовок «Выберите подходящий план» и предложение начать бесплатно, расширяя использование сервиса по мере роста компании. Три карточки в один ряд представляют планы «Старт», «Профи» и «Бизнес». На показанном экране сравниваются возможности и ограничения; числовая стоимость планов не указана.
+
+1. Начальный план для малого бизнеса
+
+Карточка «Старт» адресована небольшим компаниям и стартапам. В перечне указаны один агент, 100 чатов в месяц, базовый виджет, поддержка по электронной почте и история чатов за 30 дней. Кнопка «Начать бесплатно» завершает карточку и задаёт понятный следующий шаг после знакомства с условиями.
+
+2. Выделенный план для растущих команд
+
+Центральная карточка «Профи» отличается тёмным фоном, зелёной кнопкой и меткой «Популярный». Она предлагает до пяти агентов, неограниченное количество чатов, аналитику и отчёты, все интеграции, шаблоны ответов и приоритетную поддержку. Контрастное оформление делает этот вариант заметным при сравнении, а действие «Попробовать бесплатно» предлагает перейти к знакомству с сервисом.
+
+3. Расширенные условия для крупных компаний
+
+План «Бизнес» включает неограниченное количество агентов и возможности «Профи». Дополнительно перечислены доступ к API, гарантия SLA, персональный менеджер и выделенный сервер. Кнопка «Связаться с нами» обозначает отдельный сценарий: обсуждение требований и условий подключения с командой сервиса.
+
+4. Логика сравнения и выбора
+
+Карточки используют общую структуру: название, целевая аудитория, список возможностей и действие в нижней части. Посетитель может последовательно сравнить количество агентов, объём чатов и инструменты поддержки. Светлые боковые карточки и акцентная центральная помогают визуально разделить варианты без усложнения страницы.
+
+Блок показывает путь от небольшого объёма обращений к командной работе и индивидуальному сопровождению. Такой формат помогает выбрать направление дальнейшего действия: начать бесплатно, попробовать расширенный план или обсудить подключение компании.`,
+              en: `Architecture and functionality of the Pricing section
+
+The section helps visitors match LiveChat capabilities to the scale of their business. A Pricing badge precedes “Choose the right plan” and an invitation to start for free and expand as the company grows. Three cards in a single row present Start, Pro and Business. The displayed screen compares features and limits; it does not show numerical prices.
+
+1. Entry plan for small businesses
+
+Start targets small companies and startups. Its list includes one agent, 100 chats per month, a basic widget, email support and 30 days of chat history. A Start for free button completes the card and provides a clear next step after reviewing the terms.
+
+2. Highlighted plan for growing teams
+
+The central Pro card stands out with a dark background, green button and Popular badge. It offers up to five agents, unlimited chats, analytics and reports, all integrations, reply templates and priority support. The contrasting presentation draws attention during comparison, while Try for free invites visitors to explore the service.
+
+3. Extended options for larger companies
+
+Business includes unlimited agents and the Pro features. Additional items list API access, an SLA guarantee, a personal manager and a dedicated server. A Contact us button introduces a separate journey: discussing requirements and onboarding terms with the service team.
+
+4. Comparison and selection structure
+
+The cards share a common structure: a name, target audience, feature list and an action at the bottom. Visitors can compare agent counts, chat volume and support tools in sequence. Light outer cards and an accented centre visually separate the options without complicating the page.
+
+The section presents a path from a small volume of enquiries to teamwork and individual assistance. This format helps visitors choose their next step: start for free, try an expanded plan or discuss company onboarding.`,
+              tj: `Сохтор ва вазифаҳои бахши «Тарифҳо»
+
+Бахш барои муқоиса кардани имкониятҳои LiveChat бо миқёси тиҷорат кумак мекунад. Дар зери тамғаи «Тарифҳо» сарлавҳаи «Нақшаи мувофиқро интихоб кунед» ва пешниҳоди оғози ройгон бо васеъ кардани истифодаи хидмат ҳангоми рушди ширкат ҷойгиранд. Се корт дар як қатор нақшаҳои «Старт», «Профи» ва «Бизнес»-ро муаррифӣ мекунанд. Дар экрани нишоншуда имкониятҳо ва маҳдудиятҳо муқоиса мешаванд; нархи рақамии нақшаҳо оварда нашудааст.
+
+1. Нақшаи ибтидоӣ барои тиҷорати хурд
+
+Корти «Старт» барои ширкатҳои хурд ва стартапҳо пешбинӣ шудааст. Рӯйхат як оператор, 100 чат дар як моҳ, виҷети асосӣ, дастгирӣ тавассути почтаи электронӣ ва таърихи чатҳо барои 30 рӯзро дар бар мегирад. Тугмаи «Ройгон оғоз кунед» кортро анҷом дода, пас аз шиносоӣ бо шартҳо қадами навбатии равшан медиҳад.
+
+2. Нақшаи намоён барои дастаҳои рушдкунанда
+
+Корти марказии «Профи» бо заминаи торик, тугмаи сабз ва тамғаи «Маъмул» фарқ мекунад. Он то панҷ оператор, чатҳо бе маҳдудият, таҳлилу ҳисобот, ҳамаи ҳамгироиҳо, қолабҳои ҷавоб ва дастгирии афзалиятнокро пешниҳод менамояд. Ороиши фарқкунанда ин вариантро ҳангоми муқоиса намоён мекунад ва амали «Ройгон санҷед» ба шиносоӣ бо хидмат даъват менамояд.
+
+3. Шартҳои васеъ барои ширкатҳои калон
+
+Нақшаи «Бизнес» шумораи бемаҳдуди операторон ва имкониятҳои «Профи»-ро дар бар мегирад. Илова бар ин, дастрасӣ ба API, кафолати SLA, менеҷери шахсӣ ва сервери ҷудошуда номбар шудаанд. Тугмаи «Бо мо тамос гиред» роҳи алоҳидаи баррасии талабот ва шартҳои пайвастшавиро бо дастаи хидмат пешниҳод мекунад.
+
+4. Сохтори муқоиса ва интихоб
+
+Кортҳо сохтори ягона доранд: ном, аудиторияи мақсаднок, рӯйхати имкониятҳо ва амал дар қисми поён. Корбар метавонад шумораи операторон, ҳаҷми чатҳо ва абзорҳои дастгириро пайдарпай муқоиса кунад. Кортҳои равшани паҳлуӣ ва маркази намоён вариантҳоро бе мураккаб кардани саҳифа ҷудо мекунанд.
+
+Бахш роҳро аз ҳаҷми ками муроҷиатҳо то кори даставӣ ва ҳамроҳии инфиродӣ нишон медиҳад. Ин формат барои интихоби қадами навбатӣ — оғози ройгон, санҷиши нақшаи васеъ ё баррасии пайвастшавии ширкат — кумак мекунад.`,
             },
           },
           {
             slug: "integrations",
-            title: {
-              ru: "Интеграции",
-              en: "Integrations",
-              tj: "Интегратсияҳо",
-            },
-            imageSrc: "/images/projects/livechat/gallery-7.png",
-            BannerSrc: "/images/projects/livechat/gallery-7.png",
+            title: { ru: "Интеграции", en: "Integrations", tj: "Ҳамгироиҳо" },
+            imageSrc: "/images/projects/livechat/integrations-1700.webp",
+            BannerSrc: "/images/projects/livechat/integrations-1700.webp",
             shortInfo: {
-              ru: "Подключение к внешним платформам",
-              en: "Connecting to external platforms",
-              tj: "Пайвастшавӣ ба платформаҳои беруна",
+              ru: "Подключение мессенджеров, CRM, конструкторов сайтов и API",
+              en: "Connections to messengers, CRM systems, website builders and APIs",
+              tj: "Пайвастшавӣ ба мессенҷерҳо, CRM, созандагони сомона ва API",
             },
             fullInfo: {
-              ru: "Раздел «Интеграции» показывает, с какими системами связывается сервис. Над сеткой размещены метка «Интеграции», заголовок «Подключайтесь к любым платформам» и подзаголовок о встраивании в существующий стек инструментов. Четыре карточки с иконками и бейджами описывают направления интеграции: «Мессенджеры» (10+ каналов, приём обращений в едином интерфейсе оператора), «CRM-системы» (15+ платформ, автоматическая передача данных о клиентах и сделках), «Конструкторы сайтов» (любая CMS, установка виджета без программистов) и «Собственный API» (REST & Webhooks, встраивание в любой продукт или рабочий процесс).\n\nПользовательский сценарий: посетитель проверяет, поддерживает ли сервис нужные ему каналы и системы — мессенджеры, CRM или собственную платформу — и оценивает совместимость с текущей инфраструктурой.\n\nЦенность для бизнеса: явное перечисление интеграций отвечает на частый вопрос о совместимости до начала работы. Возможность подключить мессенджеры, CRM и собственный API через один инструмент снижает риск, что продукт не впишется в имеющиеся процессы.",
-              en: "The Integrations section shows which systems the service connects to. Above the grid are the Integrations label, the headline “Connect to any platform” and a subheading about fitting into an existing toolset. Four cards with icons and badges describe the integration directions: Messengers (10+ channels, receiving enquiries in a single operator interface), CRM systems (15+ platforms, automatic transfer of customer and deal data), Website builders (any CMS, installing the widget without programmers) and Own API (REST & Webhooks, embedding into any product or workflow).\n\nUser journey: the visitor checks whether the service supports the channels and systems they need — messengers, CRM or their own platform — and assesses compatibility with their current infrastructure.\n\nBusiness value: an explicit list of integrations answers the common compatibility question before work begins. Being able to connect messengers, CRM and a custom API through one tool reduces the risk that the product will not fit existing processes.",
-              tj: "Бахши «Интегратсияҳо» нишон медиҳад, ки хизматрасонӣ бо кадом системаҳо пайваст мешавад. Болои шабака нишонаи «Интегратсияҳо», сарлавҳаи «Ба ҳар платформа пайваст шавед» ва зерсарлавҳа дар бораи ворид шудан ба маҷмуи мавҷудаи абзорҳо ҷойгиранд. Чор корт бо нишонаҳо ва бейҷҳо самтҳои интегратсияро тавсиф мекунанд: «Мессенҷерҳо» (10+ канал, қабули муроҷиатҳо дар интерфейси ягонаи оператор), «Системаҳои CRM» (15+ платформа, интиқоли худкори маълумот дар бораи мизоҷон ва аҳдҳо), «Конструкторҳои сомона» (ҳар CMS, насби виҷет бе барномасозон) ва «API-и худӣ» (REST & Webhooks, ворид шудан ба ҳар маҳсулот ё ҷараёни корӣ).\n\nРаванди истифода: корбар месанҷад, ки оё хизматрасонӣ каналҳо ва системаҳои ба ӯ лозимиро — мессенҷерҳо, CRM ё платформаи худиро — дастгирӣ мекунад ва мутобиқатро бо инфрасохтори ҷории худ арзёбӣ менамояд.\n\nАҳамият барои тиҷорат: рӯйхати возеҳи интегратсияҳо ба саволи маъмул дар бораи мутобиқат пеш аз оғози кор ҷавоб медиҳад. Имкони пайваст кардани мессенҷерҳо, CRM ва API-и худӣ тавассути як абзор хатари он, ки маҳсулот ба ҷараёнҳои мавҷуда мувофиқ намеояд, кам мекунад.",
+              ru: `Архитектура и функциональность блока «Интеграции»
+
+Раздел представляет способы подключения LiveChat к инструментам компании. Под меткой «Интеграции» расположены заголовок «Подключайтесь к любым платформам» и пояснение о встраивании сервиса в существующий набор инструментов. Четыре карточки в два ряда группируют возможности по назначению: каналы общения, работа с клиентскими данными, установка на сайт и программное подключение.
+
+1. Мессенджеры и единый интерфейс оператора
+
+Карточка «Мессенджеры» сопровождается меткой «10+ каналов». Текст описывает приём обращений из популярных мессенджеров в одном интерфейсе оператора. Такое представление объясняет пользу объединения каналов: сотрудник может работать с обращениями в общем рабочем пространстве.
+
+2. CRM-системы и передача данных
+
+Карточка «CRM-системы» с меткой «15+ платформ» посвящена автоматической передаче информации о клиентах и сделках в CRM без ручного ввода. Она связывает общение в чате с дальнейшей работой с клиентом и показывает назначение интеграции через конкретную задачу обработки данных.
+
+3. Конструкторы сайтов и установка виджета
+
+Карточка «Конструкторы сайтов» содержит метку «Любая CMS» и предлагает установить виджет за несколько минут без программистов и специальных технических знаний. Этот блок адресован владельцам сайтов, которым важно понять, как добавить чат в уже существующий веб-проект. Конкретные платформы на данном экране не перечислены.
+
+4. Собственный API и рабочие процессы
+
+Карточка «Собственный API» отмечена подписью «REST & Webhooks». В описании представлены программные способы подключения LiveChat к продуктам и рабочим процессам компании. Такой вариант дополняет готовые направления интеграции для случаев, когда требуется индивидуальная связь с другими системами.
+
+Единая структура карточек — цветная иконка, название, метка и короткое пояснение — помогает быстро найти нужное направление. Раздел позволяет сопоставить возможности сервиса с инструментами компании и определить, какие варианты подключения стоит изучить подробнее.`,
+              en: `Architecture and functionality of the Integrations section
+
+The section presents ways to connect LiveChat to a company’s tools. An Integrations badge precedes “Connect to any platform” and an explanation of fitting the service into an existing toolset. Four cards in two rows group the options by purpose: communication channels, customer data, website installation and programmatic connections.
+
+1. Messengers and a shared operator interface
+
+The Messengers card carries a “10+ channels” badge. Its text describes receiving enquiries from popular messengers in a single operator interface. This presentation explains the value of bringing channels together: staff can handle enquiries in a shared workspace.
+
+2. CRM systems and data transfer
+
+The CRM systems card, labelled “15+ platforms”, covers automatic transfer of customer and deal information into a CRM without manual entry. It connects chat communication with subsequent customer management and explains the integration through a specific data-handling task.
+
+3. Website builders and widget installation
+
+The Website builders card includes an “Any CMS” badge and presents installation in a few minutes without programmers or specialist technical knowledge. It addresses website owners who want to understand how to add chat to an existing web project. Specific platforms are not listed on this screen.
+
+4. Custom API and workflows
+
+The Custom API card is labelled “REST & Webhooks”. Its description introduces programmatic ways to connect LiveChat to company products and workflows. This option complements the other integration categories when a tailored connection to another system is required.
+
+A consistent card structure — coloured icon, name, badge and short explanation — helps visitors locate the relevant category quickly. The section lets them compare the service’s capabilities with their company’s tools and identify connection options to explore further.`,
+              tj: `Сохтор ва вазифаҳои бахши «Ҳамгироиҳо»
+
+Бахш роҳҳои пайваст кардани LiveChat-ро ба абзорҳои ширкат муаррифӣ мекунад. Дар зери тамғаи «Ҳамгироиҳо» сарлавҳаи «Ба ҳама гуна платформаҳо пайваст шавед» ва шарҳи ворид кардани хидмат ба маҷмуи абзорҳои мавҷуда ҷойгиранд. Чор корт дар ду қатор имкониятҳоро аз рӯйи вазифа гурӯҳбандӣ мекунанд: роҳҳои муошират, маълумоти мизоҷон, насб дар сомона ва пайвастшавии барномавӣ.
+
+1. Мессенҷерҳо ва интерфейси ягонаи оператор
+
+Корти «Мессенҷерҳо» тамғаи «10+ канал» дорад. Матн қабули муроҷиатҳоро аз мессенҷерҳои маъмул дар интерфейси ягонаи оператор шарҳ медиҳад. Ин пешниҳод фоидаи муттаҳид кардани каналҳоро мефаҳмонад: корманд метавонад муроҷиатҳоро дар як майдони корӣ баррасӣ кунад.
+
+2. Системаҳои CRM ва интиқоли маълумот
+
+Корти «Системаҳои CRM» бо тамғаи «15+ платформа» ба интиқоли худкори маълумоти мизоҷон ва муомилаҳо ба CRM бе воридкунии дастӣ бахшида шудааст. Он муошират дар чатро бо кори минбаъда бо мизоҷ мепайвандад ва вазифаи ҳамгироиро тавассути коркарди маълумот шарҳ медиҳад.
+
+3. Созандагони сомона ва насби виҷет
+
+Корти «Созандагони сомона» тамғаи «Ҳар гуна CMS» дорад ва насби виҷетро дар чанд дақиқа бе барномасозон ва дониши махсуси техникӣ пешниҳод мекунад. Он ба соҳибони сомонаҳо мефаҳмонад, ки чӣ гуна чатро ба лоиҳаи вебии мавҷуда илова кардан мумкин аст. Дар ин экран платформаҳои мушаххас номбар нашудаанд.
+
+4. API-и худӣ ва равандҳои корӣ
+
+Корти «API-и худӣ» бо навиштаҷоти «REST & Webhooks» қайд шудааст. Тавсифи он роҳҳои барномавии пайваст кардани LiveChat-ро ба маҳсулот ва равандҳои кории ширкат муаррифӣ мекунад. Ин вариант самтҳои дигари ҳамгироиро барои ҳолатҳое пурра менамояд, ки алоқаи инфиродӣ бо системаҳои дигар зарур аст.
+
+Сохтори ягонаи кортҳо — нишонаи ранга, ном, тамға ва шарҳи кӯтоҳ — барои зуд ёфтани самти зарурӣ кумак мекунад. Бахш имкон медиҳад, ки имкониятҳои хидмат бо абзорҳои ширкат муқоиса ва роҳҳои пайвастшавӣ барои омӯзиши бештар интихоб шаванд.`,
             },
           },
           {
             slug: "benefits",
-            title: {
-              ru: "Преимущества",
-              en: "Benefits",
-              tj: "Бартариҳо",
-            },
-            imageSrc: "/images/projects/livechat/gallery-8.png",
-            BannerSrc: "/images/projects/livechat/gallery-8.png",
+            title: { ru: "Преимущества", en: "Benefits", tj: "Бартариҳо" },
+            imageSrc: "/images/projects/livechat/benefits-1700.webp",
+            BannerSrc: "/images/projects/livechat/benefits-1700.webp",
             shortInfo: {
-              ru: "Ключевые выгоды для бизнеса",
-              en: "Key benefits for business",
-              tj: "Фоидаҳои асосӣ барои тиҷорат",
+              ru: "Роль онлайн-чата в продажах, организации поддержки и удержании клиентов",
+              en: "The role of online chat in sales, support organisation and customer retention",
+              tj: "Нақши чати онлайн дар фурӯш, ташкили дастгирӣ ва нигоҳдории мизоҷон",
             },
             fullInfo: {
-              ru: "Блок «Преимущества» отвечает на вопрос, зачем бизнесу онлайн-чат. Над карточками размещены метка «Преимущества» и заголовок «Для чего нужен онлайн-чат». Три карточки с иконками раскрывают основные выгоды: «Рост продаж» (вовлечение посетителей в разговор до того, как они покинут сайт, и конвертация интереса в заявки), «Сокращение расходов» (один менеджер ведёт несколько диалогов одновременно, снижая затраты на поддержку) и «Больше клиентов» (оперативное решение вопросов до того, как посетитель уйдёт к конкурентам). Ниже начинается блок поддержки с заголовком «Мы всегда рядом».\n\nПользовательский сценарий: посетитель сопоставляет описанные выгоды со своими бизнес-целями — увеличением продаж, экономией на поддержке или удержанием клиентов — и укрепляется в решении попробовать продукт.\n\nЦенность для бизнеса: формулировка выгод на языке результата (продажи, расходы, клиенты) переводит технические функции в понятную коммерческую пользу. Это помогает лицам, принимающим решение, обосновать внедрение инструмента.",
-              en: "The Benefits block answers why a business needs online chat. Above the cards are the Benefits label and the headline “Why you need online chat”. Three icon cards spell out the main benefits: Sales growth (engaging visitors in conversation before they leave the site and converting interest into leads), Cost reduction (one manager handling several dialogues at once, lowering support costs) and More customers (resolving questions promptly before a visitor moves to a competitor). Below, the support block begins with the headline “We’re always here”.\n\nUser journey: the visitor matches the stated benefits against their own business goals — growing sales, saving on support or retaining customers — and grows more confident in trying the product.\n\nBusiness value: framing benefits in terms of outcomes (sales, costs, customers) translates technical features into clear commercial value. This helps decision-makers justify adopting the tool.",
-              tj: "Блоки «Бартариҳо» ба саволи он, ки чаро ба тиҷорат чати онлайн лозим аст, ҷавоб медиҳад. Болои кортҳо нишонаи «Бартариҳо» ва сарлавҳаи «Чати онлайн барои чӣ лозим аст» ҷойгиранд. Се корт бо нишонаҳо фоидаҳои асосиро ошкор мекунанд: «Рушди фурӯш» (ҷалби меҳмонон ба сӯҳбат пеш аз он ки сомонаро тарк кунанд ва табдили таваҷҷуҳ ба дархостҳо), «Кам кардани харҷ» (як менеҷер якчанд муколамаро ҳамзамон мебарад ва хароҷоти дастгириро паст мекунад) ва «Мизоҷони бештар» (ҳалли фаврии саволҳо пеш аз он ки меҳмон ба рақибон равад). Дар поён блоки дастгирӣ бо сарлавҳаи «Мо ҳамеша дар назди шумо» оғоз мешавад.\n\nРаванди истифода: корбар фоидаҳои тавсифшударо бо ҳадафҳои тиҷоратии худ — афзоиши фурӯш, сарфа дар дастгирӣ ё нигоҳ доштани мизоҷон — муқоиса мекунад ва дар қарори санҷидани маҳсулот устувортар мешавад.\n\nАҳамият барои тиҷорат: баёни фоидаҳо бо забони натиҷа (фурӯш, харҷ, мизоҷон) функсияҳои техникиро ба манфиати возеҳи тиҷоратӣ табдил медиҳад. Ин ба шахсони қароргиранда кумак мекунад, ки татбиқи абзорро асоснок созанд.",
+              ru: `Архитектура и функциональность блока «Преимущества»
+
+Раздел объясняет назначение LiveChat через задачи бизнеса. Под меткой «Преимущества» и заголовком «Для чего нужен онлайн-чат» расположены три карточки: «Рост продаж», «Сокращение расходов» и «Больше клиентов». Светлый фон, одинаковые размеры карточек и короткие пояснения помогают последовательно изучить аргументы в пользу подключения сервиса.
+
+1. Общение с посетителем и рост продаж
+
+Первая карточка предлагает вовлекать посетителей в разговор до того, как они покинут сайт. Текст связывает консультацию с переходом от интереса к заявке. Иконка восходящего графика поддерживает тему роста, а описание показывает роль чата как точки контакта с потенциальным клиентом.
+
+2. Организация поддержки и сокращение расходов
+
+Вторая карточка описывает возможность одного менеджера вести несколько диалогов одновременно. Через этот сценарий раскрывается предполагаемая польза для организации клиентской поддержки: работа с несколькими обращениями в одном канале. Иконка денежного знака визуально выделяет экономическую сторону предложения.
+
+3. Оперативные ответы и удержание клиентов
+
+Карточка «Больше клиентов» объясняет значение своевременной помощи: посетитель получает ответ до того, как начнёт искать его у конкурентов. Акцент сделан на сохранении контакта с заинтересованным пользователем. Иконка группы людей дополняет тему клиентской аудитории и отличает карточку от двух соседних.
+
+4. Переход от преимуществ к поддержке
+
+В нижней части экрана начинается следующий раздел с меткой «Поддержка», заголовком «Мы всегда рядом» и предложением выбрать удобный способ связи. Смена фона отделяет его от карточек преимуществ. Такая последовательность позволяет после знакомства с пользой продукта перейти к уточнению вопросов.
+
+Блок переводит возможности онлайн-чата в понятные направления применения: получение заявок, работа менеджеров и удержание посетителей. Единая подача помогает оценить, какие задачи сервиса актуальны для конкретной компании, и продолжить изучение продукта.`,
+              en: `Architecture and functionality of the Benefits section
+
+The section explains LiveChat through business needs. Beneath a Benefits badge and the heading “What is online chat for?”, three cards present Sales growth, Cost reduction and More customers. A light background, matching card sizes and short explanations make the reasons for adopting the service easy to follow.
+
+1. Visitor communication and sales growth
+
+The first card encourages engaging visitors before they leave the website. Its text connects consultation with turning interest into an enquiry. An upward graph icon reinforces the growth theme, while the explanation presents chat as a contact point for potential customers.
+
+2. Support organisation and cost reduction
+
+The second card describes one manager handling several conversations simultaneously. This scenario introduces the potential operational benefit for customer support: managing multiple enquiries through one channel. A currency icon visually highlights the economic side of the offer.
+
+3. Timely answers and customer retention
+
+More customers explains the role of timely help: visitors receive an answer before seeking it from competitors. The focus is on maintaining contact with an interested user. A people icon reinforces the customer theme and distinguishes this card from its neighbours.
+
+4. Transition from benefits to support
+
+The next section begins at the bottom with a Support badge, “We are always here” heading and an invitation to choose a convenient contact method. A background change separates it from the benefit cards. This sequence lets visitors move from product value to clarifying their questions.
+
+The section translates online chat capabilities into understandable applications: generating enquiries, organising managers’ work and retaining visitors. A consistent presentation helps users assess which needs are relevant to their company and continue exploring the product.`,
+              tj: `Сохтор ва вазифаҳои бахши «Бартариҳо»
+
+Бахш вазифаи LiveChat-ро тавассути ниёзҳои тиҷорат шарҳ медиҳад. Дар зери тамғаи «Бартариҳо» ва сарлавҳаи «Чати онлайн барои чӣ лозим аст?» се корт ҷойгиранд: «Афзоиши фурӯш», «Коҳиши хароҷот» ва «Мизоҷони бештар». Заминаи равшан, андозаи якхелаи кортҳо ва шарҳҳои кӯтоҳ омӯзиши пайдарпайи далелҳои пайвастшавӣ ба хидматро осон мекунанд.
+
+1. Муошират бо корбар ва афзоиши фурӯш
+
+Корти аввал ҷалби корбаронро ба суҳбат пеш аз тарки сомона пешниҳод мекунад. Матн машваратро бо гузариш аз таваҷҷуҳ ба дархост мепайвандад. Нишонаи графики болораванда мавзуи рушдро таъкид карда, тавсиф нақши чатро ҳамчун нуқтаи алоқа бо мизоҷи эҳтимолӣ нишон медиҳад.
+
+2. Ташкили дастгирӣ ва коҳиши хароҷот
+
+Корти дуюм имкони пеш бурдани чанд муколама аз ҷониби як менеҷерро тавсиф мекунад. Ин раванд фоидаи эҳтимолиро барои ташкили дастгирии мизоҷон — кор бо чанд муроҷиат дар як канал — мефаҳмонад. Нишонаи пул ҷанбаи иқтисодии пешниҳодро намоён мекунад.
+
+3. Ҷавобҳои саривақтӣ ва нигоҳдории мизоҷон
+
+Корти «Мизоҷони бештар» аҳамияти кумаки саривақтиро шарҳ медиҳад: корбар пеш аз ҷустуҷӯи ҷавоб дар назди рақибон онро мегирад. Диққат ба нигоҳ доштани алоқа бо корбари ҳавасманд равона шудааст. Нишонаи гурӯҳи одамон мавзуи мизоҷонро пурра карда, кортро аз ду корти ҳамсоя фарқ мекунад.
+
+4. Гузариш аз бартариҳо ба дастгирӣ
+
+Дар поёни экран бахши навбатӣ бо тамғаи «Дастгирӣ», сарлавҳаи «Мо ҳамеша дар паҳлуи шумоем» ва пешниҳоди интихоби роҳи қулайи алоқа оғоз мешавад. Иваз шудани замина онро аз кортҳои бартариҳо ҷудо мекунад. Ин пайдарпайӣ имкон медиҳад, ки пас аз шиносоӣ бо фоидаи маҳсулот корбар ба муайян кардани саволҳои худ гузарад.
+
+Бахш имкониятҳои чати онлайнро ба самтҳои фаҳмои истифода — гирифтани дархостҳо, кори менеҷерон ва нигоҳдории корбарон — мепайвандад. Тарзи ягонаи муаррифӣ барои арзёбии вазифаҳои муҳим барои ширкат ва идомаи омӯзиши маҳсулот кумак мекунад.`,
             },
           },
           {
             slug: "support-faq",
-            title: {
-              ru: "Поддержка и FAQ",
-              en: "Support and FAQ",
-              tj: "Дастгирӣ ва FAQ",
-            },
-            imageSrc: "/images/projects/livechat/gallery-9.png",
-            BannerSrc: "/images/projects/livechat/gallery-9.png",
+            title: { ru: "Поддержка и FAQ", en: "Support and FAQ", tj: "Дастгирӣ ва саволҳои маъмул" },
+            imageSrc: "/images/projects/livechat/support-faq-1700.webp",
+            BannerSrc: "/images/projects/livechat/support-faq-1700.webp",
             shortInfo: {
-              ru: "Каналы связи и частые вопросы",
-              en: "Contact channels and frequent questions",
-              tj: "Каналҳои алоқа ва саволҳои маъмул",
+              ru: "Каналы помощи, документация и ответы на вопросы о подключении сервиса",
+              en: "Help channels, documentation and answers about getting started",
+              tj: "Роҳҳои кумак, ҳуҷҷатҳо ва ҷавобҳо дар бораи пайвастшавӣ ба хидмат",
             },
             fullInfo: {
-              ru: "Раздел «Поддержка» объединяет каналы связи и ответы на частые вопросы. Над блоком размещены метка «Поддержка», заголовок «Мы всегда рядом» и подзаголовок о выборе удобного способа связи. Три карточки описывают доступные каналы: «Email поддержка» с адресом support@livechat.ru, «Онлайн-чат 24/7» с ссылкой «Открыть чат» и «Документация» с адресом docs.livechat.ru. Ниже расположен блок «Часто задаваемые вопросы» в две колонки: нужны ли технические знания для установки, можно ли попробовать бесплатно, как отменить подписку и какие мессенджеры поддерживаются — с краткими ответами по каждому пункту.\n\nПользовательский сценарий: посетитель выбирает удобный способ связи или находит ответ на свой вопрос в блоке FAQ, не покидая страницу и не обращаясь в поддержку.\n\nЦенность для бизнеса: сочетание каналов поддержки и FAQ снимает типовые возражения перед покупкой и уменьшает нагрузку на команду. Явные ответы на вопросы об установке, оплате и отмене подписки повышают доверие и ускоряют принятие решения.",
-              en: "The Support section combines contact channels with answers to frequent questions. Above the block are the Support label, the headline “We’re always here” and a subheading about choosing a convenient way to get in touch. Three cards describe the available channels: Email support with the address support@livechat.ru, 24/7 live chat with an “Open chat” link, and Documentation with the docs.livechat.ru address. Below is a two-column “Frequently asked questions” block: whether technical knowledge is needed for setup, whether it can be tried for free, how to cancel a subscription and which messengers are supported — each with a short answer.\n\nUser journey: the visitor chooses a convenient contact channel or finds the answer to their question in the FAQ block without leaving the page or contacting support.\n\nBusiness value: combining support channels with an FAQ removes common pre-purchase objections and reduces the load on the team. Clear answers about setup, payment and cancellation build trust and speed up the decision.",
-              tj: "Бахши «Дастгирӣ» каналҳои алоқа ва ҷавобҳо ба саволҳои маъмулро муттаҳид мекунад. Болои блок нишонаи «Дастгирӣ», сарлавҳаи «Мо ҳамеша дар назди шумо» ва зерсарлавҳа дар бораи интихоби роҳи қулаи алоқа ҷойгиранд. Се корт каналҳои дастрасро тавсиф мекунанд: «Дастгирии email» бо суроғаи support@livechat.ru, «Чати онлайн 24/7» бо пайванди «Кушодани чат» ва «Ҳуҷҷатнигорӣ» бо суроғаи docs.livechat.ru. Дар поён блоки «Саволҳои зуд-зуд додашаванда» дар ду сутун ҷойгир аст: оё барои насб донишҳои техникӣ лозим аст, оё онро ройгон санҷидан мумкин аст, чӣ тавр обунаро бекор кардан ва кадом мессенҷерҳо дастгирӣ мешаванд — бо ҷавобҳои кӯтоҳ ба ҳар банд.\n\nРаванди истифода: корбар роҳи қулаи алоқаро интихоб мекунад ё ҷавоби саволи худро дар блоки FAQ меёбад, бе он ки саҳифаро тарк кунад ё ба дастгирӣ муроҷиат намояд.\n\nАҳамият барои тиҷорат: якҷоякунии каналҳои дастгирӣ ва FAQ эродҳои маъмулро пеш аз харид бартараф месозад ва сарбории дастаро кам мекунад. Ҷавобҳои возеҳ дар бораи насб, пардохт ва бекоркунии обуна эътимодро баланд мебардоранд ва қабули қарорро суръат мебахшанд.",
+              ru: `Архитектура и функциональность блока «Поддержка и FAQ»
+
+Раздел объединяет способы обращения за помощью и ответы на частые вопросы. Под меткой «Поддержка», заголовком «Мы всегда рядом» и предложением выбрать удобный способ связи расположены три карточки. Ниже находится отдельный блок FAQ с вопросами и ответами в две колонки. Такое построение совмещает персональное обращение и самостоятельный поиск информации.
+
+1. Поддержка по электронной почте
+
+Первая карточка содержит иконку конверта, заголовок «Email поддержка» и адрес support@livechat.ru. Текст сообщает об ответе в течение нескольких часов в рабочие дни. Контакт выделен зелёным, чтобы посетитель мог быстро найти способ письменного обращения и ознакомиться с указанным сроком ответа.
+
+2. Онлайн-чат и документация
+
+Центральная карточка «Онлайн-чат 24/7» представляет круглосуточную помощь и действие «Открыть чат». Соседняя карточка «Документация» предлагает руководства, FAQ и примеры кода по адресу docs.livechat.ru. Два варианта разделяют сценарии: задать вопрос специалисту или самостоятельно изучить материалы о подключении.
+
+3. Ответы на вопросы перед началом работы
+
+В блоке «Часто задаваемые вопросы» объясняется установка готового фрагмента кода на сайт; в ответе указан ориентир в пять минут. Другой пункт описывает тариф «Старт» как бесплатный без ограничения по времени и без необходимости кредитной карты. Эти пояснения помогают посетителю понять представленные на лендинге условия начала работы.
+
+4. Управление подпиской и совместимость
+
+Оставшиеся ответы посвящены отмене подписки в настройках аккаунта и поддерживаемым мессенджерам. В перечне названы Telegram, WhatsApp, VKontakte и Facebook Messenger. Ответы отображаются сразу под вопросами, поэтому основную информацию можно прочитать без раскрытия дополнительных элементов.
+
+Единое оформление карточек с цветными иконками помогает сравнить способы получения помощи. Сочетание контактов и готовых ответов позволяет посетителю уточнить условия подключения, выбрать подходящий канал поддержки и продолжить знакомство с LiveChat.`,
+              en: `Architecture and functionality of the Support and FAQ section
+
+The section combines help channels with answers to common questions. A Support badge, “We are always here” heading and invitation to choose a contact method introduce three cards. A separate FAQ block below arranges questions and answers in two columns. This structure accommodates both personal assistance and self-service information.
+
+1. Email support
+
+The first card contains an envelope icon, an Email support heading and support@livechat.ru. Its text states a response within a few hours on working days. The address is highlighted in green, helping visitors quickly locate a written contact option and review the stated response time.
+
+2. Online chat and documentation
+
+The central Online chat 24/7 card presents round-the-clock assistance and an Open chat action. The neighbouring Documentation card offers guides, FAQs and code examples at docs.livechat.ru. These options distinguish two journeys: asking a specialist or independently studying setup materials.
+
+3. Questions before getting started
+
+The Frequently asked questions block explains installing a ready-made code snippet on a website, with an indicated setup time of five minutes. Another answer describes Start as free without a time limit or credit card requirement. These explanations help visitors understand the entry conditions presented on the landing page.
+
+4. Subscription management and compatibility
+
+The remaining answers cover cancelling a subscription in account settings and supported messengers. Telegram, WhatsApp, VKontakte and Facebook Messenger are named. Answers appear directly beneath their questions, so visitors can read the key information without expanding additional elements.
+
+Consistent cards with coloured icons help visitors compare support options. Combining contacts with prepared answers lets them clarify onboarding terms, select a help channel and continue exploring LiveChat.`,
+              tj: `Сохтор ва вазифаҳои бахши «Дастгирӣ ва саволҳои маъмул»
+
+Бахш роҳҳои муроҷиат барои кумак ва ҷавобҳоро ба саволҳои маъмул муттаҳид мекунад. Дар зери тамғаи «Дастгирӣ», сарлавҳаи «Мо ҳамеша дар паҳлуи шумоем» ва пешниҳоди интихоби роҳи қулайи алоқа се корт ҷойгиранд. Дар поён блоки алоҳидаи саволу ҷавоб дар ду сутун оварда шудааст. Ин сохтор муроҷиати шахсӣ ва ҷустуҷӯи мустақили маълумотро фаро мегирад.
+
+1. Дастгирӣ тавассути почтаи электронӣ
+
+Корти аввал нишонаи лифофа, сарлавҳаи дастгирии почтавӣ ва суроғаи support@livechat.ru дорад. Матн ҷавобро дар давоми чанд соат дар рӯзҳои корӣ нишон медиҳад. Тамос бо ранги сабз ҷудо шудааст, то корбар роҳи муроҷиати хаттӣ ва муҳлати зикршудаи ҷавобро зуд пайдо кунад.
+
+2. Чати онлайн ва ҳуҷҷатҳо
+
+Корти марказии «Чати онлайн 24/7» кумаки шабонарӯзӣ ва амали «Кушодани чат»-ро муаррифӣ мекунад. Корти ҳамсояи «Ҳуҷҷатҳо» дастурҳо, саволҳои маъмул ва намунаҳои рамзро бо суроғаи docs.livechat.ru пешниҳод менамояд. Ин вариантҳо ду равандро ҷудо мекунанд: пурсидани савол аз мутахассис ё омӯзиши мустақили маводи пайвастшавӣ.
+
+3. Саволҳо пеш аз оғози кор
+
+Блоки «Саволҳои маъмул» насби порчаи рамзи омодаро дар сомона шарҳ медиҳад; дар ҷавоб вақти тахминии панҷ дақиқа оварда шудааст. Ҷавоби дигар нақшаи «Старт»-ро ҳамчун ройгон, бе маҳдудияти вақт ва бе зарурати корти бонкӣ тавсиф мекунад. Ин шарҳҳо барои фаҳмидани шартҳои оғози кор, ки дар лендинг пешниҳод шудаанд, кумак мекунанд.
+
+4. Идоракунии обуна ва мувофиқат
+
+Ҷавобҳои боқимонда ба бекор кардани обуна дар танзимоти ҳисоб ва мессенҷерҳои дастгиришаванда бахшида шудаанд. Дар рӯйхат Telegram, WhatsApp, VKontakte ва Facebook Messenger номбар шудаанд. Ҷавобҳо бевосита дар зери саволҳо намоёнанд, бинобар ин маълумоти асосиро бе кушодани унсурҳои иловагӣ хондан мумкин аст.
+
+Ороиши ягонаи кортҳо бо нишонаҳои ранга муқоисаи роҳҳои гирифтани кумакро осон мекунад. Якҷо овардани тамосҳо ва ҷавобҳои омода ба корбар имкон медиҳад, ки шартҳои пайвастшавиро муайян карда, роҳи дастгириро интихоб намояд ва омӯзиши LiveChat-ро идома диҳад.`,
             },
           },
           {
-            slug: "why-footer",
-            title: {
-              ru: "Почему LiveChat и подвал",
-              en: "Why LiveChat and Footer",
-              tj: "Чаро LiveChat ва поёни сомона",
-            },
-            imageSrc: "/images/projects/livechat/gallery-10.png",
-            BannerSrc: "/images/projects/livechat/gallery-10.png",
+            slug: "why-livechat-footer",
+            title: { ru: "Почему LiveChat и подвал сайта", en: "Why LiveChat and site footer", tj: "Чаро LiveChat ва поёни сомона" },
+            imageSrc: "/images/projects/livechat/why-livechat-footer-1700.webp",
+            BannerSrc: "/images/projects/livechat/why-livechat-footer-1700.webp",
             shortInfo: {
-              ru: "Итоговый призыв и карта сайта",
-              en: "Closing call and site map",
-              tj: "Даъвати ниҳоӣ ва харитаи сомона",
+              ru: "Итоговая презентация возможностей, бесплатный старт и навигация в подвале",
+              en: "Closing feature overview, free start and footer navigation",
+              tj: "Муаррифии ниҳоии имкониятҳо, оғози ройгон ва роҳнамоии поёни сомона",
             },
             fullInfo: {
-              ru: "Завершающий блок объединяет итоговый призыв к действию и подвал сайта. В верхней части на тёмном фоне размещены метка «Почему LiveChat», заголовок «Почему стоит купить онлайн-чат от LiveChat?» и подзаголовок о том, что всё необходимое собрано в одном продукте. Ниже расположен ряд тегов-возможностей: мультиязычность, загрузка виджета, отправка файлов, шаблоны быстрых ответов и отправка картинки в чате, а также кнопка «Начать бесплатно». Подвал формирует карту сайта: логотип с кратким описанием и три колонки ссылок — «Продукт» (функции, тарифы, интеграции, безопасность), «Компания» (о нас, блог, документация, контакты) и «Начать» (регистрация, вход, демо, партнёрство). Внизу — строка авторских прав и ссылки на конфиденциальность и условия.\n\nПользовательский сценарий: посетитель, дочитавший страницу до конца, получает последний аргумент и целевую кнопку либо переходит к нужному разделу через сгруппированные ссылки подвала.\n\nЦенность для бизнеса: финальный блок закрепляет ключевые преимущества и предлагает понятное действие тем, кто дошёл до конца страницы. Подвал обеспечивает навигацию по всем разделам и служебным страницам, помогая посетителю продолжить путь после основного контента.",
-              en: "The closing block combines a final call to action with the site footer. At the top, on a dark background, are the Why LiveChat label, the headline “Why buy online chat from LiveChat?” and a subheading stating that everything needed is gathered in one product. Below is a row of capability tags — multilingual support, widget upload, file sending, quick-reply templates and sending images in chat — together with a Start for free button. The footer forms a site map: a logo with a short description and three link columns — Product (features, pricing, integrations, security), Company (about us, blog, documentation, contacts) and Get started (registration, log in, demo, partnership). At the bottom are a copyright line and links to privacy and terms.\n\nUser journey: a visitor who has read the page to the end receives a final argument and a target button, or moves to a relevant section through the grouped footer links.\n\nBusiness value: the final block reinforces the key advantages and offers a clear action to those who reach the end of the page. The footer provides navigation across all sections and utility pages, helping the visitor continue after the main content.",
-              tj: "Блоки хотимавӣ даъвати ниҳоӣ ба амал ва поёни сомонаро муттаҳид мекунад. Дар қисми боло дар заминаи торик нишонаи «Чаро LiveChat», сарлавҳаи «Чаро арзиши харидани чати онлайн аз LiveChat?» ва зерсарлавҳа дар бораи он, ки ҳама чизи зарурӣ дар як маҳсулот ҷамъ шудааст, ҷойгиранд. Дар поён қатори тегҳои имконият: бисёрзабонӣ, боркунии виҷет, ирсоли файлҳо, шаблонҳои ҷавоби зуд ва ирсоли расм дар чат, инчунин тугмаи «Ройгон оғоз кардан» ҷой доранд. Поёни сомона харитаи сомонаро ташкил медиҳад: нишона бо тавсифи кӯтоҳ ва се сутуни пайвандҳо — «Маҳсулот» (функсияҳо, тарифҳо, интегратсияҳо, амният), «Ширкат» (дар бораи мо, блог, ҳуҷҷатнигорӣ, тамосҳо) ва «Оғоз» (сабтином, ворид, демо, шарикӣ). Дар поён сатри ҳуқуқи муаллиф ва пайвандҳо ба махфият ва шартҳо ҷойгиранд.\n\nРаванди истифода: меҳмоне, ки саҳифаро то охир хондааст, далели охирин ва тугмаи мақсаднокро мегирад ё тавассути пайвандҳои гурӯҳбандишудаи поён ба бахши зарурӣ мегузарад.\n\nАҳамият барои тиҷорат: блоки ниҳоӣ бартариҳои асосиро мустаҳкам мекунад ва ба онҳое, ки то охири саҳифа расидаанд, амали возеҳ пешниҳод менамояд. Поёни сомона роҳнамоиро дар ҳамаи бахшҳо ва саҳифаҳои хидматӣ таъмин мекунад ва ба меҳмон кумак менамояд, ки пас аз мундариҷаи асосӣ роҳро идома диҳад.",
+              ru: `Архитектура и функциональность завершающего экрана LiveChat
+
+Экран объединяет заключительный блок «Почему LiveChat» и подвал сайта. Верхняя часть использует тёмный фон с мягким зелёным свечением, а нижняя — светлую поверхность с колонками ссылок. Контраст отделяет предложение начать работу от справочной навигации и завершает презентацию продукта.
+
+1. Основное предложение и краткий обзор возможностей
+
+Под меткой «Почему LiveChat» расположен заголовок «Почему стоит купить онлайн-чат от LiveChat?» и пояснение о возможностях для клиентского сервиса в одном продукте. Ниже пять компактных меток перечисляют мультиязычность, загрузку виджета, отправку файлов, шаблоны быстрых ответов и отправку картинок в чате. Такой формат позволяет быстро просмотреть набор возможностей в конце лендинга.
+
+2. Завершающий призыв к действию
+
+Белая кнопка «Начать бесплатно» со стрелкой заметно выделяется на тёмном фоне. Она расположена непосредственно под перечнем возможностей, связывая знакомство с продуктом с дальнейшим действием. Посетитель, дошедший до конца страницы, получает точку перехода к бесплатному старту без возврата к первому экрану.
+
+3. Структура навигации в подвале
+
+Слева размещены логотип LiveChat и краткое описание онлайн-чата для продаж и клиентского сервиса. Рядом расположены три колонки: «Продукт» со ссылками на функции, тарифы, интеграции и безопасность; «Компания» с информацией о компании, блогом, документацией и контактами; «Начать» с регистрацией, входом, демо и партнёрством. Группировка помогает выбрать следующий раздел по цели посещения.
+
+4. Справочные ссылки и завершение страницы
+
+Тонкая горизонтальная линия отделяет нижнюю строку с отметкой авторских прав от основной навигации. Справа находятся ссылки «Конфиденциальность» и «Условия». Их расположение сохраняет доступ к документам в привычной области страницы, не отвлекая от основного предложения.
+
+Экран поддерживает два сценария: перейти к началу работы или продолжить изучение сервиса через тематические ссылки. Повторный призыв к действию и упорядоченный подвал помогают завершить знакомство с LiveChat понятным следующим шагом.`,
+              en: `Architecture and functionality of the LiveChat closing screen
+
+The screen combines the final Why LiveChat section with the site footer. Its upper area uses a dark background with a soft green glow, while the lower area places columns of links on a light surface. This contrast separates the invitation to get started from reference navigation and completes the product presentation.
+
+1. Main offer and brief capability overview
+
+A Why LiveChat badge introduces the heading “Why buy online chat from LiveChat?” and a statement about customer service capabilities in one product. Five compact badges below list multilingual support, widget loading, file sharing, quick reply templates and image sharing in chat. This format makes the capabilities easy to review at the end of the landing page.
+
+2. Closing call to action
+
+A white Start for free button with an arrow stands out against the dark background. Positioned directly beneath the capability list, it connects product exploration to a next action. Visitors reaching the page’s end can proceed towards a free start without returning to the first screen.
+
+3. Footer navigation structure
+
+The left column contains the LiveChat logo and a short description of chat for sales and customer service. Three adjacent columns group links: Product covers features, pricing, integrations and security; Company covers company information, the blog, documentation and contacts; Get started covers registration, sign-in, a demo and partnerships. This grouping helps visitors choose a section according to their purpose.
+
+4. Reference links and page completion
+
+A thin horizontal line separates the bottom copyright row from the main navigation. Privacy and Terms links sit on the right. Their placement keeps documents accessible in a familiar part of the page without distracting from the primary offer.
+
+The screen supports two journeys: getting started or continuing to explore the service through topic links. A repeated call to action and an organised footer help visitors finish their introduction to LiveChat with a clear next step.`,
+              tj: `Сохтор ва вазифаҳои экрани хотимавии LiveChat
+
+Экран бахши ниҳоии «Чаро LiveChat» ва поёни сомонаро муттаҳид мекунад. Қисми боло заминаи торик бо равшании мулоими сабз дорад, қисми поён бошад сутунҳои пайвандҳоро дар сатҳи равшан ҷой медиҳад. Ин фарқият пешниҳоди оғози корро аз роҳнамоии маълумотӣ ҷудо карда, муаррифии маҳсулотро анҷом медиҳад.
+
+1. Пешниҳоди асосӣ ва шарҳи кӯтоҳи имкониятҳо
+
+Дар зери тамғаи «Чаро LiveChat» сарлавҳаи «Чаро чати онлайнро аз LiveChat харидан лозим аст?» ва шарҳи имкониятҳои хизматрасонӣ ба мизоҷон дар як маҳсулот ҷойгиранд. Дар поён панҷ тамғаи паймон бисёрзабонӣ, боркунии виҷет, ирсоли файлҳо, қолабҳои ҷавобҳои зуд ва ирсоли тасвирҳоро дар чат номбар мекунанд. Ин формат барои баррасии зуди имкониятҳо дар охири лендинг хизмат мекунад.
+
+2. Даъвати ниҳоӣ ба амал
+
+Тугмаи сафеди «Ройгон оғоз кунед» бо тирча дар заминаи торик намоён аст. Он бевосита дар зери рӯйхати имкониятҳо ҷойгир шуда, омӯзиши маҳсулотро бо амали навбатӣ мепайвандад. Корбар дар охири саҳифа метавонад бе бозгашт ба экрани аввал ба оғози ройгон гузарад.
+
+3. Сохтори роҳнамоии поёни сомона
+
+Дар тарафи чап нишони LiveChat ва тавсифи кӯтоҳи чат барои фурӯш ва хизматрасонӣ ба мизоҷон ҷойгиранд. Дар паҳлу се сутун мавҷуданд: «Маҳсулот» бо имкониятҳо, тарифҳо, ҳамгироиҳо ва амният; «Ширкат» бо маълумоти ширкат, блог, ҳуҷҷатҳо ва тамосҳо; «Оғоз» бо сабти ном, воридшавӣ, намоиш ва шарикӣ. Гурӯҳбандӣ интихоби бахши навбатиро мувофиқи мақсади корбар осон мекунад.
+
+4. Пайвандҳои маълумотӣ ва анҷоми саҳифа
+
+Хати борики уфуқӣ сатри ҳуқуқи муаллифро аз роҳнамоии асосӣ ҷудо мекунад. Дар тарафи рост пайвандҳои «Махфият» ва «Шартҳо» ҷойгиранд. Ин ҷойгиршавӣ дастрасиро ба ҳуҷҷатҳо дар қисми маъмулии саҳифа нигоҳ дошта, диққатро аз пешниҳоди асосӣ намегирад.
+
+Экран ду равандро дастгирӣ мекунад: гузариш ба оғози кор ё идомаи омӯзиши хидмат тавассути пайвандҳои мавзуӣ. Даъвати такрорӣ ба амал ва поёни мураттаби сомона шиносоиро бо LiveChat бо қадами навбатии равшан анҷом медиҳанд.`,
             },
           },
+        ],
+      },
+      {
+        tabName: { ru: "Личный кабинет", en: "Account", tj: "Кабинети шахсӣ" },
+        items: [
+          {
+            slug: "login",
+            title: { ru: "Вход в личный кабинет", en: "Account sign-in", tj: "Воридшавӣ ба кабинети шахсӣ" },
+            imageSrc: "/images/projects/livechat/login-full.webp",
+            BannerSrc: "/images/projects/livechat/login-full.webp",
+            shortInfo: {
+              ru: "Вход по электронной почте и паролю или через Google с защитой reCAPTCHA",
+              en: "Sign in with email and password or Google with reCAPTCHA protection",
+              tj: "Воридшавӣ бо почтаи электронӣ ва рамз ё тавассути Google бо муҳофизати reCAPTCHA",
+            },
+            fullInfo: {
+              ru: `Архитектура и функциональность страницы входа
+
+Страница авторизации открывает доступ к личному кабинету LiveChat. В центре светлого экрана расположена белая карточка с мягкой тенью. Заголовок «Cabinet Livechat» и пояснение «Войдите в свой аккаунт» обозначают назначение страницы, а свободное пространство вокруг формы помогает сосредоточиться на входе.
+
+1. Вход по электронной почте и паролю
+
+Форма содержит два подписанных поля: электронную почту и пароль. Пример адреса подсказывает формат ввода, а символы пароля скрыты. Зелёная кнопка «Войти» занимает ширину формы и выделяет основное действие пользователя.
+
+2. Авторизация через Google
+
+Под разделителем «или» находится кнопка «Войти через Google» с цветным логотипом сервиса. Она предлагает использовать учётную запись Google как альтернативный способ входа. Контурное оформление визуально отделяет этот вариант от основной кнопки формы.
+
+3. Регистрация и выбор языка
+
+Внизу карточки размещена подсказка «Нет аккаунта?» со ссылкой «Зарегистрироваться». Новый пользователь может перейти к созданию аккаунта прямо со страницы входа. Переключатель в правом верхнем углу отвечает за выбор языка; на снимке выбран русский.
+
+4. Защита от автоматизированных обращений
+
+В правом нижнем углу страницы отображается значок Google reCAPTCHA. Этот элемент обозначает использование защиты от автоматизированных обращений. Он размещён отдельно от карточки, сохраняя компактность формы и доступность обоих способов авторизации.
+
+Страница объединяет вход через форму, авторизацию Google и переход к регистрации. Последовательное расположение элементов позволяет быстро выбрать подходящий способ доступа к кабинету.`,
+              en: `Architecture and functionality of the sign-in page
+
+The sign-in page provides access to the LiveChat account. A white card with a soft shadow sits in the centre of a light screen. The “Cabinet Livechat” heading and “Sign in to your account” subtitle explain its purpose, while the surrounding space focuses attention on the form.
+
+1. Email and password sign-in
+
+The form contains two labelled fields for email and password. An example address indicates the expected input format, while password characters are masked. A green Sign in button spans the form’s width and highlights the primary action.
+
+2. Google authentication
+
+A Sign in with Google button with the service’s coloured logo appears beneath an “or” divider. It offers a Google account as an alternative sign-in method. Its outlined styling visually separates this option from the form’s primary button.
+
+3. Registration and language selection
+
+The bottom of the card asks “Don’t have an account?” and provides a Register link. New users can proceed to account creation directly from the sign-in page. A selector in the upper-right corner offers language selection; Russian is selected in the screenshot.
+
+4. Protection against automated requests
+
+A Google reCAPTCHA badge appears in the lower-right corner of the page, indicating the use of protection against automated requests. It sits outside the card, keeping the form compact and both authentication methods accessible.
+
+The page brings together form-based sign-in, Google authentication and a registration link. The sequence of elements helps users quickly choose their preferred route into the account.`,
+              tj: `Сохтор ва вазифаҳои саҳифаи воридшавӣ
+
+Саҳифаи воридшавӣ дастрасиро ба кабинети шахсии LiveChat пешниҳод мекунад. Дар маркази экрани равшан корти сафед бо сояи мулоим ҷойгир аст. Сарлавҳаи «Cabinet Livechat» ва шарҳи «Ба ҳисоби худ ворид шавед» вазифаи саҳифаро мефаҳмонанд. Фазои холии атроф диққатро ба шакл равона мекунад.
+
+1. Воридшавӣ бо почтаи электронӣ ва рамз
+
+Шакл ду майдони номгузоришуда барои почтаи электронӣ ва рамз дорад. Намунаи суроға формати воридкуниро нишон медиҳад ва аломатҳои рамз пинҳон мебошанд. Тугмаи сабзи «Ворид шудан» тамоми паҳнои шаклро гирифта, амали асосиро ҷудо мекунад.
+
+2. Воридшавӣ тавассути Google
+
+Дар зери ҷудокунандаи «ё» тугмаи «Ворид шудан тавассути Google» бо нишони рангаи хизматрасонӣ ҷойгир аст. Он истифодаи ҳисоби Google-ро ҳамчун роҳи дигари воридшавӣ пешниҳод мекунад. Чорчӯбаи тугма ин интихобро аз тугмаи асосии шакл ҷудо месозад.
+
+3. Сабти ном ва интихоби забон
+
+Дар поёни корт саволи «Ҳисоб надоред?» ва пайванди «Сабти ном» мавҷуданд. Корбари нав метавонад бевосита аз саҳифаи воридшавӣ ба сохтани ҳисоб гузарад. Интихобкунандаи кунҷи болоии рост барои интихоби забон пешбинӣ шудааст; дар тасвир забони русӣ интихоб шудааст.
+
+4. Муҳофизат аз муроҷиатҳои худкор
+
+Дар кунҷи поёнии рости саҳифа нишонаи Google reCAPTCHA намоён аст. Он истифодаи муҳофизат аз муроҷиатҳои худкорро нишон медиҳад. Нишона берун аз корт ҷойгир шуда, шаклро паймон ва ҳар ду роҳи воридшавиро дастрас нигоҳ медорад.
+
+Саҳифа воридшавӣ тавассути шакл, истифодаи Google ва гузариш ба сабти номро муттаҳид мекунад. Ҷойгиршавии пайдарпайи унсурҳо ба корбар барои интихоби роҳи мувофиқи дастрасӣ ба кабинет кумак мерасонад.`,
+            },
+          },
+          {
+            slug: "register",
+            title: { ru: "Регистрация аккаунта", en: "Account registration", tj: "Сабти номи ҳисоб" },
+            imageSrc: "/images/projects/livechat/register-full.webp",
+            BannerSrc: "/images/projects/livechat/register-full.webp",
+            shortInfo: {
+              ru: "Создание аккаунта через форму или Google с защитой reCAPTCHA",
+              en: "Account creation through a form or Google with reCAPTCHA protection",
+              tj: "Сохтани ҳисоб тавассути шакл ё Google бо муҳофизати reCAPTCHA",
+            },
+            fullInfo: {
+              ru: `Архитектура и функциональность страницы регистрации
+
+Страница «Создать аккаунт» представляет начало работы с личным кабинетом LiveChat. Белая карточка с мягкой тенью расположена в центре светлого экрана. Заголовок и пояснение «Зарегистрируйтесь, чтобы начать» задают назначение формы, а свободное пространство вокруг неё удерживает внимание на создании аккаунта.
+
+1. Основная форма регистрации
+
+Четыре подписанных поля последовательно запрашивают полное имя, электронную почту, пароль и подтверждение пароля. Примеры в полях подсказывают ожидаемый формат данных. Повторный ввод пароля позволяет пользователю подтвердить выбранную комбинацию перед отправкой формы. Зелёная кнопка «Зарегистрироваться» выделяет основное действие.
+
+2. Регистрация через Google
+
+Под разделителем «или» расположена отдельная кнопка «Зарегистрироваться через Google» с узнаваемым логотипом. Она предлагает альтернативный путь создания аккаунта с использованием учётной записи Google. Визуальное разделение помогает выбрать способ регистрации до заполнения формы.
+
+3. Переход ко входу и выбор языка
+
+Внизу карточки находится текст «Уже есть аккаунт?» со ссылкой «Войти». Он помогает существующим пользователям перейти к авторизации. В правом верхнем углу страницы расположен переключатель языка, на снимке выбран русский.
+
+4. Защита формы и завершение сценария
+
+В правом нижнем углу виден значок Google reCAPTCHA — средства защиты от автоматизированных обращений. Пользователь заполняет форму и нажимает основную кнопку либо выбирает Google. Страница объединяет оба пути регистрации и возврат ко входу в одном интерфейсе.
+
+Такая композиция делает начало работы понятным: поля собраны в последовательную форму, альтернативная авторизация отделена от неё, а доступ к существующему аккаунту остаётся рядом.`,
+              en: `Architecture and functionality of the registration page
+
+The Create account page introduces the LiveChat account journey. A white card with a soft shadow sits in the centre of a light screen. Its heading and “Register to get started” subtitle explain the form’s purpose, while surrounding space focuses attention on account creation.
+
+1. Main registration form
+
+Four labelled fields request a full name, email, password and password confirmation in sequence. Examples indicate the expected input format. Repeating the password lets users confirm their chosen combination before submitting the form. A green Register button highlights the primary action.
+
+2. Google registration
+
+A separate Register with Google button with the recognisable logo appears beneath an “or” divider. It offers an alternative account creation route using a Google account. The visual separation helps visitors choose a registration method before completing the form.
+
+3. Sign-in link and language selection
+
+The bottom of the card asks “Already have an account?” and provides a Sign in link for existing users. A language selector appears in the upper-right corner of the page, with Russian selected in the screenshot.
+
+4. Form protection and user journey
+
+A Google reCAPTCHA badge is visible in the lower-right corner, indicating protection against automated submissions. Users complete the form and select the primary button or choose Google. Both registration routes and the return to sign-in are brought together in one interface.
+
+This composition makes getting started clear: fields follow a sequence, the alternative authentication method is visually separated and access to an existing account remains nearby.`,
+              tj: `Сохтор ва вазифаҳои саҳифаи сабти ном
+
+Саҳифаи «Сохтани ҳисоб» оғози кор бо кабинети шахсии LiveChat-ро муаррифӣ мекунад. Корти сафед бо сояи мулоим дар маркази экрани равшан ҷойгир аст. Сарлавҳа ва шарҳи «Барои оғоз сабти ном кунед» вазифаи шаклро муайян мекунанд ва фазои холии атроф диққатро ба сохтани ҳисоб равона месозад.
+
+1. Шакли асосии сабти ном
+
+Чор майдони номгузоришуда пайдарпай номи пурра, почтаи электронӣ, рамз ва тасдиқи рамзро мепурсанд. Намунаҳои майдонҳо формати маълумотро нишон медиҳанд. Воридкунии такрории рамз ба корбар имкон медиҳад, ки онро пеш аз ирсоли шакл тасдиқ кунад. Тугмаи сабзи «Сабти ном» амали асосиро ҷудо мекунад.
+
+2. Сабти ном тавассути Google
+
+Дар зери ҷудокунандаи «ё» тугмаи алоҳидаи «Сабти ном тавассути Google» бо нишони шинохташаванда ҷойгир аст. Он роҳи дигари сохтани ҳисобро бо истифодаи ҳисоби Google пешниҳод мекунад. Ҷудокунии визуалӣ барои интихоби роҳи сабти ном пеш аз пур кардани шакл кумак мекунад.
+
+3. Гузариш ба воридшавӣ ва интихоби забон
+
+Дар поёни корт саволи «Аллакай ҳисоб доред?» ва пайванди «Ворид шудан» барои корбарони мавҷуда ҷойгиранд. Дар кунҷи болоии рости саҳифа интихобкунандаи забон мавҷуд аст; дар тасвир забони русӣ интихоб шудааст.
+
+4. Муҳофизати шакл ва раванди истифода
+
+Дар кунҷи поёнии рост нишонаи Google reCAPTCHA дида мешавад, ки ба муҳофизат аз муроҷиатҳои худкор ишора мекунад. Корбар шаклро пур карда, тугмаи асосиро пахш мекунад ё Google-ро интихоб менамояд. Ҳар ду роҳи сабти ном ва бозгашт ба воридшавӣ дар як интерфейс муттаҳид шудаанд.
+
+Ин тарҳ оғози корро фаҳмо мекунад: майдонҳо пайдарпай ҷойгиранд, роҳи дигари воридшавӣ аз онҳо ҷудо аст ва дастрасӣ ба ҳисоби мавҷуда дар наздикӣ мемонад.`,
+            },
+          },
+          {
+            slug: "register-filled",
+            title: { ru: "Заполненная форма регистрации", en: "Completed registration form", tj: "Шакли пуршудаи сабти ном" },
+            imageSrc: "/images/projects/livechat/register-filled-full.webp",
+            BannerSrc: "/images/projects/livechat/register-filled-full.webp",
+            shortInfo: {
+              ru: "Пример заполнения данных перед регистрацией аккаунта LiveChat",
+              en: "Example of entered details before registering a LiveChat account",
+              tj: "Намунаи маълумоти воридшуда пеш аз сабти ҳисоби LiveChat",
+            },
+            fullInfo: {
+              ru: `Архитектура и функциональность заполненной формы регистрации
+
+Экран демонстрирует страницу «Создать аккаунт» после ввода данных и до отправки формы. Белая карточка с мягкой тенью расположена в центре светлого фона. Сохранённая структура страницы позволяет увидеть, как выглядит регистрация в процессе заполнения.
+
+1. Данные пользователя
+
+В полях полного имени и электронной почты указаны тестовые значения. Подписи остаются над полями, поэтому назначение каждого значения понятно и после ввода. Этот пример показывает состояние формы с заполненными данными, а не результат создания аккаунта.
+
+2. Пароль и подтверждение
+
+Оба поля пароля заполнены, при этом символы скрыты точками. Поле основного пароля выделено светло-голубым фоном. Отдельное подтверждение позволяет повторно ввести выбранную комбинацию; результат проверки совпадения на этом экране не показан.
+
+3. Отправка формы и Google
+
+Зелёная кнопка «Зарегистрироваться» расположена под полями и выделяет следующий шаг. Ниже разделитель «или» отделяет кнопку регистрации через Google. Пользователю доступны основной сценарий с заполнением формы и альтернативный способ с учётной записью Google.
+
+4. Дополнительные элементы
+
+Внизу карточки находится ссылка «Войти» для существующих пользователей. В правом верхнем углу страницы расположен выбор языка, а в нижнем — значок Google reCAPTCHA. Эти элементы дополняют форму переходом к авторизации, выбором языка и обозначением защиты от автоматизированных обращений.
+
+Снимок раскрывает промежуточное состояние регистрации: данные введены, пароли скрыты, а действие отправки остаётся хорошо заметным. Ошибки или подтверждение успешной регистрации на экране отсутствуют.`,
+              en: `Architecture and functionality of the completed registration form
+
+This screen shows the Create account page after details have been entered and before submission. A white card with a soft shadow sits in the centre of a light background. The familiar layout illustrates registration while the form is being completed.
+
+1. User details
+
+The full name and email fields contain test values. Labels remain above the fields, keeping each value’s purpose clear after entry. This example shows a populated form rather than the result of account creation.
+
+2. Password and confirmation
+
+Both password fields are populated, with characters masked by dots. The main password field has a light blue background. A separate confirmation field allows the chosen password to be entered again; this screen does not show the outcome of a match check.
+
+3. Form submission and Google
+
+The green Register button below the fields highlights the next step. An “or” divider separates the Google registration button beneath it. Users can follow the main form-based journey or choose the alternative Google account method.
+
+4. Supporting elements
+
+A Sign in link at the bottom of the card serves existing users. Language selection appears in the upper-right corner of the page, with a Google reCAPTCHA badge below. These elements provide access to sign-in, language choice and an indication of protection against automated requests.
+
+The screenshot presents an intermediate registration state: details are entered, passwords are masked and the submission action remains prominent. No errors or successful registration confirmation are displayed.`,
+              tj: `Сохтор ва вазифаҳои шакли пуршудаи сабти ном
+
+Экран саҳифаи «Сохтани ҳисоб»-ро баъди ворид кардани маълумот ва пеш аз ирсоли шакл нишон медиҳад. Корти сафед бо сояи мулоим дар маркази заминаи равшан ҷойгир аст. Сохтори шиноси саҳифа намуди сабти номро дар раванди пуркунӣ нишон медиҳад.
+
+1. Маълумоти корбар
+
+Дар майдонҳои номи пурра ва почтаи электронӣ арзишҳои санҷишӣ ворид шудаанд. Номи майдонҳо дар болои онҳо мемонад, бинобар ин мақсади ҳар арзиш баъди воридкунӣ низ фаҳмост. Намуна ҳолати шакли пуршударо нишон медиҳад, на натиҷаи сохтани ҳисобро.
+
+2. Рамз ва тасдиқи он
+
+Ҳар ду майдони рамз пур шудаанд ва аломатҳо бо нуқтаҳо пинҳон мебошанд. Майдони рамзи асосӣ заминаи кабуди равшан дорад. Майдони алоҳидаи тасдиқ барои такроран ворид кардани рамз пешбинӣ шудааст; натиҷаи санҷиши мувофиқат дар экран нишон дода нашудааст.
+
+3. Ирсоли шакл ва Google
+
+Тугмаи сабзи «Сабти ном» дар зери майдонҳо қадами навбатиро ҷудо мекунад. Ҷудокунандаи «ё» тугмаи сабти ном тавассути Google-ро аз шакл ҷудо месозад. Корбар метавонад шаклро истифода барад ё роҳи дигарро бо ҳисоби Google интихоб кунад.
+
+4. Унсурҳои иловагӣ
+
+Дар поёни корт пайванди «Ворид шудан» барои корбарони мавҷуда ҷойгир аст. Дар кунҷи болоии рости саҳифа интихоби забон ва дар поён нишонаи Google reCAPTCHA мавҷуданд. Онҳо гузариш ба воридшавӣ, интихоби забон ва нишонаи муҳофизат аз муроҷиатҳои худкорро пешниҳод мекунанд.
+
+Тасвир ҳолати мобайнии сабти номро нишон медиҳад: маълумот ворид шудааст, рамзҳо пинҳонанд ва тугмаи ирсол намоён мемонад. Дар экран хатогӣ ё тасдиқи анҷоми сабти ном вуҷуд надорад.`,
+            },
+          },
+          {
+            slug: "widget-setup-step-1",
+            title: { ru: "Настройка виджета — шаг 1", en: "Widget setup — step 1", tj: "Танзими виджет — қадами 1" },
+            imageSrc: "/images/projects/livechat/widget-setup-step-1-full.webp",
+            BannerSrc: "/images/projects/livechat/widget-setup-step-1-full.webp",
+            shortInfo: {
+              ru: "Настройка имени, аватара и цветов оператора с предпросмотром виджета",
+              en: "Configure the operator name, avatar and colours with a widget preview",
+              tj: "Танзими ном, аватар ва рангҳои оператор бо пешнамоиши виджет",
+            },
+            fullInfo: {
+              ru: `Архитектура и функциональность первого шага настройки виджета
+
+Экран открывает мастер настройки LiveChat и посвящён внешнему виду оператора в чате. В верхней части расположен заголовок «Настройка виджета» и отметка «Шаг 1 из 5». Основная форма находится в белой карточке, а справа выделена отдельная область предпросмотра.
+
+1. Последовательность настройки
+
+Над карточкой показан индикатор из пяти пронумерованных шагов. Первый шаг выделен зелёным, остальные отображаются нейтральным цветом. Под формой находится кнопка «Далее», обозначающая переход к следующему этапу мастера.
+
+2. Представление оператора
+
+Поля «Имя оператора» и «Должность / Отдел» позволяют задать сведения, которые представляют сотрудника или службу в чате. Примеры «Алексей» и «Служба поддержки» поясняют ожидаемые значения. Между полями расположен блок аватара с круглой заглушкой и кнопкой «Загрузить фото».
+
+3. Цветовое оформление
+
+Для фона и текста предусмотрены отдельные ряды цветовых образцов. Выбранные варианты отмечены обводкой: на снимке это зелёный фон и белый текст. Рядом с готовыми цветами видны кнопки с иконкой палитры, предлагающие дополнительный выбор оттенка.
+
+4. Предпросмотр виджета
+
+Справа показан образец чата с зелёной шапкой, аватаром-заглушкой, названием «Оператор» и подписью «Служба поддержки». В области сообщений указано, что приветственное сообщение отсутствует. Нижняя панель содержит значки вложений, документа, смайлика и кнопку отправки. Предпросмотр позволяет оценить композицию виджета рядом с настройками.
+
+Разделение формы и образца чата помогает сопоставить параметры с внешним видом интерфейса. Индикатор прогресса и кнопка продолжения делают первый этап частью понятной последовательности настройки.`,
+              en: `Architecture and functionality of the first widget setup step
+
+This screen opens the LiveChat setup wizard and focuses on the operator’s appearance in chat. The header reads Widget setup and indicates Step 1 of 5. The main form sits in a white card, with a separate preview area on the right.
+
+1. Setup sequence
+
+A five-step numbered progress indicator appears above the card. Green highlights the first step, while the remaining steps use a neutral colour. A Next button below the form indicates the route to the next stage of the wizard.
+
+2. Operator identity
+
+The Operator name and Position / Department fields define how the employee or service is presented in chat. Example values clarify the expected input. An avatar section between the fields contains a circular placeholder and an Upload photo button.
+
+3. Colour settings
+
+Separate rows of colour swatches are provided for the background and text. Outlines mark the selected options: green for the background and white for the text in this screenshot. Palette buttons beside the preset colours offer an additional colour choice.
+
+4. Widget preview
+
+The right-hand preview shows a chat with a green header, an avatar placeholder, the name Operator and a Support service subtitle. The message area indicates that no welcome message is set. The bottom bar contains attachment, document and emoji icons alongside a send button. The preview lets users assess the widget’s composition beside its settings.
+
+Separating the form from the chat sample helps relate the options to the interface’s appearance. The progress indicator and continuation button place this first stage within a clear setup sequence.`,
+              tj: `Сохтор ва вазифаҳои қадами аввали танзими виджет
+
+Ин экран устоди танзими LiveChat-ро оғоз карда, ба намуди оператор дар чат бахшида шудааст. Дар боло сарлавҳаи «Танзими виджет» ва нишонаи «Қадами 1 аз 5» ҷойгиранд. Шакли асосӣ дар корти сафед аст ва дар тарафи рост қисми алоҳидаи пешнамоиш мавҷуд мебошад.
+
+1. Пайдарпайии танзим
+
+Дар болои корт нишондиҳандаи панҷ қадами рақамдор ҷойгир аст. Қадами аввал бо ранги сабз ҷудо шуда, қадамҳои боқимонда ранги бетараф доранд. Тугмаи «Баъдӣ» дар зери шакл гузариш ба марҳилаи навбатии устодро нишон медиҳад.
+
+2. Маълумоти оператор
+
+Майдонҳои «Номи оператор» ва «Вазифа / Шуъба» барои муаррифии корманд ё хизматрасонӣ дар чат пешбинӣ шудаанд. Намунаҳои майдонҳо маълумоти интизоршавандаро мефаҳмонанд. Байни онҳо блоки аватар бо ҷойнишини доирашакл ва тугмаи «Бор кардани акс» ҷойгир аст.
+
+3. Танзими рангҳо
+
+Барои замина ва матн қаторҳои алоҳидаи намунаҳои ранг мавҷуданд. Интихоби ҷорӣ бо ҳалқа нишон дода шудааст: дар тасвир замина сабз ва матн сафед аст. Дар паҳлуи рангҳои тайёр тугмаҳои дорои нишонаи палитра барои интихоби иловагии ранг дида мешаванд.
+
+4. Пешнамоиши виджет
+
+Дар тарафи рост намунаи чат бо сарлавҳаи сабз, ҷойнишини аватар, номи «Оператор» ва навиштаҷоти «Хадамоти дастгирӣ» нишон дода шудааст. Қисми паёмҳо набудани паёми истиқболиро нишон медиҳад. Панели поёнӣ нишонаҳои замима, ҳуҷҷат, шаклак ва тугмаи ирсолро дар бар мегирад. Пешнамоиш барои арзёбии намуди виджет дар паҳлуи танзимот кумак мекунад.
+
+Ҷудокунии шакл ва намунаи чат имкон медиҳад, ки танзимот бо намуди интерфейс муқоиса карда шаванд. Нишондиҳандаи пешрафт ва тугмаи идома қадами аввалро ба пайдарпайии фаҳмои танзим мепайванданд.`,
+            },
+          },
+          {
+            slug: "widget-setup-step-1-filled",
+            title: { ru: "Настройка виджета — данные оператора", en: "Widget setup — operator details", tj: "Танзими виджет — маълумоти оператор" },
+            imageSrc: "/images/projects/livechat/widget-setup-step-1-filled-full.webp",
+            BannerSrc: "/images/projects/livechat/widget-setup-step-1-filled-full.webp",
+            shortInfo: {
+              ru: "Заполненные данные оператора и загруженный аватар в предпросмотре виджета",
+              en: "Entered operator details and an uploaded avatar shown in the widget preview",
+              tj: "Маълумоти пуршудаи оператор ва аватари боршуда дар пешнамоиши виджет",
+            },
+            fullInfo: {
+              ru: `Архитектура и функциональность настройки данных оператора
+
+Экран показывает заполненное состояние первого шага мастера настройки LiveChat. В карточке слева указаны данные оператора и выбран аватар, а справа представлен виджет с теми же сведениями. Индикатор «Шаг 1 из 5» сохраняет контекст текущего этапа.
+
+1. Имя и отдел оператора
+
+Поле имени содержит значение «Test», а поле «Должность / Отдел» — «test». Поле отдела находится в фокусе и выделено контуром. Оба значения видны в шапке предпросмотра, позволяя сопоставить введённые сведения с представлением оператора в чате.
+
+2. Загруженный аватар
+
+Вместо стандартной заглушки отображается выбранное изображение в круглом формате. Рядом с кнопкой «Загрузить фото» указан размер файла — 17.0 КБ. Этот же аватар показан в шапке виджета, демонстрируя оформление профиля после выбора изображения.
+
+3. Цвета и предпросмотр
+
+Для фона выбран зелёный цвет, для текста — белый; активные образцы отмечены обводкой. Предпросмотр сочетает эти цвета с именем, отделом и аватаром. Область сообщений сообщает об отсутствии приветствия, а нижняя панель содержит значки вложений и кнопку отправки.
+
+4. Продолжение настройки
+
+Над формой остаётся последовательность из пяти шагов с выделенным первым этапом. Зелёная кнопка «Далее» под карточкой обозначает продолжение настройки. На снимке показано состояние до перехода к следующему шагу.
+
+Этот пример раскрывает связь заполненных полей с внешним видом чата. Расположение формы рядом с предпросмотром позволяет оценить представление оператора перед продолжением настройки.`,
+              en: `Architecture and functionality of operator details setup
+
+This screen shows the populated first step of the LiveChat setup wizard. The card on the left contains operator details and a selected avatar, while the widget on the right displays the same information. The Step 1 of 5 indicator preserves the context of the current stage.
+
+1. Operator name and department
+
+The name field contains “Test” and the Position / Department field contains “test”. The department field is focused and outlined. Both values appear in the preview header, allowing users to compare their entries with the operator’s presentation in chat.
+
+2. Uploaded avatar
+
+A selected image in a circular format replaces the default placeholder. A file size of 17.0 KB appears beside the Upload photo control. The same avatar is displayed in the widget header, illustrating the profile’s appearance after an image has been chosen.
+
+3. Colours and preview
+
+Green is selected for the background and white for the text, with outlines marking the active swatches. The preview combines these colours with the name, department and avatar. The message area indicates that no welcome message is set, and the bottom bar contains attachment icons and a send button.
+
+4. Continuing setup
+
+The five-step sequence remains above the form with the first stage highlighted. A green Next button below the card indicates how to continue setup. The screenshot captures the state before moving to the next step.
+
+This example shows how entered fields relate to the chat’s appearance. Placing the form beside the preview helps users assess the operator’s presentation before continuing setup.`,
+              tj: `Сохтор ва вазифаҳои танзими маълумоти оператор
+
+Экран ҳолати пуршудаи қадами аввали устоди танзими LiveChat-ро нишон медиҳад. Корти чап маълумоти оператор ва аватари интихобшударо дар бар мегирад, виджети рост бошад ҳамон маълумотро нишон медиҳад. Нишонаи «Қадами 1 аз 5» марҳилаи ҷориро муайян мекунад.
+
+1. Ном ва шуъбаи оператор
+
+Майдони ном арзиши «Test» ва майдони «Вазифа / Шуъба» арзиши «test»-ро дорад. Майдони шуъба дар фокус буда, бо чорчӯба ҷудо шудааст. Ҳар ду арзиш дар сарлавҳаи пешнамоиш дида мешаванд ва муқоисаи маълумоти воридшуда бо намуди операторро имкон медиҳанд.
+
+2. Аватари боршуда
+
+Ба ҷойи нишонаи пешфарз тасвири интихобшуда дар шакли доира намоён аст. Дар паҳлуи тугмаи «Бор кардани акс» андозаи файл — 17.0 КБ — нишон дода шудааст. Ҳамон аватар дар сарлавҳаи виджет низ ҷойгир аст ва намуди профилро баъди интихоби тасвир нишон медиҳад.
+
+3. Рангҳо ва пешнамоиш
+
+Барои замина ранги сабз ва барои матн ранги сафед интихоб шудаанд; намунаҳои фаъол бо ҳалқа ҷудо шудаанд. Пешнамоиш ин рангҳоро бо ном, шуъба ва аватар муттаҳид мекунад. Қисми паёмҳо набудани паёми истиқболиро нишон медиҳад ва панели поёнӣ нишонаҳои замима ва тугмаи ирсолро дорад.
+
+4. Идомаи танзим
+
+Дар болои шакл пайдарпайии панҷ қадам бо марҳилаи аввали ҷудошуда мемонад. Тугмаи сабзи «Баъдӣ» дар зери корт идомаи танзимро пешниҳод мекунад. Тасвир ҳолатро пеш аз гузариш ба қадами навбатӣ нишон медиҳад.
+
+Ин намуна робитаи майдонҳои пуршуда ва намуди чатро нишон медиҳад. Ҷойгиршавии шакл дар паҳлуи пешнамоиш барои арзёбии муаррифии оператор пеш аз идомаи танзим кумак мекунад.`,
+            },
+          },
+          {
+            "slug": "widget-setup-step-2",
+            "title": {
+              "ru": "Приветственное сообщение",
+              "en": "Welcome message",
+              "tj": "Паёми истиқболӣ"
+            },
+            "imageSrc": "/images/projects/livechat/widget-setup-step-2-full.webp",
+            "BannerSrc": "/images/projects/livechat/widget-setup-step-2-full.webp",
+            "shortInfo": {
+              "ru": "Выбор приветствия с отображением текста в предпросмотре чата",
+              "en": "Choose a greeting and see its text in the chat preview",
+              "tj": "Интихоби паёми истиқболӣ бо намоиши матн дар пешнамоиши чат"
+            },
+            "fullInfo": {
+              "ru": "Архитектура и функциональность выбора приветствия\n\nВторой шаг мастера LiveChat посвящён сообщению, которое посетитель увидит при открытии чата. Форма выбора и предпросмотр расположены рядом, позволяя оценить текст в контексте виджета.\n\n1. Готовые варианты\n\nВ карточке представлены три шаблона: короткое предложение помощи, приглашение написать вопрос и сообщение об акции. Каждый вариант оформлен отдельным блоком с переключателем. Первый шаблон выбран и выделен зелёной рамкой.\n\n2. Собственный вариант\n\nПункт «Другое» предлагает альтернативу готовым текстам. На снимке он не выбран, поэтому поле для собственного сообщения не показано. Все варианты собраны в одном списке для последовательного выбора.\n\n3. Отображение в чате\n\nСправа выбранное приветствие показано в пузыре сообщения с отметкой времени. Над ним сохранены имя, отдел и аватар оператора. Такое представление помогает оценить длину и переносы текста в узком окне чата.\n\n4. Навигация по шагам\n\nПервый этап отмечен галочкой, второй выделен как текущий. Кнопки «Назад» и «Далее» находятся под карточкой и обозначают переходы между этапами.\n\nЭкран связывает выбор приветствия с его представлением посетителю. Готовые шаблоны упрощают настройку первого сообщения.",
+              "en": "Architecture and functionality of greeting selection\n\nThe second LiveChat setup step configures the message visitors see when opening chat. The selection form and preview sit side by side so the text can be assessed within the widget.\n\n1. Preset messages\n\nThree templates offer a brief greeting, an invitation to ask a question and a promotion message. Each occupies a separate block with a radio control. The first template is selected and outlined in green.\n\n2. Custom option\n\nAn Other option provides an alternative to the preset texts. It is not selected in this screenshot, so no custom message field is shown. All choices appear in a single list.\n\n3. Chat presentation\n\nThe selected greeting appears in a message bubble with a timestamp in the preview. The operator name, department and avatar remain above it. This presentation helps assess text length and wrapping in a narrow chat window.\n\n4. Step navigation\n\nThe first stage has a check mark, and the second is highlighted as current. Back and Next controls below the card indicate movement between stages.\n\nThe screen connects greeting selection with the visitor’s view. Preset templates simplify configuration of the first message.",
+              "tj": "Сохтор ва вазифаҳои интихоби паёми истиқболӣ\n\nҚадами дуюми танзими LiveChat ба паёме бахшида шудааст, ки меҳмон ҳангоми кушодани чат мебинад. Шакли интихоб ва пешнамоиш дар паҳлуи ҳам ҷойгиранд.\n\n1. Матнҳои тайёр\n\nСе намуна пешниҳод шудаанд: пешниҳоди кӯтоҳи кумак, даъват ба навиштани савол ва паём дар бораи аксия. Ҳар вариант блоки алоҳида бо интихобкунанда дорад. Намунаи аввал интихоб шуда, бо чорчӯбаи сабз ҷудо шудааст.\n\n2. Варианти дигар\n\nБанди «Дигар» роҳи алтернативиро ба матнҳои тайёр пешниҳод мекунад. Дар тасвир он интихоб нашудааст ва майдони матни шахсӣ нишон дода намешавад. Ҳамаи интихобҳо дар як рӯйхат ҷамъ шудаанд.\n\n3. Намоиш дар чат\n\nПаёми интихобшуда дар пешнамоиш бо вақти ирсол дида мешавад. Ном, шуъба ва аватари оператор дар боло мемонанд. Ин намоиш барои арзёбии дарозӣ ва тақсимшавии матн дар равзанаи чат кумак мекунад.\n\n4. Гузариш байни қадамҳо\n\nҚадами аввал бо аломати иҷро ва дуюм ҳамчун қадами ҷорӣ нишон дода шудааст. Тугмаҳои «Қафо» ва «Баъдӣ» дар зери корт ҷойгиранд.\n\nЭкран интихоби паёмро бо намуди он барои меҳмон мепайвандад. Намунаҳои тайёр танзими паёми аввалро осон мекунанд."
+            }
+          },
+          {
+            "slug": "widget-setup-step-3",
+            "title": {
+              "ru": "Информация об аккаунте",
+              "en": "Account information",
+              "tj": "Маълумоти ҳисоб"
+            },
+            "imageSrc": "/images/projects/livechat/widget-setup-step-3-full.webp",
+            "BannerSrc": "/images/projects/livechat/widget-setup-step-3-full.webp",
+            "shortInfo": {
+              "ru": "Указание адреса сайта и контактного телефона на третьем шаге настройки",
+              "en": "Enter the website address and contact phone at setup step three",
+              "tj": "Ворид кардани суроғаи сайт ва телефони тамос дар қадами сеюм"
+            },
+            "fullInfo": {
+              "ru": "Архитектура и функциональность информации об аккаунте\n\nТретий шаг мастера собирает основные сведения о бизнесе. Белая карточка содержит заголовок «Информация об аккаунте», короткое пояснение и два поля.\n\n1. Адрес сайта\n\nПоле «URL сайта» содержит адрес с протоколом HTTPS. Подпись над полем сохраняет назначение данных после заполнения. На снимке используется тестовый адрес.\n\n2. Контактный телефон\n\nНиже расположен номер телефона с международным кодом. Поля сайта и телефона образуют компактную форму без дополнительных разделов. Результат проверки или сохранения данных на экране не показан.\n\n3. Сохранение контекста виджета\n\nСправа остаётся предпросмотр с ранее заданным аватаром, именем, отделом и приветствием. Сведения о бизнесе вводятся рядом с уже оформленным чатом.\n\n4. Продолжение мастера\n\nПервые два шага отмечены как пройденные, третий выделен зелёным контуром. Под формой доступны «Назад» и «Далее».\n\nЭкран выделяет сбор контактных сведений в отдельный короткий этап. Предпросмотр и индикатор прогресса сохраняют связь с общей настройкой виджета.",
+              "en": "Architecture and functionality of account information\n\nThe third wizard step collects basic business details. A white card contains an Account information heading, a short explanation and two fields.\n\n1. Website address\n\nThe Website URL field contains an address using HTTPS. Its label remains above the entered value. The screenshot uses a test address.\n\n2. Contact phone\n\nA phone number with an international prefix appears below. The website and phone fields form a compact form without additional sections. No validation or save result is displayed.\n\n3. Widget context\n\nThe preview on the right retains the previously configured avatar, name, department and greeting. Business details are entered beside the configured chat.\n\n4. Wizard navigation\n\nThe first two steps are marked complete, while the third has a green outline. Back and Next controls appear below the form.\n\nThis screen gives contact details their own brief stage. The preview and progress indicator maintain the connection to the wider widget setup.",
+              "tj": "Сохтор ва вазифаҳои маълумоти ҳисоб\n\nҚадами сеюми устод маълумоти асосии тиҷоратро ҷамъ мекунад. Корти сафед сарлавҳаи «Маълумоти ҳисоб», шарҳи кӯтоҳ ва ду майдон дорад.\n\n1. Суроғаи сайт\n\nМайдони «URL-и сайт» суроғаеро бо HTTPS дар бар мегирад. Номи майдон дар болои арзиш мемонад. Дар тасвир суроғаи санҷишӣ истифода шудааст.\n\n2. Телефони тамос\n\nДар поён рақами телефон бо рамзи байналмилалӣ ҷойгир аст. Майдонҳои сайт ва телефон шакли паймонро ташкил медиҳанд. Натиҷаи санҷиш ё сабти маълумот нишон дода нашудааст.\n\n3. Пешнамоиши виджет\n\nДар тарафи рост аватар, ном, шуъба ва паёми қаблан интихобшуда нигоҳ дошта шудаанд. Маълумоти тиҷорат дар паҳлуи чати танзимшуда ворид мешавад.\n\n4. Идомаи устод\n\nДу қадами аввал ҳамчун иҷрошуда нишон дода шудаанд ва қадами сеюм ҳалқаи сабз дорад. Дар зери шакл тугмаҳои «Қафо» ва «Баъдӣ» ҷойгиранд.\n\nЭкран маълумоти тамосро ба марҳилаи кӯтоҳи алоҳида ҷудо мекунад. Пешнамоиш ва нишондиҳандаи пешрафт робитаро бо танзими умумии виджет нигоҳ медоранд."
+            }
+          },
+          {
+            "slug": "widget-setup-step-4",
+            "title": {
+              "ru": "Цель использования",
+              "en": "Purpose of use",
+              "tj": "Мақсади истифода"
+            },
+            "imageSrc": "/images/projects/livechat/widget-setup-step-4-full.webp",
+            "BannerSrc": "/images/projects/livechat/widget-setup-step-4-full.webp",
+            "shortInfo": {
+              "ru": "Выбор основной задачи бизнеса перед завершением настройки",
+              "en": "Choose the main business objective before completing setup",
+              "tj": "Интихоби вазифаи асосии тиҷорат пеш аз анҷоми танзим"
+            },
+            "fullInfo": {
+              "ru": "Архитектура и функциональность выбора цели использования\n\nЧетвёртый шаг предлагает выбрать основную задачу, которую пользователь хочет решить с LiveChat. В карточке расположены три варианта с краткими пояснениями.\n\n1. Привлечение лидов\n\nПервый вариант посвящён превращению посетителей сайта в потенциальных клиентов. На снимке его карточка выделена зелёной рамкой.\n\n2. Продажи и клиентский сервис\n\nДва других варианта описывают увеличение продаж и улучшение клиентского сервиса. Пояснения связывают их с отслеживанием сделок, общением и ответами на вопросы клиентов.\n\n3. Предпросмотр чата\n\nСправа сохраняется настроенный виджет с данными оператора и приветствием. Экран показывает выбор цели рядом с текущим оформлением; изменения поведения сервиса по выбранной цели здесь не демонстрируются.\n\n4. Завершение этапа\n\nИндикатор отмечает первые три шага как пройденные и выделяет четвёртый. Под карточкой находятся «Назад» и зелёная кнопка «Завершить».\n\nЭкран помогает обозначить приоритет использования продукта. Краткие пояснения позволяют сравнить задачи перед завершением настройки.",
+              "en": "Architecture and functionality of purpose selection\n\nThe fourth step asks users to choose the main task they want to address with LiveChat. Three options with brief explanations appear in the card.\n\n1. Lead generation\n\nThe first option focuses on turning website visitors into prospective customers. Its card has a green outline in the screenshot.\n\n2. Sales and customer service\n\nThe other two options describe increasing sales and improving customer service. Their explanations refer to tracking deals, communicating and answering customer questions.\n\n3. Chat preview\n\nThe configured widget remains on the right with operator details and the greeting. The screen presents the chosen purpose beside the current design; it does not demonstrate changes to service behaviour based on that choice.\n\n4. Completing the stage\n\nThe indicator marks the first three steps complete and highlights the fourth. Back and a green Finish button appear below the card.\n\nThe screen helps identify the intended product priority. Brief explanations make the objectives easy to compare before completing setup.",
+              "tj": "Сохтор ва вазифаҳои интихоби мақсад\n\nҚадами чорум интихоби вазифаи асосиро барои истифодаи LiveChat пешниҳод мекунад. Дар корт се вариант бо шарҳҳои кӯтоҳ ҷойгир аст.\n\n1. Ҷалби муштариёни эҳтимолӣ\n\nВарианти аввал ба табдил додани меҳмонони сайт ба муштариёни эҳтимолӣ бахшида шудааст. Дар тасвир ин корт бо чорчӯбаи сабз ҷудо шудааст.\n\n2. Фурӯш ва хизматрасонӣ\n\nДу варианти дигар афзоиши фурӯш ва беҳтар кардани хизматрасонӣ ба муштариёнро тавсиф мекунанд. Шарҳҳо пайгирии муомилаҳо, муошират ва ҷавоб ба саволҳоро зикр мекунанд.\n\n3. Пешнамоиши чат\n\nВиджети танзимшуда бо маълумоти оператор ва паёми истиқболӣ дар рост мемонад. Экран мақсадро дар паҳлуи тарҳи ҷорӣ нишон медиҳад; тағйири рафтори хизматрасонӣ аз рӯйи интихоб дар ин ҷо намоиш дода намешавад.\n\n4. Анҷоми марҳила\n\nСе қадами аввал иҷрошудаанд ва чорум ҳамчун ҷорӣ ҷудо шудааст. Тугмаҳои «Қафо» ва сабзи «Анҷом додан» дар зери корт ҷойгиранд.\n\nЭкран барои муайян кардани афзалияти истифодаи маҳсулот кумак мекунад. Шарҳҳои кӯтоҳ муқоисаи вазифаҳоро пеш аз анҷоми танзим осон мекунанд."
+            }
+          },
+          {
+            "slug": "widget-setup-step-5",
+            "title": {
+              "ru": "Завершение настройки и установка",
+              "en": "Setup completion and installation",
+              "tj": "Анҷоми танзим ва насб"
+            },
+            "imageSrc": "/images/projects/livechat/widget-setup-step-5-full.webp",
+            "BannerSrc": "/images/projects/livechat/widget-setup-step-5-full.webp",
+            "shortInfo": {
+              "ru": "Подтверждение настройки, код установки виджета и переход в кабинет",
+              "en": "Setup confirmation, widget installation code and access to the account",
+              "tj": "Тасдиқи танзим, рамзи насби виджет ва гузариш ба кабинет"
+            },
+            "fullInfo": {
+              "ru": "Архитектура и функциональность завершения настройки\n\nПятый шаг показывает итог мастера: «Всё готово!». Текст сообщает, что аккаунт настроен, и предлагает установить виджет на сайт. Центральная карточка объединяет подтверждение и инструкцию установки.\n\n1. Статус завершения\n\nПервые четыре шага отмечены галочками, пятый выделен как текущий. Иконка над заголовком визуально подчёркивает успешное завершение настройки аккаунта.\n\n2. Код подключения\n\nВ тёмном блоке HTML представлен фрагмент подключения скрипта и кнопка «Копировать». Инструкция предлагает вставить код перед закрывающим тегом head на каждой странице сайта. Часть адреса на снимке скрыта и не раскрывается в описании.\n\n3. Действия после вставки\n\nСледующая подсказка предлагает сохранить страницу и обновить сайт. Она поясняет, что виджет появится автоматически, а первая загрузка скрипта может занять несколько секунд. Это инструкция интерфейса, а не подтверждение фактической установки на сайт.\n\n4. Переход в кабинет\n\nЗелёная кнопка «Перейти в кабинет» расположена под карточкой. Она завершает последовательность мастера и предлагает продолжить работу в основном интерфейсе.\n\nЭкран отделяет готовность аккаунта от установки виджета. Код, пояснения и переход в кабинет собраны в последовательный сценарий завершения.",
+              "en": "Architecture and functionality of setup completion\n\nThe fifth step presents the wizard’s result: All done. The text states that the account is configured and invites users to install the widget on their website. A central card combines confirmation with installation guidance.\n\n1. Completion status\n\nThe first four steps have check marks and the fifth is current. An icon above the heading visually reinforces completion of account setup.\n\n2. Integration code\n\nA dark HTML block contains a script snippet and a Copy button. The instruction asks users to insert the code before the closing head tag on each website page. Part of the address is obscured in the screenshot and is not reproduced here.\n\n3. After inserting the code\n\nThe next instruction asks users to save the page and refresh the website. It explains that the widget will appear automatically and the initial script load may take a few seconds. This is interface guidance, not confirmation of an actual website installation.\n\n4. Account access\n\nA green Go to account button sits below the card. It ends the wizard sequence and offers a route to continue in the main interface.\n\nThe screen separates account readiness from widget installation. Code, guidance and account access form a clear completion sequence.",
+              "tj": "Сохтор ва вазифаҳои анҷоми танзим\n\nҚадами панҷум натиҷаи устодро бо паёми «Ҳама чиз омода аст!» нишон медиҳад. Матн омода будани ҳисобро хабар дода, насби виджетро ба сайт пешниҳод мекунад. Корти марказӣ тасдиқ ва дастури насбро муттаҳид месозад.\n\n1. Ҳолати анҷом\n\nЧор қадами аввал аломати иҷро доранд ва панҷум қадами ҷорӣ аст. Нишонаи болои сарлавҳа анҷоми танзими ҳисобро таъкид мекунад.\n\n2. Рамзи пайвасткунӣ\n\nБлоки торики HTML порчаи рамзи скрипт ва тугмаи «Нусхабардорӣ»-ро дорад. Дастур ҷойгир кардани рамзро пеш аз теги пӯшидаи head дар ҳар саҳифаи сайт пешниҳод мекунад. Қисме аз суроға дар тасвир пинҳон аст ва дар ин тавсиф оварда намешавад.\n\n3. Амалҳо баъди ҷойгиркунӣ\n\nДастури навбатӣ сабт кардани саҳифа ва навсозии сайтро пешниҳод мекунад. Он мефаҳмонад, ки виджет худкор пайдо мешавад ва боркунии аввал метавонад чанд сония давом кунад. Ин дастури интерфейс аст, на тасдиқи насби воқеӣ ба сайт.\n\n4. Гузариш ба кабинет\n\nТугмаи сабзи «Гузариш ба кабинет» дар зери корт ҷойгир аст. Он пайдарпайии устодро анҷом дода, идомаи корро дар интерфейси асосӣ пешниҳод мекунад.\n\nЭкран омодагии ҳисобро аз насби виджет ҷудо мекунад. Рамз, дастур ва гузариш ба кабинет раванди фаҳмои анҷомро ташкил медиҳанд."
+            }
+          },
+          ...livechatAccountScreens,
         ],
       },
     ],
@@ -3854,13 +5564,6 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "telecomm",
-    gallery: [
-      "/images/projects/ttl/gallery-1.png",
-      "/images/projects/ttl/gallery-2.png",
-      "/images/projects/ttl/gallery-3.png",
-      "/images/projects/ttl/gallery-4.png",
-      "/images/projects/ttl/gallery-5.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Веб-сайт", en: "Website", tj: "Веб-сайт" },
@@ -4267,12 +5970,6 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "somon-tv",
-    gallery: [
-      "/images/projects/somontv/gallery-1.png",
-      "/images/projects/somontv/gallery-2.png",
-      "/images/projects/somontv/gallery-3.png",
-      "/images/projects/somontv/gallery-4.png",
-    ],
     projectComponents: [
       {
         tabName: {
@@ -4370,118 +6067,14 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
     slug: "zudsms",
-    gallery: [
-      "/images/projects/zudSMS/gallery-1.png",
-      "/images/projects/zudSMS/gallery-2.png",
-      "/images/projects/zudSMS/gallery-3.png",
-      "/images/projects/zudSMS/gallery-4.png",
-      "/images/projects/zudSMS/gallery-5.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
-        items: [
-          {
-            slug: "hero-use-cases",
-            title: {
-              ru: "Первый экран и сферы применения",
-              en: "Hero and Use Cases",
-              tj: "Экрани аввал ва соҳаҳои истифода",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-1.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-1.png",
-            shortInfo: {
-              ru: "Оффер, показатели и отрасли применения",
-              en: "Offer, metrics and applicable industries",
-              tj: "Пешниҳод, нишондиҳандаҳо ва соҳаҳо",
-            },
-            fullInfo: {
-              ru: "Первый экран лендинга ЗудСМС представляет сервис массовой SMS-рассылки. В шапке размещены логотип с подписью «SMS рассылка», меню разделов («Главная», «Преимущества», «Пакеты», «Контакты», «API Документация»), переключатель языков RU/EN/TJ и кнопка «Личный кабинет». На зелёном баннере расположены название сервиса, заголовок «Рассылка SMS в Таджикистане для бизнеса» и пояснение о рассылке на номера всех мобильных операторов. Под текстом вынесены три показателя: доставляемость 98%, более 1000 клиентов и поддержка 24/7. Ниже, в блоке «Сферы применения», размещена сетка из восьми карточек с иконками отраслей: страховые компании, интернет-магазины, такси и доставка, медицинские центры, банки и платёжные системы, образовательные учреждения, туристические агентства, салоны и рестораны.\n\nПользовательский сценарий: посетитель считывает суть услуги и ключевые показатели, а затем в блоке отраслей находит свою сферу и убеждается, что сервис подходит под его задачи.\n\nЦенность для бизнеса: сочетание оффера, доказательных цифр и перечня отраслей быстро формирует доверие и показывает применимость услуги. Карточки сфер применения помогают посетителю из любой отрасли соотнести сервис со своими сценариями коммуникации с клиентами.",
-              en: "The ZudSMS landing hero presents the mass SMS distribution service. The header contains the logo with the caption “SMS distribution”, a section menu (Home, Advantages, Packages, Contacts, API Documentation), an RU/EN/TJ language switcher and a Personal Account button. The green banner holds the service name, the headline “SMS distribution in Tajikistan for business” and a note about sending to the numbers of all mobile operators. Below the text are three metrics: 98% deliverability, over 1000 clients and 24/7 support. Further down, the Use Cases block contains a grid of eight cards with industry icons: insurance companies, online stores, taxi and delivery, medical centres, banks and payment systems, educational institutions, travel agencies, and salons and restaurants.\n\nUser journey: the visitor grasps the essence of the service and its key metrics, then finds their own field among the industry cards and confirms the service suits their tasks.\n\nBusiness value: combining an offer, evidence figures and a list of industries quickly builds trust and shows the service’s applicability. Use-case cards help a visitor from any industry relate the service to their own customer-communication scenarios.",
-              tj: "Экрани аввали лендинги ЗудСМС хизмати паҳнкунии оммавии SMS-ро пешниҳод мекунад. Дар қисми боло нишон бо навишти «SMS рассылка», менюи бахшҳо («Асосӣ», «Бартариҳо», «Пакетҳо», «Тамосҳо», «Ҳуҷҷатнигории API»), интихобкунандаи забонҳои RU/EN/TJ ва тугмаи «Кабинети шахсӣ» ҷойгиранд. Дар баннери сабз номи хизмат, сарлавҳаи «Паҳнкунии SMS дар Тоҷикистон барои тиҷорат» ва тавзеҳ дар бораи паҳнкунӣ ба рақамҳои ҳамаи операторони мобилӣ ҷой доранд. Зери матн се нишондиҳанда оварда шудааст: расонидан 98%, беш аз 1000 муштарӣ ва дастгирии 24/7. Дар поён, дар блоки «Соҳаҳои истифода», шабакаи ҳашт корт бо нишонаҳои соҳаҳо ҷойгир аст: ширкатҳои суғуртавӣ, мағозаҳои интернетӣ, такси ва расонидан, марказҳои тиббӣ, бонкҳо ва системаҳои пардохт, муассисаҳои таълимӣ, агентиҳои сайёҳӣ, салонҳо ва тарабхонаҳо.\n\nРаванди истифода: корбар моҳияти хизмат ва нишондиҳандаҳои асосиро дарк мекунад ва сипас дар блоки соҳаҳо соҳаи худро меёбад ва боварӣ ҳосил мекунад, ки хизмат ба вазифаҳои ӯ мувофиқ аст.\n\nАҳамият барои тиҷорат: якҷоякунии пешниҳод, рақамҳои исботӣ ва рӯйхати соҳаҳо зуд эътимодро ташкил медиҳад ва мувофиқати хизматро нишон медиҳад. Кортҳои соҳаҳои истифода ба корбар аз ҳар соҳа кумак мекунанд, ки хизматро бо сенарияҳои муоширати худ бо мизоҷон мувофиқ созад.",
-            },
-          },
-          {
-            slug: "demo",
-            title: {
-              ru: "Демо-отправка SMS",
-              en: "SMS Demo",
-              tj: "Демо-ирсоли SMS",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-5.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-5.png",
-            shortInfo: {
-              ru: "Интерактивный предпросмотр сообщения",
-              en: "Interactive message preview",
-              tj: "Пешнамоиши интерактивии паём",
-            },
-            fullInfo: {
-              ru: "Блок «Живой демо-пример» показывает работу сервиса в интерактивном виде. Слева размещены метка «Живой демо-пример», заголовок «SMS-рассылка для вашего бизнеса» и пояснение о создании персонализированных рассылок с мгновенной доставкой. Под текстом расположена карточка предпросмотра с полями «Имя отправителя» (заполнено значением ZudSMS), «Текст сообщения» со счётчиком символов 0/160 и кнопкой «Отправить». Справа изображён макет телефона с чатом ZudSMS, где показаны примеры сообщений: скидка, код подтверждения, напоминание о записи и статус заказа. Ниже начинается блок «Тарифные пакеты».\n\nПользовательский сценарий: посетитель вводит имя отправителя и текст, видит ограничение по длине сообщения и наглядно представляет, как рассылка будет выглядеть на телефоне получателя.\n\nЦенность для бизнеса: интерактивный демонстрационный блок позволяет оценить сервис до регистрации и снижает барьер для пробного использования. Предпросмотр с примерами реальных сценариев (коды, напоминания, статусы) помогает посетителю понять практическую пользу рассылки.",
-              en: "The “Live demo example” block shows how the service works interactively. On the left are the “Live demo example” label, the headline “SMS distribution for your business” and a note about creating personalised campaigns with instant delivery. Below the text is a preview card with the fields “Sender name” (filled with ZudSMS), “Message text” with a 0/160 character counter and a Send button. On the right is a phone mockup with a ZudSMS chat showing sample messages: a discount, a confirmation code, an appointment reminder and an order status. Below, the Pricing Packages block begins.\n\nUser journey: the visitor enters a sender name and text, sees the message length limit and gets a clear idea of how the campaign will look on the recipient’s phone.\n\nBusiness value: an interactive demo block lets the service be assessed before registration and lowers the barrier to trial use. A preview with real-scenario examples (codes, reminders, statuses) helps the visitor understand the practical benefit of the service.",
-              tj: "Блоки «Намунаи зиндаи демо» кори хизматро дар шакли интерактивӣ нишон медиҳад. Дар тарафи чап нишонаи «Намунаи зиндаи демо», сарлавҳаи «Паҳнкунии SMS барои тиҷорати шумо» ва тавзеҳ дар бораи эҷоди паҳнкунии фардикунонидашуда бо расонидани фаврӣ ҷойгиранд. Зери матн корти пешнамоиш бо майдонҳои «Номи фиристанда» (бо ZudSMS пур карда шуда), «Матни паём» бо ҳисобкунаки аломатҳо 0/160 ва тугмаи «Ирсол» ҷой дорад. Дар тарафи рост макети телефон бо чати ZudSMS тасвир шудааст, ки намунаҳои паёмҳо: тахфиф, коди тасдиқ, ёдоварӣ дар бораи навбат ва ҳолати фармоишро нишон медиҳад. Дар поён блоки «Пакетҳои тарифӣ» оғоз меёбад.\n\nРаванди истифода: корбар номи фиристанда ва матнро ворид мекунад, маҳдудияти дарозии паёмро мебинад ва аён тасаввур мекунад, ки паҳнкунӣ дар телефони гиранда чӣ гуна ба назар мерасад.\n\nАҳамият барои тиҷорат: блоки намоишии интерактивӣ имкон медиҳад, ки хизмат пеш аз сабтином арзёбӣ шавад ва монеаро барои истифодаи санҷишӣ кам мекунад. Пешнамоиш бо намунаҳои сенарияҳои воқеӣ (кодҳо, ёдовариҳо, ҳолатҳо) ба корбар кумак мекунад, ки фоидаи амалии паҳнкуниро дарк намояд.",
-            },
-          },
-          {
-            slug: "advantages",
-            title: {
-              ru: "Преимущества",
-              en: "Advantages",
-              tj: "Бартариҳо",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-2.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-2.png",
-            shortInfo: {
-              ru: "Причины выбрать сервис рассылки",
-              en: "Reasons to choose the service",
-              tj: "Сабабҳои интихоби хизмат",
-            },
-            fullInfo: {
-              ru: "Раздел «Наши преимущества» аргументирует выбор сервиса. Над сеткой размещены название бренда, заголовок «Наши преимущества» и подзаголовок о запуске рассылки SMS в Таджикистане. Шесть карточек с иконками раскрывают ключевые доводы: низкая стоимость за 1 SMS (конкурентные цены для эффективного маркетинга), высокая скорость и эффективность (мгновенная доставка с максимальным охватом), отправка всем операторам (поддержка всех мобильных операторов без ограничений), использование своих шаблонов (создание и сохранение персонализированных заготовок), автоматизированная рассылка через API (интеграция с системой клиента) и надёжность и безопасность (защищённая платформа с гарантией конфиденциальности).\n\nПользовательский сценарий: посетитель просматривает карточки преимуществ и выделяет для себя значимые аргументы — например, цену, скорость, охват операторов или API-интеграцию.\n\nЦенность для бизнеса: структурированный перечень преимуществ отвечает на основные критерии выбора SMS-сервиса и снимает возражения. Акцент на цене, охвате и API одновременно закрывает потребности маркетинга и технической интеграции.",
-              en: "The “Our advantages” section justifies choosing the service. Above the grid are the brand name, the headline “Our advantages” and a subheading about launching SMS distribution in Tajikistan. Six icon cards spell out the key arguments: low cost per SMS (competitive prices for effective marketing), high speed and efficiency (instant delivery with maximum reach), sending to all operators (support for all mobile operators without restrictions), using your own templates (creating and saving personalised snippets), automated distribution via API (integration with the client’s system) and reliability and security (a secure platform with a confidentiality guarantee).\n\nUser journey: the visitor reviews the advantage cards and singles out the arguments that matter to them — for example price, speed, operator reach or API integration.\n\nBusiness value: a structured list of advantages addresses the main criteria for choosing an SMS service and removes objections. Emphasising price, reach and API at once covers both marketing needs and technical integration.",
-              tj: "Бахши «Бартариҳои мо» интихоби хизматро асоснок мекунад. Болои шабака номи бренд, сарлавҳаи «Бартариҳои мо» ва зерсарлавҳа дар бораи оғози паҳнкунии SMS дар Тоҷикистон ҷойгиранд. Шаш корт бо нишонаҳо далелҳои асосиро ошкор мекунанд: арзиши пасти 1 SMS (нархҳои рақобатпазир барои маркетинги самаранок), суръати баланд ва самаранокӣ (расонидани фаврӣ бо фарогирии ҳадди аксар), ирсол ба ҳамаи операторон (дастгирии ҳамаи операторони мобилӣ бе маҳдудият), истифодаи шаблонҳои худӣ (эҷод ва нигоҳдории заготовкаҳои фардикунонидашуда), паҳнкунии худкор тавассути API (интегратсия бо системаи муштарӣ) ва боэътимодӣ ва амният (платформаи ҳифзшуда бо кафолати махфият).\n\nРаванди истифода: корбар кортҳои бартариҳоро аз назар мегузаронад ва далелҳои муҳимро барои худ ҷудо мекунад — масалан нарх, суръат, фарогирии операторон ё интегратсияи API.\n\nАҳамият барои тиҷорат: рӯйхати сохтории бартариҳо ба меъёрҳои асосии интихоби хизмати SMS ҷавоб медиҳад ва эродҳоро бартараф месозад. Таъкид ба нарх, фарогирӣ ва API ҳамзамон ниёзҳои маркетинг ва интегратсияи техникиро мепӯшонад.",
-            },
-          },
-          {
-            slug: "packages",
-            title: {
-              ru: "Тарифные пакеты",
-              en: "Pricing Packages",
-              tj: "Пакетҳои тарифӣ",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-3.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-3.png",
-            shortInfo: {
-              ru: "Линейка пакетов по объёму SMS",
-              en: "Range of packages by SMS volume",
-              tj: "Хатти пакетҳо аз рӯйи ҳаҷми SMS",
-            },
-            fullInfo: {
-              ru: "Раздел «Тарифные пакеты» представляет линейку предложений, отличающихся объёмом сообщений и ценой. Пакеты оформлены цветными карточками с иконкой, названием, количеством SMS, стоимостью в сомони и сроком действия «1 месяц»; каждую карточку завершает кнопка «Выбрать пакет». В линейке представлены «Плюс» (2 000 SMS), «Старт» (5 000 SMS), «Базовый» (10 000 SMS), «Стандарт» (25 000 SMS), «Бизнес» (50 000 SMS) и «Про» (100 000 SMS), а также стартовые варианты. Отдельные пакеты выделены метками «Больше возможностей», «Популярный», «Лучший выбор» и «Самый популярный».\n\nПользовательский сценарий: посетитель сопоставляет объём сообщений и цену, ориентируется на выделенные рекомендованные пакеты и выбирает вариант под планируемый объём рассылок.\n\nЦенность для бизнеса: широкая линейка пакетов охватывает клиентов с разным объёмом рассылок — от первых сообщений до крупных кампаний. Цветовое выделение и метки-рекомендации направляют выбор и помогают клиенту быстрее определиться с подходящим тарифом.",
-              en: "The Pricing Packages section presents a range of offers differing in message volume and price. Packages are laid out as coloured cards with an icon, a name, an SMS count, a price in somoni and a “1 month” validity period; each card ends with a Select package button. The range includes “Plus” (2,000 SMS), “Start” (5,000 SMS), “Basic” (10,000 SMS), “Standard” (25,000 SMS), “Business” (50,000 SMS) and “Pro” (100,000 SMS), as well as starter options. Individual packages are marked with “More features”, “Popular”, “Best choice” and “Most popular” labels.\n\nUser journey: the visitor compares message volume and price, is guided by the highlighted recommended packages and selects an option for their planned distribution volume.\n\nBusiness value: a broad range of packages covers clients with different distribution volumes — from first messages to large campaigns. Colour highlighting and recommendation labels steer the choice and help the client settle on a suitable plan faster.",
-              tj: "Бахши «Пакетҳои тарифӣ» хатти пешниҳодҳоеро пешниҳод мекунад, ки бо ҳаҷми паём ва нарх фарқ мекунанд. Пакетҳо ҳамчун кортҳои рангин бо нишона, ном, шумораи SMS, арзиш бо сомонӣ ва мӯҳлати амали «1 моҳ» таҳия шудаанд; ҳар кортро тугмаи «Интихоби пакет» анҷом медиҳад. Дар хат «Плюс» (2 000 SMS), «Старт» (5 000 SMS), «Базавӣ» (10 000 SMS), «Стандарт» (25 000 SMS), «Бизнес» (50 000 SMS) ва «Про» (100 000 SMS), инчунин вариантҳои ибтидоӣ пешниҳод шудаанд. Пакетҳои алоҳида бо нишонаҳои «Имкониятҳои бештар», «Маъмул», «Интихоби беҳтарин» ва «Маъмултарин» барҷаста шудаанд.\n\nРаванди истифода: корбар ҳаҷми паём ва нархро муқоиса мекунад, ба пакетҳои тавсияшудаи барҷаста нигаронида мешавад ва вариантро барои ҳаҷми банақшагирифтаи паҳнкунӣ интихоб менамояд.\n\nАҳамият барои тиҷорат: хатти васеи пакетҳо муштариёнро бо ҳаҷми гуногуни паҳнкунӣ фаро мегирад — аз паёмҳои аввал то маъракаҳои калон. Барҷастагии рангӣ ва нишонаҳои тавсия интихобро равона мекунанд ва ба муштарӣ кумак менамоянд, ки зудтар тарифи мувофиқро муайян созад.",
-            },
-          },
-          {
-            slug: "contacts-payments",
-            title: {
-              ru: "Контакты и оплата",
-              en: "Contacts and Payment",
-              tj: "Тамосҳо ва пардохт",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-4.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-4.png",
-            shortInfo: {
-              ru: "Форма связи, платёжные системы и подвал",
-              en: "Contact form, payment systems and footer",
-              tj: "Шакли алоқа, системаҳои пардохт ва поён",
-            },
-            fullInfo: {
-              ru: "Завершающий блок объединяет форму связи, доступные способы оплаты и подвал сайта. Слева расположена форма обратной связи с кнопкой «Отправить», справа — реквизиты «ИП Душанбе-Софт» с адресом в Душанбе. Отдельным блоком «Платёжные системы» показаны четыре способа оплаты в виде карточек с логотипами: ALIF (платёжная система), Корти Милли (национальная карта), Душанбе Сити (городская платёжная система) и VISA (международная карта). Ниже размещён баннер LiveChat, а в подвале — логотип с блоком «О компании», колонка «Навигация» (главная, преимущества, пакеты, контакты) и колонка «Контакты» с телефоном, почтой и адресом; в самом низу — строка авторских прав.\n\nПользовательский сценарий: посетитель отправляет обращение через форму, проверяет доступные способы оплаты и находит контактные данные и реквизиты в подвале.\n\nЦенность для бизнеса: явное указание платёжных систем, включая локальные карты и международную VISA, снимает вопрос об удобстве оплаты. Форма связи и подробные реквизиты повышают доверие и упрощают переход от интереса к обращению.",
-              en: "The closing block combines a contact form, available payment methods and the site footer. On the left is a feedback form with a Send button; on the right are the “IE Dushanbe-Soft” details with an address in Dushanbe. A separate “Payment systems” block shows four payment methods as cards with logos: ALIF (payment system), Korti Milli (national card), Dushanbe City (municipal payment system) and VISA (international card). Below is a LiveChat banner, while the footer holds a logo with an “About the company” block, a Navigation column (home, advantages, packages, contacts) and a Contacts column with phone, email and address; a copyright line sits at the very bottom.\n\nUser journey: the visitor sends an enquiry through the form, checks the available payment methods and finds the contact details and company data in the footer.\n\nBusiness value: explicitly listing payment systems, including local cards and international VISA, removes questions about payment convenience. A contact form and detailed company data build trust and ease the move from interest to enquiry.",
-              tj: "Блоки хотимавӣ шакли алоқа, роҳҳои дастраси пардохт ва поёни сомонаро муттаҳид мекунад. Дар тарафи чап шакли алоқаи баръакс бо тугмаи «Ирсол», дар тарафи рост — реквизитҳои «Соҳибкори инфиродии Душанбе-Софт» бо суроға дар Душанбе ҷойгиранд. Дар блоки алоҳидаи «Системаҳои пардохт» чор роҳи пардохт дар шакли кортҳо бо нишонаҳо нишон дода шудаанд: ALIF (системаи пардохт), Корти Миллӣ (корти миллӣ), Душанбе Сити (системаи пардохти шаҳрӣ) ва VISA (корти байналмилалӣ). Дар поён баннери LiveChat ҷойгир аст ва дар поёни сомона — нишон бо блоки «Дар бораи ширкат», сутуни «Навигатсия» (асосӣ, бартариҳо, пакетҳо, тамосҳо) ва сутуни «Тамосҳо» бо телефон, почта ва суроға; дар поёнтарин — сатри ҳуқуқи муаллиф.\n\nРаванди истифода: корбар муроҷиатро тавассути шакл ирсол мекунад, роҳҳои дастраси пардохтро месанҷад ва маълумоти тамос ва реквизитҳоро дар поёни сомона меёбад.\n\nАҳамият барои тиҷорат: нишон додани возеҳи системаҳои пардохт, аз ҷумла кортҳои маҳаллӣ ва VISA-и байналмилалӣ, саволро дар бораи қулаии пардохт бартараф месозад. Шакли алоқа ва реквизитҳои муфассал эътимодро баланд мебардоранд ва гузаришро аз таваҷҷуҳ ба муроҷиат осон мекунанд.",
-            },
-          },
-        ],
+        items: zudsmsLandingScreens,
+      },
+      {
+        tabName: { ru: "Личный кабинет", en: "Personal account", tj: "Кабинети шахсӣ" },
+        items: zudsmsAccountScreens,
       },
     ],
   },
