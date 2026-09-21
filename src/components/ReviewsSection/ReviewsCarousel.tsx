@@ -2,6 +2,18 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+
+const ArrowLeft = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ArrowRight = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 import styles from './ReviewsSection.module.css';
 
 const StarRating = () => (
@@ -59,12 +71,7 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
 
   const maxIndex = Math.max(0, reviews.length - itemsToShow);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex(prev => (prev >= maxIndex ? 0 : prev + 1));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [maxIndex]);
+
 
   // Touch and mouse drag logic
   const [isDragging, setIsDragging] = useState(false);
@@ -152,14 +159,35 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
         </div>
       </div>
 
-      <div className={styles.pagination}>
-        {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
-          <div 
-            key={idx} 
-            className={`${styles.dot} ${idx === activeIndex ? styles.dotActive : ''}`} 
-            onClick={() => setActiveIndex(idx)}
-          />
-        ))}
+      <div className={styles.controlsWrapper}>
+        <div className={styles.pagination}>
+          {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+            <div 
+              key={idx} 
+              className={`${styles.dot} ${idx === activeIndex ? styles.dotActive : ''}`} 
+              onClick={() => setActiveIndex(idx)}
+            />
+          ))}
+        </div>
+        
+        <div className={styles.arrowsContainer}>
+          <button 
+            className={styles.arrowBtn}
+            onClick={() => setActiveIndex(prev => Math.max(0, prev - 1))}
+            disabled={activeIndex === 0}
+            aria-label="Previous review"
+          >
+            <ArrowLeft />
+          </button>
+          <button 
+            className={styles.arrowBtn}
+            onClick={() => setActiveIndex(prev => Math.min(maxIndex, prev + 1))}
+            disabled={activeIndex === maxIndex}
+            aria-label="Next review"
+          >
+            <ArrowRight />
+          </button>
+        </div>
       </div>
     </>
   );

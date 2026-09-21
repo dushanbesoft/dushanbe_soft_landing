@@ -165,8 +165,8 @@
         "description": "Native and cross-platform mobile apps for iOS and Android with elegant UX."
       },
       {
-        "title": "AI Integration",
-        "description": "Artificial intelligence implementation: chatbots, computer vision, NLP and predictive analytics."
+        "title": "Web3 & Blockchain",
+        "description": "Development of Web3 Blockchain projects and Solidity smart contracts. Services such as Bridge, AMM, Liquidity, Swap, Launchpad, wallets, etc."
       },
       {
         "title": "UI/UX Design",
@@ -229,7 +229,6 @@
   "reviews": {
     "subtitle": "Reviews",
     "title": "What they say about us",
-
     "list": [
       {
         "text": "Dushanbe-Soft has established itself as a team that understands the specifics of IT projects and approaches the tasks assigned to it responsibly. We place particular emphasis on efficiency, technical support, and a willingness to find solutions even in challenging situations.",
@@ -491,7 +490,7 @@
     "primaryBtn": "Get a consultation"
   },
   "footer": {
-    "desc": "Tajikistan's leading IT company. Developing digital solutions for business and government since 2015.",
+    "desc": "Tajikistan's leading IT company. Developing digital solutions for business and government since 2017.",
     "col1": "Company",
     "col2": "Services",
     "col3": "Contacts",

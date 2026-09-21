@@ -7,7 +7,7 @@ export default function StatisticsComponent(){
     return(
         <div className={styles.statsBar}>
           <div className={styles.statItem}>
-            <span className={styles.statValue}>2015</span>
+            <span className={styles.statValue}>2017</span>
             <span className={styles.statLabel}>{t('team.stats.founded', 'Год основания')}</span>
           </div>
           <div className={styles.statItem}>
