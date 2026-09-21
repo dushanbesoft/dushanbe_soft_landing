@@ -1,4 +1,7 @@
 import { TranslatedString } from "../utils/translation";
+import { livechatAccountScreens } from "./livechat-account-screens";
+import { zudsmsLandingScreens } from "./zudsms-landing-screens";
+import { zudsmsAccountScreens } from "./zudsms-account-screens";
 
 export interface ProductSiteItem {
   imageSrc: string;
@@ -15,6 +18,7 @@ export interface ProductSiteItem {
       slug: string;
       title: TranslatedString;
       imageSrc: string;
+      imageFit?: "cover" | "contain";
       BannerSrc: string;
       shortInfo: TranslatedString;
       fullInfo: TranslatedString;
@@ -882,13 +886,6 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
     slug: "digital-tajikistan",
-    gallery: [
-      "/images/projects/pic/gallery-1.png",
-      "/images/projects/pic/gallery-2.png",
-      "/images/projects/pic/gallery-3.png",
-      "/images/projects/pic/gallery-4.png",
-      "/images/projects/pic/gallery-5.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Портал", en: "Portal", tj: "Портал" },
@@ -5557,6 +5554,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               "tj": "Сохтор ва вазифаҳои анҷоми танзим\n\nҚадами панҷум натиҷаи устодро бо паёми «Ҳама чиз омода аст!» нишон медиҳад. Матн омода будани ҳисобро хабар дода, насби виджетро ба сайт пешниҳод мекунад. Корти марказӣ тасдиқ ва дастури насбро муттаҳид месозад.\n\n1. Ҳолати анҷом\n\nЧор қадами аввал аломати иҷро доранд ва панҷум қадами ҷорӣ аст. Нишонаи болои сарлавҳа анҷоми танзими ҳисобро таъкид мекунад.\n\n2. Рамзи пайвасткунӣ\n\nБлоки торики HTML порчаи рамзи скрипт ва тугмаи «Нусхабардорӣ»-ро дорад. Дастур ҷойгир кардани рамзро пеш аз теги пӯшидаи head дар ҳар саҳифаи сайт пешниҳод мекунад. Қисме аз суроға дар тасвир пинҳон аст ва дар ин тавсиф оварда намешавад.\n\n3. Амалҳо баъди ҷойгиркунӣ\n\nДастури навбатӣ сабт кардани саҳифа ва навсозии сайтро пешниҳод мекунад. Он мефаҳмонад, ки виджет худкор пайдо мешавад ва боркунии аввал метавонад чанд сония давом кунад. Ин дастури интерфейс аст, на тасдиқи насби воқеӣ ба сайт.\n\n4. Гузариш ба кабинет\n\nТугмаи сабзи «Гузариш ба кабинет» дар зери корт ҷойгир аст. Он пайдарпайии устодро анҷом дода, идомаи корро дар интерфейси асосӣ пешниҳод мекунад.\n\nЭкран омодагии ҳисобро аз насби виджет ҷудо мекунад. Рамз, дастур ва гузариш ба кабинет раванди фаҳмои анҷомро ташкил медиҳанд."
             }
           },
+          ...livechatAccountScreens,
         ],
       },
     ],
@@ -5566,13 +5564,6 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     year: "2024",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "telecomm",
-    gallery: [
-      "/images/projects/ttl/gallery-1.png",
-      "/images/projects/ttl/gallery-2.png",
-      "/images/projects/ttl/gallery-3.png",
-      "/images/projects/ttl/gallery-4.png",
-      "/images/projects/ttl/gallery-5.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Веб-сайт", en: "Website", tj: "Веб-сайт" },
@@ -5979,12 +5970,6 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "somon-tv",
-    gallery: [
-      "/images/projects/somontv/gallery-1.png",
-      "/images/projects/somontv/gallery-2.png",
-      "/images/projects/somontv/gallery-3.png",
-      "/images/projects/somontv/gallery-4.png",
-    ],
     projectComponents: [
       {
         tabName: {
@@ -6082,118 +6067,14 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     year: "2024",
     tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
     slug: "zudsms",
-    gallery: [
-      "/images/projects/zudSMS/gallery-1.png",
-      "/images/projects/zudSMS/gallery-2.png",
-      "/images/projects/zudSMS/gallery-3.png",
-      "/images/projects/zudSMS/gallery-4.png",
-      "/images/projects/zudSMS/gallery-5.png",
-    ],
     projectComponents: [
       {
         tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
-        items: [
-          {
-            slug: "hero-use-cases",
-            title: {
-              ru: "Первый экран и сферы применения",
-              en: "Hero and Use Cases",
-              tj: "Экрани аввал ва соҳаҳои истифода",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-1.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-1.png",
-            shortInfo: {
-              ru: "Оффер, показатели и отрасли применения",
-              en: "Offer, metrics and applicable industries",
-              tj: "Пешниҳод, нишондиҳандаҳо ва соҳаҳо",
-            },
-            fullInfo: {
-              ru: "Первый экран лендинга ЗудСМС представляет сервис массовой SMS-рассылки. В шапке размещены логотип с подписью «SMS рассылка», меню разделов («Главная», «Преимущества», «Пакеты», «Контакты», «API Документация»), переключатель языков RU/EN/TJ и кнопка «Личный кабинет». На зелёном баннере расположены название сервиса, заголовок «Рассылка SMS в Таджикистане для бизнеса» и пояснение о рассылке на номера всех мобильных операторов. Под текстом вынесены три показателя: доставляемость 98%, более 1000 клиентов и поддержка 24/7. Ниже, в блоке «Сферы применения», размещена сетка из восьми карточек с иконками отраслей: страховые компании, интернет-магазины, такси и доставка, медицинские центры, банки и платёжные системы, образовательные учреждения, туристические агентства, салоны и рестораны.\n\nПользовательский сценарий: посетитель считывает суть услуги и ключевые показатели, а затем в блоке отраслей находит свою сферу и убеждается, что сервис подходит под его задачи.\n\nЦенность для бизнеса: сочетание оффера, доказательных цифр и перечня отраслей быстро формирует доверие и показывает применимость услуги. Карточки сфер применения помогают посетителю из любой отрасли соотнести сервис со своими сценариями коммуникации с клиентами.",
-              en: "The ZudSMS landing hero presents the mass SMS distribution service. The header contains the logo with the caption “SMS distribution”, a section menu (Home, Advantages, Packages, Contacts, API Documentation), an RU/EN/TJ language switcher and a Personal Account button. The green banner holds the service name, the headline “SMS distribution in Tajikistan for business” and a note about sending to the numbers of all mobile operators. Below the text are three metrics: 98% deliverability, over 1000 clients and 24/7 support. Further down, the Use Cases block contains a grid of eight cards with industry icons: insurance companies, online stores, taxi and delivery, medical centres, banks and payment systems, educational institutions, travel agencies, and salons and restaurants.\n\nUser journey: the visitor grasps the essence of the service and its key metrics, then finds their own field among the industry cards and confirms the service suits their tasks.\n\nBusiness value: combining an offer, evidence figures and a list of industries quickly builds trust and shows the service’s applicability. Use-case cards help a visitor from any industry relate the service to their own customer-communication scenarios.",
-              tj: "Экрани аввали лендинги ЗудСМС хизмати паҳнкунии оммавии SMS-ро пешниҳод мекунад. Дар қисми боло нишон бо навишти «SMS рассылка», менюи бахшҳо («Асосӣ», «Бартариҳо», «Пакетҳо», «Тамосҳо», «Ҳуҷҷатнигории API»), интихобкунандаи забонҳои RU/EN/TJ ва тугмаи «Кабинети шахсӣ» ҷойгиранд. Дар баннери сабз номи хизмат, сарлавҳаи «Паҳнкунии SMS дар Тоҷикистон барои тиҷорат» ва тавзеҳ дар бораи паҳнкунӣ ба рақамҳои ҳамаи операторони мобилӣ ҷой доранд. Зери матн се нишондиҳанда оварда шудааст: расонидан 98%, беш аз 1000 муштарӣ ва дастгирии 24/7. Дар поён, дар блоки «Соҳаҳои истифода», шабакаи ҳашт корт бо нишонаҳои соҳаҳо ҷойгир аст: ширкатҳои суғуртавӣ, мағозаҳои интернетӣ, такси ва расонидан, марказҳои тиббӣ, бонкҳо ва системаҳои пардохт, муассисаҳои таълимӣ, агентиҳои сайёҳӣ, салонҳо ва тарабхонаҳо.\n\nРаванди истифода: корбар моҳияти хизмат ва нишондиҳандаҳои асосиро дарк мекунад ва сипас дар блоки соҳаҳо соҳаи худро меёбад ва боварӣ ҳосил мекунад, ки хизмат ба вазифаҳои ӯ мувофиқ аст.\n\nАҳамият барои тиҷорат: якҷоякунии пешниҳод, рақамҳои исботӣ ва рӯйхати соҳаҳо зуд эътимодро ташкил медиҳад ва мувофиқати хизматро нишон медиҳад. Кортҳои соҳаҳои истифода ба корбар аз ҳар соҳа кумак мекунанд, ки хизматро бо сенарияҳои муоширати худ бо мизоҷон мувофиқ созад.",
-            },
-          },
-          {
-            slug: "demo",
-            title: {
-              ru: "Демо-отправка SMS",
-              en: "SMS Demo",
-              tj: "Демо-ирсоли SMS",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-5.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-5.png",
-            shortInfo: {
-              ru: "Интерактивный предпросмотр сообщения",
-              en: "Interactive message preview",
-              tj: "Пешнамоиши интерактивии паём",
-            },
-            fullInfo: {
-              ru: "Блок «Живой демо-пример» показывает работу сервиса в интерактивном виде. Слева размещены метка «Живой демо-пример», заголовок «SMS-рассылка для вашего бизнеса» и пояснение о создании персонализированных рассылок с мгновенной доставкой. Под текстом расположена карточка предпросмотра с полями «Имя отправителя» (заполнено значением ZudSMS), «Текст сообщения» со счётчиком символов 0/160 и кнопкой «Отправить». Справа изображён макет телефона с чатом ZudSMS, где показаны примеры сообщений: скидка, код подтверждения, напоминание о записи и статус заказа. Ниже начинается блок «Тарифные пакеты».\n\nПользовательский сценарий: посетитель вводит имя отправителя и текст, видит ограничение по длине сообщения и наглядно представляет, как рассылка будет выглядеть на телефоне получателя.\n\nЦенность для бизнеса: интерактивный демонстрационный блок позволяет оценить сервис до регистрации и снижает барьер для пробного использования. Предпросмотр с примерами реальных сценариев (коды, напоминания, статусы) помогает посетителю понять практическую пользу рассылки.",
-              en: "The “Live demo example” block shows how the service works interactively. On the left are the “Live demo example” label, the headline “SMS distribution for your business” and a note about creating personalised campaigns with instant delivery. Below the text is a preview card with the fields “Sender name” (filled with ZudSMS), “Message text” with a 0/160 character counter and a Send button. On the right is a phone mockup with a ZudSMS chat showing sample messages: a discount, a confirmation code, an appointment reminder and an order status. Below, the Pricing Packages block begins.\n\nUser journey: the visitor enters a sender name and text, sees the message length limit and gets a clear idea of how the campaign will look on the recipient’s phone.\n\nBusiness value: an interactive demo block lets the service be assessed before registration and lowers the barrier to trial use. A preview with real-scenario examples (codes, reminders, statuses) helps the visitor understand the practical benefit of the service.",
-              tj: "Блоки «Намунаи зиндаи демо» кори хизматро дар шакли интерактивӣ нишон медиҳад. Дар тарафи чап нишонаи «Намунаи зиндаи демо», сарлавҳаи «Паҳнкунии SMS барои тиҷорати шумо» ва тавзеҳ дар бораи эҷоди паҳнкунии фардикунонидашуда бо расонидани фаврӣ ҷойгиранд. Зери матн корти пешнамоиш бо майдонҳои «Номи фиристанда» (бо ZudSMS пур карда шуда), «Матни паём» бо ҳисобкунаки аломатҳо 0/160 ва тугмаи «Ирсол» ҷой дорад. Дар тарафи рост макети телефон бо чати ZudSMS тасвир шудааст, ки намунаҳои паёмҳо: тахфиф, коди тасдиқ, ёдоварӣ дар бораи навбат ва ҳолати фармоишро нишон медиҳад. Дар поён блоки «Пакетҳои тарифӣ» оғоз меёбад.\n\nРаванди истифода: корбар номи фиристанда ва матнро ворид мекунад, маҳдудияти дарозии паёмро мебинад ва аён тасаввур мекунад, ки паҳнкунӣ дар телефони гиранда чӣ гуна ба назар мерасад.\n\nАҳамият барои тиҷорат: блоки намоишии интерактивӣ имкон медиҳад, ки хизмат пеш аз сабтином арзёбӣ шавад ва монеаро барои истифодаи санҷишӣ кам мекунад. Пешнамоиш бо намунаҳои сенарияҳои воқеӣ (кодҳо, ёдовариҳо, ҳолатҳо) ба корбар кумак мекунад, ки фоидаи амалии паҳнкуниро дарк намояд.",
-            },
-          },
-          {
-            slug: "advantages",
-            title: {
-              ru: "Преимущества",
-              en: "Advantages",
-              tj: "Бартариҳо",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-2.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-2.png",
-            shortInfo: {
-              ru: "Причины выбрать сервис рассылки",
-              en: "Reasons to choose the service",
-              tj: "Сабабҳои интихоби хизмат",
-            },
-            fullInfo: {
-              ru: "Раздел «Наши преимущества» аргументирует выбор сервиса. Над сеткой размещены название бренда, заголовок «Наши преимущества» и подзаголовок о запуске рассылки SMS в Таджикистане. Шесть карточек с иконками раскрывают ключевые доводы: низкая стоимость за 1 SMS (конкурентные цены для эффективного маркетинга), высокая скорость и эффективность (мгновенная доставка с максимальным охватом), отправка всем операторам (поддержка всех мобильных операторов без ограничений), использование своих шаблонов (создание и сохранение персонализированных заготовок), автоматизированная рассылка через API (интеграция с системой клиента) и надёжность и безопасность (защищённая платформа с гарантией конфиденциальности).\n\nПользовательский сценарий: посетитель просматривает карточки преимуществ и выделяет для себя значимые аргументы — например, цену, скорость, охват операторов или API-интеграцию.\n\nЦенность для бизнеса: структурированный перечень преимуществ отвечает на основные критерии выбора SMS-сервиса и снимает возражения. Акцент на цене, охвате и API одновременно закрывает потребности маркетинга и технической интеграции.",
-              en: "The “Our advantages” section justifies choosing the service. Above the grid are the brand name, the headline “Our advantages” and a subheading about launching SMS distribution in Tajikistan. Six icon cards spell out the key arguments: low cost per SMS (competitive prices for effective marketing), high speed and efficiency (instant delivery with maximum reach), sending to all operators (support for all mobile operators without restrictions), using your own templates (creating and saving personalised snippets), automated distribution via API (integration with the client’s system) and reliability and security (a secure platform with a confidentiality guarantee).\n\nUser journey: the visitor reviews the advantage cards and singles out the arguments that matter to them — for example price, speed, operator reach or API integration.\n\nBusiness value: a structured list of advantages addresses the main criteria for choosing an SMS service and removes objections. Emphasising price, reach and API at once covers both marketing needs and technical integration.",
-              tj: "Бахши «Бартариҳои мо» интихоби хизматро асоснок мекунад. Болои шабака номи бренд, сарлавҳаи «Бартариҳои мо» ва зерсарлавҳа дар бораи оғози паҳнкунии SMS дар Тоҷикистон ҷойгиранд. Шаш корт бо нишонаҳо далелҳои асосиро ошкор мекунанд: арзиши пасти 1 SMS (нархҳои рақобатпазир барои маркетинги самаранок), суръати баланд ва самаранокӣ (расонидани фаврӣ бо фарогирии ҳадди аксар), ирсол ба ҳамаи операторон (дастгирии ҳамаи операторони мобилӣ бе маҳдудият), истифодаи шаблонҳои худӣ (эҷод ва нигоҳдории заготовкаҳои фардикунонидашуда), паҳнкунии худкор тавассути API (интегратсия бо системаи муштарӣ) ва боэътимодӣ ва амният (платформаи ҳифзшуда бо кафолати махфият).\n\nРаванди истифода: корбар кортҳои бартариҳоро аз назар мегузаронад ва далелҳои муҳимро барои худ ҷудо мекунад — масалан нарх, суръат, фарогирии операторон ё интегратсияи API.\n\nАҳамият барои тиҷорат: рӯйхати сохтории бартариҳо ба меъёрҳои асосии интихоби хизмати SMS ҷавоб медиҳад ва эродҳоро бартараф месозад. Таъкид ба нарх, фарогирӣ ва API ҳамзамон ниёзҳои маркетинг ва интегратсияи техникиро мепӯшонад.",
-            },
-          },
-          {
-            slug: "packages",
-            title: {
-              ru: "Тарифные пакеты",
-              en: "Pricing Packages",
-              tj: "Пакетҳои тарифӣ",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-3.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-3.png",
-            shortInfo: {
-              ru: "Линейка пакетов по объёму SMS",
-              en: "Range of packages by SMS volume",
-              tj: "Хатти пакетҳо аз рӯйи ҳаҷми SMS",
-            },
-            fullInfo: {
-              ru: "Раздел «Тарифные пакеты» представляет линейку предложений, отличающихся объёмом сообщений и ценой. Пакеты оформлены цветными карточками с иконкой, названием, количеством SMS, стоимостью в сомони и сроком действия «1 месяц»; каждую карточку завершает кнопка «Выбрать пакет». В линейке представлены «Плюс» (2 000 SMS), «Старт» (5 000 SMS), «Базовый» (10 000 SMS), «Стандарт» (25 000 SMS), «Бизнес» (50 000 SMS) и «Про» (100 000 SMS), а также стартовые варианты. Отдельные пакеты выделены метками «Больше возможностей», «Популярный», «Лучший выбор» и «Самый популярный».\n\nПользовательский сценарий: посетитель сопоставляет объём сообщений и цену, ориентируется на выделенные рекомендованные пакеты и выбирает вариант под планируемый объём рассылок.\n\nЦенность для бизнеса: широкая линейка пакетов охватывает клиентов с разным объёмом рассылок — от первых сообщений до крупных кампаний. Цветовое выделение и метки-рекомендации направляют выбор и помогают клиенту быстрее определиться с подходящим тарифом.",
-              en: "The Pricing Packages section presents a range of offers differing in message volume and price. Packages are laid out as coloured cards with an icon, a name, an SMS count, a price in somoni and a “1 month” validity period; each card ends with a Select package button. The range includes “Plus” (2,000 SMS), “Start” (5,000 SMS), “Basic” (10,000 SMS), “Standard” (25,000 SMS), “Business” (50,000 SMS) and “Pro” (100,000 SMS), as well as starter options. Individual packages are marked with “More features”, “Popular”, “Best choice” and “Most popular” labels.\n\nUser journey: the visitor compares message volume and price, is guided by the highlighted recommended packages and selects an option for their planned distribution volume.\n\nBusiness value: a broad range of packages covers clients with different distribution volumes — from first messages to large campaigns. Colour highlighting and recommendation labels steer the choice and help the client settle on a suitable plan faster.",
-              tj: "Бахши «Пакетҳои тарифӣ» хатти пешниҳодҳоеро пешниҳод мекунад, ки бо ҳаҷми паём ва нарх фарқ мекунанд. Пакетҳо ҳамчун кортҳои рангин бо нишона, ном, шумораи SMS, арзиш бо сомонӣ ва мӯҳлати амали «1 моҳ» таҳия шудаанд; ҳар кортро тугмаи «Интихоби пакет» анҷом медиҳад. Дар хат «Плюс» (2 000 SMS), «Старт» (5 000 SMS), «Базавӣ» (10 000 SMS), «Стандарт» (25 000 SMS), «Бизнес» (50 000 SMS) ва «Про» (100 000 SMS), инчунин вариантҳои ибтидоӣ пешниҳод шудаанд. Пакетҳои алоҳида бо нишонаҳои «Имкониятҳои бештар», «Маъмул», «Интихоби беҳтарин» ва «Маъмултарин» барҷаста шудаанд.\n\nРаванди истифода: корбар ҳаҷми паём ва нархро муқоиса мекунад, ба пакетҳои тавсияшудаи барҷаста нигаронида мешавад ва вариантро барои ҳаҷми банақшагирифтаи паҳнкунӣ интихоб менамояд.\n\nАҳамият барои тиҷорат: хатти васеи пакетҳо муштариёнро бо ҳаҷми гуногуни паҳнкунӣ фаро мегирад — аз паёмҳои аввал то маъракаҳои калон. Барҷастагии рангӣ ва нишонаҳои тавсия интихобро равона мекунанд ва ба муштарӣ кумак менамоянд, ки зудтар тарифи мувофиқро муайян созад.",
-            },
-          },
-          {
-            slug: "contacts-payments",
-            title: {
-              ru: "Контакты и оплата",
-              en: "Contacts and Payment",
-              tj: "Тамосҳо ва пардохт",
-            },
-            imageSrc: "/images/projects/zudSMS/gallery-4.png",
-            BannerSrc: "/images/projects/zudSMS/gallery-4.png",
-            shortInfo: {
-              ru: "Форма связи, платёжные системы и подвал",
-              en: "Contact form, payment systems and footer",
-              tj: "Шакли алоқа, системаҳои пардохт ва поён",
-            },
-            fullInfo: {
-              ru: "Завершающий блок объединяет форму связи, доступные способы оплаты и подвал сайта. Слева расположена форма обратной связи с кнопкой «Отправить», справа — реквизиты «ИП Душанбе-Софт» с адресом в Душанбе. Отдельным блоком «Платёжные системы» показаны четыре способа оплаты в виде карточек с логотипами: ALIF (платёжная система), Корти Милли (национальная карта), Душанбе Сити (городская платёжная система) и VISA (международная карта). Ниже размещён баннер LiveChat, а в подвале — логотип с блоком «О компании», колонка «Навигация» (главная, преимущества, пакеты, контакты) и колонка «Контакты» с телефоном, почтой и адресом; в самом низу — строка авторских прав.\n\nПользовательский сценарий: посетитель отправляет обращение через форму, проверяет доступные способы оплаты и находит контактные данные и реквизиты в подвале.\n\nЦенность для бизнеса: явное указание платёжных систем, включая локальные карты и международную VISA, снимает вопрос об удобстве оплаты. Форма связи и подробные реквизиты повышают доверие и упрощают переход от интереса к обращению.",
-              en: "The closing block combines a contact form, available payment methods and the site footer. On the left is a feedback form with a Send button; on the right are the “IE Dushanbe-Soft” details with an address in Dushanbe. A separate “Payment systems” block shows four payment methods as cards with logos: ALIF (payment system), Korti Milli (national card), Dushanbe City (municipal payment system) and VISA (international card). Below is a LiveChat banner, while the footer holds a logo with an “About the company” block, a Navigation column (home, advantages, packages, contacts) and a Contacts column with phone, email and address; a copyright line sits at the very bottom.\n\nUser journey: the visitor sends an enquiry through the form, checks the available payment methods and finds the contact details and company data in the footer.\n\nBusiness value: explicitly listing payment systems, including local cards and international VISA, removes questions about payment convenience. A contact form and detailed company data build trust and ease the move from interest to enquiry.",
-              tj: "Блоки хотимавӣ шакли алоқа, роҳҳои дастраси пардохт ва поёни сомонаро муттаҳид мекунад. Дар тарафи чап шакли алоқаи баръакс бо тугмаи «Ирсол», дар тарафи рост — реквизитҳои «Соҳибкори инфиродии Душанбе-Софт» бо суроға дар Душанбе ҷойгиранд. Дар блоки алоҳидаи «Системаҳои пардохт» чор роҳи пардохт дар шакли кортҳо бо нишонаҳо нишон дода шудаанд: ALIF (системаи пардохт), Корти Миллӣ (корти миллӣ), Душанбе Сити (системаи пардохти шаҳрӣ) ва VISA (корти байналмилалӣ). Дар поён баннери LiveChat ҷойгир аст ва дар поёни сомона — нишон бо блоки «Дар бораи ширкат», сутуни «Навигатсия» (асосӣ, бартариҳо, пакетҳо, тамосҳо) ва сутуни «Тамосҳо» бо телефон, почта ва суроға; дар поёнтарин — сатри ҳуқуқи муаллиф.\n\nРаванди истифода: корбар муроҷиатро тавассути шакл ирсол мекунад, роҳҳои дастраси пардохтро месанҷад ва маълумоти тамос ва реквизитҳоро дар поёни сомона меёбад.\n\nАҳамият барои тиҷорат: нишон додани возеҳи системаҳои пардохт, аз ҷумла кортҳои маҳаллӣ ва VISA-и байналмилалӣ, саволро дар бораи қулаии пардохт бартараф месозад. Шакли алоқа ва реквизитҳои муфассал эътимодро баланд мебардоранд ва гузаришро аз таваҷҷуҳ ба муроҷиат осон мекунанд.",
-            },
-          },
-        ],
+        items: zudsmsLandingScreens,
+      },
+      {
+        tabName: { ru: "Личный кабинет", en: "Personal account", tj: "Кабинети шахсӣ" },
+        items: zudsmsAccountScreens,
       },
     ],
   },
