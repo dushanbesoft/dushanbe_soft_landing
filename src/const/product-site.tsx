@@ -6267,6 +6267,22 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     slug: "imron-nakliet",
   },
   {
+    imageSrc: "/images/projects/zudsms.png",
+    year: "2024",
+    tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
+    slug: "zudsms",
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: zudsmsLandingScreens,
+      },
+      {
+        tabName: { ru: "Личный кабинет", en: "Personal account", tj: "Кабинети шахсӣ" },
+        items: zudsmsAccountScreens,
+      },
+    ],
+  },
+  {
     imageSrc: "/images/projects/sunduk.webp",
     year: "2024",
     tags: ["React", "JavaScript", "HTML5 / CSS3", "REST API"],
