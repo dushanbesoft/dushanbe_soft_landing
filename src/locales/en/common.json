@@ -8,7 +8,9 @@
     "cases": "Cases",
     "partners": "Partners",
     "about": "About Us",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "process": "Process",
+    "reviews": "Reviews"
   },
   "hero": {
     "badge": "IT solutions for business and government",
@@ -366,6 +368,10 @@
         "Frontend development",
         "Backend development"
       ]
+    },
+    "arcane-finance": {
+      "title": "Arcane Finance",
+      "description": "Web3 ecosystem development. A platform for private on-chain transactions, a DEX exchange, and a launchpad for institutional capital."
     }
   },
   "partners": {

@@ -6647,5 +6647,658 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         ],
       },
     ],
-  }
+  },
+  {
+    imageSrc: "/images/projects/arcane-inance.png",
+    year: "2024",
+    tags: ["React", "TypeScript", "Web3", "Blockchain", "Solidity", "Tailwind CSS"],
+    slug: "arcane-finance",
+    projectComponents: [
+      {
+        tabName: { ru: "Биржа DEX", en: "DEX", tj: "Биржаи DEX" },
+        items: [
+          {
+            slug: "ecosystem-acceleration-dex-page",
+            title: {
+              ru: "Ecosystem Acceleration Dex",
+              en: "Ecosystem Acceleration Dex",
+              tj: "Ecosystem Acceleration Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/ecosystem-acceleration-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/ecosystem-acceleration-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Ecosystem Acceleration Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Ecosystem Acceleration Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Ecosystem Acceleration Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "footer-dex-page",
+            title: {
+              ru: "Footer Dex",
+              en: "Footer Dex",
+              tj: "Footer Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/footer-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/footer-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Footer Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Footer Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Footer Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "got-in-touch-dex-page",
+            title: {
+              ru: "Got In Touch Dex",
+              en: "Got In Touch Dex",
+              tj: "Got In Touch Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/got-in-touch-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/got-in-touch-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Got In Touch Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Got In Touch Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Got In Touch Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "header-dex-page",
+            title: {
+              ru: "Header Dex",
+              en: "Header Dex",
+              tj: "Header Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/header-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/header-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Header Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Header Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Header Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "pools-page",
+            title: {
+              ru: "Pools",
+              en: "Pools",
+              tj: "Pools",
+            },
+            imageSrc: "/images/projects/arcanefinance/pools-page.png",
+            BannerSrc: "/images/projects/arcanefinance/pools-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Pools. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Pools screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Pools. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "portfolio-page",
+            title: {
+              ru: "Portfolio",
+              en: "Portfolio",
+              tj: "Portfolio",
+            },
+            imageSrc: "/images/projects/arcanefinance/portfolio-page.png",
+            BannerSrc: "/images/projects/arcanefinance/portfolio-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Portfolio. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Portfolio screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Portfolio. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "products-dex-page",
+            title: {
+              ru: "Products Dex",
+              en: "Products Dex",
+              tj: "Products Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/products-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/products-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Products Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Products Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Products Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "products-last-dex-page",
+            title: {
+              ru: "Products Last Dex",
+              en: "Products Last Dex",
+              tj: "Products Last Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/products-last-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/products-last-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Products Last Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Products Last Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Products Last Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "programmable-privacy-dex-page",
+            title: {
+              ru: "Programmable Privacy Dex",
+              en: "Programmable Privacy Dex",
+              tj: "Programmable Privacy Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/programmable-privacy-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/programmable-privacy-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Programmable Privacy Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Programmable Privacy Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Programmable Privacy Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "swap-page",
+            title: {
+              ru: "Swap",
+              en: "Swap",
+              tj: "Swap",
+            },
+            imageSrc: "/images/projects/arcanefinance/swap-page.png",
+            BannerSrc: "/images/projects/arcanefinance/swap-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Swap. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Swap screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Swap. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "trade-page",
+            title: {
+              ru: "Trade",
+              en: "Trade",
+              tj: "Trade",
+            },
+            imageSrc: "/images/projects/arcanefinance/trade-page.png",
+            BannerSrc: "/images/projects/arcanefinance/trade-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Trade. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Trade screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Trade. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "who-we-serve-dex-page",
+            title: {
+              ru: "Who We Serve Dex",
+              en: "Who We Serve Dex",
+              tj: "Who We Serve Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/who-we-serve-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/who-we-serve-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Who We Serve Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Who We Serve Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Who We Serve Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          }
+        ],
+      },
+      {
+        tabName: { ru: "Лаунчпад", en: "Launchpad", tj: "Лаунчпад" },
+        items: [
+          {
+            slug: "header-launchpad-page",
+            title: {
+              ru: "Header Launchpad",
+              en: "Header Launchpad",
+              tj: "Header Launchpad",
+            },
+            imageSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
+            BannerSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Header Launchpad. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Header Launchpad screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Header Launchpad. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "launchpad-button-started-page",
+            title: {
+              ru: "Launchpad Button Started",
+              en: "Launchpad Button Started",
+              tj: "Launchpad Button Started",
+            },
+            imageSrc: "/images/projects/arcanefinance/launchpad-button-started-page.png",
+            BannerSrc: "/images/projects/arcanefinance/launchpad-button-started-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Launchpad Button Started. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Launchpad Button Started screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Launchpad Button Started. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "launchpad-nft-mints-page",
+            title: {
+              ru: "Launchpad Nft Mints",
+              en: "Launchpad Nft Mints",
+              tj: "Launchpad Nft Mints",
+            },
+            imageSrc: "/images/projects/arcanefinance/launchpad-nft-mints-page.png",
+            BannerSrc: "/images/projects/arcanefinance/launchpad-nft-mints-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Launchpad Nft Mints. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Launchpad Nft Mints screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Launchpad Nft Mints. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          }
+        ],
+      },
+      {
+        tabName: { ru: "Уровень комплаенса", en: "Compliance Layer", tj: "Сатҳи комплаенс" },
+        items: [
+          {
+            slug: "compliance-layer-core-capabilities-page",
+            title: {
+              ru: "Compliance Layer Core Capabilities",
+              en: "Compliance Layer Core Capabilities",
+              tj: "Compliance Layer Core Capabilities",
+            },
+            imageSrc: "/images/projects/arcanefinance/compliance-layer-core-capabilities-page.png",
+            BannerSrc: "/images/projects/arcanefinance/compliance-layer-core-capabilities-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Compliance Layer Core Capabilities. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Compliance Layer Core Capabilities screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Compliance Layer Core Capabilities. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "compliance-layer-get-in-touch-page",
+            title: {
+              ru: "Compliance Layer Get In Touch",
+              en: "Compliance Layer Get In Touch",
+              tj: "Compliance Layer Get In Touch",
+            },
+            imageSrc: "/images/projects/arcanefinance/compliance-layer-get-in-touch-page.png",
+            BannerSrc: "/images/projects/arcanefinance/compliance-layer-get-in-touch-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Compliance Layer Get In Touch. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Compliance Layer Get In Touch screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Compliance Layer Get In Touch. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "compliance-layer-header-page",
+            title: {
+              ru: "Compliance Layer Header",
+              en: "Compliance Layer Header",
+              tj: "Compliance Layer Header",
+            },
+            imageSrc: "/images/projects/arcanefinance/compliance-layer-header-page.png",
+            BannerSrc: "/images/projects/arcanefinance/compliance-layer-header-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Compliance Layer Header. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Compliance Layer Header screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Compliance Layer Header. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "compliance-layer-integration-page",
+            title: {
+              ru: "Compliance Layer Integration",
+              en: "Compliance Layer Integration",
+              tj: "Compliance Layer Integration",
+            },
+            imageSrc: "/images/projects/arcanefinance/compliance-layer-integration-page.png",
+            BannerSrc: "/images/projects/arcanefinance/compliance-layer-integration-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Compliance Layer Integration. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Compliance Layer Integration screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Compliance Layer Integration. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "compliance-layer-why-it-matters-page",
+            title: {
+              ru: "Compliance Layer Why It Matters",
+              en: "Compliance Layer Why It Matters",
+              tj: "Compliance Layer Why It Matters",
+            },
+            imageSrc: "/images/projects/arcanefinance/compliance-layer-why-it-matters-page.png",
+            BannerSrc: "/images/projects/arcanefinance/compliance-layer-why-it-matters-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Compliance Layer Why It Matters. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Compliance Layer Why It Matters screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Compliance Layer Why It Matters. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          }
+        ],
+      },
+      {
+        tabName: { ru: "Платформа", en: "Platform", tj: "Платформа" },
+        items: [
+          {
+            slug: "platform-core-capabilities-dex-page",
+            title: {
+              ru: "Platform Core Capabilities Dex",
+              en: "Platform Core Capabilities Dex",
+              tj: "Platform Core Capabilities Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-core-capabilities-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-core-capabilities-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Core Capabilities Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Core Capabilities Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Core Capabilities Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "platform-get-in-touch-footer-dex-page",
+            title: {
+              ru: "Platform Get In Touch Footer Dex",
+              en: "Platform Get In Touch Footer Dex",
+              tj: "Platform Get In Touch Footer Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-get-in-touch-footer-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-get-in-touch-footer-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Get In Touch Footer Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Get In Touch Footer Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Get In Touch Footer Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "platform-private-dex-page",
+            title: {
+              ru: "Platform Private Dex",
+              en: "Platform Private Dex",
+              tj: "Platform Private Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-private-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-private-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Private Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Private Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Private Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "platform-private-transfers-dex-page",
+            title: {
+              ru: "Platform Private Transfers Dex",
+              en: "Platform Private Transfers Dex",
+              tj: "Platform Private Transfers Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-private-transfers-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-private-transfers-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Private Transfers Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Private Transfers Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Private Transfers Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "platform-solutions-dex-page",
+            title: {
+              ru: "Platform Solutions Dex",
+              en: "Platform Solutions Dex",
+              tj: "Platform Solutions Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-solutions-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-solutions-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Solutions Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Solutions Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Solutions Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "platform-transaction-lifecycle-dex-page",
+            title: {
+              ru: "Platform Transaction Lifecycle Dex",
+              en: "Platform Transaction Lifecycle Dex",
+              tj: "Platform Transaction Lifecycle Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-transaction-lifecycle-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-transaction-lifecycle-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Transaction Lifecycle Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Transaction Lifecycle Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Transaction Lifecycle Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "platform-who-we-serve-dex-page",
+            title: {
+              ru: "Platform Who We Serve Dex",
+              en: "Platform Who We Serve Dex",
+              tj: "Platform Who We Serve Dex",
+            },
+            imageSrc: "/images/projects/arcanefinance/platform-who-we-serve-dex-page.png",
+            BannerSrc: "/images/projects/arcanefinance/platform-who-we-serve-dex-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Platform Who We Serve Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Platform Who We Serve Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Platform Who We Serve Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          }
+        ],
+      },
+      {
+        tabName: { ru: "Другие страницы", en: "Other Pages", tj: "Дигар саҳифаҳо" },
+        items: [
+          {
+            slug: "connect-page",
+            title: {
+              ru: "Connect",
+              en: "Connect",
+              tj: "Connect",
+            },
+            imageSrc: "/images/projects/arcanefinance/connect-page.png",
+            BannerSrc: "/images/projects/arcanefinance/connect-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Connect. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Connect screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Connect. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "contact-us-page",
+            title: {
+              ru: "Contact Us",
+              en: "Contact Us",
+              tj: "Contact Us",
+            },
+            imageSrc: "/images/projects/arcanefinance/contact-us-page.png",
+            BannerSrc: "/images/projects/arcanefinance/contact-us-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Contact Us. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Contact Us screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Contact Us. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "create-token-page",
+            title: {
+              ru: "Create Token",
+              en: "Create Token",
+              tj: "Create Token",
+            },
+            imageSrc: "/images/projects/arcanefinance/create-token-page.png",
+            BannerSrc: "/images/projects/arcanefinance/create-token-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Create Token. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Create Token screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Create Token. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          },
+          {
+            slug: "latest-news-page",
+            title: {
+              ru: "Latest News",
+              en: "Latest News",
+              tj: "Latest News",
+            },
+            imageSrc: "/images/projects/arcanefinance/latest-news-page.png",
+            BannerSrc: "/images/projects/arcanefinance/latest-news-page.png",
+            shortInfo: {
+              ru: "Скриншот интерфейса Arcane Finance",
+              en: "Arcane Finance interface screenshot",
+              tj: "Скриншоти интерфейси Arcane Finance",
+            },
+            fullInfo: {
+              ru: "Подробный вид экрана Latest News. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
+              en: "Detailed view of the Latest News screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
+              tj: "Намуди муфассали экрани Latest News. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+            },
+          }
+        ],
+      }
+    ],
+  },
 ];

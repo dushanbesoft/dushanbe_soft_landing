@@ -72,6 +72,21 @@ export default function Header() {
     router.push(segments.join("/"));
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const [path, hash] = href.split('#');
+    if (hash && (pathname === path || pathname === path + '/')) {
+      e.preventDefault();
+      closeMenu();
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+      }
+    } else {
+      closeMenu();
+    }
+  };
+
   const getLangDisplayName = (l: string) => {
     switch (l) {
       case "tj":
@@ -134,53 +149,48 @@ export default function Header() {
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
           <Link
-            href={`/${currentLang}/`}
+            href={`/${currentLang}/#`}
             className={styles.navItem}
-            onClick={closeMenu}
+            onClick={(e) => {
+              if (pathname === `/${currentLang}` || pathname === `/${currentLang}/`) {
+                e.preventDefault();
+                closeMenu();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.pushState(null, '', `/${currentLang}/`);
+              } else {
+                closeMenu();
+              }
+            }}
           >
             {t("header.home", "Главная")}
           </Link>
           <Link
-            href={`/${currentLang}/#services`}
-            className={styles.navItem}
-            onClick={closeMenu}
-          >
-            {t("header.services", "Услуги")}
-          </Link>
-          <Link
-            href={`/${currentLang}/#products`}
-            className={styles.navItem}
-            onClick={closeMenu}
-          >
-            {t("header.products", "Продукты")}
-          </Link>
-          <Link
             href={`/${currentLang}/#cases`}
             className={styles.navItem}
-            onClick={closeMenu}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#cases`)}
           >
             {t("header.cases", "Кейсы")}
           </Link>
           <Link
-            href={`/${currentLang}/#partners`}
+            href={`/${currentLang}/#process`}
             className={styles.navItem}
-            onClick={closeMenu}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#process`)}
           >
-            {t("header.partners", "Партнёры")}
+            {t("header.process", "Процесс")}
           </Link>
           <Link
-            href={`/${currentLang}/#about`}
+            href={`/${currentLang}/#services`}
             className={styles.navItem}
-            onClick={closeMenu}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#services`)}
           >
-            {t("header.about", "О компании")}
+            {t("header.services", "Услуги")}
           </Link>
           <Link
-            href={`/${currentLang}/#contacts`}
+            href={`/${currentLang}/#reviews`}
             className={styles.navItem}
-            onClick={closeMenu}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#reviews`)}
           >
-            {t("header.contacts", "Контакты")}
+            {t("header.reviews", "Отзывы")}
           </Link>
         </nav>
 

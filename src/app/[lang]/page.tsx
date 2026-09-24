@@ -34,6 +34,7 @@ export default async function Page({
       name: "Dushanbe Soft",
       url: siteUrl,
       logo: `${siteUrl}/icons/site-favicon.svg`,
+      image: `${siteUrl}/icons/site-favicon.svg`,
       description: t(
         "seo.default_description",
         "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
@@ -47,7 +48,13 @@ export default async function Page({
         "@type": "ContactPoint",
         contactType: "customer service",
         telephone: "+992988888888",
+        email: "info@dushanbesoft.tj",
       },
+      sameAs: [
+        "https://www.linkedin.com/company/dushanbesoft",
+        "https://www.instagram.com/dushanbesoft",
+        "https://www.facebook.com/dushanbesoft"
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -58,6 +65,11 @@ export default async function Page({
         "seo.default_description",
         "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
       ),
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteUrl}/ru/cases?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
     }
   ];
 
@@ -82,16 +94,9 @@ export default async function Page({
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
-        {/* <ProductsSection lang={lang} />
-        <WhyUsSection lang={lang} />
-        <TeamSection /> */}
-
         <StatisticsComponent />
 
         <ReviewsSection lang={lang} />
-        {/* <PartnersSection />
-        <ContactSection lang={lang} />
-        <CTASection lang={lang} /> */}
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>

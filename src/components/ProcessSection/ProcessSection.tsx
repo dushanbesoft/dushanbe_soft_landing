@@ -177,7 +177,7 @@ const i18nNamespaces = ['common'];
 export default async function ProcessSection({ lang = 'ru' }: { lang?: string }) {
   const { t } = await initTranslations(lang, i18nNamespaces);
   return (
-    <section className={styles.section}>
+    <section id="process" className={styles.section}>
       <div className={styles.container}>
         <FadeIn direction="up">
           <div className={styles.headerRow}>
