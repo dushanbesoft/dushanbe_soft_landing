@@ -62,7 +62,7 @@ export default async function ReviewsSection({ lang = 'ru' }: { lang?: string })
   }));
 
   return (
-    <section className={styles.section}>
+    <section id="reviews" className={styles.section}>
       <div className={styles.container}>
         <FadeIn direction="up">
           <div className={styles.header}>
