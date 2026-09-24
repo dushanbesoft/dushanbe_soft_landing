@@ -177,6 +177,7 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
             disabled={activeIndex === 0}
             aria-label="Previous review"
           >
+            <span></span>
             <ArrowLeft />
           </button>
           <button 
@@ -185,6 +186,7 @@ export default function ReviewsCarousel({ reviews }: { reviews: ReviewType[] }) 
             disabled={activeIndex === maxIndex}
             aria-label="Next review"
           >
+            <span></span>
             <ArrowRight />
           </button>
         </div>
