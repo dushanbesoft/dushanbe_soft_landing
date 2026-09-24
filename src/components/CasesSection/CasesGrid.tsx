@@ -19,14 +19,56 @@ interface CasesGridProps {
   };
 }
 
-export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
-  const [showAll, setShowAll] = useState(false);
 
-  const displayedCases = showAll ? casesData : casesData.slice(0, 6);
+export default function CasesGrid({ casesData, lang, labels, title }: CasesGridProps & { title?: string }) {
+  const [showAll, setShowAll] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('Все');
+
+  const categories = ['Все', 'Государственные', 'Корпоративные', 'Медиа', 'Финтех и Web3'];
+  const slugCategoryMap: Record<string, string> = {
+    "president": "Государственные",
+    "digital-tajikistan": "Государственные",
+    "sohktor": "Корпоративные",
+    "mavji-somon": "Медиа",
+    "livechat-tj": "Корпоративные",
+    "telecomm": "Корпоративные",
+    "navo": "Медиа",
+    "somon-tv": "Медиа",
+    "zenith": "Корпоративные",
+    "itrans": "Корпоративные",
+    "zudsms": "Финтех и Web3",
+    "sunduk-tv": "Медиа",
+    "onlinepay": "Финтех и Web3",
+    "arcane-finance": "Финтех и Web3"
+  };
+
+  const filteredCases = activeCategory === 'Все' 
+    ? casesData 
+    : casesData.filter(c => slugCategoryMap[c.slug] === activeCategory);
+
+  const displayedCases = showAll ? filteredCases : filteredCases.slice(0, 6);
 
   return (
     <>
+      <div className={styles.headerRow} style={{ width: '100%', marginBottom: '20px' }}>
+        <div className={styles.titles}>
+          {title && <h2 className={styles.mainTitle}>{title}</h2>}
+        </div>
+        <div className={styles.categoriesList}>
+          {categories.map(cat => (
+            <button 
+              key={cat} 
+              className={`${styles.categoryBtn} ${activeCategory === cat ? styles.active : ''}`}
+              onClick={() => { setActiveCategory(cat); setShowAll(false); }}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className={styles.cardsGrid}>
+
         {displayedCases.map((e, i) => (
           <FadeIn key={e.slug} delay={(i % 6) * 0.15} direction="up" fullWidth style={{ height: '100%' }}>
             <CaseCard
