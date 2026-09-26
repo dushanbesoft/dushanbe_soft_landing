@@ -19,12 +19,12 @@ interface CasesGridProps {
   };
 }
 
-export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
+
+export default function CasesGrid({ casesData, lang, labels, title }: CasesGridProps & { title?: string }) {
   const [showAll, setShowAll] = useState(false);
   const [activeCategory, setActiveCategory] = useState('Все');
 
   const categories = ['Все', 'Государственные', 'Корпоративные', 'Медиа', 'Финтех и Web3', 'Blockchain/Web3'];
-  
   const slugCategoryMap: Record<string, string> = {
     "president": "Государственные",
     "digital-tajikistan": "Государственные",
@@ -34,40 +34,43 @@ export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
     "telecomm": "Корпоративные",
     "navo": "Медиа",
     "somon-tv": "Медиа",
+    "zenith": "Корпоративные",
+    "itrans": "Корпоративные",
     "zudsms": "Финтех и Web3",
     "sunduk-tv": "Медиа",
     "onlinepay": "Финтех и Web3",
-    "arcanefinance": "Blockchain/Web3",
+    "arcane-finance": "Blockchain/Web3",
     "arcane-launchpad": "Blockchain/Web3",
-    "reactorexchange": "Blockchain/Web3",
     "reactor-exchange": "Blockchain/Web3"
   };
 
-  const filteredCases = activeCategory === 'Все'
-    ? casesData
+  const filteredCases = activeCategory === 'Все' 
+    ? casesData 
     : casesData.filter(c => slugCategoryMap[c.slug] === activeCategory);
 
   const displayedCases = showAll ? filteredCases : filteredCases.slice(0, 6);
 
   return (
     <>
-      <div className={styles.categoriesList}>
-        {categories.map((cat, index) => (
-          <FadeIn key={cat} delay={index * 0.1} direction="up">
-            <button
-              onClick={() => {
-                setActiveCategory(cat);
-                setShowAll(false);
-              }}
-              className={`${styles.categoryBtn} ${activeCategory === cat ? styles.categoryBtnActive : ''}`}
+      <div className={styles.headerRow} style={{ width: '100%', marginBottom: '20px' }}>
+        <div className={styles.titles}>
+          {title && <h2 className={styles.mainTitle}>{title}</h2>}
+        </div>
+        <div className={styles.categoriesList}>
+          {categories.map(cat => (
+            <button 
+              key={cat} 
+              className={`${styles.categoryBtn} ${activeCategory === cat ? styles.active : ''}`}
+              onClick={() => { setActiveCategory(cat); setShowAll(false); }}
             >
               {cat}
             </button>
-          </FadeIn>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className={styles.cardsGrid}>
+
         {displayedCases.map((e, i) => (
           <FadeIn key={e.slug} delay={(i % 6) * 0.15} direction="up" fullWidth style={{ height: '100%' }}>
             <CaseCard
