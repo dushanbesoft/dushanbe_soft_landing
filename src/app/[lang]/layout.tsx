@@ -18,12 +18,32 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const defaultDesc = t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.");
 
   return {
+    metadataBase: new URL(siteUrl),
     title: {
       default: defaultTitle,
       template: `%s | Dushanbe Soft`
     },
     description: defaultDesc,
-    keywords: t("seo.keywords", "разработка ПО, создание сайтов, мобильные приложения, автоматизация бизнеса, Душанбе, Таджикистан, Dushanbe Soft, IT компания"),
+    keywords: t("seo.keywords", "разработка ПО, создание сайтов, мобильные приложения, автоматизация бизнеса, Душанбе, Таджикистан, Dushanbe Soft, IT компания, web development, mobile development, software engineering"),
+    authors: [{ name: "Dushanbe Soft", url: siteUrl }],
+    creator: "Dushanbe Soft",
+    publisher: "Dushanbe Soft",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     openGraph: {
       title: defaultTitle,
       description: defaultDesc,
@@ -57,6 +77,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     icons: {
       icon: "/icons/site-favicon.svg",
+      apple: "/icons/site-favicon.svg", // Fallback for apple touch icon
+    },
+    appleWebApp: {
+      capable: true,
+      title: "Dushanbe Soft",
+      statusBarStyle: "black-translucent",
     },
   };
 }

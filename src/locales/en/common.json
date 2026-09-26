@@ -8,7 +8,9 @@
     "cases": "Cases",
     "partners": "Partners",
     "about": "About Us",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "process": "Process",
+    "reviews": "Reviews"
   },
   "hero": {
     "badge": "IT solutions for business and government",
@@ -367,25 +369,17 @@
         "Backend development"
       ]
     },
-    "arcanefinance": {
+    "arcane-finance": {
       "title": "Arcane Finance",
-      "description": "Decentralized Finance (DeFi) platform for fast swapping, liquidity pool management, and staking."
-    },
-    "promolovelybot": {
-      "title": "Lovely promo",
-      "description": "Telegram promo bot for organizing contests, giveaways, and marketing activities with a user-friendly Mini App interface."
-    },
-    "reactorexchange": {
-      "title": "Reactor",
-      "description": "A decentralized exchange for fast token swapping and liquidity provision."
+      "description": "Web3 ecosystem development. A platform for private on-chain transactions, a DEX exchange, and a launchpad for institutional capital."
     },
     "arcane-launchpad": {
       "title": "Arcane Launchpad",
-      "description": "A platform for launching and investing in new crypto projects and tokens."
+      "description": "Platform for launching Web3 projects. Intuitive interface for participating in token sales and IDO with smart contract integration."
     },
     "reactor-exchange": {
       "title": "Reactor Exchange",
-      "description": "A decentralized exchange for fast token swapping and liquidity provision."
+      "description": "Next-generation decentralized exchange (DEX). Provides high-speed transactions, farming, and staking with minimal fees."
     }
   },
   "partners": {

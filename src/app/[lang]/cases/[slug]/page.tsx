@@ -144,6 +144,34 @@ export default async function CaseDetailsPage({
       resources={resources}
     >
       <main className={styles.main}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: title,
+              description: description,
+              image: project.imageSrc.startsWith('http') ? project.imageSrc : `https://dushanbesoft.tj${project.imageSrc}`,
+              author: {
+                "@type": "Organization",
+                name: "Dushanbe Soft"
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Dushanbe Soft",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://dushanbesoft.tj/icons/site-favicon.svg"
+                }
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `https://dushanbesoft.tj/${lang}/cases/${slug}`
+              }
+            })
+          }}
+        />
         <div className="header-global header-fixed">
           <Header />
         </div>

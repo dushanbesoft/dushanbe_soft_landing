@@ -48,22 +48,9 @@ export default async function CasesSection({ showAll = false, lang = 'ru' }: Cas
   return (
     <section id="cases" className={styles.section}>
       <div className={styles.container}>
-        <FadeIn direction="up">
-          <div className={styles.headerRow}>
-            <div className={styles.titles}>
-              {/* <span className={styles.subtitle}>{t("cases.subtitle")}</span> */}
-              <h2 className={styles.mainTitle}>{t("cases.title")}</h2>
-            </div>
-            {/* {!showAll && (
-              <Link href={`/${lang}/cases`} className={styles.allCasesBtn}>
-                <span className={styles.btnText}>{t("cases.all_cases")}</span>
-                <ArrowUpIcon />
-              </Link>
-            )} */}
-          </div>
-        </FadeIn>
 
         <CasesGrid
+          title={t("cases.title")}
           lang={lang}
           casesData={ProductSite.map(e => ({
             slug: e.slug,
