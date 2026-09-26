@@ -128,7 +128,7 @@ export default function TeamSection() {
   const activeMember = teamMembers[activeIndex];
 
   return (
-    <section className={styles.section}>
+    <section id="team" className={styles.section}>
       <div className={styles.container}>
         <FadeIn direction="up">
           <div className={styles.headerRow}>
