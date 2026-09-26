@@ -139,6 +139,8 @@
 
 .personCard {
   display: flex;
+  
+  max-width: 1440px;
   padding: 45px 45px 0 45px;
   justify-content: space-between;
   align-items: flex-end;
