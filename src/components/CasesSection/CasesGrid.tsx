@@ -21,11 +21,52 @@ interface CasesGridProps {
 
 export default function CasesGrid({ casesData, lang, labels }: CasesGridProps) {
   const [showAll, setShowAll] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('Все');
 
-  const displayedCases = showAll ? casesData : casesData.slice(0, 6);
+  const categories = ['Все', 'Государственные', 'Корпоративные', 'Медиа', 'Финтех и Web3', 'Blockchain/Web3'];
+  
+  const slugCategoryMap: Record<string, string> = {
+    "president": "Государственные",
+    "digital-tajikistan": "Государственные",
+    "sohktor": "Государственные",
+    "mavji-somon": "Медиа",
+    "livechat-tj": "Корпоративные",
+    "telecomm": "Корпоративные",
+    "navo": "Медиа",
+    "somon-tv": "Медиа",
+    "zudsms": "Финтех и Web3",
+    "sunduk-tv": "Медиа",
+    "onlinepay": "Финтех и Web3",
+    "arcanefinance": "Blockchain/Web3",
+    "arcane-launchpad": "Blockchain/Web3",
+    "reactorexchange": "Blockchain/Web3",
+    "reactor-exchange": "Blockchain/Web3"
+  };
+
+  const filteredCases = activeCategory === 'Все'
+    ? casesData
+    : casesData.filter(c => slugCategoryMap[c.slug] === activeCategory);
+
+  const displayedCases = showAll ? filteredCases : filteredCases.slice(0, 6);
 
   return (
     <>
+      <div className={styles.categoriesList}>
+        {categories.map((cat, index) => (
+          <FadeIn key={cat} delay={index * 0.1} direction="up">
+            <button
+              onClick={() => {
+                setActiveCategory(cat);
+                setShowAll(false);
+              }}
+              className={`${styles.categoryBtn} ${activeCategory === cat ? styles.categoryBtnActive : ''}`}
+            >
+              {cat}
+            </button>
+          </FadeIn>
+        ))}
+      </div>
+
       <div className={styles.cardsGrid}>
         {displayedCases.map((e, i) => (
           <FadeIn key={e.slug} delay={(i % 6) * 0.15} direction="up" fullWidth style={{ height: '100%' }}>
