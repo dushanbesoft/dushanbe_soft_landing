@@ -684,8 +684,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Meeting Publication",
               tj: "Нашр дар бораи маҷлис",
             },
-            imageSrc: "/images/projects/president/government-meeting-detail.webp",
-            BannerSrc: "/images/projects/president/government-meeting-detail.webp",
+            imageSrc:
+              "/images/projects/president/government-meeting-detail.webp",
+            BannerSrc:
+              "/images/projects/president/government-meeting-detail.webp",
             shortInfo: {
               ru: "Детальная публикация заседания с фотогалереей",
               en: "A detailed meeting publication with a photo gallery",
@@ -724,8 +726,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Executive Office Regulations",
               tj: "Низомнома",
             },
-            imageSrc: "/images/projects/president/executive-office-regulations.webp",
-            BannerSrc: "/images/projects/president/executive-office-regulations.webp",
+            imageSrc:
+              "/images/projects/president/executive-office-regulations.webp",
+            BannerSrc:
+              "/images/projects/president/executive-office-regulations.webp",
             shortInfo: {
               ru: "Положение об исполнительном аппарате президента",
               en: "Regulations governing the president’s executive office",
@@ -744,8 +748,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Executive Office Structure",
               tj: "Сохтор",
             },
-            imageSrc: "/images/projects/president/executive-office-structure.webp",
-            BannerSrc: "/images/projects/president/executive-office-structure.webp",
+            imageSrc:
+              "/images/projects/president/executive-office-structure.webp",
+            BannerSrc:
+              "/images/projects/president/executive-office-structure.webp",
             shortInfo: {
               ru: "Перечень подразделений исполнительного аппарата",
               en: "A list of executive-office departments",
@@ -764,8 +770,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Presidential Assistants",
               tj: "Ёрдамчиёни Президент",
             },
-            imageSrc: "/images/projects/president/executive-office-assistants.webp",
-            BannerSrc: "/images/projects/president/executive-office-assistants.webp",
+            imageSrc:
+              "/images/projects/president/executive-office-assistants.webp",
+            BannerSrc:
+              "/images/projects/president/executive-office-assistants.webp",
             shortInfo: {
               ru: "Профили помощников президента по направлениям",
               en: "Profiles of presidential assistants by area",
@@ -784,8 +792,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Presidential Press Service",
               tj: "Хадамоти матбуот",
             },
-            imageSrc: "/images/projects/president/executive-office-press-service.webp",
-            BannerSrc: "/images/projects/president/executive-office-press-service.webp",
+            imageSrc:
+              "/images/projects/president/executive-office-press-service.webp",
+            BannerSrc:
+              "/images/projects/president/executive-office-press-service.webp",
             shortInfo: {
               ru: "Информация о работе службы печати президента",
               en: "Information about the presidential press service",
@@ -804,8 +814,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Appeal to the President",
               tj: "Нома ба Президент",
             },
-            imageSrc: "/images/projects/president/presidential-appeal-form.webp",
-            BannerSrc: "/images/projects/president/presidential-appeal-form.webp",
+            imageSrc:
+              "/images/projects/president/presidential-appeal-form.webp",
+            BannerSrc:
+              "/images/projects/president/presidential-appeal-form.webp",
             shortInfo: {
               ru: "Форма для отправки личного обращения",
               en: "Form for submitting a personal appeal",
@@ -824,8 +836,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Appeal Attachments",
               tj: "Замимаҳо ба муроҷиат",
             },
-            imageSrc: "/images/projects/president/presidential-appeal-attachments.webp",
-            BannerSrc: "/images/projects/president/presidential-appeal-attachments.webp",
+            imageSrc:
+              "/images/projects/president/presidential-appeal-attachments.webp",
+            BannerSrc:
+              "/images/projects/president/presidential-appeal-attachments.webp",
             shortInfo: {
               ru: "Загрузка файлов и финальная отправка обращения",
               en: "File upload and final appeal submission",
@@ -1254,7 +1268,11 @@ export const ProductSite: ProductSiteItem[] = [
         ],
       },
       {
-        tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели маъмурият" },
+        tabName: {
+          ru: "Админ-панель",
+          en: "Admin Panel",
+          tj: "Панели маъмурият",
+        },
         items: [
           {
             slug: "control-panel-page",
@@ -1423,8 +1441,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "CRM: Complaints and Inquiries",
               tj: "CRM: Шикоятҳо ва дархостҳо",
             },
-            imageSrc: "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
-            BannerSrc: "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
+            imageSrc:
+              "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
+            BannerSrc:
+              "/images/projects/pic/admin/crm-complaints-and-Inquiries-page.png",
             shortInfo: {
               ru: "Управление разделом «CRM: Жалобы и запросы»",
               en: "Management of the «CRM: Complaints and Inquiries» section",
@@ -1464,7 +1484,8 @@ export const ProductSite: ProductSiteItem[] = [
               tj: "Усулҳои харид",
             },
             imageSrc: "/images/projects/pic/admin/procurement-methods-page.png",
-            BannerSrc: "/images/projects/pic/admin/procurement-methods-page.png",
+            BannerSrc:
+              "/images/projects/pic/admin/procurement-methods-page.png",
             shortInfo: {
               ru: "Управление разделом «Методы закупок»",
               en: "Management of the «Procurement Methods» section",
@@ -1483,8 +1504,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Public Procurement Portal",
               tj: "Портали хариди давлатӣ",
             },
-            imageSrc: "/images/projects/pic/admin/public-procurement-portal-page.png",
-            BannerSrc: "/images/projects/pic/admin/public-procurement-portal-page.png",
+            imageSrc:
+              "/images/projects/pic/admin/public-procurement-portal-page.png",
+            BannerSrc:
+              "/images/projects/pic/admin/public-procurement-portal-page.png",
             shortInfo: {
               ru: "Управление разделом «Портал госзакупок»",
               en: "Management of the «Public Procurement Portal» section",
@@ -1563,8 +1586,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Organizational Structure",
               tj: "Сохтори ташкилӣ",
             },
-            imageSrc: "/images/projects/pic/admin/organizational-structure-page.png",
-            BannerSrc: "/images/projects/pic/admin/organizational-structure-page.png",
+            imageSrc:
+              "/images/projects/pic/admin/organizational-structure-page.png",
+            BannerSrc:
+              "/images/projects/pic/admin/organizational-structure-page.png",
             shortInfo: {
               ru: "Управление разделом «Организационная структура»",
               en: "Management of the «Organizational Structure» section",
@@ -1603,8 +1628,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Q&A",
               tj: "Саволҳо ва ҷавобҳо",
             },
-            imageSrc: "/images/projects/pic/admin/questions-and-answers-page.png",
-            BannerSrc: "/images/projects/pic/admin/questions-and-answers-page.png",
+            imageSrc:
+              "/images/projects/pic/admin/questions-and-answers-page.png",
+            BannerSrc:
+              "/images/projects/pic/admin/questions-and-answers-page.png",
             shortInfo: {
               ru: "Управление разделом «Вопросы и ответы»",
               en: "Management of the «Q&A» section",
@@ -1623,8 +1650,10 @@ export const ProductSite: ProductSiteItem[] = [
               en: "Administrator's Guide",
               tj: "Роҳнамои маъмур",
             },
-            imageSrc: "/images/projects/pic/admin/administrator's-guide-page.png",
-            BannerSrc: "/images/projects/pic/admin/administrator's-guide-page.png",
+            imageSrc:
+              "/images/projects/pic/admin/administrator's-guide-page.png",
+            BannerSrc:
+              "/images/projects/pic/admin/administrator's-guide-page.png",
             shortInfo: {
               ru: "Управление разделом «Руководство администратора»",
               en: "Management of the «Administrator's Guide» section",
@@ -4331,7 +4360,11 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
         items: [
           {
             slug: "hero",
-            title: { ru: "Главный экран", en: "Main screen", tj: "Экрани асосӣ" },
+            title: {
+              ru: "Главный экран",
+              en: "Main screen",
+              tj: "Экрани асосӣ",
+            },
             imageSrc: "/images/projects/livechat/hero-1700.webp",
             BannerSrc: "/images/projects/livechat/hero-1700.webp",
             shortInfo: {
@@ -4407,7 +4440,11 @@ This structure helps visitors understand LiveChat, review the terms and choose t
           },
           {
             slug: "solution",
-            title: { ru: "Решение для бизнеса", en: "Business solution", tj: "Ҳалли тиҷоратӣ" },
+            title: {
+              ru: "Решение для бизнеса",
+              en: "Business solution",
+              tj: "Ҳалли тиҷоратӣ",
+            },
             imageSrc: "/images/projects/livechat/solution-1700.webp",
             BannerSrc: "/images/projects/livechat/solution-1700.webp",
             shortInfo: {
@@ -4559,7 +4596,11 @@ The section helps visitors relate product capabilities to their support needs an
           },
           {
             slug: "how-it-works",
-            title: { ru: "Как это работает", en: "How it works", tj: "Тарзи кор" },
+            title: {
+              ru: "Как это работает",
+              en: "How it works",
+              tj: "Тарзи кор",
+            },
             imageSrc: "/images/projects/livechat/how-it-works-1700.webp",
             BannerSrc: "/images/projects/livechat/how-it-works-1700.webp",
             shortInfo: {
@@ -4635,7 +4676,11 @@ The customisation section begins below, introducing adaptation of the chat desig
           },
           {
             slug: "customization",
-            title: { ru: "Кастомизация", en: "Customisation", tj: "Танзими намуди зоҳирӣ" },
+            title: {
+              ru: "Кастомизация",
+              en: "Customisation",
+              tj: "Танзими намуди зоҳирӣ",
+            },
             imageSrc: "/images/projects/livechat/customization-1700.webp",
             BannerSrc: "/images/projects/livechat/customization-1700.webp",
             shortInfo: {
@@ -4939,7 +4984,11 @@ The section translates online chat capabilities into understandable applications
           },
           {
             slug: "support-faq",
-            title: { ru: "Поддержка и FAQ", en: "Support and FAQ", tj: "Дастгирӣ ва саволҳои маъмул" },
+            title: {
+              ru: "Поддержка и FAQ",
+              en: "Support and FAQ",
+              tj: "Дастгирӣ ва саволҳои маъмул",
+            },
             imageSrc: "/images/projects/livechat/support-faq-1700.webp",
             BannerSrc: "/images/projects/livechat/support-faq-1700.webp",
             shortInfo: {
@@ -5015,9 +5064,14 @@ Consistent cards with coloured icons help visitors compare support options. Comb
           },
           {
             slug: "why-livechat-footer",
-            title: { ru: "Почему LiveChat и подвал сайта", en: "Why LiveChat and site footer", tj: "Чаро LiveChat ва поёни сомона" },
+            title: {
+              ru: "Почему LiveChat и подвал сайта",
+              en: "Why LiveChat and site footer",
+              tj: "Чаро LiveChat ва поёни сомона",
+            },
             imageSrc: "/images/projects/livechat/why-livechat-footer-1700.webp",
-            BannerSrc: "/images/projects/livechat/why-livechat-footer-1700.webp",
+            BannerSrc:
+              "/images/projects/livechat/why-livechat-footer-1700.webp",
             shortInfo: {
               ru: "Итоговая презентация возможностей, бесплатный старт и навигация в подвале",
               en: "Closing feature overview, free start and footer navigation",
@@ -5096,7 +5150,11 @@ The screen supports two journeys: getting started or continuing to explore the s
         items: [
           {
             slug: "login",
-            title: { ru: "Вход в личный кабинет", en: "Account sign-in", tj: "Воридшавӣ ба кабинети шахсӣ" },
+            title: {
+              ru: "Вход в личный кабинет",
+              en: "Account sign-in",
+              tj: "Воридшавӣ ба кабинети шахсӣ",
+            },
             imageSrc: "/images/projects/livechat/login-full.webp",
             BannerSrc: "/images/projects/livechat/login-full.webp",
             shortInfo: {
@@ -5172,7 +5230,11 @@ The page brings together form-based sign-in, Google authentication and a registr
           },
           {
             slug: "register",
-            title: { ru: "Регистрация аккаунта", en: "Account registration", tj: "Сабти номи ҳисоб" },
+            title: {
+              ru: "Регистрация аккаунта",
+              en: "Account registration",
+              tj: "Сабти номи ҳисоб",
+            },
             imageSrc: "/images/projects/livechat/register-full.webp",
             BannerSrc: "/images/projects/livechat/register-full.webp",
             shortInfo: {
@@ -5248,7 +5310,11 @@ This composition makes getting started clear: fields follow a sequence, the alte
           },
           {
             slug: "register-filled",
-            title: { ru: "Заполненная форма регистрации", en: "Completed registration form", tj: "Шакли пуршудаи сабти ном" },
+            title: {
+              ru: "Заполненная форма регистрации",
+              en: "Completed registration form",
+              tj: "Шакли пуршудаи сабти ном",
+            },
             imageSrc: "/images/projects/livechat/register-filled-full.webp",
             BannerSrc: "/images/projects/livechat/register-filled-full.webp",
             shortInfo: {
@@ -5324,9 +5390,14 @@ The screenshot presents an intermediate registration state: details are entered,
           },
           {
             slug: "widget-setup-step-1",
-            title: { ru: "Настройка виджета — шаг 1", en: "Widget setup — step 1", tj: "Танзими виджет — қадами 1" },
+            title: {
+              ru: "Настройка виджета — шаг 1",
+              en: "Widget setup — step 1",
+              tj: "Танзими виджет — қадами 1",
+            },
             imageSrc: "/images/projects/livechat/widget-setup-step-1-full.webp",
-            BannerSrc: "/images/projects/livechat/widget-setup-step-1-full.webp",
+            BannerSrc:
+              "/images/projects/livechat/widget-setup-step-1-full.webp",
             shortInfo: {
               ru: "Настройка имени, аватара и цветов оператора с предпросмотром виджета",
               en: "Configure the operator name, avatar and colours with a widget preview",
@@ -5400,9 +5471,15 @@ Separating the form from the chat sample helps relate the options to the interfa
           },
           {
             slug: "widget-setup-step-1-filled",
-            title: { ru: "Настройка виджета — данные оператора", en: "Widget setup — operator details", tj: "Танзими виджет — маълумоти оператор" },
-            imageSrc: "/images/projects/livechat/widget-setup-step-1-filled-full.webp",
-            BannerSrc: "/images/projects/livechat/widget-setup-step-1-filled-full.webp",
+            title: {
+              ru: "Настройка виджета — данные оператора",
+              en: "Widget setup — operator details",
+              tj: "Танзими виджет — маълумоти оператор",
+            },
+            imageSrc:
+              "/images/projects/livechat/widget-setup-step-1-filled-full.webp",
+            BannerSrc:
+              "/images/projects/livechat/widget-setup-step-1-filled-full.webp",
             shortInfo: {
               ru: "Заполненные данные оператора и загруженный аватар в предпросмотре виджета",
               en: "Entered operator details and an uploaded avatar shown in the widget preview",
@@ -5475,84 +5552,88 @@ This example shows how entered fields relate to the chat’s appearance. Placing
             },
           },
           {
-            "slug": "widget-setup-step-2",
-            "title": {
-              "ru": "Приветственное сообщение",
-              "en": "Welcome message",
-              "tj": "Паёми истиқболӣ"
+            slug: "widget-setup-step-2",
+            title: {
+              ru: "Приветственное сообщение",
+              en: "Welcome message",
+              tj: "Паёми истиқболӣ",
             },
-            "imageSrc": "/images/projects/livechat/widget-setup-step-2-full.webp",
-            "BannerSrc": "/images/projects/livechat/widget-setup-step-2-full.webp",
-            "shortInfo": {
-              "ru": "Выбор приветствия с отображением текста в предпросмотре чата",
-              "en": "Choose a greeting and see its text in the chat preview",
-              "tj": "Интихоби паёми истиқболӣ бо намоиши матн дар пешнамоиши чат"
+            imageSrc: "/images/projects/livechat/widget-setup-step-2-full.webp",
+            BannerSrc:
+              "/images/projects/livechat/widget-setup-step-2-full.webp",
+            shortInfo: {
+              ru: "Выбор приветствия с отображением текста в предпросмотре чата",
+              en: "Choose a greeting and see its text in the chat preview",
+              tj: "Интихоби паёми истиқболӣ бо намоиши матн дар пешнамоиши чат",
             },
-            "fullInfo": {
-              "ru": "Архитектура и функциональность выбора приветствия\n\nВторой шаг мастера LiveChat посвящён сообщению, которое посетитель увидит при открытии чата. Форма выбора и предпросмотр расположены рядом, позволяя оценить текст в контексте виджета.\n\n1. Готовые варианты\n\nВ карточке представлены три шаблона: короткое предложение помощи, приглашение написать вопрос и сообщение об акции. Каждый вариант оформлен отдельным блоком с переключателем. Первый шаблон выбран и выделен зелёной рамкой.\n\n2. Собственный вариант\n\nПункт «Другое» предлагает альтернативу готовым текстам. На снимке он не выбран, поэтому поле для собственного сообщения не показано. Все варианты собраны в одном списке для последовательного выбора.\n\n3. Отображение в чате\n\nСправа выбранное приветствие показано в пузыре сообщения с отметкой времени. Над ним сохранены имя, отдел и аватар оператора. Такое представление помогает оценить длину и переносы текста в узком окне чата.\n\n4. Навигация по шагам\n\nПервый этап отмечен галочкой, второй выделен как текущий. Кнопки «Назад» и «Далее» находятся под карточкой и обозначают переходы между этапами.\n\nЭкран связывает выбор приветствия с его представлением посетителю. Готовые шаблоны упрощают настройку первого сообщения.",
-              "en": "Architecture and functionality of greeting selection\n\nThe second LiveChat setup step configures the message visitors see when opening chat. The selection form and preview sit side by side so the text can be assessed within the widget.\n\n1. Preset messages\n\nThree templates offer a brief greeting, an invitation to ask a question and a promotion message. Each occupies a separate block with a radio control. The first template is selected and outlined in green.\n\n2. Custom option\n\nAn Other option provides an alternative to the preset texts. It is not selected in this screenshot, so no custom message field is shown. All choices appear in a single list.\n\n3. Chat presentation\n\nThe selected greeting appears in a message bubble with a timestamp in the preview. The operator name, department and avatar remain above it. This presentation helps assess text length and wrapping in a narrow chat window.\n\n4. Step navigation\n\nThe first stage has a check mark, and the second is highlighted as current. Back and Next controls below the card indicate movement between stages.\n\nThe screen connects greeting selection with the visitor’s view. Preset templates simplify configuration of the first message.",
-              "tj": "Сохтор ва вазифаҳои интихоби паёми истиқболӣ\n\nҚадами дуюми танзими LiveChat ба паёме бахшида шудааст, ки меҳмон ҳангоми кушодани чат мебинад. Шакли интихоб ва пешнамоиш дар паҳлуи ҳам ҷойгиранд.\n\n1. Матнҳои тайёр\n\nСе намуна пешниҳод шудаанд: пешниҳоди кӯтоҳи кумак, даъват ба навиштани савол ва паём дар бораи аксия. Ҳар вариант блоки алоҳида бо интихобкунанда дорад. Намунаи аввал интихоб шуда, бо чорчӯбаи сабз ҷудо шудааст.\n\n2. Варианти дигар\n\nБанди «Дигар» роҳи алтернативиро ба матнҳои тайёр пешниҳод мекунад. Дар тасвир он интихоб нашудааст ва майдони матни шахсӣ нишон дода намешавад. Ҳамаи интихобҳо дар як рӯйхат ҷамъ шудаанд.\n\n3. Намоиш дар чат\n\nПаёми интихобшуда дар пешнамоиш бо вақти ирсол дида мешавад. Ном, шуъба ва аватари оператор дар боло мемонанд. Ин намоиш барои арзёбии дарозӣ ва тақсимшавии матн дар равзанаи чат кумак мекунад.\n\n4. Гузариш байни қадамҳо\n\nҚадами аввал бо аломати иҷро ва дуюм ҳамчун қадами ҷорӣ нишон дода шудааст. Тугмаҳои «Қафо» ва «Баъдӣ» дар зери корт ҷойгиранд.\n\nЭкран интихоби паёмро бо намуди он барои меҳмон мепайвандад. Намунаҳои тайёр танзими паёми аввалро осон мекунанд."
-            }
+            fullInfo: {
+              ru: "Архитектура и функциональность выбора приветствия\n\nВторой шаг мастера LiveChat посвящён сообщению, которое посетитель увидит при открытии чата. Форма выбора и предпросмотр расположены рядом, позволяя оценить текст в контексте виджета.\n\n1. Готовые варианты\n\nВ карточке представлены три шаблона: короткое предложение помощи, приглашение написать вопрос и сообщение об акции. Каждый вариант оформлен отдельным блоком с переключателем. Первый шаблон выбран и выделен зелёной рамкой.\n\n2. Собственный вариант\n\nПункт «Другое» предлагает альтернативу готовым текстам. На снимке он не выбран, поэтому поле для собственного сообщения не показано. Все варианты собраны в одном списке для последовательного выбора.\n\n3. Отображение в чате\n\nСправа выбранное приветствие показано в пузыре сообщения с отметкой времени. Над ним сохранены имя, отдел и аватар оператора. Такое представление помогает оценить длину и переносы текста в узком окне чата.\n\n4. Навигация по шагам\n\nПервый этап отмечен галочкой, второй выделен как текущий. Кнопки «Назад» и «Далее» находятся под карточкой и обозначают переходы между этапами.\n\nЭкран связывает выбор приветствия с его представлением посетителю. Готовые шаблоны упрощают настройку первого сообщения.",
+              en: "Architecture and functionality of greeting selection\n\nThe second LiveChat setup step configures the message visitors see when opening chat. The selection form and preview sit side by side so the text can be assessed within the widget.\n\n1. Preset messages\n\nThree templates offer a brief greeting, an invitation to ask a question and a promotion message. Each occupies a separate block with a radio control. The first template is selected and outlined in green.\n\n2. Custom option\n\nAn Other option provides an alternative to the preset texts. It is not selected in this screenshot, so no custom message field is shown. All choices appear in a single list.\n\n3. Chat presentation\n\nThe selected greeting appears in a message bubble with a timestamp in the preview. The operator name, department and avatar remain above it. This presentation helps assess text length and wrapping in a narrow chat window.\n\n4. Step navigation\n\nThe first stage has a check mark, and the second is highlighted as current. Back and Next controls below the card indicate movement between stages.\n\nThe screen connects greeting selection with the visitor’s view. Preset templates simplify configuration of the first message.",
+              tj: "Сохтор ва вазифаҳои интихоби паёми истиқболӣ\n\nҚадами дуюми танзими LiveChat ба паёме бахшида шудааст, ки меҳмон ҳангоми кушодани чат мебинад. Шакли интихоб ва пешнамоиш дар паҳлуи ҳам ҷойгиранд.\n\n1. Матнҳои тайёр\n\nСе намуна пешниҳод шудаанд: пешниҳоди кӯтоҳи кумак, даъват ба навиштани савол ва паём дар бораи аксия. Ҳар вариант блоки алоҳида бо интихобкунанда дорад. Намунаи аввал интихоб шуда, бо чорчӯбаи сабз ҷудо шудааст.\n\n2. Варианти дигар\n\nБанди «Дигар» роҳи алтернативиро ба матнҳои тайёр пешниҳод мекунад. Дар тасвир он интихоб нашудааст ва майдони матни шахсӣ нишон дода намешавад. Ҳамаи интихобҳо дар як рӯйхат ҷамъ шудаанд.\n\n3. Намоиш дар чат\n\nПаёми интихобшуда дар пешнамоиш бо вақти ирсол дида мешавад. Ном, шуъба ва аватари оператор дар боло мемонанд. Ин намоиш барои арзёбии дарозӣ ва тақсимшавии матн дар равзанаи чат кумак мекунад.\n\n4. Гузариш байни қадамҳо\n\nҚадами аввал бо аломати иҷро ва дуюм ҳамчун қадами ҷорӣ нишон дода шудааст. Тугмаҳои «Қафо» ва «Баъдӣ» дар зери корт ҷойгиранд.\n\nЭкран интихоби паёмро бо намуди он барои меҳмон мепайвандад. Намунаҳои тайёр танзими паёми аввалро осон мекунанд.",
+            },
           },
           {
-            "slug": "widget-setup-step-3",
-            "title": {
-              "ru": "Информация об аккаунте",
-              "en": "Account information",
-              "tj": "Маълумоти ҳисоб"
+            slug: "widget-setup-step-3",
+            title: {
+              ru: "Информация об аккаунте",
+              en: "Account information",
+              tj: "Маълумоти ҳисоб",
             },
-            "imageSrc": "/images/projects/livechat/widget-setup-step-3-full.webp",
-            "BannerSrc": "/images/projects/livechat/widget-setup-step-3-full.webp",
-            "shortInfo": {
-              "ru": "Указание адреса сайта и контактного телефона на третьем шаге настройки",
-              "en": "Enter the website address and contact phone at setup step three",
-              "tj": "Ворид кардани суроғаи сайт ва телефони тамос дар қадами сеюм"
+            imageSrc: "/images/projects/livechat/widget-setup-step-3-full.webp",
+            BannerSrc:
+              "/images/projects/livechat/widget-setup-step-3-full.webp",
+            shortInfo: {
+              ru: "Указание адреса сайта и контактного телефона на третьем шаге настройки",
+              en: "Enter the website address and contact phone at setup step three",
+              tj: "Ворид кардани суроғаи сайт ва телефони тамос дар қадами сеюм",
             },
-            "fullInfo": {
-              "ru": "Архитектура и функциональность информации об аккаунте\n\nТретий шаг мастера собирает основные сведения о бизнесе. Белая карточка содержит заголовок «Информация об аккаунте», короткое пояснение и два поля.\n\n1. Адрес сайта\n\nПоле «URL сайта» содержит адрес с протоколом HTTPS. Подпись над полем сохраняет назначение данных после заполнения. На снимке используется тестовый адрес.\n\n2. Контактный телефон\n\nНиже расположен номер телефона с международным кодом. Поля сайта и телефона образуют компактную форму без дополнительных разделов. Результат проверки или сохранения данных на экране не показан.\n\n3. Сохранение контекста виджета\n\nСправа остаётся предпросмотр с ранее заданным аватаром, именем, отделом и приветствием. Сведения о бизнесе вводятся рядом с уже оформленным чатом.\n\n4. Продолжение мастера\n\nПервые два шага отмечены как пройденные, третий выделен зелёным контуром. Под формой доступны «Назад» и «Далее».\n\nЭкран выделяет сбор контактных сведений в отдельный короткий этап. Предпросмотр и индикатор прогресса сохраняют связь с общей настройкой виджета.",
-              "en": "Architecture and functionality of account information\n\nThe third wizard step collects basic business details. A white card contains an Account information heading, a short explanation and two fields.\n\n1. Website address\n\nThe Website URL field contains an address using HTTPS. Its label remains above the entered value. The screenshot uses a test address.\n\n2. Contact phone\n\nA phone number with an international prefix appears below. The website and phone fields form a compact form without additional sections. No validation or save result is displayed.\n\n3. Widget context\n\nThe preview on the right retains the previously configured avatar, name, department and greeting. Business details are entered beside the configured chat.\n\n4. Wizard navigation\n\nThe first two steps are marked complete, while the third has a green outline. Back and Next controls appear below the form.\n\nThis screen gives contact details their own brief stage. The preview and progress indicator maintain the connection to the wider widget setup.",
-              "tj": "Сохтор ва вазифаҳои маълумоти ҳисоб\n\nҚадами сеюми устод маълумоти асосии тиҷоратро ҷамъ мекунад. Корти сафед сарлавҳаи «Маълумоти ҳисоб», шарҳи кӯтоҳ ва ду майдон дорад.\n\n1. Суроғаи сайт\n\nМайдони «URL-и сайт» суроғаеро бо HTTPS дар бар мегирад. Номи майдон дар болои арзиш мемонад. Дар тасвир суроғаи санҷишӣ истифода шудааст.\n\n2. Телефони тамос\n\nДар поён рақами телефон бо рамзи байналмилалӣ ҷойгир аст. Майдонҳои сайт ва телефон шакли паймонро ташкил медиҳанд. Натиҷаи санҷиш ё сабти маълумот нишон дода нашудааст.\n\n3. Пешнамоиши виджет\n\nДар тарафи рост аватар, ном, шуъба ва паёми қаблан интихобшуда нигоҳ дошта шудаанд. Маълумоти тиҷорат дар паҳлуи чати танзимшуда ворид мешавад.\n\n4. Идомаи устод\n\nДу қадами аввал ҳамчун иҷрошуда нишон дода шудаанд ва қадами сеюм ҳалқаи сабз дорад. Дар зери шакл тугмаҳои «Қафо» ва «Баъдӣ» ҷойгиранд.\n\nЭкран маълумоти тамосро ба марҳилаи кӯтоҳи алоҳида ҷудо мекунад. Пешнамоиш ва нишондиҳандаи пешрафт робитаро бо танзими умумии виджет нигоҳ медоранд."
-            }
+            fullInfo: {
+              ru: "Архитектура и функциональность информации об аккаунте\n\nТретий шаг мастера собирает основные сведения о бизнесе. Белая карточка содержит заголовок «Информация об аккаунте», короткое пояснение и два поля.\n\n1. Адрес сайта\n\nПоле «URL сайта» содержит адрес с протоколом HTTPS. Подпись над полем сохраняет назначение данных после заполнения. На снимке используется тестовый адрес.\n\n2. Контактный телефон\n\nНиже расположен номер телефона с международным кодом. Поля сайта и телефона образуют компактную форму без дополнительных разделов. Результат проверки или сохранения данных на экране не показан.\n\n3. Сохранение контекста виджета\n\nСправа остаётся предпросмотр с ранее заданным аватаром, именем, отделом и приветствием. Сведения о бизнесе вводятся рядом с уже оформленным чатом.\n\n4. Продолжение мастера\n\nПервые два шага отмечены как пройденные, третий выделен зелёным контуром. Под формой доступны «Назад» и «Далее».\n\nЭкран выделяет сбор контактных сведений в отдельный короткий этап. Предпросмотр и индикатор прогресса сохраняют связь с общей настройкой виджета.",
+              en: "Architecture and functionality of account information\n\nThe third wizard step collects basic business details. A white card contains an Account information heading, a short explanation and two fields.\n\n1. Website address\n\nThe Website URL field contains an address using HTTPS. Its label remains above the entered value. The screenshot uses a test address.\n\n2. Contact phone\n\nA phone number with an international prefix appears below. The website and phone fields form a compact form without additional sections. No validation or save result is displayed.\n\n3. Widget context\n\nThe preview on the right retains the previously configured avatar, name, department and greeting. Business details are entered beside the configured chat.\n\n4. Wizard navigation\n\nThe first two steps are marked complete, while the third has a green outline. Back and Next controls appear below the form.\n\nThis screen gives contact details their own brief stage. The preview and progress indicator maintain the connection to the wider widget setup.",
+              tj: "Сохтор ва вазифаҳои маълумоти ҳисоб\n\nҚадами сеюми устод маълумоти асосии тиҷоратро ҷамъ мекунад. Корти сафед сарлавҳаи «Маълумоти ҳисоб», шарҳи кӯтоҳ ва ду майдон дорад.\n\n1. Суроғаи сайт\n\nМайдони «URL-и сайт» суроғаеро бо HTTPS дар бар мегирад. Номи майдон дар болои арзиш мемонад. Дар тасвир суроғаи санҷишӣ истифода шудааст.\n\n2. Телефони тамос\n\nДар поён рақами телефон бо рамзи байналмилалӣ ҷойгир аст. Майдонҳои сайт ва телефон шакли паймонро ташкил медиҳанд. Натиҷаи санҷиш ё сабти маълумот нишон дода нашудааст.\n\n3. Пешнамоиши виджет\n\nДар тарафи рост аватар, ном, шуъба ва паёми қаблан интихобшуда нигоҳ дошта шудаанд. Маълумоти тиҷорат дар паҳлуи чати танзимшуда ворид мешавад.\n\n4. Идомаи устод\n\nДу қадами аввал ҳамчун иҷрошуда нишон дода шудаанд ва қадами сеюм ҳалқаи сабз дорад. Дар зери шакл тугмаҳои «Қафо» ва «Баъдӣ» ҷойгиранд.\n\nЭкран маълумоти тамосро ба марҳилаи кӯтоҳи алоҳида ҷудо мекунад. Пешнамоиш ва нишондиҳандаи пешрафт робитаро бо танзими умумии виджет нигоҳ медоранд.",
+            },
           },
           {
-            "slug": "widget-setup-step-4",
-            "title": {
-              "ru": "Цель использования",
-              "en": "Purpose of use",
-              "tj": "Мақсади истифода"
+            slug: "widget-setup-step-4",
+            title: {
+              ru: "Цель использования",
+              en: "Purpose of use",
+              tj: "Мақсади истифода",
             },
-            "imageSrc": "/images/projects/livechat/widget-setup-step-4-full.webp",
-            "BannerSrc": "/images/projects/livechat/widget-setup-step-4-full.webp",
-            "shortInfo": {
-              "ru": "Выбор основной задачи бизнеса перед завершением настройки",
-              "en": "Choose the main business objective before completing setup",
-              "tj": "Интихоби вазифаи асосии тиҷорат пеш аз анҷоми танзим"
+            imageSrc: "/images/projects/livechat/widget-setup-step-4-full.webp",
+            BannerSrc:
+              "/images/projects/livechat/widget-setup-step-4-full.webp",
+            shortInfo: {
+              ru: "Выбор основной задачи бизнеса перед завершением настройки",
+              en: "Choose the main business objective before completing setup",
+              tj: "Интихоби вазифаи асосии тиҷорат пеш аз анҷоми танзим",
             },
-            "fullInfo": {
-              "ru": "Архитектура и функциональность выбора цели использования\n\nЧетвёртый шаг предлагает выбрать основную задачу, которую пользователь хочет решить с LiveChat. В карточке расположены три варианта с краткими пояснениями.\n\n1. Привлечение лидов\n\nПервый вариант посвящён превращению посетителей сайта в потенциальных клиентов. На снимке его карточка выделена зелёной рамкой.\n\n2. Продажи и клиентский сервис\n\nДва других варианта описывают увеличение продаж и улучшение клиентского сервиса. Пояснения связывают их с отслеживанием сделок, общением и ответами на вопросы клиентов.\n\n3. Предпросмотр чата\n\nСправа сохраняется настроенный виджет с данными оператора и приветствием. Экран показывает выбор цели рядом с текущим оформлением; изменения поведения сервиса по выбранной цели здесь не демонстрируются.\n\n4. Завершение этапа\n\nИндикатор отмечает первые три шага как пройденные и выделяет четвёртый. Под карточкой находятся «Назад» и зелёная кнопка «Завершить».\n\nЭкран помогает обозначить приоритет использования продукта. Краткие пояснения позволяют сравнить задачи перед завершением настройки.",
-              "en": "Architecture and functionality of purpose selection\n\nThe fourth step asks users to choose the main task they want to address with LiveChat. Three options with brief explanations appear in the card.\n\n1. Lead generation\n\nThe first option focuses on turning website visitors into prospective customers. Its card has a green outline in the screenshot.\n\n2. Sales and customer service\n\nThe other two options describe increasing sales and improving customer service. Their explanations refer to tracking deals, communicating and answering customer questions.\n\n3. Chat preview\n\nThe configured widget remains on the right with operator details and the greeting. The screen presents the chosen purpose beside the current design; it does not demonstrate changes to service behaviour based on that choice.\n\n4. Completing the stage\n\nThe indicator marks the first three steps complete and highlights the fourth. Back and a green Finish button appear below the card.\n\nThe screen helps identify the intended product priority. Brief explanations make the objectives easy to compare before completing setup.",
-              "tj": "Сохтор ва вазифаҳои интихоби мақсад\n\nҚадами чорум интихоби вазифаи асосиро барои истифодаи LiveChat пешниҳод мекунад. Дар корт се вариант бо шарҳҳои кӯтоҳ ҷойгир аст.\n\n1. Ҷалби муштариёни эҳтимолӣ\n\nВарианти аввал ба табдил додани меҳмонони сайт ба муштариёни эҳтимолӣ бахшида шудааст. Дар тасвир ин корт бо чорчӯбаи сабз ҷудо шудааст.\n\n2. Фурӯш ва хизматрасонӣ\n\nДу варианти дигар афзоиши фурӯш ва беҳтар кардани хизматрасонӣ ба муштариёнро тавсиф мекунанд. Шарҳҳо пайгирии муомилаҳо, муошират ва ҷавоб ба саволҳоро зикр мекунанд.\n\n3. Пешнамоиши чат\n\nВиджети танзимшуда бо маълумоти оператор ва паёми истиқболӣ дар рост мемонад. Экран мақсадро дар паҳлуи тарҳи ҷорӣ нишон медиҳад; тағйири рафтори хизматрасонӣ аз рӯйи интихоб дар ин ҷо намоиш дода намешавад.\n\n4. Анҷоми марҳила\n\nСе қадами аввал иҷрошудаанд ва чорум ҳамчун ҷорӣ ҷудо шудааст. Тугмаҳои «Қафо» ва сабзи «Анҷом додан» дар зери корт ҷойгиранд.\n\nЭкран барои муайян кардани афзалияти истифодаи маҳсулот кумак мекунад. Шарҳҳои кӯтоҳ муқоисаи вазифаҳоро пеш аз анҷоми танзим осон мекунанд."
-            }
+            fullInfo: {
+              ru: "Архитектура и функциональность выбора цели использования\n\nЧетвёртый шаг предлагает выбрать основную задачу, которую пользователь хочет решить с LiveChat. В карточке расположены три варианта с краткими пояснениями.\n\n1. Привлечение лидов\n\nПервый вариант посвящён превращению посетителей сайта в потенциальных клиентов. На снимке его карточка выделена зелёной рамкой.\n\n2. Продажи и клиентский сервис\n\nДва других варианта описывают увеличение продаж и улучшение клиентского сервиса. Пояснения связывают их с отслеживанием сделок, общением и ответами на вопросы клиентов.\n\n3. Предпросмотр чата\n\nСправа сохраняется настроенный виджет с данными оператора и приветствием. Экран показывает выбор цели рядом с текущим оформлением; изменения поведения сервиса по выбранной цели здесь не демонстрируются.\n\n4. Завершение этапа\n\nИндикатор отмечает первые три шага как пройденные и выделяет четвёртый. Под карточкой находятся «Назад» и зелёная кнопка «Завершить».\n\nЭкран помогает обозначить приоритет использования продукта. Краткие пояснения позволяют сравнить задачи перед завершением настройки.",
+              en: "Architecture and functionality of purpose selection\n\nThe fourth step asks users to choose the main task they want to address with LiveChat. Three options with brief explanations appear in the card.\n\n1. Lead generation\n\nThe first option focuses on turning website visitors into prospective customers. Its card has a green outline in the screenshot.\n\n2. Sales and customer service\n\nThe other two options describe increasing sales and improving customer service. Their explanations refer to tracking deals, communicating and answering customer questions.\n\n3. Chat preview\n\nThe configured widget remains on the right with operator details and the greeting. The screen presents the chosen purpose beside the current design; it does not demonstrate changes to service behaviour based on that choice.\n\n4. Completing the stage\n\nThe indicator marks the first three steps complete and highlights the fourth. Back and a green Finish button appear below the card.\n\nThe screen helps identify the intended product priority. Brief explanations make the objectives easy to compare before completing setup.",
+              tj: "Сохтор ва вазифаҳои интихоби мақсад\n\nҚадами чорум интихоби вазифаи асосиро барои истифодаи LiveChat пешниҳод мекунад. Дар корт се вариант бо шарҳҳои кӯтоҳ ҷойгир аст.\n\n1. Ҷалби муштариёни эҳтимолӣ\n\nВарианти аввал ба табдил додани меҳмонони сайт ба муштариёни эҳтимолӣ бахшида шудааст. Дар тасвир ин корт бо чорчӯбаи сабз ҷудо шудааст.\n\n2. Фурӯш ва хизматрасонӣ\n\nДу варианти дигар афзоиши фурӯш ва беҳтар кардани хизматрасонӣ ба муштариёнро тавсиф мекунанд. Шарҳҳо пайгирии муомилаҳо, муошират ва ҷавоб ба саволҳоро зикр мекунанд.\n\n3. Пешнамоиши чат\n\nВиджети танзимшуда бо маълумоти оператор ва паёми истиқболӣ дар рост мемонад. Экран мақсадро дар паҳлуи тарҳи ҷорӣ нишон медиҳад; тағйири рафтори хизматрасонӣ аз рӯйи интихоб дар ин ҷо намоиш дода намешавад.\n\n4. Анҷоми марҳила\n\nСе қадами аввал иҷрошудаанд ва чорум ҳамчун ҷорӣ ҷудо шудааст. Тугмаҳои «Қафо» ва сабзи «Анҷом додан» дар зери корт ҷойгиранд.\n\nЭкран барои муайян кардани афзалияти истифодаи маҳсулот кумак мекунад. Шарҳҳои кӯтоҳ муқоисаи вазифаҳоро пеш аз анҷоми танзим осон мекунанд.",
+            },
           },
           {
-            "slug": "widget-setup-step-5",
-            "title": {
-              "ru": "Завершение настройки и установка",
-              "en": "Setup completion and installation",
-              "tj": "Анҷоми танзим ва насб"
+            slug: "widget-setup-step-5",
+            title: {
+              ru: "Завершение настройки и установка",
+              en: "Setup completion and installation",
+              tj: "Анҷоми танзим ва насб",
             },
-            "imageSrc": "/images/projects/livechat/widget-setup-step-5-full.webp",
-            "BannerSrc": "/images/projects/livechat/widget-setup-step-5-full.webp",
-            "shortInfo": {
-              "ru": "Подтверждение настройки, код установки виджета и переход в кабинет",
-              "en": "Setup confirmation, widget installation code and access to the account",
-              "tj": "Тасдиқи танзим, рамзи насби виджет ва гузариш ба кабинет"
+            imageSrc: "/images/projects/livechat/widget-setup-step-5-full.webp",
+            BannerSrc:
+              "/images/projects/livechat/widget-setup-step-5-full.webp",
+            shortInfo: {
+              ru: "Подтверждение настройки, код установки виджета и переход в кабинет",
+              en: "Setup confirmation, widget installation code and access to the account",
+              tj: "Тасдиқи танзим, рамзи насби виджет ва гузариш ба кабинет",
             },
-            "fullInfo": {
-              "ru": "Архитектура и функциональность завершения настройки\n\nПятый шаг показывает итог мастера: «Всё готово!». Текст сообщает, что аккаунт настроен, и предлагает установить виджет на сайт. Центральная карточка объединяет подтверждение и инструкцию установки.\n\n1. Статус завершения\n\nПервые четыре шага отмечены галочками, пятый выделен как текущий. Иконка над заголовком визуально подчёркивает успешное завершение настройки аккаунта.\n\n2. Код подключения\n\nВ тёмном блоке HTML представлен фрагмент подключения скрипта и кнопка «Копировать». Инструкция предлагает вставить код перед закрывающим тегом head на каждой странице сайта. Часть адреса на снимке скрыта и не раскрывается в описании.\n\n3. Действия после вставки\n\nСледующая подсказка предлагает сохранить страницу и обновить сайт. Она поясняет, что виджет появится автоматически, а первая загрузка скрипта может занять несколько секунд. Это инструкция интерфейса, а не подтверждение фактической установки на сайт.\n\n4. Переход в кабинет\n\nЗелёная кнопка «Перейти в кабинет» расположена под карточкой. Она завершает последовательность мастера и предлагает продолжить работу в основном интерфейсе.\n\nЭкран отделяет готовность аккаунта от установки виджета. Код, пояснения и переход в кабинет собраны в последовательный сценарий завершения.",
-              "en": "Architecture and functionality of setup completion\n\nThe fifth step presents the wizard’s result: All done. The text states that the account is configured and invites users to install the widget on their website. A central card combines confirmation with installation guidance.\n\n1. Completion status\n\nThe first four steps have check marks and the fifth is current. An icon above the heading visually reinforces completion of account setup.\n\n2. Integration code\n\nA dark HTML block contains a script snippet and a Copy button. The instruction asks users to insert the code before the closing head tag on each website page. Part of the address is obscured in the screenshot and is not reproduced here.\n\n3. After inserting the code\n\nThe next instruction asks users to save the page and refresh the website. It explains that the widget will appear automatically and the initial script load may take a few seconds. This is interface guidance, not confirmation of an actual website installation.\n\n4. Account access\n\nA green Go to account button sits below the card. It ends the wizard sequence and offers a route to continue in the main interface.\n\nThe screen separates account readiness from widget installation. Code, guidance and account access form a clear completion sequence.",
-              "tj": "Сохтор ва вазифаҳои анҷоми танзим\n\nҚадами панҷум натиҷаи устодро бо паёми «Ҳама чиз омода аст!» нишон медиҳад. Матн омода будани ҳисобро хабар дода, насби виджетро ба сайт пешниҳод мекунад. Корти марказӣ тасдиқ ва дастури насбро муттаҳид месозад.\n\n1. Ҳолати анҷом\n\nЧор қадами аввал аломати иҷро доранд ва панҷум қадами ҷорӣ аст. Нишонаи болои сарлавҳа анҷоми танзими ҳисобро таъкид мекунад.\n\n2. Рамзи пайвасткунӣ\n\nБлоки торики HTML порчаи рамзи скрипт ва тугмаи «Нусхабардорӣ»-ро дорад. Дастур ҷойгир кардани рамзро пеш аз теги пӯшидаи head дар ҳар саҳифаи сайт пешниҳод мекунад. Қисме аз суроға дар тасвир пинҳон аст ва дар ин тавсиф оварда намешавад.\n\n3. Амалҳо баъди ҷойгиркунӣ\n\nДастури навбатӣ сабт кардани саҳифа ва навсозии сайтро пешниҳод мекунад. Он мефаҳмонад, ки виджет худкор пайдо мешавад ва боркунии аввал метавонад чанд сония давом кунад. Ин дастури интерфейс аст, на тасдиқи насби воқеӣ ба сайт.\n\n4. Гузариш ба кабинет\n\nТугмаи сабзи «Гузариш ба кабинет» дар зери корт ҷойгир аст. Он пайдарпайии устодро анҷом дода, идомаи корро дар интерфейси асосӣ пешниҳод мекунад.\n\nЭкран омодагии ҳисобро аз насби виджет ҷудо мекунад. Рамз, дастур ва гузариш ба кабинет раванди фаҳмои анҷомро ташкил медиҳанд."
-            }
+            fullInfo: {
+              ru: "Архитектура и функциональность завершения настройки\n\nПятый шаг показывает итог мастера: «Всё готово!». Текст сообщает, что аккаунт настроен, и предлагает установить виджет на сайт. Центральная карточка объединяет подтверждение и инструкцию установки.\n\n1. Статус завершения\n\nПервые четыре шага отмечены галочками, пятый выделен как текущий. Иконка над заголовком визуально подчёркивает успешное завершение настройки аккаунта.\n\n2. Код подключения\n\nВ тёмном блоке HTML представлен фрагмент подключения скрипта и кнопка «Копировать». Инструкция предлагает вставить код перед закрывающим тегом head на каждой странице сайта. Часть адреса на снимке скрыта и не раскрывается в описании.\n\n3. Действия после вставки\n\nСледующая подсказка предлагает сохранить страницу и обновить сайт. Она поясняет, что виджет появится автоматически, а первая загрузка скрипта может занять несколько секунд. Это инструкция интерфейса, а не подтверждение фактической установки на сайт.\n\n4. Переход в кабинет\n\nЗелёная кнопка «Перейти в кабинет» расположена под карточкой. Она завершает последовательность мастера и предлагает продолжить работу в основном интерфейсе.\n\nЭкран отделяет готовность аккаунта от установки виджета. Код, пояснения и переход в кабинет собраны в последовательный сценарий завершения.",
+              en: "Architecture and functionality of setup completion\n\nThe fifth step presents the wizard’s result: All done. The text states that the account is configured and invites users to install the widget on their website. A central card combines confirmation with installation guidance.\n\n1. Completion status\n\nThe first four steps have check marks and the fifth is current. An icon above the heading visually reinforces completion of account setup.\n\n2. Integration code\n\nA dark HTML block contains a script snippet and a Copy button. The instruction asks users to insert the code before the closing head tag on each website page. Part of the address is obscured in the screenshot and is not reproduced here.\n\n3. After inserting the code\n\nThe next instruction asks users to save the page and refresh the website. It explains that the widget will appear automatically and the initial script load may take a few seconds. This is interface guidance, not confirmation of an actual website installation.\n\n4. Account access\n\nA green Go to account button sits below the card. It ends the wizard sequence and offers a route to continue in the main interface.\n\nThe screen separates account readiness from widget installation. Code, guidance and account access form a clear completion sequence.",
+              tj: "Сохтор ва вазифаҳои анҷоми танзим\n\nҚадами панҷум натиҷаи устодро бо паёми «Ҳама чиз омода аст!» нишон медиҳад. Матн омода будани ҳисобро хабар дода, насби виджетро ба сайт пешниҳод мекунад. Корти марказӣ тасдиқ ва дастури насбро муттаҳид месозад.\n\n1. Ҳолати анҷом\n\nЧор қадами аввал аломати иҷро доранд ва панҷум қадами ҷорӣ аст. Нишонаи болои сарлавҳа анҷоми танзими ҳисобро таъкид мекунад.\n\n2. Рамзи пайвасткунӣ\n\nБлоки торики HTML порчаи рамзи скрипт ва тугмаи «Нусхабардорӣ»-ро дорад. Дастур ҷойгир кардани рамзро пеш аз теги пӯшидаи head дар ҳар саҳифаи сайт пешниҳод мекунад. Қисме аз суроға дар тасвир пинҳон аст ва дар ин тавсиф оварда намешавад.\n\n3. Амалҳо баъди ҷойгиркунӣ\n\nДастури навбатӣ сабт кардани саҳифа ва навсозии сайтро пешниҳод мекунад. Он мефаҳмонад, ки виджет худкор пайдо мешавад ва боркунии аввал метавонад чанд сония давом кунад. Ин дастури интерфейс аст, на тасдиқи насби воқеӣ ба сайт.\n\n4. Гузариш ба кабинет\n\nТугмаи сабзи «Гузариш ба кабинет» дар зери корт ҷойгир аст. Он пайдарпайии устодро анҷом дода, идомаи корро дар интерфейси асосӣ пешниҳод мекунад.\n\nЭкран омодагии ҳисобро аз насби виджет ҷудо мекунад. Рамз, дастур ва гузариш ба кабинет раванди фаҳмои анҷомро ташкил медиҳанд.",
+            },
           },
           ...livechatAccountScreens,
         ],
@@ -5679,7 +5760,11 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     slug: "navo",
     projectComponents: [
       {
-        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        tabName: {
+          ru: "Веб-платформа",
+          en: "Web Platform",
+          tj: "Веб-платформа",
+        },
         items: [
           {
             slug: "footer-page",
@@ -5970,7 +6055,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "somon-tv",
-        projectComponents: [
+    projectComponents: [
       {
         tabName: {
           ru: "Веб-платформа",
@@ -6145,8 +6230,10 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               en: "Recommendations and Ratings",
               tj: "Тавсияҳо ва рейтингҳо",
             },
-            imageSrc: "/images/projects/somontv/new-interesting-rating-page.png",
-            BannerSrc: "/images/projects/somontv/new-interesting-rating-page.png",
+            imageSrc:
+              "/images/projects/somontv/new-interesting-rating-page.png",
+            BannerSrc:
+              "/images/projects/somontv/new-interesting-rating-page.png",
             shortInfo: {
               ru: "Обзор раздела «Рекомендации и рейтинги»",
               en: "Overview of the «Recommendations and Ratings» section",
@@ -6253,6 +6340,162 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       "REST API",
     ],
     slug: "zenith-valuation",
+    projectComponents: [
+      {
+        tabName: {
+          ru: "Web-сайт",
+          en: "Website",
+          tj: "Веб-сайт",
+        },
+        items: [
+          {
+            slug: "header",
+            title: {
+              ru: "Главная страница",
+              en: "Homepage",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/zenithvaluation/header-page.png",
+            BannerSrc: "/images/projects/zenithvaluation/header-page.png",
+            shortInfo: {
+              ru: "Обзор главной страницы",
+              en: "Homepage overview",
+              tj: "Баррасии саҳифаи асосӣ",
+            },
+            fullInfo: {
+              ru: "Главная страница Zenith Valuation знакомит с компанией и ее услугами.",
+              en: "The homepage introduces the company and its services.",
+              tj: "Саҳифаи асосӣ ширкат ва хидматҳои онро муаррифӣ мекунад.",
+            },
+          },
+          {
+            slug: "about",
+            title: {
+              ru: "О нас",
+              en: "About Us",
+              tj: "Дар бораи мо",
+            },
+            imageSrc: "/images/projects/zenithvaluation/about-page.png",
+            BannerSrc: "/images/projects/zenithvaluation/about-page.png",
+            shortInfo: {
+              ru: "Информация о компании",
+              en: "Company information",
+              tj: "Маълумот дар бораи ширкат",
+            },
+            fullInfo: {
+              ru: "Подробная информация о миссии, ценностях и истории компании Zenith Valuation.",
+              en: "Detailed info on the mission, values, and history of Zenith Valuation.",
+              tj: "Маълумоти муфассал дар бораи рисолат, арзишҳо ва таърихи ширкат.",
+            },
+          },
+          {
+            slug: "services",
+            title: {
+              ru: "Услуги",
+              en: "Our Services",
+              tj: "Хизматрасониҳои мо",
+            },
+            imageSrc: "/images/projects/zenithvaluation/our-services-page.png",
+            BannerSrc: "/images/projects/zenithvaluation/our-services-page.png",
+            shortInfo: {
+              ru: "Краткий обзор услуг",
+              en: "Services overview",
+              tj: "Баррасии кӯтоҳи хидматҳо",
+            },
+            fullInfo: {
+              ru: "Краткий перечень профессиональных оценочных услуг.",
+              en: "A short list of professional valuation services.",
+              tj: "Номгӯи кӯтоҳи хидматҳои баҳодиҳии касбӣ.",
+            },
+          },
+          {
+            slug: "full-services",
+            title: {
+              ru: "Все услуги",
+              en: "Full Services",
+              tj: "Ҳамаи хидматҳо",
+            },
+            imageSrc:
+              "/images/projects/zenithvaluation/full-our-services-page.png",
+            BannerSrc:
+              "/images/projects/zenithvaluation/full-our-services-page.png",
+            shortInfo: {
+              ru: "Детальный каталог услуг",
+              en: "Detailed services catalog",
+              tj: "Феҳристи муфассали хидматҳо",
+            },
+            fullInfo: {
+              ru: "Развернутый список всех направлений деятельности и консалтинговых услуг.",
+              en: "An expanded list of all business areas and consulting services.",
+              tj: "Рӯйхати васеи ҳамаи самтҳои фаъолият ва хидматҳои консалтингӣ.",
+            },
+          },
+          {
+            slug: "process",
+            title: {
+              ru: "Как мы работаем",
+              en: "How It Works",
+              tj: "Чӣ тавр мо кор мекунем",
+            },
+            imageSrc: "/images/projects/zenithvaluation/process-works-page.png",
+            BannerSrc:
+              "/images/projects/zenithvaluation/process-works-page.png",
+            shortInfo: {
+              ru: "Процесс оказания услуг",
+              en: "Service process",
+              tj: "Раванди пешниҳоди хидматҳо",
+            },
+            fullInfo: {
+              ru: "Пошаговое описание процесса работы с клиентами от заявки до результата.",
+              en: "Step-by-step description of the client workflow from application to result.",
+              tj: "Тавсифи марҳила ба марҳилаи раванди кор бо мизоҷон аз дархост то натиҷа.",
+            },
+          },
+          {
+            slug: "contact",
+            title: {
+              ru: "Контакты",
+              en: "Contacts",
+              tj: "Тамосҳо",
+            },
+            imageSrc: "/images/projects/zenithvaluation/contact-page.png",
+            BannerSrc: "/images/projects/zenithvaluation/contact-page.png",
+            shortInfo: {
+              ru: "Связь с компанией",
+              en: "Contact the company",
+              tj: "Алоқа бо ширкат",
+            },
+            fullInfo: {
+              ru: "Страница с контактной информацией, формой обратной связи и адресом офиса.",
+              en: "Page with contact information, feedback form, and office address.",
+              tj: "Саҳифа бо маълумоти тамос, шакли алоқа ва суроғаи офис.",
+            },
+          },
+          {
+            slug: "team-footer",
+            title: {
+              ru: "Команда и Подвал",
+              en: "Team & Footer",
+              tj: "Даста ва Поён",
+            },
+            imageSrc:
+              "/images/projects/zenithvaluation/owners-founders-advisorsfooter-page.png",
+            BannerSrc:
+              "/images/projects/zenithvaluation/owners-founders-advisorsfooter-page.png",
+            shortInfo: {
+              ru: "Руководство и нижняя часть сайта",
+              en: "Management and site footer",
+              tj: "Роҳбарият ва қисми поёнии сомона",
+            },
+            fullInfo: {
+              ru: "Блок с основателями и советниками компании, а также подвал с важными ссылками.",
+              en: "Section featuring founders and advisors, along with the footer containing important links.",
+              tj: "Блок бо муассисон ва мушовирони ширкат, инчунин поёни сомона бо пайвандҳои муҳим.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     imageSrc: "/images/projects/itrans.webp",
@@ -6277,7 +6520,11 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: zudsmsLandingScreens,
       },
       {
-        tabName: { ru: "Личный кабинет", en: "Personal account", tj: "Кабинети шахсӣ" },
+        tabName: {
+          ru: "Личный кабинет",
+          en: "Personal account",
+          tj: "Кабинети шахсӣ",
+        },
         items: zudsmsAccountScreens,
       },
     ],
@@ -6289,7 +6536,11 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     slug: "sunduk-tv",
     projectComponents: [
       {
-        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        tabName: {
+          ru: "Веб-платформа",
+          en: "Web Platform",
+          tj: "Веб-платформа",
+        },
         items: [
           {
             slug: "header-page",
@@ -6358,8 +6609,10 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               en: "Choose Package",
               tj: "Интихоби баста",
             },
-            imageSrc: "/images/projects/sandukTV/decide-on-the-package-page.png",
-            BannerSrc: "/images/projects/sandukTV/decide-on-the-package-page.png",
+            imageSrc:
+              "/images/projects/sandukTV/decide-on-the-package-page.png",
+            BannerSrc:
+              "/images/projects/sandukTV/decide-on-the-package-page.png",
             shortInfo: {
               ru: "Обзор раздела «Выбор пакета»",
               en: "Overview of the «Choose Package» section",
@@ -6378,8 +6631,10 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               en: "FAQ",
               tj: "Саволҳои зиёд додашаванда",
             },
-            imageSrc: "/images/projects/sandukTV/frequently-asked-questions-page.png",
-            BannerSrc: "/images/projects/sandukTV/frequently-asked-questions-page.png",
+            imageSrc:
+              "/images/projects/sandukTV/frequently-asked-questions-page.png",
+            BannerSrc:
+              "/images/projects/sandukTV/frequently-asked-questions-page.png",
             shortInfo: {
               ru: "Обзор раздела «Частые вопросы»",
               en: "Overview of the «FAQ» section",
@@ -6419,7 +6674,8 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               tj: "Бастаҳои обуна",
             },
             imageSrc: "/images/projects/sandukTV/subscription-package-page.png",
-            BannerSrc: "/images/projects/sandukTV/subscription-package-page.png",
+            BannerSrc:
+              "/images/projects/sandukTV/subscription-package-page.png",
             shortInfo: {
               ru: "Обзор раздела «Пакеты подписки»",
               en: "Overview of the «Subscription Packages» section",
@@ -6462,7 +6718,11 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     slug: "onlinepay",
     projectComponents: [
       {
-        tabName: { ru: "Веб-платформа", en: "Web Platform", tj: "Веб-платформа" },
+        tabName: {
+          ru: "Веб-платформа",
+          en: "Web Platform",
+          tj: "Веб-платформа",
+        },
         items: [
           {
             slug: "header-page",
@@ -6511,8 +6771,10 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               en: "Service Stages",
               tj: "Марҳилаҳои кор",
             },
-            imageSrc: "/images/projects/onlinepay/about-the-service-stage-page.png",
-            BannerSrc: "/images/projects/onlinepay/about-the-service-stage-page.png",
+            imageSrc:
+              "/images/projects/onlinepay/about-the-service-stage-page.png",
+            BannerSrc:
+              "/images/projects/onlinepay/about-the-service-stage-page.png",
             shortInfo: {
               ru: "Обзор раздела «Этапы работы»",
               en: "Overview of the «Service Stages» section",
@@ -6531,8 +6793,10 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               en: "Documentation Start",
               tj: "Оғози ҳуҷҷатгузорӣ",
             },
-            imageSrc: "/images/projects/onlinepay/beginning-documentation-page.png",
-            BannerSrc: "/images/projects/onlinepay/beginning-documentation-page.png",
+            imageSrc:
+              "/images/projects/onlinepay/beginning-documentation-page.png",
+            BannerSrc:
+              "/images/projects/onlinepay/beginning-documentation-page.png",
             shortInfo: {
               ru: "Обзор раздела «Начало документации»",
               en: "Overview of the «Documentation Start» section",
@@ -6612,7 +6876,8 @@ This example shows how entered fields relate to the chat’s appearance. Placing
               tj: "Гирифтани пешниҳод",
             },
             imageSrc: "/images/projects/onlinepay/to-receive-an-offer-page.png",
-            BannerSrc: "/images/projects/onlinepay/to-receive-an-offer-page.png",
+            BannerSrc:
+              "/images/projects/onlinepay/to-receive-an-offer-page.png",
             shortInfo: {
               ru: "Обзор раздела «Получить предложение»",
               en: "Overview of the «Get an Offer» section",
@@ -6649,672 +6914,857 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/arcane-inance.png",
+    imageSrc:
+      "/images/projects/arcanefinance/apparcanefinance/connect-page.png",
+    bannerSrc:
+      "/images/projects/arcanefinance/apparcanefinance/connect-page.png",
     year: "2024",
-    tags: ["React", "TypeScript", "Web3", "Blockchain", "Solidity", "Tailwind CSS"],
-    slug: "arcane-finance",
+    tags: ["React", "Web3", "Crypto", "DeFi"],
+    slug: "arcanefinance",
     projectComponents: [
       {
-        tabName: { ru: "Биржа DEX", en: "DEX", tj: "Биржаи DEX" },
+        tabName: {
+          ru: "DeFi Платформа",
+          en: "DeFi Platform",
+          tj: "Платформаи DeFi",
+        },
         items: [
           {
-            slug: "ecosystem-acceleration-dex-page",
+            slug: "connect",
             title: {
-              ru: "Ecosystem Acceleration Dex",
-              en: "Ecosystem Acceleration Dex",
-              tj: "Ecosystem Acceleration Dex",
+              ru: "Подключение кошелька",
+              en: "Connect Wallet",
+              tj: "Пайваст кардани ҳамён",
             },
-            imageSrc: "/images/projects/arcanefinance/ecosystem-acceleration-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/ecosystem-acceleration-dex-page.png",
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/connect-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/connect-page.png",
             shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
+              ru: "Авторизация через Web3",
+              en: "Web3 authentication",
+              tj: "Авторизатсия тавассути Web3",
             },
             fullInfo: {
-              ru: "Подробный вид экрана Ecosystem Acceleration Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Ecosystem Acceleration Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Ecosystem Acceleration Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+              ru: "Удобный интерфейс подключения популярных криптокошельков к платформе.",
+              en: "A user-friendly interface for connecting popular crypto wallets to the platform.",
+              tj: "Интерфейси қулай барои пайваст кардани ҳамёнҳои машҳури криптографӣ ба платформа.",
             },
           },
           {
-            slug: "footer-dex-page",
+            slug: "swap",
             title: {
-              ru: "Footer Dex",
-              en: "Footer Dex",
-              tj: "Footer Dex",
+              ru: "Крипто-обмен",
+              en: "Crypto Swap",
+              tj: "Мубодилаи крипто",
             },
-            imageSrc: "/images/projects/arcanefinance/footer-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/footer-dex-page.png",
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/swap-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/swap-page.png",
             shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
+              ru: "Мгновенный обмен токенов",
+              en: "Instant token swap",
+              tj: "Мубодилаи фаврии токенҳо",
             },
             fullInfo: {
-              ru: "Подробный вид экрана Footer Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Footer Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Footer Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+              ru: "Быстрый и безопасный обмен криптовалютными активами с минимальными комиссиями.",
+              en: "Fast and secure exchange of crypto assets with minimal fees.",
+              tj: "Мубодилаи зуд ва бехатари дороиҳои криптовалютӣ бо ҳаққи хизмати ҳадди ақал.",
             },
           },
           {
-            slug: "got-in-touch-dex-page",
+            slug: "pools",
             title: {
-              ru: "Got In Touch Dex",
-              en: "Got In Touch Dex",
-              tj: "Got In Touch Dex",
+              ru: "Пулы ликвидности",
+              en: "Liquidity Pools",
+              tj: "Ҳавзҳои пардохтпазирӣ",
             },
-            imageSrc: "/images/projects/arcanefinance/got-in-touch-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/got-in-touch-dex-page.png",
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/pools-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/pools-page.png",
             shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
+              ru: "Управление ликвидностью",
+              en: "Liquidity management",
+              tj: "Идоракунии пардохтпазирӣ",
             },
             fullInfo: {
-              ru: "Подробный вид экрана Got In Touch Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Got In Touch Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Got In Touch Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+              ru: "Возможность зарабатывать, предоставляя свои активы в пулы ликвидности.",
+              en: "Opportunity to earn by providing assets to liquidity pools.",
+              tj: "Имконияти ба даст овардани даромад тавассути пешниҳоди дороиҳо ба ҳавзҳои пардохтпазирӣ.",
             },
           },
           {
-            slug: "header-dex-page",
+            slug: "portfolio",
             title: {
-              ru: "Header Dex",
-              en: "Header Dex",
-              tj: "Header Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/header-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/header-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Header Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Header Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Header Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "pools-page",
-            title: {
-              ru: "Pools",
-              en: "Pools",
-              tj: "Pools",
-            },
-            imageSrc: "/images/projects/arcanefinance/pools-page.png",
-            BannerSrc: "/images/projects/arcanefinance/pools-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Pools. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Pools screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Pools. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "portfolio-page",
-            title: {
-              ru: "Portfolio",
+              ru: "Портфолио",
               en: "Portfolio",
-              tj: "Portfolio",
+              tj: "Портфолио",
             },
-            imageSrc: "/images/projects/arcanefinance/portfolio-page.png",
-            BannerSrc: "/images/projects/arcanefinance/portfolio-page.png",
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/portfolio-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/portfolio-page.png",
             shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
+              ru: "Аналитика активов",
+              en: "Assets analytics",
+              tj: "Таҳлили дороиҳо",
             },
             fullInfo: {
-              ru: "Подробный вид экрана Portfolio. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Portfolio screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Portfolio. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+              ru: "Детальная статистика и отслеживание всех токенов и позиций в одном месте.",
+              en: "Detailed statistics and tracking of all tokens and positions in one place.",
+              tj: "Омори муфассал ва пайгирии ҳамаи токенҳо ва мавқеъҳо дар як ҷо.",
             },
           },
           {
-            slug: "products-dex-page",
+            slug: "create-token",
             title: {
-              ru: "Products Dex",
-              en: "Products Dex",
-              tj: "Products Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/products-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/products-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Products Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Products Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Products Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "products-last-dex-page",
-            title: {
-              ru: "Products Last Dex",
-              en: "Products Last Dex",
-              tj: "Products Last Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/products-last-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/products-last-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Products Last Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Products Last Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Products Last Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "programmable-privacy-dex-page",
-            title: {
-              ru: "Programmable Privacy Dex",
-              en: "Programmable Privacy Dex",
-              tj: "Programmable Privacy Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/programmable-privacy-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/programmable-privacy-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Programmable Privacy Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Programmable Privacy Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Programmable Privacy Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "swap-page",
-            title: {
-              ru: "Swap",
-              en: "Swap",
-              tj: "Swap",
-            },
-            imageSrc: "/images/projects/arcanefinance/swap-page.png",
-            BannerSrc: "/images/projects/arcanefinance/swap-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Swap. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Swap screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Swap. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "trade-page",
-            title: {
-              ru: "Trade",
-              en: "Trade",
-              tj: "Trade",
-            },
-            imageSrc: "/images/projects/arcanefinance/trade-page.png",
-            BannerSrc: "/images/projects/arcanefinance/trade-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Trade. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Trade screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Trade. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "who-we-serve-dex-page",
-            title: {
-              ru: "Who We Serve Dex",
-              en: "Who We Serve Dex",
-              tj: "Who We Serve Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/who-we-serve-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/who-we-serve-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Who We Serve Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Who We Serve Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Who We Serve Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          }
-        ],
-      },
-      {
-        tabName: { ru: "Лаунчпад", en: "Launchpad", tj: "Лаунчпад" },
-        items: [
-          {
-            slug: "header-launchpad-page",
-            title: {
-              ru: "Header Launchpad",
-              en: "Header Launchpad",
-              tj: "Header Launchpad",
-            },
-            imageSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
-            BannerSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Header Launchpad. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Header Launchpad screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Header Launchpad. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "launchpad-button-started-page",
-            title: {
-              ru: "Launchpad Button Started",
-              en: "Launchpad Button Started",
-              tj: "Launchpad Button Started",
-            },
-            imageSrc: "/images/projects/arcanefinance/launchpad-button-started-page.png",
-            BannerSrc: "/images/projects/arcanefinance/launchpad-button-started-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Launchpad Button Started. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Launchpad Button Started screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Launchpad Button Started. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "launchpad-nft-mints-page",
-            title: {
-              ru: "Launchpad Nft Mints",
-              en: "Launchpad Nft Mints",
-              tj: "Launchpad Nft Mints",
-            },
-            imageSrc: "/images/projects/arcanefinance/launchpad-nft-mints-page.png",
-            BannerSrc: "/images/projects/arcanefinance/launchpad-nft-mints-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Launchpad Nft Mints. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Launchpad Nft Mints screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Launchpad Nft Mints. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          }
-        ],
-      },
-      {
-        tabName: { ru: "Уровень комплаенса", en: "Compliance Layer", tj: "Сатҳи комплаенс" },
-        items: [
-          {
-            slug: "compliance-layer-core-capabilities-page",
-            title: {
-              ru: "Compliance Layer Core Capabilities",
-              en: "Compliance Layer Core Capabilities",
-              tj: "Compliance Layer Core Capabilities",
-            },
-            imageSrc: "/images/projects/arcanefinance/compliance-layer-core-capabilities-page.png",
-            BannerSrc: "/images/projects/arcanefinance/compliance-layer-core-capabilities-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Compliance Layer Core Capabilities. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Compliance Layer Core Capabilities screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Compliance Layer Core Capabilities. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "compliance-layer-get-in-touch-page",
-            title: {
-              ru: "Compliance Layer Get In Touch",
-              en: "Compliance Layer Get In Touch",
-              tj: "Compliance Layer Get In Touch",
-            },
-            imageSrc: "/images/projects/arcanefinance/compliance-layer-get-in-touch-page.png",
-            BannerSrc: "/images/projects/arcanefinance/compliance-layer-get-in-touch-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Compliance Layer Get In Touch. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Compliance Layer Get In Touch screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Compliance Layer Get In Touch. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "compliance-layer-header-page",
-            title: {
-              ru: "Compliance Layer Header",
-              en: "Compliance Layer Header",
-              tj: "Compliance Layer Header",
-            },
-            imageSrc: "/images/projects/arcanefinance/compliance-layer-header-page.png",
-            BannerSrc: "/images/projects/arcanefinance/compliance-layer-header-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Compliance Layer Header. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Compliance Layer Header screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Compliance Layer Header. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "compliance-layer-integration-page",
-            title: {
-              ru: "Compliance Layer Integration",
-              en: "Compliance Layer Integration",
-              tj: "Compliance Layer Integration",
-            },
-            imageSrc: "/images/projects/arcanefinance/compliance-layer-integration-page.png",
-            BannerSrc: "/images/projects/arcanefinance/compliance-layer-integration-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Compliance Layer Integration. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Compliance Layer Integration screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Compliance Layer Integration. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "compliance-layer-why-it-matters-page",
-            title: {
-              ru: "Compliance Layer Why It Matters",
-              en: "Compliance Layer Why It Matters",
-              tj: "Compliance Layer Why It Matters",
-            },
-            imageSrc: "/images/projects/arcanefinance/compliance-layer-why-it-matters-page.png",
-            BannerSrc: "/images/projects/arcanefinance/compliance-layer-why-it-matters-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Compliance Layer Why It Matters. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Compliance Layer Why It Matters screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Compliance Layer Why It Matters. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          }
-        ],
-      },
-      {
-        tabName: { ru: "Платформа", en: "Platform", tj: "Платформа" },
-        items: [
-          {
-            slug: "platform-core-capabilities-dex-page",
-            title: {
-              ru: "Platform Core Capabilities Dex",
-              en: "Platform Core Capabilities Dex",
-              tj: "Platform Core Capabilities Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-core-capabilities-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-core-capabilities-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Core Capabilities Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Core Capabilities Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Core Capabilities Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "platform-get-in-touch-footer-dex-page",
-            title: {
-              ru: "Platform Get In Touch Footer Dex",
-              en: "Platform Get In Touch Footer Dex",
-              tj: "Platform Get In Touch Footer Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-get-in-touch-footer-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-get-in-touch-footer-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Get In Touch Footer Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Get In Touch Footer Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Get In Touch Footer Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "platform-private-dex-page",
-            title: {
-              ru: "Platform Private Dex",
-              en: "Platform Private Dex",
-              tj: "Platform Private Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-private-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-private-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Private Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Private Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Private Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "platform-private-transfers-dex-page",
-            title: {
-              ru: "Platform Private Transfers Dex",
-              en: "Platform Private Transfers Dex",
-              tj: "Platform Private Transfers Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-private-transfers-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-private-transfers-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Private Transfers Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Private Transfers Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Private Transfers Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "platform-solutions-dex-page",
-            title: {
-              ru: "Platform Solutions Dex",
-              en: "Platform Solutions Dex",
-              tj: "Platform Solutions Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-solutions-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-solutions-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Solutions Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Solutions Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Solutions Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "platform-transaction-lifecycle-dex-page",
-            title: {
-              ru: "Platform Transaction Lifecycle Dex",
-              en: "Platform Transaction Lifecycle Dex",
-              tj: "Platform Transaction Lifecycle Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-transaction-lifecycle-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-transaction-lifecycle-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Transaction Lifecycle Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Transaction Lifecycle Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Transaction Lifecycle Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "platform-who-we-serve-dex-page",
-            title: {
-              ru: "Platform Who We Serve Dex",
-              en: "Platform Who We Serve Dex",
-              tj: "Platform Who We Serve Dex",
-            },
-            imageSrc: "/images/projects/arcanefinance/platform-who-we-serve-dex-page.png",
-            BannerSrc: "/images/projects/arcanefinance/platform-who-we-serve-dex-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Platform Who We Serve Dex. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Platform Who We Serve Dex screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Platform Who We Serve Dex. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          }
-        ],
-      },
-      {
-        tabName: { ru: "Другие страницы", en: "Other Pages", tj: "Дигар саҳифаҳо" },
-        items: [
-          {
-            slug: "connect-page",
-            title: {
-              ru: "Connect",
-              en: "Connect",
-              tj: "Connect",
-            },
-            imageSrc: "/images/projects/arcanefinance/connect-page.png",
-            BannerSrc: "/images/projects/arcanefinance/connect-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Connect. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Connect screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Connect. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "contact-us-page",
-            title: {
-              ru: "Contact Us",
-              en: "Contact Us",
-              tj: "Contact Us",
-            },
-            imageSrc: "/images/projects/arcanefinance/contact-us-page.png",
-            BannerSrc: "/images/projects/arcanefinance/contact-us-page.png",
-            shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
-            },
-            fullInfo: {
-              ru: "Подробный вид экрана Contact Us. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Contact Us screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Contact Us. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            },
-          },
-          {
-            slug: "create-token-page",
-            title: {
-              ru: "Create Token",
+              ru: "Создание токена",
               en: "Create Token",
-              tj: "Create Token",
+              tj: "Эҷоди токен",
             },
-            imageSrc: "/images/projects/arcanefinance/create-token-page.png",
-            BannerSrc: "/images/projects/arcanefinance/create-token-page.png",
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/create-token-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/create-token-page.png",
             shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
+              ru: "Запуск своего токена",
+              en: "Launch your own token",
+              tj: "Оғози токени шахсӣ",
             },
             fullInfo: {
-              ru: "Подробный вид экрана Create Token. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Create Token screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Create Token. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
+              ru: "Инструмент для простого создания и настройки новых токенов в сети.",
+              en: "A tool for easily creating and configuring new tokens on the network.",
+              tj: "Асбоб барои ба осонӣ эҷод ва танзим кардани токенҳои нав дар шабака.",
             },
           },
           {
-            slug: "latest-news-page",
+            slug: "trade",
             title: {
-              ru: "Latest News",
-              en: "Latest News",
-              tj: "Latest News",
+              ru: "Торговля",
+              en: "Trade",
+              tj: "Савдо",
             },
-            imageSrc: "/images/projects/arcanefinance/latest-news-page.png",
-            BannerSrc: "/images/projects/arcanefinance/latest-news-page.png",
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/trade-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/trade-page.png",
             shortInfo: {
-              ru: "Скриншот интерфейса Arcane Finance",
-              en: "Arcane Finance interface screenshot",
-              tj: "Скриншоти интерфейси Arcane Finance",
+              ru: "Интерфейс трейдера",
+              en: "Trader interface",
+              tj: "Интерфейси трейдер",
             },
             fullInfo: {
-              ru: "Подробный вид экрана Latest News. Интерфейс разработан с учетом современных требований к Web3 приложениям, обеспечивая высокую скорость работы и интуитивно понятное взаимодействие.",
-              en: "Detailed view of the Latest News screen. The interface is designed to meet modern Web3 application requirements, providing high performance and intuitive interaction.",
-              tj: "Намуди муфассали экрани Latest News. Интерфейс бо назардошти талаботи муосир ба барномаҳои Web3 таҳия шудааст, ки суръати баланди кор ва ҳамкории фаҳморо таъмин мекунад.",
-            }
-          }
+              ru: "Продвинутый торговый терминал с графиками и историей транзакций.",
+              en: "An advanced trading terminal with charts and transaction history.",
+              tj: "Терминали пешрафтаи савдо бо графикҳо ва таърихи интиқолҳо.",
+            },
+          },
+          {
+            slug: "support",
+            title: {
+              ru: "Поддержка",
+              en: "Support",
+              tj: "Дастгирӣ",
+            },
+            imageSrc:
+              "/images/projects/arcanefinance/apparcanefinance/support-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/apparcanefinance/support-page.png",
+            shortInfo: {
+              ru: "Справочный центр",
+              en: "Help center",
+              tj: "Маркази кӯмак",
+            },
+            fullInfo: {
+              ru: "Раздел с ответами на частые вопросы и формой обращения в поддержку.",
+              en: "A section with FAQs and a support ticket form.",
+              tj: "Бахш бо ҷавобҳо ба саволҳои маъмул ва шакли муроҷиат ба дастгирӣ.",
+            },
+          },
         ],
-      }
+      },
+      {
+        tabName: {
+          ru: "Launchpad",
+          en: "Launchpad",
+          tj: "Launchpad",
+        },
+        items: [
+          {
+            slug: "launchpad-header",
+            title: {
+              ru: "Главная Launchpad",
+              en: "Launchpad Home",
+              tj: "Асосии Launchpad",
+            },
+            imageSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-header-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-header-page.png",
+            shortInfo: {
+              ru: "Платформа для запуска проектов",
+              en: "Project launch platform",
+              tj: "Платформа барои оғози лоиҳаҳо",
+            },
+            fullInfo: {
+              ru: "Стартовая страница площадки для первичного размещения токенов (IDO).",
+              en: "The landing page of the Initial DEX Offering (IDO) platform.",
+              tj: "Саҳифаи ибтидоии майдонча барои ҷойгиркунии аввалияи токенҳо (IDO).",
+            },
+          },
+          {
+            slug: "launchpad-started",
+            title: {
+              ru: "Начало работы",
+              en: "Get Started",
+              tj: "Оғози кор",
+            },
+            imageSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-button-started-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-button-started-page.png",
+            shortInfo: {
+              ru: "Онбординг новых пользователей",
+              en: "New user onboarding",
+              tj: "Омӯзиши корбарони нав",
+            },
+            fullInfo: {
+              ru: "Руководство и быстрый старт для инвесторов и авторов проектов.",
+              en: "Guide and quick start for investors and project creators.",
+              tj: "Дастур ва оғози зуд барои сармоягузорон ва муаллифони лоиҳаҳо.",
+            },
+          },
+          {
+            slug: "launchpad-create-sale",
+            title: {
+              ru: "Создание сейла",
+              en: "Create Sale",
+              tj: "Эҷоди фурӯш",
+            },
+            imageSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-create-sale-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-create-sale-page.png",
+            shortInfo: {
+              ru: "Запуск сбора средств",
+              en: "Launch fundraising",
+              tj: "Оғози ҷамъоварии маблағ",
+            },
+            fullInfo: {
+              ru: "Форма для настройки параметров токенсейла (цены, лимиты, сроки).",
+              en: "A form to configure token sale parameters (prices, limits, dates).",
+              tj: "Шакл барои танзими параметрҳои фурӯши токенҳо (нархҳо, лимитҳо, муҳлатҳо).",
+            },
+          },
+          {
+            slug: "launchpad-my-allocations",
+            title: {
+              ru: "Мои аллокации",
+              en: "My Allocations",
+              tj: "Алокатсияҳои ман",
+            },
+            imageSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-my-allocations-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-my-allocations-page.png",
+            shortInfo: {
+              ru: "Управление инвестициями",
+              en: "Investment management",
+              tj: "Идоракунии сармоягузорӣ",
+            },
+            fullInfo: {
+              ru: "Отслеживание участия в сейлах и доступных для получения токенов.",
+              en: "Tracking participation in sales and claimable tokens.",
+              tj: "Пайгирии иштирок дар фурӯшҳо ва токенҳои дастрас барои гирифтан.",
+            },
+          },
+          {
+            slug: "launchpad-nft-mints",
+            title: {
+              ru: "Минт NFT",
+              en: "NFT Mints",
+              tj: "Минти NFT",
+            },
+            imageSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-nft-mints-page.png",
+            BannerSrc:
+              "/images/projects/arcanefinance/launchpadarcanefinance/launchpad-nft-mints-page.png",
+            shortInfo: {
+              ru: "Запуск NFT коллекций",
+              en: "NFT collection launch",
+              tj: "Оғози коллексияҳои NFT",
+            },
+            fullInfo: {
+              ru: "Специальный раздел для участия в первичных продажах NFT проектов.",
+              en: "A dedicated section for participating in initial NFT project sales.",
+              tj: "Бахши махсус барои иштирок дар фурӯшҳои аввалияи лоиҳаҳои NFT.",
+            },
+          },
+        ],
+      },
     ],
   },
   {
-    imageSrc: "/images/projects/arcane-launchpad.png",
-    bannerSrc: "/images/projects/arcane-launchpad.png",
+    imageSrc: "/images/projects/promolovelybot/mini-app-main-page.jpg",
+    bannerSrc: "/images/projects/promolovelybot/mini-app-main-page.jpg",
     year: "2024",
-    tags: ["React", "TypeScript", "Web3", "Blockchain", "Solidity"],
-    slug: "arcane-launchpad",
-    projectComponents: [],
+    tags: ["Telegram Mini App", "React", "Bot", "Promo"],
+    slug: "promolovelybot",
+    projectComponents: [
+      {
+        tabName: {
+          ru: "Telegram Bot",
+          en: "Telegram Bot",
+          tj: "Боти Telegram",
+        },
+        items: [
+          {
+            slug: "bot-start",
+            title: {
+              ru: "Запуск бота",
+              en: "Bot Start",
+              tj: "Оғози бот",
+            },
+            imageSrc: "/images/projects/promolovelybot/telegram-start-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/telegram-start-page.jpg",
+            shortInfo: {
+              ru: "Команда /start",
+              en: "/start command",
+              tj: "Фармони /start",
+            },
+            fullInfo: {
+              ru: "Приветственный экран бота в Telegram при первом запуске.",
+              en: "The welcome screen of the Telegram bot upon initial launch.",
+              tj: "Экрани истиқболи бот дар Telegram ҳангоми оғози аввал.",
+            },
+          },
+          {
+            slug: "bot-welcome",
+            title: {
+              ru: "Приветствие",
+              en: "Welcome Message",
+              tj: "Паёми истиқболӣ",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/telegram-welcome-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/telegram-welcome-page.jpg",
+            shortInfo: {
+              ru: "Описание акции",
+              en: "Promo description",
+              tj: "Тавсифи аксия",
+            },
+            fullInfo: {
+              ru: "Информационное сообщение о правилах и возможностях промо-акции.",
+              en: "An informational message about the rules and opportunities of the promo campaign.",
+              tj: "Паёми иттилоотӣ дар бораи қоидаҳо ва имкониятҳои аксияи промо.",
+            },
+          },
+          {
+            slug: "bot-phone",
+            title: {
+              ru: "Авторизация по номеру",
+              en: "Phone Authorization",
+              tj: "Авторизатсия бо рақам",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/telegram-number-phone-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/telegram-number-phone-page.jpg",
+            shortInfo: {
+              ru: "Запрос контакта",
+              en: "Contact request",
+              tj: "Дархости тамос",
+            },
+            fullInfo: {
+              ru: "Процесс привязки номера телефона для участия в розыгрыше.",
+              en: "The process of linking a phone number to participate in the giveaway.",
+              tj: "Раванди пайваст кардани рақами телефон барои иштирок дар бурднокӣ.",
+            },
+          },
+          {
+            slug: "bot-rules",
+            title: {
+              ru: "Правила участия",
+              en: "Participation Rules",
+              tj: "Қоидаҳои иштирок",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/telegram-participation-rules-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/telegram-participation-rules-page.jpg",
+            shortInfo: {
+              ru: "Условия акции",
+              en: "Promo conditions",
+              tj: "Шартҳои аксия",
+            },
+            fullInfo: {
+              ru: "Текст с детальным описанием условий участия и получения призов.",
+              en: "Text detailing the conditions for participation and receiving prizes.",
+              tj: "Матн бо тавсифи муфассали шартҳои иштирок ва гирифтани ҷоизаҳо.",
+            },
+          },
+          {
+            slug: "bot-run",
+            title: {
+              ru: "Запуск Mini App",
+              en: "Launch Mini App",
+              tj: "Оғози Mini App",
+            },
+            imageSrc: "/images/projects/promolovelybot/telegram-run-page.jpg",
+            BannerSrc: "/images/projects/promolovelybot/telegram-run-page.jpg",
+            shortInfo: {
+              ru: "Кнопка приложения",
+              en: "App button",
+              tj: "Тугмаи барнома",
+            },
+            fullInfo: {
+              ru: "Переход из чата бота в интерактивное Web App приложение внутри Telegram.",
+              en: "Transition from the bot chat to the interactive Web App inside Telegram.",
+              tj: "Гузариш аз чати бот ба барномаи интерактивии Web App дар дохили Telegram.",
+            },
+          },
+        ],
+      },
+      {
+        tabName: {
+          ru: "Mini App (Web)",
+          en: "Mini App (Web)",
+          tj: "Mini App (Web)",
+        },
+        items: [
+          {
+            slug: "app-main",
+            title: {
+              ru: "Главная страница",
+              en: "Main Page",
+              tj: "Саҳифаи асосӣ",
+            },
+            imageSrc: "/images/projects/promolovelybot/mini-app-main-page.jpg",
+            BannerSrc: "/images/projects/promolovelybot/mini-app-main-page.jpg",
+            shortInfo: {
+              ru: "Дашборд акции",
+              en: "Promo dashboard",
+              tj: "Дашборди аксия",
+            },
+            fullInfo: {
+              ru: "Основной экран Mini App с балансом баллов и текущим прогрессом.",
+              en: "The main screen of the Mini App showing points balance and current progress.",
+              tj: "Экрани асосии Mini App бо бақияи холҳо ва пешрафти ҷорӣ.",
+            },
+          },
+          {
+            slug: "app-catalog",
+            title: {
+              ru: "Каталог товаров",
+              en: "Product Catalog",
+              tj: "Феҳристи молҳо",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/mini-app-catalog-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/mini-app-catalog-page.jpg",
+            shortInfo: {
+              ru: "Список продуктов",
+              en: "Product list",
+              tj: "Рӯйхати маҳсулот",
+            },
+            fullInfo: {
+              ru: "Витрина товаров, участвующих в промо-акции.",
+              en: "Showcase of products participating in the promo campaign.",
+              tj: "Намоишгоҳи молҳое, ки дар аксияи промо иштирок ранги.",
+            },
+          },
+          {
+            slug: "app-product",
+            title: {
+              ru: "Карточка товара",
+              en: "Product Details",
+              tj: "Корти мол",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/mini-app-product-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/mini-app-product-page.jpg",
+            shortInfo: {
+              ru: "Описание и покупка",
+              en: "Description and purchase",
+              tj: "Тавсиф ва харид",
+            },
+            fullInfo: {
+              ru: "Детальная информация о выбранном продукте и условия начисления баллов.",
+              en: "Detailed info about the selected product and points awarding conditions.",
+              tj: "Маълумоти муфассал дар бораи маҳсулоти интихобшуда ва шартҳои ҳисобкунии холҳо.",
+            },
+          },
+          {
+            slug: "app-prizes",
+            title: {
+              ru: "Призы",
+              en: "Prizes",
+              tj: "Ҷоизаҳо",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/mini-app-prizes-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/mini-app-prizes-page.jpg",
+            shortInfo: {
+              ru: "Список наград",
+              en: "Rewards list",
+              tj: "Рӯйхати мукофотҳо",
+            },
+            fullInfo: {
+              ru: "Каталог призов, которые можно получить в обмен на накопленные баллы.",
+              en: "Catalog of prizes available in exchange for accumulated points.",
+              tj: "Феҳристи ҷоизаҳое, ки метавон ба ивази холҳои ҷамъшуда гирифт.",
+            },
+          },
+          {
+            slug: "app-profile",
+            title: {
+              ru: "Профиль",
+              en: "Profile",
+              tj: "Профил",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/mini-app-profile-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/mini-app-profile-page.jpg",
+            shortInfo: {
+              ru: "Личные данные",
+              en: "Personal data",
+              tj: "Маълумоти шахсӣ",
+            },
+            fullInfo: {
+              ru: "Управление аккаунтом, история операций и достижения.",
+              en: "Account management, transaction history, and achievements.",
+              tj: "Идоракунии аккаунт, таърихи амалиётҳо ва дастовардҳо.",
+            },
+          },
+          {
+            slug: "app-profile-last",
+            title: {
+              ru: "Настройки профиля",
+              en: "Profile Settings",
+              tj: "Танзимоти профил",
+            },
+            imageSrc:
+              "/images/projects/promolovelybot/mini-app-profile-last-page.jpg",
+            BannerSrc:
+              "/images/projects/promolovelybot/mini-app-profile-last-page.jpg",
+            shortInfo: {
+              ru: "Дополнительные опции",
+              en: "Additional options",
+              tj: "Имконоти иловагӣ",
+            },
+            fullInfo: {
+              ru: "Редактирование данных и дополнительные настройки в профиле участника.",
+              en: "Editing data and additional settings in the participant's profile.",
+              tj: "Таҳрири маълумот ва танзимоти иловагӣ дар профили иштирокчӣ.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    imageSrc: "/images/projects/reactor-exchange.png",
-    bannerSrc: "/images/projects/reactor-exchange.png",
+    imageSrc: "/images/projects/reactorexchange/welcome-to-reactor-page.png",
+    bannerSrc: "/images/projects/reactorexchange/welcome-to-reactor-page.png",
     year: "2024",
-    tags: ["Next.js", "TypeScript", "Web3", "Blockchain", "DeFi"],
-    slug: "reactor-exchange",
-    projectComponents: [],
-  }
+    tags: ["DEX", "Web3", "Crypto", "React"],
+    slug: "reactorexchange",
+    projectComponents: [
+      {
+        tabName: {
+          ru: "Платформа",
+          en: "Platform",
+          tj: "Платформа",
+        },
+        items: [
+          {
+            slug: "welcome",
+            title: {
+              ru: "Добро пожаловать",
+              en: "Welcome",
+              tj: "Хуш омадед",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/welcome-to-reactor-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/welcome-to-reactor-page.png",
+            shortInfo: {
+              ru: "Приветственный экран",
+              en: "Welcome screen",
+              tj: "Экрани истиқболӣ",
+            },
+            fullInfo: {
+              ru: "Презентация биржи Reactor Exchange, подчеркивающая ее скорость и безопасность.",
+              en: "Presentation of Reactor Exchange, highlighting its speed and security.",
+              tj: "Муаррифии биржаи Reactor Exchange, ки суръат ва амнияти онро таъкид мекунад.",
+            },
+          },
+          {
+            slug: "connect",
+            title: {
+              ru: "Подключение",
+              en: "Connect",
+              tj: "Пайвастшавӣ",
+            },
+            imageSrc: "/images/projects/reactorexchange/connect-page.png",
+            BannerSrc: "/images/projects/reactorexchange/connect-page.png",
+            shortInfo: {
+              ru: "Интеграция кошельков",
+              en: "Wallet integration",
+              tj: "Ҳамгироии ҳамёнҳо",
+            },
+            fullInfo: {
+              ru: "Безопасное подключение децентрализованных кошельков к платформе.",
+              en: "Secure connection of decentralized wallets to the platform.",
+              tj: "Пайвасти бехатари ҳамёнҳои ғайримарказӣ ба платформа.",
+            },
+          },
+          {
+            slug: "trade",
+            title: {
+              ru: "Торговля",
+              en: "Trade",
+              tj: "Савдо",
+            },
+            imageSrc: "/images/projects/reactorexchange/trade-page.png",
+            BannerSrc: "/images/projects/reactorexchange/trade-page.png",
+            shortInfo: {
+              ru: "Обмен активами",
+              en: "Asset exchange",
+              tj: "Мубодилаи дороиҳо",
+            },
+            fullInfo: {
+              ru: "Интерфейс для мгновенного обмена токенов в сети с низким проскальзыванием.",
+              en: "Interface for instant token swapping on the network with low slippage.",
+              tj: "Интерфейс барои мубодилаи фаврии токенҳо дар шабака бо лағжиши паст.",
+            },
+          },
+          {
+            slug: "pools",
+            title: {
+              ru: "Пулы",
+              en: "Pools",
+              tj: "Ҳавзҳо",
+            },
+            imageSrc: "/images/projects/reactorexchange/pools-page.png",
+            BannerSrc: "/images/projects/reactorexchange/pools-page.png",
+            shortInfo: {
+              ru: "Рынки ликвидности",
+              en: "Liquidity markets",
+              tj: "Бозорҳои пардохтпазирӣ",
+            },
+            fullInfo: {
+              ru: "Раздел управления пулами ликвидности и стейкингом для получения наград.",
+              en: "Section for managing liquidity pools and staking to earn rewards.",
+              tj: "Бахши идоракунии ҳавзҳои пардохтпазирӣ ва стейкинг барои гирифтани мукофотҳо.",
+            },
+          },
+          {
+            slug: "how-to-use",
+            title: {
+              ru: "Как использовать",
+              en: "How to use",
+              tj: "Чӣ тавр истифода бурдан",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/how-to-use-reactor-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/how-to-use-reactor-page.png",
+            shortInfo: {
+              ru: "Инструкции",
+              en: "Instructions",
+              tj: "Дастурҳо",
+            },
+            fullInfo: {
+              ru: "Подробный гид по функционалу Reactor Exchange для новичков.",
+              en: "A detailed guide on Reactor Exchange features for beginners.",
+              tj: "Роҳнамои муфассал оид ба функсияҳои Reactor Exchange барои шурӯъкунандагон.",
+            },
+          },
+          {
+            slug: "for-traders",
+            title: {
+              ru: "Для трейдеров",
+              en: "For Traders",
+              tj: "Барои трейдерҳо",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/for-traders-reactor-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/for-traders-reactor-page.png",
+            shortInfo: {
+              ru: "Преимущества трейдинга",
+              en: "Trading benefits",
+              tj: "Афзалиятҳои трейдинг",
+            },
+            fullInfo: {
+              ru: "Особенности и выгодные условия для профессиональных трейдеров.",
+              en: "Features and favorable conditions for professional traders.",
+              tj: "Хусусиятҳо ва шартҳои муфид барои трейдерҳои касбӣ.",
+            },
+          },
+          {
+            slug: "for-liquidity",
+            title: {
+              ru: "Провайдерам",
+              en: "For Liquidity Providers",
+              tj: "Барои таъминкунандагони пардохтпазирӣ",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/for-liquidity-providers-reactor-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/for-liquidity-providers-reactor-page.png",
+            shortInfo: {
+              ru: "Доход с ликвидности",
+              en: "Liquidity yield",
+              tj: "Даромад аз пардохтпазирӣ",
+            },
+            fullInfo: {
+              ru: "Объяснение механизмов заработка для поставщиков ликвидности.",
+              en: "Explanation of earning mechanisms for liquidity providers.",
+              tj: "Шарҳи механизмҳои ба даст овардани даромад барои таъминкунандагони пардохтпазирӣ.",
+            },
+          },
+          {
+            slug: "system",
+            title: {
+              ru: "Система",
+              en: "System",
+              tj: "Система",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/system-reactor-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/system-reactor-page.png",
+            shortInfo: {
+              ru: "Архитектура биржи",
+              en: "Exchange architecture",
+              tj: "Архитектураи биржа",
+            },
+            fullInfo: {
+              ru: "Техническое описание механизмов работы и смарт-контрактов Reactor.",
+              en: "Technical description of Reactor's operational mechanisms and smart contracts.",
+              tj: "Тавсифи техникии механизмҳои кор ва смарт-шартномаҳои Reactor.",
+            },
+          },
+          {
+            slug: "leaderboard",
+            title: {
+              ru: "Таблица лидеров",
+              en: "Leaderboard",
+              tj: "Ҷадвали пешсафон",
+            },
+            imageSrc: "/images/projects/reactorexchange/leaderboard-page.png",
+            BannerSrc: "/images/projects/reactorexchange/leaderboard-page.png",
+            shortInfo: {
+              ru: "Рейтинг пользователей",
+              en: "User ranking",
+              tj: "Рейтинги корбарон",
+            },
+            fullInfo: {
+              ru: "Соревновательная таблица лучших трейдеров с призовыми местами.",
+              en: "Competitive leaderboard of top traders with prize places.",
+              tj: "Ҷадвали рақобатии беҳтарин трейдерҳо бо ҷойҳои мукофотӣ.",
+            },
+          },
+        ],
+      },
+      {
+        tabName: {
+          ru: "Кросс-чейн Мост",
+          en: "Cross-chain Bridge",
+          tj: "Кросс-чейн Мост",
+        },
+        items: [
+          {
+            slug: "bridge-connect",
+            title: {
+              ru: "Подключение к мосту",
+              en: "Bridge Connect",
+              tj: "Пайвастшавӣ ба мост",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/bridge-connectn-a-wallet-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/bridge-connectn-a-wallet-page.png",
+            shortInfo: {
+              ru: "Доступ к Bridge",
+              en: "Bridge access",
+              tj: "Дастрасӣ ба Bridge",
+            },
+            fullInfo: {
+              ru: "Авторизация для использования функции переноса токенов между сетями.",
+              en: "Authorization for using the cross-network token transfer feature.",
+              tj: "Авторизатсия барои истифодаи функсияи интиқоли токенҳо байни шабакаҳо.",
+            },
+          },
+          {
+            slug: "bridge-select",
+            title: {
+              ru: "Выбор сети",
+              en: "Select Source",
+              tj: "Интихоби шабака",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/bridge-select-source-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/bridge-select-source-page.png",
+            shortInfo: {
+              ru: "Направление перевода",
+              en: "Transfer direction",
+              tj: "Самти интиқол",
+            },
+            fullInfo: {
+              ru: "Выбор исходной сети и сети назначения для перевода активов.",
+              en: "Selecting the source and destination networks for asset transfer.",
+              tj: "Интихоби шабакаи ибтидоӣ ва шабакаи қабулкунанда барои интиқоли дороиҳо.",
+            },
+          },
+          {
+            slug: "bridge-deposit",
+            title: {
+              ru: "Депозит",
+              en: "Easy Deposit",
+              tj: "Депозит",
+            },
+            imageSrc:
+              "/images/projects/reactorexchange/bridge-easy-deposit-page.png",
+            BannerSrc:
+              "/images/projects/reactorexchange/bridge-easy-deposit-page.png",
+            shortInfo: {
+              ru: "Простой депозит",
+              en: "Easy deposit",
+              tj: "Депозити оддӣ",
+            },
+            fullInfo: {
+              ru: "Окно подтверждения и отправки средств в смарт-контракт моста.",
+              en: "Window for confirming and sending funds to the bridge's smart contract.",
+              tj: "Равзанаи тасдиқ ва ирсоли маблағ ба смарт-шартномаи мост.",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  // {
+  //   slug: "arcane-launchpad",
+  //   imageSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
+  //   year: "2024",
+  //   tags: ["Solidity", "Web3", "Next.js"],
+  //   gallery: ["/images/projects/arcanefinance/header-launchpad-page.png"]
+  // },
+  // {
+  //   slug: "reactor-exchange",
+  //   imageSrc: "/images/projects/reactorexchange/trade-page.png",
+  //   year: "2024",
+  //   tags: ["React", "Web3", "Solidity"],
+  //   gallery: ["/images/projects/reactorexchange/trade-page.png"]
+  // }
 ];
