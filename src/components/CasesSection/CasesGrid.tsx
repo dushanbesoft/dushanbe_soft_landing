@@ -41,7 +41,10 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
     "onlinepay": "Финтех и Web3",
     "arcane-finance": "Blockchain/Web3",
     "arcane-launchpad": "Blockchain/Web3",
-    "reactor-exchange": "Blockchain/Web3"
+    "reactor-exchange": "Blockchain/Web3",
+    "arcanefinance": "Blockchain/Web3",
+    "reactorexchange": "Blockchain/Web3",
+    "promolovelybot": "Корпоративные"
   };
 
   const filteredCases = activeCategory === 'Все' 
