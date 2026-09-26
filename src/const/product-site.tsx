@@ -1690,8 +1690,8 @@ export const ProductSite: ProductSiteItem[] = [
     ],
   },
   {
-    imageSrc: "/images/projects/sohktor/banner.svg",
-    bannerSrc: "/images/projects/sohktor/banner.svg",
+    imageSrc: "/images/projects/sochtor2.png",
+    bannerSrc: "/images/projects/sochtor2.png",
     bannerFit: "contain",
     year: "2024",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
@@ -6530,7 +6530,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/sunduk.webp",
+    imageSrc: "/images/projects/sanduk-tv.png",
     year: "2024",
     tags: ["React", "JavaScript", "HTML5 / CSS3", "REST API"],
     slug: "sunduk-tv",
@@ -6712,7 +6712,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/onlinepay.webp",
+    imageSrc: "/images/projects/online-pay.png",
     year: "2024",
     tags: ["React", "TypeScript", "Node.js", "Payment Gateway"],
     slug: "onlinepay",
@@ -6915,9 +6915,9 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   },
   {
     imageSrc:
-      "/images/projects/arcanefinance/apparcanefinance/connect-page.png",
+      "/images/projects/arcane-inance2.png",
     bannerSrc:
-      "/images/projects/arcanefinance/apparcanefinance/connect-page.png",
+      "/images/projects/arcane-inance2.png",
     year: "2024",
     tags: ["React", "Web3", "Crypto", "DeFi"],
     slug: "arcanefinance",
@@ -7207,8 +7207,8 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/promolovelybot/mini-app-main-page.jpg",
-    bannerSrc: "/images/projects/promolovelybot/mini-app-main-page.jpg",
+    imageSrc: "/images/projects/lovely_promo.png",
+    bannerSrc: "/images/projects/lovely_promo.png",
     year: "2024",
     tags: ["Telegram Mini App", "React", "Bot", "Promo"],
     slug: "promolovelybot",
@@ -7471,8 +7471,8 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/reactorexchange/welcome-to-reactor-page.png",
-    bannerSrc: "/images/projects/reactorexchange/welcome-to-reactor-page.png",
+    imageSrc: "/images/projects/reactor.png",
+    bannerSrc: "/images/projects/reactor.png",
     year: "2024",
     tags: ["DEX", "Web3", "Crypto", "React"],
     slug: "reactorexchange",
