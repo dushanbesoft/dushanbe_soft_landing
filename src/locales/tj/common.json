@@ -375,6 +375,14 @@
     },
     "reactorexchange": {
       "title": "Reactor"
+    },
+    "arcane-launchpad": {
+      "title": "Arcane Launchpad",
+      "description": "Платформа барои оғоз ва сармоягузорӣ ба лоиҳаҳои нави крипто ва токенҳо."
+    },
+    "reactor-exchange": {
+      "title": "Reactor Exchange",
+      "description": "Биржаи ғайримутамарказ барои мубодилаи фаврии токенҳо ва таъмини пардохтпазирӣ."
     }
   },
   "partners": {

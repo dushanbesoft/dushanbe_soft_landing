@@ -375,6 +375,14 @@
     },
     "reactorexchange": {
       "title": "Reactor"
+    },
+    "arcane-launchpad": {
+      "title": "Arcane Launchpad",
+      "description": "A platform for launching and investing in new crypto projects and tokens."
+    },
+    "reactor-exchange": {
+      "title": "Reactor Exchange",
+      "description": "A decentralized exchange for fast token swapping and liquidity provision."
     }
   },
   "partners": {

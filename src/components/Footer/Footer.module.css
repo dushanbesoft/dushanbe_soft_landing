@@ -128,7 +128,7 @@
 }
 
 .link:hover {
-  color: #3ddc84;
+  color: var(--color-accent);
 }
 
 .contactItem {
@@ -154,7 +154,7 @@
 }
 
 .contactItem a:hover {
-  color: #3ddc84;
+  color: var(--color-accent);
 }
 
 .bottom {

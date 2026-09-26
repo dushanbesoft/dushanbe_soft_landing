@@ -83,12 +83,12 @@ export default async function Page({
         <ServicesSection lang={lang} />
 
         {/* <ProductsSection lang={lang} />
-        <WhyUsSection lang={lang} />
-        <TeamSection /> */}
+        <WhyUsSection lang={lang} /> */}
+        <TeamSection />
 
         <StatisticsComponent />
 
-        <ReviewsSection lang={lang} />
+        {/* <ReviewsSection lang={lang} /> */}
         {/* <PartnersSection />
         <ContactSection lang={lang} />
         <CTASection lang={lang} /> */}
