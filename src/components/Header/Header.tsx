@@ -186,11 +186,11 @@ export default function Header() {
             {t("header.services", "Услуги")}
           </Link>
           <Link
-            href={`/${currentLang}/#reviews`}
+            href={`/${currentLang}/#team`}
             className={styles.navItem}
-            onClick={(e) => handleNavClick(e, `/${currentLang}/#reviews`)}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#team`)}
           >
-            {t("header.reviews", "Отзывы")}
+            {t("header.team", "Команда")}
           </Link>
         </nav>
 
