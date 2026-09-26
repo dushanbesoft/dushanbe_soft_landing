@@ -7753,18 +7753,18 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       },
     ],
   },
-  {
-    slug: "arcane-launchpad",
-    imageSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
-    year: "2024",
-    tags: ["Solidity", "Web3", "Next.js"],
-    gallery: ["/images/projects/arcanefinance/header-launchpad-page.png"]
-  },
-  {
-    slug: "reactor-exchange",
-    imageSrc: "/images/projects/reactorexchange/trade-page.png",
-    year: "2024",
-    tags: ["React", "Web3", "Solidity"],
-    gallery: ["/images/projects/reactorexchange/trade-page.png"]
-  }
+  // {
+  //   slug: "arcane-launchpad",
+  //   imageSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
+  //   year: "2024",
+  //   tags: ["Solidity", "Web3", "Next.js"],
+  //   gallery: ["/images/projects/arcanefinance/header-launchpad-page.png"]
+  // },
+  // {
+  //   slug: "reactor-exchange",
+  //   imageSrc: "/images/projects/reactorexchange/trade-page.png",
+  //   year: "2024",
+  //   tags: ["React", "Web3", "Solidity"],
+  //   gallery: ["/images/projects/reactorexchange/trade-page.png"]
+  // }
 ];

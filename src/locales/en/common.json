@@ -368,13 +368,16 @@
       ]
     },
     "arcanefinance": {
-      "title": "Arcane Finance"
+      "title": "Arcane Finance",
+      "description": "Decentralized Finance (DeFi) platform for fast swapping, liquidity pool management, and staking."
     },
     "promolovelybot": {
-      "title": "Lovely promo"
+      "title": "Lovely promo",
+      "description": "Telegram promo bot for organizing contests, giveaways, and marketing activities with a user-friendly Mini App interface."
     },
     "reactorexchange": {
-      "title": "Reactor"
+      "title": "Reactor",
+      "description": "A decentralized exchange for fast token swapping and liquidity provision."
     },
     "arcane-launchpad": {
       "title": "Arcane Launchpad",
