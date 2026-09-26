@@ -368,13 +368,16 @@
       ]
     },
     "arcanefinance": {
-      "title": "Arcane Finance"
+      "title": "Arcane Finance",
+      "description": "Платформаи молияи ғайримутамарказ (DeFi) барои мубодилаи зуд, идоракунии ҳавзҳои пардохтпазирӣ ва стейкинг."
     },
     "promolovelybot": {
-      "title": "Lovely promo"
+      "title": "Lovely promo",
+      "description": "Телеграм боти промо барои гузаронидани озмунҳо, бозиҳо ва чорабиниҳои маркетингӣ бо интерфейси қулайи Mini App."
     },
     "reactorexchange": {
-      "title": "Reactor"
+      "title": "Reactor",
+      "description": "Биржаи ғайримутамарказ барои мубодилаи фаврии токенҳо ва таъмини пардохтпазирӣ."
     },
     "arcane-launchpad": {
       "title": "Arcane Launchpad",

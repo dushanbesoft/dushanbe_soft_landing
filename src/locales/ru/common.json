@@ -368,13 +368,16 @@
       ]
     },
     "arcanefinance": {
-      "title": "Arcane Finance"
+      "title": "Arcane Finance",
+      "description": "Платформа децентрализованных финансов (DeFi) для быстрого обмена, управления пулами ликвидности и стейкинга."
     },
     "promolovelybot": {
-      "title": "Lovely promo"
+      "title": "Lovely promo",
+      "description": "Промо-бот Telegram для проведения конкурсов, розыгрышей и маркетинговых активностей с удобным интерфейсом Mini App."
     },
     "reactorexchange": {
-      "title": "Reactor"
+      "title": "Reactor",
+      "description": "Децентрализованная биржа для быстрого обмена токенами и обеспечения ликвидности."
     },
     "arcane-launchpad": {
       "title": "Arcane Launchpad",
