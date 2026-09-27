@@ -292,7 +292,7 @@
     },
     "sohktor": {
       "title": "SChDO",
-      "description": "Internal information system (ERP/CRM system) for automating the operational activities of the fire service, registering emergencies, maintaining personnel records, and electronic document management."
+      "description": "Internal information system (ERP/CRM system) for automating the operational activities of the fire service, registering emergencies and fires, managing criminal cases, tracking inspected objects, and electronic document management."
     },
     "digital-tajikistan": {
       "title": "Digital Tajikistan",
@@ -385,7 +385,7 @@
       {
         "name": "СХДО",
         "sector": "mahzan.tj",
-        "description": "The Single Electronic Database is a specialized internal information system for automating the operations of the fire department. It ensures reliable tracking of emergencies, HR management, and secure electronic document workflow."
+        "description": "The Single Electronic Database is a specialized internal information system for automating the operations of the fire department. It ensures reliable tracking of emergencies and fires, management of criminal cases and reporting, and secure electronic document workflow."
       },
       {
         "name": "Рушди Кӯҳистон",
