@@ -43,7 +43,7 @@ function TypedTitle({ text }: { text: string }) {
 }
 
 export default function HeroContent() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const fullTitle = t(
     "hero.subtitle",
     "Разрабатываем и внедряем современные IT-решения",
@@ -79,16 +79,12 @@ export default function HeroContent() {
           >
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
           </a>
-          <button 
-            type="button"
+          <Link 
+            href={`/${i18n.language}/cases`}
             className={styles.btnSecondary}
-            onClick={(e) => {
-              e.preventDefault();
-              window.dispatchEvent(new CustomEvent('openCaseModal', { detail: { index: 0 } }));
-            }}
           >
             {t("hero.btnSecondary", "Смотреть проекты")}
-          </button>
+          </Link>
         </div>
       </div>
       <HeroMarquee />
