@@ -75,7 +75,7 @@
 }
 
 .navItem:hover {
-  color: #3ddc84;
+  color: var(--color-accent);
 }
 
 .navItem:hover::after {

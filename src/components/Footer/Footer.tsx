@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import initTranslations from "@/app/i18n";
 import styles from "./Footer.module.css";
 
@@ -132,48 +133,45 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>{t("footer.col1", "Компания")}</h4>
             <div className={styles.linksList}>
-              <a href="#" className={styles.link}>
-                {t("footer.links1.0", "О нас")}
-              </a>
-              <a href="#" className={styles.link}>
-                {t("footer.links1.1", "Команда")}
-              </a>
-              <a href="#" className={styles.link}>
-                {t("footer.links1.2", "Наши продукты")}
-              </a>
-              <a href="#" className={styles.link}>
-                {t("footer.links1.3", "Как мы работаем")}
-              </a>
-              <a href="#" className={styles.link}>
+              <Link href={`/${lang}/#`} className={styles.link}>
+                {t("header.home", "Главная")}
+              </Link>
+              <Link href={`/${lang}/#cases`} className={styles.link}>
                 {t("footer.links1.4", "Кейсы")}
-              </a>
-              <a href="#" className={styles.link}>
-                {t("footer.links1.5", "Отзывы")}
-              </a>
+              </Link>
+              <Link href={`/${lang}/#process`} className={styles.link}>
+                {t("footer.links1.3", "Как мы работаем")}
+              </Link>
+              <Link href={`/${lang}/#services`} className={styles.link}>
+                {t("header.services", "Услуги")}
+              </Link>
+              <Link href={`/${lang}/#team`} className={styles.link}>
+                {t("footer.links1.1", "Команда")}
+              </Link>
             </div>
           </div>
 
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>{t("footer.col2", "Услуги")}</h4>
             <div className={styles.linksList}>
-              <a href="#" className={styles.link}>
+              <Link href={`/${lang}/#services`} className={styles.link}>
                 {t("footer.links2.0", "Веб-разработка")}
-              </a>
-              <a href="#" className={styles.link}>
+              </Link>
+              <Link href={`/${lang}/#services`} className={styles.link}>
                 {t("footer.links2.1", "Мобильная разработка")}
-              </a>
-              <a href="#" className={styles.link}>
+              </Link>
+              <Link href={`/${lang}/#services`} className={styles.link}>
                 {t("footer.links2.2", "UI/UX Дизайн")}
-              </a>
-              <a href="#" className={styles.link}>
+              </Link>
+              <Link href={`/${lang}/#services`} className={styles.link}>
                 {t("footer.links2.3", "API Интеграция")}
-              </a>
-              <a href="#" className={styles.link}>
+              </Link>
+              <Link href={`/${lang}/#services`} className={styles.link}>
                 {t("footer.links2.4", "Кибербезопасность")}
-              </a>
-              <a href="#" className={styles.link}>
+              </Link>
+              <Link href={`/${lang}/#services`} className={styles.link}>
                 {t("footer.links2.5", "Техническая поддержка")}
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -366,6 +366,26 @@
         "Frontend development",
         "Backend development"
       ]
+    },
+    "arcanefinance": {
+      "title": "Arcane Finance",
+      "description": "Decentralized Finance (DeFi) platform for fast swapping, liquidity pool management, and staking."
+    },
+    "promolovelybot": {
+      "title": "Lovely promo",
+      "description": "Telegram promo bot for organizing contests, giveaways, and marketing activities with a user-friendly Mini App interface."
+    },
+    "reactorexchange": {
+      "title": "Reactor",
+      "description": "A decentralized exchange for fast token swapping and liquidity provision."
+    },
+    "arcane-launchpad": {
+      "title": "Arcane Launchpad",
+      "description": "A platform for launching and investing in new crypto projects and tokens."
+    },
+    "reactor-exchange": {
+      "title": "Reactor Exchange",
+      "description": "A decentralized exchange for fast token swapping and liquidity provision."
     }
   },
   "partners": {
