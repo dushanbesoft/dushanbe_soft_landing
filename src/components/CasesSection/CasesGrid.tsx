@@ -26,6 +26,7 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
 
   const categories = ['Все', 'Государственные', 'Корпоративные', 'Медиа', 'Финтех и Web3', 'Blockchain/Web3'];
   const slugCategoryMap: Record<string, string> = {
+    "zudyob": "Корпоративные",
     "president": "Государственные",
     "digital-tajikistan": "Государственные",
     "sohktor": "Государственные",
