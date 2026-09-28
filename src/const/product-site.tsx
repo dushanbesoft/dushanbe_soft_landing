@@ -29,21 +29,6 @@ export interface ProductSiteItem {
 
 export const ProductSite: ProductSiteItem[] = [
   {
-    imageSrc: "/images/projects/zudyob/banner.webp",
-    bannerSrc: "/images/projects/zudyob/banner.webp",
-    year: "",
-    tags: ["AI", "Telegram Bot"],
-    slug: "zudyob",
-    gallery: ["/images/projects/zudyob/banner.webp"],
-    projectComponents: [
-      {
-        tabName: { ru: "Telegram-бот", en: "Telegram bot", tj: "Боти Telegram" },
-        platform: "mobile",
-        items: zudyobScreens,
-      },
-    ],
-  },
-  {
     imageSrc: "/images/projects/president/banner_main.jpg",
     bannerSrc: "/images/projects/president/banner_main.jpg",
     year: "2024",
@@ -7766,6 +7751,21 @@ This example shows how entered fields relate to the chat’s appearance. Placing
             },
           },
         ],
+      },
+    ],
+  },
+  {
+    imageSrc: "/images/projects/zudyob/banner.webp",
+    bannerSrc: "/images/projects/zudyob/banner.webp",
+    year: "",
+    tags: ["AI", "Telegram Bot"],
+    slug: "zudyob",
+    gallery: ["/images/projects/zudyob/banner.webp"],
+    projectComponents: [
+      {
+        tabName: { ru: "Telegram-бот", en: "Telegram bot", tj: "Боти Telegram" },
+        platform: "mobile",
+        items: zudyobScreens,
       },
     ],
   },
