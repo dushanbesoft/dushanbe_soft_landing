@@ -285,7 +285,9 @@
         "Round-the-clock search, 24/7",
         "Time saved every day"
       ],
-      "gallery": ["ZudYob — finds faster"]
+      "gallery": [
+        "ZudYob — finds faster"
+      ]
     },
     "president": {
       "title": "President of the Republic of Tajikistan",
@@ -409,6 +411,10 @@
     "rushdikuhiston": {
       "title": "MDO Rushdi Kuhiston",
       "description": "Development of a corporate website for the microfinance depository organization 'Rushdi Kuhiston'. The site features a credit calculator, information on services, and company news, providing clients with convenient access to financial services."
+    },
+    "traveltours": {
+      "title": "TravelTours",
+      "description": "A platform for a travel agency, including a tour catalog, hotel bookings, and a dashboard for processing requests and configuring the system."
     }
   },
   "partners": {

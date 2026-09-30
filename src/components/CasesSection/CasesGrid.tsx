@@ -48,7 +48,9 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
     "promolovelybot": "Корпоративные",
     "mirel": "Корпоративные",
     "royalbaby": "Корпоративные",
-    "rushdikuhiston": "Финтех и Web3"
+    "rushdikuhiston": "Финансы",
+    "traveltours": "Корпоративные",
+
   };
 
   const filteredCases = activeCategory === 'Все' 
