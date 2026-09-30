@@ -44,7 +44,10 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
     "reactor-exchange": "Blockchain/Web3",
     "arcanefinance": "Blockchain/Web3",
     "reactorexchange": "Blockchain/Web3",
-    "promolovelybot": "Корпоративные"
+    "promolovelybot": "Корпоративные",
+    "mirel": "Корпоративные",
+    "royalbaby": "Корпоративные",
+    "rushdikuhiston": "Финтех и Web3"
   };
 
   const filteredCases = activeCategory === 'Все' 

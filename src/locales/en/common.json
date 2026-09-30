@@ -386,6 +386,18 @@
     "reactor-exchange": {
       "title": "Reactor Exchange",
       "description": "A decentralized exchange for fast token swapping and liquidity provision."
+    },
+    "mirel": {
+      "title": "Mirel - CRM System",
+      "description": "Development of a comprehensive CRM system for Mirel. It includes management of employees, clients, applications, projects, and certificates, providing full control over business processes through a convenient dashboard."
+    },
+    "royalbaby": {
+      "title": "Royal Baby Promo Campaign",
+      "description": "A comprehensive solution for the Royal Baby promo campaign. It includes a promo website, a Telegram bot for participants, and an admin panel for managing giveaways, winners, and prizes."
+    },
+    "rushdikuhiston": {
+      "title": "MDO Rushdi Kuhiston",
+      "description": "Development of a corporate website for the microfinance depository organization 'Rushdi Kuhiston'. The site features a credit calculator, information on services, and company news, providing clients with convenient access to financial services."
     }
   },
   "partners": {
