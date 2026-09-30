@@ -415,6 +415,10 @@
     "traveltours": {
       "title": "TravelTours",
       "description": "A platform for a travel agency, including a tour catalog, hotel bookings, and a dashboard for processing requests and configuring the system."
+    },
+    "itrunstj": {
+      "title": "ITRUNS - IT Academy",
+      "description": "A modern website for an IT academy, providing detailed information about courses, instructors, and online enrollment options."
     }
   },
   "partners": {
