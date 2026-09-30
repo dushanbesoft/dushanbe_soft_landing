@@ -8627,4 +8627,234 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       }
     ]
   }
+
+  , {
+    imageSrc: "/images/projects/farad/login-page.png",
+    year: "2024",
+    tags: ["React", "Next.js", "Tailwind CSS", "E-commerce"],
+    slug: "farad",
+    projectComponents: [
+      {
+        tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели админ" },
+        items: [
+          {
+            slug: "login-page",
+            title: {"ru":"Авторизация","en":"Login","tj":"Вуруд"},
+            imageSrc: "/images/projects/farad/login-page.png",
+            BannerSrc: "/images/projects/farad/login-page.png",
+            shortInfo: {"ru":"Вход администратора","en":"Admin login","tj":"Вуруди администратор"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-orders-page",
+            title: {"ru":"Заказы","en":"Orders","tj":"Фармоишҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-orders-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-orders-page.png",
+            shortInfo: {"ru":"Обработка заказов","en":"Order processing","tj":"Коркарди фармоишҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-products-page",
+            title: {"ru":"Товары","en":"Products","tj":"Маҳсулот"},
+            imageSrc: "/images/projects/farad/admin/dashboard-products-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-products-page.png",
+            shortInfo: {"ru":"Каталог товаров","en":"Products catalog","tj":"Каталоги маҳсулот"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-products-page",
+            title: {"ru":"Добавление товара","en":"Add Product","tj":"Иловаи маҳсулот"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-products-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-products-page.png",
+            shortInfo: {"ru":"Регистрация новых товаров","en":"Registering new products","tj":"Бақайдгирии маҳсулоти нав"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-product-descriptions-page",
+            title: {"ru":"Описание товаров","en":"Product Descriptions","tj":"Тавсифи маҳсулот"},
+            imageSrc: "/images/projects/farad/admin/dashboard-product-descriptions-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-product-descriptions-page.png",
+            shortInfo: {"ru":"Редактирование описаний","en":"Editing descriptions","tj":"Таҳрири тавсифҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-categories-page",
+            title: {"ru":"Категории","en":"Categories","tj":"Категорияҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-categories-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-categories-page.png",
+            shortInfo: {"ru":"Управление категориями","en":"Category management","tj":"Идоракунии категорияҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-categories-page",
+            title: {"ru":"Добавление категории","en":"Add Category","tj":"Иловаи категория"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-categories-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-categories-page.png",
+            shortInfo: {"ru":"Создание категорий товаров","en":"Creating product categories","tj":"Сохтани категорияҳои маҳсулот"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-subcategories-page",
+            title: {"ru":"Подкатегории","en":"Subcategories","tj":"Зеркатегорияҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-subcategories-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-subcategories-page.png",
+            shortInfo: {"ru":"Управление подкатегориями","en":"Subcategory management","tj":"Идоракунии зеркатегорияҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-subcategories-page",
+            title: {"ru":"Добавление подкатегории","en":"Add Subcategory","tj":"Иловаи зеркатегория"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-subcategories-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-subcategories-page.png",
+            shortInfo: {"ru":"Создание подкатегорий","en":"Creating subcategories","tj":"Сохтани зеркатегорияҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-brends-page",
+            title: {"ru":"Бренды","en":"Brands","tj":"Брендҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-brends-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-brends-page.png",
+            shortInfo: {"ru":"База брендов","en":"Brands database","tj":"Пойгоҳи брендҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-brends-page",
+            title: {"ru":"Добавление бренда","en":"Add Brand","tj":"Иловаи бренд"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-brends-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-brends-page.png",
+            shortInfo: {"ru":"Регистрация новых брендов","en":"Registering new brands","tj":"Бақайдгирии брендҳои нав"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-users-page",
+            title: {"ru":"Пользователи","en":"Users","tj":"Корбарон"},
+            imageSrc: "/images/projects/farad/admin/dashboard-users-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-users-page.png",
+            shortInfo: {"ru":"База клиентов","en":"Customer database","tj":"Пойгоҳи мизоҷон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-users-page",
+            title: {"ru":"Добавление пользователя","en":"Add User","tj":"Иловаи корбар"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-users-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-users-page.png",
+            shortInfo: {"ru":"Регистрация новых пользователей","en":"Registering new users","tj":"Бақайдгирии корбарони нав"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-banners-page",
+            title: {"ru":"Баннеры","en":"Banners","tj":"Баннерҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-banners-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-banners-page.png",
+            shortInfo: {"ru":"Управление рекламой","en":"Ads management","tj":"Идоракунии реклама"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-banners-page",
+            title: {"ru":"Добавление баннера","en":"Add Banner","tj":"Иловаи баннер"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-banners-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-banners-page.png",
+            shortInfo: {"ru":"Создание рекламных баннеров","en":"Create promo banners","tj":"Сохтани баннерҳои рекламавӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-news-page",
+            title: {"ru":"Новости","en":"News","tj":"Хабарҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-news-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-news-page.png",
+            shortInfo: {"ru":"Управление новостями","en":"News management","tj":"Идоракунии хабарҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-news-page",
+            title: {"ru":"Добавление новости","en":"Add News","tj":"Иловаи хабар"},
+            imageSrc: "/images/projects/farad/admin/dashboard-add-news-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-add-news-page.png",
+            shortInfo: {"ru":"Публикация новостей","en":"Publishing news","tj":"Нашри хабарҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-mailing-page",
+            title: {"ru":"Рассылки","en":"Mailing","tj":"Ирсоли паёмҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-mailing-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-mailing-page.png",
+            shortInfo: {"ru":"Email и SMS рассылки","en":"Email and SMS campaigns","tj":"Ирсоли Email ва SMS"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-messages-page",
+            title: {"ru":"Сообщения","en":"Messages","tj":"Паёмҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-messages-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-messages-page.png",
+            shortInfo: {"ru":"Обращения пользователей","en":"User messages","tj":"Муроҷиатҳои корбарон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-reports-page",
+            title: {"ru":"Отчеты","en":"Reports","tj":"Ҳисоботҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-reports-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-reports-page.png",
+            shortInfo: {"ru":"Аналитика и статистика","en":"Analytics and statistics","tj":"Таҳлил ва омор"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-services-appeal-page",
+            title: {"ru":"Обращения","en":"Appeals","tj":"Муроҷиатҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-services-appeal-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-services-appeal-page.png",
+            shortInfo: {"ru":"Поддержка клиентов","en":"Customer support","tj":"Дастгирии мизоҷон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-services-category-page",
+            title: {"ru":"Категории услуг","en":"Service Categories","tj":"Категорияҳои хизматрасониҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-services-category-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-services-category-page.png",
+            shortInfo: {"ru":"Виды сервисов","en":"Service types","tj":"Намудҳои хизматрасониҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-services-documents-page",
+            title: {"ru":"Документы","en":"Documents","tj":"Ҳуҷҷатҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-services-documents-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-services-documents-page.png",
+            shortInfo: {"ru":"Документооборот","en":"Document flow","tj":"Гардиши ҳуҷҷатҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-services-merchants-page",
+            title: {"ru":"Мерчанты","en":"Merchants","tj":"Мерчантҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-services-merchants-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-services-merchants-page.png",
+            shortInfo: {"ru":"Управление продавцами","en":"Merchant management","tj":"Идоракунии фурӯшандагон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-services-parameters-page",
+            title: {"ru":"Параметры","en":"Parameters","tj":"Параметрҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-services-parameters-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-services-parameters-page.png",
+            shortInfo: {"ru":"Настройки системы","en":"System settings","tj":"Танзимоти система"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-services-transactions-page",
+            title: {"ru":"Транзакции","en":"Transactions","tj":"Транзаксияҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-services-transactions-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-services-transactions-page.png",
+            shortInfo: {"ru":"Финансовые операции","en":"Financial operations","tj":"Амалиётҳои молиявӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-template-details-page",
+            title: {"ru":"Шаблоны","en":"Templates","tj":"Шаблонҳо"},
+            imageSrc: "/images/projects/farad/admin/dashboard-template-details-page.png",
+            BannerSrc: "/images/projects/farad/admin/dashboard-template-details-page.png",
+            shortInfo: {"ru":"Детали шаблонов","en":"Template details","tj":"Тафсилоти шаблонҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          }
+        ],
+      }
+    ]
+  }
 ];
