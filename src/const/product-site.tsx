@@ -8525,4 +8525,106 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       }
     ]
   }
+
+  , {
+    imageSrc: "/images/projects/itrunstj/lending-header-page.png",
+    year: "2024",
+    tags: ["React", "Next.js", "Tailwind CSS", "Education"],
+    slug: "itrunstj",
+    projectComponents: [
+      {
+        tabName: { ru: "Веб-сайт", en: "Website", tj: "Вебсайт" },
+        items: [
+          {
+            slug: "lending-header-page",
+            title: {"ru":"Главная","en":"Header","tj":"Сексияи асосӣ"},
+            imageSrc: "/images/projects/itrunstj/lending-header-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-header-page.png",
+            shortInfo: {"ru":"Приветственный блок","en":"Welcome block","tj":"Блоки истиқболӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-our-services-page",
+            title: {"ru":"Наши услуги","en":"Our Services","tj":"Хизматрасониҳои мо"},
+            imageSrc: "/images/projects/itrunstj/lending-our-services-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-our-services-page.png",
+            shortInfo: {"ru":"Основные направления","en":"Main directions","tj":"Самтҳои асосӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "our-services-page",
+            title: {"ru":"Услуги подробно","en":"Services Details","tj":"Хизматрасониҳо муфассал"},
+            imageSrc: "/images/projects/itrunstj/our-services-page.png",
+            BannerSrc: "/images/projects/itrunstj/our-services-page.png",
+            shortInfo: {"ru":"Описание всех услуг","en":"Description of all services","tj":"Тавсифи ҳамаи хизматрасониҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-we-are-doing-page",
+            title: {"ru":"Что мы делаем","en":"What We Do","tj":"Мо чӣ кор мекунем"},
+            imageSrc: "/images/projects/itrunstj/lending-we-are-doing-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-we-are-doing-page.png",
+            shortInfo: {"ru":"Деятельность компании","en":"Company activities","tj":"Фаъолияти ширкат"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "about-page",
+            title: {"ru":"О нас","en":"About Us","tj":"Дар бораи мо"},
+            imageSrc: "/images/projects/itrunstj/about-page.png",
+            BannerSrc: "/images/projects/itrunstj/about-page.png",
+            shortInfo: {"ru":"Информация о компании","en":"Company Information","tj":"Маълумот дар бораи ширкат"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-why-choose-us-page",
+            title: {"ru":"Почему выбирают нас","en":"Why Choose Us","tj":"Чаро моро интихоб мекунанд"},
+            imageSrc: "/images/projects/itrunstj/lending-why-choose-us-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-why-choose-us-page.png",
+            shortInfo: {"ru":"Наши преимущества","en":"Our advantages","tj":"Афзалиятҳои мо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-statistics-page",
+            title: {"ru":"Статистика","en":"Statistics","tj":"Омор"},
+            imageSrc: "/images/projects/itrunstj/lending-statistics-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-statistics-page.png",
+            shortInfo: {"ru":"Наши достижения в цифрах","en":"Our achievements in numbers","tj":"Дастовардҳои мо дар рақамҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-application-online-page",
+            title: {"ru":"Онлайн заявка","en":"Online Application","tj":"Дархости онлайн"},
+            imageSrc: "/images/projects/itrunstj/lending-application-online-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-application-online-page.png",
+            shortInfo: {"ru":"Форма регистрации","en":"Registration form","tj":"Шакли бақайдгирӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "contacts-contact-page",
+            title: {"ru":"Контакты","en":"Contacts","tj":"Тамос"},
+            imageSrc: "/images/projects/itrunstj/contacts-contact-page.png",
+            BannerSrc: "/images/projects/itrunstj/contacts-contact-page.png",
+            shortInfo: {"ru":"Связь с нами","en":"Contact us","tj":"Тамос бо мо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "contacts-map-page",
+            title: {"ru":"Карта","en":"Map","tj":"Харита"},
+            imageSrc: "/images/projects/itrunstj/contacts-map-page.png",
+            BannerSrc: "/images/projects/itrunstj/contacts-map-page.png",
+            shortInfo: {"ru":"Наш адрес","en":"Our address","tj":"Суроғаи мо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-footer-page",
+            title: {"ru":"Подвал","en":"Footer","tj":"Поёни сайт"},
+            imageSrc: "/images/projects/itrunstj/lending-footer-page.png",
+            BannerSrc: "/images/projects/itrunstj/lending-footer-page.png",
+            shortInfo: {"ru":"Навигация и копирайт","en":"Navigation and copyright","tj":"Навигатсия ва ҳуқуқи муаллиф"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          }
+        ],
+      }
+    ]
+  }
 ];

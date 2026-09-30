@@ -36,6 +36,7 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
     "navo": "Медиа",
     "somon-tv": "Медиа",
     "zenith": "Корпоративные",
+    "itrunstj": "Образование",
     "itrans": "Корпоративные",
     "zudsms": "Финтех и Web3",
     "sunduk-tv": "Медиа",
