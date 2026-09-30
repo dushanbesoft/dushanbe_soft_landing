@@ -7795,194 +7795,194 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "dashboard-applications-add-page",
-            title: { ru: "Dashboard Applications Add", en: "Dashboard Applications Add", tj: "Dashboard Applications Add" },
+            title: {"ru":"Создание заявки","en":"Create Application","tj":"Сохтани дархост"},
             imageSrc: "/images/projects/mirel/dashboard-applications-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-applications-add-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Форма для регистрации новых обращений","en":"Form to register new requests","tj":"Шакл барои бақайдгирии муроҷиатҳои нав"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-applications-page",
-            title: { ru: "Dashboard Applications", en: "Dashboard Applications", tj: "Dashboard Applications" },
+            title: {"ru":"Список заявок","en":"Applications List","tj":"Рӯйхати дархостҳо"},
             imageSrc: "/images/projects/mirel/dashboard-applications-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-applications-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Таблица всех заявок с возможностью фильтрации","en":"Table of all applications with filtering","tj":"Ҷадвали ҳамаи дархостҳо бо филтр"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-articles-creation-page",
-            title: { ru: "Dashboard Articles Creation", en: "Dashboard Articles Creation", tj: "Dashboard Articles Creation" },
+            title: {"ru":"Написание статьи","en":"Create Article","tj":"Навиштани мақола"},
             imageSrc: "/images/projects/mirel/dashboard-articles-creation-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-articles-creation-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Визуальный редактор для публикации контента","en":"Visual editor for publishing content","tj":"Муҳаррири визуалӣ барои нашри мундариҷа"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-articles-page",
-            title: { ru: "Dashboard Articles", en: "Dashboard Articles", tj: "Dashboard Articles" },
+            title: {"ru":"Управление статьями","en":"Articles Management","tj":"Идоракунии мақолаҳо"},
             imageSrc: "/images/projects/mirel/dashboard-articles-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-articles-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Список всех опубликованных статей","en":"List of all published articles","tj":"Рӯйхати ҳамаи мақолаҳои нашршуда"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-awards-and-certificates-page",
-            title: { ru: "Dashboard Awards And Certificates", en: "Dashboard Awards And Certificates", tj: "Dashboard Awards And Certificates" },
+            title: {"ru":"Сертификаты и награды","en":"Awards & Certificates","tj":"Шаҳодатномаҳо ва ҷоизаҳо"},
             imageSrc: "/images/projects/mirel/dashboard-awards-and-certificates-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-awards-and-certificates-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Управление достижениями компании","en":"Management of company achievements","tj":"Идоракунии дастовардҳои ширкат"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-clients-page",
-            title: { ru: "Dashboard Clients", en: "Dashboard Clients", tj: "Dashboard Clients" },
+            title: {"ru":"База клиентов","en":"Clients Database","tj":"Пойгоҳи мизоҷон"},
             imageSrc: "/images/projects/mirel/dashboard-clients-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-clients-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Список всех клиентов с контактными данными","en":"List of all clients with contact details","tj":"Рӯйхати ҳамаи мизоҷон бо маълумоти тамос"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-clients-were-helped-page",
-            title: { ru: "Dashboard Clients Were Helped", en: "Dashboard Clients Were Helped", tj: "Dashboard Clients Were Helped" },
+            title: {"ru":"Помощь клиентам","en":"Assisted Clients","tj":"Кумак ба мизоҷон"},
             imageSrc: "/images/projects/mirel/dashboard-clients-were-helped-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-clients-were-helped-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Статистика оказанной помощи","en":"Statistics of provided assistance","tj":"Омори кумакҳои расонидашуда"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-dark-backdrop-page",
-            title: { ru: "Dashboard Dark Backdrop", en: "Dashboard Dark Backdrop", tj: "Dashboard Dark Backdrop" },
+            title: {"ru":"Темная тема","en":"Dark Mode","tj":"Мавзӯи торик"},
             imageSrc: "/images/projects/mirel/dashboard-dark-backdrop-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-dark-backdrop-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Интерфейс панели в темном оформлении","en":"Dashboard interface in dark mode","tj":"Интерфейси панел дар мавзӯи торик"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-letters-of-gratitude-page",
-            title: { ru: "Dashboard Letters Of Gratitude", en: "Dashboard Letters Of Gratitude", tj: "Dashboard Letters Of Gratitude" },
+            title: {"ru":"Благодарственные письма","en":"Letters of Gratitude","tj":"Сипосномаҳо"},
             imageSrc: "/images/projects/mirel/dashboard-letters-of-gratitude-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-letters-of-gratitude-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Отзывы и благодарности от партнеров","en":"Reviews and gratitude from partners","tj":"Баррасиҳо ва сипосномаҳо аз шарикон"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-add-page",
-            title: { ru: "Dashboard Projects Add", en: "Dashboard Projects Add", tj: "Dashboard Projects Add" },
+            title: {"ru":"Добавление проекта","en":"Add Project","tj":"Иловаи лоиҳа"},
             imageSrc: "/images/projects/mirel/dashboard-projects-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-add-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Ввод данных для нового проекта","en":"Data entry for a new project","tj":"Вуруди маълумот барои лоиҳаи нав"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-company-add-page",
-            title: { ru: "Dashboard Projects Company Add", en: "Dashboard Projects Company Add", tj: "Dashboard Projects Company Add" },
+            title: {"ru":"Добавление компании","en":"Add Project Company","tj":"Иловаи ширкат"},
             imageSrc: "/images/projects/mirel/dashboard-projects-company-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-company-add-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Регистрация компании для портфолио","en":"Company registration for portfolio","tj":"Бақайдгирии ширкат барои портфолио"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-company-page",
-            title: { ru: "Dashboard Projects Company", en: "Dashboard Projects Company", tj: "Dashboard Projects Company" },
+            title: {"ru":"Компании проектов","en":"Project Companies","tj":"Ширкатҳои лоиҳа"},
             imageSrc: "/images/projects/mirel/dashboard-projects-company-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-company-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Справочник компаний-заказчиков","en":"Directory of client companies","tj":"Маълумотномаи ширкатҳои фармоишгар"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-galery-add-page",
-            title: { ru: "Dashboard Projects Galery Add", en: "Dashboard Projects Galery Add", tj: "Dashboard Projects Galery Add" },
+            title: {"ru":"Добавление в галерею","en":"Add to Gallery","tj":"Илова ба галерея"},
             imageSrc: "/images/projects/mirel/dashboard-projects-galery-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-galery-add-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Загрузка изображений для кейса","en":"Uploading images for a case","tj":"Боркунии расмҳо барои лоиҳа"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-galery-page",
-            title: { ru: "Dashboard Projects Galery", en: "Dashboard Projects Galery", tj: "Dashboard Projects Galery" },
+            title: {"ru":"Галерея проектов","en":"Projects Gallery","tj":"Галереяи лоиҳаҳо"},
             imageSrc: "/images/projects/mirel/dashboard-projects-galery-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-galery-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Управление фотографиями проектов","en":"Managing project photos","tj":"Идоракунии аксҳои лоиҳаҳо"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-object-type-page",
-            title: { ru: "Dashboard Projects Object Type", en: "Dashboard Projects Object Type", tj: "Dashboard Projects Object Type" },
+            title: {"ru":"Типы объектов","en":"Object Types","tj":"Намудҳои объект"},
             imageSrc: "/images/projects/mirel/dashboard-projects-object-type-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-object-type-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Справочник категорий объектов","en":"Directory of object categories","tj":"Рӯйхати категорияҳои объектҳо"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-projects-page",
-            title: { ru: "Dashboard Projects Projects", en: "Dashboard Projects Projects", tj: "Dashboard Projects Projects" },
+            title: {"ru":"Управление проектами","en":"Projects Management","tj":"Идоракунии лоиҳаҳо"},
             imageSrc: "/images/projects/mirel/dashboard-projects-projects-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-projects-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Центральный хаб портфолио","en":"Central portfolio hub","tj":"Маркази асосии портфолио"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-type-of-solution-page",
-            title: { ru: "Dashboard Projects Type Of Solution", en: "Dashboard Projects Type Of Solution", tj: "Dashboard Projects Type Of Solution" },
+            title: {"ru":"Типы решений","en":"Solution Types","tj":"Намудҳои ҳалли"},
             imageSrc: "/images/projects/mirel/dashboard-projects-type-of-solution-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-type-of-solution-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Классификация предоставляемых решений","en":"Classification of provided solutions","tj":"Гурӯҳбандии қарорҳои пешниҳодшуда"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-projects-year-of-implementation-page",
-            title: { ru: "Dashboard Projects Year Of Implementation", en: "Dashboard Projects Year Of Implementation", tj: "Dashboard Projects Year Of Implementation" },
+            title: {"ru":"Год реализации","en":"Implementation Year","tj":"Соли татбиқ"},
             imageSrc: "/images/projects/mirel/dashboard-projects-year-of-implementation-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-year-of-implementation-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Управление хронологией портфолио","en":"Portfolio chronology management","tj":"Идоракунии хронологияи портфолио"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-services-page",
-            title: { ru: "Dashboard Services", en: "Dashboard Services", tj: "Dashboard Services" },
+            title: {"ru":"Услуги","en":"Services","tj":"Хизматрасониҳо"},
             imageSrc: "/images/projects/mirel/dashboard-services-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-services-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Каталог услуг компании","en":"Company services catalog","tj":"Рӯйхати хизматрасониҳои ширкат"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-settings-page",
-            title: { ru: "Dashboard Settings", en: "Dashboard Settings", tj: "Dashboard Settings" },
+            title: {"ru":"Настройки системы","en":"System Settings","tj":"Танзимоти система"},
             imageSrc: "/images/projects/mirel/dashboard-settings-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-settings-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Глобальные параметры CRM","en":"Global CRM parameters","tj":"Параметрҳои глобалии CRM"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-staff-add-page",
-            title: { ru: "Dashboard Staff Add", en: "Dashboard Staff Add", tj: "Dashboard Staff Add" },
+            title: {"ru":"Добавление сотрудника","en":"Add Staff","tj":"Иловаи корманд"},
             imageSrc: "/images/projects/mirel/dashboard-staff-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-add-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Регистрация нового работника","en":"Registering a new employee","tj":"Бақайдгирии корманди нав"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-staff-departments-add-page",
-            title: { ru: "Dashboard Staff Departments Add", en: "Dashboard Staff Departments Add", tj: "Dashboard Staff Departments Add" },
+            title: {"ru":"Добавление отдела","en":"Add Department","tj":"Иловаи шуъба"},
             imageSrc: "/images/projects/mirel/dashboard-staff-departments-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-departments-add-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Создание нового структурного подразделения","en":"Creating a new department","tj":"Сохтани шуъбаи нави сохторӣ"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-staff-departments-page",
-            title: { ru: "Dashboard Staff Departments", en: "Dashboard Staff Departments", tj: "Dashboard Staff Departments" },
+            title: {"ru":"Отделы компании","en":"Departments","tj":"Шуъбаҳои ширкат"},
             imageSrc: "/images/projects/mirel/dashboard-staff-departments-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-departments-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Управление структурой персонала","en":"Personnel structure management","tj":"Идоракунии сохтори кормандон"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "dashboard-staff-page",
-            title: { ru: "Dashboard Staff", en: "Dashboard Staff", tj: "Dashboard Staff" },
+            title: {"ru":"Сотрудники","en":"Staff","tj":"Кормандон"},
             imageSrc: "/images/projects/mirel/dashboard-staff-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Общий список всего персонала","en":"General list of all personnel","tj":"Рӯйхати умумии ҳамаи кормандон"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
@@ -8000,66 +8000,66 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "lending-header-page",
-            title: { ru: "Lending Header", en: "Lending Header", tj: "Lending Header" },
+            title: {"ru":"Главная секция","en":"Hero Section","tj":"Сексияи асосӣ"},
             imageSrc: "/images/projects/royalbaby/web/lending-header-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-header-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Приветственный экран лендинга","en":"Welcome screen of the landing page","tj":"Экрани истиқболии лендинг"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-how-to-participate-page",
-            title: { ru: "Lending How To Participate", en: "Lending How To Participate", tj: "Lending How To Participate" },
+            title: {"ru":"Как участвовать","en":"How to Participate","tj":"Чӣ тавр иштирок кардан"},
             imageSrc: "/images/projects/royalbaby/web/lending-how-to-participate-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-how-to-participate-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Инструкция для участия в акции","en":"Instructions for participating in the promo","tj":"Дастур барои иштирок дар аксия"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-products-page",
-            title: { ru: "Lending Products", en: "Lending Products", tj: "Lending Products" },
+            title: {"ru":"Продукция","en":"Products","tj":"Маҳсулот"},
             imageSrc: "/images/projects/royalbaby/web/lending-products-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-products-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Каталог акционных товаров","en":"Catalog of promotional goods","tj":"Феҳристи маҳсулоти аксиявӣ"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-win-prizes-page",
-            title: { ru: "Lending Win Prizes", en: "Lending Win Prizes", tj: "Lending Win Prizes" },
+            title: {"ru":"Призы","en":"Prizes","tj":"Тӯҳфаҳо"},
             imageSrc: "/images/projects/royalbaby/web/lending-win-prizes-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-win-prizes-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Список доступных подарков для розыгрыша","en":"List of available gifts for the giveaway","tj":"Рӯйхати тӯҳфаҳои дастрас"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-winners-зфпу",
-            title: { ru: "Lending Winners Winners", en: "Lending Winners Winners", tj: "Lending Winners Winners" },
+            title: {"ru":"Список победителей","en":"Winners List","tj":"Рӯйхати ғолибон"},
             imageSrc: "/images/projects/royalbaby/web/lending-winners-зфпу.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-winners-зфпу.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Таблица с результатами розыгрыша","en":"Table with giveaway results","tj":"Ҷадвал бо натиҷаҳои озмун"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-questions-and-answers-page",
-            title: { ru: "Lending Questions And Answers", en: "Lending Questions And Answers", tj: "Lending Questions And Answers" },
+            title: {"ru":"Вопросы и ответы","en":"FAQ","tj":"Саволҳо ва ҷавобҳо"},
             imageSrc: "/images/projects/royalbaby/web/lending-questions-and-answers-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-questions-and-answers-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Часто задаваемые вопросы от пользователей","en":"Frequently asked questions from users","tj":"Саволҳои бештар додашаванда"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-login-page",
-            title: { ru: "Lending Login", en: "Lending Login", tj: "Lending Login" },
+            title: {"ru":"Авторизация","en":"Login","tj":"Вуруд"},
             imageSrc: "/images/projects/royalbaby/web/lending-login-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-login-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Вход в личный кабинет участника","en":"Login to participant dashboard","tj":"Вуруд ба утоқи шахсии иштирокчӣ"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-footer-page",
-            title: { ru: "Lending Footer", en: "Lending Footer", tj: "Lending Footer" },
+            title: {"ru":"Подвал сайта","en":"Footer","tj":"Поёни сайт"},
             imageSrc: "/images/projects/royalbaby/web/lending-footer-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-footer-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Нижняя навигация и контакты","en":"Bottom navigation and contacts","tj":"Навигатсияи поёнӣ ва тамосҳо"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
@@ -8069,18 +8069,18 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "bot-start-page",
-            title: { ru: "Bot Start", en: "Bot Start", tj: "Bot Start" },
+            title: {"ru":"Запуск бота","en":"Bot Start","tj":"Оғози бот"},
             imageSrc: "/images/projects/royalbaby/bot/bot-start-page.jpg",
             BannerSrc: "/images/projects/royalbaby/bot/bot-start-page.jpg",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Приветственное сообщение Telegram бота","en":"Welcome message of Telegram bot","tj":"Паёми истиқболии роботи Telegram"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "bot-about-page",
-            title: { ru: "Bot About", en: "Bot About", tj: "Bot About" },
+            title: {"ru":"Информация о боте","en":"Bot Info","tj":"Маълумот дар бораи бот"},
             imageSrc: "/images/projects/royalbaby/bot/bot-about-page.jpg",
             BannerSrc: "/images/projects/royalbaby/bot/bot-about-page.jpg",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Справка и условия участия в акции","en":"Help and terms of participation","tj":"Маълумотнома ва шартҳои иштирок"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
@@ -8090,10 +8090,10 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "admin-login-page",
-            title: { ru: "Admin Login", en: "Admin Login", tj: "Admin Login" },
+            title: {"ru":"Вход администратора","en":"Admin Login","tj":"Вуруди администратор"},
             imageSrc: "/images/projects/royalbaby/admin/admin-login-page.png",
             BannerSrc: "/images/projects/royalbaby/admin/admin-login-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Авторизация в панель управления акцией","en":"Login to the promo admin panel","tj":"Вуруд ба панели идоракунии аксия"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
@@ -8111,50 +8111,50 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "lending-header-page",
-            title: { ru: "Lending Header", en: "Lending Header", tj: "Lending Header" },
+            title: {"ru":"Главная секция","en":"Hero Section","tj":"Сексияи асосӣ"},
             imageSrc: "/images/projects/rushdikuhiston/lending-header-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-header-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Приветственный экран лендинга","en":"Welcome screen of the landing page","tj":"Экрани истиқболии лендинг"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-slider-page",
-            title: { ru: "Lending Slider", en: "Lending Slider", tj: "Lending Slider" },
+            title: {"ru":"Слайдер предложений","en":"Offers Slider","tj":"Слайдери пешниҳодҳо"},
             imageSrc: "/images/projects/rushdikuhiston/lending-slider-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-slider-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Динамичный показ главных новостей","en":"Dynamic display of top news","tj":"Намоиши динамикии хабарҳои асосӣ"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-credit-calculator-page",
-            title: { ru: "Lending Credit Calculator", en: "Lending Credit Calculator", tj: "Lending Credit Calculator" },
+            title: {"ru":"Кредитный калькулятор","en":"Credit Calculator","tj":"Калкулятори қарзӣ"},
             imageSrc: "/images/projects/rushdikuhiston/lending-credit-calculator-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-credit-calculator-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Инструмент для расчета платежей по кредиту","en":"Tool for calculating loan payments","tj":"Восита барои ҳисобкунии пардохтҳои қарзӣ"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-content-page",
-            title: { ru: "Lending Content", en: "Lending Content", tj: "Lending Content" },
+            title: {"ru":"Информационный блок","en":"Info Section","tj":"Блоки иттилоотӣ"},
             imageSrc: "/images/projects/rushdikuhiston/lending-content-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-content-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Текстовый контент и статьи","en":"Text content and articles","tj":"Мундариҷаи матнӣ ва мақолаҳо"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-last-news-page",
-            title: { ru: "Lending Last News", en: "Lending Last News", tj: "Lending Last News" },
+            title: {"ru":"Последние новости","en":"Latest News","tj":"Хабарҳои навтарин"},
             imageSrc: "/images/projects/rushdikuhiston/lending-last-news-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-last-news-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Лента корпоративных обновлений","en":"Corporate updates feed","tj":"Лентаи навигариҳои корпоративӣ"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "lending-footer-page",
-            title: { ru: "Lending Footer", en: "Lending Footer", tj: "Lending Footer" },
+            title: {"ru":"Подвал сайта","en":"Footer","tj":"Поёни сайт"},
             imageSrc: "/images/projects/rushdikuhiston/lending-footer-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-footer-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Нижняя навигация и контакты","en":"Bottom navigation and contacts","tj":"Навигатсияи поёнӣ ва тамосҳо"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
@@ -8164,18 +8164,18 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "about-page",
-            title: { ru: "About", en: "About", tj: "About" },
+            title: {"ru":"Страница О нас","en":"About Us","tj":"Дар бораи мо"},
             imageSrc: "/images/projects/rushdikuhiston/about-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/about-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"История и миссия финансовой организации","en":"History and mission of the organization","tj":"Таърих ва рисолати ташкилот"},
             fullInfo: { ru: "", en: "", tj: "" }
           },
           {
             slug: "about-advantages-page",
-            title: { ru: "About Advantages", en: "About Advantages", tj: "About Advantages" },
+            title: {"ru":"Наши преимущества","en":"Our Advantages","tj":"Афзалиятҳои мо"},
             imageSrc: "/images/projects/rushdikuhiston/about-advantages-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/about-advantages-page.png",
-            shortInfo: { ru: "", en: "", tj: "" },
+            shortInfo: {"ru":"Сильные стороны и выгоды для клиентов","en":"Strengths and benefits for clients","tj":"Ҷиҳатҳои қавӣ ва манфиатҳо барои мизоҷон"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
