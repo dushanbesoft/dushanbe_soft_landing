@@ -409,16 +409,16 @@
       "description": "A comprehensive solution for the Royal Baby promo campaign. It includes a promo website, a Telegram bot for participants, and an admin panel for managing giveaways, winners, and prizes."
     },
     "rushdikuhiston": {
-      "title": "MDO Rushdi Kuhiston",
-      "description": "Development of a corporate website for the microfinance depository organization 'Rushdi Kuhiston'. The site features a credit calculator, information on services, and company news, providing clients with convenient access to financial services."
+      "title": "Rushdi Kuhiston",
+      "description": "Web platform and dashboard for microfinance organization 'Rushdi Kuhiston', including a credit calculator, online applications, and chatbot integration."
     },
     "traveltours": {
       "title": "TravelTours",
       "description": "A platform for a travel agency, including a tour catalog, hotel bookings, and a dashboard for processing requests and configuring the system."
     },
     "itrunstj": {
-      "title": "ITRUNS - IT Academy",
-      "description": "A modern website for an IT academy, providing detailed information about courses, instructors, and online enrollment options."
+      "title": "I-Trans",
+      "description": "A corporate website for a logistics company, providing freight forwarding, customs clearance, and cargo insurance services."
     },
     "farad": {
       "title": "Farad",

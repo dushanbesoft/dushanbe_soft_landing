@@ -37,7 +37,7 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
     "somon-tv": "Медиа",
     "zenith": "Корпоративные",
     "farad": "E-commerce",
-    "itrunstj": "Образование",
+    "itrunstj": "Корпоративные",
     "itrans": "Корпоративные",
     "zudsms": "Финтех и Web3",
     "sunduk-tv": "Медиа",

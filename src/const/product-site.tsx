@@ -8529,7 +8529,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   , {
     imageSrc: "/images/projects/itrunstj/lending-header-page.png",
     year: "2024",
-    tags: ["React", "Next.js", "Tailwind CSS", "Education"],
+    tags: ["React", "Next.js", "Tailwind CSS", "Logistics"],
     slug: "itrunstj",
     projectComponents: [
       {
@@ -8851,6 +8851,241 @@ This example shows how entered fields relate to the chat’s appearance. Placing
             imageSrc: "/images/projects/farad/admin/dashboard-template-details-page.png",
             BannerSrc: "/images/projects/farad/admin/dashboard-template-details-page.png",
             shortInfo: {"ru":"Детали шаблонов","en":"Template details","tj":"Тафсилоти шаблонҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          }
+        ],
+      }
+    ]
+  }
+
+  , {
+    imageSrc: "/images/projects/rushdikuhiston/web/lending-header-page.png",
+    year: "2024",
+    tags: ["React", "Next.js", "PostgreSQL", "Fintech"],
+    slug: "rushdikuhiston",
+    projectComponents: [
+      {
+        tabName: { ru: "Веб-сайт", en: "Website", tj: "Вебсайт" },
+        items: [
+          {
+            slug: "lending-header-page",
+            title: {"ru":"Главная секция","en":"Hero Section","tj":"Сексияи асосӣ"},
+            imageSrc: "/images/projects/rushdikuhiston/web/lending-header-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/lending-header-page.png",
+            shortInfo: {"ru":"Приветственный блок","en":"Welcome block","tj":"Блоки истиқболӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-slider-page",
+            title: {"ru":"Слайдер предложений","en":"Offers Slider","tj":"Слайдери пешниҳодҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/lending-slider-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/lending-slider-page.png",
+            shortInfo: {"ru":"Актуальные акции","en":"Current promotions","tj":"Аксияҳои ҷорӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-credit-calculator-page",
+            title: {"ru":"Кредитный калькулятор","en":"Credit Calculator","tj":"Ҳисобкунаки қарзӣ"},
+            imageSrc: "/images/projects/rushdikuhiston/web/lending-credit-calculator-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/lending-credit-calculator-page.png",
+            shortInfo: {"ru":"Расчет условий кредита","en":"Loan conditions calculation","tj":"Ҳисобкунии шартҳои қарз"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-content-page",
+            title: {"ru":"Описание услуг","en":"Services Content","tj":"Тавсифи хизматрасониҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/lending-content-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/lending-content-page.png",
+            shortInfo: {"ru":"Информация о кредитах","en":"Loan information","tj":"Маълумот дар бораи қарзҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "services-page",
+            title: {"ru":"Все услуги","en":"All Services","tj":"Ҳамаи хизматрасониҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/services-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/services-page.png",
+            shortInfo: {"ru":"Финансовые продукты","en":"Financial products","tj":"Маҳсулоти молиявӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "services-loans-page",
+            title: {"ru":"Кредитные услуги","en":"Loan Services","tj":"Хизматрасониҳои қарзӣ"},
+            imageSrc: "/images/projects/rushdikuhiston/web/services-loans-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/services-loans-page.png",
+            shortInfo: {"ru":"Каталог кредитов","en":"Loans catalog","tj":"Каталоги қарзҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "about-page",
+            title: {"ru":"О компании","en":"About Us","tj":"Дар бораи мо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/about-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/about-page.png",
+            shortInfo: {"ru":"История организации","en":"Organization history","tj":"Таърихи ташкилот"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "about-advantages-page",
+            title: {"ru":"Наши преимущества","en":"Our Advantages","tj":"Афзалиятҳои мо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/about-advantages-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/about-advantages-page.png",
+            shortInfo: {"ru":"Почему выбирают нас","en":"Why choose us","tj":"Чаро моро интихоб мекунанд"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "chat-bot-page",
+            title: {"ru":"Чат-бот","en":"Chatbot","tj":"Чат-бот"},
+            imageSrc: "/images/projects/rushdikuhiston/web/chat-bot-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/chat-bot-page.png",
+            shortInfo: {"ru":"Интерактивный помощник","en":"Interactive assistant","tj":"Ёрдамчии интерактивӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "documents-page",
+            title: {"ru":"Документы","en":"Documents","tj":"Ҳуҷҷатҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/documents-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/documents-page.png",
+            shortInfo: {"ru":"Официальная информация","en":"Official information","tj":"Маълумоти расмӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "news-page",
+            title: {"ru":"Все новости","en":"All News","tj":"Ҳамаи хабарҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/news-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/news-page.png",
+            shortInfo: {"ru":"Пресс-центр","en":"Press center","tj":"Маркази матбуот"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-last-news-page",
+            title: {"ru":"Последние новости","en":"Latest News","tj":"Хабарҳои охирин"},
+            imageSrc: "/images/projects/rushdikuhiston/web/lending-last-news-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/lending-last-news-page.png",
+            shortInfo: {"ru":"Лента событий","en":"Events feed","tj":"Навори рӯйдодҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "maps-page",
+            title: {"ru":"Карта отделений","en":"Branches Map","tj":"Харитаи шуъбаҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/web/maps-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/maps-page.png",
+            shortInfo: {"ru":"География присутствия","en":"Presence geography","tj":"Ҷуғрофияи ҳузур"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "contacts-page",
+            title: {"ru":"Контакты","en":"Contacts","tj":"Тамос"},
+            imageSrc: "/images/projects/rushdikuhiston/web/contacts-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/contacts-page.png",
+            shortInfo: {"ru":"Связь с нами","en":"Contact us","tj":"Тамос бо мо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "search-page",
+            title: {"ru":"Поиск","en":"Search","tj":"Ҷустуҷӯ"},
+            imageSrc: "/images/projects/rushdikuhiston/web/search-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/search-page.png",
+            shortInfo: {"ru":"Поиск по сайту","en":"Site search","tj":"Ҷустуҷӯ дар сайт"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-footer-page",
+            title: {"ru":"Подвал сайта","en":"Footer","tj":"Поёни сайт"},
+            imageSrc: "/images/projects/rushdikuhiston/web/lending-footer-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/web/lending-footer-page.png",
+            shortInfo: {"ru":"Навигация и контакты","en":"Navigation and contacts","tj":"Навигатсия ва тамосҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          }
+        ],
+      },
+      {
+        tabName: { ru: "Админ-панель", en: "Admin Panel", tj: "Панели админ" },
+        items: [
+          {
+            slug: "login-page",
+            title: {"ru":"Авторизация","en":"Login","tj":"Вуруд"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/login-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/login-page.png",
+            shortInfo: {"ru":"Вход в панель управления","en":"Admin login","tj":"Вуруд ба панели идоракунӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-applications-page",
+            title: {"ru":"Заявки","en":"Applications","tj":"Дархостҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-applications-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-applications-page.png",
+            shortInfo: {"ru":"Управление кредитными заявками","en":"Credit applications management","tj":"Идоракунии дархостҳои қарзӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-credits-page",
+            title: {"ru":"Кредиты","en":"Credits","tj":"Қарзҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-credits-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-credits-page.png",
+            shortInfo: {"ru":"Список кредитных продуктов","en":"Credit products list","tj":"Рӯйхати маҳсулоти қарзӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-person-cart-page",
+            title: {"ru":"Карточка клиента","en":"Client Profile","tj":"Профили мизоҷ"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-person-cart-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-person-cart-page.png",
+            shortInfo: {"ru":"Детальная информация","en":"Detailed info","tj":"Маълумоти муфассал"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-dot-reporting-page",
+            title: {"ru":"Отчетность","en":"Reporting","tj":"Ҳисобот"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-dot-reporting-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-dot-reporting-page.png",
+            shortInfo: {"ru":"Финансовая аналитика","en":"Financial analytics","tj":"Таҳлилоти молиявӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-feedback-pzge",
+            title: {"ru":"Отзывы","en":"Feedback","tj":"Баррасиҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-feedback-pzge.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-feedback-pzge.png",
+            shortInfo: {"ru":"Обратная связь клиентов","en":"Client feedback","tj":"Алоқаи муштариён"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-mailing-page",
+            title: {"ru":"Рассылки","en":"Mailing","tj":"Рассылкаҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-mailing-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-mailing-page.png",
+            shortInfo: {"ru":"Управление рассылками","en":"Mailing management","tj":"Идоракунии паёмҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-news-page",
+            title: {"ru":"Новости","en":"News","tj":"Хабарҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-news-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-news-page.png",
+            shortInfo: {"ru":"Публикация новостей","en":"News publishing","tj":"Нашри хабарҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-about-documents-page",
+            title: {"ru":"Документы","en":"Documents","tj":"Ҳуҷҷатҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-about-documents-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-about-documents-page.png",
+            shortInfo: {"ru":"Нормативные документы","en":"Regulatory documents","tj":"Ҳуҷҷатҳои меъёрӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-banners-page",
+            title: {"ru":"Баннеры","en":"Banners","tj":"Баннерҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-banners-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-banners-page.png",
+            shortInfo: {"ru":"Управление слайдерами и рекламой","en":"Slider and ads management","tj":"Идоракунии слайдерҳо ва реклама"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-language-page",
+            title: {"ru":"Языки","en":"Languages","tj":"Забонҳо"},
+            imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-language-page.png",
+            BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-language-page.png",
+            shortInfo: {"ru":"Локализация сайта","en":"Site localization","tj":"Маҳаллисозии сайт"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
