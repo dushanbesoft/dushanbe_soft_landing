@@ -419,6 +419,10 @@
     "itrunstj": {
       "title": "ITRUNS - IT Academy",
       "description": "A modern website for an IT academy, providing detailed information about courses, instructors, and online enrollment options."
+    },
+    "farad": {
+      "title": "Farad",
+      "description": "A comprehensive e-commerce dashboard including product management, orders, users, reports, and marketing campaigns."
     }
   },
   "partners": {
