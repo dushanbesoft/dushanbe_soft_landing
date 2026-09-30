@@ -203,10 +203,6 @@ export default async function CaseDetailsPage({
 
           {projectComponents ? (
             <div style={{ marginTop: '0px', width: '100%' }}>
-              <div className={styles.descriptionSection}>
-                <h2 className={styles.sectionTitle}>{t("cases.about_project")}</h2>
-                <p className={styles.descriptionText}>{description}</p>
-              </div>
               <CaseTabs groups={projectComponents} lang={lang} projectSlug={slug} projectTitle={title} />
             </div>
           ) : (
