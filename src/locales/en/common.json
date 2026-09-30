@@ -276,6 +276,17 @@
     "gallery_close": "Close viewer"
   },
   "projects": {
+    "zudyob": {
+      "title": "ZudYob — intelligent AI search",
+      "description": "ZudYob is a Telegram bot for intelligent property search. Users choose purchase or rental, budget, area, room count and location, manage saved filters and receive listings directly in the chat. The bot supports Russian, Tajik and English, subscription management and balance top-ups through Alif and DCity.",
+      "tasks": [
+        "Intelligent search for relevant offers",
+        "Instant notifications about new matches",
+        "Round-the-clock search, 24/7",
+        "Time saved every day"
+      ],
+      "gallery": ["ZudYob — finds faster"]
+    },
     "president": {
       "title": "President of the Republic of Tajikistan",
       "description": "The official website of the President of the Republic of Tajikistan is the main state web portal of the country. The platform ensures the publication of official news, decrees, speeches, and photo reports from events in multiple languages.",
@@ -292,7 +303,7 @@
     },
     "sohktor": {
       "title": "SChDO",
-      "description": "Internal information system (ERP/CRM system) for automating the operational activities of the fire service, registering emergencies, maintaining personnel records, and electronic document management."
+      "description": "Internal information system (ERP/CRM system) for automating the operational activities of the fire service, registering emergencies and fires, managing criminal cases, tracking inspected objects, and electronic document management."
     },
     "digital-tajikistan": {
       "title": "Digital Tajikistan",
@@ -417,7 +428,7 @@
       {
         "name": "СХДО",
         "sector": "mahzan.tj",
-        "description": "The Single Electronic Database is a specialized internal information system for automating the operations of the fire department. It ensures reliable tracking of emergencies, HR management, and secure electronic document workflow."
+        "description": "The Single Electronic Database is a specialized internal information system for automating the operations of the fire department. It ensures reliable tracking of emergencies and fires, management of criminal cases and reporting, and secure electronic document workflow."
       },
       {
         "name": "Рушди Кӯҳистон",
