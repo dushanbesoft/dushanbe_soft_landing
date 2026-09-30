@@ -7795,7 +7795,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "dashboard-applications-add-page",
-            title: { ru: "dashboard-applications-add-page", en: "dashboard-applications-add-page", tj: "dashboard-applications-add-page" },
+            title: { ru: "Dashboard Applications Add", en: "Dashboard Applications Add", tj: "Dashboard Applications Add" },
             imageSrc: "/images/projects/mirel/dashboard-applications-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-applications-add-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7803,7 +7803,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-applications-page",
-            title: { ru: "dashboard-applications-page", en: "dashboard-applications-page", tj: "dashboard-applications-page" },
+            title: { ru: "Dashboard Applications", en: "Dashboard Applications", tj: "Dashboard Applications" },
             imageSrc: "/images/projects/mirel/dashboard-applications-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-applications-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7811,7 +7811,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-articles-creation-page",
-            title: { ru: "dashboard-articles-creation-page", en: "dashboard-articles-creation-page", tj: "dashboard-articles-creation-page" },
+            title: { ru: "Dashboard Articles Creation", en: "Dashboard Articles Creation", tj: "Dashboard Articles Creation" },
             imageSrc: "/images/projects/mirel/dashboard-articles-creation-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-articles-creation-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7819,7 +7819,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-articles-page",
-            title: { ru: "dashboard-articles-page", en: "dashboard-articles-page", tj: "dashboard-articles-page" },
+            title: { ru: "Dashboard Articles", en: "Dashboard Articles", tj: "Dashboard Articles" },
             imageSrc: "/images/projects/mirel/dashboard-articles-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-articles-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7827,7 +7827,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-awards-and-certificates-page",
-            title: { ru: "dashboard-awards-and-certificates-page", en: "dashboard-awards-and-certificates-page", tj: "dashboard-awards-and-certificates-page" },
+            title: { ru: "Dashboard Awards And Certificates", en: "Dashboard Awards And Certificates", tj: "Dashboard Awards And Certificates" },
             imageSrc: "/images/projects/mirel/dashboard-awards-and-certificates-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-awards-and-certificates-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7835,7 +7835,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-clients-page",
-            title: { ru: "dashboard-clients-page", en: "dashboard-clients-page", tj: "dashboard-clients-page" },
+            title: { ru: "Dashboard Clients", en: "Dashboard Clients", tj: "Dashboard Clients" },
             imageSrc: "/images/projects/mirel/dashboard-clients-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-clients-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7843,7 +7843,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-clients-were-helped-page",
-            title: { ru: "dashboard-clients-were-helped-page", en: "dashboard-clients-were-helped-page", tj: "dashboard-clients-were-helped-page" },
+            title: { ru: "Dashboard Clients Were Helped", en: "Dashboard Clients Were Helped", tj: "Dashboard Clients Were Helped" },
             imageSrc: "/images/projects/mirel/dashboard-clients-were-helped-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-clients-were-helped-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7851,7 +7851,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-dark-backdrop-page",
-            title: { ru: "dashboard-dark-backdrop-page", en: "dashboard-dark-backdrop-page", tj: "dashboard-dark-backdrop-page" },
+            title: { ru: "Dashboard Dark Backdrop", en: "Dashboard Dark Backdrop", tj: "Dashboard Dark Backdrop" },
             imageSrc: "/images/projects/mirel/dashboard-dark-backdrop-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-dark-backdrop-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7859,7 +7859,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-letters-of-gratitude-page",
-            title: { ru: "dashboard-letters-of-gratitude-page", en: "dashboard-letters-of-gratitude-page", tj: "dashboard-letters-of-gratitude-page" },
+            title: { ru: "Dashboard Letters Of Gratitude", en: "Dashboard Letters Of Gratitude", tj: "Dashboard Letters Of Gratitude" },
             imageSrc: "/images/projects/mirel/dashboard-letters-of-gratitude-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-letters-of-gratitude-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7867,7 +7867,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-add-page",
-            title: { ru: "dashboard-projects-add-page", en: "dashboard-projects-add-page", tj: "dashboard-projects-add-page" },
+            title: { ru: "Dashboard Projects Add", en: "Dashboard Projects Add", tj: "Dashboard Projects Add" },
             imageSrc: "/images/projects/mirel/dashboard-projects-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-add-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7875,7 +7875,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-company-add-page",
-            title: { ru: "dashboard-projects-company-add-page", en: "dashboard-projects-company-add-page", tj: "dashboard-projects-company-add-page" },
+            title: { ru: "Dashboard Projects Company Add", en: "Dashboard Projects Company Add", tj: "Dashboard Projects Company Add" },
             imageSrc: "/images/projects/mirel/dashboard-projects-company-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-company-add-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7883,7 +7883,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-company-page",
-            title: { ru: "dashboard-projects-company-page", en: "dashboard-projects-company-page", tj: "dashboard-projects-company-page" },
+            title: { ru: "Dashboard Projects Company", en: "Dashboard Projects Company", tj: "Dashboard Projects Company" },
             imageSrc: "/images/projects/mirel/dashboard-projects-company-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-company-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7891,7 +7891,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-galery-add-page",
-            title: { ru: "dashboard-projects-galery-add-page", en: "dashboard-projects-galery-add-page", tj: "dashboard-projects-galery-add-page" },
+            title: { ru: "Dashboard Projects Galery Add", en: "Dashboard Projects Galery Add", tj: "Dashboard Projects Galery Add" },
             imageSrc: "/images/projects/mirel/dashboard-projects-galery-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-galery-add-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7899,7 +7899,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-galery-page",
-            title: { ru: "dashboard-projects-galery-page", en: "dashboard-projects-galery-page", tj: "dashboard-projects-galery-page" },
+            title: { ru: "Dashboard Projects Galery", en: "Dashboard Projects Galery", tj: "Dashboard Projects Galery" },
             imageSrc: "/images/projects/mirel/dashboard-projects-galery-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-galery-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7907,7 +7907,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-object-type-page",
-            title: { ru: "dashboard-projects-object-type-page", en: "dashboard-projects-object-type-page", tj: "dashboard-projects-object-type-page" },
+            title: { ru: "Dashboard Projects Object Type", en: "Dashboard Projects Object Type", tj: "Dashboard Projects Object Type" },
             imageSrc: "/images/projects/mirel/dashboard-projects-object-type-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-object-type-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7915,7 +7915,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-projects-page",
-            title: { ru: "dashboard-projects-projects-page", en: "dashboard-projects-projects-page", tj: "dashboard-projects-projects-page" },
+            title: { ru: "Dashboard Projects Projects", en: "Dashboard Projects Projects", tj: "Dashboard Projects Projects" },
             imageSrc: "/images/projects/mirel/dashboard-projects-projects-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-projects-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7923,7 +7923,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-type-of-solution-page",
-            title: { ru: "dashboard-projects-type-of-solution-page", en: "dashboard-projects-type-of-solution-page", tj: "dashboard-projects-type-of-solution-page" },
+            title: { ru: "Dashboard Projects Type Of Solution", en: "Dashboard Projects Type Of Solution", tj: "Dashboard Projects Type Of Solution" },
             imageSrc: "/images/projects/mirel/dashboard-projects-type-of-solution-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-type-of-solution-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7931,7 +7931,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-projects-year-of-implementation-page",
-            title: { ru: "dashboard-projects-year-of-implementation-page", en: "dashboard-projects-year-of-implementation-page", tj: "dashboard-projects-year-of-implementation-page" },
+            title: { ru: "Dashboard Projects Year Of Implementation", en: "Dashboard Projects Year Of Implementation", tj: "Dashboard Projects Year Of Implementation" },
             imageSrc: "/images/projects/mirel/dashboard-projects-year-of-implementation-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-projects-year-of-implementation-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7939,7 +7939,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-services-page",
-            title: { ru: "dashboard-services-page", en: "dashboard-services-page", tj: "dashboard-services-page" },
+            title: { ru: "Dashboard Services", en: "Dashboard Services", tj: "Dashboard Services" },
             imageSrc: "/images/projects/mirel/dashboard-services-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-services-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7947,7 +7947,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-settings-page",
-            title: { ru: "dashboard-settings-page", en: "dashboard-settings-page", tj: "dashboard-settings-page" },
+            title: { ru: "Dashboard Settings", en: "Dashboard Settings", tj: "Dashboard Settings" },
             imageSrc: "/images/projects/mirel/dashboard-settings-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-settings-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7955,7 +7955,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-staff-add-page",
-            title: { ru: "dashboard-staff-add-page", en: "dashboard-staff-add-page", tj: "dashboard-staff-add-page" },
+            title: { ru: "Dashboard Staff Add", en: "Dashboard Staff Add", tj: "Dashboard Staff Add" },
             imageSrc: "/images/projects/mirel/dashboard-staff-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-add-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7963,7 +7963,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-staff-departments-add-page",
-            title: { ru: "dashboard-staff-departments-add-page", en: "dashboard-staff-departments-add-page", tj: "dashboard-staff-departments-add-page" },
+            title: { ru: "Dashboard Staff Departments Add", en: "Dashboard Staff Departments Add", tj: "Dashboard Staff Departments Add" },
             imageSrc: "/images/projects/mirel/dashboard-staff-departments-add-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-departments-add-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7971,7 +7971,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-staff-departments-page",
-            title: { ru: "dashboard-staff-departments-page", en: "dashboard-staff-departments-page", tj: "dashboard-staff-departments-page" },
+            title: { ru: "Dashboard Staff Departments", en: "Dashboard Staff Departments", tj: "Dashboard Staff Departments" },
             imageSrc: "/images/projects/mirel/dashboard-staff-departments-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-departments-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -7979,7 +7979,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "dashboard-staff-page",
-            title: { ru: "dashboard-staff-page", en: "dashboard-staff-page", tj: "dashboard-staff-page" },
+            title: { ru: "Dashboard Staff", en: "Dashboard Staff", tj: "Dashboard Staff" },
             imageSrc: "/images/projects/mirel/dashboard-staff-page.png",
             BannerSrc: "/images/projects/mirel/dashboard-staff-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8000,7 +8000,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "lending-header-page",
-            title: { ru: "lending-header-page", en: "lending-header-page", tj: "lending-header-page" },
+            title: { ru: "Lending Header", en: "Lending Header", tj: "Lending Header" },
             imageSrc: "/images/projects/royalbaby/web/lending-header-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-header-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8008,7 +8008,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-how-to-participate-page",
-            title: { ru: "lending-how-to-participate-page", en: "lending-how-to-participate-page", tj: "lending-how-to-participate-page" },
+            title: { ru: "Lending How To Participate", en: "Lending How To Participate", tj: "Lending How To Participate" },
             imageSrc: "/images/projects/royalbaby/web/lending-how-to-participate-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-how-to-participate-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8016,7 +8016,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-products-page",
-            title: { ru: "lending-products-page", en: "lending-products-page", tj: "lending-products-page" },
+            title: { ru: "Lending Products", en: "Lending Products", tj: "Lending Products" },
             imageSrc: "/images/projects/royalbaby/web/lending-products-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-products-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8024,7 +8024,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-win-prizes-page",
-            title: { ru: "lending-win-prizes-page", en: "lending-win-prizes-page", tj: "lending-win-prizes-page" },
+            title: { ru: "Lending Win Prizes", en: "Lending Win Prizes", tj: "Lending Win Prizes" },
             imageSrc: "/images/projects/royalbaby/web/lending-win-prizes-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-win-prizes-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8032,7 +8032,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-winners-зфпу",
-            title: { ru: "lending-winners-зфпу", en: "lending-winners-зфпу", tj: "lending-winners-зфпу" },
+            title: { ru: "Lending Winners Winners", en: "Lending Winners Winners", tj: "Lending Winners Winners" },
             imageSrc: "/images/projects/royalbaby/web/lending-winners-зфпу.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-winners-зфпу.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8040,7 +8040,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-questions-and-answers-page",
-            title: { ru: "lending-questions-and-answers-page", en: "lending-questions-and-answers-page", tj: "lending-questions-and-answers-page" },
+            title: { ru: "Lending Questions And Answers", en: "Lending Questions And Answers", tj: "Lending Questions And Answers" },
             imageSrc: "/images/projects/royalbaby/web/lending-questions-and-answers-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-questions-and-answers-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8048,7 +8048,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-login-page",
-            title: { ru: "lending-login-page", en: "lending-login-page", tj: "lending-login-page" },
+            title: { ru: "Lending Login", en: "Lending Login", tj: "Lending Login" },
             imageSrc: "/images/projects/royalbaby/web/lending-login-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-login-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8056,7 +8056,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-footer-page",
-            title: { ru: "lending-footer-page", en: "lending-footer-page", tj: "lending-footer-page" },
+            title: { ru: "Lending Footer", en: "Lending Footer", tj: "Lending Footer" },
             imageSrc: "/images/projects/royalbaby/web/lending-footer-page.png",
             BannerSrc: "/images/projects/royalbaby/web/lending-footer-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8069,7 +8069,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "bot-start-page",
-            title: { ru: "bot-start-page", en: "bot-start-page", tj: "bot-start-page" },
+            title: { ru: "Bot Start", en: "Bot Start", tj: "Bot Start" },
             imageSrc: "/images/projects/royalbaby/bot/bot-start-page.jpg",
             BannerSrc: "/images/projects/royalbaby/bot/bot-start-page.jpg",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8077,7 +8077,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "bot-about-page",
-            title: { ru: "bot-about-page", en: "bot-about-page", tj: "bot-about-page" },
+            title: { ru: "Bot About", en: "Bot About", tj: "Bot About" },
             imageSrc: "/images/projects/royalbaby/bot/bot-about-page.jpg",
             BannerSrc: "/images/projects/royalbaby/bot/bot-about-page.jpg",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8090,7 +8090,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "admin-login-page",
-            title: { ru: "admin-login-page", en: "admin-login-page", tj: "admin-login-page" },
+            title: { ru: "Admin Login", en: "Admin Login", tj: "Admin Login" },
             imageSrc: "/images/projects/royalbaby/admin/admin-login-page.png",
             BannerSrc: "/images/projects/royalbaby/admin/admin-login-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8111,7 +8111,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "lending-header-page",
-            title: { ru: "lending-header-page", en: "lending-header-page", tj: "lending-header-page" },
+            title: { ru: "Lending Header", en: "Lending Header", tj: "Lending Header" },
             imageSrc: "/images/projects/rushdikuhiston/lending-header-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-header-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8119,7 +8119,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-slider-page",
-            title: { ru: "lending-slider-page", en: "lending-slider-page", tj: "lending-slider-page" },
+            title: { ru: "Lending Slider", en: "Lending Slider", tj: "Lending Slider" },
             imageSrc: "/images/projects/rushdikuhiston/lending-slider-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-slider-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8127,7 +8127,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-credit-calculator-page",
-            title: { ru: "lending-credit-calculator-page", en: "lending-credit-calculator-page", tj: "lending-credit-calculator-page" },
+            title: { ru: "Lending Credit Calculator", en: "Lending Credit Calculator", tj: "Lending Credit Calculator" },
             imageSrc: "/images/projects/rushdikuhiston/lending-credit-calculator-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-credit-calculator-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8135,7 +8135,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-content-page",
-            title: { ru: "lending-content-page", en: "lending-content-page", tj: "lending-content-page" },
+            title: { ru: "Lending Content", en: "Lending Content", tj: "Lending Content" },
             imageSrc: "/images/projects/rushdikuhiston/lending-content-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-content-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8143,7 +8143,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-last-news-page",
-            title: { ru: "lending-last-news-page", en: "lending-last-news-page", tj: "lending-last-news-page" },
+            title: { ru: "Lending Last News", en: "Lending Last News", tj: "Lending Last News" },
             imageSrc: "/images/projects/rushdikuhiston/lending-last-news-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-last-news-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8151,7 +8151,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "lending-footer-page",
-            title: { ru: "lending-footer-page", en: "lending-footer-page", tj: "lending-footer-page" },
+            title: { ru: "Lending Footer", en: "Lending Footer", tj: "Lending Footer" },
             imageSrc: "/images/projects/rushdikuhiston/lending-footer-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/lending-footer-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8164,7 +8164,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
         items: [
           {
             slug: "about-page",
-            title: { ru: "about-page", en: "about-page", tj: "about-page" },
+            title: { ru: "About", en: "About", tj: "About" },
             imageSrc: "/images/projects/rushdikuhiston/about-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/about-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
@@ -8172,7 +8172,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           },
           {
             slug: "about-advantages-page",
-            title: { ru: "about-advantages-page", en: "about-advantages-page", tj: "about-advantages-page" },
+            title: { ru: "About Advantages", en: "About Advantages", tj: "About Advantages" },
             imageSrc: "/images/projects/rushdikuhiston/about-advantages-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/about-advantages-page.png",
             shortInfo: { ru: "", en: "", tj: "" },
