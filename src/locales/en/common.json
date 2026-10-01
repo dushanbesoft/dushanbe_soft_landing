@@ -401,8 +401,8 @@
       "description": "A decentralized exchange for fast token swapping and liquidity provision."
     },
     "mirel": {
-      "title": "Mirel - CRM System",
-      "description": "Development of a comprehensive CRM system for Mirel. It includes management of employees, clients, applications, projects, and certificates, providing full control over business processes through a convenient dashboard."
+      "title": "Mirel",
+      "description": "Corporate website and content management system (CMS) for Mirel. The platform showcases services, completed projects, partners, and achievements, while also managing content, applications, and staff."
     },
     "royalbaby": {
       "title": "Royal Baby Promo Campaign",
@@ -425,7 +425,7 @@
       "description": "A comprehensive e-commerce dashboard including product management, orders, users, reports, and marketing campaigns."
     },
     "sinamoktv": {
-      "title": "Sinamo KTV",
+      "title": "Cable TV System",
       "description": "An internal CRM system for a cable TV provider, automating the management of subscribers, controllers, cash operations, and reporting."
     }
   },
