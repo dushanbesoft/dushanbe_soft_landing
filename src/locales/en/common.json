@@ -423,6 +423,10 @@
     "farad": {
       "title": "Farad",
       "description": "A comprehensive e-commerce dashboard including product management, orders, users, reports, and marketing campaigns."
+    },
+    "sinamoktv": {
+      "title": "Sinamo KTV",
+      "description": "An internal CRM system for a cable TV provider, automating the management of subscribers, controllers, cash operations, and reporting."
     }
   },
   "partners": {

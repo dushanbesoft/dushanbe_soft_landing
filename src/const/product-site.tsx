@@ -6498,18 +6498,18 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       },
     ],
   },
-  {
-    imageSrc: "/images/projects/itrans.webp",
-    year: "2024",
-    tags: [
-      "PHP (Laravel Framework)",
-      "JavaScript",
-      "MySQL",
-      "HTML5 / CSS3",
-      "REST API",
-    ],
-    slug: "imron-nakliet",
-  },
+  // {
+  //   imageSrc: "/images/projects/itrans.webp",
+  //   year: "2024",
+  //   tags: [
+  //     "PHP (Laravel Framework)",
+  //     "JavaScript",
+  //     "MySQL",
+  //     "HTML5 / CSS3",
+  //     "REST API",
+  //   ],
+  //   slug: "imron-nakliet",
+  // },
   {
     imageSrc: "/images/projects/zudsms.png",
     year: "2024",
@@ -9086,6 +9086,212 @@ This example shows how entered fields relate to the chat’s appearance. Placing
             imageSrc: "/images/projects/rushdikuhiston/admin/dashboard-language-page.png",
             BannerSrc: "/images/projects/rushdikuhiston/admin/dashboard-language-page.png",
             shortInfo: {"ru":"Локализация сайта","en":"Site localization","tj":"Маҳаллисозии сайт"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          }
+        ],
+      }
+    ]
+  }
+
+  , {
+    imageSrc: "/images/projects/sinamoktv/login-page.png",
+    year: "2024",
+    tags: ["React", "Next.js", "Tailwind CSS", "CRM", "Telecom"],
+    slug: "sinamoktv",
+    projectComponents: [
+      {
+        tabName: { ru: "CRM Система", en: "CRM System", tj: "Системаи CRM" },
+        items: [
+          {
+            slug: "login-page",
+            title: {"ru":"Авторизация","en":"Login","tj":"Вуруд"},
+            imageSrc: "/images/projects/sinamoktv/login-page.png",
+            BannerSrc: "/images/projects/sinamoktv/login-page.png",
+            shortInfo: {"ru":"Вход в CRM","en":"CRM login","tj":"Вуруд ба CRM"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-customers-page",
+            title: {"ru":"Абоненты","en":"Customers","tj":"Муштариён"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-customers-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-customers-page.png",
+            shortInfo: {"ru":"База клиентов","en":"Client database","tj":"Пойгоҳи мизоҷон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-customers-page",
+            title: {"ru":"Добавление абонента","en":"Add Customer","tj":"Иловаи муштарӣ"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-add-customers-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-add-customers-page.png",
+            shortInfo: {"ru":"Регистрация клиентов","en":"Registering clients","tj":"Бақайдгирии мизоҷон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-import-customers-page",
+            title: {"ru":"Импорт абонентов","en":"Import Customers","tj":"Воридоти муштариён"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-import-customers-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-import-customers-page.png",
+            shortInfo: {"ru":"Массовая загрузка данных","en":"Bulk data upload","tj":"Боркунии оммавии маълумот"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-controllers-page",
+            title: {"ru":"Контроллеры","en":"Controllers","tj":"Назоратчиён"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-controllers-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-controllers-page.png",
+            shortInfo: {"ru":"База сотрудников","en":"Employee database","tj":"Пойгоҳи кормандон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-controllers-page",
+            title: {"ru":"Добавление контроллера","en":"Add Controller","tj":"Иловаи назоратчӣ"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-add-controllers-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-add-controllers-page.png",
+            shortInfo: {"ru":"Регистрация сотрудников","en":"Registering employees","tj":"Бақайдгирии кормандон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-operators-page",
+            title: {"ru":"Операторы","en":"Operators","tj":"Операторон"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-operators-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-operators-page.png",
+            shortInfo: {"ru":"Управление операторами","en":"Operator management","tj":"Идоракунии операторон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-add-operators-page",
+            title: {"ru":"Добавление оператора","en":"Add Operator","tj":"Иловаи оператор"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-add-operators-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-add-operators-page.png",
+            shortInfo: {"ru":"Создание аккаунта оператора","en":"Creating operator account","tj":"Сохтани аккаунти оператор"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-cash-page",
+            title: {"ru":"Касса","en":"Cash","tj":"Хазина"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-cash-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-cash-page.png",
+            shortInfo: {"ru":"Финансовые операции","en":"Financial operations","tj":"Амалиётҳои молиявӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-expenses-page",
+            title: {"ru":"Расходы","en":"Expenses","tj":"Хароҷот"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-expenses-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-expenses-page.png",
+            shortInfo: {"ru":"Учет расходов","en":"Expense tracking","tj":"Баҳисобгирии хароҷот"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-order-cash-page",
+            title: {"ru":"Ордеры кассы","en":"Cash Orders","tj":"Ордерҳои хазина"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-order-cash-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-order-cash-page.png",
+            shortInfo: {"ru":"Кассовые документы","en":"Cash documents","tj":"Ҳуҷҷатҳои хазина"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-order-history-page",
+            title: {"ru":"История ордеров","en":"Order History","tj":"Таърихи ордерҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-order-history-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-order-history-page.png",
+            shortInfo: {"ru":"Архив операций","en":"Operations archive","tj":"Архиви амалиётҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-parishes-page",
+            title: {"ru":"Приходы","en":"Income","tj":"Даромадҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-parishes-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-parishes-page.png",
+            shortInfo: {"ru":"Поступления средств","en":"Income receipts","tj":"Воридшавии маблағҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-reports-cash-page",
+            title: {"ru":"Отчеты по кассе","en":"Cash Reports","tj":"Ҳисоботҳои хазина"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-reports-cash-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-reports-cash-page.png",
+            shortInfo: {"ru":"Финансовая отчетность","en":"Financial reporting","tj":"Ҳисоботи молиявӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-reports-orders-page",
+            title: {"ru":"Отчеты по ордерам","en":"Order Reports","tj":"Ҳисоботи ордерҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-reports-orders-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-reports-orders-page.png",
+            shortInfo: {"ru":"Аналитика операций","en":"Operations analytics","tj":"Таҳлилоти амалиётҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-reports-redeemed-page",
+            title: {"ru":"Отчеты по погашениям","en":"Repayment Reports","tj":"Ҳисоботи пардохтҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-reports-redeemed-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-reports-redeemed-page.png",
+            shortInfo: {"ru":"Контроль оплат","en":"Payment control","tj":"Назорати пардохтҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-search-page",
+            title: {"ru":"Поиск","en":"Search","tj":"Ҷустуҷӯ"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-search-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-search-page.png",
+            shortInfo: {"ru":"Глобальный поиск","en":"Global search","tj":"Ҷустуҷӯи глобалӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-change-page",
+            title: {"ru":"Настройки смен","en":"Shift Settings","tj":"Танзимоти бастҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-change-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-change-page.png",
+            shortInfo: {"ru":"Рабочие смены","en":"Work shifts","tj":"Бастҳои корӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-country-page",
+            title: {"ru":"Страны","en":"Countries","tj":"Кишварҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-country-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-country-page.png",
+            shortInfo: {"ru":"Справочник стран","en":"Country directory","tj":"Маълумотномаи кишварҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-city-page",
+            title: {"ru":"Города","en":"Cities","tj":"Шаҳрҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-city-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-city-page.png",
+            shortInfo: {"ru":"Справочник городов","en":"City directory","tj":"Маълумотномаи шаҳрҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-street-page",
+            title: {"ru":"Улицы","en":"Streets","tj":"Кӯчаҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-street-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-street-page.png",
+            shortInfo: {"ru":"Справочник улиц","en":"Street directory","tj":"Маълумотномаи кӯчаҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-home-page",
+            title: {"ru":"Дома","en":"Houses","tj":"Хонаҳо"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-home-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-home-page.png",
+            shortInfo: {"ru":"Адресный реестр","en":"Address registry","tj":"Реестри суроғаҳо"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-types-of-clients-page",
+            title: {"ru":"Типы клиентов","en":"Client Types","tj":"Намудҳои мизоҷон"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-types-of-clients-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-types-of-clients-page.png",
+            shortInfo: {"ru":"Категории абонентов","en":"Subscriber categories","tj":"Категорияҳои муштариён"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "dashboard-settings-types-of-payments-page",
+            title: {"ru":"Типы платежей","en":"Payment Types","tj":"Намудҳои пардохт"},
+            imageSrc: "/images/projects/sinamoktv/dashboard-settings-types-of-payments-page.png",
+            BannerSrc: "/images/projects/sinamoktv/dashboard-settings-types-of-payments-page.png",
+            shortInfo: {"ru":"Способы оплаты","en":"Payment methods","tj":"Усулҳои пардохт"},
             fullInfo: { ru: "", en: "", tj: "" }
           }
         ],
