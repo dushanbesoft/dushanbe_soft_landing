@@ -7787,7 +7787,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   
 
   {
-    imageSrc: "/images/projects/mirel/admin/login-page.png",
+    imageSrc: "/images/projects/mirel-banner.png",
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Tailwind CSS", "REST API"],
     slug: "mirel",
@@ -8117,7 +8117,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/royalbaby/web/lending-header-page.png",
+    imageSrc: "/images/projects/royalbaby-banner.png",
     year: "2024",
     tags: ["Laravel", "React", "Telegram Bot", "PostgreSQL", "REST API"],
     slug: "royalbaby",
@@ -8859,7 +8859,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   }
 
   , {
-    imageSrc: "/images/projects/rushdikuhiston/web/lending-header-page.png",
+    imageSrc: "/images/projects/rushdikuhiston-banner.png",
     year: "2024",
     tags: ["React", "Next.js", "PostgreSQL", "Fintech"],
     slug: "rushdikuhiston",
