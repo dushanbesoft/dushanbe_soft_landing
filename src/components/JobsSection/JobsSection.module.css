@@ -339,11 +339,47 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 30px 15px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .filterBar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .searchBox, .selectBox {
+    width: 100%;
+    flex: none;
+  }
+  .card {
+    padding: 20px 15px;
+  }
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .cardMeta {
+    flex-direction: column;
+    gap: 10px;
+  }
   .ctaCard {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    padding: 20px 15px;
+    gap: 15px;
   }
-  
+  .ctaContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    flex: none;
+  }
+  .ctaIconBox {
+    display: none;
+  }
   .ctaBtn {
     width: 100%;
   }
