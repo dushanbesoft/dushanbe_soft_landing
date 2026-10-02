@@ -1,12 +1,19 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import styles from './CasesSection.module.css';
-import CaseCard from './CaseCard';
-import { FadeIn } from '../MotionWrapper';
+import React, { useState, useEffect } from "react";
+import styles from "./CasesSection.module.css";
+import CaseCard from "./CaseCard";
+import { FadeIn } from "../MotionWrapper";
 
 interface CasesGridProps {
-  casesData: ({ slug: string, title: string, description: string, imageSrc: string, tags: string[], gallery?: string[] } & { year: string })[];
+  casesData: ({
+    slug: string;
+    title: string;
+    description: string;
+    imageSrc: string;
+    tags: string[];
+    gallery?: string[];
+  } & { year: string })[];
   lang: string;
   labels: {
     descriptionTitle: string;
@@ -19,62 +26,79 @@ interface CasesGridProps {
   };
 }
 
-
-export default function CasesGrid({ casesData, lang, labels, title }: CasesGridProps & { title?: string }) {
+export default function CasesGrid({
+  casesData,
+  lang,
+  labels,
+  title,
+}: CasesGridProps & { title?: string }) {
   const [showAll, setShowAll] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('Все');
+  const [activeCategory, setActiveCategory] = useState("Все");
 
-  const categories = ['Все', 'Государственные', 'Корпоративные', 'Медиа', 'Финтех и Web3', 'Blockchain/Web3'];
+  const categories = [
+    "Все",
+    "Государственные",
+    "Корпоративные",
+    "Медиа",
+    "Финтех",
+    "Blockchain/Web3",
+  ];
   const slugCategoryMap: Record<string, string> = {
-    "zudyob": "Корпоративные",
-    "president": "Государственные",
+    zudyob: "Корпоративные",
+    president: "Государственные",
     "digital-tajikistan": "Государственные",
-    "sohktor": "Государственные",
+    sohktor: "Государственные",
     "mavji-somon": "Медиа",
     "livechat-tj": "Корпоративные",
-    "telecomm": "Корпоративные",
-    "navo": "Медиа",
+    telecomm: "Корпоративные",
+    navo: "Медиа",
     "somon-tv": "Медиа",
-    "zenith": "Корпоративные",
-    "confy": "Корпоративные",
-    "sinamoktv": "Корпоративные",
-    "farad": "E-commerce",
-    "itrunstj": "Корпоративные",
-    "itrans": "Корпоративные",
-    "zudsms": "Финтех и Web3",
+    zenith: "Корпоративные",
+    confy: "Корпоративные",
+    sinamoktv: "Корпоративные",
+    farad: "E-commerce",
+    itrunstj: "Корпоративные",
+    itrans: "Корпоративные",
+    zudsms: "Финтех",
     "sunduk-tv": "Медиа",
-    "onlinepay": "Финтех и Web3",
+    onlinepay: "Финтех",
     "arcane-finance": "Blockchain/Web3",
     "arcane-launchpad": "Blockchain/Web3",
     "reactor-exchange": "Blockchain/Web3",
-    "arcanefinance": "Blockchain/Web3",
-    "reactorexchange": "Blockchain/Web3",
-    "promolovelybot": "Корпоративные",
-    "mirel": "Корпоративные",
-    "royalbaby": "Корпоративные",
-    "rushdikuhiston": "Финансы",
-    "traveltours": "Корпоративные",
-
+    arcanefinance: "Blockchain/Web3",
+    reactorexchange: "Blockchain/Web3",
+    promolovelybot: "Корпоративные",
+    mirel: "Корпоративные",
+    royalbaby: "Корпоративные",
+    rushdikuhiston: "Финансы",
+    traveltours: "Корпоративные",
   };
 
-  const filteredCases = activeCategory === 'Все' 
-    ? casesData 
-    : casesData.filter(c => slugCategoryMap[c.slug] === activeCategory);
+  const filteredCases =
+    activeCategory === "Все"
+      ? casesData
+      : casesData.filter((c) => slugCategoryMap[c.slug] === activeCategory);
 
   const displayedCases = showAll ? filteredCases : filteredCases.slice(0, 6);
 
   return (
     <>
-      <div className={styles.headerRow} style={{ width: '100%', marginBottom: '20px' }}>
+      <div
+        className={styles.headerRow}
+        style={{ width: "100%", marginBottom: "20px" }}
+      >
         <div className={styles.titles}>
           {title && <h2 className={styles.mainTitle}>{title}</h2>}
         </div>
         <div className={styles.categoriesList}>
-          {categories.map(cat => (
-            <button 
-              key={cat} 
-              className={`${styles.categoryBtn} ${activeCategory === cat ? styles.active : ''}`}
-              onClick={() => { setActiveCategory(cat); setShowAll(false); }}
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`${styles.categoryBtn} ${activeCategory === cat ? styles.active : ""}`}
+              onClick={() => {
+                setActiveCategory(cat);
+                setShowAll(false);
+              }}
             >
               {cat}
             </button>
@@ -83,9 +107,14 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
       </div>
 
       <div className={styles.cardsGrid}>
-
         {displayedCases.map((e, i) => (
-          <FadeIn key={e.slug} delay={(i % 6) * 0.15} direction="up" fullWidth style={{ height: '100%' }}>
+          <FadeIn
+            key={e.slug}
+            delay={(i % 6) * 0.15}
+            direction="up"
+            fullWidth
+            style={{ height: "100%" }}
+          >
             <CaseCard
               slug={e.slug}
               lang={lang}
@@ -99,14 +128,19 @@ export default function CasesGrid({ casesData, lang, labels, title }: CasesGridP
         ))}
       </div>
 
-      {!showAll && casesData.length > 6 && (
+      {!showAll && filteredCases.length > 6 && (
         <FadeIn delay={0.2} direction="up" className={styles.loadMoreContainer}>
-          <button className={styles.allCasesBtn} onClick={() => setShowAll(true)} style={{ cursor: 'pointer' }}>
-            <span className={styles.btnText}>{labels.loadMore || "Посмотреть еще"}</span>
+          <button
+            className={styles.allCasesBtn}
+            onClick={() => setShowAll(true)}
+            style={{ cursor: "pointer" }}
+          >
+            <span className={styles.btnText}>
+              {labels.loadMore || "Посмотреть еще"}
+            </span>
           </button>
         </FadeIn>
       )}
-
     </>
   );
 }
