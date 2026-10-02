@@ -14,7 +14,9 @@ import Footer from "../../components/Footer/Footer";
 import CasesSection from "../../components/CasesSection/CasesSection";
 import TeamSection from "../../components/TeamSection/TeamSection";
 import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
+import PricingSection from "../../components/PricingSection/PricingSection";
 import StatisticsComponent from "../../components/StatisticsComponent/StatisticsComponent";
+import JobsSection from "../../components/JobsSection/JobsSection";
 const i18nNamespaces = ["common"];
 
 export default async function Page({
@@ -97,7 +99,12 @@ export default async function Page({
         <StatisticsComponent />
 
         {/* <ReviewsSection lang={lang} /> */}
-        <TeamSection />
+        {/* <TeamSection /> */}
+        {/* <ContactSection /> */}
+        {/* <WhyUsSection/> */}
+        <PricingSection lang={lang} />
+        <CTASection />
+        <JobsSection lang={lang} />
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>

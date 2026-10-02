@@ -1,0 +1,351 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  position: relative;
+  background: #001010;
+  border-radius: 11px;
+  max-width: 1199px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 45px;
+  /* Customize scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #3DDC84 transparent;
+}
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+.modal::-webkit-scrollbar-thumb {
+  background: #3DDC84;
+  border-radius: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #3DDC84;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+.closeBtn:hover {
+  opacity: 0.7;
+}
+
+.content {
+  display: flex;
+  gap: 45px;
+  align-items: flex-start;
+}
+
+.leftCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  max-width: 510px;
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-family: 'Tektur', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background: #3DDC84;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  font-family: 'Tektur', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0;
+}
+.title .highlight {
+  background: #3DDC84;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  color: #9EAABB;
+  max-width: 343px;
+  line-height: 1.4;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.featureBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.featureText span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #9EAABB;
+}
+.featureText strong {
+  font-family: 'Tektur', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.messengersBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.messengersBlock p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.messengersWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 22px;
+  border: 1px solid #3DDC84;
+  background: rgba(1, 101, 88, 0.11);
+  box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
+}
+
+.messengerBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mCircle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.mCircle:hover {
+  transform: scale(1.1);
+}
+.messengerBox span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #9EAABB;
+}
+
+.rightCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  border-radius: 22px;
+  border: 1px solid #3DDC84;
+  background: rgba(1, 101, 88, 0.11);
+  box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
+}
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.formIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.formTitleGroup h3 {
+  font-family: 'Tektur', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+.formTitleGroup p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  color: #9EAABB;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.field label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 11px;
+  border: 1px solid #3DDC84;
+  background: rgba(1, 101, 88, 0.11);
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #5EB5F0;
+}
+.field input::placeholder,
+.field select::placeholder,
+.field textarea::placeholder {
+  color: #64748B;
+}
+
+.field select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 40px;
+}
+.field select option {
+  background: #001010;
+  color: #fff;
+}
+
+.field textarea {
+  resize: none;
+  height: 108px;
+}
+
+.submitBtn {
+  height: 63px;
+  border-radius: 11px;
+  background: #3DDC84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Tektur', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+.submitBtn:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .leftCol {
+    max-width: 100%;
+  }
+  .features {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .messengersWrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+}
