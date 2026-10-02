@@ -427,6 +427,10 @@
     "sinamoktv": {
       "title": "Cable TV System",
       "description": "An internal CRM system for a cable TV provider, automating the management of subscribers, controllers, cash operations, and reporting."
+    },
+    "confy": {
+      "title": "Confy",
+      "description": "Promo website and raffle system for the Confy brand."
     }
   },
   "partners": {
