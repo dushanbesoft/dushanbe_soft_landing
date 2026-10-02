@@ -8284,7 +8284,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ]
   },
   {
-    imageSrc: "/images/projects/traveltours/web/lending-header-page.png",
+    imageSrc: "/images/projects/TravelTours-banner.png",
     year: "2024",
     tags: ["Laravel", "React", "Tourism", "Tailwind CSS"],
     slug: "traveltours",
@@ -8527,7 +8527,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   }
 
   , {
-    imageSrc: "/images/projects/itrunstj/lending-header-page.png",
+    imageSrc: "/images/projects/itrans-banner.png",
     year: "2024",
     tags: ["React", "Next.js", "Tailwind CSS", "Logistics"],
     slug: "itrunstj",
@@ -8629,7 +8629,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   }
 
   , {
-    imageSrc: "/images/projects/farad/login-page.png",
+    imageSrc: "/images/projects/farad-banner.png",
     year: "2024",
     tags: ["React", "Next.js", "Tailwind CSS", "E-commerce"],
     slug: "farad",
@@ -9094,7 +9094,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
   }
 
   , {
-    imageSrc: "/images/projects/sinamoktv/login-page.png",
+    imageSrc: "/images/projects/sinamotv-banner.png",
     year: "2024",
     tags: ["React", "Next.js", "Tailwind CSS", "CRM", "Telecom"],
     slug: "sinamoktv",
