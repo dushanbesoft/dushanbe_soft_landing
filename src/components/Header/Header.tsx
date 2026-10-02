@@ -186,11 +186,18 @@ export default function Header() {
             {t("header.services", "Услуги")}
           </Link>
           <Link
-            href={`/${currentLang}/#team`}
+            href={`/${currentLang}/#pricing`}
             className={styles.navItem}
-            onClick={(e) => handleNavClick(e, `/${currentLang}/#team`)}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#pricing`)}
           >
-            {t("header.team", "Команда")}
+            {t("header.pricing", "Тарифы")}
+          </Link>
+          <Link
+            href={`/${currentLang}/#careers`}
+            className={styles.navItem}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#careers`)}
+          >
+            {t("header.careers", "Карьера")}
           </Link>
         </nav>
 
