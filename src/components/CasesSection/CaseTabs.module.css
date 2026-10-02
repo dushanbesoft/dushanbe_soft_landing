@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 30px;
   width: 100%;
+  margin-top: 10px;
 }
 
 .tabHeader {
@@ -122,9 +123,6 @@
   transform: translateY(-5px);
 }
 
-.mobile:hover {
-  transform: translateY(-5px);
-}
 
 .imageWrapper {
   position: relative;
