@@ -9298,4 +9298,82 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       }
     ]
   }
+
+  , {
+    imageSrc: "/images/projects/confy-banner.png",
+    year: "2024",
+    tags: ["React", "Next.js", "Tailwind CSS", "Promo"],
+    slug: "confy",
+    projectComponents: [
+      {
+        tabName: { ru: "Промо-сайт", en: "Promo Website", tj: "Вебсайти промо" },
+        items: [
+          {
+            slug: "lending-header-page",
+            title: {"ru":"Главная страница","en":"Main Page","tj":"Саҳифаи асосӣ"},
+            imageSrc: "/images/projects/confy/lending-header-page.png",
+            BannerSrc: "/images/projects/confy/lending-header-page.png",
+            shortInfo: {"ru":"Начальный экран","en":"Hero screen","tj":"Экрани асосӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-about-page",
+            title: {"ru":"О нас","en":"About Us","tj":"Дар бораи мо"},
+            imageSrc: "/images/projects/confy/lending-about-page.png",
+            BannerSrc: "/images/projects/confy/lending-about-page.png",
+            shortInfo: {"ru":"Информация о бренде","en":"Brand information","tj":"Маълумот дар бораи бренд"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-promotion-page",
+            title: {"ru":"Акции","en":"Promotions","tj":"Аксияҳо"},
+            imageSrc: "/images/projects/confy/lending-promotion-page.png",
+            BannerSrc: "/images/projects/confy/lending-promotion-page.png",
+            shortInfo: {"ru":"Текущие предложения","en":"Current offers","tj":"Пешниҳодҳои ҷорӣ"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-raffle-draws-page",
+            title: {"ru":"Розыгрыши","en":"Raffle Draws","tj":"Бозиҳои бурднок"},
+            imageSrc: "/images/projects/confy/lending-raffle-draws-page.png",
+            BannerSrc: "/images/projects/confy/lending-raffle-draws-page.png",
+            shortInfo: {"ru":"Участие в розыгрышах","en":"Participation in raffles","tj":"Иштирок дар бозиҳои бурднок"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-rules-page",
+            title: {"ru":"Правила","en":"Rules","tj":"Қоидаҳо"},
+            imageSrc: "/images/projects/confy/lending-rules-page.png",
+            BannerSrc: "/images/projects/confy/lending-rules-page.png",
+            shortInfo: {"ru":"Условия участия","en":"Terms of participation","tj":"Шартҳои иштирок"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-winners-page",
+            title: {"ru":"Победители","en":"Winners","tj":"Ғолибон"},
+            imageSrc: "/images/projects/confy/lending-winners-page.png",
+            BannerSrc: "/images/projects/confy/lending-winners-page.png",
+            shortInfo: {"ru":"Списки победителей","en":"Lists of winners","tj":"Рӯйхати ғолибон"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "lending-questions-and-answers-page",
+            title: {"ru":"Вопросы и ответы","en":"FAQ","tj":"Саволҳо ва ҷавобҳо"},
+            imageSrc: "/images/projects/confy/lending-questions-and-answers-page.png",
+            BannerSrc: "/images/projects/confy/lending-questions-and-answers-page.png",
+            shortInfo: {"ru":"Часто задаваемые вопросы","en":"Frequently asked questions","tj":"Саволҳои зуд-зуд додашаванда"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          },
+          {
+            slug: "login-page",
+            title: {"ru":"Авторизация","en":"Login","tj":"Вуруд"},
+            imageSrc: "/images/projects/confy/login-page.png",
+            BannerSrc: "/images/projects/confy/login-page.png",
+            shortInfo: {"ru":"Вход в систему","en":"System login","tj":"Вуруд ба система"},
+            fullInfo: { ru: "", en: "", tj: "" }
+          }
+        ],
+      }
+    ]
+  }
 ];
