@@ -65,14 +65,14 @@
   min-height: 100%;
 }
 
-.popularCard {
+.card:hover {
   border: 1px solid transparent;
   background: linear-gradient(60deg, rgba(94, 181, 240, 0.22) 13.4%, rgba(2, 112, 79, 0.22) 86.6%);
   background-clip: padding-box;
   position: relative;
 }
 
-.popularCard::before {
+.card:hover::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -165,7 +165,7 @@
   gap: 10px;
   width: 100%;
   border-radius: 222px;
-  border: 0.5px solid transparent;
+  border: 0px solid transparent;
   background: transparent;
   color: #9EAABB;
   font-family: 'Nunito Sans', sans-serif;
@@ -181,7 +181,7 @@
   position: absolute;
   inset: 0;
   border-radius: 222px;
-  padding: 0.5px;
+  padding: 1.5px;
   background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -193,12 +193,13 @@
   opacity: 0.8;
 }
 
-.popularBtn {
+
+.card:hover .btn {
   background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   color: #FFF;
   font-weight: 700;
 }
 
-.popularBtn::before {
+.card:hover .btn::before {
   display: none;
 }

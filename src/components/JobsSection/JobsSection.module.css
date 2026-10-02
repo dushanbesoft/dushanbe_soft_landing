@@ -212,7 +212,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 222px;
-  border: 0.5px solid transparent;
+  border: 1.5px solid transparent;
   background: transparent;
   color: #9EAABB;
   font-family: 'Nunito Sans', sans-serif;
@@ -228,7 +228,7 @@
   position: absolute;
   inset: 0;
   border-radius: 222px;
-  padding: 0.5px;
+  padding: 1.5px;
   background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -305,7 +305,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 222px;
-  border: 0.5px solid transparent;
+  border: 1.5px solid transparent;
   background: transparent;
   color: #9EAABB;
   font-family: 'Nunito Sans', sans-serif;
@@ -322,7 +322,7 @@
   position: absolute;
   inset: 0;
   border-radius: 222px;
-  padding: 0.5px;
+  padding: 1.5px;
   background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
