@@ -42,9 +42,10 @@ export default function CasesGrid({
     "Медиа",
     "Финтех",
     "Blockchain/Web3",
+    "AI",
   ];
   const slugCategoryMap: Record<string, string> = {
-    zudyob: "Корпоративные",
+    zudyob: "AI",
     president: "Государственные",
     "digital-tajikistan": "Государственные",
     sohktor: "Государственные",
