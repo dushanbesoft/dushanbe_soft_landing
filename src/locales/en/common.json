@@ -162,7 +162,7 @@
       },
       {
         "title": "Mobile Development",
-        "description": "Native and cross-platform mobile apps for iOS and Android with elegant UX."
+        "description": "Native and cross-platform mobile apps for IOS and Android with elegant UX."
       },
       {
         "title": "Web3 & Blockchain",
@@ -285,9 +285,7 @@
         "Round-the-clock search, 24/7",
         "Time saved every day"
       ],
-      "gallery": [
-        "ZudYob — finds faster"
-      ]
+      "gallery": ["ZudYob — finds faster"]
     },
     "president": {
       "title": "President of the Republic of Tajikistan",
