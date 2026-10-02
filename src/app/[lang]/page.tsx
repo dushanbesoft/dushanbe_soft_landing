@@ -96,6 +96,7 @@ export default async function Page({
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
+        <JobsSection lang={lang} />
         <StatisticsComponent />
 
         {/* <ReviewsSection lang={lang} /> */}
@@ -104,7 +105,6 @@ export default async function Page({
         {/* <WhyUsSection/> */}
         <PricingSection lang={lang} />
         <CTASection />
-        <JobsSection lang={lang} />
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>
