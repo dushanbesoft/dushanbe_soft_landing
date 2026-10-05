@@ -28,7 +28,7 @@ export default async function Page({
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
-  
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -55,8 +55,8 @@ export default async function Page({
       sameAs: [
         "https://www.linkedin.com/company/dushanbesoft",
         "https://www.instagram.com/dushanbesoft",
-        "https://www.facebook.com/dushanbesoft"
-      ]
+        "https://www.facebook.com/dushanbesoft",
+      ],
     },
     {
       "@context": "https://schema.org",
@@ -70,9 +70,9 @@ export default async function Page({
       potentialAction: {
         "@type": "SearchAction",
         target: `${siteUrl}/ru/cases?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      }
-    }
+        "query-input": "required name=search_term_string",
+      },
+    },
   ];
 
   return (
@@ -100,8 +100,8 @@ export default async function Page({
         <StatisticsComponent />
         <ReviewsSection lang={lang} />
 
-     
         <PricingSection lang={lang} />
+        <PartnersSection />
         <CTASection />
         <Footer lang={lang} />
       </main>
