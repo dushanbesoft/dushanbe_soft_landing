@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ContactModal.module.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -60,12 +61,26 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
   };
 
-  if (!isOpen) return null;
-
   return (
-    <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeBtn} onClick={onClose} aria-label="Закрыть">
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div 
+          className={styles.overlay} 
+          onClick={onClose}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <motion.div 
+            className={styles.modal} 
+            onClick={(e) => e.stopPropagation()}
+            initial={{ scale: 0.95, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+          >
+            <button className={styles.closeBtn} onClick={onClose} aria-label="Закрыть">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -213,7 +228,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </form>
           </div>
         </div>
-      </div>
-    </div>
+        </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

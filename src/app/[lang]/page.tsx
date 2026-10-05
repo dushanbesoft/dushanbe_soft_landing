@@ -93,6 +93,7 @@ export default async function Page({
         <HomeHero />
 
         <CasesSection lang={lang} />
+        <PartnersSection />
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
@@ -101,7 +102,6 @@ export default async function Page({
         <ReviewsSection lang={lang} />
 
         <PricingSection lang={lang} />
-        <PartnersSection />
         <CTASection />
         <Footer lang={lang} />
       </main>
