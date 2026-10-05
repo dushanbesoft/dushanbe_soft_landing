@@ -98,6 +98,7 @@ export default async function Page({
 
         <JobsSection lang={lang} />
         <StatisticsComponent />
+        <ReviewsSection lang={lang} />
 
      
         <PricingSection lang={lang} />

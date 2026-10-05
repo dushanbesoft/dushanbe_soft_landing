@@ -42,8 +42,11 @@ function TypedTitle({ text }: { text: string }) {
   return <span className={styles.typedText}>{typed}</span>;
 }
 
+import ContactModal from "../ContactModal/ContactModal";
+
 export default function HeroContent() {
   const { t, i18n } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const fullTitle = t(
     "hero.subtitle",
     "Разрабатываем и внедряем современные IT-решения",
@@ -71,14 +74,12 @@ export default function HeroContent() {
      
 
         <div className={styles.buttons}>
-          <a
-            href="https://t.me/m_yakub"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setIsModalOpen(true)}
             className={styles.btnPrimary}
           >
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
-          </a>
+          </button>
           <Link 
             href={`/${i18n.language}/cases`}
             className={styles.btnSecondary}
@@ -88,6 +89,7 @@ export default function HeroContent() {
         </div>
       </div>
       <HeroMarquee />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
