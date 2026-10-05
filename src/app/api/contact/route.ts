@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, phone, direction, message } = body;
+    const { name, email = "—", phone, direction, message } = body;
 
-    if (!name || !email || !phone || !direction) {
+    if (!name || !phone || !direction) {
       return NextResponse.json(
         { error: "Заполните все обязательные поля" },
         { status: 400 },
