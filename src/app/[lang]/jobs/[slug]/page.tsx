@@ -10,10 +10,11 @@ import initTranslations from "@/app/i18n";
 
 
 export default async function JobDetailsPage({
-  params: { lang, slug },
+  params,
 }: {
-  params: { lang: string; slug: string };
+  params: Promise<{ lang: string; slug: string }>;
 }) {
+  const { lang, slug } = await params;
   const { t, resources } = await initTranslations(lang, ["common"]);
   const job = jobsData.find((j) => j.slug === slug);
 
@@ -62,7 +63,7 @@ export default async function JobDetailsPage({
 
             <div className={styles.body}>
               <h2 className={styles.sectionTitle}>О вакансии</h2>
-              <p className={styles.description}>{job.description}</p>
+              <div className={styles.description}>{(job as any).fullDescription || job.description}</div>
               
               <div className={styles.ctaBox}>
                 <h3 className={styles.ctaTitle}>Заинтересовала вакансия?</h3>
