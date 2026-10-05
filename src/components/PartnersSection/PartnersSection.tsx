@@ -117,7 +117,7 @@ export default function PartnersSection() {
 
         <StaggerContainer className={styles.grid}>
           {partnersData.map((partner, idx) => (
-            <StaggerItem key={partner.id} index={idx}>
+            <StaggerItem key={partner.id}>
               <div className={styles.card}>
                 <div className={styles.cardContent}>
                   <Image 
@@ -126,6 +126,7 @@ export default function PartnersSection() {
                     className={styles.logo} 
                     width={158} 
                     height={79} 
+
                   />
                   <div className={styles.partnerName}>
                     {t(`partners.list.${idx}.name`, partner.name)}
