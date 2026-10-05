@@ -1,18 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { jobsData } from "@/components/JobsSection/JobsClient";
+import { jobsData } from "@/const/jobsData";
 import styles from "./JobDetails.module.css";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
 
-export async function generateStaticParams() {
-  return jobsData.map((job) => ({
-    slug: job.slug,
-  }));
-}
 
 export default async function JobDetailsPage({
   params: { lang, slug },

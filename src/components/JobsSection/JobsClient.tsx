@@ -4,31 +4,7 @@ import React, { useState } from "react";
 import styles from "./JobsSection.module.css";
 import Link from "next/link";
 import { FadeIn } from "../MotionWrapper";
-
-export const jobsData = [
-  {
-    slug: "fullstack-web-php-developer",
-    categoryValue: "it",
-    categoryLabel: "IT",
-    title: "Fullstack Web PHP developer",
-    location: "Душанбе",
-    typeValue: "remote",
-    typeLabel: "Удалённо",
-    experienceValue: "senior",
-    description: "Разработка и поддержка серверной и клиентской части веб-приложений."
-  },
-  {
-    slug: "frontend-developer",
-    categoryValue: "it",
-    categoryLabel: "IT",
-    title: "FrontEnd Developer",
-    location: "Душанбе",
-    typeValue: "remote",
-    typeLabel: "Удалённо",
-    experienceValue: "senior",
-    description: "Разработка современных веб-интерфейсов с использованием React, Next.js, TypeScript."
-  }
-];
+import { jobsData } from "@/const/jobsData";
 
 export default function JobsClient({ lang }: { lang: string }) {
   const [searchTerm, setSearchTerm] = useState("");
