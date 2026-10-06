@@ -7,10 +7,10 @@ import { tektur, nunitoSans } from "../../styles/fonts";
 
 import initTranslations from "../i18n";
 import GlobalPreloader from "../../components/GlobalPreloader/GlobalPreloader";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  // Initialize translations for SEO. We'll provide fallbacks just in case the translation keys don't exist yet.
   const { t } = await initTranslations(lang, ["common"]);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
 
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     icons: {
       icon: "/icons/site-favicon.svg",
-      apple: "/icons/site-favicon.svg", // Fallback for apple touch icon
+      apple: "/icons/site-favicon.svg",
     },
     appleWebApp: {
       capable: true,
@@ -102,6 +102,7 @@ export default async function RootLayout({
   
   return (
     <html lang={lang} dir={dir(lang)}>
+      <GoogleTagManager gtmId="GTM-K3R48HBW" />
       <body className={`${tektur.variable} ${nunitoSans.variable}`}>
         <GlobalPreloader />
         {children}
