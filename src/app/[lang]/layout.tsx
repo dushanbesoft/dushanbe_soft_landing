@@ -7,7 +7,7 @@ import { tektur, nunitoSans } from "../../styles/fonts";
 
 import initTranslations from "../i18n";
 import GlobalPreloader from "../../components/GlobalPreloader/GlobalPreloader";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -103,6 +103,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} dir={dir(lang)}>
       <GoogleTagManager gtmId="GTM-K3R48HBW" />
+      <GoogleAnalytics gaId="G-BC9JE7JMKM" />
       <body className={`${tektur.variable} ${nunitoSans.variable}`}>
         <GlobalPreloader />
         {children}
