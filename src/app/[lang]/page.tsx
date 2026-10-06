@@ -91,7 +91,7 @@ export default async function Page({
         </div>
 
         <HomeHero />
-
+        <ProductsSection lang={lang} />
         <CasesSection lang={lang} />
         <StatisticsComponent />
         <PartnersSection />

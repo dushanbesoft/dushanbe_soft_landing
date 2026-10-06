@@ -73,11 +73,11 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
               <div className={styles.subtitle}>{t('products.subtitle', 'Наши продукты')}</div>
               <h2 className={styles.mainTitle}>{t('products.title', 'Готовые продукты для вашего бизнеса')}</h2>
             </div>
-            {!showAll && (
+            {/* {!showAll && (
               <Link href={`/${lang}/products`} className={styles.allProductsBtn}>
                 {t('products.allProducts', 'Все продукты')} <ArrowUpRight />
               </Link>
-            )}
+            )} */}
           </div>
         </FadeIn>
 
