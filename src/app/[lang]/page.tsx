@@ -17,6 +17,8 @@ import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
 import PricingSection from "../../components/PricingSection/PricingSection";
 import StatisticsComponent from "../../components/StatisticsComponent/StatisticsComponent";
 import JobsSection from "../../components/JobsSection/JobsSection";
+import AwardsSection from "../../components/AwardsSection/AwardsSection";
+
 const i18nNamespaces = ["common"];
 
 export default async function Page({
@@ -102,7 +104,10 @@ export default async function Page({
         <ReviewsSection lang={lang} />
 
         <PricingSection lang={lang} />
+        <AwardsSection lang={lang} />
         <CTASection />
+
+        
         <Footer lang={lang} />
       </main>
     </TranslationsProvider>
