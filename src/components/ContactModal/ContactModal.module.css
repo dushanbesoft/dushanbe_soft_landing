@@ -323,7 +323,6 @@
   opacity: 0.8;
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
   .content {
     flex-direction: column;
@@ -340,12 +339,43 @@
 }
 
 @media (max-width: 768px) {
+  .modal {
+    padding: 30px 20px;
+    margin-top: 20px;
+    max-height: 85vh;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .desc {
+    max-width: 100%;
+  }
   .row {
     flex-direction: column;
+    gap: 15px;
   }
   .messengersWrapper {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 20px;
+    padding: 20px;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .featureBox {
+    width: 100%;
+  }
+  .rightCol {
+    padding: 20px 15px;
+  }
+  .formHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  .field label {
+    text-align: left;
   }
 }
