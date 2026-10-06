@@ -13,8 +13,8 @@ export default async function JobsSection({ lang = "ru" }: { lang?: string }) {
       <FadeIn direction="up">
         <main className={styles.container}>
           <div className={styles.header}>
-            <span className={styles.subtitle}>КАРЬЕРА</span>
-            <h2 className={styles.title}>Вакансии в Душанбе-Софт</h2>
+            <span className={styles.subtitle}>{t('jobs.subtitle', 'КАРЬЕРА')}</span>
+            <h2 className={styles.title}>{t('jobs.title', 'Вакансии в Душанбе-Софт')}</h2>
           </div>
 
           <JobsClient lang={lang} />

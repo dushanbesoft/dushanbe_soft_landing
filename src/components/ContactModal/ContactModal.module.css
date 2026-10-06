@@ -339,10 +339,16 @@
 }
 
 @media (max-width: 768px) {
+  .overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
   .modal {
     padding: 30px 20px;
-    margin-top: 20px;
-    max-height: 85vh;
+    margin-top: 0;
+    max-height: 90vh;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
   }
   .title {
     font-size: 24px;
@@ -362,11 +368,17 @@
   }
   .features {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
   }
   .featureBox {
     width: 100%;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+  .featureText {
+    align-items: flex-start;
   }
   .rightCol {
     padding: 20px 15px;
@@ -377,5 +389,16 @@
   }
   .field label {
     text-align: left;
+  }
+  .closeBtn {
+    top: 15px;
+    right: 15px;
+    background: rgba(61, 220, 132, 0.1);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

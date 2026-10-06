@@ -152,7 +152,7 @@ export default function TeamSection() {
                 <Image
                   className={styles.thumbnail}
                   src={member.thumbnail}
-                  alt={member.name}
+                  alt={index === 0 ? t('team.member0.name') : t('team.memberDefault.name')}
                   width={200}
                   height={200}
                 />
@@ -204,7 +204,7 @@ export default function TeamSection() {
             <Image
               className={styles.personImage}
               src={activeMember.image}
-              alt={activeMember.name}
+              alt={activeIndex === 0 ? t('team.member0.name') : t('team.memberDefault.name')}
               width={600}
               height={600}
               priority

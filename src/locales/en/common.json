@@ -5,10 +5,13 @@
     "home": "Home",
     "services": "Services",
     "products": "Products",
-    "cases": "Cases",
+    "cases": "Portfolio",
     "partners": "Partners",
     "about": "About Us",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "process": "Process",
+    "pricing": "Pricing",
+    "careers": "Careers"
   },
   "hero": {
     "badge": "IT solutions for business and government",
@@ -162,11 +165,11 @@
       },
       {
         "title": "Mobile Development",
-        "description": "Native and cross-platform mobile apps for IOS and Android with elegant UX."
+        "description": "Native and cross-platform mobile apps for iOS and Android with elegant UX."
       },
       {
         "title": "Web3 & Blockchain",
-        "description": "Development of Web3 Blockchain projects and Solidity smart contracts. Services such as Bridge, AMM, Liquidity, Swap, Launchpad, wallets, etc."
+        "description": "Development of Web3 Blockchain projects and smart contracts on Solidity."
       },
       {
         "title": "UI/UX Design",
@@ -178,46 +181,50 @@
       },
       {
         "title": "API Integration",
-        "description": "REST/GraphQL API development and integration, microservice architecture and ESB for enterprise systems."
+        "description": "Development and integration of REST/GraphQL API, microservice architecture and ESB for enterprise systems."
       },
       {
         "title": "Cloud Solutions",
-        "description": "Cloud design and migration: AWS, Azure, GCP. DevOps, CI/CD, monitoring and scaling."
+        "description": "Design and cloud migration: AWS, Azure, GCP. DevOps, CI/CD, monitoring and scaling."
       },
       {
         "title": "Technical Support",
-        "description": "Dedicated 24/7 support team, system monitoring, SLA guarantees and prompt response."
+        "description": "Dedicated 24/7 support team, system monitoring, SLA guarantees and rapid response."
       }
-    ]
+    ],
+    "web_dev": "Web development",
+    "mobile_dev": "Mobile apps",
+    "crm": "CRM and automation",
+    "uiux": "UI/UX Design"
   },
   "process": {
     "subtitle": "How we work",
     "title": "Development process",
     "list": [
       {
-        "title": "Research",
-        "description": "Business requirements analysis, current systems audit, market and target audience research.",
-        "duration": "1–2 wks"
+        "title": "Analytics and design",
+        "description": "We study your requirements, analyze the market and create a detailed technical task.",
+        "duration": "1-2 weeks"
       },
       {
-        "title": "Architecture",
-        "description": "System architecture, technology stack selection, technical specifications and roadmap.",
-        "duration": "1–2 wks"
-      },
-      {
-        "title": "UX/UI Design",
-        "description": "Wireframes, design system, prototyping and user interface testing.",
-        "duration": "2–3 wks"
+        "title": "Design (UI/UX)",
+        "description": "We develop a modern, intuitive and attractive interface.",
+        "duration": "2-3 weeks"
       },
       {
         "title": "Development",
-        "description": "Agile development in sprints, code review, continuous integration and regular demos.",
-        "duration": "4–12 wks"
+        "description": "We write clean and scalable code. Create frontend and backend parts.",
+        "duration": "from 1 month"
       },
       {
         "title": "Testing",
-        "description": "Automated and manual testing, load tests, security audit.",
-        "duration": "1–2 wks"
+        "description": "We conduct thorough QA testing: checking functionality, security and performance.",
+        "duration": "1-2 weeks"
+      },
+      {
+        "title": "Launch and support",
+        "description": "Deploy the project on servers and provide technical support.",
+        "duration": "Constantly"
       },
       {
         "title": "Launch",
@@ -231,24 +238,24 @@
     "title": "What they say about us",
     "list": [
       {
-        "text": "Dushanbe-Soft has established itself as a team that understands the specifics of IT projects and approaches the tasks assigned to it responsibly. We place particular emphasis on efficiency, technical support, and a willingness to find solutions even in challenging situations.",
-        "name": "Umedjon Ubaydullo",
-        "role": "Deputy Head of the company \"ZAO Teleradiocom\""
+        "text": "Dushanbe-Soft has established itself as a team that understands the specifics of IT projects and takes a responsible approach to tasks.",
+        "name": "Umedjon Ubaidullo",
+        "role": "Deputy Head of CJSC Teleradiocom"
       },
       {
-        "text": "Working with Dushanbe-Soft means, first and foremost, a professional approach and understanding of business objectives. The team is attentive to requirements, offers practical solutions, and supports the project throughout every stage.",
-        "name": "Gulmahmad Kayumov",
+        "text": "Cooperation with Dushanbe-Soft is primarily a professional approach and an understanding of business tasks.",
+        "name": "Gulmakhmad Kayumov",
         "role": "CEO of Telecom Technology"
       },
       {
-        "text": "When working with Dushanbe-Soft, we value their technical expertise and responsible approach to projects. The team is adept at handling complex tasks and responding promptly to any issues that arise.",
-        "name": "Sulton Niyozi",
-        "role": "Deputy Chief Engineer, Tajikistan Television"
-      },
-      {
-        "text": "Dushanbe-Soft helped us implement digital solutions that make working with clients more convenient and efficient. We especially appreciate the team's combination of a modern approach, flexibility, and ongoing support.",
+        "text": "Dushanbe-Soft helped us implement digital solutions that make working with clients more convenient and efficient.",
         "name": "Shahrom Jamhurov",
         "role": "Founder and CEO of Yak Du Trip"
+      },
+      {
+        "text": "We value Dushanbe-Soft for its professionalism, efficiency, and focus on results.",
+        "name": "Tagoimurod Sidikov",
+        "role": "CEO, Etagi"
       },
       {
         "text": "At Dushanbe-Soft, we don't just fulfill technical requirements; we immerse ourselves in the task and offer the optimal solution. Transparent communication, adherence to agreements, and attention to detail are important to us.",
@@ -263,7 +270,7 @@
     ]
   },
   "cases": {
-    "subtitle": "Cases",
+    "subtitle": "Portfolio",
     "title": "Projects we are proud of",
     "all_cases": "All cases",
     "all_projects": "All projects",
@@ -273,7 +280,8 @@
     "gallery": "Gallery",
     "gallery_prev": "Previous image",
     "gallery_next": "Next image",
-    "gallery_close": "Close viewer"
+    "gallery_close": "Close viewer",
+    "loadMore": "View more"
   },
   "projects": {
     "zudyob": {
@@ -285,7 +293,9 @@
         "Round-the-clock search, 24/7",
         "Time saved every day"
       ],
-      "gallery": ["ZudYob — finds faster"]
+      "gallery": [
+        "ZudYob — finds faster"
+      ]
     },
     "president": {
       "title": "President of the Republic of Tajikistan",
@@ -580,5 +590,145 @@
     "default_title": "Dushanbe Soft - IT solutions for business and government",
     "default_description": "Innovative IT solutions for business. Software, website, and mobile app development in Tajikistan.",
     "keywords": "web development, mobile apps, IT company, Dushanbe, Tajikistan, Dushanbe Soft"
+  },
+  "pricing": {
+    "plans": {
+      "0": {
+        "title": "Standard Plan",
+        "features": {
+          "0": "Project and administration consultations — 1 hour;",
+          "1": "Website availability check",
+          "2": "Domain, hosting, and SSL certificate renewal control"
+        }
+      },
+      "1": {
+        "title": "Basic Plan",
+        "features": {
+          "0": "Project and administration consultations — 2 hours;",
+          "1": "Website availability check",
+          "2": "Domain, hosting, and SSL certificate renewal control",
+          "3": "Cleaning and checking competitive code;",
+          "4": "Website backup — once a month;",
+          "5": "Bug fixes — up to 2 hours within 24 hours;"
+        }
+      },
+      "2": {
+        "title": "Advanced Plan",
+        "features": {
+          "0": "Project and administration consultations — 2 hours;",
+          "1": "Website availability check",
+          "2": "Domain, hosting, and SSL certificate renewal control",
+          "3": "Cleaning and checking competitive code;",
+          "4": "Website backup — twice a month;",
+          "5": "Bug fixes — up to 8 hours within 12 hours;",
+          "6": "Mail administration — creation and setup.",
+          "7": "Protection against attacks and viruses;",
+          "8": "Project source code refinement — 4 hours."
+        }
+      },
+      "3": {
+        "title": "Premium Plan",
+        "features": {
+          "0": "Project and administration consultations — 2 hours;",
+          "1": "Website availability check",
+          "2": "Domain, hosting, and SSL certificate renewal control",
+          "3": "Cleaning and checking competitive code;",
+          "4": "Website backup — twice a month;",
+          "5": "Bug fixes within 6 hours;",
+          "6": "Mail administration — creation and setup.",
+          "7": "Protection against attacks and viruses;",
+          "8": "Project source code refinement — 20 hours.",
+          "9": "Website audit and recommendations for project continuation."
+        }
+      }
+    },
+    "subtitle": "Pricing",
+    "title": "Available pricing plans",
+    "per_month": "/mo",
+    "select": "Select"
+  },
+  "jobs": {
+    "subtitle": "CAREERS",
+    "title": "Jobs at Dushanbe-Soft",
+    "search_placeholder": "Job search",
+    "direction": "Direction",
+    "design": "Design",
+    "format": "Work format",
+    "remote": "Remote",
+    "office": "Office",
+    "hybrid": "Office / Remote",
+    "experience": "Experience",
+    "junior": "No experience",
+    "middle": "1-3 years",
+    "senior": "3+ years",
+    "not_found": "Unfortunately, nothing was found for your request.",
+    "more": "Details",
+    "cta_title": "Want to become part of our team?",
+    "cta_desc": "Send an application — even if there is no suitable vacancy now, we will contact you when a suitable opportunity arises.",
+    "send_cv": "Send resume",
+    "location": {
+      "dushanbe": "Dushanbe"
+    },
+    "type": {
+      "remote": "Remote",
+      "office": "In office",
+      "hybrid": "Hybrid"
+    },
+    "desc": {
+      "frontend-react": "Development of user interfaces in React.js",
+      "backend-node": "Creating server logic and API on Node.js",
+      "ux-ui-designer": "Designing user-friendly and modern interfaces for web and mobile"
+    }
+  },
+  "modal": {
+    "error_send": "Sending error",
+    "close": "Close",
+    "contact_us": "Contact us",
+    "lets_discuss": "Let's discuss",
+    "your_project": "your project.",
+    "desc": "Tell us about your task, and we will offer the best solution and calculate the cost.",
+    "reply_in": "Reply within",
+    "2_hours": "2 hours",
+    "confidentiality": "Confidentiality",
+    "guaranteed": "guaranteed",
+    "free": "Free",
+    "consultation": "consultation",
+    "or_write_messenger": "Or write to us in a convenient messenger",
+    "phone": "Phone",
+    "leave_request": "Leave a request",
+    "leave_request_desc": "We will contact you to discuss details",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "phone_label": "Phone",
+    "direction_label": "Direction",
+    "direction_placeholder": "Select a service",
+    "message_label": "Message",
+    "message_placeholder": "Tell us about your project: task, scale, deadlines...",
+    "success_msg": "Request successfully sent!",
+    "sending": "Sending...",
+    "submit_btn": "Send request"
+  },
+  "awards": {
+    "subtitle": "Our awards",
+    "title": "Achievements and periods",
+    "viewDoc": "View document",
+    "items": {
+      "1": {
+        "title": "Certificate of Honor",
+        "description": "For contribution to the development of digital technologies"
+      },
+      "2": {
+        "title": "Letter of Recommendation",
+        "description": "From a partner"
+      },
+      "3": {
+        "title": "From a partner",
+        "description": "For innovative solutions"
+      },
+      "4": {
+        "title": "Gratitude",
+        "description": "For further cooperation"
+      }
+    }
   }
 }

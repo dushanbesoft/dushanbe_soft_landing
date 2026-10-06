@@ -1,0 +1,370 @@
+[
+  {
+    "key": "reviews.subtitle",
+    "default": "Отзывы"
+  },
+  {
+    "key": "reviews.title",
+    "default": "Что о нас говорят"
+  },
+  {
+    "key": "pricing.plans.0.title",
+    "default": "Тариф «Стандарт»"
+  },
+  {
+    "key": "pricing.plans.0.features.0",
+    "default": "Консультации по работам проекта и администрированию — 1 час;"
+  },
+  {
+    "key": "pricing.plans.0.features.1",
+    "default": "Проверка доступности веб-сайта"
+  },
+  {
+    "key": "pricing.plans.0.features.2",
+    "default": "Контроль продления домена, хостинга и SSL-сертификата"
+  },
+  {
+    "key": "pricing.plans.1.title",
+    "default": "Основной тариф"
+  },
+  {
+    "key": "pricing.plans.1.features.0",
+    "default": "Консультации по работам проекта и администрированию — 2 часа;"
+  },
+  {
+    "key": "pricing.plans.1.features.1",
+    "default": "Проверка доступности веб-сайта"
+  },
+  {
+    "key": "pricing.plans.1.features.2",
+    "default": "Контроль продления домена, хостинга и SSL-сертификата"
+  },
+  {
+    "key": "pricing.plans.1.features.3",
+    "default": "Очистка и проверка конкурентного кода;"
+  },
+  {
+    "key": "pricing.plans.1.features.4",
+    "default": "Резервное копирование сайта — 1 раз в месяц;"
+  },
+  {
+    "key": "pricing.plans.1.features.5",
+    "default": "Исправление ошибок — до 2 часов в течение 24 часов;"
+  },
+  {
+    "key": "pricing.plans.2.title",
+    "default": "Продвинутый тариф"
+  },
+  {
+    "key": "pricing.plans.2.features.0",
+    "default": "Консультации по работам проекта и администрированию — 2 часа;"
+  },
+  {
+    "key": "pricing.plans.2.features.1",
+    "default": "Проверка доступности веб-сайта"
+  },
+  {
+    "key": "pricing.plans.2.features.2",
+    "default": "Контроль продления домена, хостинга и SSL-сертификата"
+  },
+  {
+    "key": "pricing.plans.2.features.3",
+    "default": "Очистка и проверка конкурентного кода;"
+  },
+  {
+    "key": "pricing.plans.2.features.4",
+    "default": "Резервное копирование сайта — 2 раза в месяц;"
+  },
+  {
+    "key": "pricing.plans.2.features.5",
+    "default": "Исправление ошибок — до 8 часов в течение 12 часов;"
+  },
+  {
+    "key": "pricing.plans.2.features.6",
+    "default": "Администрирование почты — создание и настройка."
+  },
+  {
+    "key": "pricing.plans.2.features.7",
+    "default": "Защита от атак и вирусов;"
+  },
+  {
+    "key": "pricing.plans.2.features.8",
+    "default": "Доработка программного кода проекта — 4 часа."
+  },
+  {
+    "key": "pricing.plans.3.title",
+    "default": "Тариф «Премиум»"
+  },
+  {
+    "key": "pricing.plans.3.features.0",
+    "default": "Консультации по работам проекта и администрированию — 2 часа;"
+  },
+  {
+    "key": "pricing.plans.3.features.1",
+    "default": "Проверка доступности веб-сайта"
+  },
+  {
+    "key": "pricing.plans.3.features.2",
+    "default": "Контроль продления домена, хостинга и SSL-сертификата"
+  },
+  {
+    "key": "pricing.plans.3.features.3",
+    "default": "Очистка и проверка конкурентного кода;"
+  },
+  {
+    "key": "pricing.plans.3.features.4",
+    "default": "Резервное копирование сайта — 2 раза в месяц;"
+  },
+  {
+    "key": "pricing.plans.3.features.5",
+    "default": "Исправление ошибок в течение 6 часов;"
+  },
+  {
+    "key": "pricing.plans.3.features.6",
+    "default": "Администрирование почты — создание и настройка."
+  },
+  {
+    "key": "pricing.plans.3.features.7",
+    "default": "Защита от атак и вирусов;"
+  },
+  {
+    "key": "pricing.plans.3.features.8",
+    "default": "Доработка программного кода проекта — 20 часа."
+  },
+  {
+    "key": "pricing.plans.3.features.9",
+    "default": "Аудит сайта и рекомендации по продолжению проекта."
+  },
+  {
+    "key": "pricing.subtitle",
+    "default": "Тарифы"
+  },
+  {
+    "key": "pricing.title",
+    "default": "Доступные тарифные планы"
+  },
+  {
+    "key": "pricing.per_month",
+    "default": "/мес"
+  },
+  {
+    "key": "pricing.select",
+    "default": "Выбрать"
+  },
+  {
+    "key": "jobs.subtitle",
+    "default": "КАРЬЕРА"
+  },
+  {
+    "key": "jobs.title",
+    "default": "Вакансии в Душанбе-Софт"
+  },
+  {
+    "key": "jobs.search_placeholder",
+    "default": "Поиск вакансии"
+  },
+  {
+    "key": "jobs.direction",
+    "default": "Направление"
+  },
+  {
+    "key": "jobs.design",
+    "default": "Дизайн"
+  },
+  {
+    "key": "jobs.format",
+    "default": "Формат работы"
+  },
+  {
+    "key": "jobs.remote",
+    "default": "Удалённо"
+  },
+  {
+    "key": "jobs.office",
+    "default": "В офисе"
+  },
+  {
+    "key": "jobs.hybrid",
+    "default": "В офисе / Удалённо"
+  },
+  {
+    "key": "jobs.experience",
+    "default": "Опыт"
+  },
+  {
+    "key": "jobs.junior",
+    "default": "Без опыта"
+  },
+  {
+    "key": "jobs.middle",
+    "default": "1-3 года"
+  },
+  {
+    "key": "jobs.senior",
+    "default": "3+ года"
+  },
+  {
+    "key": "jobs.not_found",
+    "default": "К сожалению, по вашему запросу ничего не найдено."
+  },
+  {
+    "key": "jobs.more",
+    "default": "Подробнее"
+  },
+  {
+    "key": "jobs.cta_title",
+    "default": "Хочешь стать частью нашей команды?"
+  },
+  {
+    "key": "jobs.cta_desc",
+    "default": "Отправьте заявку — даже если подходящей вакансии сейчас нет, мы свяжемся с вами при появлении подходящей возможности."
+  },
+  {
+    "key": "jobs.send_cv",
+    "default": "Отправить резюме"
+  },
+  {
+    "key": "header.process",
+    "default": "Процесс"
+  },
+  {
+    "key": "header.pricing",
+    "default": "Тарифы"
+  },
+  {
+    "key": "header.careers",
+    "default": "Карьера"
+  },
+  {
+    "key": "modal.error_send",
+    "default": "Ошибка отправки"
+  },
+  {
+    "key": "modal.close",
+    "default": "Закрыть"
+  },
+  {
+    "key": "modal.contact_us",
+    "default": "Связаться с нами"
+  },
+  {
+    "key": "modal.lets_discuss",
+    "default": "Давайте обсудим"
+  },
+  {
+    "key": "modal.your_project",
+    "default": "ваш проект."
+  },
+  {
+    "key": "modal.desc",
+    "default": "Расскажите о своей задаче, а мы предложим лучшее решение и рассчитаем стоимость."
+  },
+  {
+    "key": "modal.reply_in",
+    "default": "Ответ в течение"
+  },
+  {
+    "key": "modal.2_hours",
+    "default": "2 часов"
+  },
+  {
+    "key": "modal.confidentiality",
+    "default": "Конфиденциальность"
+  },
+  {
+    "key": "modal.guaranteed",
+    "default": "гарантирована"
+  },
+  {
+    "key": "modal.free",
+    "default": "Бесплатная"
+  },
+  {
+    "key": "modal.consultation",
+    "default": "консультация"
+  },
+  {
+    "key": "modal.or_write_messenger",
+    "default": "Или пишите нам в удобный мессенджер"
+  },
+  {
+    "key": "modal.phone",
+    "default": "Телефон"
+  },
+  {
+    "key": "modal.leave_request",
+    "default": "Оставьте заявку"
+  },
+  {
+    "key": "modal.leave_request_desc",
+    "default": "Мы свяжемся с вами для обсуждения деталей"
+  },
+  {
+    "key": "modal.name_label",
+    "default": "Имя"
+  },
+  {
+    "key": "modal.name_placeholder",
+    "default": "Ваше имя"
+  },
+  {
+    "key": "modal.phone_label",
+    "default": "Телефон"
+  },
+  {
+    "key": "modal.direction_label",
+    "default": "Направление"
+  },
+  {
+    "key": "modal.direction_placeholder",
+    "default": "Выберите услугу"
+  },
+  {
+    "key": "services.web_dev",
+    "default": "Веб-разработка"
+  },
+  {
+    "key": "services.mobile_dev",
+    "default": "Мобильные приложения"
+  },
+  {
+    "key": "services.crm",
+    "default": "CRM и автоматизация"
+  },
+  {
+    "key": "services.uiux",
+    "default": "UI/UX Дизайн"
+  },
+  {
+    "key": "modal.message_label",
+    "default": "Сообщение"
+  },
+  {
+    "key": "modal.message_placeholder",
+    "default": "Расскажите о вашем проекте: задача, масштаб, сроки…"
+  },
+  {
+    "key": "modal.success_msg",
+    "default": "Заявка успешно отправлена!"
+  },
+  {
+    "key": "modal.sending",
+    "default": "Отправка..."
+  },
+  {
+    "key": "modal.submit_btn",
+    "default": "Отправить заявку"
+  },
+  {
+    "key": "awards.subtitle",
+    "default": "Наши награды"
+  },
+  {
+    "key": "awards.title",
+    "default": "Достижения и периоды"
+  },
+  {
+    "key": "awards.viewDoc",
+    "default": "Посмотреть документ"
+  }
+]

@@ -105,7 +105,7 @@ export default async function Page({
 
         <PricingSection lang={lang} />
         <AwardsSection lang={lang} />
-        <CTASection />
+        <CTASection lang={lang} />
 
         
         <Footer lang={lang} />

@@ -11,58 +11,58 @@ export default async function PricingSection({ lang = "ru" }: { lang?: string })
 
   const plans = [
     {
-      title: "Тариф «Стандарт»",
+      title: t('pricing.plans.0.title', 'Тариф «Стандарт»'),
       price: "1126с",
       features: [
-        "Консультации по работам проекта и администрированию — 1 час;",
-        "Проверка доступности веб-сайта",
-        "Контроль продления домена, хостинга и SSL-сертификата"
+        t('pricing.plans.0.features.0', 'Консультации по работам проекта и администрированию — 1 час;'),
+        t('pricing.plans.0.features.1', 'Проверка доступности веб-сайта'),
+        t('pricing.plans.0.features.2', 'Контроль продления домена, хостинга и SSL-сертификата')
       ],
       isPopular: false
     },
     {
-      title: "Основной тариф",
+      title: t('pricing.plans.1.title', 'Основной тариф'),
       price: "2263с",
       features: [
-        "Консультации по работам проекта и администрированию — 2 часа;",
-        "Проверка доступности веб-сайта",
-        "Контроль продления домена, хостинга и SSL-сертификата",
-        "Очистка и проверка конкурентного кода;",
-        "Резервное копирование сайта — 1 раз в месяц;",
-        "Исправление ошибок — до 2 часов в течение 24 часов;"
+        t('pricing.plans.1.features.0', 'Консультации по работам проекта и администрированию — 2 часа;'),
+        t('pricing.plans.1.features.1', 'Проверка доступности веб-сайта'),
+        t('pricing.plans.1.features.2', 'Контроль продления домена, хостинга и SSL-сертификата'),
+        t('pricing.plans.1.features.3', 'Очистка и проверка конкурентного кода;'),
+        t('pricing.plans.1.features.4', 'Резервное копирование сайта — 1 раз в месяц;'),
+        t('pricing.plans.1.features.5', 'Исправление ошибок — до 2 часов в течение 24 часов;')
       ],
       isPopular: true
     },
     {
-      title: "Продвинутый тариф",
+      title: t('pricing.plans.2.title', 'Продвинутый тариф'),
       price: "4537с",
       features: [
-        "Консультации по работам проекта и администрированию — 2 часа;",
-        "Проверка доступности веб-сайта",
-        "Контроль продления домена, хостинга и SSL-сертификата",
-        "Очистка и проверка конкурентного кода;",
-        "Резервное копирование сайта — 2 раза в месяц;",
-        "Исправление ошибок — до 8 часов в течение 12 часов;",
-        "Администрирование почты — создание и настройка.",
-        "Защита от атак и вирусов;",
-        "Доработка программного кода проекта — 4 часа."
+        t('pricing.plans.2.features.0', 'Консультации по работам проекта и администрированию — 2 часа;'),
+        t('pricing.plans.2.features.1', 'Проверка доступности веб-сайта'),
+        t('pricing.plans.2.features.2', 'Контроль продления домена, хостинга и SSL-сертификата'),
+        t('pricing.plans.2.features.3', 'Очистка и проверка конкурентного кода;'),
+        t('pricing.plans.2.features.4', 'Резервное копирование сайта — 2 раза в месяц;'),
+        t('pricing.plans.2.features.5', 'Исправление ошибок — до 8 часов в течение 12 часов;'),
+        t('pricing.plans.2.features.6', 'Администрирование почты — создание и настройка.'),
+        t('pricing.plans.2.features.7', 'Защита от атак и вирусов;'),
+        t('pricing.plans.2.features.8', 'Доработка программного кода проекта — 4 часа.')
       ],
       isPopular: false
     },
     {
-      title: "Тариф «Премиум»",
+      title: t('pricing.plans.3.title', 'Тариф «Премиум»'),
       price: "7948с",
       features: [
-        "Консультации по работам проекта и администрированию — 2 часа;",
-        "Проверка доступности веб-сайта",
-        "Контроль продления домена, хостинга и SSL-сертификата",
-        "Очистка и проверка конкурентного кода;",
-        "Резервное копирование сайта — 2 раза в месяц;",
-        "Исправление ошибок в течение 6 часов;",
-        "Администрирование почты — создание и настройка.",
-        "Защита от атак и вирусов;",
-        "Доработка программного кода проекта — 20 часа.",
-        "Аудит сайта и рекомендации по продолжению проекта."
+        t('pricing.plans.3.features.0', 'Консультации по работам проекта и администрированию — 2 часа;'),
+        t('pricing.plans.3.features.1', 'Проверка доступности веб-сайта'),
+        t('pricing.plans.3.features.2', 'Контроль продления домена, хостинга и SSL-сертификата'),
+        t('pricing.plans.3.features.3', 'Очистка и проверка конкурентного кода;'),
+        t('pricing.plans.3.features.4', 'Резервное копирование сайта — 2 раза в месяц;'),
+        t('pricing.plans.3.features.5', 'Исправление ошибок в течение 6 часов;'),
+        t('pricing.plans.3.features.6', 'Администрирование почты — создание и настройка.'),
+        t('pricing.plans.3.features.7', 'Защита от атак и вирусов;'),
+        t('pricing.plans.3.features.8', 'Доработка программного кода проекта — 20 часа.'),
+        t('pricing.plans.3.features.9', 'Аудит сайта и рекомендации по продолжению проекта.')
       ],
       isPopular: false
     }
@@ -73,8 +73,8 @@ export default async function PricingSection({ lang = "ru" }: { lang?: string })
       <FadeIn direction="up">
         <main className={styles.container}>
           <div className={styles.header}>
-            <span className={styles.subtitle}>Тарифы</span>
-            <h2 className={styles.title}>Доступные тарифные планы</h2>
+            <span className={styles.subtitle}>{t('pricing.subtitle', 'Тарифы')}</span>
+            <h2 className={styles.title}>{t('pricing.title', 'Доступные тарифные планы')}</h2>
           </div>
           <div className={styles.grid}>
             {plans.map((plan, index) => (
@@ -86,7 +86,7 @@ export default async function PricingSection({ lang = "ru" }: { lang?: string })
                   <h3 className={styles.cardTitle}>{plan.title}</h3>
                   <div className={styles.priceBlock}>
                     <span className={styles.price}>{plan.price}</span>
-                    <span className={styles.period}>/мес</span>
+                    <span className={styles.period}>{t('pricing.per_month', '/мес')}</span>
                   </div>
                   <ul className={styles.features}>
                     {plan.features.map((feature, idx) => (

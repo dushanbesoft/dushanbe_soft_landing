@@ -3,12 +3,14 @@
 import React, { useState } from 'react';
 import styles from './PricingSection.module.css';
 import ContactModal from '../ContactModal/ContactModal';
+import { useTranslation } from 'react-i18next';
 
 interface PricingButtonProps {
   isPopular?: boolean;
 }
 
 export default function PricingButton({ isPopular }: PricingButtonProps) {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -17,7 +19,7 @@ export default function PricingButton({ isPopular }: PricingButtonProps) {
         className={`${styles.btn} ${isPopular ? styles.popularBtn : ""}`}
         onClick={() => setIsModalOpen(true)}
       >
-        Выбрать
+        {t('pricing.select', 'Выбрать')}
         <svg
           width="22"
           height="22"

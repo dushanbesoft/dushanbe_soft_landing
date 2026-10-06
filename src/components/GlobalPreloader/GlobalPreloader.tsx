@@ -8,12 +8,12 @@ export default function GlobalPreloader() {
 
   useEffect(() => {
     if (document.readyState === 'complete') {
-      setIsLoading(false);
+      setTimeout(() => setIsLoading(false), 0);
       return;
     }
 
     const handleLoad = () => {
-      setIsLoading(false);
+      setTimeout(() => setIsLoading(false), 0);
     };
 
     window.addEventListener('load', handleLoad);
