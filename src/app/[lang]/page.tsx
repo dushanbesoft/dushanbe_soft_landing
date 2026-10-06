@@ -93,12 +93,12 @@ export default async function Page({
         <HomeHero />
 
         <CasesSection lang={lang} />
+        <StatisticsComponent />
         <PartnersSection />
         <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
 
         <JobsSection lang={lang} />
-        <StatisticsComponent />
         <ReviewsSection lang={lang} />
 
         <PricingSection lang={lang} />

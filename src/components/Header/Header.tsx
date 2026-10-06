@@ -169,7 +169,7 @@ export default function Header() {
             className={styles.navItem}
             onClick={(e) => handleNavClick(e, `/${currentLang}/#cases`)}
           >
-            {t("header.cases", "Кейсы")}
+            {t("header.cases", "Портфолио")}
           </Link>
           <Link
             href={`/${currentLang}/#process`}

@@ -137,7 +137,7 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
                 {t("header.home", "Главная")}
               </Link>
               <Link href={`/${lang}/#cases`} className={styles.link}>
-                {t("footer.links1.4", "Кейсы")}
+                {t("footer.links1.4", "Портфолио")}
               </Link>
               <Link href={`/${lang}/#process`} className={styles.link}>
                 {t("footer.links1.3", "Как мы работаем")}

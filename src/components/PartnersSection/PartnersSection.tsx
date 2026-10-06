@@ -93,7 +93,7 @@ const partnersData = [
   {
     id: 15,
     name: "Минтранс РТ",
-    logoSmall: "/icons/icon-partners/pic.svg", 
+    logoSmall: "/icons/icon-partners/prezedent-site.svg", 
     sector: "mintrans.tj",
   }
 ];

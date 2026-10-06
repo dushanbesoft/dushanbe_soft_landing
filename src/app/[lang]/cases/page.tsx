@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   const { t } = await initTranslations(lang, i18nNamespaces);
   
-  const title = t('header.cases', { defaultValue: 'Кейсы' }) + ' | Dushanbe Soft';
+  const title = t('header.cases', { defaultValue: 'Портфолио' }) + ' | Dushanbe Soft';
   const description = t('seo.cases_description', { defaultValue: 'Примеры выполненных проектов и кейсов Dushanbe Soft.' });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
 
