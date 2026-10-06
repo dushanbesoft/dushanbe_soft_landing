@@ -10137,7 +10137,7 @@ This example shows how entered fields relate to the chat’s appearance. Placing
     ],
   },
   {
-    imageSrc: "/images/projects/sinamotv-banner.png",
+    imageSrc: "/images/projects/tvcrm-banner.png",
     year: "2024",
     tags: ["React", "Next.js", "Tailwind CSS", "CRM", "Telecom"],
     slug: "sinamoktv",

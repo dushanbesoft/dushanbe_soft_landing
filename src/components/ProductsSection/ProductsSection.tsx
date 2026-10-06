@@ -121,7 +121,7 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
           </StaggerItem>
           <StaggerItem>
             <ProductCard 
-              imageSrc="/images/projects/sinamotv-banner.png"
+              imageSrc="/images/projects/tvcrm-banner.png"
               icon={<TvIcon />}
               title={t('products.tvcrm.title', 'TV CRM')}
               subtitle={t('products.tvcrm.subtitle', 'CRM для кабельных телевидений')}
