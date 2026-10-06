@@ -96,16 +96,16 @@ export default async function Page({
         <ProductsSection lang={lang} />
         <CasesSection lang={lang} />
         <StatisticsComponent />
-        <PartnersSection />
-        <ProcessSection lang={lang} />
         <ServicesSection lang={lang} />
-
-        <JobsSection lang={lang} />
+        <ProcessSection lang={lang} />
         <ReviewsSection lang={lang} />
-
         <PricingSection lang={lang} />
-        <AwardsSection lang={lang} />
         <CTASection lang={lang} />
+        <JobsSection lang={lang} />
+        <PartnersSection />
+
+
+        <AwardsSection lang={lang} />
 
         
         <Footer lang={lang} />

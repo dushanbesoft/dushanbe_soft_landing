@@ -165,6 +165,13 @@ export default function Header() {
             {t("header.home", "Главная")}
           </Link>
           <Link
+            href={`/${currentLang}/#products`}
+            className={styles.navItem}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#products`)}
+          >
+            {t("header.products", "Для бизнеса")}
+          </Link>
+          <Link
             href={`/${currentLang}/#cases`}
             className={styles.navItem}
             onClick={(e) => handleNavClick(e, `/${currentLang}/#cases`)}
@@ -172,11 +179,18 @@ export default function Header() {
             {t("header.cases", "Портфолио")}
           </Link>
           <Link
+            href={`/${currentLang}/#partners`}
+            className={styles.navItem}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#partners`)}
+          >
+            {t("header.partners", "Наши партнёры")}
+          </Link>
+          <Link
             href={`/${currentLang}/#process`}
             className={styles.navItem}
             onClick={(e) => handleNavClick(e, `/${currentLang}/#process`)}
           >
-            {t("header.process", "Процесс")}
+            {t("header.process", "Процесс разработки")}
           </Link>
           <Link
             href={`/${currentLang}/#services`}
@@ -199,6 +213,29 @@ export default function Header() {
           >
             {t("header.careers", "Карьера")}
           </Link>
+          <Link
+            href={`/${currentLang}/#awards`}
+            className={styles.navItem}
+            onClick={(e) => handleNavClick(e, `/${currentLang}/#awards`)}
+          >
+            {t("header.awards", "Награды")}
+          </Link>
+          <a
+            href={
+              currentLang === "en"
+                ? "/files/EN - Dushanbe- Soft.pdf"
+                : currentLang === "tj"
+                ? "/files/TJ - Dushanbe- Soft.pdf"
+                : "/files/RU - Dushanbe- Soft.pdf"
+            }
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.navItem}
+            onClick={closeMenu}
+          >
+            {t("header.proposal", "Получить КП")}
+          </a>
         </nav>
 
         <div className={styles.controlsWrapper}>

@@ -4,14 +4,16 @@
   "header": {
     "home": "Home",
     "services": "Services",
-    "products": "Products",
+    "products": "For Business",
     "cases": "Portfolio",
-    "partners": "Partners",
+    "partners": "Our Partners",
     "about": "About Us",
     "contacts": "Contacts",
-    "process": "Process",
+    "process": "Development Process",
     "pricing": "Pricing",
-    "careers": "Careers"
+    "careers": "Careers",
+    "awards": "Awards",
+    "proposal": "Get Commercial Proposal"
   },
   "hero": {
     "badge": "IT solutions for business and government",
