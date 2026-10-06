@@ -95,6 +95,11 @@
         "Protection against DDoS attacks",
         "Multilingual support"
       ]
+    },
+    "tvcrm": {
+      "title": "TV CRM",
+      "subtitle": "CRM for Cable TV",
+      "description": "An internal CRM system for a cable TV provider that automates the management of subscribers, controllers, cash transactions, and reporting."
     }
   },
   "whyUs": {

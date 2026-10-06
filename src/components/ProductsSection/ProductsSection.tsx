@@ -35,6 +35,18 @@ const ChatIcon = () => (
   </svg>
 );
 
+const TvIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M40 10H6C4.89543 10 4 10.8954 4 12V32C4 33.1046 4.89543 34 6 34H18V38H28V34H40C41.1046 34 42 33.1046 42 32V12C42 10.8954 41.1046 10 40 10ZM40 32H6V12H40V32ZM16 16L32 22L16 28V16Z" fill="url(#paint2_linear_tv)"/>
+    <defs>
+      <linearGradient id="paint2_linear_tv" x1="10.8756" y1="30" x2="35.1244" y2="16" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#3DDC84"/>
+        <stop offset="1" stopColor="#02704F"/>
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 interface ProductsSectionProps {
   showAll?: boolean;
   lang?: string;
@@ -64,6 +76,14 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
     { label: t('products.livechat.tags.6', 'Мультиязычность') },
   ];
 
+  const getTvcrmTags = () => [
+    { label: 'React', highlighted: true },
+    { label: 'Next.js' },
+    { label: 'Tailwind CSS' },
+    { label: 'CRM', highlighted: true },
+    { label: 'Telecom' },
+  ];
+
   return (
     <section id="products" className={styles.section}>
       <div className={styles.container}>
@@ -73,11 +93,6 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
               <div className={styles.subtitle}>{t('products.subtitle', 'Наши продукты')}</div>
               <h2 className={styles.mainTitle}>{t('products.title', 'Готовые продукты для вашего бизнеса')}</h2>
             </div>
-            {/* {!showAll && (
-              <Link href={`/${lang}/products`} className={styles.allProductsBtn}>
-                {t('products.allProducts', 'Все продукты')} <ArrowUpRight />
-              </Link>
-            )} */}
           </div>
         </FadeIn>
 
@@ -102,6 +117,17 @@ export default async function ProductsSection({ showAll = false, lang = 'ru' }: 
               description={t('products.livechat.description', 'Веб-сервис и платформа онлайн-консультаций для бизнеса...')}
               tags={getChatTags()}
               href="https://livechat.tj"
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <ProductCard 
+              imageSrc="/images/projects/sinamotv-banner.png"
+              icon={<TvIcon />}
+              title={t('products.tvcrm.title', 'TV CRM')}
+              subtitle={t('products.tvcrm.subtitle', 'CRM для кабельных телевидений')}
+              description={t('products.tvcrm.description', 'Внутренняя CRM-система для провайдера кабельного телевидения, автоматизирующая управление абонентами, контроллерами, кассовыми операциями и отчетностью.')}
+              tags={getTvcrmTags()}
+              href="/#cases"
             />
           </StaggerItem>
         </StaggerContainer>

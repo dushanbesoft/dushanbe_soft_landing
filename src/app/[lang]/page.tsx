@@ -93,19 +93,17 @@ export default async function Page({
         </div>
 
         <HomeHero />
-        <ProductsSection lang={lang} />
         <CasesSection lang={lang} />
+        <ProductsSection lang={lang} />
+        <PartnersSection />
         <StatisticsComponent />
         <ServicesSection lang={lang} />
-        <ProcessSection lang={lang} />
-        <ReviewsSection lang={lang} />
         <PricingSection lang={lang} />
-        <CTASection lang={lang} />
+        <ReviewsSection lang={lang} />
+        <ProcessSection lang={lang} />
         <JobsSection lang={lang} />
-        <PartnersSection />
-
-
         <AwardsSection lang={lang} />
+        <CTASection lang={lang} />
 
         
         <Footer lang={lang} />
