@@ -743,6 +743,42 @@
       "4": {
         "title": "Gratitude",
         "description": "For further cooperation"
+      },
+      "indian_tech_1": {
+        "title": "Indian Technical Cooperation",
+        "description": "Certificate"
+      },
+      "indian_tech_2": {
+        "title": "Government of India",
+        "description": "ITEC Programme"
+      },
+      "fmfb": {
+        "title": "First MicroFinance Bank",
+        "description": "Letter of Recommendation"
+      },
+      "golden_travel": {
+        "title": "Golden Travel",
+        "description": "Letter of Recommendation"
+      },
+      "megafon": {
+        "title": "Megafon Tajikistan",
+        "description": "Letter of Recommendation"
+      },
+      "muhibon": {
+        "title": "Muhibon",
+        "description": "Letter of Recommendation"
+      },
+      "sinamo": {
+        "title": "Sinamo TV",
+        "description": "Letter of Recommendation"
+      },
+      "sunduktv": {
+        "title": "Sunduk TV",
+        "description": "Letter of Recommendation"
+      },
+      "completion": {
+        "title": "Certificate of Completion",
+        "description": "Successful Completion"
       }
     }
   }

@@ -743,6 +743,42 @@
       "4": {
         "title": "Сипоснома",
         "description": "Барои ҳамкории минбаъда"
+      },
+      "indian_tech_1": {
+        "title": "Ҳамкории техникии Ҳиндустон",
+        "description": "Шаҳодатнома"
+      },
+      "indian_tech_2": {
+        "title": "Ҳукумати Ҳиндустон",
+        "description": "Барномаи ITEC"
+      },
+      "fmfb": {
+        "title": "Аввалин Бонки Молиявии Хурд",
+        "description": "Тавсиянома"
+      },
+      "golden_travel": {
+        "title": "Golden Travel",
+        "description": "Тавсиянома"
+      },
+      "megafon": {
+        "title": "Мегафон Тоҷикистон",
+        "description": "Тавсиянома"
+      },
+      "muhibon": {
+        "title": "Муҳибон",
+        "description": "Тавсиянома"
+      },
+      "sinamo": {
+        "title": "Синамо ТВ",
+        "description": "Тавсиянома"
+      },
+      "sunduktv": {
+        "title": "Сундук ТВ",
+        "description": "Тавсиянома"
+      },
+      "completion": {
+        "title": "Шаҳодатномаи хатм",
+        "description": "Хами муваффақона"
       }
     }
   }
