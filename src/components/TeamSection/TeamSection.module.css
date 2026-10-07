@@ -144,8 +144,8 @@
   padding: 45px 45px 0 45px;
   justify-content: space-between;
   align-items: flex-start;
-  /* background: rgba(1, 101, 88, 0.11); */
-  background-color: #ffffff;
+  background: rgba(1, 101, 88, 0.11);
+  /* background-color: #ffffff; */
   box-shadow: 0 0 8px 0 #fff;
   position: relative;
   width: calc(100%);
@@ -174,7 +174,7 @@
 }
 
 .personName {
-  color: #000607;
+  color: #ffffff;
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
@@ -182,7 +182,7 @@
 }
 
 .personRole {
-  color: #000a1d;
+  color: #d9d9d9;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -190,7 +190,7 @@
 }
 
 .personBio {
-  color: #000607;
+  color: #d9d9d9;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -228,7 +228,7 @@
 
 .detailLabel {
   width: 200px;
-  color: #000a1d;
+  color: #ffffff;
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
@@ -237,7 +237,7 @@
 
 .detailValue {
   flex: 1 0 0;
-  color: #000a1d;
+  color: #d9d9d9;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
