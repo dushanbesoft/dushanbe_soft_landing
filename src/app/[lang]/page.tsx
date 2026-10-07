@@ -102,8 +102,8 @@ export default async function Page({
         <ProcessSection lang={lang} />
         <JobsSection lang={lang} />
         <AwardsSection lang={lang} />
-        <CTASection lang={lang} />
         <TeamSection />
+        <CTASection lang={lang} />
         
         <Footer lang={lang} />
       </main>
