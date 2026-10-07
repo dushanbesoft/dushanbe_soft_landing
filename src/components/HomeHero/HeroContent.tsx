@@ -80,12 +80,21 @@ export default function HeroContent() {
           >
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
           </button>
-          <Link 
-            href={`/${i18n.language}/cases`}
+          <a 
+            href={
+              i18n.language === "en"
+                ? "/files/EN - Dushanbe- Soft.pdf"
+                : i18n.language === "tj"
+                ? "/files/TJ - Dushanbe- Soft.pdf"
+                : "/files/RU - Dushanbe- Soft.pdf"
+            }
+            download
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.btnSecondary}
           >
-            {t("hero.btnSecondary", "Смотреть проекты")}
-          </Link>
+            {t("header.proposal", "Получить КП")}
+          </a>
         </div>
       </div>
       <HeroMarquee />

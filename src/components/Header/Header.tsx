@@ -220,22 +220,6 @@ export default function Header() {
           >
             {t("header.awards", "Награды")}
           </Link>
-          <a
-            href={
-              currentLang === "en"
-                ? "/files/EN - Dushanbe- Soft.pdf"
-                : currentLang === "tj"
-                ? "/files/TJ - Dushanbe- Soft.pdf"
-                : "/files/RU - Dushanbe- Soft.pdf"
-            }
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.navItem}
-            onClick={closeMenu}
-          >
-            {t("header.proposal", "Получить КП")}
-          </a>
         </nav>
 
         <div className={styles.controlsWrapper}>

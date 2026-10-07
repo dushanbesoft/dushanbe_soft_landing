@@ -99,9 +99,35 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
   
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ITUtility',
+    'name': 'Dushanbe Soft',
+    'url': siteUrl,
+    'logo': `${siteUrl}/icons/logo-header.svg`,
+    'image': `${siteUrl}/icons/site-favicon.svg`,
+    'description': 'Ведущая IT-компания в Таджикистане (г. Душанбе). Разработка программного обеспечения, сайтов, ERP и мобильных приложений.',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Душанбе',
+      'addressCountry': 'TJ'
+    },
+    'sameAs': [
+      'https://www.instagram.com/dushanbesoft',
+      'https://t.me/dushanbesoft'
+    ]
+  };
+
   return (
     <html lang={lang} dir={dir(lang)}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <GoogleTagManager gtmId="GTM-K3R48HBW" />
       <GoogleAnalytics gaId="G-BC9JE7JMKM" />
       <body className={`${tektur.variable} ${nunitoSans.variable}`}>
