@@ -53,8 +53,8 @@ const teamMembers = [
   {
     id: 1,
     transKey: "yakubov",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/80dd8fd23b7ea36003aaa884e7355d4e005945cb",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/500710c8c4d962adbcf170d3a2f16043dc9ce9c6",
+    thumbnail: "/images/person.png",
+    image: "/images/person.png",
   },
   // {
   //   id: 2,
