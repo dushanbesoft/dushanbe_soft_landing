@@ -160,6 +160,14 @@
       "skills": "Skills",
       "experience": "Experience",
       "education": "Education"
+    },
+    "yakubov": {
+      "name": "Muhammad Yakubov",
+      "role": "CEO, IT Architect, Developer, and Technical Expert",
+      "bio": "Muhammad Yakubov is the CEO and technical leader of the company, combining management expertise with deep knowledge in software development and IT architecture. He is involved in the creation and development of complex digital solutions—from ideation and architecture design to development, implementation, and further product scaling.\nHis strong point is the ability to see the project as a whole: understand business tasks, build a technical strategy, make architectural decisions, and simultaneously dive deep into development details. Under his leadership, the team creates reliable, scalable, and modern IT solutions focused on real business tasks.",
+      "skills": "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
+      "experience": "2017",
+      "education": "Higher education in Information Technology\nSoftware Engineering · Information Systems · Software Architecture"
     }
   },
   "services": {

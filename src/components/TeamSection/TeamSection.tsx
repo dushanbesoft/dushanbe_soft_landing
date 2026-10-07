@@ -52,70 +52,46 @@ const RightArrowIcon = ({ onClick }: { onClick: () => void }) => (
 const teamMembers = [
   {
     id: 1,
-    name: "Дилавар Абдуллаев",
-    role: "Специалист по анализу данных, Fullstack-разработчик, специалист по администрированию баз данных (DBA)",
-    bio: "Дилавар — выдающийся междисциплинарный специалист, сочетающий знания и навыки в области анализа данных, разработки Fullstack и управления базами данных. Широкий спектр его компетенций делает его ценным активом для нашей команды, способным решать самые разнообразные задачи. Дилавар умеет работать как с данными, так и с веб-приложениями и базами данных, что позволяет ему создавать комплексные и эффективные бизнес-решения.",
-    skills: "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
-    experience: "2012",
-    education: "Курсы Ташкентского университета информационных технологий : Stepik, IT Step, Harvard, Skillbox, ITVDN, Yandex",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/69e24040f3b04f632fdfb77c3ff85d4cce075f71",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
+    transKey: "yakubov",
+    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/80dd8fd23b7ea36003aaa884e7355d4e005945cb",
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/500710c8c4d962adbcf170d3a2f16043dc9ce9c6",
   },
+  // {
+  //   id: 2,
+  //   transKey: "member0",
+  //   thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/69e24040f3b04f632fdfb77c3ff85d4cce075f71",
+  //   image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
+  // },
   {
-    id: 2,
-    name: "Имя сотрудника 2",
-    role: "Роль",
-    bio: "Описание сотрудника 2",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
+    id: 3,
+    transKey: "memberDefault",
     thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/c6c34c5e97f823b42668217326595f097545a015",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
   },
   {
-    id: 3,
-    name: "Имя сотрудника 3",
-    role: "Роль",
-    bio: "Описание сотрудника 3",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
+    id: 4,
+    transKey: "memberDefault",
     thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/4efdac4d58302c2ac2c5d2196bb5ea79f4a26beb",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
   },
   {
-    id: 4,
-    name: "Имя сотрудника 4",
-    role: "Роль",
-    bio: "Описание сотрудника 4",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
+    id: 5,
+    transKey: "memberDefault",
     thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/12f403898af0b6e7b2bc9cfd3c09452f79b10384",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
   },
   {
-    id: 5,
-    name: "Имя сотрудника 5",
-    role: "Роль",
-    bio: "Описание сотрудника 5",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
+    id: 6,
+    transKey: "memberDefault",
     thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/b53409e480a41641e6ac6b3fb39e45d97599ac40",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
   },
-  {
-    id: 6,
-    name: "Имя сотрудника 6",
-    role: "Роль",
-    bio: "Описание сотрудника 6",
-    skills: "Навыки",
-    experience: "Опыт работы",
-    education: "Образование",
-    thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/685dfaf77fe7ac96160c133d047c3f85d4df0c5c",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
-  },
+  // {
+  //   id: 7,
+  //   transKey: "memberDefault",
+  //   thumbnail: "https://api.builder.io/api/v1/image/assets/TEMP/6a6d3e68db31952108a58350aea4a6de558e4abe",
+  //   image: "https://api.builder.io/api/v1/image/assets/TEMP/2f7f3ad106d99463911718070ee986bc62015419",
+  // },
 ];
 
 export default function TeamSection() {
@@ -141,7 +117,7 @@ export default function TeamSection() {
           </div>
         </FadeIn>
 
-        <StaggerContainer className={styles.teamCarousel} staggerChildren={0.1}>
+        {/* <StaggerContainer className={styles.teamCarousel} staggerChildren={0.1}>
           {teamMembers.map((member, index) => (
             <StaggerItem key={member.id}>
               <div
@@ -152,7 +128,7 @@ export default function TeamSection() {
                 <Image
                   className={styles.thumbnail}
                   src={member.thumbnail}
-                  alt={index === 0 ? t('team.member0.name') : t('team.memberDefault.name')}
+                  alt={t(`team.${member.transKey}.name`)}
                   width={200}
                   height={200}
                 />
@@ -164,19 +140,24 @@ export default function TeamSection() {
             <LeftArrowIcon onClick={prevMember} />
             <RightArrowIcon onClick={nextMember} />
           </FadeIn>
-        </StaggerContainer>
+        </StaggerContainer> */}
 
-        <FadeIn direction="up" delay={0.3}>
+        <FadeIn direction="up" delay={0.3} style={{ width: "100%" }}>
           <main className={styles.personMainCard}>
           <div key={activeMember.id} className={styles.personCard}>
             <div className={styles.personInfo}>
               <div className={styles.personHeader}>
-                <h3 className={styles.personName}>{activeIndex === 0 ? t('team.member0.name') : t('team.memberDefault.name')}</h3>
+                <h3 className={styles.personName}>{t(`team.${activeMember.transKey}.name`)}</h3>
                 <p className={styles.personRole}>
-                  {activeIndex === 0 ? t('team.member0.role') : t('team.memberDefault.role')}
+                  {t(`team.${activeMember.transKey}.role`)}
                 </p>
                 <p className={styles.personBio}>
-                  {activeIndex === 0 ? t('team.member0.bio') : t('team.memberDefault.bio')}
+                  {t(`team.${activeMember.transKey}.bio`).split('\n').map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
 
@@ -186,17 +167,22 @@ export default function TeamSection() {
                 <div className={styles.detailRow}>
                   <span className={styles.detailLabel}>{t('team.labels.skills', 'Навыки')}</span>
                   <span className={styles.detailValue}>
-                    {activeIndex === 0 ? t('team.member0.skills') : t('team.memberDefault.skills')}
+                    {t(`team.${activeMember.transKey}.skills`)}
                   </span>
                 </div>
                 <div className={styles.detailRow}>
                   <span className={styles.detailLabel}>{t('team.labels.experience', 'Опыт работы')}</span>
-                  <span className={styles.detailValue}>{activeIndex === 0 ? t('team.member0.experience') : t('team.memberDefault.experience')}</span>
+                  <span className={styles.detailValue}>{t(`team.${activeMember.transKey}.experience`)}</span>
                 </div>
                 <div className={styles.detailRow}>
                   <span className={styles.detailLabel}>{t('team.labels.education', 'Образование')}</span>
                   <span className={styles.detailValue}>
-                    {activeIndex === 0 ? t('team.member0.education') : t('team.memberDefault.education')}
+                    {t(`team.${activeMember.transKey}.education`).split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </span>
                 </div>
               </div>
@@ -204,7 +190,7 @@ export default function TeamSection() {
             <Image
               className={styles.personImage}
               src={activeMember.image}
-              alt={activeIndex === 0 ? t('team.member0.name') : t('team.memberDefault.name')}
+              alt={t(`team.${activeMember.transKey}.name`)}
               width={600}
               height={600}
               priority
@@ -212,6 +198,31 @@ export default function TeamSection() {
           </div>
           </main>
         </FadeIn>
+
+        {/* <FadeIn direction="up" delay={0.4}>
+          <div className={styles.statsBar}>
+            <div className={styles.statItem}>
+              <div className={styles.statValue}>2015</div>
+              <div className={styles.statLabel}>{t('team.stats.founded', 'Год основания')}</div>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.statValue}>150+</div>
+              <div className={styles.statLabel}>{t('team.stats.projects', 'Проектов')}</div>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.statValue}>20+</div>
+              <div className={styles.statLabel}>{t('team.stats.experts', 'Экспертов')}</div>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.statValue}>5+</div>
+              <div className={styles.statLabel}>{t('team.stats.countries', 'Стран')}</div>
+            </div>
+            <div className={styles.statItemLast}>
+              <div className={styles.statValue}>98%</div>
+              <div className={styles.statLabel}>{t('team.stats.satisfaction', 'Удовлетворённость')}</div>
+            </div>
+          </div>
+        </FadeIn> */}
         
       </div>
     </section>

@@ -96,7 +96,6 @@ export default async function Page({
         <CasesSection lang={lang} />
         <ProductsSection lang={lang} />
         <PartnersSection />
-        <StatisticsComponent />
         <ServicesSection lang={lang} />
         <PricingSection lang={lang} />
         <ReviewsSection lang={lang} />
@@ -104,7 +103,7 @@ export default async function Page({
         <JobsSection lang={lang} />
         <AwardsSection lang={lang} />
         <CTASection lang={lang} />
-
+        <TeamSection />
         
         <Footer lang={lang} />
       </main>

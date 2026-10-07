@@ -139,12 +139,13 @@
 
 .personCard {
   display: flex;
-  
+  width: 100%;
   max-width: 1440px;
   padding: 45px 45px 0 45px;
   justify-content: space-between;
-  align-items: flex-end;
-  background: rgba(1, 101, 88, 0.11);
+  align-items: flex-start;
+  /* background: rgba(1, 101, 88, 0.11); */
+  background-color: #ffffff;
   box-shadow: 0 0 8px 0 #fff;
   position: relative;
   width: calc(100%);
@@ -173,7 +174,7 @@
 }
 
 .personName {
-  color: #d9d9d9;
+  color: #000607;
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
@@ -181,7 +182,7 @@
 }
 
 .personRole {
-  color: #9eaabb;
+  color: #000a1d;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -189,7 +190,7 @@
 }
 
 .personBio {
-  color: #fff;
+  color: #000607;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -227,7 +228,7 @@
 
 .detailLabel {
   width: 200px;
-  color: #d9d9d9;
+  color: #000a1d;
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
@@ -236,16 +237,17 @@
 
 .detailValue {
   flex: 1 0 0;
-  color: #9eaabb;
+  color: #000a1d;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
+  line-height: 130%;
 }
 
 .personImage {
-  width: 334px;
-  aspect-ratio: 101/139;
-  object-fit: cover;
+  width: 470px;
+  /* aspect-ratio: 101/139; */
+  /* object-fit: cover; */
   flex-shrink: 0;
 }
 
