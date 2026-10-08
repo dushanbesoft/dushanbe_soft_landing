@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 .top > main {
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 15px 15px;
   display: flex;
@@ -176,7 +176,9 @@
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0; }
+  .container {
+    padding: 0;
+  }
   .top {
     flex-direction: column;
     gap: 40px;

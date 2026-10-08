@@ -11,7 +11,7 @@
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 0px 15px;
   display: flex;
@@ -170,8 +170,9 @@
   transition: all 0.3s ease;
 }
 
-.categoryBtn:hover, .categoryBtn.active {
+.categoryBtn:hover,
+.categoryBtn.active {
   background: rgba(61, 220, 132, 0.2);
-  border-color: #3DDC84;
-  color: #3DDC84;
+  border-color: #3ddc84;
+  color: #3ddc84;
 }

@@ -11,7 +11,7 @@
 .heroOverlay {
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   /* height: auto; */
   min-height: 500px;
@@ -55,7 +55,9 @@
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .heroNav:hover {
@@ -85,7 +87,7 @@
 }
 
 .contentWrapper {
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 0 30px 80px 30px;
   width: 100%;
@@ -98,7 +100,7 @@
 }
 
 .topNav {
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 25px 30px 24px;
   width: 100%;
@@ -131,7 +133,7 @@
 
 .shortInfo {
   font-size: 18px;
-  color: #3DDC84;
+  color: #3ddc84;
   font-weight: 500;
   margin: 0;
 }

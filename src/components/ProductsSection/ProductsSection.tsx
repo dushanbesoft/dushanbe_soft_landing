@@ -202,7 +202,7 @@ export default async function ProductsSection({
           className={styles.cardsContainer}
           staggerChildren={0.2}
         >
-          <StaggerItem className={styles.staggerItem}>
+          <StaggerItem>
             <ProductCard
               imageSrc="/images/ZudSMSBanner.webp"
               icon={<SmsIcon />}
@@ -219,7 +219,7 @@ export default async function ProductsSection({
               href="https://zudsms.tj"
             />
           </StaggerItem>
-          <StaggerItem className={styles.staggerItem}>
+          <StaggerItem>
             <ProductCard
               imageSrc="/images/liveChatBanner.webp"
               icon={<ChatIcon />}
@@ -233,7 +233,7 @@ export default async function ProductsSection({
               href="https://livechat.tj"
             />
           </StaggerItem>
-          <StaggerItem className={styles.staggerItem}>
+          <StaggerItem>
             <ProductCard
               imageSrc="/images/projects/tvcrm-banner.png"
               icon={<TvIcon />}

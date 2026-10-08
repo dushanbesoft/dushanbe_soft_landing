@@ -1,6 +1,6 @@
 .section {
   display: flex;
-  max-width: 1440px;  
+  max-width: 1410px;
   margin: 0 auto;
   padding: 30px 15px;
   flex-direction: column;
@@ -41,7 +41,7 @@
 }
 
 .subtitle {
-  color: #D9D9D9;
+  color: #d9d9d9;
   font-family: var(--font-tektur);
   font-size: 15px;
   font-weight: 500;
@@ -51,7 +51,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #3DDC84 13.4%, #02704F 86.6%);
+  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,7 +61,7 @@
 /* Fallback */
 @supports not (-webkit-background-clip: text) {
   .mainTitle {
-    color: #3DDC84;
+    color: #3ddc84;
   }
 }
 
@@ -80,7 +80,9 @@
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0; }
+  .container {
+    padding: 0;
+  }
   .section {
     padding: 20px 15px;
   }

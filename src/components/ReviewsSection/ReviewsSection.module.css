@@ -17,13 +17,13 @@
   gap: 30px;
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .header {
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -112,9 +112,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  }
-
-
+}
 
 .authorInfo {
   display: flex;
@@ -199,7 +197,9 @@
 }
 
 @media (max-width: 1024px) {
-  .container { padding: 0; }
+  .container {
+    padding: 0;
+  }
   .section {
     padding: 20px 15px;
     width: 100%;
@@ -263,7 +263,6 @@
   }
 }
 
-
 .controlsWrapper {
   display: flex;
   align-items: center;
@@ -293,8 +292,8 @@
   color: #02704f;
   transition: all 0.3s ease;
 }
-.arrowBtn:hover > span{
-  background:  linear-gradient(100deg, #5eb5f0 13.4%, #02704f 86.6%);
+.arrowBtn:hover > span {
+  background: linear-gradient(100deg, #5eb5f0 13.4%, #02704f 86.6%);
   width: 40px;
   height: 40px;
   position: absolute;
@@ -315,4 +314,3 @@
   opacity: 0.3;
   cursor: not-allowed;
 }
-

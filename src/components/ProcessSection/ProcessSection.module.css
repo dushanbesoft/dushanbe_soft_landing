@@ -16,7 +16,7 @@
   gap: 30px;
   flex: 1 0 0;
   position: relative;
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -83,7 +83,9 @@
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0; }
+  .container {
+    padding: 0;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -181,7 +183,9 @@
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0; }
+  .container {
+    padding: 0;
+  }
   .section {
     padding: 20px 15px;
     width: calc(100%);

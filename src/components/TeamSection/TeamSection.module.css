@@ -18,7 +18,7 @@
   align-self: stretch;
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -134,13 +134,13 @@
 .personMainCard {
   overflow: hidden;
   width: 100%;
-  padding:  8px 0;
+  padding: 8px 0;
 }
 
 .personCard {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1410px;
   padding: 45px 45px 0 45px;
   justify-content: space-between;
   align-items: flex-start;
@@ -304,7 +304,9 @@
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0; }
+  .container {
+    padding: 0;
+  }
   .section {
     padding: 20px 15px;
   }
@@ -327,7 +329,8 @@
   .personName {
     font-size: 18px;
   }
-  .personRole, .personBio {
+  .personRole,
+  .personBio {
     font-size: 14px;
   }
   .detailLabel {
