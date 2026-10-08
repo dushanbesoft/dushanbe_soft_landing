@@ -49,19 +49,18 @@ export function FadeIn({
   );
 }
 
-export function StaggerContainer({
-  children,
-  delayChildren = 0.1,
-  staggerChildren = 0.1,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delayChildren?: number;
-  staggerChildren?: number;
-  className?: string;
-}) {
+export const StaggerContainer = React.forwardRef<
+  HTMLDivElement,
+  {
+    children: React.ReactNode;
+    delayChildren?: number;
+    staggerChildren?: number;
+    className?: string;
+  }
+>(({ children, delayChildren = 0.1, staggerChildren = 0.1, className = "" }, ref) => {
   return (
     <motion.div
+      ref={ref}
       className={className}
       initial="hidden"
       whileInView="show"
@@ -79,7 +78,9 @@ export function StaggerContainer({
       {children}
     </motion.div>
   );
-}
+});
+
+StaggerContainer.displayName = "StaggerContainer";
 
 export function StaggerItem({
   children,

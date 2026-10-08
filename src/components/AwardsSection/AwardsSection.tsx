@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from './AwardsSection.module.css';
 import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 import { useTranslation } from 'react-i18next';
-import { FaSearchPlus } from 'react-icons/fa';
+import { FaSearchPlus, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const awards = [
   {
@@ -76,6 +76,19 @@ const awards = [
 export default function AwardsSection({ lang = 'ru' }: { lang?: string }) {
   const { t } = useTranslation('common');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -350, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 350, behavior: 'smooth' });
+    }
+  };
 
   const closeModal = () => setSelectedImage(null);
 
@@ -92,37 +105,47 @@ export default function AwardsSection({ lang = 'ru' }: { lang?: string }) {
         </FadeIn>
 
         <div className={styles.cardsRow}>
-          <StaggerContainer className={styles.carousel} staggerChildren={0.1}>
-            {awards.map((award) => (
-              <StaggerItem key={award.id}>
-                <div className={styles.carouselItem}>
-                  <div className={styles.card}>
-                    <div className={styles.cardContent}>
-                      <div 
-                        className={styles.imageWrap}
-                        onClick={() => setSelectedImage(award.image)}
-                      >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={award.image} alt={award.title} className={styles.image} />
-                        <div className={styles.imageOverlay}>
-                          <FaSearchPlus className={styles.zoomIcon} /> 
-                          <span>{t('awards.zoom', 'Увеличить')}</span>
+          <div className={styles.carouselContainer}>
+            <button className={`${styles.navButton} ${styles.prevButton}`} onClick={scrollLeft} aria-label={t('awards.prev', 'Предыдущий')}>
+              <FaChevronLeft />
+            </button>
+            
+            <StaggerContainer className={styles.carousel} staggerChildren={0.1} ref={carouselRef}>
+              {awards.map((award) => (
+                <StaggerItem key={award.id}>
+                  <div className={styles.carouselItem}>
+                    <div className={styles.card}>
+                      <div className={styles.cardContent}>
+                        <div 
+                          className={styles.imageWrap}
+                          onClick={() => setSelectedImage(award.image)}
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={award.image} alt={award.title} className={styles.image} />
+                          <div className={styles.imageOverlay}>
+                            <FaSearchPlus className={styles.zoomIcon} /> 
+                            <span>{t('awards.zoom', 'Увеличить')}</span>
+                          </div>
                         </div>
-                      </div>
-                      
-                      <div className={styles.textContent}>
-                        <div className={styles.cardTitle}>{t(`awards.items.${award.id}.title`, award.title)}</div>
-                        <div className={styles.cardDescription}>{t(`awards.items.${award.id}.description`, award.description)}</div>
-                        <div className={styles.badgeWrap}>
-                          <div className={styles.yearBadge}>{award.year}</div>
+                        
+                        <div className={styles.textContent}>
+                          <div className={styles.cardTitle}>{t(`awards.items.${award.id}.title`, award.title)}</div>
+                          <div className={styles.cardDescription}>{t(`awards.items.${award.id}.description`, award.description)}</div>
+                          <div className={styles.badgeWrap}>
+                            <div className={styles.yearBadge}>{award.year}</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+
+            <button className={`${styles.navButton} ${styles.nextButton}`} onClick={scrollRight} aria-label={t('awards.next', 'Следующий')}>
+              <FaChevronRight />
+            </button>
+          </div>
         </div>
       </div>
 
