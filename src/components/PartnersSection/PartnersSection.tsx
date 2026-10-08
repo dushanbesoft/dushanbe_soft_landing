@@ -113,8 +113,7 @@ export default function PartnersSection() {
 
         <div className={styles.grid}>
           {partnersData.map((partner, idx) => (
-            <div key={idx}>
-              <div className={styles.card}>
+            <div key={idx} className={styles.card}>
                 <div className={styles.cardContent}>
                   <Image 
                     src={partner.logoSmall} 
@@ -132,7 +131,6 @@ export default function PartnersSection() {
                   </div>
                 </div>
               </div>
-            </div>
           ))}
         </div>
       </div>
