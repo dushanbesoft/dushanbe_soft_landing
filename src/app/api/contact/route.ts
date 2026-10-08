@@ -18,9 +18,26 @@ export async function POST(req: Request) {
     // const alifLogin = process.env.ALIF_LOGIN;
 
     if (!botToken || !chatId) {
-      console.error("Telegram bot token or chat ID is not configured.");
+      const missingKeys = [];
+      const brokenValues: Record<string, any> = {};
+      
+      if (!botToken) {
+        missingKeys.push("TELEGRAM_BOT_TOKEN");
+        brokenValues["TELEGRAM_BOT_TOKEN"] = botToken;
+      }
+      if (!chatId) {
+        missingKeys.push("TELEGRAM_NOTIFY_CHAT_ID");
+        brokenValues["TELEGRAM_NOTIFY_CHAT_ID"] = chatId;
+      }
+
+      const detailedError = `Внутренняя ошибка сервера (проблема с ключами: ${missingKeys.join(", ")})`;
+      console.error(detailedError, brokenValues);
+      
       return NextResponse.json(
-        { error: "Внутренняя ошибка сервера (не настроены ключи Telegram)" },
+        { 
+          error: detailedError,
+          brokenValues
+        },
         { status: 500 },
       );
     }
