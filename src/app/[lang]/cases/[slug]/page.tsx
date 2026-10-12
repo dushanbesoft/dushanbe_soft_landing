@@ -177,19 +177,6 @@ export default async function CaseDetailsPage({
         <div className="header-global header-fixed">
           <Header />
         </div>
-{/* 
-        <div className={styles.heroOverlay}>
-          <div
-            className={styles.hero}
-            style={{
-              backgroundImage: `url('${project.bannerSrc ?? project.imageSrc}')`,
-              backgroundSize: project.bannerFit ?? "cover",
-              ...(project.bannerFit === "contain"
-                ? { backgroundColor: "#ffffff" }
-                : {}),
-            }}
-          ></div>
-        </div> */}
 
         <div className={styles.contentWrapper}>
           <Link href={lang === 'ru' ? "/cases" : `/${lang}/cases`} className={styles.backBtn}>

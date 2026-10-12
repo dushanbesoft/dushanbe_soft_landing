@@ -4048,84 +4048,6 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
           tj: "Smart TV (TV Box)",
         },
         items: [
-          //           {
-          //             slug: "tv-interface-navigation",
-          //             title: {
-          //               ru: "TV Интерфейс и Навигация",
-          //               en: "TV Interface and Navigation",
-          //               tj: "Интерфейси TV ва Навигатсия",
-          //             },
-          //             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-          //             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-          //             shortInfo: {
-          //               ru: "D-Pad фокус и MainScreen.tsx",
-          //               en: "D-Pad focus and MainScreen.tsx",
-          //               tj: "Фокуси D-Pad ва MainScreen.tsx",
-          //             },
-          //             fullInfo: {
-          //               ru: `Проект для смарт-телевизоров и приставок написан на специализированной версии React Native TV (react-native-tvos) с использованием строгой типизации TypeScript. Главным отличием от мобильной версии является полная ориентация на управление с пульта дистанционного управления (D-Pad).
-
-          // Вся навигация, включая переход между боковым меню и основным контентом, построена на обработке событий onFocus и onBlur. Каждая карточка фильма (MediaCard.tsx) плавно увеличивается при наведении фокуса, используя нативные анимации для создания эффекта глубины и отзывчивости. Поддерживается сборка как под классический Android TV, так и под телевизоры на базе Tizen (через Webpack-сборку rnv).`,
-          //               en: `The project for smart TVs and set-top boxes is written in a specialized version of React Native TV (react-native-tvos) using strict TypeScript typing. The main difference from the mobile version is the full orientation towards control via remote control (D-Pad).
-
-          // All navigation, including transitions between the side menu and main content, is built on handling onFocus and onBlur events. Each movie card (MediaCard.tsx) smoothly enlarges on focus, using native animations to create a sense of depth and responsiveness. Builds are supported for both classic Android TV and Tizen-based TVs (via Webpack rnv build).`,
-          //               tj: `Лоиҳа барои телевизорҳои интеллектуалӣ ва приставкаҳо дар версияи махсусгардонидашудаи React Native TV (react-native-tvos) бо истифода аз чопкунии қатъии TypeScript навишта шудааст. Фарқи асосӣ аз версияи мобилӣ тамоюли пурра ба идоракунӣ тавассути пульти фосилавӣ (D-Pad) мебошад.
-
-          // Тамоми навигатсия, аз ҷумла гузариш байни менюи паҳлӯ ва мундариҷаи асосӣ, дар коркарди рӯйдодҳои onFocus ва onBlur сохта шудааст. Ҳар як корти филм (MediaCard.tsx) ҳангоми фокус бо истифода аз аниматсияҳои нативӣ барои эҷоди эффекти умқ ва ҷавобгӯӣ ба таври ҳамвор калон мешавад. Ҷамъоварӣ ҳам барои Android TV классикӣ ва ҳам телевизорҳои дар асоси Tizen (тавассути ҷамъоварии Webpack rnv) дастгирӣ карда мешавад.`,
-          //             },
-          //           },
-          //           {
-          //             slug: "catalog-details",
-          //             title: {
-          //               ru: "Каталог и Детали",
-          //               en: "Catalog and Details",
-          //               tj: "Каталог ва Тафсилот",
-          //             },
-          //             imageSrc: "/images/projects/mavjisomon/gallery-6.png",
-          //             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-          //             shortInfo: {
-          //               ru: "VideosScreen & DetailsScreen",
-          //               en: "VideosScreen & DetailsScreen",
-          //               tj: "VideosScreen & DetailsScreen",
-          //             },
-          //             fullInfo: {
-          //               ru: `В TV-приложении реализована глубокая категоризация контента на несколько разделов: Live-каналы (TvChannelsScreen.tsx), каталоги фильмов и сериалов (VideosScreen.tsx). Для оптимизации рендеринга больших списков на слабых ТВ-приставках применяются техники виртуализации списков и ленивой загрузки (lazy loading) изображений.
-
-          // Страница деталей фильма (DetailsScreen.tsx) представляет собой полноценный кинотеатральный хаб: она подгружает высококачественные фоновые постеры, выводит подробные метаданные (рейтинг, жанр, описание) и включает список рекомендаций. Пользователь может добавить фильм в «Избранное» (FavoritesScreen.tsx) для быстрого доступа с любого устройства.`,
-          //               en: `The TV app implements deep categorization of content into several sections: Live channels (TvChannelsScreen.tsx), movie catalogs, and series (VideosScreen.tsx). To optimize the rendering of large lists on weak set-top boxes, list virtualization and image lazy loading techniques are used.
-
-          // The movie details page (DetailsScreen.tsx) is a full-fledged cinematic hub: it loads high-quality background posters, displays detailed metadata (rating, genre, description), and includes a list of recommendations. The user can add a movie to "Favorites" (FavoritesScreen.tsx) for quick access from any device.`,
-          //               tj: `Барномаи телевизионӣ гурӯҳбандии амиқи мундариҷаро ба якчанд бахшҳо амалӣ мекунад: Шабакаҳои Live (TvChannelsScreen.tsx), каталогҳои филмҳо ва сериалҳо (VideosScreen.tsx). Барои беҳтар кардани визуализатсияи рӯйхатҳои калон дар приставкаҳои заифи телевизионӣ, усулҳои виртуализатсияи рӯйхат ва боркунии танбал (lazy loading) тасвирҳо истифода мешаванд.
-
-          // Саҳифаи тафсилоти филм (DetailsScreen.tsx) маркази мукаммали кинотеатр мебошад: он постерҳои баландсифати заминаро бор мекунад, метамаълумоти муфассалро (рейтинг, жанр, тавсиф) намоиш медиҳад ва рӯйхати тавсияҳоро дар бар мегирад. Корбар метавонад филмро ба «Дӯстдошта» (FavoritesScreen.tsx) барои дастрасии зуд аз ҳама гуна дастгоҳ илова кунад.`,
-          //             },
-          //           },
-          //           {
-          //             slug: "payment-player",
-          //             title: {
-          //               ru: "Оплата и Плеер",
-          //               en: "Payment and Player",
-          //               tj: "Пардохт ва Плеер",
-          //             },
-          //             imageSrc: "/images/projects/mavjisomon/gallery-5.png",
-          //             BannerSrc: "/images/projects/mavjisomon/web-hero1.png",
-          //             shortInfo: {
-          //               ru: "PlayerScreen & PaymentGuide",
-          //               en: "PlayerScreen & PaymentGuide",
-          //               tj: "PlayerScreen & PaymentGuide",
-          //             },
-          //             fullInfo: {
-          //               ru: `Для воспроизведения Live TV и VOD-контента на телевизорах используется специально адаптированный нативный ТВ-плеер (PlayerScreen.tsx). Он обеспечивает стабильную расшифровку потока без буферизации, поддержку аппаратного декодирования и обработку кнопок пульта (плей/пауза/перемотка).
-
-          // Важным бизнес-модулем является встроенная система биллинга (PaymentGuide.tsx и ProductsScreen.tsx). Пользователям больше не нужно заходить на сайт с компьютера — они могут просматривать доступные тарифы, изучать инструкции по пополнению баланса через локальные терминалы и управлять своей подпиской прямо на большом экране, используя только пульт ДУ.`,
-          //               en: `A specially adapted native TV player (PlayerScreen.tsx) is used to play Live TV and VOD content on TVs. It ensures stable stream decoding without buffering, hardware decoding support, and remote control button handling (play/pause/rewind).
-
-          // An important business module is the built-in billing system (PaymentGuide.tsx and ProductsScreen.tsx). Users no longer need to visit the site from a computer — they can view available tariffs, study instructions for topping up their balance via local terminals, and manage their subscription right on the big screen, using only the remote control.`,
-          //               tj: `Плеери махсус мутобиқшудаи телевизионии нативӣ (PlayerScreen.tsx) барои намоиши мундариҷаи Live TV ва VOD дар телевизорҳо истифода мешавад. Он рамзкушоии устувори ҷараёнро бидуни буферизатсия, дастгирии рамзкушоии сахтафзор ва коркарди тугмаҳои пульт (навозиш/таваққуф/қафо) таъмин мекунад.
-
-          // Модули муҳими тиҷоратӣ системаи дарунсохти биллинг мебошад (PaymentGuide.tsx ва ProductsScreen.tsx). Истифодабарандагон дигар лозим нест, ки аз компютер ба сайт ворид шаванд - онҳо метавонанд тарифҳои дастрасро бинанд, дастурҳоро оид ба пур кардани тавозун тавассути терминалҳои маҳаллӣ омӯзанд ва обунаи худро бевосита дар экрани калон танҳо бо истифода аз пульти фосилавӣ идора кунанд.`,
-          //             },
-          //           },
           {
             slug: "tv-loading",
             title: {
@@ -6498,18 +6420,6 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       },
     ],
   },
-  // {
-  //   imageSrc: "/images/projects/itrans.webp",
-  //   year: "2024",
-  //   tags: [
-  //     "PHP (Laravel Framework)",
-  //     "JavaScript",
-  //     "MySQL",
-  //     "HTML5 / CSS3",
-  //     "REST API",
-  //   ],
-  //   slug: "imron-nakliet",
-  // },
   {
     imageSrc: "/images/projects/zudsms.png",
     year: "2024",
@@ -7771,20 +7681,6 @@ This example shows how entered fields relate to the chat’s appearance. Placing
       },
     ],
   },
-  // {
-  //   slug: "arcane-launchpad",
-  //   imageSrc: "/images/projects/arcanefinance/header-launchpad-page.png",
-  //   year: "2024",
-  //   tags: ["Solidity", "Web3", "Next.js"],
-  //   gallery: ["/images/projects/arcanefinance/header-launchpad-page.png"]
-  // },
-  // {
-  //   slug: "reactor-exchange",
-  //   imageSrc: "/images/projects/reactorexchange/trade-page.png",
-  //   year: "2024",
-  //   tags: ["React", "Web3", "Solidity"],
-  //   gallery: ["/images/projects/reactorexchange/trade-page.png"]
-  // }
 
   {
     imageSrc: "/images/projects/mirel-banner.png",

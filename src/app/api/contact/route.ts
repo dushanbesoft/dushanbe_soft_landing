@@ -15,7 +15,6 @@ export async function POST(req: Request) {
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_NOTIFY_CHAT_ID;
-    // const alifLogin = process.env.ALIF_LOGIN;
 
     if (!botToken || !chatId) {
       const missingKeys = [];

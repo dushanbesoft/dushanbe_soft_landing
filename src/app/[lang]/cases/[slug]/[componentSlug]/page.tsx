@@ -209,13 +209,6 @@ export default async function ComponentDetailsPage({
         </div>
 
         <div className={styles.heroOverlay}>
-          {/* <div
-            className={styles.hero}
-            style={{
-              backgroundImage: `url('${component.imageSrc}')`,
-              // backgroundSize: "cover",
-            }}
-          ></div> */}
           <img 
             src={component.imageSrc}  
             className={styles.hero} 

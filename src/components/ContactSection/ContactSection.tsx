@@ -83,36 +83,6 @@ export default async function ContactSection({ lang = 'ru' }: { lang?: string })
               </div>
             </div>
           </div>
-{/* 
-          <div className={styles.teamBox}>
-            <div className={styles.avatarsGroup}>
-              <div className={styles.avatarWrap} style={{ zIndex: 5 }}>
-                <img src="https://api.builder.io/api/v1/image/assets/TEMP/2faf45a2e91b9578889e773f47933cb6e201db77?width=104" alt="" />
-              </div>
-              <div className={styles.avatarWrap} style={{ zIndex: 4, marginLeft: '-15px' }}>
-                <img src="https://api.builder.io/api/v1/image/assets/TEMP/958903a1ee4b53f3d7a906783acf03a8460a3ae1?width=128" alt="" />
-              </div>
-              <div className={styles.avatarWrap} style={{ zIndex: 3, marginLeft: '-15px' }}>
-                <img src="https://api.builder.io/api/v1/image/assets/TEMP/d97f350c5ab2f2de8497f5a59a642f096e90921d?width=136" alt="" />
-              </div>
-              <div className={styles.avatarWrap} style={{ zIndex: 2, marginLeft: '-15px' }}>
-                <img src="https://api.builder.io/api/v1/image/assets/TEMP/7a2e95e4bff69bbc26cb810136b34eaff353729f?width=126" alt="" />
-              </div>
-              <div className={styles.avatarWrap} style={{ zIndex: 1, marginLeft: '-15px' }}>
-                <img src="https://api.builder.io/api/v1/image/assets/TEMP/5661293058c63fb8ec2787bf2d8175563424276f?width=120" alt="" />
-              </div>
-              <div className={styles.avatarPlus} style={{ zIndex: 6, marginLeft: '-15px' }}>
-                <svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" rx="32" fill="#001010"/>
-                  <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="#3DDC84" strokeOpacity="0.41"/>
-                  <path d="M45.5 34H33.5V46H29.5V34H17.5V30H29.5V18H33.5V30H45.5V34Z" fill="#737C7C"/>
-                </svg>
-              </div>
-            </div>
-            <p className={styles.teamText}>
-              {t('contact.teamText', 'Наша команда экспертов готова помочь вам в реализации проекта')}
-            </p>
-          </div> */}
 
           <div className={styles.messengersSection}>
             <p className={styles.messengersTitle}>{t('contact.messengersTitle', 'Или пишите нам в удобный мессенджер')}</p>

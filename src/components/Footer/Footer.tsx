@@ -112,21 +112,6 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
                   />
                 </svg>
               </a>
-              {/* <div className={styles.socialIcon}>
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="28" height="28" rx="14" fill="white" fillOpacity="0.15"/>
-                <path fillRule="evenodd" clipRule="evenodd" d="M9.19432 17.8812C8.97858 17.8174 8.78172 17.7039 8.62038 17.5502C8.45903 17.3965 8.33792 17.2072 8.26727 16.9982C7.86356 15.9181 7.74394 11.4078 8.52146 10.5174C8.78024 10.2278 9.14559 10.0495 9.53823 10.0212C11.6241 9.80222 18.0686 9.83142 18.8087 10.0941C19.0169 10.1601 19.2071 10.2711 19.365 10.419C19.523 10.5669 19.6446 10.7477 19.7208 10.948C20.1619 12.0646 20.1769 16.1224 19.661 17.1952C19.5242 17.4745 19.2951 17.7007 19.0106 17.8375C18.233 18.217 10.226 18.2097 9.19432 17.8812ZM12.5063 15.7648L16.2444 13.8673L12.5063 11.9552V15.7648Z" fill="white"/>
-              </svg>
-            </div>
-            <div className={styles.socialIcon}>
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="28" height="28" rx="14" fill="white" fillOpacity="0.15"/>
-                <path fillRule="evenodd" clipRule="evenodd" d="M19.3899 14.125C19.3899 13.735 19.3549 13.36 19.2899 13H14.1099V15.1275H17.0699C16.9424 15.815 16.5549 16.3975 15.9724 16.7875V18.1675H17.7499C18.7899 17.21 19.3899 15.8 19.3899 14.125Z" fill="white"/>
-                <path fillRule="evenodd" clipRule="evenodd" d="M14.1097 19.4999C15.5947 19.4999 16.8397 19.0074 17.7497 18.1674L15.9722 16.7874C15.4797 17.1174 14.8497 17.3124 14.1097 17.3124C12.6772 17.3124 11.4647 16.3449 11.0322 15.0449H9.1947V16.4699C10.0997 18.2674 11.9597 19.4999 14.1097 19.4999Z" fill="white"/>
-                <path fillRule="evenodd" clipRule="evenodd" d="M11.0324 15.0448C10.9224 14.7148 10.8599 14.3623 10.8599 13.9998C10.8599 13.6373 10.9224 13.2848 11.0324 12.9548V11.5298H9.19486C8.82236 12.2723 8.60986 13.1123 8.60986 13.9998C8.60986 14.8873 8.82236 15.7273 9.19486 16.4698L11.0324 15.0448Z" fill="white"/>
-                <path fillRule="evenodd" clipRule="evenodd" d="M14.1097 10.6875C14.9172 10.6875 15.6422 10.965 16.2122 11.51L17.7897 9.9325C16.8372 9.045 15.5922 8.5 14.1097 8.5C11.9597 8.5 10.0997 9.7325 9.1947 11.53L11.0322 12.955C11.4647 11.655 12.6772 10.6875 14.1097 10.6875Z" fill="white"/>
-              </svg>
-            </div> */}
             </div>
           </div>
 
@@ -252,14 +237,6 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
           </div>
         </main>
       </div>
-      {/* <div className={styles.bottom}>
-        <p className={styles.copyright}>
-          {t(
-            "footer.copyright",
-            "© 2017–2026 Dushanbe Soft. Все права защищены.",
-          )}
-        </p>
-      </div> */}
     </footer>
   );
 }

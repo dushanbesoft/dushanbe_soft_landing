@@ -60,15 +60,7 @@ export default function HeroContent() {
           <h1 className={styles.mainTitle}>
             <TypedTitle key={fullTitle} text={fullTitle} />
             <span className={styles.cursor} aria-hidden="true" />
-            <br />
-            {/* {t("hero.title2", "двигают бизнес вперёд")} */}
           </h1>
-          {/* <p className={styles.subtitle}>
-            {t(
-              "hero.subtitle",
-              "Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.",
-            )}
-          </p> */}
         </div>
 
      

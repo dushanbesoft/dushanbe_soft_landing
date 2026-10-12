@@ -5,7 +5,7 @@ import { i18nConfig } from '../../i18nConfig';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
-  const languages = i18nConfig.locales; // e.g. ['ru', 'en', 'tj']
+  const languages = i18nConfig.locales;
 
   const getUrl = (lang: string, path = '') => {
     if (lang === 'ru') {
@@ -25,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // 1. Core pages (Home)
   languages.forEach((lang) => {
     sitemapEntries.push({
       url: getUrl(lang),
@@ -36,7 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 2. Products page
   languages.forEach((lang) => {
     sitemapEntries.push({
       url: getUrl(lang, 'products'),
@@ -47,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
   
-  // 3. Cases archive page
   languages.forEach((lang) => {
     sitemapEntries.push({
       url: getUrl(lang, 'cases'),
@@ -58,7 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 4. Individual case studies
   ProductSite.forEach((project) => {
     languages.forEach((lang) => {
       sitemapEntries.push({
@@ -70,7 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     });
 
-    // 5. Case component subpages (e.g. telegram bot, screen views)
     if (project.projectComponents) {
       project.projectComponents.forEach((group) => {
         group.items.forEach((item) => {
@@ -90,7 +85,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   });
 
-  // 6. Job vacancy pages
   jobsData.forEach((job) => {
     languages.forEach((lang) => {
       sitemapEntries.push({

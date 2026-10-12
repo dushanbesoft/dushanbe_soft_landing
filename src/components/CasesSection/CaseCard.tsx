@@ -39,11 +39,7 @@ export default function CaseCard({
       <div 
         className={styles.imageHeader} 
         style={{ backgroundImage: `url('${imageSrc}')` }}
-      >
-        {/* <div className={styles.yearBadge}>
-          <span className={styles.yearText}>{year}</span>
-        </div> */}
-      </div>
+      />
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
         <div className={styles.description}>{description}</div>
