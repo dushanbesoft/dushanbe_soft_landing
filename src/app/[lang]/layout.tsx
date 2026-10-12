@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title: defaultTitle,
       description: defaultDesc,
-      url: `${siteUrl}/${lang}`,
+      url: lang === 'ru' ? siteUrl : `${siteUrl}/${lang}`,
       siteName: 'Dushanbe Soft',
       images: [
         {
@@ -67,12 +67,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       images: [`${siteUrl}/icons/site-favicon.svg`], 
     },
     alternates: {
-      canonical: `${siteUrl}/${lang}`,
+      canonical: lang === 'ru' ? siteUrl : `${siteUrl}/${lang}`,
       languages: {
         'tg': `${siteUrl}/tj`,
-        'ru': `${siteUrl}/ru`,
+        'ru': `${siteUrl}`,
         'en': `${siteUrl}/en`,
-        'x-default': `${siteUrl}/ru`,
+        'x-default': `${siteUrl}`,
       },
     },
     icons: {

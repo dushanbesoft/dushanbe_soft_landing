@@ -29,7 +29,7 @@ export default async function Page({
   const { lang } = await params;
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
 
   const jsonLd = [
     {
@@ -71,7 +71,7 @@ export default async function Page({
       ),
       potentialAction: {
         "@type": "SearchAction",
-        target: `${siteUrl}/ru/cases?q={search_term_string}`,
+        target: `${siteUrl}/${lang === 'ru' ? 'cases' : `${lang}/cases`}?q={search_term_string}`,
         "query-input": "required name=search_term_string",
       },
     },

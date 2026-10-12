@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import { jobsData } from "@/const/jobsData";
 import styles from "./JobDetails.module.css";
 import TranslationsProvider from "@/components/TranslationsProvider";
@@ -8,6 +9,57 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
 
+export async function generateStaticParams() {
+  const languages = ["ru", "tj", "en"];
+  const params: { lang: string; slug: string }[] = [];
+
+  languages.forEach((lang) => {
+    jobsData.forEach((job) => {
+      params.push({ lang, slug: job.slug });
+    });
+  });
+
+  return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const job = jobsData.find((j) => j.slug === slug);
+
+  if (!job) {
+    return {};
+  }
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
+  const title = `${job.title} | Dushanbe Soft`;
+  const description = job.description;
+  const currentUrl = lang === "ru" ? `${siteUrl}/jobs/${slug}` : `${siteUrl}/${lang}/jobs/${slug}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: currentUrl,
+      locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
+      type: "article",
+    },
+    alternates: {
+      canonical: currentUrl,
+      languages: {
+        "tg": `${siteUrl}/tj/jobs/${slug}`,
+        "ru": `${siteUrl}/jobs/${slug}`,
+        "en": `${siteUrl}/en/jobs/${slug}`,
+        "x-default": `${siteUrl}/jobs/${slug}`,
+      },
+    },
+  };
+}
 
 export default async function JobDetailsPage({
   params,
@@ -28,7 +80,7 @@ export default async function JobDetailsPage({
         <Header />
         
         <div className={styles.container}>
-          <Link href={`/${lang}/#careers`} className={styles.backBtn}>
+          <Link href={lang === "ru" ? "/#careers" : `/${lang}/#careers`} className={styles.backBtn}>
             ← К списку вакансий
           </Link>
 

@@ -12,7 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   
   const title = t('header.products', { defaultValue: 'Продукты' }) + ' | Dushanbe Soft';
   const description = t('seo.products_description', { defaultValue: 'Собственные продукты и решения от компании Dushanbe Soft.' });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
+  const currentUrl = lang === 'ru' ? `${siteUrl}/products` : `${siteUrl}/${lang}/products`;
 
   return {
     title,
@@ -20,15 +21,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title,
       description,
-      url: `${siteUrl}/${lang}/products`,
+      url: currentUrl,
     },
     alternates: {
-      canonical: `${siteUrl}/${lang}/products`,
+      canonical: currentUrl,
       languages: {
         'tg': `${siteUrl}/tj/products`,
-        'ru': `${siteUrl}/ru/products`,
+        'ru': `${siteUrl}/products`,
         'en': `${siteUrl}/en/products`,
-        'x-default': `${siteUrl}/ru/products`,
+        'x-default': `${siteUrl}/products`,
       },
     },
   };

@@ -35,7 +35,7 @@ export default function CaseCard({
   };
 
   return (
-    <Link href={`/${lang}/cases/${slug}`} className={styles.card} onClick={handleClick}>
+    <Link href={lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`} className={styles.card} onClick={handleClick}>
       <div 
         className={styles.imageHeader} 
         style={{ backgroundImage: `url('${imageSrc}')` }}

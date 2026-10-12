@@ -106,7 +106,10 @@ export async function generateMetadata({
 
   if (!component) return {};
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
+  const currentUrl = lang === "ru"
+    ? `${siteUrl}/cases/${slug}/${componentSlug}`
+    : `${siteUrl}/${lang}/cases/${slug}/${componentSlug}`;
 
   return {
     title: `${getTranslated(component.title, lang)} | ${project.slug}`,
@@ -114,7 +117,7 @@ export async function generateMetadata({
     openGraph: {
       title: getTranslated(component.title, lang),
       description: getTranslated(component.shortInfo, lang),
-      url: `${siteUrl}/${lang}/cases/${slug}/${componentSlug}`,
+      url: currentUrl,
       images: [
         {
           url: component.imageSrc.startsWith("http")
@@ -127,6 +130,15 @@ export async function generateMetadata({
       ],
       locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
       type: "article",
+    },
+    alternates: {
+      canonical: currentUrl,
+      languages: {
+        "tg": `${siteUrl}/tj/cases/${slug}/${componentSlug}`,
+        "ru": `${siteUrl}/cases/${slug}/${componentSlug}`,
+        "en": `${siteUrl}/en/cases/${slug}/${componentSlug}`,
+        "x-default": `${siteUrl}/cases/${slug}/${componentSlug}`,
+      },
     },
   };
 }
@@ -190,7 +202,7 @@ export default async function ComponentDetailsPage({
         </div>
 
         <div className={styles.topNav}>
-          <Link href={`/${lang}/cases/${slug}`} className={styles.backBtn}>
+          <Link href={lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`} className={styles.backBtn}>
             <ArrowLeftIcon />
             <span>Вернуться к {projectTitle}</span>
           </Link>
@@ -213,7 +225,7 @@ export default async function ComponentDetailsPage({
 
           {hasSiblings && prevSlug && (
             <Link
-              href={`/${lang}/cases/${slug}/${prevSlug}`}
+              href={lang === "ru" ? `/cases/${slug}/${prevSlug}` : `/${lang}/cases/${slug}/${prevSlug}`}
               className={`${styles.heroNav} ${styles.heroNavPrev}`}
               aria-label="Previous"
               scroll={false}
@@ -223,7 +235,7 @@ export default async function ComponentDetailsPage({
           )}
           {hasSiblings && nextSlug && (
             <Link
-              href={`/${lang}/cases/${slug}/${nextSlug}`}
+              href={lang === "ru" ? `/cases/${slug}/${nextSlug}` : `/${lang}/cases/${slug}/${nextSlug}`}
               className={`${styles.heroNav} ${styles.heroNavNext}`}
               aria-label="Next"
               scroll={false}
