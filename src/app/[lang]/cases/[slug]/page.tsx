@@ -78,7 +78,7 @@ export async function generateMetadata({
   const title = t(`projects.${project.slug}.title`, { defaultValue: "Кейс Dushanbe Soft" });
   const description = t(`projects.${project.slug}.description`, { defaultValue: "Кейс Dushanbe Soft" });
   
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
 
   return {
     title: title,
@@ -86,7 +86,7 @@ export async function generateMetadata({
     openGraph: {
       title: title,
       description: description,
-      url: `${siteUrl}/${lang}/cases/${slug}`,
+      url: `${siteUrl}${lang === 'ru' ? `/cases/${slug}` : `/${lang}/cases/${slug}`}`,
       images: [
         {
           url: project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`,
@@ -105,12 +105,12 @@ export async function generateMetadata({
       images: [project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`],
     },
     alternates: {
-      canonical: `${siteUrl}/${lang}/cases/${slug}`,
+      canonical: `${siteUrl}${lang === 'ru' ? `/cases/${slug}` : `/${lang}/cases/${slug}`}`,
       languages: {
         'tg': `${siteUrl}/tj/cases/${slug}`,
-        'ru': `${siteUrl}/ru/cases/${slug}`,
+        'ru': `${siteUrl}/cases/${slug}`,
         'en': `${siteUrl}/en/cases/${slug}`,
-        'x-default': `${siteUrl}/ru/cases/${slug}`,
+        'x-default': `${siteUrl}/cases/${slug}`,
       },
     },
   };
@@ -152,7 +152,7 @@ export default async function CaseDetailsPage({
               "@type": "Article",
               headline: title,
               description: description,
-              image: project.imageSrc.startsWith('http') ? project.imageSrc : `https://dushanbesoft.tj${project.imageSrc}`,
+              image: project.imageSrc.startsWith('http') ? project.imageSrc : `https://dushanbe-soft.tj${project.imageSrc}`,
               author: {
                 "@type": "Organization",
                 name: "Dushanbe Soft"
@@ -162,12 +162,12 @@ export default async function CaseDetailsPage({
                 name: "Dushanbe Soft",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://dushanbesoft.tj/icons/site-favicon.svg"
+                  url: "https://dushanbe-soft.tj/icons/site-favicon.svg"
                 }
               },
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": `https://dushanbesoft.tj/${lang}/cases/${slug}`
+                "@id": `https://dushanbe-soft.tj${lang === 'ru' ? '' : `/${lang}`}/cases/${slug}`
               }
             })
           }}
@@ -190,7 +190,7 @@ export default async function CaseDetailsPage({
         </div> */}
 
         <div className={styles.contentWrapper}>
-          <Link href={`/${lang}/cases`} className={styles.backBtn}>
+          <Link href={lang === 'ru' ? '/cases' : `/${lang}/cases`} className={styles.backBtn}>
             <ArrowLeftIcon />
             <span>{t("cases.all_projects")}</span>
           </Link>

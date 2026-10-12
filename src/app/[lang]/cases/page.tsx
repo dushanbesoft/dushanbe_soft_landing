@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   
   const title = t('header.cases', { defaultValue: 'Портфолио' }) + ' | Dushanbe Soft';
   const description = t('seo.cases_description', { defaultValue: 'Примеры выполненных проектов и кейсов Dushanbe Soft.' });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbesoft.tj';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
 
   return {
     title,
@@ -20,15 +20,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title,
       description,
-      url: `${siteUrl}/${lang}/cases`,
+      url: `${siteUrl}${lang === 'ru' ? '/cases' : `/${lang}/cases`}`,
     },
     alternates: {
-      canonical: `${siteUrl}/${lang}/cases`,
+      canonical: `${siteUrl}${lang === 'ru' ? '/cases' : `/${lang}/cases`}`,
       languages: {
         'tg': `${siteUrl}/tj/cases`,
-        'ru': `${siteUrl}/ru/cases`,
+        'ru': `${siteUrl}/cases`,
         'en': `${siteUrl}/en/cases`,
-        'x-default': `${siteUrl}/ru/cases`,
+        'x-default': `${siteUrl}/cases`,
       },
     },
   };

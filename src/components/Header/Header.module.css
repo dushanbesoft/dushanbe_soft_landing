@@ -1,211 +1,188 @@
 .header {
-  display: flex;
-  padding: 25px 15px;
-  align-items: center;
-  gap: 45px;
-  flex-wrap: wrap;
-  align-self: stretch;
-  position: relative;
-  z-index: 10;
-  transition: background-color 0.4s ease;
-}
-
-.header > main {
-  max-width: 1410px;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  padding: 30px 40px;
+  z-index: 1000;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+}
+
+.headerInner {
   display: flex;
-  padding: 0 15px;
+  justify-content: space-between;
   align-items: center;
-  gap: 45px;
-  flex-wrap: wrap;
-  align-self: stretch;
-  position: relative;
-  z-index: 10;
-}
-
-.scrolled {
-  background-color: #000000;
-}
-
-.transparent {
-  background-color: rgba(0, 0, 0, 0.702);
+  max-width: 1600px;
+  margin: 0 auto;
+  pointer-events: auto;
 }
 
 .logo {
-  width: 172px;
-  height: 38px;
-  object-fit: contain;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  flex: 1 0 0;
-}
-
-.navItem {
-  position: relative;
-  color: #fff;
-  text-align: center;
-  font-family: var(--font-tektur);
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding-bottom: 6px;
-  transition: color 0.3s ease;
+  width: 150px;
+  height: auto;
   cursor: pointer;
 }
 
-.navItem::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.35s ease;
-}
-
-.navItem:hover {
-  color: #3ddc84;
-}
-
-.navItem:hover::after {
-  transform: scaleX(1);
-}
-
-.langSwitcher {
+.controlsWrapper {
   display: flex;
   align-items: center;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.langDropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #111;
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-width: 76px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  margin-top: 10px;
-  z-index: 1000;
-  user-select: none;
-}
-
-.langOption {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  font-family: var(--font-tektur);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.langFlag {
-  font-size: 16px;
-  line-height: 1;
-}
-
-.langOption:hover {
-  background-color: #333;
+  gap: 30px;
 }
 
 .langSwitcherContainer {
   position: relative;
 }
 
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+}
+
 .langText {
-  color: #fff;
   font-family: var(--font-tektur);
   font-size: 16px;
   font-weight: 600;
 }
 
-.controlsWrapper {
+.langDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  margin-top: 15px;
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.langOption {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  color: #fff;
+  font-family: var(--font-tektur);
+  font-size: 16px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.langOption:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hamburgerBtn {
-  display: none;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
-  padding: 5px;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 1001;
+  transition: transform 0.3s ease;
 }
 
-.overlay {
-  display: none;
+.hamburgerBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Full Screen Menu */
+.fullScreenMenu {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 40;
+  inset: 0;
+  background-color: #000;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.menuContent {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.largeNavItem {
+  font-size: clamp(40px, 6vw, 90px);
+  font-family: var(--font-tektur);
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  line-height: 1.1;
+  display: inline-block;
+  position: relative;
+}
+
+.largeNavItem:hover {
+  color: #3ddc84;
+  padding-left: 20px;
+}
+
+.menuFooter {
+  margin-top: auto;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactInfo {
+  display: flex;
+  gap: 60px;
+}
+
+.contactInfo p {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-nunito-sans);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contactInfo a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: var(--font-tektur);
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+  color: #3ddc84;
 }
 
 @media (max-width: 900px) {
   .header {
-    padding: 15px 15px !important; /* Reduced horizontal padding on the wrapper, relying on main for padding */
+    padding: 20px;
   }
-
-  .header > main {
-    justify-content: space-between;
-    padding: 0 15px;
-    gap: 20px;
-  }
-
-  .hamburgerBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background: #111;
+  .contactInfo {
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 80px;
     gap: 30px;
-    transition: right 0.3s ease;
-    z-index: 50;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-  }
-
-  .navOpen {
-    right: 0;
-  }
-
-  .navItem {
-    font-size: 16px;
-  }
-
-  .overlay {
-    display: block;
   }
 }

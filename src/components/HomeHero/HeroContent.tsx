@@ -54,21 +54,19 @@ export default function HeroContent() {
 
   return (
     <div className={styles.heroContent}>
-      <div className={styles.centerGroup}>
+      <div className={styles.leftGroup}>
         <div className={styles.titlesContainer}>
 
           <h1 className={styles.mainTitle}>
             <TypedTitle key={fullTitle} text={fullTitle} />
             <span className={styles.cursor} aria-hidden="true" />
-            <br />
-            {/* {t("hero.title2", "двигают бизнес вперёд")} */}
           </h1>
-          {/* <p className={styles.subtitle}>
+          <p className={styles.subtitle}>
             {t(
-              "hero.subtitle",
-              "Разрабатываем и внедряем современные IT-решения, автоматизируем процессы и повышаем эффективность компаний.",
+              "hero.description",
+              "Мы помогаем бизнесам в Таджикистане и за его пределами развиваться с помощью современных технологий. От создания веб-сайтов до разработки сложных ИТ-систем — мы воплощаем ваши идеи в цифровую реальность."
             )}
-          </p> */}
+          </p>
         </div>
 
      

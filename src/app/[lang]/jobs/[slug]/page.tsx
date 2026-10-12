@@ -28,7 +28,7 @@ export default async function JobDetailsPage({
         <Header />
         
         <div className={styles.container}>
-          <Link href={`/${lang}/#careers`} className={styles.backBtn}>
+          <Link href={lang === 'ru' ? '/#careers' : `/${lang}/#careers`} className={styles.backBtn}>
             ← К списку вакансий
           </Link>
 

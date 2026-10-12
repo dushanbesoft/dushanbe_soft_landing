@@ -61,7 +61,7 @@ export default function CaseTabs({ groups, lang, projectSlug, projectTitle }: Ca
       <div className={styles.grid}>
         {activeGroup.items.map((item, idx) => {
           const href = item.slug
-            ? `/${lang}/cases/${projectSlug}/${item.slug}`
+            ? (lang === 'ru' ? `/cases/${projectSlug}/${item.slug}` : `/${lang}/cases/${projectSlug}/${item.slug}`)
             : "#";
           return (
             <Link key={idx} href={href} className={styles.card}>

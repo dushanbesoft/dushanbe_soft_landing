@@ -29,7 +29,7 @@ export default async function Page({
   const { lang } = await params;
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbesoft.tj";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
 
   const jsonLd = [
     {

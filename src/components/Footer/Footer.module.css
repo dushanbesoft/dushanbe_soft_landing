@@ -6,25 +6,25 @@
 
 .top {
   display: flex;
-  padding: 30px 15px;
+  padding: 100px 40px;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 45px;
-  background: #000607;
+  background: #000;
   width: 100%;
   box-sizing: border-box;
 }
 .top > main {
-  max-width: 1410px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 15px 15px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 45px;
-  background: #000607;
+  background: #000;
   width: 100%;
   box-sizing: border-box;
 }
