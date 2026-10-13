@@ -58,8 +58,14 @@ export default function HeroContent() {
         <div className={styles.titlesContainer}>
 
           <h1 className={styles.mainTitle}>
-            <TypedTitle key={fullTitle} text={fullTitle} />
-            <span className={styles.cursor} aria-hidden="true" />
+            {/* Full text is server-rendered for search engines; the typing effect is visual only */}
+            <span className={styles.srOnly}>
+              {t("hero.seoTitle", "Dushanbe Soft — разработка программного обеспечения в Таджикистане")}
+            </span>
+            <span aria-hidden="true">
+              <TypedTitle key={fullTitle} text={fullTitle} />
+              <span className={styles.cursor} />
+            </span>
           </h1>
         </div>
 

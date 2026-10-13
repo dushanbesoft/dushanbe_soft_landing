@@ -6,8 +6,6 @@ import { ReactNode } from "react";
 import { tektur, nunitoSans } from "../../styles/fonts";
 
 import initTranslations from "../i18n";
-import GlobalPreloader from "../../components/GlobalPreloader/GlobalPreloader";
-import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -51,10 +49,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       siteName: 'Dushanbe Soft',
       images: [
         {
-          url: `${siteUrl}/icons/site-favicon.svg`, 
-          width: 800,
-          height: 600,
-          alt: 'Dushanbe Soft Logo',
+          url: `${siteUrl}/images/hero-bg.png`,
+          alt: 'Dushanbe Soft — разработка программного обеспечения в Таджикистане',
         },
       ],
       locale: lang === 'tj' ? 'tg_TJ' : lang === 'ru' ? 'ru_RU' : 'en_US',
@@ -64,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       card: 'summary_large_image',
       title: defaultTitle,
       description: defaultDesc,
-      images: [`${siteUrl}/icons/site-favicon.svg`], 
+      images: [`${siteUrl}/images/hero-bg.png`], 
     },
     alternates: {
       canonical: lang === 'ru' ? siteUrl : `${siteUrl}/${lang}`,
@@ -78,6 +74,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     icons: {
       icon: "/icons/site-favicon.svg",
       apple: "/icons/site-favicon.svg",
+    },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
     },
     appleWebApp: {
       capable: true,
@@ -103,7 +103,9 @@ export default async function RootLayout({
   
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ITUtility',
+    '@type': 'ProfessionalService',
+    'areaServed': ['TJ', 'Central Asia'],
+    'knowsAbout': ['Разработка программного обеспечения', 'Создание сайтов', 'Мобильные приложения', 'ERP', 'CRM', 'Автоматизация бизнеса'],
     'name': 'Dushanbe Soft',
     'url': siteUrl,
     'logo': `${siteUrl}/icons/logo-header.svg`,
@@ -121,17 +123,28 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={lang} dir={dir(lang)}>
+    <html lang={lang === 'tj' ? 'tg' : lang} dir={dir(lang)}>
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BC9JE7JMKM"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BC9JE7JMKM');
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <GoogleTagManager gtmId="GTM-K3R48HBW" />
-      <GoogleAnalytics gaId="G-BC9JE7JMKM" />
       <body className={`${tektur.variable} ${nunitoSans.variable}`}>
-        <GlobalPreloader />
         {children}
       </body>
     </html>
