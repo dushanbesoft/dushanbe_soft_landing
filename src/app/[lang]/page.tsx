@@ -19,6 +19,7 @@ import StatisticsComponent from "../../components/StatisticsComponent/Statistics
 import JobsSection from "../../components/JobsSection/JobsSection";
 import AwardsSection from "../../components/AwardsSection/AwardsSection";
 import NewsSection from "../../components/NewsSection/NewsSection";
+import MediaSection from "../../components/MediaSection/MediaSection";
 
 const i18nNamespaces = ["common"];
 
@@ -106,6 +107,7 @@ export default async function Page({
         <AwardsSection lang={lang} />
         <TeamSection />
         <NewsSection lang={lang} />
+        <MediaSection />
         <CTASection lang={lang} />
         
         <Footer lang={lang} />
