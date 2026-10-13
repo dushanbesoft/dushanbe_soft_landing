@@ -143,6 +143,10 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          async
+          src="//core.livechat.tj/widget/IgW317eT_p"
+        />
       </head>
       <body className={`${tektur.variable} ${nunitoSans.variable}`}>
         {children}

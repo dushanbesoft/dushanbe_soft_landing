@@ -132,8 +132,8 @@
     }
   },
   "team": {
-    "subtitle": "Team",
-    "title": "People who make it possible",
+    "subtitle": "Leadership",
+    "title": "The person who makes it possible",
     "labels": {
       "skills": "Skills",
       "experience": "Experience",
@@ -780,6 +780,38 @@
       "completion": {
         "title": "Certificate of Completion",
         "description": "Successful Completion"
+      }
+    }
+  },
+  "news": {
+    "subtitle": "news",
+    "title": "Latest News",
+    "viewAll": "All News",
+    "more": "Read more",
+    "items": {
+      "1": {
+        "tag": "Products",
+        "date": "12.09.2025",
+        "title": "New business process automation module launched",
+        "desc": "We introduced an updated module that helps companies operate even more efficiently."
+      },
+      "2": {
+        "tag": "Events",
+        "date": "12.09.2025",
+        "title": "Dushanbe Soft participated in IT Summit 2025",
+        "desc": "Our team shared experience and presented new solutions for the digital future."
+      },
+      "3": {
+        "tag": "Team",
+        "date": "12.09.2025",
+        "title": "We are expanding our team!",
+        "desc": "New vacancies are open for specialists who want to grow with us."
+      },
+      "4": {
+        "tag": "City",
+        "date": "12.09.2026",
+        "title": "Dushanbe Soft — 10 years of development and growth",
+        "desc": "We are proud of our journey and grateful to our clients and partners for their trust."
       }
     }
   }

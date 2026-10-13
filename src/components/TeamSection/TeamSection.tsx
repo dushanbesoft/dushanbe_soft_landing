@@ -26,9 +26,9 @@ export default function TeamSection() {
         <FadeIn direction="up">
           <div className={styles.headerRow}>
             <div className={styles.titles}>
-              <span className={styles.subtitle}>{t('team.subtitle', 'Команда')}</span>
+              <span className={styles.subtitle}>{t('team.subtitle', 'Руководство')}</span>
               <h2 className={styles.mainTitle}>
-                {t('team.title', 'Люди, которые делают это возможным')}
+                {t('team.title', 'Человек, который делает это возможным')}
               </h2>
             </div>
           </div>

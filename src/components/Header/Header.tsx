@@ -73,11 +73,15 @@ export default function Header() {
     const cleanSegments = hasLocalePrefix ? pathSegments.slice(1) : pathSegments;
     const subPath = cleanSegments.join("/");
 
-    if (lang === "ru") {
-      router.push(subPath ? `/${subPath}` : "/");
-    } else {
-      router.push(subPath ? `/${lang}/${subPath}` : `/${lang}`);
-    }
+    // Clear any previous NEXT_LOCALE cookie so it never forces redirects
+    document.cookie = "NEXT_LOCALE=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+    const targetUrl = lang === "ru"
+      ? (subPath ? `/${subPath}` : "/")
+      : (subPath ? `/${lang}/${subPath}` : `/${lang}`);
+
+    router.push(targetUrl);
+    router.refresh();
   };
 
   const getNavHref = (hash: string) => {
