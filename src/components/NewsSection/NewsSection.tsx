@@ -12,51 +12,51 @@ interface NewsSectionProps {
 const newsList = [
   {
     id: "1",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/ff47c8ce32064d267e71a755e230729da8240444?width=660",
-    date: "12.09.2025",
+    slug: "digital-tajikistan",
+    image: "/images/projects/pic.webp",
+    date: "24.08.2025",
     tagKey: "news.items.1.tag",
-    defaultTag: "Продукты",
+    defaultTag: "Гос. проекты",
     titleKey: "news.items.1.title",
-    defaultTitle: "Запущен новый модуль для автоматизации бизнес-процессов",
+    defaultTitle: "Запуск проекта dt.tj (PIC)",
     descKey: "news.items.1.desc",
-    defaultDesc: "Мы представили обновлённый модуль, который помогает компаниям работать ещё эффективнее.",
-    link: "#",
+    defaultDesc: "Государственный портал цифровых услуг Таджикистана. Единая защищенная платформа доступа к электронным услугам для граждан и бизнеса.",
   },
   {
     id: "2",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/ec7b95231fbb2b224cb30b34788d056a98aa9cc3?width=660",
-    date: "12.09.2025",
+    slug: "mavji-somon",
+    image: "/images/projects/mavjisomon.webp",
+    date: "15.09.2025",
     tagKey: "news.items.2.tag",
-    defaultTag: "События",
+    defaultTag: "Медиа & OTT",
     titleKey: "news.items.2.title",
-    defaultTitle: "Dushanbe Soft приняла участие в IT Summit 2025",
+    defaultTitle: "Стриминг-платформа Мавчи Сомон",
     descKey: "news.items.2.desc",
-    defaultDesc: "Наша команда поделилась опытом и представила новые решения для цифрового будущего.",
-    link: "#",
+    defaultDesc: "Запуск современной OTT-платформы и стримингового сервиса для онлайн-просмотра фильмов, сериалов и телеканалов в высоком разрешении.",
   },
   {
     id: "3",
-    image: "/images/hero-bg.png",
-    date: "12.09.2025",
+    slug: "sohktor",
+    image: "/images/projects/project-sohktor.webp",
+    date: "02.10.2025",
     tagKey: "news.items.3.tag",
-    defaultTag: "Команда",
+    defaultTag: "ERP & Автоматизация",
     titleKey: "news.items.3.title",
-    defaultTitle: "Мы расширяем команду!",
+    defaultTitle: "Внедрение системы СХДО",
     descKey: "news.items.3.desc",
-    defaultDesc: "Открыты новые вакансии для специалистов, которые хотят развиваться вместе с нами.",
-    link: "#careers",
+    defaultDesc: "Комплексная внутренняя ERP-система для оперативного управления, учета чрезвычайных ситуаций, ведения дел и электронного документооборота.",
   },
   {
     id: "4",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/3f83a5b72070a2cee5311c5bd6b19b3bf6db0b6a?width=660",
-    date: "12.09.2026",
+    slug: "zudsms",
+    image: "/images/projects/zudsms.webp",
+    date: "18.11.2025",
     tagKey: "news.items.4.tag",
-    defaultTag: "Город",
+    defaultTag: "SaaS & Финтех",
     titleKey: "news.items.4.title",
-    defaultTitle: "Dushanbe Soft — 10 лет развития и роста",
+    defaultTitle: "ZudSMS — Платформа SMS-рассылок",
     descKey: "news.items.4.desc",
-    defaultDesc: "Мы гордимся пройденным путём и благодарны нашим клиентам и партнёрам за доверие.",
-    link: "#",
+    defaultDesc: "Высоконагруженный облачный сервис массовых и транзакционных SMS-рассылок с мгновенной доставкой на номера всех операторов Таджикистана.",
   },
 ];
 
@@ -97,6 +97,12 @@ const ArrowIcon = ({ gradient = false }: { gradient?: boolean }) => (
 export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
   const { t } = await initTranslations(lang, ["common"]);
 
+  const allCasesUrl = lang === "ru" ? "/cases" : `/${lang}/cases`;
+
+  const getCaseUrl = (slug: string) => {
+    return lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`;
+  };
+
   return (
     <section className={styles.section} id="news" aria-label={t("news.title", "Последние новости")}>
       <FadeIn direction="up" fullWidth>
@@ -107,7 +113,7 @@ export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
               <h2 className={styles.title}>{t("news.title", "Последние новости")}</h2>
             </div>
 
-            <Link href="#news" className={styles.allNewsBtn} aria-label={t("news.viewAll", "Все новости")}>
+            <Link href={allCasesUrl} className={styles.allNewsBtn} aria-label={t("news.viewAll", "Все новости")}>
               <span className={styles.allNewsText}>{t("news.viewAll", "Все новости")}</span>
               <ArrowIcon gradient />
             </Link>
@@ -118,6 +124,7 @@ export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
               const tag = t(item.tagKey, item.defaultTag);
               const title = t(item.titleKey, item.defaultTitle);
               const desc = t(item.descKey, item.defaultDesc);
+              const targetUrl = getCaseUrl(item.slug);
 
               return (
                 <article key={item.id} className={styles.card}>
@@ -153,7 +160,11 @@ export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
                       <p className={styles.cardDesc}>{desc}</p>
                     </div>
 
-                    <Link href={item.link} className={styles.moreBtn} aria-label={`${t("news.more", "Подробнее")}: ${title}`}>
+                    <Link
+                      href={targetUrl}
+                      className={styles.moreBtn}
+                      aria-label={`${t("news.more", "Подробнее")}: ${title}`}
+                    >
                       <span className={styles.moreBtnText}>{t("news.more", "Подробнее")}</span>
                       <ArrowIcon />
                     </Link>

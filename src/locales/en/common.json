@@ -790,28 +790,28 @@
     "more": "Read more",
     "items": {
       "1": {
-        "tag": "Products",
-        "date": "12.09.2025",
-        "title": "New business process automation module launched",
-        "desc": "We introduced an updated module that helps companies operate even more efficiently."
+        "tag": "Gov Tech",
+        "date": "24.08.2025",
+        "title": "Launch of dt.tj (PIC) portal",
+        "desc": "State digital services portal of Tajikistan. A unified secure access point to electronic government services for citizens and organizations."
       },
       "2": {
-        "tag": "Events",
-        "date": "12.09.2025",
-        "title": "Dushanbe Soft participated in IT Summit 2025",
-        "desc": "Our team shared experience and presented new solutions for the digital future."
+        "tag": "Media & OTT",
+        "date": "15.09.2025",
+        "title": "Mavji Somon Streaming Platform",
+        "desc": "Launch of a modern OTT streaming platform for watching movies, TV series, and live television channels in high quality across all devices."
       },
       "3": {
-        "tag": "Team",
-        "date": "12.09.2025",
-        "title": "We are expanding our team!",
-        "desc": "New vacancies are open for specialists who want to grow with us."
+        "tag": "ERP & Automation",
+        "date": "02.10.2025",
+        "title": "Implementation of SKHDO System",
+        "desc": "Comprehensive enterprise ERP solution for operational emergency management, incident tracking, case management, and electronic document flow."
       },
       "4": {
-        "tag": "City",
-        "date": "12.09.2026",
-        "title": "Dushanbe Soft — 10 years of development and growth",
-        "desc": "We are proud of our journey and grateful to our clients and partners for their trust."
+        "tag": "SaaS & Fintech",
+        "date": "18.11.2025",
+        "title": "ZudSMS — Bulk SMS Messaging Platform",
+        "desc": "High-load cloud platform for bulk and transactional SMS notifications for business with instant delivery across all operators in Tajikistan."
       }
     }
   },
