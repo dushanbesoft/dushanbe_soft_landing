@@ -818,6 +818,12 @@
   "media": {
     "subtitle": "расона",
     "title": "Акс ва видео",
-    "instagram": "Мо дар Instagram"
+    "instagram": "Мо дар Instagram",
+    "viewAll": "Бештар дидан",
+    "filterAll": "Ҳама",
+    "filterVideo": "Видеоҳо",
+    "filterPhoto": "Аксҳо",
+    "showMore": "Бештар нишон додан",
+    "showLess": "Пӯшидан"
   }
 }

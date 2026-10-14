@@ -818,6 +818,12 @@
   "media": {
     "subtitle": "media",
     "title": "Photos & Videos",
-    "instagram": "Follow us on Instagram"
+    "instagram": "Follow us on Instagram",
+    "viewAll": "View all",
+    "filterAll": "All",
+    "filterVideo": "Videos",
+    "filterPhoto": "Photos",
+    "showMore": "Show more",
+    "showLess": "Show less"
   }
 }

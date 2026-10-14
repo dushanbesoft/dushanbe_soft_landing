@@ -55,3 +55,7 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Allow public media gallery content
+!public/content/**
+
+

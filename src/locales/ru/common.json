@@ -844,6 +844,12 @@
   "media": {
     "subtitle": "медиа",
     "title": "Фото и видео",
-    "instagram": "Мы в Instagram"
+    "instagram": "Мы в Instagram",
+    "viewAll": "Посмотреть еще",
+    "filterAll": "Все",
+    "filterVideo": "Видео",
+    "filterPhoto": "Фото",
+    "showMore": "Показать ещё",
+    "showLess": "Свернуть"
   }
 }

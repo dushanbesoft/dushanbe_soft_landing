@@ -1,44 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./MediaSection.module.css";
 import { useTranslation } from "react-i18next";
 import { FadeIn } from "../MotionWrapper";
-
-const mediaItems = {
-  leftTall: {
-    id: "media-1",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/11557c74e5c4b1ab27e2ce34a42abcc535e8dcd9?width=728",
-    alt: "Dushanbe Soft Media 1",
-  },
-  middleLeftTop: {
-    id: "media-2",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/b2f15eb9026b15f7137c6919978d3b53b427b7f1?width=581",
-    alt: "Dushanbe Soft Media 2",
-  },
-  middleLeftBottom: {
-    id: "media-3",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/b3c91b0e0d2f6aa9d39232583c21cb86e663ab39?width=581",
-    alt: "Dushanbe Soft Media 3",
-  },
-  middleRightTop: {
-    id: "media-4",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/2e33f119452dd877502c89958bc9896a02b7c245?width=581",
-    alt: "Dushanbe Soft Media 4",
-  },
-  middleRightBottom: {
-    id: "media-5",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/35bafd1c3797a237d434305e674f120dcb58f6a8?width=581",
-    alt: "Dushanbe Soft Media 5",
-  },
-  rightTall: {
-    id: "media-6",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/dbfed08822b7b71107bca887dfe39dabe6fae140?width=728",
-    alt: "Dushanbe Soft Media 6",
-  },
-};
+import {
+  mediaGalleryItems,
+  featuredMediaItems,
+  MediaItem,
+} from "@/const/media-content";
 
 const ArrowIcon = () => (
   <svg
@@ -72,9 +44,103 @@ const ArrowIcon = () => (
   </svg>
 );
 
-export default function MediaSection() {
+interface MediaSectionProps {
+  showAll?: boolean;
+  lang?: string;
+}
+
+export default function MediaSection({ showAll = false, lang = "ru" }: MediaSectionProps) {
   const { t } = useTranslation("common");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const [filter, setFilter] = useState<"all" | "video" | "image">("all");
+  const [activeItem, setActiveItem] = useState<MediaItem | null>(null);
+  const [activeList, setActiveList] = useState<MediaItem[]>([]);
+
+  const videoCount = useMemo(
+    () => mediaGalleryItems.filter((i) => i.type === "video").length,
+    []
+  );
+  const photoCount = useMemo(
+    () => mediaGalleryItems.filter((i) => i.type === "image").length,
+    []
+  );
+
+  const filteredItems = useMemo(() => {
+    if (filter === "all") return mediaGalleryItems;
+    return mediaGalleryItems.filter((item) => item.type === filter);
+  }, [filter]);
+
+  const openLightbox = (item: MediaItem, list: MediaItem[]) => {
+    setActiveItem(item);
+    setActiveList(list);
+  };
+
+  const closeLightbox = () => {
+    setActiveItem(null);
+  };
+
+  const handlePrev = useCallback(() => {
+    if (!activeItem || activeList.length === 0) return;
+    const currentIndex = activeList.findIndex((i) => i.id === activeItem.id);
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : activeList.length - 1;
+    setActiveItem(activeList[prevIndex]);
+  }, [activeItem, activeList]);
+
+  const handleNext = useCallback(() => {
+    if (!activeItem || activeList.length === 0) return;
+    const currentIndex = activeList.findIndex((i) => i.id === activeItem.id);
+    const nextIndex = currentIndex < activeList.length - 1 ? currentIndex + 1 : 0;
+    setActiveItem(activeList[nextIndex]);
+  }, [activeItem, activeList]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!activeItem) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    if (activeItem) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [activeItem, handlePrev, handleNext]);
+
+  const mediaPageUrl = lang === "ru" ? "/media" : `/${lang}/media`;
+
+  const renderCard = (item: MediaItem, listContext: MediaItem[]) => (
+    <div
+      key={item.id}
+      className={styles.mediaItem}
+      onClick={() => openLightbox(item, listContext)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openLightbox(item, listContext);
+        }
+      }}
+      aria-label={item.title}
+    >
+      <Image
+        src={item.thumb}
+        alt={item.title}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className={styles.mediaImage}
+      />
+      <div className={styles.overlay} />
+    </div>
+  );
 
   return (
     <section className={styles.section} id="media" aria-label={t("media.title", "Фото и видео")}>
@@ -86,153 +152,159 @@ export default function MediaSection() {
               <h2 className={styles.title}>{t("media.title", "Фото и видео")}</h2>
             </div>
 
-            <Link
-              href="https://www.instagram.com/dushanbesoft"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.instaBtn}
-              aria-label={t("media.instagram", "Мы в Instagram")}
-            >
-              <span className={styles.instaText}>{t("media.instagram", "Мы в Instagram")}</span>
-              <ArrowIcon />
-            </Link>
-          </div>
+            <div className={styles.headerButtons}>
+              {!showAll && (
+                <Link
+                  href={mediaPageUrl}
+                  className={styles.viewAllBtn}
+                  aria-label={t("media.viewAll", "Посмотреть еще")}
+                >
+                  <span className={styles.viewAllText}>{t("media.viewAll", "Посмотреть еще")}</span>
+                  <ArrowIcon />
+                </Link>
+              )}
 
-          <div className={styles.galleryGrid}>
-            {/* Column 1: Left tall */}
-            <div className={styles.columnSingle}>
-              <div
-                className={styles.mediaItem}
-                onClick={() => setSelectedImage(mediaItems.leftTall.src)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setSelectedImage(mediaItems.leftTall.src)}
+              <Link
+                href="https://www.instagram.com/dushanbesoft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.instaBtn}
+                aria-label={t("media.instagram", "Мы в Instagram")}
               >
-                <Image
-                  src={mediaItems.leftTall.src}
-                  alt={mediaItems.leftTall.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 30vw"
-                  className={styles.mediaImage}
-                />
-                <div className={styles.overlay} />
-              </div>
-            </div>
-
-            {/* Column 2: Center-left stacked */}
-            <div className={styles.column}>
-              <div
-                className={styles.mediaItem}
-                onClick={() => setSelectedImage(mediaItems.middleLeftTop.src)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setSelectedImage(mediaItems.middleLeftTop.src)}
-              >
-                <Image
-                  src={mediaItems.middleLeftTop.src}
-                  alt={mediaItems.middleLeftTop.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
-                  className={styles.mediaImage}
-                />
-                <div className={styles.overlay} />
-              </div>
-
-              <div
-                className={styles.mediaItem}
-                onClick={() => setSelectedImage(mediaItems.middleLeftBottom.src)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setSelectedImage(mediaItems.middleLeftBottom.src)}
-              >
-                <Image
-                  src={mediaItems.middleLeftBottom.src}
-                  alt={mediaItems.middleLeftBottom.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
-                  className={styles.mediaImage}
-                />
-                <div className={styles.overlay} />
-              </div>
-            </div>
-
-            {/* Column 3: Center-right stacked */}
-            <div className={styles.column}>
-              <div
-                className={styles.mediaItem}
-                onClick={() => setSelectedImage(mediaItems.middleRightTop.src)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setSelectedImage(mediaItems.middleRightTop.src)}
-              >
-                <Image
-                  src={mediaItems.middleRightTop.src}
-                  alt={mediaItems.middleRightTop.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
-                  className={styles.mediaImage}
-                />
-                <div className={styles.overlay} />
-              </div>
-
-              <div
-                className={styles.mediaItem}
-                onClick={() => setSelectedImage(mediaItems.middleRightBottom.src)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setSelectedImage(mediaItems.middleRightBottom.src)}
-              >
-                <Image
-                  src={mediaItems.middleRightBottom.src}
-                  alt={mediaItems.middleRightBottom.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
-                  className={styles.mediaImage}
-                />
-                <div className={styles.overlay} />
-              </div>
-            </div>
-
-            {/* Column 4: Right tall */}
-            <div className={styles.columnSingle}>
-              <div
-                className={styles.mediaItem}
-                onClick={() => setSelectedImage(mediaItems.rightTall.src)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setSelectedImage(mediaItems.rightTall.src)}
-              >
-                <Image
-                  src={mediaItems.rightTall.src}
-                  alt={mediaItems.rightTall.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 30vw"
-                  className={styles.mediaImage}
-                />
-                <div className={styles.overlay} />
-              </div>
+                <span className={styles.instaText}>{t("media.instagram", "Мы в Instagram")}</span>
+                <ArrowIcon />
+              </Link>
             </div>
           </div>
+
+          {!showAll && (
+            <div className={styles.featuredGrid}>
+              <div className={styles.columnSingle}>
+                {renderCard(featuredMediaItems[0], featuredMediaItems)}
+              </div>
+
+              <div className={styles.column}>
+                {renderCard(featuredMediaItems[1], featuredMediaItems)}
+                {renderCard(featuredMediaItems[2], featuredMediaItems)}
+              </div>
+
+              <div className={styles.column}>
+                {renderCard(featuredMediaItems[3], featuredMediaItems)}
+                {renderCard(featuredMediaItems[4], featuredMediaItems)}
+              </div>
+
+              <div className={styles.columnSingle}>
+                {renderCard(featuredMediaItems[5], featuredMediaItems)}
+              </div>
+            </div>
+          )}
+
+          {showAll && (
+            <>
+              <div className={styles.filterRow} role="tablist">
+                <button
+                  type="button"
+                  className={`${styles.filterBtn} ${filter === "all" ? styles.filterBtnActive : ""}`}
+                  onClick={() => setFilter("all")}
+                >
+                  {t("media.filterAll", "Все")}{" "}
+                  <span className={styles.countBadge}>{mediaGalleryItems.length}</span>
+                </button>
+                <button
+                  type="button"
+                  className={`${styles.filterBtn} ${filter === "video" ? styles.filterBtnActive : ""}`}
+                  onClick={() => setFilter("video")}
+                >
+                  {t("media.filterVideo", "Видео")}{" "}
+                  <span className={styles.countBadge}>{videoCount}</span>
+                </button>
+                <button
+                  type="button"
+                  className={`${styles.filterBtn} ${filter === "image" ? styles.filterBtnActive : ""}`}
+                  onClick={() => setFilter("image")}
+                >
+                  {t("media.filterPhoto", "Фото")}{" "}
+                  <span className={styles.countBadge}>{photoCount}</span>
+                </button>
+              </div>
+
+              <div className={styles.allGrid}>
+                {filteredItems.map((item) => renderCard(item, filteredItems))}
+              </div>
+            </>
+          )}
         </div>
       </FadeIn>
 
-      {/* Lightbox Modal */}
-      {selectedImage && (
+      {activeItem && (
         <div
           className={styles.lightboxBackdrop}
-          onClick={() => setSelectedImage(null)}
+          onClick={closeLightbox}
           role="dialog"
           aria-modal="true"
         >
-          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+          {activeList.length > 1 && (
+            <>
+              <button
+                type="button"
+                className={`${styles.navBtn} ${styles.prevBtn}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handlePrev();
+                }}
+                aria-label="Назад"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                className={`${styles.navBtn} ${styles.nextBtn}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleNext();
+                }}
+                aria-label="Вперед"
+              >
+                ›
+              </button>
+            </>
+          )}
+
+          <div className={styles.lightboxModal} onClick={(e) => e.stopPropagation()}>
             <button
+              type="button"
               className={styles.closeBtn}
-              onClick={() => setSelectedImage(null)}
+              onClick={closeLightbox}
               aria-label="Закрыть"
             >
               ✕
             </button>
-            <img src={selectedImage} alt="Media enlarged" className={styles.lightboxImage} />
+
+            <div className={styles.lightboxMediaArea}>
+              {activeItem.type === "video" ? (
+                <video
+                  src={activeItem.src}
+                  controls
+                  autoPlay
+                  playsInline
+                  className={styles.lightboxVideo}
+                />
+              ) : (
+                <img
+                  src={activeItem.src}
+                  alt={activeItem.title}
+                  className={styles.lightboxImage}
+                />
+              )}
+            </div>
+
+            <div className={styles.lightboxFooter}>
+              <div className={styles.lightboxCounter}>
+                {activeList.findIndex((i) => i.id === activeItem.id) + 1} / {activeList.length}
+                {activeItem.duration && ` • ⏱ ${activeItem.duration}`}
+              </div>
+              <p className={styles.lightboxCaption}>{activeItem.caption}</p>
+            </div>
           </div>
         </div>
       )}

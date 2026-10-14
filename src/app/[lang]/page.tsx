@@ -107,7 +107,7 @@ export default async function Page({
         <AwardsSection lang={lang} />
         <TeamSection />
         <NewsSection lang={lang} />
-        <MediaSection />
+        <MediaSection lang={lang} />
         <CTASection lang={lang} />
         
         <Footer lang={lang} />

@@ -4,10 +4,12 @@ export const tektur = Tektur({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '600', '700'],
   variable: '--font-tektur',
+  display: 'swap',
 });
 
 export const nunitoSans = Nunito_Sans({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '600', '700'],
   variable: '--font-nunito-sans',
+  display: 'swap',
 });
