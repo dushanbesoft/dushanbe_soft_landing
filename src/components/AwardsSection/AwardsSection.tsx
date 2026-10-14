@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import Image from 'next/image';
 import styles from './AwardsSection.module.css';
 import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
 import { useTranslation } from 'react-i18next';
@@ -121,7 +120,7 @@ export default function AwardsSection({ lang = 'ru' }: { lang?: string }) {
                           onClick={() => setSelectedImage(award.image)}
                         >
                           {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={award.image} alt={award.title} className={styles.image} />
+                          <img src={award.image} alt={award.title} className={styles.image} loading="lazy" decoding="async" />
                           <div className={styles.imageOverlay}>
                             <FaSearchPlus className={styles.zoomIcon} /> 
                             <span>{t('awards.zoom', 'Увеличить')}</span>

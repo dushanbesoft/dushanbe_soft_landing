@@ -1,6 +1,7 @@
 export const jobsData = [
   {
     slug: "fullstack-web-php-developer",
+    datePosted: "2026-10-05",
     categoryValue: "it",
     categoryLabel: "IT",
     title: "Fullstack Web PHP developer",
@@ -132,6 +133,7 @@ Drupal — webtrees
   },
   {
     slug: "frontend-developer",
+    datePosted: "2026-10-05",
     categoryValue: "it",
     categoryLabel: "IT",
     title: "FrontEnd Developer",

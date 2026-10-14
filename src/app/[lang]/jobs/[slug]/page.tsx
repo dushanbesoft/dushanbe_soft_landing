@@ -8,6 +8,15 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
+import {
+  COMPANY,
+  ORGANIZATION_ID,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  homeCrumb,
+  jsonLdString,
+  localeUrl,
+} from "@/utils/seo";
 
 export async function generateStaticParams() {
   const languages = ["ru", "tj", "en"];
@@ -34,31 +43,14 @@ export async function generateMetadata({
     return {};
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
-  const title = `${job.title} | Dushanbe Soft`;
-  const description = job.description;
-  const currentUrl = lang === "ru" ? `${siteUrl}/jobs/${slug}` : `${siteUrl}/${lang}/jobs/${slug}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      url: currentUrl,
-      locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
-      type: "article",
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        "tg": `${siteUrl}/tj/jobs/${slug}`,
-        "ru": `${siteUrl}/jobs/${slug}`,
-        "en": `${siteUrl}/en/jobs/${slug}`,
-        "x-default": `${siteUrl}/jobs/${slug}`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: `jobs/${slug}`,
+    title: `${job.title} — ${lang === "en" ? "job in Dushanbe" : lang === "tj" ? "ҷои корӣ дар Душанбе" : "вакансия в Душанбе"}`,
+    description: job.description,
+    type: "article",
+    publishedTime: job.datePosted,
+  });
 }
 
 export default async function JobDetailsPage({
@@ -74,9 +66,47 @@ export default async function JobDetailsPage({
     notFound();
   }
 
+  const jsonLd = [
+    breadcrumbJsonLd([
+      homeCrumb(lang),
+      { name: t("header.careers", "Карьера"), url: `${localeUrl(lang)}/#careers` },
+      { name: job.title, url: localeUrl(lang, `jobs/${slug}`) },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      title: job.title,
+      description: (job.fullDescription || job.description).replace(/\n/g, "<br>"),
+      datePosted: job.datePosted,
+      hiringOrganization: {
+        "@type": "Organization",
+        "@id": ORGANIZATION_ID,
+        name: COMPANY.name,
+        sameAs: localeUrl("ru"),
+        logo: localeUrl("ru") + "/logo.png",
+      },
+      jobLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: COMPANY.addressLocality,
+          addressCountry: COMPANY.addressCountry,
+        },
+      },
+      ...(job.typeValue === "remote"
+        ? {
+            jobLocationType: "TELECOMMUTE",
+            applicantLocationRequirements: { "@type": "Country", name: "Tajikistan" },
+          }
+        : {}),
+      directApply: false,
+    },
+  ];
+
   return (
     <TranslationsProvider namespaces={["common"]} locale={lang} resources={resources}>
       <main className={styles.main}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
         <Header />
         
         <div className={styles.container}>
@@ -115,7 +145,7 @@ export default async function JobDetailsPage({
 
             <div className={styles.body}>
               <h2 className={styles.sectionTitle}>О вакансии</h2>
-              <div className={styles.description}>{(job as any).fullDescription || job.description}</div>
+              <div className={styles.description}>{job.fullDescription || job.description}</div>
               
               <div className={styles.ctaBox}>
                 <h3 className={styles.ctaTitle}>Заинтересовала вакансия?</h3>

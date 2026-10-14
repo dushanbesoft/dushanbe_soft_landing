@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./CasesSection.module.css";
 import CaseCard from "./CaseCard";
 import { FadeIn } from "../MotionWrapper";
@@ -31,7 +31,9 @@ export default function CasesGrid({
   lang,
   labels,
   title,
-}: CasesGridProps & { title?: string }) {
+  isPage = false,
+}: CasesGridProps & { title?: string; isPage?: boolean }) {
+  const Heading = isPage ? "h1" : "h2";
   const [showAll, setShowAll] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Все");
 
@@ -89,7 +91,7 @@ export default function CasesGrid({
         style={{ width: "100%", marginBottom: "20px" }}
       >
         <div className={styles.titles}>
-          {title && <h2 className={styles.mainTitle}>{title}</h2>}
+          {title && <Heading className={styles.mainTitle}>{title}</Heading>}
         </div>
         <div className={styles.categoriesList}>
           {categories.map((cat) => (

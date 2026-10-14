@@ -3,7 +3,7 @@ import Image from 'next/image';
 import initTranslations from '@/app/i18n';
 import styles from './ContactSection.module.css';
 import ContactForm from './ContactForm';
-import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
+import { FadeIn } from '../MotionWrapper';
 
 const i18nNamespaces = ['common'];
 

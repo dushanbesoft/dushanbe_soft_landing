@@ -2,7 +2,7 @@ import React from 'react';
 import initTranslations from '@/app/i18n';
 import styles from './ReviewsSection.module.css';
 import ReviewsCarousel, { ReviewType } from './ReviewsCarousel';
-import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
+import { FadeIn } from '../MotionWrapper';
 
 const reviews = [
   {

@@ -211,7 +211,8 @@
     "web_dev": "Web development",
     "mobile_dev": "Mobile apps",
     "crm": "CRM and automation",
-    "uiux": "UI/UX Design"
+    "uiux": "UI/UX Design",
+    "allServices": "All services"
   },
   "process": {
     "subtitle": "How we work",
@@ -605,7 +606,15 @@
   "seo": {
     "default_title": "Dushanbe Soft — Leading IT Company in Tajikistan | Software & Web Development",
     "default_description": "Dushanbe Soft is a top IT company in Dushanbe, Tajikistan. We specialize in software development, mobile apps, web development, ERP and CRM systems for business and government.",
-    "keywords": "it companies in tajikistan, it company dushanbe, software development tajikistan, web development dushanbe, mobile app development, business automation, dushanbe soft, fintech, crm, erp"
+    "keywords": "it companies in tajikistan, it company dushanbe, software development tajikistan, web development dushanbe, mobile app development, business automation, dushanbe soft, fintech, crm, erp",
+    "products_title": "Ready-made IT Products for Business: SMS Gateway, Live Chat, CRM",
+    "products_description": "Dushanbe Soft products for businesses in Tajikistan: ZudSMS bulk SMS platform, LiveChat TJ online chat, CRM systems and payment solutions.",
+    "cases_title": "Portfolio — Websites, Apps and Systems We Built",
+    "cases_description": "Dushanbe Soft case studies: the President of Tajikistan website, Digital Tajikistan portal, Somon TV OTT platforms, fintech, CRM and mobile apps.",
+    "news_title": "Company News — IT Projects and Development in Tajikistan",
+    "news_description": "Latest news, releases and key events of Dushanbe Soft — IT solutions development in Tajikistan.",
+    "media_title": "Photos and Videos — Projects and Team",
+    "media_description": "Dushanbe Soft photo and video gallery: project presentations, software development and team life in Dushanbe, Tajikistan."
   },
   "pricing": {
     "plans": {

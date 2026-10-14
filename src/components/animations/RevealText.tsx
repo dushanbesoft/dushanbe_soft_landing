@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 interface RevealTextProps {
   text: string;
@@ -19,7 +19,7 @@ export const RevealText = ({ text, className = "", delay = 0 }: RevealTextProps)
     }),
   };
 
-  const child: any = {
+  const child: Variants = {
     visible: {
       opacity: 1,
       y: 0,

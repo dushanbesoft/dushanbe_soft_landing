@@ -1,40 +1,24 @@
+import type { Metadata } from 'next';
 import initTranslations from '../../i18n';
 import TranslationsProvider from '../../../components/TranslationsProvider';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import MediaSection from '../../../components/MediaSection/MediaSection';
 
+import { buildPageMetadata } from '../../../utils/seo';
+
 const i18nNamespaces = ['common'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const { t } = await initTranslations(lang, i18nNamespaces);
 
-  const title = t('media.title', { defaultValue: 'Фото и видео' }) + ' | Dushanbe Soft';
-  const description = t('seo.media_description', {
-    defaultValue: 'Фото и видео галерея компании Dushanbe Soft: презентации проектов, разработка ПО и жизнь команды в Душанбе, Таджикистан.'
+  return buildPageMetadata({
+    lang,
+    path: 'media',
+    title: t('seo.media_title'),
+    description: t('seo.media_description'),
   });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
-  const currentUrl = lang === 'ru' ? `${siteUrl}/media` : `${siteUrl}/${lang}/media`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      url: currentUrl,
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        'tg': `${siteUrl}/tj/media`,
-        'ru': `${siteUrl}/media`,
-        'en': `${siteUrl}/en/media`,
-        'x-default': `${siteUrl}/media`,
-      },
-    },
-  };
 }
 
 export default async function MediaPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -48,7 +32,7 @@ export default async function MediaPage({ params }: { params: Promise<{ lang: st
           <Header />
         </div>
         <MediaSection showAll={true} lang={lang} />
-        <Footer />
+        <Footer lang={lang} />
       </main>
     </TranslationsProvider>
   );

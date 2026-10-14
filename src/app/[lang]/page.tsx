@@ -29,55 +29,7 @@ export default async function Page({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const { t, resources } = await initTranslations(lang, i18nNamespaces);
-
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
-
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Dushanbe Soft",
-      url: siteUrl,
-      logo: `${siteUrl}/icons/site-favicon.svg`,
-      image: `${siteUrl}/icons/site-favicon.svg`,
-      description: t(
-        "seo.default_description",
-        "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
-      ),
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Душанбе",
-        addressCountry: "TJ",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        telephone: "+992988888888",
-        email: "info@dushanbesoft.tj",
-      },
-      sameAs: [
-        "https://www.linkedin.com/company/dushanbesoft",
-        "https://www.instagram.com/dushanbesoft",
-        "https://www.facebook.com/dushanbesoft",
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Dushanbe Soft",
-      url: siteUrl,
-      description: t(
-        "seo.default_description",
-        "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов и мобильных приложений в Таджикистане.",
-      ),
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteUrl}/${lang === 'ru' ? 'cases' : `${lang}/cases`}?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-    },
-  ];
+  const { resources } = await initTranslations(lang, i18nNamespaces);
 
   return (
     <TranslationsProvider
@@ -86,10 +38,6 @@ export default async function Page({
       resources={resources}
     >
       <main className="main-global">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <div className="header-global header-fixed">
           <Header />
         </div>

@@ -1,10 +1,13 @@
 import React from "react";
+import Link from "next/link";
+import { localePath } from "@/utils/seo";
 import initTranslations from "@/app/i18n";
 import styles from "./ServicesSection.module.css";
 import { FadeIn, StaggerContainer, StaggerItem } from "../MotionWrapper";
 
 const services = [
   {
+    slug: "web-development",
     title: "Веб-разработка",
     description:
       "Высоконагруженные веб-приложения, корпоративные порталы и SaaS-платформы на современных стеках.",
@@ -17,6 +20,7 @@ const services = [
     ),
   },
   {
+    slug: "mobile-app-development",
     title: "Мобильная разработка",
     description:
       "Нативные и кроссплатформенные мобильные приложения для IOS и Android с элегантным UX.",
@@ -41,6 +45,7 @@ const services = [
     ),
   },
   {
+    slug: "ui-ux-design",
     title: "UI/UX Дизайн",
     description:
       "Дизайн-системы, пользовательские интерфейсы и прототипы мирового уровня от Figma до production.",
@@ -53,6 +58,7 @@ const services = [
     ),
   },
   {
+    slug: "cybersecurity",
     title: "Кибербезопасность",
     description:
       "Аудит безопасности, пентестинг, защита данных и соответствие международным стандартам ISO/IEC 27001.",
@@ -65,6 +71,7 @@ const services = [
     ),
   },
   {
+    slug: "api-integration",
     title: "API Интеграция",
     description:
       "Разработка и интеграция REST/GraphQL API, микросервисная архитектура и ESB для enterprise-систем.",
@@ -89,6 +96,7 @@ const services = [
     ),
   },
   {
+    slug: "website-support",
     title: "Техническая поддержка",
     description:
       "Выделенная команда поддержки 24/7, мониторинг системы, SLA-гарантии и оперативное реагирование.",
@@ -129,23 +137,47 @@ export default async function ServicesSection({
         <StaggerContainer className={styles.grid} staggerChildren={0.1}>
           {services.map((service, index) => (
             <StaggerItem key={index}>
-              <div className={styles.card}>
-                <div className={styles.iconWrapper}>{service.icon}</div>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>
-                    {t(`services.list.${index}.title`, service.title)}
-                  </h3>
-                  <p className={styles.cardDescription}>
-                    {t(
-                      `services.list.${index}.description`,
-                      service.description,
-                    )}
-                  </p>
-                </div>
-              </div>
+              {(() => {
+                const body = (
+                  <>
+                    <div className={styles.iconWrapper}>{service.icon}</div>
+                    <div className={styles.cardContent}>
+                      <h3 className={styles.cardTitle}>
+                        {t(`services.list.${index}.title`, service.title)}
+                      </h3>
+                      <p className={styles.cardDescription}>
+                        {t(
+                          `services.list.${index}.description`,
+                          service.description,
+                        )}
+                      </p>
+                    </div>
+                  </>
+                );
+                return service.slug ? (
+                  <Link
+                    href={localePath(lang, `services/${service.slug}`)}
+                    className={styles.card}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    {body}
+                  </Link>
+                ) : (
+                  <div className={styles.card}>{body}</div>
+                );
+              })()}
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+          <Link
+            href={localePath(lang, "services")}
+            style={{ color: "#02704f", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: 4 }}
+          >
+            {t("services.allServices", "Все услуги")} →
+          </Link>
+        </div>
       </div>
     </section>
   );

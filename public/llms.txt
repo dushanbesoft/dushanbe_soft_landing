@@ -1,0 +1,31 @@
+# Dushanbe Soft
+
+> Dushanbe Soft is an IT company based in Dushanbe, Tajikistan, founded in 2017. It develops websites, mobile apps, CRM/ERP systems and digital products for businesses and government organizations in Tajikistan and Central Asia. The website is available in Russian (default), Tajik (/tj) and English (/en).
+
+Contacts: phone +992 901 000 535, email dushanbesoft@gmail.com, Telegram https://t.me/992901000535. Address: Dushanbe, Republic of Tajikistan.
+
+Notable projects: the official website of the President of the Republic of Tajikistan (president.tj), the Digital Tajikistan e-government portal, OTT streaming platforms for Somon TV, the OnlinePay acquiring platform, the ZudSMS bulk SMS platform and the LiveChat TJ online chat service.
+
+## Services
+
+- [IT services overview](https://dushanbe-soft.tj/en/services): all services in one place
+- [Website development](https://dushanbe-soft.tj/en/services/web-development): corporate websites, online stores, portals and web apps (Next.js, React, Laravel)
+- [Mobile app development](https://dushanbe-soft.tj/en/services/mobile-app-development): iOS and Android apps with Flutter, Telegram bots and Mini Apps
+- [CRM and ERP development](https://dushanbe-soft.tj/en/services/crm-erp-development): custom business automation systems
+- [SMS gateway and bulk SMS](https://dushanbe-soft.tj/en/services/sms-gateway): ZudSMS platform and REST API for OTP codes and notifications to all operators in Tajikistan
+- [UI/UX design](https://dushanbe-soft.tj/en/services/ui-ux-design): interface design and design systems in Figma
+- [API integration](https://dushanbe-soft.tj/en/services/api-integration): payment systems, banks, 1C, government services
+- [Cybersecurity](https://dushanbe-soft.tj/en/services/cybersecurity): security audits, penetration testing, DDoS protection
+- [Website support](https://dushanbe-soft.tj/en/services/website-support): maintenance plans, backups, monitoring
+
+## Company
+
+- [Portfolio](https://dushanbe-soft.tj/en/cases): case studies of delivered projects
+- [Products](https://dushanbe-soft.tj/en/products): ZudSMS, LiveChat TJ and other in-house products
+- [News](https://dushanbe-soft.tj/en/news): company news and project releases
+
+## Optional
+
+- [Русская версия сайта](https://dushanbe-soft.tj/): основная версия на русском языке
+- [Тоҷикӣ](https://dushanbe-soft.tj/tj): версияи тоҷикии сайт
+- [Sitemap](https://dushanbe-soft.tj/sitemap.xml)

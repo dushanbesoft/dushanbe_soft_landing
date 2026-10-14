@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './PartnersSection.module.css';
-import { FadeIn, StaggerContainer, StaggerItem } from '../MotionWrapper';
+import { FadeIn } from '../MotionWrapper';
 
 const partnersData = [
   {

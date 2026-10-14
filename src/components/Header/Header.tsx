@@ -158,8 +158,11 @@ export default function Header() {
         <Link href={logoHref} onClick={closeMenu}>
           <img
             className={styles.logo}
-            src="/icons/logo-header.svg"
-            alt="Dushanbe-Soft Logo"
+            src="/icons/logo-header.webp"
+            alt="Dushanbe Soft"
+            width={172}
+            height={38}
+            fetchPriority="high"
           />
         </Link>
 

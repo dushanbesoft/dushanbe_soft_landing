@@ -149,7 +149,11 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
           <div className={styles.headerRow}>
             <div className={styles.titles}>
               <span className={styles.subtitle}>{t("media.subtitle", "медиа")}</span>
-              <h2 className={styles.title}>{t("media.title", "Фото и видео")}</h2>
+              {showAll ? (
+                <h1 className={styles.title}>{t("media.title", "Фото и видео")}</h1>
+              ) : (
+                <h2 className={styles.title}>{t("media.title", "Фото и видео")}</h2>
+              )}
             </div>
 
             <div className={styles.headerButtons}>

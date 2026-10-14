@@ -28,6 +28,7 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
             <div className={styles.socials}>
               <a
                 href="https://t.me/992901000535"
+                aria-label="Dushanbe Soft в Telegram"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
@@ -54,6 +55,7 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
               </a>
               <a
                 href="https://www.facebook.com/Dushanbe-Soft-575506316208641/"
+                aria-label="Dushanbe Soft в Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
@@ -80,6 +82,7 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
               </a>
               <a
                 href="https://www.instagram.com/dushanbe_soft/"
+                aria-label="Dushanbe Soft в Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
@@ -116,7 +119,7 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
           </div>
 
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>{t("footer.col1", "Компания")}</h4>
+            <p className={styles.colTitle}>{t("footer.col1", "Компания")}</p>
             <div className={styles.linksList}>
               <Link href={lang === "ru" ? "/#" : `/${lang}/#`} className={styles.link}>
                 {t("header.home", "Главная")}
@@ -127,7 +130,7 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
               <Link href={lang === "ru" ? "/#process" : `/${lang}/#process`} className={styles.link}>
                 {t("footer.links1.3", "Как мы работаем")}
               </Link>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services" : `/${lang}/services`} className={styles.link}>
                 {t("header.services", "Услуги")}
               </Link>
               <Link href={lang === "ru" ? "/#pricing" : `/${lang}/#pricing`} className={styles.link}>
@@ -140,31 +143,31 @@ export default async function Footer({ lang = "ru" }: { lang?: string }) {
           </div>
 
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>{t("footer.col2", "Услуги")}</h4>
+            <p className={styles.colTitle}>{t("footer.col2", "Услуги")}</p>
             <div className={styles.linksList}>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services/web-development" : `/${lang}/services/web-development`} className={styles.link}>
                 {t("footer.links2.0", "Веб-разработка")}
               </Link>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services/mobile-app-development" : `/${lang}/services/mobile-app-development`} className={styles.link}>
                 {t("footer.links2.1", "Мобильная разработка")}
               </Link>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services/ui-ux-design" : `/${lang}/services/ui-ux-design`} className={styles.link}>
                 {t("footer.links2.2", "UI/UX Дизайн")}
               </Link>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services/api-integration" : `/${lang}/services/api-integration`} className={styles.link}>
                 {t("footer.links2.3", "API Интеграция")}
               </Link>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services/cybersecurity" : `/${lang}/services/cybersecurity`} className={styles.link}>
                 {t("footer.links2.4", "Кибербезопасность")}
               </Link>
-              <Link href={lang === "ru" ? "/#services" : `/${lang}/#services`} className={styles.link}>
+              <Link href={lang === "ru" ? "/services/website-support" : `/${lang}/services/website-support`} className={styles.link}>
                 {t("footer.links2.5", "Техническая поддержка")}
               </Link>
             </div>
           </div>
 
           <div className={styles.contactCol}>
-            <h4 className={styles.colTitle}>{t("footer.col3", "Контакты")}</h4>
+            <p className={styles.colTitle}>{t("footer.col3", "Контакты")}</p>
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
                 <svg

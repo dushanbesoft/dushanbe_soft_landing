@@ -50,6 +50,7 @@ export default function JobsClient({ lang }: { lang: string }) {
         <div className={styles.selectBox}>
           <select 
             className={styles.select} 
+            aria-label={t('jobs.direction', 'Направление')}
             value={categoryFilter} 
             onChange={(e) => setCategoryFilter(e.target.value)}
           >
@@ -62,6 +63,7 @@ export default function JobsClient({ lang }: { lang: string }) {
         <div className={styles.selectBox}>
           <select 
             className={styles.select}
+            aria-label={t('jobs.format', 'Формат работы')}
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
           >
@@ -75,6 +77,7 @@ export default function JobsClient({ lang }: { lang: string }) {
         <div className={styles.selectBox}>
           <select 
             className={styles.select}
+            aria-label={t('jobs.experience', 'Опыт')}
             value={experienceFilter}
             onChange={(e) => setExperienceFilter(e.target.value)}
           >

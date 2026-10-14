@@ -87,9 +87,11 @@ export default function NewsSection({ lang = "ru", showAll = false }: NewsSectio
           <div className={styles.headerRow}>
             <div className={styles.titles}>
               <span className={styles.subtitle}>{t("news.subtitle", "новости")}</span>
-              <h2 className={styles.title}>
-                {showAll ? t("news.viewAll", "Все новости") : t("news.title", "Последние новости")}
-              </h2>
+              {showAll ? (
+                <h1 className={styles.title}>{t("news.viewAll", "Все новости")}</h1>
+              ) : (
+                <h2 className={styles.title}>{t("news.title", "Последние новости")}</h2>
+              )}
             </div>
 
             {!showAll && (

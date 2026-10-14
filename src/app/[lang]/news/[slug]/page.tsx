@@ -10,6 +10,16 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
 import { FadeIn } from "@/components/MotionWrapper";
+import {
+  ORGANIZATION_ID,
+  absoluteUrl,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  homeCrumb,
+  jsonLdString,
+  localeUrl,
+  ruDateToIso,
+} from "@/utils/seo";
 
 interface PageProps {
   params: Promise<{ lang: string; slug: string }>;
@@ -37,38 +47,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const { t } = await initTranslations(lang, ["common"]);
-  const title = t(item.titleKey, item.defaultTitle) + " | Dushanbe Soft";
-  const description = t(item.descKey, item.defaultDesc);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
-  const currentUrl = lang === "ru" ? `${siteUrl}/news/${slug}` : `${siteUrl}/${lang}/news/${slug}`;
 
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      url: currentUrl,
-      images: [
-        {
-          url: item.image,
-          width: 1200,
-          height: 630,
-          alt: item.defaultTitle,
-        },
-      ],
-      type: "article",
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        tg: `${siteUrl}/tj/news/${slug}`,
-        ru: `${siteUrl}/news/${slug}`,
-        en: `${siteUrl}/en/news/${slug}`,
-        "x-default": `${siteUrl}/news/${slug}`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: `news/${slug}`,
+    title: t(item.titleKey, item.defaultTitle),
+    description: t(item.descKey, item.defaultDesc),
+    image: { url: item.image, alt: t(item.titleKey, item.defaultTitle) },
+    type: "article",
+    publishedTime: ruDateToIso(item.date),
+  });
 }
 
 export default async function NewsDetailPage({ params }: PageProps) {
@@ -100,10 +88,35 @@ export default async function NewsDetailPage({ params }: PageProps) {
   };
 
   const caseUrl = getCaseUrl(item.fullContent?.caseSlug);
+  const articleUrl = localeUrl(lang, `news/${slug}`);
+  const published = ruDateToIso(item.date);
+
+  const jsonLd = [
+    breadcrumbJsonLd([
+      homeCrumb(lang),
+      { name: t("news.viewAll", "Все новости"), url: localeUrl(lang, "news") },
+      { name: title, url: articleUrl },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: title,
+      description: desc,
+      image: [absoluteUrl(item.image)],
+      datePublished: published,
+      dateModified: published,
+      inLanguage: lang === "tj" ? "tg" : lang,
+      mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+      author: { "@type": "Organization", "@id": ORGANIZATION_ID, name: "Dushanbe Soft" },
+      publisher: { "@id": ORGANIZATION_ID },
+      ...(item.fullContent?.techStack?.length ? { keywords: item.fullContent.techStack.join(", ") } : {}),
+    },
+  ];
 
   return (
     <TranslationsProvider namespaces={["common"]} locale={lang} resources={resources}>
       <main className={styles.main}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
         <div className="header-global">
           <Header />
         </div>
@@ -132,7 +145,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
               <div className={styles.metaRow}>
                 <span className={styles.categoryBadge}>{tag}</span>
                 <span className={styles.metaDot}>•</span>
-                <span className={styles.metaItem}>📅 {item.date}</span>
+                <time className={styles.metaItem} dateTime={published}>📅 {item.date}</time>
                 <span className={styles.metaDot}>•</span>
                 <span className={styles.metaItem}>⏱ {item.readTime}</span>
               </div>
