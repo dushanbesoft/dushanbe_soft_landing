@@ -53,8 +53,8 @@ export default function NewsSection({ lang = "ru", showAll = false }: NewsSectio
 
   const allNewsUrl = lang === "ru" ? "/news" : `/${lang}/news`;
 
-  const getCaseUrl = (slug: string) => {
-    return lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`;
+  const getNewsUrl = (slug: string) => {
+    return lang === "ru" ? `/news/${slug}` : `/${lang}/news/${slug}`;
   };
 
   const displayedList: NewsItem[] = useMemo(() => {
@@ -133,7 +133,7 @@ export default function NewsSection({ lang = "ru", showAll = false }: NewsSectio
               const tag = t(item.tagKey, item.defaultTag);
               const title = t(item.titleKey, item.defaultTitle);
               const desc = t(item.descKey, item.defaultDesc);
-              const targetUrl = getCaseUrl(item.slug);
+              const targetUrl = getNewsUrl(item.slug);
 
               return (
                 <article key={item.id} className={styles.card}>
