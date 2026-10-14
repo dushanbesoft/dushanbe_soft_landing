@@ -322,3 +322,82 @@
     height: 190px;
   }
 }
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #9eaabb;
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filterBtn:hover {
+  border-color: rgba(61, 220, 132, 0.4);
+  color: #fff;
+  background: rgba(61, 220, 132, 0.08);
+}
+
+.filterBtnActive {
+  border-color: #3ddc84;
+  background: rgba(61, 220, 132, 0.15);
+  color: #3ddc84;
+  box-shadow: 0 0 14px rgba(61, 220, 132, 0.2);
+}
+
+.countBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+.filterBtnActive .countBadge {
+  background: rgba(61, 220, 132, 0.25);
+  color: #3ddc84;
+}
+
+.cardsGridAll {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .cardsGridAll {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsGridAll {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsGridAll {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

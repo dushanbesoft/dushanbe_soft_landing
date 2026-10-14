@@ -1,64 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./NewsSection.module.css";
-import initTranslations from "@/app/i18n";
+import { useTranslation } from "react-i18next";
 import { FadeIn } from "../MotionWrapper";
+import { newsList, NewsItem } from "@/const/news-data";
 
 interface NewsSectionProps {
   lang?: string;
+  showAll?: boolean;
 }
-
-const newsList = [
-  {
-    id: "1",
-    slug: "digital-tajikistan",
-    image: "/images/projects/pic.webp",
-    date: "24.08.2025",
-    tagKey: "news.items.1.tag",
-    defaultTag: "Гос. проекты",
-    titleKey: "news.items.1.title",
-    defaultTitle: "Запуск проекта dt.tj (PIC)",
-    descKey: "news.items.1.desc",
-    defaultDesc: "Государственный портал цифровых услуг Таджикистана. Единая защищенная платформа доступа к электронным услугам для граждан и бизнеса.",
-  },
-  {
-    id: "2",
-    slug: "mavji-somon",
-    image: "/images/projects/mavjisomon.webp",
-    date: "15.09.2025",
-    tagKey: "news.items.2.tag",
-    defaultTag: "Медиа & OTT",
-    titleKey: "news.items.2.title",
-    defaultTitle: "Стриминг-платформа Мавчи Сомон",
-    descKey: "news.items.2.desc",
-    defaultDesc: "Запуск современной OTT-платформы и стримингового сервиса для онлайн-просмотра фильмов, сериалов и телеканалов в высоком разрешении.",
-  },
-  {
-    id: "3",
-    slug: "sohktor",
-    image: "/images/projects/project-sohktor.webp",
-    date: "02.10.2025",
-    tagKey: "news.items.3.tag",
-    defaultTag: "ERP & Автоматизация",
-    titleKey: "news.items.3.title",
-    defaultTitle: "Внедрение системы СХДО",
-    descKey: "news.items.3.desc",
-    defaultDesc: "Комплексная внутренняя ERP-система для оперативного управления, учета чрезвычайных ситуаций, ведения дел и электронного документооборота.",
-  },
-  {
-    id: "4",
-    slug: "zudsms",
-    image: "/images/projects/zudsms.webp",
-    date: "18.11.2025",
-    tagKey: "news.items.4.tag",
-    defaultTag: "SaaS & Финтех",
-    titleKey: "news.items.4.title",
-    defaultTitle: "ZudSMS — Платформа SMS-рассылок",
-    descKey: "news.items.4.desc",
-    defaultDesc: "Высоконагруженный облачный сервис массовых и транзакционных SMS-рассылок с мгновенной доставкой на номера всех операторов Таджикистана.",
-  },
-];
 
 const ArrowIcon = ({ gradient = false }: { gradient?: boolean }) => (
   <svg
@@ -94,33 +47,89 @@ const ArrowIcon = ({ gradient = false }: { gradient?: boolean }) => (
   </svg>
 );
 
-export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
-  const { t } = await initTranslations(lang, ["common"]);
+export default function NewsSection({ lang = "ru", showAll = false }: NewsSectionProps) {
+  const { t } = useTranslation("common");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const allCasesUrl = lang === "ru" ? "/cases" : `/${lang}/cases`;
+  const allNewsUrl = lang === "ru" ? "/news" : `/${lang}/news`;
 
   const getCaseUrl = (slug: string) => {
     return lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`;
   };
 
+  const displayedList: NewsItem[] = useMemo(() => {
+    if (!showAll) {
+      return newsList.slice(0, 4);
+    }
+    if (selectedCategory === "all") {
+      return newsList;
+    }
+    return newsList.filter((item) => item.category === selectedCategory);
+  }, [showAll, selectedCategory]);
+
+  const categories = [
+    { key: "all", label: t("news.filterAll", "Все") },
+    { key: "gov", label: t("news.filterGov", "Гос. проекты") },
+    { key: "media", label: t("news.filterMedia", "Медиа & OTT") },
+    { key: "erp", label: t("news.filterErp", "ERP & Автоматизация") },
+    { key: "saas", label: t("news.filterSaas", "SaaS & Финтех") },
+    { key: "retail", label: t("news.filterRetail", "E-Commerce") },
+  ];
+
   return (
-    <section className={styles.section} id="news" aria-label={t("news.title", "Последние новости")}>
+    <section
+      className={styles.section}
+      id="news"
+      aria-label={t("news.title", "Последние новости")}
+    >
       <FadeIn direction="up" fullWidth>
         <div className={styles.container}>
           <div className={styles.headerRow}>
             <div className={styles.titles}>
               <span className={styles.subtitle}>{t("news.subtitle", "новости")}</span>
-              <h2 className={styles.title}>{t("news.title", "Последние новости")}</h2>
+              <h2 className={styles.title}>
+                {showAll ? t("news.viewAll", "Все новости") : t("news.title", "Последние новости")}
+              </h2>
             </div>
 
-            <Link href={allCasesUrl} className={styles.allNewsBtn} aria-label={t("news.viewAll", "Все новости")}>
-              <span className={styles.allNewsText}>{t("news.viewAll", "Все новости")}</span>
-              <ArrowIcon gradient />
-            </Link>
+            {!showAll && (
+              <Link
+                href={allNewsUrl}
+                className={styles.allNewsBtn}
+                aria-label={t("news.viewAll", "Все новости")}
+              >
+                <span className={styles.allNewsText}>{t("news.viewAll", "Все новости")}</span>
+                <ArrowIcon gradient />
+              </Link>
+            )}
           </div>
 
-          <div className={styles.cardsGrid}>
-            {newsList.map((item, index) => {
+          {showAll && (
+            <div className={styles.filterRow} role="tablist">
+              {categories.map((cat) => {
+                const count =
+                  cat.key === "all"
+                    ? newsList.length
+                    : newsList.filter((item) => item.category === cat.key).length;
+                if (count === 0 && cat.key !== "all") return null;
+
+                const isActive = selectedCategory === cat.key;
+                return (
+                  <button
+                    key={cat.key}
+                    type="button"
+                    className={`${styles.filterBtn} ${isActive ? styles.filterBtnActive : ""}`}
+                    onClick={() => setSelectedCategory(cat.key)}
+                  >
+                    {cat.label} <span className={styles.countBadge}>{count}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          <div className={showAll ? styles.cardsGridAll : styles.cardsGrid}>
+            {displayedList.map((item, index) => {
               const tag = t(item.tagKey, item.defaultTag);
               const title = t(item.titleKey, item.defaultTitle);
               const desc = t(item.descKey, item.defaultDesc);
@@ -148,7 +157,10 @@ export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
                   <div className={styles.cardContent}>
                     <div className={styles.cardTop}>
                       <div className={styles.metaRow}>
-                        <time className={styles.date} dateTime={item.date.split(".").reverse().join("-")}>
+                        <time
+                          className={styles.date}
+                          dateTime={item.date.split(".").reverse().join("-")}
+                        >
                           {item.date}
                         </time>
                         <div className={styles.tagBadge}>
@@ -165,7 +177,9 @@ export default async function NewsSection({ lang = "ru" }: NewsSectionProps) {
                       className={styles.moreBtn}
                       aria-label={`${t("news.more", "Подробнее")}: ${title}`}
                     >
-                      <span className={styles.moreBtnText}>{t("news.more", "Подробнее")}</span>
+                      <span className={styles.moreBtnText}>
+                        {t("news.more", "Подробнее")}
+                      </span>
                       <ArrowIcon />
                     </Link>
                   </div>

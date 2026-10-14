@@ -812,8 +812,38 @@
         "date": "18.11.2025",
         "title": "ZudSMS — Bulk SMS Messaging Platform",
         "desc": "High-load cloud platform for bulk and transactional SMS notifications for business with instant delivery across all operators in Tajikistan."
+      },
+      "5": {
+        "tag": "SaaS & Chat",
+        "date": "05.12.2025",
+        "title": "LiveChat.TJ — Online Business Consultant",
+        "desc": "Omnichannel online chat widget and customer communication system for websites with web sockets and quick responses."
+      },
+      "6": {
+        "tag": "E-Commerce",
+        "date": "22.12.2025",
+        "title": "Royal Baby — Retail Automation & Telegram Bot",
+        "desc": "Online showcase launch, warehouse management integration, and Telegram bot for easy ordering and loyalty programs."
+      },
+      "7": {
+        "tag": "Social Projects",
+        "date": "14.01.2026",
+        "title": "Rushdi Kuhiston Foundation Portal",
+        "desc": "Platform for supporting development initiatives and grant programs in mountain areas of Tajikistan with online applications."
+      },
+      "8": {
+        "tag": "Media & OTT",
+        "date": "03.02.2026",
+        "title": "Somon TV Media Portal",
+        "desc": "Interactive broadcasting portal with live streaming, program archives, and responsive design for all screen sizes."
       }
-    }
+    },
+    "filterAll": "All",
+    "filterGov": "Gov Tech",
+    "filterMedia": "Media & OTT",
+    "filterErp": "ERP & Automation",
+    "filterSaas": "SaaS & Fintech",
+    "filterRetail": "E-Commerce"
   },
   "media": {
     "subtitle": "media",
