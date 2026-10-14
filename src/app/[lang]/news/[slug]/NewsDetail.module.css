@@ -139,7 +139,7 @@
 .bannerWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 6.5;
   max-height: 540px;
   border-radius: 16px;
   overflow: hidden;
