@@ -8,6 +8,7 @@ import styles from "./Header.module.css";
 import { servicesNav } from "@/const/services-nav";
 import { productsNav, portfolioNav, partnersNav, HeaderNavItem } from "@/const/header-nav";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { LANG_MENU_ORDER, LOCALE_META, isLocale, type Locale } from "@/utils/locales";
 
 const DownArrow = () => (
   <svg
@@ -57,6 +58,11 @@ const CloseIcon = () => (
   </svg>
 );
 
+// Clear any previous NEXT_LOCALE cookie so it never forces redirects
+function clearLocaleCookie() {
+  document.cookie = "NEXT_LOCALE=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+}
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -66,18 +72,15 @@ export default function Header() {
   const pathname = usePathname();
 
   const segments = pathname.split("/").filter(Boolean);
-  const currentLang = segments[0] === "tj" || segments[0] === "en" ? segments[0] : "ru";
+  const hasLocalePrefix = isLocale(segments[0]);
+  const currentLang: Locale = hasLocalePrefix ? (segments[0] as Locale) : "ru";
+  const subPath = (hasLocalePrefix ? segments.slice(1) : segments).join("/");
 
   const changeLanguage = (lang: string) => {
     setIsLangMenuOpen(false);
     if (lang === currentLang) return;
-    const pathSegments = pathname.split("/").filter(Boolean);
-    const hasLocalePrefix = pathSegments[0] === "tj" || pathSegments[0] === "en" || pathSegments[0] === "ru";
-    const cleanSegments = hasLocalePrefix ? pathSegments.slice(1) : pathSegments;
-    const subPath = cleanSegments.join("/");
 
-    // Clear any previous NEXT_LOCALE cookie so it never forces redirects
-    document.cookie = "NEXT_LOCALE=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    clearLocaleCookie();
 
     const targetUrl = lang === "ru"
       ? (subPath ? `/${subPath}` : "/")
@@ -88,9 +91,6 @@ export default function Header() {
   };
 
   const getLangHref = (lang: string) => {
-    const pathSegments = pathname.split("/").filter(Boolean);
-    const hasLocalePrefix = ["tj", "en", "ru"].includes(pathSegments[0]);
-    const subPath = (hasLocalePrefix ? pathSegments.slice(1) : pathSegments).join("/");
     if (lang === "ru") return subPath ? `/${subPath}` : "/";
     return subPath ? `/${lang}/${subPath}` : `/${lang}`;
   };
@@ -150,28 +150,6 @@ export default function Header() {
       }
     } else {
       closeMenu();
-    }
-  };
-
-  const getLangDisplayName = (l: string) => {
-    switch (l) {
-      case "tj":
-        return "ТҶ";
-      case "en":
-        return "EN";
-      default:
-        return "РУ";
-    }
-  };
-
-  const getLangFlag = (l: string) => {
-    switch (l) {
-      case "tj":
-        return "🇹🇯";
-      case "en":
-        return "🇬🇧";
-      default:
-        return "🇷🇺";
     }
   };
 
@@ -267,7 +245,7 @@ export default function Header() {
             localeHref("services"),
             servicesNav.map((service) => ({
               href: localeHref(`services/${service.slug}`),
-              label: service.name[currentLang as "ru" | "en" | "tj"],
+              label: service.name[currentLang],
             })),
             { href: localeHref("services"), label: t("services.allServices", "Все услуги") },
           )}
@@ -308,9 +286,9 @@ export default function Header() {
               className={styles.langSwitcher}
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
             >
-              <span className={styles.langFlag}>{getLangFlag(currentLang)}</span>
+              <span className={styles.langFlag}>{LOCALE_META[currentLang].flag}</span>
               <span className={styles.langText}>
-                {getLangDisplayName(currentLang)}
+                {LOCALE_META[currentLang].short}
               </span>
               <DownArrow />
             </div>
@@ -320,42 +298,23 @@ export default function Header() {
                 className={styles.langDropdown}
                 style={isLangMenuOpen ? undefined : { display: "none" }}
               >
-                <a
-                  href={getLangHref("tj")}
-                  hrefLang={"tg"}
-                  className={styles.langOption}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    changeLanguage("tj");
-                  }}
-                >
-                  <span className={styles.langFlag}>🇹🇯</span>
-                  ТҶ
-                </a>
-                <a
-                  href={getLangHref("ru")}
-                  hrefLang={"ru"}
-                  className={styles.langOption}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    changeLanguage("ru");
-                  }}
-                >
-                  <span className={styles.langFlag}>🇷🇺</span>
-                  РУ
-                </a>
-                <a
-                  href={getLangHref("en")}
-                  hrefLang={"en"}
-                  className={styles.langOption}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    changeLanguage("en");
-                  }}
-                >
-                  <span className={styles.langFlag}>🇬🇧</span>
-                  EN
-                </a>
+                {LANG_MENU_ORDER.map((lang) => (
+                  <a
+                    key={lang}
+                    href={getLangHref(lang)}
+                    hrefLang={LOCALE_META[lang].hreflang}
+                    lang={LOCALE_META[lang].hreflang}
+                    dir={LOCALE_META[lang].dir}
+                    className={`${styles.langOption} ${lang === currentLang ? styles.langOptionActive : ""}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      changeLanguage(lang);
+                    }}
+                  >
+                    <span className={styles.langFlag}>{LOCALE_META[lang].flag}</span>
+                    {LOCALE_META[lang].name}
+                  </a>
+                ))}
               </div>
             )}
           </div>

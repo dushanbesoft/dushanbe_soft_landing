@@ -237,8 +237,8 @@
 /* Align with the site grid: 15px side gutter on mobile */
 @media (max-width: 768px) {
   .section {
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
 }
 

@@ -209,7 +209,7 @@
 .videoBadge {
   position: absolute;
   top: 12px;
-  left: 12px;
+  inset-inline-start: 12px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -229,7 +229,7 @@
 .photoBadge {
   position: absolute;
   top: 12px;
-  left: 12px;
+  inset-inline-start: 12px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -249,7 +249,7 @@
 .durationBadge {
   position: absolute;
   top: 12px;
-  right: 12px;
+  inset-inline-end: 12px;
   padding: 3px 8px;
   border-radius: var(--radius-sm);
   background: rgba(0, 6, 7, 0.8);
@@ -470,7 +470,7 @@
 .closeBtn {
   position: absolute;
   top: 16px;
-  right: 16px;
+  inset-inline-end: 16px;
   background: rgba(0, 6, 7, 0.8);
   border: 1px solid rgba(var(--accent-rgb), 0.6);
   color: #fff;
@@ -614,14 +614,14 @@
 
 /* Align with the site grid: 30px side gutter on desktop, 15px on mobile */
 .section {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
   }
 }
 
@@ -661,7 +661,7 @@
   overflow: hidden;
   background: var(--bg-elevated);
   cursor: pointer;
-  text-align: left;
+  text-align: start;
   isolation: isolate;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
@@ -708,7 +708,7 @@
 .reelTag {
   position: absolute;
   top: 12px;
-  left: 12px;
+  inset-inline-start: 12px;
   z-index: 3;
   padding: 4px 10px;
   border-radius: var(--radius-pill);

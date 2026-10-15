@@ -9,14 +9,16 @@ import initTranslations from "../../../../i18n";
 import TranslationsProvider from "../../../../../components/TranslationsProvider";
 import { Metadata } from "next";
 import { getTranslated } from "../../../../../utils/translation";
+import { LOCALES } from "../../../../../utils/locales";
 import {
   breadcrumbJsonLd,
   buildPageMetadata,
   casesCrumb,
+  describe,
   homeCrumb,
   jsonLdString,
   localeUrl,
-  truncate,
+  shortName,
 } from "../../../../../utils/seo";
 
 const i18nNamespaces = ["common"];
@@ -68,7 +70,7 @@ const ChevronRightIcon = () => (
 );
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string; componentSlug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -122,10 +124,15 @@ export async function generateMetadata({
   return buildPageMetadata({
     lang,
     path: `cases/${slug}/${componentSlug}`,
-    title: `${componentTitle} — ${projectTitle}`,
-    description: truncate(getTranslated(component.shortInfo, lang)),
+    title: `${componentTitle} — ${shortName(projectTitle)}`,
+    // Some components have a one-line body; the project summary fills the rest.
+    description: describe(
+      getTranslated(component.shortInfo, lang),
+      `${getTranslated(component.fullInfo, lang)}\n${t(`projects.${project.slug}.description`, { defaultValue: "" })}`,
+    ),
     image: { url: component.imageSrc, alt: componentTitle },
     type: "article",
+    contentPage: true,
   });
 }
 

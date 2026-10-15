@@ -407,14 +407,14 @@
 
 /* Align with the site grid: 30px side gutter on desktop, 15px on mobile */
 .section {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
   }
 }
 

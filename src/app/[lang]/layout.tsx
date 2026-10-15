@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../../styles/globals.css";
-import { dir } from 'i18next';
 import { i18nConfig } from "../../../i18nConfig";
 import { ReactNode } from "react";
-import { tektur, nunitoSans } from "../../styles/fonts";
+import { tektur, nunitoSans, vazirmatn } from "../../styles/fonts";
 
 import initTranslations from "../i18n";
+import InlineScript from "../../components/InlineScript";
 import {
   COMPANY,
   OG_IMAGE,
@@ -18,6 +18,7 @@ import {
   buildPageMetadata,
   jsonLdString,
 } from "../../utils/seo";
+import { LOCALE_META, localeDir, localeHreflang } from "../../utils/locales";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -25,7 +26,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const defaultTitle = t("seo.default_title", "Dushanbe Soft | Разработка программного обеспечения");
   const defaultDesc = t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.");
+  // Site-wide defaults only. Canonical, hreflang, robots and og:url belong to
+  // each page; inheriting the home page's would point other URLs (e.g. 404s) at "/".
   const page = buildPageMetadata({ lang, path: "", title: defaultTitle, description: defaultDesc });
+  delete page.alternates;
+  delete page.robots;
+  if (page.openGraph) delete page.openGraph.url;
 
   return {
     ...page,
@@ -44,17 +50,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       email: false,
       address: false,
       telephone: false,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -86,7 +81,7 @@ export default async function RootLayout({
 }) {
   const { lang } = await params;
   const { t } = await initTranslations(lang, ["common"]);
-  const inLanguage = lang === 'tj' ? 'tg' : lang;
+  const inLanguage = localeHreflang(lang);
 
   // One entity graph for the whole site: the organization (as a local
   // ProfessionalService) and the website it publishes. Pages reference
@@ -158,27 +153,25 @@ export default async function RootLayout({
         '@id': WEBSITE_ID,
         url: SITE_URL,
         name: SITE_NAME,
-        inLanguage: ['ru', 'tg', 'en'],
+        inLanguage: Object.values(LOCALE_META).map((m) => m.hreflang),
         publisher: { '@id': ORGANIZATION_ID },
       },
     ],
   };
 
   return (
-    <html lang={inLanguage} dir={dir(lang)} data-theme="dark" suppressHydrationWarning>
+    <html lang={inLanguage} dir={localeDir(lang)} data-theme="dark" suppressHydrationWarning>
       <head>
         {/* Apply the saved theme before first paint to avoid a flash */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem("ds-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`,
-          }}
+        <InlineScript
+          html={`try{var t=localStorage.getItem("ds-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }}
         />
       </head>
-      <body className={`${tektur.variable} ${nunitoSans.variable}`}>
+      <body className={`${tektur.variable} ${nunitoSans.variable} ${vazirmatn.variable}`}>
         {children}
         <Script
           id="livechat-widget"

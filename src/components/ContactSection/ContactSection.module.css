@@ -380,7 +380,7 @@
 
 .selectArrow {
   position: absolute;
-  right: 20px;
+  inset-inline-end: 20px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;

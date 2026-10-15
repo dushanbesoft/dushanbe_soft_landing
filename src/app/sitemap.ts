@@ -3,24 +3,24 @@ import { ProductSite } from '../const/product-site';
 import { jobsData } from '../const/jobsData';
 import { newsList } from '../const/news-data';
 import { servicesList } from '../const/services-data';
-import { i18nConfig } from '../../i18nConfig';
-import { absoluteUrl, languageAlternates, localeUrl, ruDateToIso } from '../utils/seo';
+import { absoluteUrl, languageAlternates, localeUrl, publishedLocales, ruDateToIso } from '../utils/seo';
 
 type Entry = MetadataRoute.Sitemap[number];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const languages = i18nConfig.locales;
   const entries: MetadataRoute.Sitemap = [];
 
-  // Emit one URL per locale, each carrying the full hreflang set.
+  // Emit one URL per published locale, each carrying the full hreflang set.
+  // `contentPage` paths only exist in the hand-translated locales (see seo.ts).
   const add = (
     path: string,
     options: Omit<Entry, 'url' | 'alternates'> = {},
+    contentPage = false,
   ) => {
-    languages.forEach((lang) => {
+    publishedLocales(contentPage).forEach((lang) => {
       entries.push({
         url: localeUrl(lang, path),
-        alternates: { languages: languageAlternates(path) },
+        alternates: { languages: languageAlternates(path, contentPage) },
         ...options,
       });
     });
@@ -31,9 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const latestNews = newsDates[newsDates.length - 1];
 
   add('', { changeFrequency: 'weekly', priority: 1.0, lastModified: latestNews });
-  add('services', { changeFrequency: 'monthly', priority: 0.9 });
+  add('services', { changeFrequency: 'monthly', priority: 0.9 }, true);
   servicesList.forEach((service) => {
-    add(`services/${service.slug}`, { changeFrequency: 'monthly', priority: 0.9 });
+    add(`services/${service.slug}`, { changeFrequency: 'monthly', priority: 0.9 }, true);
   });
   add('products', { changeFrequency: 'monthly', priority: 0.8 });
   add('cases', { changeFrequency: 'monthly', priority: 0.8 });
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     project.projectComponents?.forEach((group) => {
       group.items.forEach((item) => {
         if (item.slug) {
-          add(`cases/${project.slug}/${item.slug}`, { changeFrequency: 'yearly', priority: 0.4 });
+          add(`cases/${project.slug}/${item.slug}`, { changeFrequency: 'yearly', priority: 0.4 }, true);
         }
       });
     });
@@ -62,11 +62,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
       lastModified: ruDateToIso(item.date),
       images: [absoluteUrl(item.image)],
-    });
+    }, true);
   });
 
   jobsData.forEach((job) => {
-    add(`jobs/${job.slug}`, { changeFrequency: 'weekly', priority: 0.6 });
+    add(`jobs/${job.slug}`, { changeFrequency: 'weekly', priority: 0.6 }, true);
   });
 
   return entries;

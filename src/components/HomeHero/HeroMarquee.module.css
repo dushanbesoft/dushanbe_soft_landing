@@ -7,6 +7,8 @@
 }
 
 .marqueeContent {
+  /* translateX animation assumes LTR flow, also on fa/ar pages */
+  direction: ltr;
   display: flex;
   align-items: center;
   gap: 30px;

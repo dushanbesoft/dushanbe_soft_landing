@@ -48,6 +48,7 @@ const ArrowLeftIcon = () => (
 );
 
 import { Metadata } from "next";
+import { LOCALES } from "@/utils/locales";
 import {
   ORGANIZATION_ID,
   absoluteUrl,
@@ -62,7 +63,7 @@ import {
 } from "../../../../utils/seo";
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string }[] = [];
 
   languages.forEach((lang) => {

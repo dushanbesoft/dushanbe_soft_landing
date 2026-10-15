@@ -1,5 +1,7 @@
+export const LOCALES = ['ru', 'en', 'tj', 'uz', 'kk', 'ky', 'tk', 'fa', 'ar'] as const;
+
 export const i18nConfig = {
-  locales: ['ru', 'en', 'tj'],
+  locales: [...LOCALES],
   defaultLocale: 'ru',
   prefixDefault: false,
   localeDetector: false as const,

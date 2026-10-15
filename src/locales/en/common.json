@@ -65,6 +65,25 @@
       "Tailwind CSS",
       "Vite",
       "Webpack"
+    ],
+    "prevSlide": "Previous story",
+    "nextSlide": "Next story",
+    "slideOf": "{{current}} of {{total}}",
+    "play": "Start autoplay",
+    "pause": "Pause autoplay",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
     ]
   },
   "products": {
@@ -605,8 +624,8 @@
     "copyright": "© 2017–2026 Dushanbe Soft. All rights reserved."
   },
   "seo": {
-    "default_title": "Dushanbe Soft — Leading IT Company in Tajikistan | Software & Web Development",
-    "default_description": "Dushanbe Soft is a top IT company in Dushanbe, Tajikistan. We specialize in software development, mobile apps, web development, ERP and CRM systems for business and government.",
+    "default_title": "Dushanbe Soft — Software & Web Development in Tajikistan",
+    "default_description": "IT company in Dushanbe building websites, mobile apps, CRM and ERP systems for business and government in Tajikistan since 2017.",
     "keywords": "it companies in tajikistan, it company dushanbe, software development tajikistan, web development dushanbe, mobile app development, business automation, dushanbe soft, fintech, crm, erp",
     "products_title": "Ready-made IT Products for Business: SMS Gateway, Live Chat, CRM",
     "products_description": "Dushanbe Soft products for businesses in Tajikistan: ZudSMS bulk SMS platform, LiveChat TJ online chat, CRM systems and payment solutions.",

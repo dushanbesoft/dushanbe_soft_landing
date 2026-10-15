@@ -93,6 +93,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Persian/Arabic: the brand fonts have no Arabic glyphs */
+html[dir="rtl"] {
+  --page-dir: rtl;
+}
+
+html[dir="rtl"] body {
+  --font-tektur: var(--font-vazirmatn);
+  --font-nunito-sans: var(--font-vazirmatn);
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

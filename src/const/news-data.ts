@@ -1,3 +1,5 @@
+import { contentLocale } from "../utils/locales";
+
 export interface NewsSectionContent {
   heading: string;
   text: string;
@@ -17,6 +19,8 @@ export interface NewsItem {
   id: string;
   slug: string;
   image: string;
+  /** Wide, high-resolution image for the home page banner (~3280x1520). Falls back to `image`. */
+  heroImage?: string;
   date: string;
   category: string;
   readTime: string;
@@ -82,6 +86,7 @@ const newsItems: NewsItem[] = [
     id: "2",
     slug: "mavji-somon",
     image: "/images/projects/mavjisomon.webp",
+    heroImage: "/images/news/mavji-somon-banner.webp",
     date: "15.09.2025",
     category: "media",
     readTime: "3 мин",
@@ -117,6 +122,7 @@ const newsItems: NewsItem[] = [
     id: "3",
     slug: "sohktor",
     image: "/images/projects/project-sohktor.webp",
+    heroImage: "/images/news/sohktor-banner.webp",
     date: "02.10.2025",
     category: "erp",
     readTime: "4 мин",
@@ -148,6 +154,7 @@ const newsItems: NewsItem[] = [
     id: "4",
     slug: "zudsms",
     image: "/images/projects/zudsms.webp",
+    heroImage: "/images/news/zudsms-banner.webp",
     date: "18.11.2025",
     category: "saas",
     readTime: "3 мин",
@@ -179,6 +186,7 @@ const newsItems: NewsItem[] = [
     id: "5",
     slug: "livechat",
     image: "/images/projects/livechat.webp",
+    heroImage: "/images/news/livechat-banner.webp",
     date: "05.12.2025",
     category: "saas",
     readTime: "3 мин",
@@ -257,6 +265,7 @@ const newsItems: NewsItem[] = [
     id: "8",
     slug: "somontv",
     image: "/images/projects/somontv.webp",
+    heroImage: "/images/news/somontv-banner.webp",
     date: "03.02.2026",
     category: "media",
     readTime: "3 мин",
@@ -283,6 +292,7 @@ const newsItems: NewsItem[] = [
     id: "9",
     slug: "world-bank-tajikistan-digital-foundations",
     image: "/images/news/world-bank-tdfp.webp",
+    heroImage: "/images/news/world-bank-tdfp-banner.webp",
     date: "09.07.2026",
     category: "gov",
     readTime: "2 мин",
@@ -378,6 +388,7 @@ const newsItems: NewsItem[] = [
     id: "10",
     slug: "navo-radio",
     image: "/images/projects/navo.webp",
+    heroImage: "/images/news/navo-radio-banner.webp",
     date: "2024",
     category: "media",
     readTime: "2 мин",
@@ -482,7 +493,8 @@ export const newsList: NewsItem[] = [...newsItems].sort((a, b) => {
 });
 
 export function getNewsContent(item: NewsItem, lang: string): NewsFullContent {
-  if (lang === "en" || lang === "tj") return item.localizedContent?.[lang] ?? item.fullContent;
+  const content = contentLocale(lang);
+  if (content === "en" || content === "tj") return item.localizedContent?.[content] ?? item.fullContent;
   return item.fullContent;
 }
 

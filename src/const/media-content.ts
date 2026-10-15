@@ -1,3 +1,5 @@
+import { contentLocale } from "../utils/locales";
+
 export interface MediaItem {
   id: string;
   type: 'video' | 'image';
@@ -302,7 +304,7 @@ export const mediaMeta: Record<string, { title: L10n; tag: L10n }> = {
 
 export function mediaTitle(item: MediaItem, lang: string): string {
   const meta = mediaMeta[item.id];
-  if (meta) return meta.title[lang as keyof L10n] ?? meta.title.ru;
+  if (meta) return meta.title[contentLocale(lang)] ?? meta.title.ru;
   // Fallback: first sentence of the post without hashtags and emoji
   const clean = item.caption.replace(/#\S+/g, "").replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\uFE0F]/gu, "").trim();
   const first = clean.split(/(?<=[.!?])\s/)[0];
@@ -311,7 +313,7 @@ export function mediaTitle(item: MediaItem, lang: string): string {
 
 export function mediaTag(item: MediaItem, lang: string): string | null {
   const meta = mediaMeta[item.id];
-  return meta ? meta.tag[lang as keyof L10n] ?? meta.tag.ru : null;
+  return meta ? meta.tag[contentLocale(lang)] ?? meta.tag.ru : null;
 }
 
 /** Home page reel strip, in display order */

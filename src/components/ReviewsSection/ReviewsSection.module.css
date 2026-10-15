@@ -54,6 +54,8 @@
 }
 
 .carouselContainer {
+  /* translateX slide offsets assume LTR order; cards restore page direction */
+  direction: ltr;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -68,6 +70,7 @@
 }
 
 .card {
+  direction: var(--page-dir, ltr);
   display: flex;
   padding: 30px;
   flex-direction: column;
@@ -298,7 +301,7 @@
   height: 40px;
   position: absolute;
   border-radius: var(--radius-pill);
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   z-index: -1;
 }
@@ -318,7 +321,7 @@
 /* Eyebrow follows the left-aligned title on mobile */
 @media (max-width: 768px) {
   .subtitle {
-    text-align: left;
+    text-align: start;
   }
 }
 

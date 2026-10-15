@@ -205,13 +205,13 @@
 
 .descList li {
   position: relative;
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 
 .descList li::before {
   content: "";
   position: absolute;
-  left: 4px;
+  inset-inline-start: 4px;
   top: 0.7em;
   width: 6px;
   height: 6px;

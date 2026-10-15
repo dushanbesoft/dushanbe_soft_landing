@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import type { Metadata } from "next";
 import initTranslations from "../i18n";
+import { buildPageMetadata } from "../../utils/seo";
 import TranslationsProvider from "../../components/TranslationsProvider";
 import Header from "../../components/Header/Header";
 import HomeHero from "../../components/HomeHero/HomeHero";
@@ -23,6 +25,18 @@ import MediaSection from "../../components/MediaSection/MediaSection";
 import TrustBanner from "../../components/TrustBanner/TrustBanner";
 
 const i18nNamespaces = ["common"];
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const { t } = await initTranslations(lang, i18nNamespaces);
+  return buildPageMetadata({
+    lang,
+    path: "",
+    title: t("seo.default_title"),
+    description: t("seo.default_description"),
+    absoluteTitle: true,
+  });
+}
 
 export default async function Page({
   params,

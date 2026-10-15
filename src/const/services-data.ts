@@ -1,3 +1,5 @@
+import { contentLocale } from "../utils/locales";
+
 export type ServiceLang = "ru" | "en" | "tj";
 
 export interface ServiceSection {
@@ -1037,7 +1039,7 @@ export function getServiceBySlug(slug: string): ServiceItem | undefined {
 }
 
 export function getServiceContent(service: ServiceItem, lang: string): ServiceContent {
-  return service.content[(lang as ServiceLang)] ?? service.content.ru;
+  return service.content[contentLocale(lang)] ?? service.content.ru;
 }
 
 /** UI strings for the services hub and detail pages */

@@ -25,7 +25,8 @@ export default async function initTranslations(
   await i18nInstance.init({
     lng: locale,
     resources,
-    fallbackLng: i18nConfig.defaultLocale,
+    // Persian/Arabic readers are more likely to read English than Russian.
+    fallbackLng: { fa: ["en", "ru"], ar: ["en", "ru"], default: [i18nConfig.defaultLocale] },
     supportedLngs: i18nConfig.locales,
     defaultNS: namespaces[0],
     fallbackNS: namespaces[0],

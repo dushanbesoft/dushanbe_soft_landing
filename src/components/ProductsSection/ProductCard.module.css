@@ -121,6 +121,7 @@
 }
 
 .marqueeRow {
+  direction: ltr;
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;

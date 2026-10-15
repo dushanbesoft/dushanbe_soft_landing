@@ -17,6 +17,13 @@ import {
   jsonLdString,
   localeUrl,
 } from "@/utils/seo";
+import { LOCALES } from "@/utils/locales";
+
+const JOB_SUFFIX: Record<string, string> = {
+  ru: "вакансия в Душанбе", en: "job in Dushanbe", tj: "ҷои корӣ дар Душанбе",
+  uz: "Dushanbedagi vakansiya", kk: "Душанбедегі бос орын", ky: "Душанбедеги бош орун",
+  tk: "Duşenbedäki boş iş orny", fa: "فرصت شغلی در دوشنبه", ar: "وظيفة في دوشنبه",
+};
 
 type DescBlock =
   | { type: "heading"; text: string }
@@ -54,7 +61,7 @@ function parseJobDescription(raw: string): DescBlock[] {
 }
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -81,10 +88,11 @@ export async function generateMetadata({
   return buildPageMetadata({
     lang,
     path: `jobs/${slug}`,
-    title: `${job.title} — ${lang === "en" ? "job in Dushanbe" : lang === "tj" ? "ҷои корӣ дар Душанбе" : "вакансия в Душанбе"}`,
+    title: `${job.title} — ${JOB_SUFFIX[lang] ?? JOB_SUFFIX.ru}`,
     description: job.description,
     type: "article",
     publishedTime: job.datePosted,
+    contentPage: true,
   });
 }
 

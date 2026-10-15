@@ -39,6 +39,8 @@ const nextConfig: NextConfig = {
     // Prefer modern formats: AVIF first (best compression), WebP fallback,
     // then the browser falls back to the original for unsupported cases.
     formats: ["image/avif", "image/webp"],
+    // 90 is used by the home page news banner, where screenshots fill a wide frame.
+    qualities: [75, 90],
     // Cache optimized images for 31 days to cut repeat revalidations.
     minimumCacheTTL: 2678400,
     remotePatterns: [

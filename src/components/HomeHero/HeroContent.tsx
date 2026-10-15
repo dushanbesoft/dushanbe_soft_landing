@@ -42,6 +42,7 @@ function TypedTitle({ text }: { text: string }) {
 }
 
 import dynamic from "next/dynamic";
+import { contentLocale } from "@/utils/locales";
 // Loaded after hydration: the modal is not needed for the first paint.
 const ContactModal = dynamic(() => import("../ContactModal/ContactModal"), { ssr: false });
 
@@ -80,13 +81,7 @@ export default function HeroContent() {
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
           </button>
           <a 
-            href={
-              i18n.language === "en"
-                ? "/files/EN - Dushanbe- Soft.pdf"
-                : i18n.language === "tj"
-                ? "/files/TJ - Dushanbe- Soft.pdf"
-                : "/files/RU - Dushanbe- Soft.pdf"
-            }
+            href={`/files/${contentLocale(i18n.language).toUpperCase()} - Dushanbe- Soft.pdf`}
             download
             target="_blank"
             rel="noopener noreferrer"

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import styles from "./NewsDetail.module.css";
 import { newsList, getNewsBySlug, getRelatedNews, getNewsContent } from "@/const/news-data";
+import { LOCALES, contentLocale, localeHreflang } from "@/utils/locales";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -26,7 +27,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -56,6 +57,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     image: { url: item.image, alt: t(item.titleKey, item.defaultTitle) },
     type: "article",
     publishedTime: ruDateToIso(item.date),
+    contentPage: true,
   });
 }
 
@@ -106,7 +108,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
       image: [absoluteUrl(item.image)],
       datePublished: published,
       dateModified: published,
-      inLanguage: lang === "tj" ? "tg" : lang,
+      inLanguage: localeHreflang(contentLocale(lang)),
       mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
       author: { "@type": "Organization", "@id": ORGANIZATION_ID, name: "Dushanbe Soft" },
       publisher: { "@id": ORGANIZATION_ID },

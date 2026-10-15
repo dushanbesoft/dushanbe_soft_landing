@@ -43,7 +43,7 @@
 
 .yearBadge {
   position: absolute;
-  right: 10px;
+  inset-inline-end: 10px;
   display: flex;
   padding: 5px 10px;
   justify-content: center;
@@ -119,6 +119,7 @@
 }
 
 .marqueeRow {
+  direction: ltr;
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;

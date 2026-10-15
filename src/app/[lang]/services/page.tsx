@@ -6,7 +6,8 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import CTAActions from "@/components/CTASection/CTAActions";
-import { servicesList, getServiceContent, servicesUi, ServiceLang } from "@/const/services-data";
+import { servicesList, getServiceContent, servicesUi } from "@/const/services-data";
+import { contentLocale } from "@/utils/locales";
 import {
   ORGANIZATION_ID,
   breadcrumbJsonLd,
@@ -21,20 +22,21 @@ const i18nNamespaces = ["common"];
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const ui = servicesUi[lang as ServiceLang] ?? servicesUi.ru;
+  const ui = servicesUi[contentLocale(lang)];
 
   return buildPageMetadata({
     lang,
     path: "services",
     title: ui.hubMetaTitle,
     description: ui.hubDescription,
+    contentPage: true,
   });
 }
 
 export default async function ServicesPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const { t, resources } = await initTranslations(lang, i18nNamespaces);
-  const ui = servicesUi[lang as ServiceLang] ?? servicesUi.ru;
+  const ui = servicesUi[contentLocale(lang)];
 
   const jsonLd = [
     breadcrumbJsonLd([homeCrumb(lang), { name: ui.breadcrumb, url: localeUrl(lang, "services") }]),

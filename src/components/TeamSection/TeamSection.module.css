@@ -67,7 +67,7 @@
 
 .teamCarousel {
   display: flex;
-  padding-left: 15px;
+  padding-inline-start: 15px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -272,7 +272,7 @@
 }
 
 .statItem {
-  border-right: 1px solid var(--accent);
+  border-inline-end: 1px solid var(--accent);
 }
 
 .statValue {
@@ -362,7 +362,7 @@
     height: 40%;
   }
   .statItem {
-    border-right: none;
+    border-inline-end: none;
     border-bottom: 1px solid var(--accent);
   }
   .statItemLast {

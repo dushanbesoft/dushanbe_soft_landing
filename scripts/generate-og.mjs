@@ -10,9 +10,11 @@ fs.mkdirSync(outDir, { recursive: true });
 
 // Read names from the lightweight nav list (single source for menu + OG).
 const navSource = fs.readFileSync(path.join(root, "src/const/services-nav.ts"), "utf8");
-const services = [...navSource.matchAll(/slug: "([^"]+)", name: \{ ru: "([^"]+)", en: "([^"]+)", tj: "([^"]+)" \}/g)].map(
-  (m) => ({ slug: m[1], name: { ru: m[2], en: m[3], tj: m[4] } }),
-);
+// Service pages only have ru/en/tj content, so OG images exist for those locales only.
+const services = [...navSource.matchAll(/slug: "([^"]+)",\s*name: \{([^}]+)\}/g)].map((m) => {
+  const pick = (lang) => m[2].match(new RegExp(`\\b${lang}: "([^"]+)"`))[1];
+  return { slug: m[1], name: { ru: pick("ru"), en: pick("en"), tj: pick("tj") } };
+});
 
 const subtitle = {
   ru: "Dushanbe Soft · Душанбе, Таджикистан",

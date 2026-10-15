@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { i18nConfig } from "../../i18nConfig";
+import { CONTENT_LOCALES, LOCALE_META, hasOwnContent } from "./locales";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj").replace(/\/$/, "");
 export const SITE_NAME = "Dushanbe Soft";
@@ -56,20 +57,77 @@ export function absoluteUrl(src: string): string {
   return `${SITE_URL}${src.startsWith("/") ? "" : "/"}${encodeURI(decodeURI(src))}`;
 }
 
+/**
+ * Locales a page is published in. Pages built from long-form content
+ * (`contentPage`) only exist as real translations in CONTENT_LOCALES; the
+ * other locales show fallback text and stay out of hreflang and the sitemap.
+ */
+export function publishedLocales(contentPage = false): readonly string[] {
+  return contentPage ? CONTENT_LOCALES : i18nConfig.locales;
+}
+
 /** hreflang map. Our "tj" locale is ISO 639-1 "tg" (Tajik). */
-export function languageAlternates(path = ""): Record<string, string> {
-  return {
-    ru: localeUrl("ru", path),
-    tg: localeUrl("tj", path),
-    en: localeUrl("en", path),
-    "x-default": localeUrl("ru", path),
-  };
+export function languageAlternates(path = "", contentPage = false): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const lang of publishedLocales(contentPage)) {
+    map[LOCALE_META[lang as keyof typeof LOCALE_META].hreflang] = localeUrl(lang, path);
+  }
+  map["x-default"] = localeUrl(i18nConfig.defaultLocale, path);
+  return map;
 }
 
 export function ogLocale(lang: string): string {
-  if (lang === "tj") return "tg_TJ";
-  if (lang === "en") return "en_US";
-  return "ru_RU";
+  return LOCALE_META[lang as keyof typeof LOCALE_META]?.og ?? LOCALE_META.ru.og;
+}
+
+const INDEXABLE: Metadata["robots"] = {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+  },
+};
+
+/** Google shows roughly 60–65 characters of a title before truncating it. */
+const MAX_TITLE_LENGTH = 65;
+const BRAND_SUFFIX = ` | ${SITE_NAME}`;
+
+/**
+ * The layout template appends " | Dushanbe Soft". Skip it when the page title
+ * already names the brand or would be truncated with it; the brand is still
+ * present in og:site_name and the Organization JSON-LD.
+ */
+function pageTitle(title: string, absolute?: boolean): Metadata["title"] {
+  if (absolute || title.includes(SITE_NAME) || title.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) {
+    return { absolute: title };
+  }
+  return title;
+}
+
+/** "ZudSMS – Платформа SMS-рассылок" → "ZudSMS": the name before a dash or colon. */
+export function shortName(title: string): string {
+  const name = title.split(/\s[—–-]\s|:\s/)[0].trim();
+  return name.length >= 3 ? name : title;
+}
+
+/**
+ * Meta description from a short lead plus body text: skips numbered headings
+ * and repeated sentences, then trims to ~160 characters on a word boundary.
+ */
+export function describe(lead: string, body = "", max = 160): string {
+  const parts: string[] = [];
+  for (const raw of [lead, ...body.split(/\n+/)]) {
+    const line = raw.trim();
+    if (!line || /^\d+\.\s/.test(line) || line.length < 25) continue;
+    if (parts.some((p) => p.includes(line) || line.includes(p))) continue;
+    parts.push(/[.!?…]$/.test(line) ? line : `${line}.`);
+    if (parts.join(" ").length >= max) break;
+  }
+  return truncate(parts.join(" ") || lead, max);
 }
 
 type PageMetaInput = {
@@ -81,6 +139,8 @@ type PageMetaInput = {
   type?: "website" | "article";
   publishedTime?: string;
   absoluteTitle?: boolean;
+  /** Page body comes from long-form content that only exists in CONTENT_LOCALES. */
+  contentPage?: boolean;
 };
 
 /**
@@ -96,17 +156,22 @@ export function buildPageMetadata({
   type = "website",
   publishedTime,
   absoluteTitle,
+  contentPage = false,
 }: PageMetaInput): Metadata {
   const url = localeUrl(lang, path);
   const img = image ? { ...image, url: absoluteUrl(image.url) } : OG_IMAGE;
-  const alternateLocale = ["ru", "en", "tj"].filter((l) => l !== lang).map(ogLocale);
+  const alternateLocale = publishedLocales(contentPage).filter((l) => l !== lang).map(ogLocale);
+  // Fallback-language copies of content pages must not compete with the originals.
+  const fallbackCopy = contentPage && !hasOwnContent(lang);
 
   return {
-    title: absoluteTitle ? { absolute: title } : title,
+    title: pageTitle(title, absoluteTitle),
     description,
+    // Set per page rather than in the layout, so 404s keep only Next's noindex.
+    robots: fallbackCopy ? { index: false, follow: true } : INDEXABLE,
     alternates: {
       canonical: url,
-      languages: languageAlternates(path),
+      languages: languageAlternates(path, contentPage),
     },
     openGraph: {
       title,
@@ -145,7 +210,10 @@ export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
   };
 }
 
-const HOME_LABEL: Record<string, string> = { ru: "Главная", en: "Home", tj: "Асосӣ" };
+const HOME_LABEL: Record<string, string> = {
+  ru: "Главная", en: "Home", tj: "Асосӣ", uz: "Bosh sahifa", kk: "Басты бет",
+  ky: "Башкы бет", tk: "Baş sahypa", fa: "صفحه اصلی", ar: "الرئيسية",
+};
 export function homeCrumb(lang: string) {
   return { name: HOME_LABEL[lang] ?? HOME_LABEL.ru, url: localeUrl(lang) };
 }
@@ -165,12 +233,19 @@ export function truncate(text: string, max = 160): string {
   return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
 }
 
-const CASE_LABEL: Record<string, string> = { ru: "кейс разработки", en: "case study", tj: "лоиҳаи таҳияшуда" };
+const CASE_LABEL: Record<string, string> = {
+  ru: "кейс разработки", en: "case study", tj: "лоиҳаи таҳияшуда", uz: "ishlab chiqilgan loyiha",
+  kk: "әзірлеу кейсі", ky: "иштелип чыккан долбоор", tk: "işlenip düzülen taslama",
+  fa: "نمونه کار", ar: "دراسة حالة",
+};
 export function caseTitle(title: string, lang: string): string {
   return `${title} — ${CASE_LABEL[lang] ?? CASE_LABEL.ru}`;
 }
 
-const CASES_LABEL: Record<string, string> = { ru: "Портфолио", en: "Portfolio", tj: "Портфолио" };
+const CASES_LABEL: Record<string, string> = {
+  ru: "Портфолио", en: "Portfolio", tj: "Портфолио", uz: "Portfolio", kk: "Портфолио",
+  ky: "Портфолио", tk: "Portfolio", fa: "نمونه کارها", ar: "معرض الأعمال",
+};
 export function casesCrumb(lang: string) {
   return { name: CASES_LABEL[lang] ?? CASES_LABEL.ru, url: localeUrl(lang, "cases") };
 }
