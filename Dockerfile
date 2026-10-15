@@ -37,6 +37,9 @@ COPY --from=prod-deps --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+# `next start` reads runtime settings (image qualities, formats, cache TTL)
+# from here; without it the image optimizer rejects q=90 with 400.
+COPY --from=builder --chown=nextjs:nodejs /app/next.config.ts ./next.config.ts
 # Lets `npm run indexnow` run inside the container after a deploy
 COPY --from=builder --chown=nextjs:nodejs /app/scripts/indexnow.mjs ./scripts/indexnow.mjs
 
