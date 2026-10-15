@@ -455,6 +455,16 @@
     "confy": {
       "title": "Confy",
       "description": "Promo website and raffle system for the Confy brand."
+    },
+    "mablagtj": {
+      "title": "Mablag.tj",
+      "description": "Cloud platform and ERP system for comprehensive financial, warehouse, and trade accounting with multi-user access, analytics, and cash register support.",
+      "tasks": [
+        "Architecture & UI/UX design",
+        "Promo landing page development",
+        "Admin panel (ERP/CRM) development",
+        "Financial and inventory management integration"
+      ]
     }
   },
   "partners": {

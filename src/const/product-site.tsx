@@ -3,6 +3,7 @@ import { livechatAccountScreens } from "./livechat-account-screens";
 import { zudsmsLandingScreens } from "./zudsms-landing-screens";
 import { zudsmsAccountScreens } from "./zudsms-account-screens";
 import { zudyobScreens } from "./zudyob-screens";
+import { mablagtjWebScreens, mablagtjAdminScreens } from "./mablagtj-screens";
 
 export interface ProductSiteItem {
   imageSrc: string;
@@ -10541,6 +10542,35 @@ This example shows how entered fields relate to the chat’s appearance. Placing
             fullInfo: { ru: "", en: "", tj: "" },
           },
         ],
+      },
+    ],
+  },
+  {
+    imageSrc: "/images/projects/mablagtj/web/lending-mablag-header-page.png",
+    bannerSrc: "/images/projects/mablagtj/web/lending-mablag-header-page.png",
+    bannerFit: "contain",
+    year: "2025",
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "REST API",
+      "ERP & CRM",
+    ],
+    slug: "mablagtj",
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: mablagtjWebScreens,
+      },
+      {
+        tabName: {
+          ru: "Панель управления",
+          en: "Admin Panel",
+          tj: "Панели идоракунӣ",
+        },
+        items: mablagtjAdminScreens,
       },
     ],
   },
