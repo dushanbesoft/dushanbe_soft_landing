@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./JobsSection.module.css";
-import ContactModal from "../ContactModal/ContactModal";
+import dynamic from "next/dynamic";
+// Loaded after hydration: the modal is not needed for the first paint.
+const ContactModal = dynamic(() => import("../ContactModal/ContactModal"), { ssr: false });
 import { useTranslation } from "react-i18next";
 
 export default function JobsCTA() {

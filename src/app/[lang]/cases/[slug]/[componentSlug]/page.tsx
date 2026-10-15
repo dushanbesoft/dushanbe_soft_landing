@@ -9,6 +9,17 @@ import initTranslations from "../../../../i18n";
 import TranslationsProvider from "../../../../../components/TranslationsProvider";
 import { Metadata } from "next";
 import { getTranslated } from "../../../../../utils/translation";
+import { LOCALES } from "../../../../../utils/locales";
+import {
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  casesCrumb,
+  describe,
+  homeCrumb,
+  jsonLdString,
+  localeUrl,
+  shortName,
+} from "../../../../../utils/seo";
 
 const i18nNamespaces = ["common"];
 
@@ -59,7 +70,7 @@ const ChevronRightIcon = () => (
 );
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string; componentSlug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -106,41 +117,23 @@ export async function generateMetadata({
 
   if (!component) return {};
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
-  const currentUrl = lang === "ru"
-    ? `${siteUrl}/cases/${slug}/${componentSlug}`
-    : `${siteUrl}/${lang}/cases/${slug}/${componentSlug}`;
+  const { t } = await initTranslations(lang, i18nNamespaces);
+  const projectTitle = t(`projects.${project.slug}.title`, { defaultValue: project.slug });
+  const componentTitle = getTranslated(component.title, lang);
 
-  return {
-    title: `${getTranslated(component.title, lang)} | ${project.slug}`,
-    description: getTranslated(component.shortInfo, lang),
-    openGraph: {
-      title: getTranslated(component.title, lang),
-      description: getTranslated(component.shortInfo, lang),
-      url: currentUrl,
-      images: [
-        {
-          url: component.imageSrc.startsWith("http")
-            ? component.imageSrc
-            : `${siteUrl}${component.imageSrc}`,
-          width: 1200,
-          height: 630,
-          alt: getTranslated(component.title, lang),
-        },
-      ],
-      locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
-      type: "article",
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        "tg": `${siteUrl}/tj/cases/${slug}/${componentSlug}`,
-        "ru": `${siteUrl}/cases/${slug}/${componentSlug}`,
-        "en": `${siteUrl}/en/cases/${slug}/${componentSlug}`,
-        "x-default": `${siteUrl}/cases/${slug}/${componentSlug}`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: `cases/${slug}/${componentSlug}`,
+    title: `${componentTitle} — ${shortName(projectTitle)}`,
+    // Some components have a one-line body; the project summary fills the rest.
+    description: describe(
+      getTranslated(component.shortInfo, lang),
+      `${getTranslated(component.fullInfo, lang)}\n${t(`projects.${project.slug}.description`, { defaultValue: "" })}`,
+    ),
+    image: { url: component.imageSrc, alt: componentTitle },
+    type: "article",
+    contentPage: true,
+  });
 }
 
 export default async function ComponentDetailsPage({
@@ -197,6 +190,19 @@ export default async function ComponentDetailsPage({
       resources={resources}
     >
       <main className={styles.main}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLdString(
+              breadcrumbJsonLd([
+                homeCrumb(lang),
+                casesCrumb(lang),
+                { name: projectTitle, url: localeUrl(lang, `cases/${slug}`) },
+                { name: getTranslated(component.title, lang), url: localeUrl(lang, `cases/${slug}/${componentSlug}`) },
+              ]),
+            ),
+          }}
+        />
         <div className="header-global header-fixed">
           <Header />
         </div>
@@ -204,16 +210,16 @@ export default async function ComponentDetailsPage({
         <div className={styles.topNav}>
           <Link href={lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`} className={styles.backBtn}>
             <ArrowLeftIcon />
-            <span>Вернуться к {projectTitle}</span>
+            <span>{t("ui.backTo", "Вернуться к")} {projectTitle}</span>
           </Link>
         </div>
 
         <div className={styles.heroOverlay}>
           <img 
-            src={component.imageSrc}  
+            src={component.imageSrc}
+            alt={`${getTranslated(component.title, lang)} — ${projectTitle}`}
             className={styles.hero} 
             style={componentGroup?.platform === "mobile" ? { maxHeight: "80vh", maxWidth: "450px", objectFit: "contain", margin: "0 auto", display: "block" } : undefined}
-            alt="imageSrc" 
           />
 
           {hasSiblings && prevSlug && (
@@ -260,7 +266,7 @@ export default async function ComponentDetailsPage({
           </div>
         </div>
 
-        <Footer />
+        <Footer lang={lang} />
       </main>
     </TranslationsProvider>
   );

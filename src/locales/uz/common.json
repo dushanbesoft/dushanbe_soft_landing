@@ -1,0 +1,924 @@
+{
+  "greeting": "Salom",
+  "welcome": "Dushanbe Soft’ga xush kelibsiz",
+  "header": {
+    "home": "Bosh sahifa",
+    "services": "Xizmatlar",
+    "products": "Biznes uchun",
+    "cases": "Portfolio",
+    "partners": "Hamkorlarimiz",
+    "about": "Biz haqimizda",
+    "contacts": "Kontaktlar",
+    "process": "Ishlab chiqish jarayoni",
+    "pricing": "Tariflar",
+    "careers": "Karyera",
+    "awards": "Mukofotlar",
+    "proposal": "Tijoriy taklif olish",
+    "allPartners": "Barcha hamkorlar"
+  },
+  "hero": {
+    "seoTitle": "Dushanbe Soft — Dushanbe, Tojikistondagi dasturiy ta’minot, veb-sayt va mobil ilovalar ishlab chiqish kompaniyasi",
+    "badge": "Biznes va davlat uchun IT yechimlar",
+    "title1": "Biznesni oldinga",
+    "title2": "olib boradigan texnologiyalar",
+    "subtitle": "Zamonaviy IT yechimlarni ishlab chiqamiz va joriy etamiz",
+    "btnPrimary": "Maslahat olish",
+    "btnSecondary": "Loyihalarni ko‘rish",
+    "marquee": [
+      "PHP",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "React",
+      "React Native",
+      "Next.js",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Laravel",
+      "Django",
+      "Flutter",
+      "Swift",
+      "Kotlin",
+      "Java",
+      "Spring Boot",
+      "Go",
+      ".NET",
+      "GraphQL",
+      "Socket.io",
+      "GitHub",
+      "Docker",
+      "Kubernetes",
+      "Nginx",
+      "AWS",
+      "Git",
+      "GitHub Actions",
+      "Kafka",
+      "RabbitMQ",
+      "Elasticsearch",
+      "Firebase",
+      "Tailwind CSS",
+      "Vite",
+      "Webpack"
+    ],
+    "prevSlide": "Oldingi yangilik",
+    "nextSlide": "Keyingi yangilik",
+    "slideOf": "{{current}} / {{total}}",
+    "play": "Avtoaylanishni yoqish",
+    "pause": "Avtoaylanishni to‘xtatish",
+    "months": [
+      "yanvar",
+      "fevral",
+      "mart",
+      "aprel",
+      "may",
+      "iyun",
+      "iyul",
+      "avgust",
+      "sentabr",
+      "oktabr",
+      "noyabr",
+      "dekabr"
+    ]
+  },
+  "products": {
+    "subtitle": "Mahsulotlarimiz",
+    "title": "Biznesingiz uchun tayyor mahsulotlar",
+    "allProducts": "Barcha mahsulotlar",
+    "zudsms": {
+      "title": "ZudSMS – SMS-xabarnoma platformasi",
+      "subtitle": "zudsms.tj",
+      "description": "Biznes uchun SMS-xabarlarni avtomatlashtirish va ommaviy yuborish bo‘yicha bulutli xizmat. Platforma Tojikistondagi barcha mobil operatorlar raqamlariga maqsadli va tranzaksion xabarlarni bir zumda yetkazadi, kompaniyalarga mijozlar sodiqligini va marketing kampaniyalari samaradorligini oshirishga yordam beradi.",
+      "tags": [
+        "To‘lov va SMS-shlyuz arxitekturasini ishlab chiqish",
+        "Barcha qurilmalar bilan to‘liq moslik",
+        "Tizimning yuqori barqarorligi va xabarlarning bir zumda yetkazilishi",
+        "Xabarnomalarni rejalashtirish va mijozlar bazasi bilan ishlash moduli",
+        "Tarif, balans va xabar shablonlarini boshqarish imkoniga ega shaxsiy kabinet",
+        "Tashqi CRM/ERP tizimlaridan xabarlarni avtomatik yuborish uchun REST API integratsiyasi"
+      ]
+    },
+    "livechat": {
+      "title": "LiveChat TJ - Onlayn chat",
+      "subtitle": "LiveChat TJ",
+      "description": "Sayt tashrifchilarini jamoangiz bilan real vaqtda bog‘laydigan biznes uchun veb-xizmat va onlayn chat vidjeti. LiveChat TJ mijozlarni qo‘llab-quvvatlashni avtomatlashtiradi, xizmat sifatini oshiradi va tezkor xabarlar orqali sotuvlarni ko‘paytirishga yordam beradi.",
+      "tags": [
+        "Tizim arxitekturasini ishlab chiqish",
+        "Tizimning yuqori barqarorligi",
+        "Onlayn chat va vidjetlarni integratsiya qilish",
+        "Mobil qurilmalarni qo‘llab-quvvatlash",
+        "Shaxsiy kabinet va analitika",
+        "DDoS hujumlaridan himoya",
+        "Ko‘p tillilikni qo‘llab-quvvatlash"
+      ]
+    },
+    "tvcrm": {
+      "title": "TV CRM",
+      "subtitle": "Kabel TV uchun CRM",
+      "description": "Kabel televideniye provayderi uchun abonentlar, nazoratchilar, kassa operatsiyalari va hisobotlarni boshqarishni avtomatlashtiradigan ichki CRM tizimi."
+    }
+  },
+  "whyUs": {
+    "subtitle": "Nega aynan biz",
+    "title": "Texnologiyalar. Tajriba. Ishonch.",
+    "standards": {
+      "title": "Xalqaro standartlar",
+      "desc": "ISO 9001, GDPR, ISO/IEC 27001 — sifat va xavfsizlik bo‘yicha xalqaro standartlar."
+    },
+    "individual": {
+      "title": "Individual yondashuv",
+      "desc": "Har bir loyiha uchun alohida strategiya va maqbul yechim."
+    },
+    "security": {
+      "title": "Yuqori xavfsizlik",
+      "desc": "Ko‘p bosqichli himoya, OWASP, shifrlash va muntazam auditlar."
+    },
+    "technology": {
+      "title": "Zamonaviy texnologiyalar",
+      "desc": "React, Flutter, Node.js, AI/ML, bulutli texnologiyalar — faqat dolzarb stek."
+    },
+    "support": {
+      "title": "24/7 qo‘llab-quvvatlash",
+      "desc": "Monitoring va qo‘llab-quvvatlash bo‘yicha alohida jamoa. Javob berish vaqti 30 daqiqagacha kafolatlangan SLA."
+    },
+    "partnership": {
+      "title": "Uzoq muddatli hamkorlik",
+      "desc": "Mijozlarning 80% yangi loyihalar bilan qaytib keladi. Biz munosabatlarni sprintlar uchun emas, yillar uchun quramiz."
+    }
+  },
+  "team": {
+    "subtitle": "Rahbariyat",
+    "title": "Buni amalga oshirayotgan inson",
+    "labels": {
+      "skills": "Ko‘nikmalar",
+      "experience": "Tajriba",
+      "education": "Ta’lim"
+    },
+    "stats": {
+      "founded": "Tashkil topgan",
+      "projects": "Loyihalar",
+      "experts": "Mutaxassislar",
+      "countries": "Davlatlar",
+      "satisfaction": "Mamnunlik"
+    },
+    "member0": {
+      "name": "Dilovar Abdullayev",
+      "role": "Ma’lumotlar tahlilchisi, Fullstack dasturchi, ma’lumotlar bazasi administratori (DBA)",
+      "bio": "Dilovar — ma’lumotlar tahlili, Fullstack dasturlash va ma’lumotlar bazalarini boshqarish bo‘yicha bilim va ko‘nikmalarni birlashtirgan yuqori malakali fanlararo mutaxassis. Keng qamrovli kompetensiyalari uni turli vazifalarni hal qila oladigan jamoamizning qimmatli a’zosiga aylantiradi. Dilovar ma’lumotlar bilan ham, veb-ilovalar va ma’lumotlar bazalari bilan ham ishlay oladi, bu esa unga murakkab va samarali biznes yechimlarini yaratish imkonini beradi.",
+      "skills": "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
+      "experience": "2012",
+      "education": "Toshkent axborot texnologiyalari universiteti kurslari: Stepik, IT Step, Harvard, Skillbox, ITVDN, Yandex"
+    },
+    "memberDefault": {
+      "name": "Xodim ismi",
+      "role": "Lavozim",
+      "bio": "Xodim tavsifi",
+      "skills": "Ko‘nikmalar",
+      "experience": "Tajriba",
+      "education": "Ta’lim"
+    },
+    "yakubov": {
+      "name": "Muhammad Yakubov",
+      "role": "CEO, IT-arxitektor, dasturchi va texnik ekspert",
+      "bio": "Muhammad Yakubov — kompaniyaning bosh direktori va texnik rahbari bo‘lib, boshqaruv tajribasini dasturiy ta’minot ishlab chiqish va IT-arxitektura bo‘yicha chuqur bilimlar bilan uyg‘unlashtiradi. U murakkab raqamli yechimlarni yaratish va rivojlantirishda — g‘oya va arxitektura loyihalashdan tortib ishlab chiqish, joriy etish va mahsulotni keyinchalik kengaytirishgacha bo‘lgan barcha bosqichlarda ishtirok etadi.\nUning kuchli tomoni — loyihani yaxlit ko‘ra olish: biznes vazifalarini tushunish, texnik strategiyani qurish, arxitektura qarorlarini qabul qilish va shu bilan birga ishlab chiqish tafsilotlariga chuqur kirib borish. Uning rahbarligida jamoa real biznes vazifalariga yo‘naltirilgan ishonchli, kengaytiriladigan va zamonaviy IT yechimlarni yaratadi.",
+      "skills": "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
+      "experience": "2017",
+      "education": "Axborot texnologiyalari bo‘yicha oliy ma’lumot\nDasturiy injiniring · Axborot tizimlari · Dasturiy ta’minot arxitekturasi"
+    }
+  },
+  "services": {
+    "subtitle": "Nima bilan shug‘ullanamiz",
+    "title": "IT xizmatlarining to‘liq majmuasi",
+    "list": [
+      {
+        "title": "Veb-dasturlash",
+        "description": "Zamonaviy steklarda yuqori yuklamali veb-ilovalar, korporativ portallar va SaaS platformalar."
+      },
+      {
+        "title": "Mobil dasturlash",
+        "description": "Qulay UX’ga ega iOS va Android uchun nativ va kross-platformali mobil ilovalar."
+      },
+      {
+        "title": "Web3 va Blockchain",
+        "description": "Web3 Blockchain loyihalari va Solidity’da smart-kontraktlar ishlab chiqish."
+      },
+      {
+        "title": "UI/UX dizayn",
+        "description": "Figma’dan ishlab chiqarishgacha — dizayn-tizimlar, foydalanuvchi interfeyslari va jahon darajasidagi prototiplar."
+      },
+      {
+        "title": "Kiberxavfsizlik",
+        "description": "Xavfsizlik auditi, pentest, ma’lumotlarni himoya qilish va ISO/IEC 27001 xalqaro standartlariga muvofiqlik."
+      },
+      {
+        "title": "API integratsiya",
+        "description": "Korporativ tizimlar uchun REST/GraphQL API, mikroservis arxitekturasi va ESB’ni ishlab chiqish va integratsiya qilish."
+      },
+      {
+        "title": "Bulutli yechimlar",
+        "description": "Loyihalash va bulutga ko‘chirish: AWS, Azure, GCP. DevOps, CI/CD, monitoring va kengaytirish."
+      },
+      {
+        "title": "Texnik qo‘llab-quvvatlash",
+        "description": "24/7 qo‘llab-quvvatlash jamoasi, tizimlar monitoringi, SLA kafolatlari va tezkor javob."
+      }
+    ],
+    "web_dev": "Veb-dasturlash",
+    "mobile_dev": "Mobil ilovalar",
+    "crm": "CRM va avtomatlashtirish",
+    "uiux": "UI/UX dizayn",
+    "allServices": "Barcha xizmatlar"
+  },
+  "process": {
+    "subtitle": "Qanday ishlaymiz",
+    "title": "Ishlab chiqish jarayoni",
+    "list": [
+      {
+        "title": "Tahlil va loyihalash",
+        "description": "Talablaringizni o‘rganamiz, bozorni tahlil qilamiz va batafsil texnik topshiriq tuzamiz.",
+        "duration": "1-2 hafta"
+      },
+      {
+        "title": "Dizayn (UI/UX)",
+        "description": "Zamonaviy, intuitiv va jozibali interfeys ishlab chiqamiz.",
+        "duration": "2-3 hafta"
+      },
+      {
+        "title": "Ishlab chiqish",
+        "description": "Toza va kengaytiriladigan kod yozamiz. Frontend va backend qismlarini yaratamiz.",
+        "duration": "1 oydan"
+      },
+      {
+        "title": "Testlash",
+        "description": "Puxta QA testlashni o‘tkazamiz: funksionallik, xavfsizlik va unumdorlikni tekshiramiz.",
+        "duration": "1-2 hafta"
+      },
+      {
+        "title": "Ishga tushirish",
+        "description": "Loyihani serverlarga joylaymiz, monitoringni sozlaymiz va ilovalarni App Store hamda Google Play’ga chiqaramiz.",
+        "duration": "1 hafta"
+      },
+      {
+        "title": "Qo‘llab-quvvatlash va rivojlantirish",
+        "description": "Relizdan keyin texnik qo‘llab-quvvatlash ko‘rsatamiz, mahsulot barqarorligini ta’minlaymiz va uni siz bilan birga takomillashtiramiz.",
+        "duration": "Doimiy"
+      }
+    ]
+  },
+  "reviews": {
+    "subtitle": "Fikrlar",
+    "title": "Biz haqimizda nima deyishadi",
+    "list": [
+      {
+        "text": "Dushanbe-Soft IT loyihalarining o‘ziga xos jihatlarini tushunadigan va vazifalarga mas’uliyat bilan yondashadigan jamoa sifatida o‘zini namoyon qildi.",
+        "name": "Umedjon Ubaydullo",
+        "role": "“Teleradiokom” YoAJ rahbari o‘rinbosari"
+      },
+      {
+        "text": "Dushanbe-Soft bilan hamkorlik — bu, eng avvalo, professional yondashuv va biznes vazifalarini tushunishdir.",
+        "name": "Gulmahmad Qayumov",
+        "role": "Telecom Technology bosh direktori"
+      },
+      {
+        "text": "Dushanbe-Soft mijozlar bilan ishlashni yanada qulay va samarali qiladigan raqamli yechimlarni joriy etishimizga yordam berdi.",
+        "name": "Shahrom Jamhurov",
+        "role": "Yak Du Trip asoschisi va bosh direktori"
+      },
+      {
+        "text": "Biz Dushanbe-Soft’ni professionalligi, tezkorligi va natijaga yo‘naltirilganligi uchun qadrlaymiz.",
+        "name": "Tagoymurod Sidiqov",
+        "role": "Etagi bosh direktori"
+      },
+      {
+        "text": "Dushanbe-Soft’da biz texnik talablarni shunchaki bajarmaymiz — vazifaga chuqur kirib boramiz va maqbul yechimni taklif qilamiz. Biz uchun shaffof muloqot, kelishuvlarga rioya qilish va tafsilotlarga e’tibor muhim.",
+        "name": "Ikrom Abdullayev",
+        "role": "PIC.TJ koordinatori"
+      },
+      {
+        "text": "Biz Dushanbe-Soft’ni professionalligi, tezkorligi va natijaga yo‘naltirilganligi uchun qadrlaymiz. Jamoa loyiha ehtiyojlarini tez tushunadi va texnik vazifalarni qulay raqamli yechimlarga aylantiradi.",
+        "name": "Tagoymurod Sidiqov",
+        "role": "Etagi bosh direktori"
+      }
+    ]
+  },
+  "cases": {
+    "subtitle": "Portfolio",
+    "title": "Biz faxrlanadigan loyihalar",
+    "all_cases": "Barcha keyslar",
+    "all_projects": "Barcha loyihalar",
+    "about_project": "Loyiha haqida",
+    "what_was_done": "Nima qilindi",
+    "technologies": "Texnologiyalar",
+    "gallery": "Galereya",
+    "gallery_prev": "Oldingi rasm",
+    "gallery_next": "Keyingi rasm",
+    "gallery_close": "Ko‘rishni yopish",
+    "loadMore": "Yana ko‘rish"
+  },
+  "projects": {
+    "zudyob": {
+      "title": "ZudYob — aqlli AI qidiruv",
+      "description": "ZudYob — ko‘chmas mulkni aqlli qidirish uchun Telegram-bot. Foydalanuvchi xarid yoki ijarani, byudjet, maydon, xonalar soni va joylashuvni tanlaydi, saqlangan filtrlarni boshqaradi va e’lonlarni to‘g‘ridan-to‘g‘ri chatda oladi. Bot rus, tojik va ingliz tillarini, obunani boshqarishni hamda Alif va DCity orqali balansni to‘ldirishni qo‘llab-quvvatlaydi.",
+      "tasks": [
+        "Mos takliflarni aqlli qidirish",
+        "Yangi mosliklar haqida bir zumda xabarnomalar",
+        "Kecha-kunduz qidiruv, 24/7",
+        "Har kuni vaqtni tejash"
+      ],
+      "gallery": [
+        "ZudYob — tezroq topadi"
+      ]
+    },
+    "president": {
+      "title": "Tojikiston Respublikasi Prezidenti",
+      "description": "Tojikiston Respublikasi Prezidentining rasmiy sayti mamlakatning asosiy davlat veb-portalidir. Platforma rasmiy yangiliklar, farmonlar, nutqlar va tadbirlardan foto reportajlarni bir necha tilda e’lon qilishni ta’minlaydi.",
+      "gallery": [
+        "Interfeysning to‘rt tili",
+        "Davlat ramzlari",
+        "Matnni kattalashtirish",
+        "Arab tili uchun to‘liq RTL",
+        "Portalning inglizcha versiyasi",
+        "Prezident vakolatlari",
+        "“Noma ba Prezident” shakli",
+        "Portal tuzilmasi va pastki qismi"
+      ]
+    },
+    "sohktor": {
+      "title": "YaEMB",
+      "description": "Yong‘in xizmatining operativ faoliyatini avtomatlashtirish, favqulodda vaziyatlar va yong‘inlarni ro‘yxatga olish, jinoyat ishlarini yuritish, tekshirilgan obyektlarni hisobga olish va elektron hujjat aylanishi uchun ichki axborot tizimi (ERP/CRM tizimi)."
+    },
+    "digital-tajikistan": {
+      "title": "Raqamli Tojikiston",
+      "description": "Tojikistonning raqamli xizmatlar davlat portali. Mamlakat fuqarolari va tashkilotlari uchun elektron davlat xizmatlariga yagona kirish nuqtasi."
+    },
+    "mavji-somon": {
+      "title": "Mavji Somon TV OTT",
+      "description": "Filmlar, seriallar va telekanallarni tomosha qilish uchun onlayn platforma va striming xizmati. Xizmat turli qurilmalarda yuqori sifatli multimedia kontentiga kirishni ta’minlaydi."
+    },
+    "livechat-tj": {
+      "title": "LiveChat TJ - Onlayn chat",
+      "description": "LiveChat TJ — kompaniyalar va ularning mijozlari o‘rtasida real vaqtda muloqotni ta’minlaydigan biznes uchun veb-xizmat va onlayn chat platformasi. Platforma mijozlarni qo‘llab-quvvatlashni avtomatlashtiradi, xizmat sifatini oshiradi va tezkor xabarlar orqali sotuvlarni ko‘paytirishga yordam beradi.",
+      "gallery": [
+        "LiveChat lendingining birinchi ekrani: “Mijozlaringiz bilan aloqa uchun onlayn chat” sarlavhasi va “Bepul sinab ko‘rish” tugmasi",
+        "Yechim bloki: noutbukdagi LiveChat operator dialoglari paneli va telefondagi chat vidjeti ko‘rinishi",
+        "Imkoniyatlar bo‘limi: funksiya kartochkalari — tezkor javob, aqlli vidjet, analitika, jamoaviy ish, javob shablonlari va CRM integratsiyalari",
+        "“Qanday ishlaydi” bloki: onlayn chatni saytga ulashning to‘rt bosqichi",
+        "Moslashtirish bo‘limi: onlayn chat dizaynini brendingiz uslubiga moslashtirish va operator interfeysi ko‘rinishi",
+        "Tariflar bo‘limi: Starter, Pro va Business rejalari va ularning imkoniyatlari ro‘yxati",
+        "Integratsiyalar bo‘limi: messenjerlar, CRM tizimlari, sayt konstruktorlari va o‘z API’ingizni ulash",
+        "Afzalliklar bloki: sotuvlar o‘sishi, xarajatlarning kamayishi va ko‘proq mijozlarni jalb qilish",
+        "Qo‘llab-quvvatlash bo‘limi: aloqa usullari (email, 24/7 chat, hujjatlar) va ko‘p beriladigan savollar",
+        "Asosiy imkoniyatlar ko‘rsatilgan “Nega LiveChat” bo‘limi va saytning pastki qismi"
+      ]
+    },
+    "telecomm": {
+      "title": "Telecomm Technology",
+      "description": "“Telecomm Technology” telekommunikatsiya kompaniyasi va internet-provayderining rasmiy sayti. Platforma yuqori tezlikdagi internet tariflari, interaktiv televideniye (IPTV) va IP/NGN telefoniya haqida ma’lumot beradi hamda mijozning shaxsiy kabinetiga kirishni ta’minlaydi."
+    },
+    "navo": {
+      "title": "Navo - Radioportal",
+      "description": "«Navo» 96.5 FM radiosining rasmiy sayti (navo.tj): dasturlar va ruknlar, podkastlar, musiqiy to‘plamlar, foto va video galereyalar, yangiliklar lentasi va studiya kontaktlari."
+    },
+    "somon-tv": {
+      "title": "Somon TV",
+      "description": "Tojikistondagi eng yirik teletarmoqlardan biri — Somon TV uchun OTT striming platformasi. Platforma jonli efir, VoD arxivi va multiekranli tomosha imkoniyatlarini taqdim etadi."
+    },
+    "zudsms": {
+      "title": "ZudSMS – SMS-xabarnoma platformasi",
+      "description": "Biznes uchun SMS-xabarlarni avtomatlashtirish va ommaviy yuborish bo‘yicha bulutli xizmat. Platforma Tojikistondagi barcha mobil operatorlar raqamlariga maqsadli va tranzaksion xabarlarni bir zumda yetkazadi, kompaniyalarga mijozlar sodiqligini va marketing kampaniyalari samaradorligini oshirishga yordam beradi."
+    },
+    "sunduk-tv": {
+      "title": "SundukTV",
+      "description": "Antenna, kompyuter, kabel yoki sun’iy yo‘ldosh televideniyesiga bog‘lanmagan holda a’lo sifatdagi ko‘plab telekanallar."
+    },
+    "onlinepay": {
+      "title": "OnlinePay – To‘lov tizimi",
+      "description": "Kompaniyalar va onlayn biznesga milliy “Korti Milli” bank kartalari orqali tovar va xizmatlar uchun to‘lovlarni qabul qilish imkonini beradigan internet-ekvayring platformasi (Merchant Services). Xizmat faoliyat sohasi, biznes ko‘lami va kompaniyada texnik mutaxassislar mavjudligidan qat’i nazar oddiy va qulay integratsiya yechimlarini taqdim etadi.",
+      "tasks": [
+        "Dizayn ishlab chiqish",
+        "Frontend ishlab chiqish",
+        "Backend ishlab chiqish",
+        "To‘lov tizimlari bilan integratsiya"
+      ]
+    },
+    "zenith-valuation": {
+      "title": "Zenith Valuation",
+      "description": "Amerikaning baholash va konsalting kompaniyasi Zenith Valuation’ning korporativ sayti. Platforma biznesning turli sohalari uchun baholash va ekspert tahlili bo‘yicha professional xizmatlar majmuasini taqdim etadi. Loyiha yuqori sifat va mijozlarga xizmat ko‘rsatish standartlariga javob beradigan mustaqil, texnik jihatdan asoslangan yechimlarni taqdim etishga yo‘naltirilgan.",
+      "tasks": [
+        "Dizayn ishlab chiqish",
+        "Frontend ishlab chiqish",
+        "Backend ishlab chiqish",
+        "SEO optimallashtirish"
+      ]
+    },
+    "imron-nakliet": {
+      "title": "IMRON NAKLIET LLC",
+      "description": "IMRON NAKLIET LLC xalqaro logistika kompaniyasining korporativ sayti. Platforma transport-logistika xizmatlarining to‘liq majmuasini, jumladan, terma va gabaritdan tashqari yuklarni xalqaro tashish, harorat logistikasi, multimodal yo‘nalishlar (eshikdan eshikkacha) va bojxona rasmiylashtiruvini taqdim etish uchun ishlab chiqilgan.",
+      "tasks": [
+        "Dizayn ishlab chiqish",
+        "Frontend ishlab chiqish",
+        "Backend ishlab chiqish"
+      ]
+    },
+    "arcanefinance": {
+      "title": "Arcane Finance",
+      "description": "Tezkor almashtirish, likvidlik pullarini boshqarish va steyking uchun markazlashmagan moliya (DeFi) platformasi."
+    },
+    "promolovelybot": {
+      "title": "Lovely promo",
+      "description": "Qulay Mini App interfeysiga ega tanlovlar, sovg‘alar o‘yinlari va marketing aksiyalarini o‘tkazish uchun Telegram promo-bot."
+    },
+    "reactorexchange": {
+      "title": "Reactor",
+      "description": "Tokenlarni tez almashtirish va likvidlik taqdim etish uchun markazlashmagan birja."
+    },
+    "arcane-launchpad": {
+      "title": "Arcane Launchpad",
+      "description": "Yangi kripto-loyihalar va tokenlarni ishga tushirish hamda ularga sarmoya kiritish platformasi."
+    },
+    "reactor-exchange": {
+      "title": "Reactor Exchange",
+      "description": "Tokenlarni tez almashtirish va likvidlik taqdim etish uchun markazlashmagan birja."
+    },
+    "mirel": {
+      "title": "Mirel",
+      "description": "Mirel uchun korporativ sayt va kontentni boshqarish tizimi (CMS). Platforma xizmatlar, bajarilgan loyihalar, hamkorlar va yutuqlarni namoyish etadi, shuningdek kontent, arizalar va xodimlarni boshqaradi."
+    },
+    "royalbaby": {
+      "title": "Royal Baby promo-aksiyasi",
+      "description": "Royal Baby promo-aksiyasi uchun kompleks yechim. U promo-sayt, ishtirokchilar uchun Telegram-bot hamda o‘yinlar, g‘oliblar va sovrinlarni boshqarish uchun admin-panelni o‘z ichiga oladi."
+    },
+    "rushdikuhiston": {
+      "title": "Rushdi Kuhiston",
+      "description": "“Rushdi Kuhiston” mikromoliya tashkiloti uchun kredit kalkulyatori, onlayn arizalar va chat-bot integratsiyasini o‘z ichiga olgan veb-platforma va boshqaruv paneli."
+    },
+    "traveltours": {
+      "title": "TravelTours",
+      "description": "Turlar katalogi, mehmonxonalarni bron qilish hamda arizalarni qayta ishlash va tizimni sozlash uchun boshqaruv panelini o‘z ichiga olgan sayyohlik agentligi platformasi."
+    },
+    "itrunstj": {
+      "title": "I-Trans",
+      "description": "Yuklarni ekspeditsiya qilish, bojxona rasmiylashtiruvi va yuklarni sug‘urtalash xizmatlarini ko‘rsatadigan logistika kompaniyasining korporativ sayti."
+    },
+    "farad": {
+      "title": "Farad",
+      "description": "Mahsulotlar, buyurtmalar, foydalanuvchilar, hisobotlar va marketing kampaniyalarini boshqarishni o‘z ichiga olgan kompleks elektron tijorat boshqaruv paneli."
+    },
+    "sinamoktv": {
+      "title": "Kabel TV tizimi",
+      "description": "Kabel televideniye provayderi uchun abonentlar, nazoratchilar, kassa operatsiyalari va hisobotlarni boshqarishni avtomatlashtiradigan ichki CRM tizimi."
+    },
+    "confy": {
+      "title": "Confy",
+      "description": "Confy brendi uchun promo-sayt va o‘yinlar tizimi."
+    }
+  },
+  "partners": {
+    "subtitle": "Hamkorlarimiz",
+    "title": "Bizga yetakchi tashkilotlar ishonadi",
+    "list": [
+      {
+        "name": "Президент ҶТ",
+        "sector": "president.tj",
+        "description": "Tojikiston Respublikasi Prezidentining rasmiy sayti mamlakatning asosiy davlat veb-portalidir. Platforma rasmiy yangiliklar, farmonlar, nutqlar va yirik davlat tadbirlaridan foto reportajlarni bir necha tilda o‘z vaqtida e’lon qilishni ta’minlab, ishonchli axborot manbai bo‘lib xizmat qiladi."
+      },
+      {
+        "name": "Raqamli Tojikiston",
+        "sector": "DT.TJ",
+        "description": "Tojikistonning raqamli xizmatlar davlat portali — elektron davlat xizmatlariga yagona kirish nuqtasi. U fuqarolar va biznesning davlat idoralari bilan o‘zaro munosabatlarini soddalashtirib, shaffoflik va samaradorlikni oshiradi."
+      },
+      {
+        "name": "СХДО",
+        "sector": "mahzan.tj",
+        "description": "Yagona elektron ma’lumotlar bazasi — yong‘in xizmati faoliyatini avtomatlashtirish uchun ixtisoslashtirilgan ichki axborot tizimi. U favqulodda vaziyatlar va yong‘inlarni ishonchli hisobga olishni, jinoyat ishlari va hisobotlarni yuritishni hamda xavfsiz elektron hujjat aylanishini ta’minlaydi."
+      },
+      {
+        "name": "Рушди Кӯҳистон",
+        "sector": "rushdikuhiston.tj",
+        "description": "Rushdi Kuhiston Invest Project — tog‘li hududlarni qo‘llab-quvvatlash va har tomonlama rivojlantirish, infratuzilma va turmush darajasini yaxshilash hamda ish o‘rinlarini yaratishga qaratilgan yirik investitsiya loyihasi."
+      },
+      {
+        "name": "Megafon",
+        "sector": "megafon.tj",
+        "description": "Tojikistondagi yetakchi telekom operatorlaridan biri bo‘lib, yuqori tezlikdagi mobil internet, ilg‘or moliyaviy xizmatlar va biznesni avtomatlashtirish bo‘yicha innovatsion yechimlarni taqdim etadi."
+      },
+      {
+        "name": "Телеком",
+        "sector": "ttl.tj",
+        "description": "Tojikistondagi birinchi internet-provayder bo‘lib, yuqori tezlikdagi keng polosali kirish, IP-telefoniya va kompleks korporativ yechimlarni taklif etadi."
+      },
+      {
+        "name": "Mavji Somon",
+        "sector": "mavjisomon.tj",
+        "description": "Tojikistondagi eng yirik va jadal rivojlanayotgan TV provayderlardan biri bo‘lib, telekanallarning keng tanlovi, interaktiv xizmatlar va multimedia kontentiga barqaror kirishni taklif etadi."
+      },
+      {
+        "name": "Navo",
+        "sector": "navo.tj/ru",
+        "description": "«Navo» radiosi (96.5 FM) — har kungi xitlar, mualliflik dasturlari, yangiliklar va interaktiv shoularni taklif etadigan mashhur musiqiy-ko‘ngilochar radiostansiya."
+      },
+      {
+        "name": "Somon TV",
+        "sector": "somon.tv",
+        "description": "Tojikistondagi eng yirik telekompaniya uchun ishlab chiqilgan ilg‘or OTT striming platformasi bo‘lib, HD sifatdagi jonli efirlar, VoD arxivlari va multiekranli tomoshani taklif etadi."
+      },
+      {
+        "name": "IMRON NAKLIET",
+        "sector": "imronnakliet.tj",
+        "description": "Xavfsiz, o‘z vaqtida va tejamkor yetkazib berish uchun ta’minot zanjirini boshqarishning ilg‘or texnologiyalaridan foydalangan holda ishonchli yuk tashish xizmatlarini ko‘rsatadigan innovatsion logistika kompaniyasi."
+      },
+      {
+        "name": "Sunduk TV",
+        "sector": "sunduk.tv",
+        "description": "650 dan ortiq rusiyzabon va xalqaro telekanallarni, shuningdek HD va UltraHD sifatdagi onlayn filmlar va seriallarning katta kutubxonasini taklif etadigan zamonaviy internet-televideniye."
+      },
+      {
+        "name": "Памир Энерджи",
+        "sector": "pamirenergy.com",
+        "description": "Pomir mintaqasida ishonchli, toza va uzluksiz elektr ta’minotini ta’minlaydigan, infratuzilma va barqaror texnologiyalarga faol sarmoya kiritayotgan strategik energetika kompaniyasi."
+      },
+      {
+        "name": "Zenith Valuation",
+        "sector": "zenithvaluation.com",
+        "description": "Ko‘chmas mulk, uskunalar, aktivlar va biznesni baholash bo‘yicha to‘liq xizmatlar majmuasini taqdim etadigan, yuqori ishonchga ega professional mustaqil baholash kompaniyasi."
+      },
+      {
+        "name": "СинамоТВ",
+        "sector": "sinamo.tv",
+        "description": "«Sinamo» davlat televideniye muassasasi — milliy kinoni rivojlantirish va ommalashtirishga bag‘ishlangan davlat telekanali bo‘lib, muntazam ravishda eng yaxshi mahalliy filmlar va madaniy dasturlarni efirga uzatadi."
+      }
+    ]
+  },
+  "contact": {
+    "subtitle": "Biz bilan bog‘laning",
+    "titleBlack1": "Keling,",
+    "titleBlack2": "loyihangizni ",
+    "titleGradient": "muhokama qilamiz.",
+    "desc": "Vazifangiz haqida gapirib bering, biz eng yaxshi yechimni taklif qilamiz va narxini hisoblab beramiz.",
+    "responseTime": "Javob",
+    "timeValue": "2 soat ichida",
+    "confidentiality": "Maxfiylik",
+    "guaranteed": "kafolatlangan",
+    "free": "Bepul",
+    "consultation": "maslahat",
+    "teamText": "Ekspertlar jamoamiz loyihangizni amalga oshirishda yordam berishga tayyor",
+    "messengersTitle": "Yoki qulay messenjerda yozing",
+    "formTitle": "Ariza qoldiring",
+    "formSubtitle": "Tafsilotlarni muhokama qilish uchun siz bilan bog‘lanamiz",
+    "form": {
+      "nameLabel": "Ism",
+      "namePlaceholder": "Ismingiz",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@company.com",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "+992 _ _ _ _ _ _ _ _ _",
+      "directionLabel": "Yo‘nalish",
+      "directionOptions": {
+        "opt1": "Xizmatni tanlang",
+        "opt2": "Dasturiy ta’minot ishlab chiqish",
+        "opt3": "Veb-dasturlash",
+        "opt4": "IT autsorsing"
+      },
+      "messageLabel": "Xabar",
+      "messagePlaceholder": "Loyihangiz haqida gapirib bering: vazifa, ko‘lam, muddatlar…",
+      "submitBtn": "Ariza yuborish",
+      "submitting": "Yuborilmoqda...",
+      "successMessage": "Ariza muvaffaqiyatli yuborildi!",
+      "errorSend": "Xabarni yuborib bo‘lmadi",
+      "errorOccurred": "Xatolik yuz berdi. Iltimos, keyinroq urinib ko‘ring."
+    }
+  },
+  "cta": {
+    "subtitle": "Boshlashga tayyormisiz?",
+    "title": "Loyihangizni boshlashga tayyormisiz?",
+    "desc": "Ariza qoldiring, biz bepul maslahat uchun bir ish kuni ichida siz bilan bog‘lanamiz.",
+    "primaryBtn": "Maslahat olish"
+  },
+  "footer": {
+    "desc": "Tojikistonning yetakchi IT kompaniyasi. 2017-yildan beri biznes va davlat uchun raqamli yechimlar ishlab chiqamiz.",
+    "col1": "Kompaniya",
+    "col2": "Xizmatlar",
+    "col3": "Kontaktlar",
+    "links1": [
+      "Biz haqimizda",
+      "Jamoa",
+      "Mahsulotlarimiz",
+      "Qanday ishlaymiz",
+      "Keyslar",
+      "Fikrlar"
+    ],
+    "links2": [
+      "Veb-dasturlash",
+      "Mobil dasturlash",
+      "UI/UX dizayn",
+      "API integratsiya",
+      "Kiberxavfsizlik",
+      "Texnik qo‘llab-quvvatlash"
+    ],
+    "address": "Tojikiston Respublikasi, \n Dushanbe",
+    "copyright": "© 2017–2026 Dushanbe Soft. Barcha huquqlar himoyalangan."
+  },
+  "seo": {
+    "default_title": "Dushanbe Soft — Tojikistonda dasturlar va saytlar yaratish",
+    "default_description": "Dushanbedagi IT kompaniya: 2017-yildan beri biznes va davlat uchun saytlar, mobil ilovalar, CRM va ERP tizimlarini ishlab chiqamiz.",
+    "keywords": "tojikistondagi it kompaniyalar, dushanbe it kompaniya, tojikistonda dasturiy ta’minot ishlab chiqish, dushanbeda sayt yaratish, mobil ilovalar ishlab chiqish, biznesni avtomatlashtirish, dushanbe soft, fintech, crm, erp",
+    "products_title": "Biznes uchun tayyor IT mahsulotlar: SMS-shlyuz, onlayn chat, CRM",
+    "products_description": "Tojikistondagi biznes uchun Dushanbe Soft mahsulotlari: ZudSMS ommaviy SMS platformasi, LiveChat TJ onlayn chati, CRM tizimlari va to‘lov yechimlari.",
+    "cases_title": "Portfolio — biz yaratgan saytlar, ilovalar va tizimlar",
+    "cases_description": "Dushanbe Soft keyslari: Tojikiston Prezidenti sayti, “Raqamli Tojikiston” portali, Somon TV OTT platformalari, fintech, CRM va mobil ilovalar.",
+    "news_title": "Kompaniya yangiliklari — Tojikistondagi IT loyihalar va dasturlash",
+    "news_description": "Dushanbe Soft’ning so‘nggi yangiliklari, relizlari va muhim voqealari — Tojikistonda IT yechimlarni ishlab chiqish.",
+    "media_title": "Foto va video — loyihalar va jamoa",
+    "media_description": "Dushanbe Soft foto va video galereyasi: loyihalar taqdimotlari, dasturiy ta’minot ishlab chiqish va Dushanbe, Tojikistondagi jamoa hayoti."
+  },
+  "pricing": {
+    "plans": {
+      "0": {
+        "title": "Standart tarif",
+        "features": {
+          "0": "Loyiha va administrlash bo‘yicha maslahatlar — 1 soat;",
+          "1": "Sayt ishlashini tekshirish",
+          "2": "Domen, xosting va SSL sertifikatini uzaytirishni nazorat qilish"
+        }
+      },
+      "1": {
+        "title": "Bazaviy tarif",
+        "features": {
+          "0": "Loyiha va administrlash bo‘yicha maslahatlar — 2 soat;",
+          "1": "Sayt ishlashini tekshirish",
+          "2": "Domen, xosting va SSL sertifikatini uzaytirishni nazorat qilish",
+          "3": "Kodni tozalash va tekshirish;",
+          "4": "Saytning zaxira nusxasi — oyiga bir marta;",
+          "5": "Xatolarni tuzatish — 24 soat ichida 2 soatgacha;"
+        }
+      },
+      "2": {
+        "title": "Kengaytirilgan tarif",
+        "features": {
+          "0": "Loyiha va administrlash bo‘yicha maslahatlar — 2 soat;",
+          "1": "Sayt ishlashini tekshirish",
+          "2": "Domen, xosting va SSL sertifikatini uzaytirishni nazorat qilish",
+          "3": "Kodni tozalash va tekshirish;",
+          "4": "Saytning zaxira nusxasi — oyiga ikki marta;",
+          "5": "Xatolarni tuzatish — 12 soat ichida 8 soatgacha;",
+          "6": "Pochtani administrlash — yaratish va sozlash.",
+          "7": "Hujumlar va viruslardan himoya;",
+          "8": "Loyiha manba kodini takomillashtirish — 4 soat."
+        }
+      },
+      "3": {
+        "title": "Premium tarif",
+        "features": {
+          "0": "Loyiha va administrlash bo‘yicha maslahatlar — 2 soat;",
+          "1": "Sayt ishlashini tekshirish",
+          "2": "Domen, xosting va SSL sertifikatini uzaytirishni nazorat qilish",
+          "3": "Kodni tozalash va tekshirish;",
+          "4": "Saytning zaxira nusxasi — oyiga ikki marta;",
+          "5": "Xatolarni 6 soat ichida tuzatish;",
+          "6": "Pochtani administrlash — yaratish va sozlash.",
+          "7": "Hujumlar va viruslardan himoya;",
+          "8": "Loyiha manba kodini takomillashtirish — 20 soat.",
+          "9": "Sayt auditi va loyihani davom ettirish bo‘yicha tavsiyalar."
+        }
+      }
+    },
+    "subtitle": "Tariflar",
+    "title": "Mavjud tarif rejalari",
+    "per_month": "/oy",
+    "select": "Tanlash"
+  },
+  "jobs": {
+    "subtitle": "KARYERA",
+    "title": "Dushanbe-Soft’dagi vakansiyalar",
+    "search_placeholder": "Vakansiya qidirish",
+    "direction": "Yo‘nalish",
+    "design": "Dizayn",
+    "format": "Ish formati",
+    "remote": "Masofaviy",
+    "office": "Ofis",
+    "hybrid": "Ofis / Masofaviy",
+    "experience": "Tajriba",
+    "junior": "Tajribasiz",
+    "middle": "1-3 yil",
+    "senior": "3+ yil",
+    "not_found": "Afsuski, so‘rovingiz bo‘yicha hech narsa topilmadi.",
+    "more": "Batafsil",
+    "cta_title": "Jamoamiz a’zosi bo‘lishni xohlaysizmi?",
+    "cta_desc": "Ariza yuboring — hozir mos vakansiya bo‘lmasa ham, mos imkoniyat paydo bo‘lganda siz bilan bog‘lanamiz.",
+    "send_cv": "Rezyume yuborish",
+    "location": {
+      "dushanbe": "Dushanbe"
+    },
+    "type": {
+      "remote": "Masofaviy",
+      "office": "Ofisda",
+      "hybrid": "Gibrid"
+    },
+    "desc": {
+      "frontend-react": "React.js’da foydalanuvchi interfeyslarini ishlab chiqish",
+      "backend-node": "Node.js’da server mantiqi va API yaratish",
+      "ux-ui-designer": "Veb va mobil uchun qulay va zamonaviy interfeyslarni loyihalash"
+    },
+    "backToList": "Vakansiyalar ro‘yxatiga",
+    "formatLabel": "Format",
+    "experienceLabel": "Tajriba",
+    "about": "Vakansiya haqida",
+    "detailCtaTitle": "Vakansiya qiziqtirdimi?",
+    "detailCtaDesc": "Rezyumengizni Telegram orqali yuboring, biz tez orada siz bilan bog‘lanamiz!"
+  },
+  "modal": {
+    "error_send": "Yuborishda xatolik",
+    "close": "Yopish",
+    "contact_us": "Biz bilan bog‘laning",
+    "lets_discuss": "Keling,",
+    "your_project": "loyihangizni muhokama qilamiz.",
+    "desc": "Vazifangiz haqida gapirib bering, biz eng yaxshi yechimni taklif qilamiz va narxini hisoblab beramiz.",
+    "reply_in": "Javob",
+    "2_hours": "2 soat ichida",
+    "confidentiality": "Maxfiylik",
+    "guaranteed": "kafolatlangan",
+    "free": "Bepul",
+    "consultation": "maslahat",
+    "or_write_messenger": "Yoki qulay messenjerda yozing",
+    "phone": "Telefon",
+    "leave_request": "Ariza qoldiring",
+    "leave_request_desc": "Tafsilotlarni muhokama qilish uchun siz bilan bog‘lanamiz",
+    "name_label": "Ism",
+    "name_placeholder": "Ismingiz",
+    "phone_label": "Telefon",
+    "direction_label": "Yo‘nalish",
+    "direction_placeholder": "Xizmatni tanlang",
+    "message_label": "Xabar",
+    "message_placeholder": "Loyihangiz haqida gapirib bering: vazifa, ko‘lam, muddatlar...",
+    "success_msg": "Ariza muvaffaqiyatli yuborildi!",
+    "sending": "Yuborilmoqda...",
+    "submit_btn": "Ariza yuborish"
+  },
+  "awards": {
+    "subtitle": "Mukofotlarimiz",
+    "title": "Yutuqlar va mukofotlar",
+    "viewDoc": "Hujjatni ko‘rish",
+    "items": {
+      "1": {
+        "title": "Faxriy yorliq",
+        "description": "Raqamli texnologiyalarni rivojlantirishga qo‘shgan hissasi uchun"
+      },
+      "2": {
+        "title": "Tavsiya xati",
+        "description": "Hamkordan"
+      },
+      "3": {
+        "title": "Hamkordan",
+        "description": "Innovatsion yechimlar uchun"
+      },
+      "4": {
+        "title": "Minnatdorchilik",
+        "description": "Kelgusidagi hamkorlik uchun"
+      },
+      "indian_tech_1": {
+        "title": "Hindiston texnik hamkorligi",
+        "description": "Sertifikat"
+      },
+      "indian_tech_2": {
+        "title": "Hindiston hukumati",
+        "description": "ITEC dasturi"
+      },
+      "fmfb": {
+        "title": "First MicroFinance Bank",
+        "description": "Tavsiya xati"
+      },
+      "golden_travel": {
+        "title": "Golden Travel",
+        "description": "Tavsiya xati"
+      },
+      "megafon": {
+        "title": "Megafon Tajikistan",
+        "description": "Tavsiya xati"
+      },
+      "muhibon": {
+        "title": "Muhibon",
+        "description": "Tavsiya xati"
+      },
+      "sinamo": {
+        "title": "Sinamo TV",
+        "description": "Tavsiya xati"
+      },
+      "sunduktv": {
+        "title": "Sunduk TV",
+        "description": "Tavsiya xati"
+      },
+      "completion": {
+        "title": "Tamomlash sertifikati",
+        "description": "Muvaffaqiyatli tamomlagani uchun"
+      }
+    }
+  },
+  "news": {
+    "subtitle": "yangiliklar",
+    "title": "So‘nggi yangiliklar",
+    "viewAll": "Barcha yangiliklar",
+    "more": "Batafsil",
+    "items": {
+      "1": {
+        "tag": "Davlat loyihalari",
+        "date": "24.08.2025",
+        "title": "dt.tj (PIC) portalining ishga tushirilishi",
+        "desc": "Tojikistonning raqamli xizmatlar davlat portali. Fuqarolar va tashkilotlar uchun elektron davlat xizmatlariga yagona xavfsiz kirish nuqtasi."
+      },
+      "2": {
+        "tag": "Media va OTT",
+        "date": "15.09.2025",
+        "title": "Mavji Somon striming platformasi",
+        "desc": "Barcha qurilmalarda filmlar, seriallar va jonli telekanallarni yuqori sifatda tomosha qilish uchun zamonaviy OTT striming platformasining ishga tushirilishi."
+      },
+      "3": {
+        "tag": "ERP va avtomatlashtirish",
+        "date": "02.10.2025",
+        "title": "YaEMB tizimining joriy etilishi",
+        "desc": "Favqulodda vaziyatlarni operativ boshqarish, hodisalarni hisobga olish, ishlarni yuritish va elektron hujjat aylanishi uchun kompleks korporativ ERP yechimi."
+      },
+      "4": {
+        "tag": "SaaS va Fintech",
+        "date": "18.11.2025",
+        "title": "ZudSMS — ommaviy SMS-xabarnoma platformasi",
+        "desc": "Tojikistondagi barcha operatorlarga bir zumda yetkazib beriladigan biznes uchun ommaviy va tranzaksion SMS-xabarnomalarning yuqori yuklamali bulutli platformasi."
+      },
+      "5": {
+        "tag": "SaaS va chat",
+        "date": "05.12.2025",
+        "title": "LiveChat.TJ — biznes uchun onlayn maslahatchi",
+        "desc": "Veb-soketlar va tezkor javoblarga ega saytlar uchun omnikanal onlayn chat vidjeti va mijozlar bilan muloqot tizimi."
+      },
+      "6": {
+        "tag": "E-Commerce",
+        "date": "22.12.2025",
+        "title": "Royal Baby — chakana savdoni avtomatlashtirish va Telegram-bot",
+        "desc": "Onlayn vitrinani ishga tushirish, ombor hisobi bilan integratsiya hamda qulay buyurtma va sodiqlik dasturlari uchun Telegram-bot."
+      },
+      "7": {
+        "tag": "Ijtimoiy loyihalar",
+        "date": "14.01.2026",
+        "title": "Rushdi Kuhiston jamg‘armasi portali",
+        "desc": "Tojikistonning tog‘li hududlarida rivojlanish tashabbuslari va grant dasturlarini onlayn arizalar orqali qo‘llab-quvvatlash platformasi."
+      },
+      "8": {
+        "tag": "Media va OTT",
+        "date": "03.02.2026",
+        "title": "Somon TV media portali",
+        "desc": "Jonli efir, dasturlar arxivi va barcha ekran o‘lchamlari uchun moslashuvchan dizaynga ega interaktiv teleko‘rsatuv portali."
+      },
+      "9": {
+        "tag": "Xalqaro loyihalar",
+        "date": "09.07.2026",
+        "title": "Dushanbe Soft Jahon banki tomonidan moliyalashtiriladigan loyiha doirasida shartnomani qo‘lga kiritdi",
+        "desc": "“Dushanbe Soft” xususiy korxonasi Jahon banki tomonidan moliyalashtiriladigan “Tojikistonning raqamli asoslari” loyihasi (P506611) doirasida muassasa veb-saytini ishlab chiqish bo‘yicha shartnomani qo‘lga kiritdi."
+      },
+      "10": {
+        "tag": "Media va OTT",
+        "date": "2024",
+        "title": "«Navo» 96.5 FM radiosining sayti — navo.tj",
+        "desc": "Dushanbe Soft «Navo» 96.5 FM radiosining saytini yaratdi: dasturlar va ruknlar, podkastlar, musiqiy to‘plamlar, foto va video galereyalar hamda yangiliklar lentasi."
+      }
+    },
+    "filterAll": "Barchasi",
+    "filterGov": "Davlat loyihalari",
+    "filterMedia": "Media va OTT",
+    "filterErp": "ERP va avtomatlashtirish",
+    "filterSaas": "SaaS va Fintech",
+    "filterRetail": "E-Commerce"
+  },
+  "media": {
+    "subtitle": "media",
+    "title": "Foto va video",
+    "instagram": "Instagram’da kuzatib boring",
+    "viewAll": "Barchasini ko‘rish",
+    "filterAll": "Barchasi",
+    "filterVideo": "Video",
+    "filterPhoto": "Foto",
+    "showMore": "Ko‘proq ko‘rsatish",
+    "showLess": "Kamroq ko‘rsatish"
+  },
+  "trust": {
+    "badge": "Jahon banki",
+    "text": "Dushanbe Soft — Jahon banki tomonidan moliyalashtiriladigan “Tojikistonning raqamli asoslari” loyihasi pudratchisi.",
+    "more": "Batafsil"
+  },
+  "ui": {
+    "home": "Bosh sahifa",
+    "breadcrumbs": "Navigatsiya zanjiri",
+    "techStack": "Foydalanilgan texnologiyalar steki",
+    "viewCase": "Loyiha keysini portfolioda ko‘rish",
+    "similarTitle": "Shunga o‘xshash yechim qiziqtiradimi?",
+    "similarText": "Dushanbe Soft jamoasi ishonchli raqamli platformalar, ERP, SaaS va mobil ilovalarni “kalit topshiriladigan” asosda loyihalaydi va ishlab chiqadi.",
+    "discussProject": "Loyihani muhokama qilish",
+    "otherNews": "Boshqa yangiliklar",
+    "backTo": "Qaytish:",
+    "themeLight": "Yorug‘ mavzu",
+    "themeDark": "Qorong‘i mavzu"
+  }
+}

@@ -1,0 +1,924 @@
+{
+  "greeting": "Salam",
+  "welcome": "Dushanbe Soft-a hoş geldiňiz",
+  "header": {
+    "home": "Baş sahypa",
+    "services": "Hyzmatlar",
+    "products": "Biznes üçin",
+    "cases": "Portfolio",
+    "partners": "Hyzmatdaşlarymyz",
+    "about": "Biz barada",
+    "contacts": "Habarlaşmak",
+    "process": "Işläp düzmek tapgyry",
+    "pricing": "Tarifler",
+    "careers": "Karýera",
+    "awards": "Sylaglar",
+    "proposal": "Täjirçilik teklibini almak",
+    "allPartners": "Ähli hyzmatdaşlar"
+  },
+  "hero": {
+    "seoTitle": "Dushanbe Soft — Duşenbedäki (Täjigistan) programma üpjünçiligini, web saýtlary we mobil programmalary işläp düzýän kompaniýa",
+    "badge": "Biznes we döwlet üçin IT çözgütler",
+    "title1": "Biznesi öňe",
+    "title2": "alyp barýan tehnologiýalar",
+    "subtitle": "Häzirki zaman IT çözgütlerini işläp düzýäris we ornaşdyrýarys",
+    "btnPrimary": "Maslahat almak",
+    "btnSecondary": "Taslamalara seretmek",
+    "marquee": [
+      "PHP",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "React",
+      "React Native",
+      "Next.js",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Laravel",
+      "Django",
+      "Flutter",
+      "Swift",
+      "Kotlin",
+      "Java",
+      "Spring Boot",
+      "Go",
+      ".NET",
+      "GraphQL",
+      "Socket.io",
+      "GitHub",
+      "Docker",
+      "Kubernetes",
+      "Nginx",
+      "AWS",
+      "Git",
+      "GitHub Actions",
+      "Kafka",
+      "RabbitMQ",
+      "Elasticsearch",
+      "Firebase",
+      "Tailwind CSS",
+      "Vite",
+      "Webpack"
+    ],
+    "prevSlide": "Öňki habar",
+    "nextSlide": "Indiki habar",
+    "slideOf": "{{current}} / {{total}}",
+    "play": "Awtomatik aýlanmagy başlatmak",
+    "pause": "Awtomatik aýlanmagy togtatmak",
+    "months": [
+      "ýanwar",
+      "fewral",
+      "mart",
+      "aprel",
+      "maý",
+      "iýun",
+      "iýul",
+      "awgust",
+      "sentýabr",
+      "oktýabr",
+      "noýabr",
+      "dekabr"
+    ]
+  },
+  "products": {
+    "subtitle": "Önümlerimiz",
+    "title": "Biznesiňiz üçin taýýar önümler",
+    "allProducts": "Ähli önümler",
+    "zudsms": {
+      "title": "ZudSMS – SMS ibermek platformasy",
+      "subtitle": "zudsms.tj",
+      "description": "Biznes üçin SMS habarlaryny awtomatlaşdyrmak we köpçülikleýin ibermek üçin bulut hyzmaty. Platforma Täjigistanyň ähli mobil operatorlarynyň belgilerine maksatly we tranzaksion habarlary derrew ýetirýär, kompaniýalara müşderileriň wepalylygyny we marketing kampaniýalarynyň netijeliligini ýokarlandyrmaga kömek edýär.",
+      "tags": [
+        "Töleg we SMS-şlýuz arhitekturasyny işläp düzmek",
+        "Ähli enjamlar bilen doly gabat gelmek",
+        "Ulgamyň ýokary durnuklylygy we habarlaryň derrew ýetirilmegi",
+        "Habar ibermegi meýilleşdirmek we müşderi binýady bilen işlemek moduly",
+        "Tarifi, balansy we habar şablonlaryny dolandyrýan şahsy otag",
+        "Daşarky CRM/ERP ulgamlaryndan habarlary awtomatik ibermek üçin REST API integrasiýasy"
+      ]
+    },
+    "livechat": {
+      "title": "LiveChat TJ - Onlaýn çat",
+      "subtitle": "LiveChat TJ",
+      "description": "Saýta gelýänleri toparyňyz bilen hakyky wagtda baglanyşdyrýan biznes üçin web hyzmaty we onlaýn çat widjeti. LiveChat TJ müşderilere goldawy awtomatlaşdyrýar, hyzmatyň hilini ýokarlandyrýar we dessin habarlar arkaly satuwy artdyrmaga kömek edýär.",
+      "tags": [
+        "Ulgam arhitekturasyny işläp düzmek",
+        "Ulgamyň ýokary durnuklylygy",
+        "Onlaýn çaty we widjetleri birleşdirmek",
+        "Mobil enjamlary goldamak",
+        "Şahsy otag we analitika",
+        "DDoS hüjümlerinden goramak",
+        "Köp dilliligi goldamak"
+      ]
+    },
+    "tvcrm": {
+      "title": "TV CRM",
+      "subtitle": "Kabel TW üçin CRM",
+      "description": "Kabel telewideniýe üpjün edijisi üçin abonentleri, gözegçileri, kassa amallaryny we hasabatlylygy dolandyrmagy awtomatlaşdyrýan içki CRM ulgamy."
+    }
+  },
+  "whyUs": {
+    "subtitle": "Näme üçin biz",
+    "title": "Tehnologiýalar. Tejribe. Ynam.",
+    "standards": {
+      "title": "Halkara standartlar",
+      "desc": "ISO 9001, GDPR, ISO/IEC 27001 — hil we howpsuzlyk boýunça halkara standartlar."
+    },
+    "individual": {
+      "title": "Aýratyn çemeleşme",
+      "desc": "Her taslama üçin aýratyn strategiýa we iň amatly çözgüt."
+    },
+    "security": {
+      "title": "Ýokary howpsuzlyk",
+      "desc": "Köp derejeli gorag, OWASP, şifrlemek we yzygiderli auditler."
+    },
+    "technology": {
+      "title": "Häzirki zaman tehnologiýalary",
+      "desc": "React, Flutter, Node.js, AI/ML, bulut tehnologiýalary — diňe döwrebap stek."
+    },
+    "support": {
+      "title": "24/7 goldaw",
+      "desc": "Monitoring we goldaw boýunça aýratyn topar. Jogap bermek wagty 30 minuda çenli kepillendirilen SLA."
+    },
+    "partnership": {
+      "title": "Uzak möhletli hyzmatdaşlyk",
+      "desc": "Müşderileriň 80%-i täze taslamalar bilen gaýdyp gelýär. Biz gatnaşyklary sprintler üçin däl-de, ýyllar üçin gurýarys."
+    }
+  },
+  "team": {
+    "subtitle": "Ýolbaşçylyk",
+    "title": "Muny amala aşyrýan adam",
+    "labels": {
+      "skills": "Endikler",
+      "experience": "Tejribe",
+      "education": "Bilim"
+    },
+    "stats": {
+      "founded": "Esaslandyrylan",
+      "projects": "Taslamalar",
+      "experts": "Hünärmenler",
+      "countries": "Ýurtlar",
+      "satisfaction": "Kanagatlanma"
+    },
+    "member0": {
+      "name": "Dilawar Abdullaýew",
+      "role": "Maglumat analitigi, Fullstack işläp düzüji, maglumatlar binýadynyň administratory (DBA)",
+      "bio": "Dilawar — maglumatlary seljermek, Fullstack işläp düzmek we maglumatlar binýatlaryny dolandyrmak boýunça bilimleri we endikleri utgaşdyrýan ajaýyp dersara hünärmen. Onuň giň başarnyklary ony dürli meseleleri çözüp bilýän toparymyzyň gymmatly agzasyna öwürýär. Dilawar maglumatlar bilen hem, web programmalar we maglumatlar binýatlary bilen hem işläp bilýär, bu bolsa oňa çylşyrymly we netijeli biznes çözgütlerini döretmäge mümkinçilik berýär.",
+      "skills": "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
+      "experience": "2012",
+      "education": "Daşkent maglumat tehnologiýalary uniwersitetiniň kurslary: Stepik, IT Step, Harvard, Skillbox, ITVDN, Yandex"
+    },
+    "memberDefault": {
+      "name": "Işgäriň ady",
+      "role": "Wezipesi",
+      "bio": "Işgäriň beýany",
+      "skills": "Endikler",
+      "experience": "Tejribe",
+      "education": "Bilim"
+    },
+    "yakubov": {
+      "name": "Muhammad Ýakubow",
+      "role": "CEO, IT-arhitektor, işläp düzüji we tehniki hünärmen",
+      "bio": "Muhammad Ýakubow — kompaniýanyň baş direktory we tehniki ýolbaşçysy, dolandyryş tejribesini programma üpjünçiligini işläp düzmek we IT-arhitektura boýunça çuňňur bilimler bilen utgaşdyrýar. Ol çylşyrymly sanly çözgütleri döretmäge we ösdürmäge — pikirden we arhitekturany taslamakdan başlap, işläp düzmäge, ornaşdyrmaga we önümi has-da giňeltmäge çenli gatnaşýar.\nOnuň güýçli tarapy — taslama bütewi seredip bilmegi: biznes meselelerine düşünmek, tehniki strategiýany gurmak, arhitektura kararlaryny kabul etmek we şol bir wagtyň özünde işläp düzmegiň jikme-jikliklerine çuňňur aralaşmak. Onuň ýolbaşçylygynda topar hakyky biznes meselelerine gönükdirilen ygtybarly, giňeldilip bilinýän we häzirki zaman IT çözgütlerini döredýär.",
+      "skills": "HTML, CSS, JavaScript, React, C, C++, C#, ASP .NET, Java, Python, TensorFlow, Scikit-learn, Jupyter Notebook, Django, Fast API, SQL (MySQL, PostgreSQL), NoSQL (MongoDB)",
+      "experience": "2017",
+      "education": "Maglumat tehnologiýalary boýunça ýokary bilim\nProgramma inženerligi · Maglumat ulgamlary · Programma üpjünçiliginiň arhitekturasy"
+    }
+  },
+  "services": {
+    "subtitle": "Näme bilen meşgullanýarys",
+    "title": "IT hyzmatlarynyň doly toplumy",
+    "list": [
+      {
+        "title": "Web işläp düzmek",
+        "description": "Häzirki zaman steklerinde ýokary ýüklenmeli web programmalar, korporatiw portallar we SaaS platformalar."
+      },
+      {
+        "title": "Mobil işläp düzmek",
+        "description": "Amatly UX bilen iOS we Android üçin natiw we kross-platformaly mobil programmalar."
+      },
+      {
+        "title": "Web3 we Blockchain",
+        "description": "Web3 Blockchain taslamalaryny we Solidity-de akylly şertnamalary işläp düzmek."
+      },
+      {
+        "title": "UI/UX dizaýn",
+        "description": "Figma-dan önümçilige çenli — dizaýn ulgamlary, ulanyjy interfeýsleri we dünýä derejesindäki prototipler."
+      },
+      {
+        "title": "Kiberhowpsuzlyk",
+        "description": "Howpsuzlyk auditi, pentest, maglumatlary goramak we ISO/IEC 27001 halkara standartlaryna laýyklyk."
+      },
+      {
+        "title": "API integrasiýasy",
+        "description": "Korporatiw ulgamlar üçin REST/GraphQL API, mikrohyzmat arhitekturasyny we ESB-ni işläp düzmek we birleşdirmek."
+      },
+      {
+        "title": "Bulut çözgütleri",
+        "description": "Taslamak we bulda geçirmek: AWS, Azure, GCP. DevOps, CI/CD, monitoring we giňeltmek."
+      },
+      {
+        "title": "Tehniki goldaw",
+        "description": "24/7 goldaw topary, ulgamlaryň monitoringi, SLA kepillikleri we çalt jogap."
+      }
+    ],
+    "web_dev": "Web işläp düzmek",
+    "mobile_dev": "Mobil programmalar",
+    "crm": "CRM we awtomatlaşdyrma",
+    "uiux": "UI/UX dizaýn",
+    "allServices": "Ähli hyzmatlar"
+  },
+  "process": {
+    "subtitle": "Nähili işleýäris",
+    "title": "Işläp düzmek tapgyry",
+    "list": [
+      {
+        "title": "Seljerme we taslamak",
+        "description": "Talaplaryňyzy öwrenýäris, bazary seljerýäris we jikme-jik tehniki tabşyryk düzýäris.",
+        "duration": "1-2 hepde"
+      },
+      {
+        "title": "Dizaýn (UI/UX)",
+        "description": "Häzirki zaman, düşnükli we özüne çekiji interfeýs işläp düzýäris.",
+        "duration": "2-3 hepde"
+      },
+      {
+        "title": "Işläp düzmek",
+        "description": "Arassa we giňeldilip bilinýän kod ýazýarys. Frontend we backend böleklerini döredýäris.",
+        "duration": "1 aýdan başlap"
+      },
+      {
+        "title": "Synag",
+        "description": "Düýpli QA synagyny geçirýäris: funksionallygy, howpsuzlygy we öndürijiligi barlaýarys.",
+        "duration": "1-2 hepde"
+      },
+      {
+        "title": "Işe girizmek",
+        "description": "Taslamany serwerlerde ýerleşdirýäris, monitoringi sazlaýarys we programmalary App Store we Google Play-de çap edýäris.",
+        "duration": "1 hepde"
+      },
+      {
+        "title": "Goldaw we ösüş",
+        "description": "Çykarylandan soň tehniki goldaw berýäris, önümiň durnuklylygyny üpjün edýäris we ony siziň bilen bilelikde kämilleşdirýäris.",
+        "duration": "Hemişelik"
+      }
+    ]
+  },
+  "reviews": {
+    "subtitle": "Synlar",
+    "title": "Biz barada näme diýýärler",
+    "list": [
+      {
+        "text": "Dushanbe-Soft özüni IT taslamalarynyň aýratynlyklaryna düşünýän we meselelere jogapkärli çemeleşýän topar hökmünde görkezdi.",
+        "name": "Umedjon Ubaýdullo",
+        "role": "«Teleradiokom» ÝPJ-niň ýolbaşçysynyň orunbasary"
+      },
+      {
+        "text": "Dushanbe-Soft bilen hyzmatdaşlyk — bu, ilkinji nobatda, hünärmen çemeleşme we biznes meselelerine düşünmekdir.",
+        "name": "Gulmahmad Kaýumow",
+        "role": "Telecom Technology-niň baş direktory"
+      },
+      {
+        "text": "Dushanbe-Soft müşderiler bilen işlemegi has amatly we netijeli edýän sanly çözgütleri ornaşdyrmaga kömek etdi.",
+        "name": "Şahrom Jamhurow",
+        "role": "Yak Du Trip-iň esaslandyryjysy we baş direktory"
+      },
+      {
+        "text": "Biz Dushanbe-Soft-y hünärmenligi, çaltlygy we netijä gönükdirilendigi üçin gadyrlaýarys.",
+        "name": "Tagoýmurod Sidikow",
+        "role": "Etagi-niň baş direktory"
+      },
+      {
+        "text": "Dushanbe-Soft-da biz tehniki talaplary diňe ýerine ýetirmeýäris — meselä çuňňur aralaşýarys we iň amatly çözgüdi hödürleýäris. Biz üçin açyk aragatnaşyk, ylalaşyklary berjaý etmek we jikme-jikliklere üns bermek möhümdir.",
+        "name": "Ikrom Abdullaýew",
+        "role": "PIC.TJ-niň utgaşdyryjysy"
+      },
+      {
+        "text": "Biz Dushanbe-Soft-y hünärmenligi, çaltlygy we netijä gönükdirilendigi üçin gadyrlaýarys. Topar taslamanyň zerurlyklaryna çalt düşünýär we tehniki meseleleri amatly sanly çözgütlere öwürýär.",
+        "name": "Tagoýmurod Sidikow",
+        "role": "Etagi-niň baş direktory"
+      }
+    ]
+  },
+  "cases": {
+    "subtitle": "Portfolio",
+    "title": "Biziň buýsanýan taslamalarymyz",
+    "all_cases": "Ähli keýsler",
+    "all_projects": "Ähli taslamalar",
+    "about_project": "Taslama barada",
+    "what_was_done": "Näme edildi",
+    "technologies": "Tehnologiýalar",
+    "gallery": "Galereýa",
+    "gallery_prev": "Öňki surat",
+    "gallery_next": "Indiki surat",
+    "gallery_close": "Görmegi ýapmak",
+    "loadMore": "Ýene görmek"
+  },
+  "projects": {
+    "zudyob": {
+      "title": "ZudYob — akylly AI gözleg",
+      "description": "ZudYob — gozgalmaýan emlägi akylly gözlemek üçin Telegram-bot. Ulanyjy satyn almagy ýa-da kärendesini, býudjeti, meýdany, otaglaryň sanyny we ýerleşýän ýerini saýlaýar, saklanan süzgüçleri dolandyrýar we bildirişleri göni çatda alýar. Bot rus, täjik we iňlis dillerini, abunany dolandyrmagy we Alif hem-de DCity arkaly balansy doldurmagy goldaýar.",
+      "tasks": [
+        "Laýyk teklipleri akylly gözlemek",
+        "Täze gabat gelmeler barada dessin habarnamalar",
+        "Gije-gündiz gözleg, 24/7",
+        "Her gün wagty tygşytlamak"
+      ],
+      "gallery": [
+        "ZudYob — has çalt tapýar"
+      ]
+    },
+    "president": {
+      "title": "Täjigistan Respublikasynyň Prezidenti",
+      "description": "Täjigistan Respublikasynyň Prezidentiniň resmi saýty ýurduň esasy döwlet web portalydyr. Platforma resmi habarlary, permanlary, çykyşlary we çärelerden surat reportažlaryny birnäçe dilde çap etmegi üpjün edýär.",
+      "gallery": [
+        "Interfeýsiň dört dili",
+        "Döwlet nyşanlary",
+        "Teksti ulaltmak",
+        "Arap dili üçin doly RTL",
+        "Portalyň iňlis dilindäki görnüşi",
+        "Prezidentiň ygtyýarlyklary",
+        "«Noma ba Prezident» görnüşi",
+        "Portalyň gurluşy we aşaky bölegi"
+      ]
+    },
+    "sohktor": {
+      "title": "BEMB",
+      "description": "Ýangyn gullugynyň operatiw işini awtomatlaşdyrmak, adatdan daşary ýagdaýlary we ýangynlary hasaba almak, jenaýat işlerini alyp barmak, barlanan desgalary hasaba almak we elektron resminama dolanyşygy üçin içki maglumat ulgamy (ERP/CRM ulgamy)."
+    },
+    "digital-tajikistan": {
+      "title": "Sanly Täjigistan",
+      "description": "Täjigistanyň sanly hyzmatlarynyň döwlet portaly. Ýurduň raýatlary we guramalary üçin elektron döwlet hyzmatlaryna ýeke-täk giriş nokady."
+    },
+    "mavji-somon": {
+      "title": "Mavji Somon TV OTT",
+      "description": "Filmleri, seriallary we teleýaýlymlary görmek üçin onlaýn platforma we striming hyzmaty. Hyzmat dürli enjamlarda ýokary hilli multimedia mazmunyna elýeterliligi üpjün edýär."
+    },
+    "livechat-tj": {
+      "title": "LiveChat TJ - Onlaýn çat",
+      "description": "LiveChat TJ — kompaniýalar bilen olaryň müşderileriniň arasynda hakyky wagtda aragatnaşygy üpjün edýän biznes üçin web hyzmaty we onlaýn çat platformasy. Platforma müşderilere goldawy awtomatlaşdyrýar, hyzmatyň hilini ýokarlandyrýar we dessin habarlar arkaly satuwy artdyrmaga kömek edýär.",
+      "gallery": [
+        "LiveChat lendinginiň ilkinji ekrany: «Müşderileriňiz bilen aragatnaşyk üçin onlaýn çat» sözbaşysy we «Mugt synap görmek» düwmesi",
+        "Çözgüt bölümi: noutbukdaky LiveChat operator dialoglary paneli we telefondaky çat widjetiniň görnüşi",
+        "Mümkinçilikler bölümi: funksiýa kartoçkalary — dessin jogap, akylly widjet, analitika, toparlaýyn iş, jogap şablonlary we CRM integrasiýalary",
+        "«Nähili işleýär» bölümi: onlaýn çaty saýta birikdirmegiň dört ädimi",
+        "Sazlamak bölümi: onlaýn çatyň dizaýnyny brendiňiziň stiline uýgunlaşdyrmak we operator interfeýsiniň görnüşi",
+        "Tarifler bölümi: Starter, Pro we Business meýilnamalary we olaryň mümkinçilikleriniň sanawy",
+        "Integrasiýalar bölümi: messenjerleri, CRM ulgamlaryny, saýt konstruktorlaryny we öz API-ňizi birikdirmek",
+        "Artykmaçlyklar bölümi: satuwyň ösmegi, çykdajylaryň azalmagy we has köp müşderi çekmek",
+        "Goldaw bölümi: habarlaşmak usullary (email, 24/7 çat, resminamalar) we ýygy berilýän soraglar",
+        "Esasy mümkinçilikler görkezilen «Näme üçin LiveChat» bölümi we saýtyň aşaky bölegi"
+      ]
+    },
+    "telecomm": {
+      "title": "Telecomm Technology",
+      "description": "«Telecomm Technology» telekommunikasiýa kompaniýasynyň we internet üpjün edijisiniň resmi saýty. Platforma ýokary tizlikli internet tarifleri, interaktiw telewideniýe (IPTV) we IP/NGN telefoniýa barada maglumat berýär, şeýle hem müşderiniň şahsy otagyna girmegi üpjün edýär."
+    },
+    "navo": {
+      "title": "Navo - Radioportal",
+      "description": "«Navo» 96.5 FM radiosynyň resmi saýty (navo.tj): gepleşikler we rubrikalar, podkastlar, aýdym ýygyndylary, surat we wideo galereýalar, habarlar lentasy we studiýanyň habarlaşmak maglumatlary."
+    },
+    "somon-tv": {
+      "title": "Somon TV",
+      "description": "Täjigistanyň iň iri telewizion torlarynyň biri — Somon TV üçin OTT striming platformasy. Platforma göni efir, VoD arhiwi we köp ekranly görmek mümkinçiliklerini hödürleýär."
+    },
+    "zudsms": {
+      "title": "ZudSMS – SMS ibermek platformasy",
+      "description": "Biznes üçin SMS habarlaryny awtomatlaşdyrmak we köpçülikleýin ibermek üçin bulut hyzmaty. Platforma Täjigistanyň ähli mobil operatorlarynyň belgilerine maksatly we tranzaksion habarlary derrew ýetirýär, kompaniýalara müşderileriň wepalylygyny we marketing kampaniýalarynyň netijeliligini ýokarlandyrmaga kömek edýär."
+    },
+    "sunduk-tv": {
+      "title": "SundukTV",
+      "description": "Antenna, kompýutere, kabel ýa-da hemra telewideniýesine bagly bolmazdan, ajaýyp hilli köp sanly teleýaýlym."
+    },
+    "onlinepay": {
+      "title": "OnlinePay – Töleg ulgamy",
+      "description": "Kompaniýalara we onlaýn biznese milli «Korti Milli» bank kartlary arkaly harytlar we hyzmatlar üçin tölegleri kabul etmäge mümkinçilik berýän internet-ekwaýring platformasy (Merchant Services). Hyzmat işiň ugruna, biznesiň möçberine we kompaniýada tehniki hünärmenleriň bardygyna garamazdan ýönekeý we amatly integrasiýa çözgütlerini hödürleýär.",
+      "tasks": [
+        "Dizaýny işläp düzmek",
+        "Frontend işläp düzmek",
+        "Backend işläp düzmek",
+        "Töleg ulgamlary bilen integrasiýa"
+      ]
+    },
+    "zenith-valuation": {
+      "title": "Zenith Valuation",
+      "description": "Amerikan bahalandyryş we konsalting kompaniýasy Zenith Valuation-yň korporatiw saýty. Platforma biznesiň dürli pudaklary üçin bahalandyryş we bilermenlik seljermesi boýunça hünärmen hyzmatlaryň toplumyny hödürleýär. Taslama ýokary hil we müşderilere hyzmat ediş standartlaryna laýyk gelýän garaşsyz, tehniki taýdan esaslandyrylan çözgütleri hödürlemäge gönükdirilendir.",
+      "tasks": [
+        "Dizaýny işläp düzmek",
+        "Frontend işläp düzmek",
+        "Backend işläp düzmek",
+        "SEO optimizasiýasy"
+      ]
+    },
+    "imron-nakliet": {
+      "title": "IMRON NAKLIET LLC",
+      "description": "IMRON NAKLIET LLC halkara logistika kompaniýasynyň korporatiw saýty. Platforma ulag-logistika hyzmatlarynyň doly toplumyny, şol sanda ýygnama we ölçeginden uly ýükleri halkara daşamagy, temperatura logistikasyny, multimodal ugurlary (gapydan gapa) we gümrük resmileşdirmesini hödürlemek üçin işlenip düzüldi.",
+      "tasks": [
+        "Dizaýny işläp düzmek",
+        "Frontend işläp düzmek",
+        "Backend işläp düzmek"
+      ]
+    },
+    "arcanefinance": {
+      "title": "Arcane Finance",
+      "description": "Çalt alyş-çalyş, likwidlik howuzlaryny dolandyrmak we steýking üçin merkezleşdirilmedik maliýe (DeFi) platformasy."
+    },
+    "promolovelybot": {
+      "title": "Lovely promo",
+      "description": "Amatly Mini App interfeýsi bilen bäsleşikleri, utuşly oýunlary we marketing çärelerini geçirmek üçin Telegram promo-bot."
+    },
+    "reactorexchange": {
+      "title": "Reactor",
+      "description": "Tokenleri çalt çalyşmak we likwidlik bermek üçin merkezleşdirilmedik birža."
+    },
+    "arcane-launchpad": {
+      "title": "Arcane Launchpad",
+      "description": "Täze kripto-taslamalary we tokenleri işe girizmek hem-de olara maýa goýmak üçin platforma."
+    },
+    "reactor-exchange": {
+      "title": "Reactor Exchange",
+      "description": "Tokenleri çalt çalyşmak we likwidlik bermek üçin merkezleşdirilmedik birža."
+    },
+    "mirel": {
+      "title": "Mirel",
+      "description": "Mirel üçin korporatiw saýt we mazmuny dolandyrmak ulgamy (CMS). Platforma hyzmatlary, ýerine ýetirilen taslamalary, hyzmatdaşlary we üstünlikleri görkezýär, şeýle hem mazmuny, arzalary we işgärleri dolandyrýar."
+    },
+    "royalbaby": {
+      "title": "Royal Baby promo-çäresi",
+      "description": "Royal Baby promo-çäresi üçin toplumlaýyn çözgüt. Ol promo-saýty, gatnaşyjylar üçin Telegram-boty hem-de utuşly oýunlary, ýeňijileri we baýraklary dolandyrmak üçin admin-paneli öz içine alýar."
+    },
+    "rushdikuhiston": {
+      "title": "Rushdi Kuhiston",
+      "description": "«Rushdi Kuhiston» mikromaliýe guramasy üçin karz kalkulýatoryny, onlaýn arzalary we çat-bot integrasiýasyny öz içine alýan web platforma we dolandyryş paneli."
+    },
+    "traveltours": {
+      "title": "TravelTours",
+      "description": "Syýahatlaryň katalogyny, myhmanhanalary bronlamagy, şeýle hem arzalary işlemek we ulgamy sazlamak üçin dolandyryş panelini öz içine alýan syýahat agentliginiň platformasy."
+    },
+    "itrunstj": {
+      "title": "I-Trans",
+      "description": "Ýük ekspedisiýasy, gümrük resmileşdirmesi we ýükleri ätiýaçlandyrmak hyzmatlaryny hödürleýän logistika kompaniýasynyň korporatiw saýty."
+    },
+    "farad": {
+      "title": "Farad",
+      "description": "Harytlary, sargytlary, ulanyjylary, hasabatlary we marketing kampaniýalaryny dolandyrmagy öz içine alýan toplumlaýyn elektron söwda dolandyryş paneli."
+    },
+    "sinamoktv": {
+      "title": "Kabel TW ulgamy",
+      "description": "Kabel telewideniýe üpjün edijisi üçin abonentleri, gözegçileri, kassa amallaryny we hasabatlylygy dolandyrmagy awtomatlaşdyrýan içki CRM ulgamy."
+    },
+    "confy": {
+      "title": "Confy",
+      "description": "Confy brendi üçin promo-saýt we utuşly oýunlar ulgamy."
+    }
+  },
+  "partners": {
+    "subtitle": "Hyzmatdaşlarymyz",
+    "title": "Bize öňdebaryjy guramalar ynanýar",
+    "list": [
+      {
+        "name": "Президент ҶТ",
+        "sector": "president.tj",
+        "description": "Täjigistan Respublikasynyň Prezidentiniň resmi saýty ýurduň esasy döwlet web portalydyr. Platforma resmi habarlary, permanlary, çykyşlary we iri döwlet çärelerinden surat reportažlaryny birnäçe dilde öz wagtynda çap etmegi üpjün edip, ygtybarly maglumat çeşmesi bolup hyzmat edýär."
+      },
+      {
+        "name": "Sanly Täjigistan",
+        "sector": "DT.TJ",
+        "description": "Täjigistanyň sanly hyzmatlarynyň döwlet portaly — elektron döwlet hyzmatlaryna ýeke-täk giriş nokady. Ol raýatlaryň we biznesiň döwlet edaralary bilen özara gatnaşygyny ýeňilleşdirip, açyklygy we netijeliligi ýokarlandyrýar."
+      },
+      {
+        "name": "СХДО",
+        "sector": "mahzan.tj",
+        "description": "Ýeke-täk elektron maglumatlar binýady — ýangyn gullugynyň işini awtomatlaşdyrmak üçin ýöriteleşdirilen içki maglumat ulgamy. Ol adatdan daşary ýagdaýlary we ýangynlary ygtybarly hasaba almagy, jenaýat işlerini we hasabatlylygy alyp barmagy hem-de howpsuz elektron resminama dolanyşygyny üpjün edýär."
+      },
+      {
+        "name": "Рушди Кӯҳистон",
+        "sector": "rushdikuhiston.tj",
+        "description": "Rushdi Kuhiston Invest Project — daglyk sebitleri goldamaga we hemmetaraplaýyn ösdürmäge, infrastrukturany we durmuş derejesini gowulandyrmaga hem-de iş orunlaryny döretmäge gönükdirilen iri maýa goýum taslamasy."
+      },
+      {
+        "name": "Megafon",
+        "sector": "megafon.tj",
+        "description": "Täjigistanyň öňdebaryjy telekom operatorlarynyň biri, ýokary tizlikli mobil internet, ösen maliýe hyzmatlaryny we biznesi awtomatlaşdyrmak boýunça innowasion çözgütleri hödürleýär."
+      },
+      {
+        "name": "Телеком",
+        "sector": "ttl.tj",
+        "description": "Täjigistanyň ilkinji internet üpjün edijisi, ýokary tizlikli giň zolakly elýeterlilik, IP-telefoniýa we toplumlaýyn korporatiw çözgütleri hödürleýär."
+      },
+      {
+        "name": "Mavji Somon",
+        "sector": "mavjisomon.tj",
+        "description": "Täjigistanyň iň iri we çalt ösýän TW üpjün edijileriniň biri, teleýaýlymlaryň giň saýlawyny, interaktiw hyzmatlary we multimedia mazmunyna durnukly elýeterliligi hödürleýär."
+      },
+      {
+        "name": "Navo",
+        "sector": "navo.tj/ru",
+        "description": "«Navo» radiosy (96.5 FM) — gündelik hitleri, awtor gepleşiklerini, habarlary we interaktiw şoulary hödürleýän meşhur aýdym-dynç alyş radiostansiýasy."
+      },
+      {
+        "name": "Somon TV",
+        "sector": "somon.tv",
+        "description": "Täjigistanyň iň iri telekompaniýasy üçin işlenip düzülen ösen OTT striming platformasy, HD hilli göni efirleri, VoD arhiwlerini we köp ekranly görmegi hödürleýär."
+      },
+      {
+        "name": "IMRON NAKLIET",
+        "sector": "imronnakliet.tj",
+        "description": "Howpsuz, öz wagtynda we tygşytly eltip bermek üçin üpjünçilik zynjyryny dolandyrmagyň ösen tehnologiýalaryny ulanyp, ygtybarly ýük daşamak hyzmatlaryny hödürleýän innowasion logistika kompaniýasy."
+      },
+      {
+        "name": "Sunduk TV",
+        "sector": "sunduk.tv",
+        "description": "650-den gowrak rus dilli we halkara teleýaýlymy, şeýle hem HD we UltraHD hilli onlaýn filmleriň we seriallaryň uly kitaphanasyny hödürleýän häzirki zaman internet-telewideniýe."
+      },
+      {
+        "name": "Памир Энерджи",
+        "sector": "pamirenergy.com",
+        "description": "Pamir sebitinde ygtybarly, arassa we bökdençsiz elektrik üpjünçiligini üpjün edýän, infrastruktura we durnukly tehnologiýalara işjeň maýa goýýan strategik energetika kompaniýasy."
+      },
+      {
+        "name": "Zenith Valuation",
+        "sector": "zenithvaluation.com",
+        "description": "Gozgalmaýan emlägi, enjamlary, aktiwleri we biznesi bahalandyrmak boýunça hyzmatlaryň doly toplumyny hödürleýän, ýokary ynamly hünärmen garaşsyz bahalandyryş kompaniýasy."
+      },
+      {
+        "name": "СинамоТВ",
+        "sector": "sinamo.tv",
+        "description": "«Sinamo» döwlet telewizion edarasy — milli kinony ösdürmäge we wagyz etmäge bagyşlanan döwlet teleýaýlymy, iň gowy ýerli filmleri we medeni gepleşikleri yzygiderli efire berýär."
+      }
+    ]
+  },
+  "contact": {
+    "subtitle": "Biz bilen habarlaşyň",
+    "titleBlack1": "Geliň,",
+    "titleBlack2": "taslamaňyzy ",
+    "titleGradient": "maslahatlaşalyň.",
+    "desc": "Meseläňiz barada aýdyp beriň, biz iň gowy çözgüdi hödürläris we bahasyny hasaplarys.",
+    "responseTime": "Jogap",
+    "timeValue": "2 sagadyň dowamynda",
+    "confidentiality": "Gizlinlik",
+    "guaranteed": "kepillendirilýär",
+    "free": "Mugt",
+    "consultation": "maslahat",
+    "teamText": "Hünärmenler toparymyz taslamaňyzy durmuşa geçirmäge kömek etmäge taýýar",
+    "messengersTitle": "Ýa-da amatly messenjerde ýazyň",
+    "formTitle": "Arza galdyryň",
+    "formSubtitle": "Jikme-jiklikleri maslahatlaşmak üçin siziň bilen habarlaşarys",
+    "form": {
+      "nameLabel": "Ady",
+      "namePlaceholder": "Adyňyz",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@company.com",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "+992 _ _ _ _ _ _ _ _ _",
+      "directionLabel": "Ugur",
+      "directionOptions": {
+        "opt1": "Hyzmaty saýlaň",
+        "opt2": "Programma üpjünçiligini işläp düzmek",
+        "opt3": "Web işläp düzmek",
+        "opt4": "IT autsorsing"
+      },
+      "messageLabel": "Habar",
+      "messagePlaceholder": "Taslamaňyz barada aýdyp beriň: mesele, möçber, möhletler…",
+      "submitBtn": "Arza ibermek",
+      "submitting": "Iberilýär...",
+      "successMessage": "Arza üstünlikli iberildi!",
+      "errorSend": "Habary iberip bolmady",
+      "errorOccurred": "Ýalňyşlyk ýüze çykdy. Haýyş edýäris, soňrak gaýtadan synanyşyň."
+    }
+  },
+  "cta": {
+    "subtitle": "Başlamaga taýýarmy?",
+    "title": "Taslamaňyzy başlamaga taýýarmysyňyz?",
+    "desc": "Arza galdyryň, biz mugt maslahat üçin bir iş gününiň dowamynda siziň bilen habarlaşarys.",
+    "primaryBtn": "Maslahat almak"
+  },
+  "footer": {
+    "desc": "Täjigistanyň öňdebaryjy IT kompaniýasy. 2017-nji ýyldan bäri biznes we döwlet üçin sanly çözgütleri işläp düzýäris.",
+    "col1": "Kompaniýa",
+    "col2": "Hyzmatlar",
+    "col3": "Habarlaşmak",
+    "links1": [
+      "Biz barada",
+      "Topar",
+      "Önümlerimiz",
+      "Nähili işleýäris",
+      "Keýsler",
+      "Synlar"
+    ],
+    "links2": [
+      "Web işläp düzmek",
+      "Mobil işläp düzmek",
+      "UI/UX dizaýn",
+      "API integrasiýasy",
+      "Kiberhowpsuzlyk",
+      "Tehniki goldaw"
+    ],
+    "address": "Täjigistan Respublikasy, \n Duşenbe",
+    "copyright": "© 2017–2026 Dushanbe Soft. Ähli hukuklar goralan."
+  },
+  "seo": {
+    "default_title": "Dushanbe Soft — Täjigistanda programmalar we saýtlar",
+    "default_description": "Duşenbedäki IT kompaniýa: 2017-nji ýyldan bäri biznes we döwlet üçin saýtlary, mobil programmalary, CRM we ERP ulgamlaryny işläp düzýäris.",
+    "keywords": "täjigistandaky it kompaniýalar, duşenbe it kompaniýa, täjigistanda programma üpjünçiligini işläp düzmek, duşenbede saýt döretmek, mobil programmalary işläp düzmek, biznesi awtomatlaşdyrmak, dushanbe soft, fintech, crm, erp",
+    "products_title": "Biznes üçin taýýar IT önümler: SMS-şlýuz, onlaýn çat, CRM",
+    "products_description": "Täjigistandaky biznes üçin Dushanbe Soft önümleri: ZudSMS köpçülikleýin SMS platformasy, LiveChat TJ onlaýn çaty, CRM ulgamlary we töleg çözgütleri.",
+    "cases_title": "Portfolio — biziň döreden saýtlarymyz, programmalarymyz we ulgamlarymyz",
+    "cases_description": "Dushanbe Soft keýsleri: Täjigistanyň Prezidentiniň saýty, «Sanly Täjigistan» portaly, Somon TV OTT platformalary, fintech, CRM we mobil programmalar.",
+    "news_title": "Kompaniýanyň habarlary — Täjigistandaky IT taslamalar we işläp düzmek",
+    "news_description": "Dushanbe Soft-uň soňky habarlary, täze çykyşlary we möhüm wakalary — Täjigistanda IT çözgütlerini işläp düzmek.",
+    "media_title": "Surat we wideo — taslamalar we topar",
+    "media_description": "Dushanbe Soft surat we wideo galereýasy: taslamalaryň tanyşdyrylyşy, programma üpjünçiligini işläp düzmek we Duşenbedäki (Täjigistan) toparyň durmuşy."
+  },
+  "pricing": {
+    "plans": {
+      "0": {
+        "title": "Standart tarif",
+        "features": {
+          "0": "Taslama we administrirlemek boýunça maslahatlar — 1 sagat;",
+          "1": "Saýtyň işleýşini barlamak",
+          "2": "Domeniň, hostingiň we SSL şahadatnamasynyň uzaldylmagyna gözegçilik"
+        }
+      },
+      "1": {
+        "title": "Esasy tarif",
+        "features": {
+          "0": "Taslama we administrirlemek boýunça maslahatlar — 2 sagat;",
+          "1": "Saýtyň işleýşini barlamak",
+          "2": "Domeniň, hostingiň we SSL şahadatnamasynyň uzaldylmagyna gözegçilik",
+          "3": "Kody arassalamak we barlamak;",
+          "4": "Saýtyň ätiýaçlyk nusgasy — aýda bir gezek;",
+          "5": "Ýalňyşlyklary düzetmek — 24 sagadyň dowamynda 2 sagada çenli;"
+        }
+      },
+      "2": {
+        "title": "Giňeldilen tarif",
+        "features": {
+          "0": "Taslama we administrirlemek boýunça maslahatlar — 2 sagat;",
+          "1": "Saýtyň işleýşini barlamak",
+          "2": "Domeniň, hostingiň we SSL şahadatnamasynyň uzaldylmagyna gözegçilik",
+          "3": "Kody arassalamak we barlamak;",
+          "4": "Saýtyň ätiýaçlyk nusgasy — aýda iki gezek;",
+          "5": "Ýalňyşlyklary düzetmek — 12 sagadyň dowamynda 8 sagada çenli;",
+          "6": "Poçtany administrirlemek — döretmek we sazlamak.",
+          "7": "Hüjümlerden we wiruslardan goramak;",
+          "8": "Taslamanyň çeşme koduny kämilleşdirmek — 4 sagat."
+        }
+      },
+      "3": {
+        "title": "Premium tarif",
+        "features": {
+          "0": "Taslama we administrirlemek boýunça maslahatlar — 2 sagat;",
+          "1": "Saýtyň işleýşini barlamak",
+          "2": "Domeniň, hostingiň we SSL şahadatnamasynyň uzaldylmagyna gözegçilik",
+          "3": "Kody arassalamak we barlamak;",
+          "4": "Saýtyň ätiýaçlyk nusgasy — aýda iki gezek;",
+          "5": "Ýalňyşlyklary 6 sagadyň dowamynda düzetmek;",
+          "6": "Poçtany administrirlemek — döretmek we sazlamak.",
+          "7": "Hüjümlerden we wiruslardan goramak;",
+          "8": "Taslamanyň çeşme koduny kämilleşdirmek — 20 sagat.",
+          "9": "Saýtyň auditi we taslamany dowam etdirmek boýunça maslahatlar."
+        }
+      }
+    },
+    "subtitle": "Tarifler",
+    "title": "Elýeterli tarif meýilnamalary",
+    "per_month": "/aý",
+    "select": "Saýlamak"
+  },
+  "jobs": {
+    "subtitle": "KARÝERA",
+    "title": "Dushanbe-Soft-daky boş iş orunlary",
+    "search_placeholder": "Boş iş ornuny gözlemek",
+    "direction": "Ugur",
+    "design": "Dizaýn",
+    "format": "Iş formaty",
+    "remote": "Aralykdan",
+    "office": "Ofis",
+    "hybrid": "Ofis / Aralykdan",
+    "experience": "Tejribe",
+    "junior": "Tejribesiz",
+    "middle": "1-3 ýyl",
+    "senior": "3+ ýyl",
+    "not_found": "Gynansak-da, soragyňyz boýunça hiç zat tapylmady.",
+    "more": "Giňişleýin",
+    "cta_title": "Biziň toparymyzyň agzasy bolmak isleýärsiňizmi?",
+    "cta_desc": "Arza iberiň — häzir laýyk boş iş orny bolmasa-da, amatly mümkinçilik ýüze çykanda siziň bilen habarlaşarys.",
+    "send_cv": "Rezýume ibermek",
+    "location": {
+      "dushanbe": "Duşenbe"
+    },
+    "type": {
+      "remote": "Aralykdan",
+      "office": "Ofisde",
+      "hybrid": "Gibrid"
+    },
+    "desc": {
+      "frontend-react": "React.js-de ulanyjy interfeýslerini işläp düzmek",
+      "backend-node": "Node.js-de serwer logikasyny we API döretmek",
+      "ux-ui-designer": "Web we mobil enjamlar üçin amatly we häzirki zaman interfeýslerini taslamak"
+    },
+    "backToList": "Boş iş orunlarynyň sanawyna",
+    "formatLabel": "Format",
+    "experienceLabel": "Tejribe",
+    "about": "Boş iş orny barada",
+    "detailCtaTitle": "Boş iş orny gyzyklandyrdymy?",
+    "detailCtaDesc": "Rezýumäňizi Telegram arkaly iberiň, biz ýakyn wagtda siziň bilen habarlaşarys!"
+  },
+  "modal": {
+    "error_send": "Ibermek ýalňyşlygy",
+    "close": "Ýapmak",
+    "contact_us": "Biz bilen habarlaşyň",
+    "lets_discuss": "Geliň,",
+    "your_project": "taslamaňyzy maslahatlaşalyň.",
+    "desc": "Meseläňiz barada aýdyp beriň, biz iň gowy çözgüdi hödürläris we bahasyny hasaplarys.",
+    "reply_in": "Jogap",
+    "2_hours": "2 sagadyň dowamynda",
+    "confidentiality": "Gizlinlik",
+    "guaranteed": "kepillendirilýär",
+    "free": "Mugt",
+    "consultation": "maslahat",
+    "or_write_messenger": "Ýa-da amatly messenjerde ýazyň",
+    "phone": "Telefon",
+    "leave_request": "Arza galdyryň",
+    "leave_request_desc": "Jikme-jiklikleri maslahatlaşmak üçin siziň bilen habarlaşarys",
+    "name_label": "Ady",
+    "name_placeholder": "Adyňyz",
+    "phone_label": "Telefon",
+    "direction_label": "Ugur",
+    "direction_placeholder": "Hyzmaty saýlaň",
+    "message_label": "Habar",
+    "message_placeholder": "Taslamaňyz barada aýdyp beriň: mesele, möçber, möhletler...",
+    "success_msg": "Arza üstünlikli iberildi!",
+    "sending": "Iberilýär...",
+    "submit_btn": "Arza ibermek"
+  },
+  "awards": {
+    "subtitle": "Sylaglarymyz",
+    "title": "Üstünlikler we sylaglar",
+    "viewDoc": "Resminama seretmek",
+    "items": {
+      "1": {
+        "title": "Hormat haty",
+        "description": "Sanly tehnologiýalary ösdürmäge goşan goşandy üçin"
+      },
+      "2": {
+        "title": "Maslahat haty",
+        "description": "Hyzmatdaşdan"
+      },
+      "3": {
+        "title": "Hyzmatdaşdan",
+        "description": "Innowasion çözgütler üçin"
+      },
+      "4": {
+        "title": "Minnetdarlyk haty",
+        "description": "Geljekki hyzmatdaşlyk üçin"
+      },
+      "indian_tech_1": {
+        "title": "Hindistanyň tehniki hyzmatdaşlygy",
+        "description": "Şahadatnama"
+      },
+      "indian_tech_2": {
+        "title": "Hindistanyň hökümeti",
+        "description": "ITEC maksatnamasy"
+      },
+      "fmfb": {
+        "title": "First MicroFinance Bank",
+        "description": "Maslahat haty"
+      },
+      "golden_travel": {
+        "title": "Golden Travel",
+        "description": "Maslahat haty"
+      },
+      "megafon": {
+        "title": "Megafon Tajikistan",
+        "description": "Maslahat haty"
+      },
+      "muhibon": {
+        "title": "Muhibon",
+        "description": "Maslahat haty"
+      },
+      "sinamo": {
+        "title": "Sinamo TV",
+        "description": "Maslahat haty"
+      },
+      "sunduktv": {
+        "title": "Sunduk TV",
+        "description": "Maslahat haty"
+      },
+      "completion": {
+        "title": "Tamamlama şahadatnamasy",
+        "description": "Üstünlikli tamamlandygy üçin"
+      }
+    }
+  },
+  "news": {
+    "subtitle": "habarlar",
+    "title": "Soňky habarlar",
+    "viewAll": "Ähli habarlar",
+    "more": "Giňişleýin",
+    "items": {
+      "1": {
+        "tag": "Döwlet taslamalary",
+        "date": "24.08.2025",
+        "title": "dt.tj (PIC) portalynyň işe girizilmegi",
+        "desc": "Täjigistanyň sanly hyzmatlarynyň döwlet portaly. Raýatlar we guramalar üçin elektron döwlet hyzmatlaryna ýeke-täk howpsuz giriş nokady."
+      },
+      "2": {
+        "tag": "Media we OTT",
+        "date": "15.09.2025",
+        "title": "Mavji Somon striming platformasy",
+        "desc": "Ähli enjamlarda filmleri, seriallary we göni teleýaýlymlary ýokary hilde görmek üçin häzirki zaman OTT striming platformasynyň işe girizilmegi."
+      },
+      "3": {
+        "tag": "ERP we awtomatlaşdyrma",
+        "date": "02.10.2025",
+        "title": "BEMB ulgamynyň ornaşdyrylmagy",
+        "desc": "Adatdan daşary ýagdaýlary operatiw dolandyrmak, wakalary hasaba almak, işleri alyp barmak we elektron resminama dolanyşygy üçin toplumlaýyn korporatiw ERP çözgüdi."
+      },
+      "4": {
+        "tag": "SaaS we Fintech",
+        "date": "18.11.2025",
+        "title": "ZudSMS — köpçülikleýin SMS ibermek platformasy",
+        "desc": "Täjigistanyň ähli operatorlaryna derrew ýetirilýän biznes üçin köpçülikleýin we tranzaksion SMS habarnamalarynyň ýokary ýüklenmeli bulut platformasy."
+      },
+      "5": {
+        "tag": "SaaS we çat",
+        "date": "05.12.2025",
+        "title": "LiveChat.TJ — biznes üçin onlaýn geňeşçi",
+        "desc": "Web-soketler we çalt jogaplar bilen saýtlar üçin omnikanal onlaýn çat widjeti we müşderiler bilen aragatnaşyk ulgamy."
+      },
+      "6": {
+        "tag": "E-Commerce",
+        "date": "22.12.2025",
+        "title": "Royal Baby — bölek satuwy awtomatlaşdyrmak we Telegram-bot",
+        "desc": "Onlaýn witrinany işe girizmek, ammar hasaby bilen integrasiýa hem-de amatly sargyt we wepalylyk maksatnamalary üçin Telegram-bot."
+      },
+      "7": {
+        "tag": "Jemgyýetçilik taslamalary",
+        "date": "14.01.2026",
+        "title": "«Rushdi Kuhiston» gaznasynyň portaly",
+        "desc": "Täjigistanyň daglyk sebitlerinde ösüş başlangyçlaryny we grant maksatnamalaryny onlaýn arzalar arkaly goldamak platformasy."
+      },
+      "8": {
+        "tag": "Media we OTT",
+        "date": "03.02.2026",
+        "title": "Somon TV media portaly",
+        "desc": "Göni efiri, gepleşikler arhiwi we ähli ekran ölçeglerine uýgunlaşdyrylan dizaýny bolan interaktiw ýaýlym portaly."
+      },
+      "9": {
+        "tag": "Halkara taslamalar",
+        "date": "09.07.2026",
+        "title": "Dushanbe Soft Bütindünýä banky tarapyndan maliýeleşdirilýän taslamanyň çäginde şertnama baglaşdy",
+        "desc": "«Dushanbe Soft» hususy kärhanasy Bütindünýä banky tarapyndan maliýeleşdirilýän «Täjigistanyň sanly esaslary» taslamasynyň (P506611) çäginde edaranyň web saýtyny işläp düzmek boýunça şertnama baglaşdy."
+      },
+      "10": {
+        "tag": "Media we OTT",
+        "date": "2024",
+        "title": "«Navo» 96.5 FM radiosynyň saýty — navo.tj",
+        "desc": "Dushanbe Soft «Navo» 96.5 FM radiosynyň saýtyny döretdi: gepleşikler we rubrikalar, podkastlar, aýdym ýygyndylary, surat we wideo galereýalar hem-de habarlar lentasy."
+      }
+    },
+    "filterAll": "Hemmesi",
+    "filterGov": "Döwlet taslamalary",
+    "filterMedia": "Media we OTT",
+    "filterErp": "ERP we awtomatlaşdyrma",
+    "filterSaas": "SaaS we Fintech",
+    "filterRetail": "E-Commerce"
+  },
+  "media": {
+    "subtitle": "media",
+    "title": "Surat we wideo",
+    "instagram": "Instagram-da yzarlaň",
+    "viewAll": "Hemmesine seretmek",
+    "filterAll": "Hemmesi",
+    "filterVideo": "Wideo",
+    "filterPhoto": "Surat",
+    "showMore": "Köpräk görkezmek",
+    "showLess": "Azrak görkezmek"
+  },
+  "trust": {
+    "badge": "Bütindünýä banky",
+    "text": "Dushanbe Soft — Bütindünýä banky tarapyndan maliýeleşdirilýän «Täjigistanyň sanly esaslary» taslamasynyň potratçysy.",
+    "more": "Giňişleýin"
+  },
+  "ui": {
+    "home": "Baş sahypa",
+    "breadcrumbs": "Nawigasiýa zynjyry",
+    "techStack": "Ulanylan tehnologiýalar stegi",
+    "viewCase": "Taslamanyň keýsine portfolioda seretmek",
+    "similarTitle": "Şuňa meňzeş çözgüt gyzyklandyrýarmy?",
+    "similarText": "Dushanbe Soft topary ygtybarly sanly platformalary, ERP, SaaS we mobil programmalary «açary tabşyrmak» ýörelgesi boýunça taslaýar we işläp düzýär.",
+    "discussProject": "Taslamany maslahatlaşmak",
+    "otherNews": "Beýleki habarlar",
+    "backTo": "Yza:",
+    "themeLight": "Ýagty tema",
+    "themeDark": "Garaňky tema"
+  }
+}

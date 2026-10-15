@@ -13,14 +13,15 @@
     "pricing": "Pricing",
     "careers": "Careers",
     "awards": "Awards",
-    "proposal": "Get Commercial Proposal"
+    "proposal": "Get Commercial Proposal",
+    "allPartners": "All partners"
   },
   "hero": {
     "seoTitle": "Dushanbe Soft — software, website and mobile app development company in Dushanbe, Tajikistan",
     "badge": "IT solutions for business and government",
     "title1": "Technologies that",
     "title2": "drive business forward",
-    "subtitle": "We develop and implement modern IT solutions, automate processes, and increase company efficiency.",
+    "subtitle": "We build and implement modern IT solutions",
     "btnPrimary": "Get consultation",
     "btnSecondary": "View projects",
     "marquee": [
@@ -64,6 +65,25 @@
       "Tailwind CSS",
       "Vite",
       "Webpack"
+    ],
+    "prevSlide": "Previous story",
+    "nextSlide": "Next story",
+    "slideOf": "{{current}} of {{total}}",
+    "play": "Start autoplay",
+    "pause": "Pause autoplay",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
     ]
   },
   "products": {
@@ -211,7 +231,8 @@
     "web_dev": "Web development",
     "mobile_dev": "Mobile apps",
     "crm": "CRM and automation",
-    "uiux": "UI/UX Design"
+    "uiux": "UI/UX Design",
+    "allServices": "All services"
   },
   "process": {
     "subtitle": "How we work",
@@ -238,14 +259,14 @@
         "duration": "1-2 weeks"
       },
       {
-        "title": "Launch and support",
-        "description": "Deploy the project on servers and provide technical support.",
-        "duration": "Constantly"
+        "title": "Launch",
+        "description": "We deploy the project to servers, set up monitoring and publish apps to the App Store and Google Play.",
+        "duration": "1 week"
       },
       {
-        "title": "Launch",
-        "description": "Cloud deployment, monitoring setup, team training and smooth release.",
-        "duration": "1 wk"
+        "title": "Support and growth",
+        "description": "We provide technical support after release, keep the product stable and keep improving it with you.",
+        "duration": "Ongoing"
       }
     ]
   },
@@ -361,7 +382,7 @@
     },
     "navo": {
       "title": "Navo - Radioportal",
-      "description": "OTT streaming platform for Somon TV - one of the largest television networks in Tajikistan. The platform provides live broadcasting, VoD archive, and multiscreen viewing capabilities."
+      "description": "Official website of «Navo» 96.5 FM radio (navo.tj): programs and rubrics, podcasts, music selections, photo and video galleries, news feed and studio contacts."
     },
     "somon-tv": {
       "title": "Somon TV",
@@ -613,9 +634,17 @@
     "copyright": "© 2017–2026 Dushanbe Soft. All rights reserved."
   },
   "seo": {
-    "default_title": "Dushanbe Soft — Leading IT Company in Tajikistan | Software & Web Development",
-    "default_description": "Dushanbe Soft is a top IT company in Dushanbe, Tajikistan. We specialize in software development, mobile apps, web development, ERP and CRM systems for business and government.",
-    "keywords": "it companies in tajikistan, it company dushanbe, software development tajikistan, web development dushanbe, mobile app development, business automation, dushanbe soft, fintech, crm, erp"
+    "default_title": "Dushanbe Soft — Software & Web Development in Tajikistan",
+    "default_description": "IT company in Dushanbe building websites, mobile apps, CRM and ERP systems for business and government in Tajikistan since 2017.",
+    "keywords": "it companies in tajikistan, it company dushanbe, software development tajikistan, web development dushanbe, mobile app development, business automation, dushanbe soft, fintech, crm, erp",
+    "products_title": "Ready-made IT Products for Business: SMS Gateway, Live Chat, CRM",
+    "products_description": "Dushanbe Soft products for businesses in Tajikistan: ZudSMS bulk SMS platform, LiveChat TJ online chat, CRM systems and payment solutions.",
+    "cases_title": "Portfolio — Websites, Apps and Systems We Built",
+    "cases_description": "Dushanbe Soft case studies: the President of Tajikistan website, Digital Tajikistan portal, Somon TV OTT platforms, fintech, CRM and mobile apps.",
+    "news_title": "Company News — IT Projects and Development in Tajikistan",
+    "news_description": "Latest news, releases and key events of Dushanbe Soft — IT solutions development in Tajikistan.",
+    "media_title": "Photos and Videos — Projects and Team",
+    "media_description": "Dushanbe Soft photo and video gallery: project presentations, software development and team life in Dushanbe, Tajikistan."
   },
   "pricing": {
     "plans": {
@@ -704,7 +733,13 @@
       "frontend-react": "Development of user interfaces in React.js",
       "backend-node": "Creating server logic and API on Node.js",
       "ux-ui-designer": "Designing user-friendly and modern interfaces for web and mobile"
-    }
+    },
+    "backToList": "Back to jobs",
+    "formatLabel": "Format",
+    "experienceLabel": "Experience",
+    "about": "About the job",
+    "detailCtaTitle": "Interested in this job?",
+    "detailCtaDesc": "Send us your resume via Telegram and we will get back to you shortly!"
   },
   "modal": {
     "error_send": "Sending error",
@@ -736,7 +771,7 @@
   },
   "awards": {
     "subtitle": "Our awards",
-    "title": "Achievements and periods",
+    "title": "Achievements and awards",
     "viewDoc": "View document",
     "items": {
       "1": {
@@ -846,6 +881,18 @@
         "date": "03.02.2026",
         "title": "Somon TV Media Portal",
         "desc": "Interactive broadcasting portal with live streaming, program archives, and responsive design for all screen sizes."
+      },
+      "9": {
+        "tag": "International projects",
+        "date": "09.07.2026",
+        "title": "Dushanbe Soft awarded a contract under a World Bank-financed project",
+        "desc": "Private Enterprise \"Dushanbe Soft\" has been awarded a contract to develop an institution's website under the World Bank-financed Tajikistan Digital Foundations Project (P506611)."
+      },
+      "10": {
+        "tag": "Media & OTT",
+        "date": "2024",
+        "title": "«Navo» 96.5 FM radio website — navo.tj",
+        "desc": "Dushanbe Soft built the website of «Navo» 96.5 FM radio: programs and rubrics, podcasts, music selections, photo and video galleries and a news feed."
       }
     },
     "filterAll": "All",
@@ -865,5 +912,23 @@
     "filterPhoto": "Photos",
     "showMore": "Show more",
     "showLess": "Show less"
+  },
+  "trust": {
+    "badge": "World Bank",
+    "text": "Dushanbe Soft is a contractor under the World Bank-financed Tajikistan Digital Foundations Project.",
+    "more": "Learn more"
+  },
+  "ui": {
+    "home": "Home",
+    "breadcrumbs": "Breadcrumbs",
+    "techStack": "Technology stack",
+    "viewCase": "View the case study in our portfolio",
+    "similarTitle": "Interested in a similar solution?",
+    "similarText": "Dushanbe Soft designs and builds reliable digital platforms, ERP, SaaS and mobile apps end to end.",
+    "discussProject": "Discuss a project",
+    "otherNews": "More news",
+    "backTo": "Back to",
+    "themeLight": "Light theme",
+    "themeDark": "Dark theme"
   }
 }

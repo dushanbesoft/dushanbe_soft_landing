@@ -6,7 +6,7 @@
   align-items: center;
   gap: 30px;
   align-self: stretch;
-  background: #000;
+  background: var(--bg);
   position: relative;
 }
 
@@ -44,17 +44,17 @@
 }
 
 .subtitle {
-  font-family: var(--font-tektur);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .mainTitle {
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
@@ -75,9 +75,9 @@
   padding: 10px 20px;
   align-items: center;
   gap: 20px;
-  border-radius: 5px;
-  border: 1px solid #02704f;
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-deep);
+  background: rgba(var(--ink-rgb), 0.05);
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -87,10 +87,10 @@
 }
 
 .btnText {
-  font-family: var(--font-tektur);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -159,12 +159,12 @@
 }
 
 .categoryBtn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(var(--ink-rgb), 0.05);
+  border: 1px solid rgba(var(--ink-rgb), 0.1);
+  color: var(--text);
   padding: 8px 16px;
-  border-radius: 20px;
-  font-family: var(--font-tektur);
+  border-radius: var(--radius-xl);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -172,7 +172,7 @@
 
 .categoryBtn:hover,
 .categoryBtn.active {
-  background: rgba(61, 220, 132, 0.2);
-  border-color: #3ddc84;
-  color: #3ddc84;
+  background: rgba(var(--accent-rgb), 0.12);
+  border-color: var(--accent);
+  color: var(--accent-text);
 }

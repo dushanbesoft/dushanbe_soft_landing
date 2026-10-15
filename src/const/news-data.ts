@@ -1,3 +1,5 @@
+import { contentLocale } from "../utils/locales";
+
 export interface NewsSectionContent {
   heading: string;
   text: string;
@@ -9,12 +11,16 @@ export interface NewsFullContent {
   sections: NewsSectionContent[];
   techStack?: string[];
   caseSlug?: string;
+  /** External primary source that confirms the news (shown as a link) */
+  source?: { label: string; url: string };
 }
 
 export interface NewsItem {
   id: string;
   slug: string;
   image: string;
+  /** Wide, high-resolution image for the home page banner (~3280x1520). Falls back to `image`. */
+  heroImage?: string;
   date: string;
   category: string;
   readTime: string;
@@ -26,9 +32,11 @@ export interface NewsItem {
   descKey: string;
   defaultDesc: string;
   fullContent: NewsFullContent;
+  /** Optional translated article body; falls back to `fullContent` (ru) */
+  localizedContent?: Partial<Record<"en" | "tj", NewsFullContent>>;
 }
 
-export const newsList: NewsItem[] = [
+const newsItems: NewsItem[] = [
   {
     id: "1",
     slug: "digital-tajikistan",
@@ -78,6 +86,7 @@ export const newsList: NewsItem[] = [
     id: "2",
     slug: "mavji-somon",
     image: "/images/projects/mavjisomon.webp",
+    heroImage: "/images/news/mavji-somon-banner.webp",
     date: "15.09.2025",
     category: "media",
     readTime: "3 мин",
@@ -113,6 +122,7 @@ export const newsList: NewsItem[] = [
     id: "3",
     slug: "sohktor",
     image: "/images/projects/project-sohktor.webp",
+    heroImage: "/images/news/sohktor-banner.webp",
     date: "02.10.2025",
     category: "erp",
     readTime: "4 мин",
@@ -144,6 +154,7 @@ export const newsList: NewsItem[] = [
     id: "4",
     slug: "zudsms",
     image: "/images/projects/zudsms.webp",
+    heroImage: "/images/news/zudsms-banner.webp",
     date: "18.11.2025",
     category: "saas",
     readTime: "3 мин",
@@ -175,6 +186,7 @@ export const newsList: NewsItem[] = [
     id: "5",
     slug: "livechat",
     image: "/images/projects/livechat.webp",
+    heroImage: "/images/news/livechat-banner.webp",
     date: "05.12.2025",
     category: "saas",
     readTime: "3 мин",
@@ -187,7 +199,7 @@ export const newsList: NewsItem[] = [
     defaultDesc: "Омниканальный виджет онлайн-чата и система коммуникаций с клиентами для сайтов с веб-сокетами и быстрыми ответами.",
     fullContent: {
       lead: "LiveChat.TJ помогает компаниям удерживать посетителей на сайте и мгновенно отвечать на вопросы, увеличивая конверсию продаж до 30%.",
-      caseSlug: "livechat",
+      caseSlug: "livechat-tj",
       techStack: ["WebSockets", "Node.js", "Redis", "TypeScript", "React", "PostgreSQL"],
       sections: [
         {
@@ -253,6 +265,7 @@ export const newsList: NewsItem[] = [
     id: "8",
     slug: "somontv",
     image: "/images/projects/somontv.webp",
+    heroImage: "/images/news/somontv-banner.webp",
     date: "03.02.2026",
     category: "media",
     readTime: "3 мин",
@@ -265,7 +278,7 @@ export const newsList: NewsItem[] = [
     defaultDesc: "Интерактивный портал телерадиовещания с прямым эфиром, архивом передач и оптимизацией под любые экраны.",
     fullContent: {
       lead: "Официальный цифровой портал телерадиовещания «Сомон ТВ» предоставил зрителям круглосуточный доступ к прямому эфиру и архивам лучших авторских программ.",
-      caseSlug: "somontv",
+      caseSlug: "somon-tv",
       techStack: ["Next.js", "Video.js", "Node.js", "Redis", "Nginx RTMP"],
       sections: [
         {
@@ -275,7 +288,215 @@ export const newsList: NewsItem[] = [
       ],
     },
   },
+  {
+    id: "9",
+    slug: "world-bank-tajikistan-digital-foundations",
+    image: "/images/news/world-bank-tdfp.webp",
+    heroImage: "/images/news/world-bank-tdfp-banner.webp",
+    date: "09.07.2026",
+    category: "gov",
+    readTime: "2 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.9.tag",
+    defaultTag: "Международные проекты",
+    titleKey: "news.items.9.title",
+    defaultTitle: "Dushanbe Soft — победитель закупки по проекту Всемирного банка",
+    descKey: "news.items.9.desc",
+    defaultDesc: "Частное предприятие «Dushanbe Soft» выбрано исполнителем контракта на разработку веб-сайта учреждения в рамках проекта Всемирного банка «Цифровые основы Таджикистана» (P506611).",
+    fullContent: {
+      lead: "Частное предприятие «Dushanbe Soft» стало победителем закупки в рамках проекта Tajikistan Digital Foundations Project («Цифровые основы Таджикистана»), который финансируется Всемирным банком. Уведомление о присуждении контракта опубликовано на официальном портале закупок Всемирного банка.",
+      source: { label: "Уведомление о присуждении контракта на сайте Всемирного банка", url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715" },
+      sections: [
+        {
+          heading: "Детали контракта",
+          text: "Контракт заключён по результатам закупки методом запроса котировок (Request for Quotations) и предусматривает услуги по разработке веб-сайта учреждения.",
+          bulletPoints: [
+            "Проект: Tajikistan Digital Foundations Project (P506611)",
+            "Финансирование: Международная ассоциация развития (IDA-E3950)",
+            "Номер закупки: TDFP-NS-RFQ-03",
+            "Предмет контракта: разработка веб-сайта учреждения",
+            "Дата уведомления о присуждении: 12 мая 2026 года",
+            "Срок выполнения: 2,5 месяца",
+          ],
+        },
+        {
+          heading: "Почему это важно",
+          text: "Закупки по проектам Всемирного банка проводятся по его правилам: с открытой публикацией, конкурентной оценкой предложений и раскрытием результатов. Победа в такой закупке подтверждает, что Dushanbe Soft соответствует требованиям международных финансовых институтов к подрядчикам в сфере цифровых решений.",
+        },
+        {
+          heading: "Опыт в государственных цифровых проектах",
+          text: "Проект продолжает работу команды над цифровизацией государственного сектора Таджикистана. Ранее Dushanbe Soft разработала официальный сайт Президента Республики Таджикистан и портал электронных государственных услуг Digital Tajikistan.",
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "Private Enterprise \"Dushanbe Soft\" has been awarded a contract under the Tajikistan Digital Foundations Project, financed by the World Bank. The contract award notice is published on the World Bank's official procurement portal.",
+        source: { label: "Contract award notice on the World Bank website", url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715" },
+        sections: [
+          {
+            heading: "Contract details",
+            text: "The contract was awarded through a Request for Quotations and covers non-consulting services for the development of an institution's website.",
+            bulletPoints: [
+              "Project: Tajikistan Digital Foundations Project (P506611)",
+              "Financing: International Development Association (IDA-E3950)",
+              "Reference No.: TDFP-NS-RFQ-03",
+              "Scope: development of an institution's website",
+              "Notification of award issued: May 12, 2026",
+              "Duration: 2.5 months",
+            ],
+          },
+          {
+            heading: "Why it matters",
+            text: "Procurement under World Bank-financed projects follows the Bank's rules: open publication, competitive evaluation of bids and public disclosure of results. Winning such a procurement confirms that Dushanbe Soft meets the requirements international financial institutions set for digital solution contractors.",
+          },
+          {
+            heading: "Experience in government digital projects",
+            text: "The project continues our work on digitalizing Tajikistan's public sector. Dushanbe Soft previously built the official website of the President of the Republic of Tajikistan and the Digital Tajikistan e-government services portal.",
+          },
+        ],
+      },
+      tj: {
+        lead: "Корхонаи хусусии «Dushanbe Soft» ғолиби харид дар доираи лоиҳаи Tajikistan Digital Foundations Project («Асосҳои рақамии Тоҷикистон») гардид, ки аз ҷониби Бонки ҷаҳонӣ маблағгузорӣ мешавад. Огоҳинома дар бораи супоридани шартнома дар портали расмии хариди Бонки ҷаҳонӣ нашр шудааст.",
+        source: { label: "Огоҳинома дар бораи супоридани шартнома дар сомонаи Бонки ҷаҳонӣ", url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715" },
+        sections: [
+          {
+            heading: "Тафсилоти шартнома",
+            text: "Шартнома дар натиҷаи харид бо усули дархости нархнома (Request for Quotations) баста шуда, хизматрасонӣ оид ба таҳияи сомонаи муассисаро дар бар мегирад.",
+            bulletPoints: [
+              "Лоиҳа: Tajikistan Digital Foundations Project (P506611)",
+              "Маблағгузорӣ: Ассотсиатсияи байналмилалии рушд (IDA-E3950)",
+              "Рақами харид: TDFP-NS-RFQ-03",
+              "Мавзӯи шартнома: таҳияи сомонаи муассиса",
+              "Санаи огоҳинома дар бораи супоридан: 12 майи соли 2026",
+              "Мӯҳлати иҷро: 2,5 моҳ",
+            ],
+          },
+          {
+            heading: "Чаро ин муҳим аст",
+            text: "Харидҳо дар доираи лоиҳаҳои Бонки ҷаҳонӣ мувофиқи қоидаҳои он гузаронида мешаванд: бо нашри ошкоро, арзёбии рақобатии пешниҳодҳо ва ифшои натиҷаҳо. Ғалаба дар чунин харид тасдиқ мекунад, ки Dushanbe Soft ба талаботи муассисаҳои молиявии байналмилалӣ нисбат ба пудратчиёни ҳалли рақамӣ мувофиқат мекунад.",
+          },
+          {
+            heading: "Таҷриба дар лоиҳаҳои рақамии давлатӣ",
+            text: "Ин лоиҳа кори дастаи моро дар рақамикунонии бахши давлатии Тоҷикистон идома медиҳад. Пеш аз ин Dushanbe Soft сомонаи расмии Президенти Ҷумҳурии Тоҷикистон ва портали хидматҳои электронии давлатии Digital Tajikistan-ро таҳия кардааст.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "10",
+    slug: "navo-radio",
+    image: "/images/projects/navo.webp",
+    heroImage: "/images/news/navo-radio-banner.webp",
+    date: "2024",
+    category: "media",
+    readTime: "2 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.10.tag",
+    defaultTag: "Медиа & OTT",
+    titleKey: "news.items.10.title",
+    defaultTitle: "Сайт радио «Navo» 96.5 FM — navo.tj",
+    descKey: "news.items.10.desc",
+    defaultDesc: "Dushanbe Soft разработала сайт радиостанции «Navo» 96.5 FM: программы и рубрики, подкасты, музыкальные подборки, фото- и видеогалерея и лента новостей.",
+    fullContent: {
+      lead: "Dushanbe Soft разработала официальный сайт радиостанции «Navo» 96.5 FM — navo.tj. Сайт объединяет эфирные программы, подкасты, музыку и новости радио в одном удобном портале.",
+      caseSlug: "navo",
+      techStack: ["Laravel", "React", "PostgreSQL", "Nginx"],
+      sections: [
+        {
+          heading: "Что есть на сайте",
+          text: "Структура портала повторяет жизнь радиостанции: слушатель быстро находит любимую программу, ведущего или подкаст.",
+          bulletPoints: [
+            "Программы и рубрики радио с описанием и ведущими",
+            "Подкасты",
+            "Музыка: Топ-20, таджикская и зарубежная подборки",
+            "Медиа: фото- и видеогалерея",
+            "Лента новостей и акции",
+            "Контакты студии и прямой телефон эфира",
+          ],
+        },
+        {
+          heading: "Удобство для слушателей",
+          text: "Сайт адаптирован под смартфоны и компьютеры, а ссылки на социальные сети радио — Telegram, Instagram, YouTube, TikTok и другие — собраны в одном месте.",
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "Dushanbe Soft built the official website of «Navo» 96.5 FM radio — navo.tj. The site brings the station's programs, podcasts, music and news together in one convenient portal.",
+        caseSlug: "navo",
+        techStack: ["Laravel", "React", "PostgreSQL", "Nginx"],
+        sections: [
+          {
+            heading: "What the site offers",
+            text: "The portal mirrors the life of the station, so listeners quickly find their favourite show, host or podcast.",
+            bulletPoints: [
+              "Radio programs and rubrics with descriptions and hosts",
+              "Podcasts",
+              "Music: Top-20, Tajik and international selections",
+              "Media: photo and video galleries",
+              "News feed and promotions",
+              "Studio contacts and the live on-air phone line",
+            ],
+          },
+          {
+            heading: "Built for listeners",
+            text: "The site works on phones and desktops, and links to the station's social channels — Telegram, Instagram, YouTube, TikTok and more — are gathered in one place.",
+          },
+        ],
+      },
+      tj: {
+        lead: "Dushanbe Soft сомонаи расмии радиои «Navo» 96.5 FM — navo.tj-ро таҳия кард. Сомона барномаҳо, подкастҳо, мусиқӣ ва хабарҳои радиоро дар як портали қулай муттаҳид мекунад.",
+        caseSlug: "navo",
+        techStack: ["Laravel", "React", "PostgreSQL", "Nginx"],
+        sections: [
+          {
+            heading: "Дар сомона чӣ ҳаст",
+            text: "Сохтори портал ҳаёти радиоро инъикос мекунад: шунаванда барнома, баранда ё подкасти дӯстдоштаашро зуд меёбад.",
+            bulletPoints: [
+              "Барномаҳо ва рубрикаҳои радио бо тавсиф ва барандагон",
+              "Подкастҳо",
+              "Мусиқӣ: Топ-20, интихоби тоҷикӣ ва хориҷӣ",
+              "Медиа: галереяи акс ва видео",
+              "Лентаи хабарҳо ва аксияҳо",
+              "Тамосҳои студия ва телефони мустақими эфир",
+            ],
+          },
+          {
+            heading: "Қулай барои шунавандагон",
+            text: "Сомона барои смартфонҳо ва компютерҳо мутобиқ карда шудааст, ва истинодҳо ба шабакаҳои иҷтимоии радио — Telegram, Instagram, YouTube, TikTok ва дигарон — дар як ҷо ҷамъ оварда шудаанд.",
+          },
+        ],
+      },
+    },
+  },
 ];
+
+// Pinned news go first in this exact order; the rest follow newest first.
+// The home page shows the first four.
+const pinnedOrder = [
+  "world-bank-tajikistan-digital-foundations",
+  "mavji-somon",
+  "sohktor",
+  "navo-radio",
+];
+
+export const newsList: NewsItem[] = [...newsItems].sort((a, b) => {
+  const pa = pinnedOrder.indexOf(a.slug);
+  const pb = pinnedOrder.indexOf(b.slug);
+  if (pa !== -1 || pb !== -1) {
+    return (pa === -1 ? Infinity : pa) - (pb === -1 ? Infinity : pb);
+  }
+  const iso = (d: string) => d.split(".").reverse().join("-");
+  return iso(b.date).localeCompare(iso(a.date));
+});
+
+export function getNewsContent(item: NewsItem, lang: string): NewsFullContent {
+  const content = contentLocale(lang);
+  if (content === "en" || content === "tj") return item.localizedContent?.[content] ?? item.fullContent;
+  return item.fullContent;
+}
 
 export function getNewsBySlug(slug: string): NewsItem | undefined {
   return newsList.find((item) => item.slug === slug);

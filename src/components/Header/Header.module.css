@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  padding: 25px 15px;
+  padding: 18px 15px;
   align-items: center;
   gap: 45px;
   flex-wrap: wrap;
@@ -24,12 +24,12 @@
   z-index: 10;
 }
 
-.scrolled {
-  background-color: #000000;
-}
-
+.scrolled,
 .transparent {
-  background-color: rgba(0, 0, 0, 0.702);
+  background-color: var(--header-bg);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
@@ -48,7 +48,7 @@
 
 .navItem {
   position: relative;
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-family: var(--font-tektur);
   font-size: 14px;
@@ -67,15 +67,15 @@
   bottom: 0;
   width: 100%;
   height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  border-radius: var(--radius-sm);
+  background: var(--gradient-accent);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.35s ease;
 }
 
 .navItem:hover {
-  color: #3ddc84;
+  color: var(--accent-text);
 }
 
 .navItem:hover::after {
@@ -92,13 +92,15 @@
 .langDropdown {
   position: absolute;
   top: 100%;
-  right: 0;
-  background-color: #111;
-  border-radius: 4px;
+  inset-inline-end: 0;
+  background-color: var(--bg-elevated);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-width: 76px;
+  min-width: 160px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   margin-top: 10px;
   z-index: 1000;
@@ -109,13 +111,22 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-tektur);
   font-size: 16px;
   font-weight: 600;
   padding: 8px 12px;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s;
+}
+
+.langOption[dir="rtl"] {
+  font-family: var(--font-vazirmatn), sans-serif;
+}
+
+.langOptionActive {
+  color: var(--accent);
 }
 
 .langFlag {
@@ -132,7 +143,7 @@
 }
 
 .langText {
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-tektur);
   font-size: 16px;
   font-weight: 600;
@@ -187,7 +198,7 @@
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: #111;
+    background: var(--bg-elevated);
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 80px;
@@ -208,4 +219,159 @@
   .overlay {
     display: block;
   }
+}
+
+/* Services dropdown: links stay in the DOM so crawlers can follow them */
+.navDropdown {
+  position: relative;
+  display: flex;
+}
+
+.navDropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 8px);
+  min-width: 240px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+}
+
+.navDropdownMenu::before {
+  content: "";
+  position: absolute;
+  inset: -12px 0 auto;
+  height: 12px;
+}
+
+.navDropdown:hover .navDropdownMenu,
+.navDropdown:focus-within .navDropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 4px);
+}
+
+.navDropdownItem {
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navDropdownItem:hover {
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent-text);
+}
+
+.langOption {
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .navDropdownMenu {
+    display: none;
+  }
+}
+
+/* Logo follows the theme */
+.logoOnLight {
+  display: none;
+}
+
+:global([data-theme="light"]) .logoOnDark {
+  display: none;
+}
+
+:global([data-theme="light"]) .logoOnLight {
+  display: block;
+}
+
+.langSwitcher {
+  color: var(--text);
+}
+
+/* Laptop widths: keep the menu airy — these stay in the mobile menu */
+.navHomeItem {
+  display: none;
+}
+
+@media (min-width: 901px) and (max-width: 1320px) {
+  .navSecondary {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .navHomeItem {
+    display: inline-block;
+  }
+}
+
+/* Phones: logo + theme + language + burger must fit on one row */
+@media (max-width: 900px) {
+  .header > main {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .controlsWrapper {
+    gap: 10px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    width: 140px;
+    height: 31px;
+  }
+
+  .controlsWrapper :global(button[aria-label]) {
+    flex-shrink: 0;
+  }
+}
+
+/* Dropdown list, wide (two-column) variant and footer link */
+.navDropdownList {
+  display: flex;
+  flex-direction: column;
+}
+
+.navDropdownMenuWide {
+  min-width: 440px;
+}
+
+.navDropdownMenuWide .navDropdownList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4px;
+}
+
+.navDropdownFooter {
+  margin-top: 6px;
+  padding: 10px 12px 4px;
+  border-top: 1px solid var(--border);
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navDropdownFooter:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

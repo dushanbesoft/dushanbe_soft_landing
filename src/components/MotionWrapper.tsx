@@ -1,51 +1,38 @@
-"use client";
-
 import React from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
 
-export const MotionDiv = motion.div;
-export const MotionSection = motion.section;
-export const MotionSpan = motion.span;
-export const MotionH2 = motion.h2;
-export const MotionP = motion.p;
+// Reveal-on-scroll wrappers implemented with CSS scroll-driven animations
+// (see `.motion-reveal` in globals.css). Content is visible in the server HTML
+// and needs no JavaScript: browsers without `animation-timeline` support, or
+// users with reduced motion, simply see it without the animation.
 
-interface FadeInProps extends HTMLMotionProps<"div"> {
+type Direction = "up" | "down" | "left" | "right" | "none";
+
+interface FadeInProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
+  /** Kept for API compatibility; scroll-driven reveals start when the element enters the viewport. */
   delay?: number;
-  direction?: "up" | "down" | "left" | "right" | "none";
+  direction?: Direction;
   fullWidth?: boolean;
 }
 
 export function FadeIn({
   children,
-  delay = 0,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  delay,
   direction = "up",
   fullWidth = false,
+  className = "",
+  style,
   ...props
 }: FadeInProps) {
-  const directions = {
-    up: { y: 40, x: 0 },
-    down: { y: -40, x: 0 },
-    left: { x: 40, y: 0 },
-    right: { x: -40, y: 0 },
-    none: { x: 0, y: 0 },
-  };
-
   return (
-    <motion.div
-      initial={{ opacity: 0, ...directions[direction] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{
-        duration: 0.5,
-        delay,
-        ease: "easeOut",
-      }}
-      style={{ width: fullWidth ? "100%" : "auto", ...(props.style as React.CSSProperties) }}
+    <div
+      className={`motion-reveal motion-${direction} ${className}`.trim()}
+      style={{ width: fullWidth ? "100%" : "auto", ...style }}
       {...props}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -57,26 +44,13 @@ export const StaggerContainer = React.forwardRef<
     staggerChildren?: number;
     className?: string;
   }
->(({ children, delayChildren = 0.1, staggerChildren = 0.1, className = "" }, ref) => {
+>(({ children, className = "" }, ref) => {
+  // Each StaggerItem reveals as it enters the viewport, which produces the
+  // staggered effect naturally while scrolling.
   return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
-      variants={{
-        hidden: {},
-        show: {
-          transition: {
-            delayChildren,
-            staggerChildren,
-          },
-        },
-      }}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 });
 
@@ -89,19 +63,5 @@ export function StaggerItem({
   children: React.ReactNode;
   className?: string;
 }) {
-  return (
-    <motion.div
-      className={className}
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        show: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5, ease: "easeOut" },
-        },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={`motion-reveal motion-item ${className}`.trim()}>{children}</div>;
 }

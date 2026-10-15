@@ -7,10 +7,34 @@ import styles from "./MediaSection.module.css";
 import { useTranslation } from "react-i18next";
 import { FadeIn } from "../MotionWrapper";
 import {
-  mediaGalleryItems,
+  orderedMediaItems as mediaGalleryItems,
   featuredMediaItems,
+  mediaTitle,
+  mediaTag,
   MediaItem,
 } from "@/const/media-content";
+
+const PlayIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.6-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z" />
+  </svg>
+);
+
+// Muted inline preview on hover (desktop only); the file loads on first hover.
+const startPreview = (e: React.MouseEvent<HTMLElement>) => {
+  if (!window.matchMedia("(hover: hover)").matches) return;
+  const video = e.currentTarget.querySelector("video");
+  if (!video) return;
+  video.play().then(() => (video.dataset.playing = "1")).catch(() => {});
+};
+
+const stopPreview = (e: React.MouseEvent<HTMLElement>) => {
+  const video = e.currentTarget.querySelector("video");
+  if (!video) return;
+  video.pause();
+  video.currentTime = 0;
+  delete video.dataset.playing;
+};
 
 const ArrowIcon = () => (
   <svg
@@ -116,31 +140,43 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
 
   const mediaPageUrl = lang === "ru" ? "/media" : `/${lang}/media`;
 
-  const renderCard = (item: MediaItem, listContext: MediaItem[]) => (
-    <div
-      key={item.id}
-      className={styles.mediaItem}
-      onClick={() => openLightbox(item, listContext)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          openLightbox(item, listContext);
-        }
-      }}
-      aria-label={item.title}
-    >
-      <Image
-        src={item.thumb}
-        alt={item.title}
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className={styles.mediaImage}
-      />
-      <div className={styles.overlay} />
-    </div>
-  );
+  const renderCard = (item: MediaItem, listContext: MediaItem[]) => {
+    const title = mediaTitle(item, lang);
+    const tag = mediaTag(item, lang);
+    return (
+      <button
+        type="button"
+        key={item.id}
+        className={styles.reel}
+        onClick={() => openLightbox(item, listContext)}
+        onMouseEnter={startPreview}
+        onMouseLeave={stopPreview}
+        aria-label={title}
+      >
+        <Image
+          src={item.thumb}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 60vw, (max-width: 1200px) 30vw, 240px"
+          className={styles.reelImage}
+        />
+        {item.type === "video" && (
+          <video className={styles.reelVideo} src={item.src} muted loop playsInline preload="none" aria-hidden="true" />
+        )}
+        <span className={styles.reelShade} aria-hidden="true" />
+        {tag && <span className={styles.reelTag}>{tag}</span>}
+        {item.type === "video" && (
+          <span className={styles.reelPlay} aria-hidden="true">
+            <PlayIcon />
+          </span>
+        )}
+        <span className={styles.reelInfo}>
+          <span className={styles.reelTitle}>{title}</span>
+          {item.duration && <span className={styles.reelDuration}>{item.duration}</span>}
+        </span>
+      </button>
+    );
+  };
 
   return (
     <section className={styles.section} id="media" aria-label={t("media.title", "Фото и видео")}>
@@ -149,7 +185,11 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
           <div className={styles.headerRow}>
             <div className={styles.titles}>
               <span className={styles.subtitle}>{t("media.subtitle", "медиа")}</span>
-              <h2 className={styles.title}>{t("media.title", "Фото и видео")}</h2>
+              {showAll ? (
+                <h1 className={styles.title}>{t("media.title", "Фото и видео")}</h1>
+              ) : (
+                <h2 className={styles.title}>{t("media.title", "Фото и видео")}</h2>
+              )}
             </div>
 
             <div className={styles.headerButtons}>
@@ -165,7 +205,7 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
               )}
 
               <Link
-                href="https://www.instagram.com/dushanbesoft"
+                href="https://www.instagram.com/dushanbe_soft/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.instaBtn}
@@ -178,24 +218,8 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
           </div>
 
           {!showAll && (
-            <div className={styles.featuredGrid}>
-              <div className={styles.columnSingle}>
-                {renderCard(featuredMediaItems[0], featuredMediaItems)}
-              </div>
-
-              <div className={styles.column}>
-                {renderCard(featuredMediaItems[1], featuredMediaItems)}
-                {renderCard(featuredMediaItems[2], featuredMediaItems)}
-              </div>
-
-              <div className={styles.column}>
-                {renderCard(featuredMediaItems[3], featuredMediaItems)}
-                {renderCard(featuredMediaItems[4], featuredMediaItems)}
-              </div>
-
-              <div className={styles.columnSingle}>
-                {renderCard(featuredMediaItems[5], featuredMediaItems)}
-              </div>
+            <div className={styles.reelStrip}>
+              {featuredMediaItems.map((item) => renderCard(item, featuredMediaItems))}
             </div>
           )}
 
@@ -228,7 +252,7 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
                 </button>
               </div>
 
-              <div className={styles.allGrid}>
+              <div className={styles.reelGrid}>
                 {filteredItems.map((item) => renderCard(item, filteredItems))}
               </div>
             </>
@@ -252,7 +276,7 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
                   e.stopPropagation();
                   handlePrev();
                 }}
-                aria-label="Назад"
+                aria-label={t("cases.gallery_prev", "Назад")}
               >
                 ‹
               </button>
@@ -263,7 +287,7 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
                   e.stopPropagation();
                   handleNext();
                 }}
-                aria-label="Вперед"
+                aria-label={t("cases.gallery_next", "Вперед")}
               >
                 ›
               </button>
@@ -275,7 +299,7 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
               type="button"
               className={styles.closeBtn}
               onClick={closeLightbox}
-              aria-label="Закрыть"
+              aria-label={t("cases.gallery_close", "Закрыть")}
             >
               ✕
             </button>
@@ -303,6 +327,7 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
                 {activeList.findIndex((i) => i.id === activeItem.id) + 1} / {activeList.length}
                 {activeItem.duration && ` • ⏱ ${activeItem.duration}`}
               </div>
+              <p className={styles.lightboxTitle}>{mediaTitle(activeItem, lang)}</p>
               <p className={styles.lightboxCaption}>{activeItem.caption}</p>
             </div>
           </div>

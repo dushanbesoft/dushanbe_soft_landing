@@ -93,6 +93,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Persian/Arabic: the brand fonts have no Arabic glyphs */
+html[dir="rtl"] {
+  --page-dir: rtl;
+}
+
+html[dir="rtl"] body {
+  --font-tektur: var(--font-vazirmatn);
+  --font-nunito-sans: var(--font-vazirmatn);
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -139,8 +149,108 @@ table {
   border-spacing: 0;
 }
 
+/* ==========================================================================
+   Design tokens. Dark is the brand default; light is opt-in via the header
+   toggle (html[data-theme="light"]). Any subtree can force a theme with
+   data-theme="dark" — used for the hero, CTA and footer.
+   ========================================================================== */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg: #000607;
+  --bg-alt: #04110f;
+  --bg-elevated: #0a1614;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-solid: #08130f;
+  --card-tint: rgba(1, 101, 88, 0.11); /* brand-tinted card */
+  --card-tint-strong: rgba(2, 112, 79, 0.22);
+  --ink-rgb: 255, 255, 255; /* overlays, borders, hover tints */
+
+  /* Text */
+  --text: #ffffff;
+  --text-secondary: #d3dde6;
+  --text-muted: #9aa8b8;
+  --text-subtle: #718294;
+
+  /* Brand */
+  --accent: #3ddc84;
+  --accent-deep: #02704f;
+  --accent-text: #3ddc84;
+  --accent-rgb: 61, 220, 132;
+  --on-accent: #000607;
+  --gradient-accent: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  --gradient-text: linear-gradient(60deg, #3ddc84 20%, #22b26c 100%);
+
+  /* Lines and depth */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --header-bg: rgba(0, 6, 7, 0.85);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f4f7f6;
+  --bg-alt: #ffffff;
+  --bg-elevated: #ffffff;
+  --card: #ffffff;
+  --card-solid: #ffffff;
+  --card-tint: #ffffff;
+  --card-tint-strong: #e6f5ec;
+  --ink-rgb: 9, 30, 24;
+
+  --text: #0b1714;
+  --text-secondary: #24332f;
+  --text-muted: #4f5f5a;
+  --text-subtle: #66756f;
+
+  --accent: #3ddc84;
+  --accent-deep: #02704f;
+  --accent-text: #067337;
+  --accent-rgb: 16, 160, 80;
+  --on-accent: #000607;
+  --gradient-accent: linear-gradient(60deg, #2fc874 13.4%, #02704f 86.6%);
+  --gradient-text: linear-gradient(60deg, #0a9a4c 10%, #02704f 100%);
+
+  --border: rgba(9, 30, 24, 0.1);
+  --border-strong: rgba(9, 30, 24, 0.18);
+  --shadow-card: 0 10px 30px rgba(9, 30, 24, 0.08);
+  --header-bg: rgba(255, 255, 255, 0.9);
+}
+
+:root {
+  /* Shape scale */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* Theme switch: smooth, but never animate on first paint */
+  --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
 body {
-  background-color: #000;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: var(--theme-transition);
+}
+
+/* Forced-theme zones re-resolve inherited text colour */
+[data-theme]:not(html) {
+  color: var(--text);
+}
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.3);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .main-global {
@@ -148,7 +258,7 @@ body {
   overflow: clip;
 }
 .header-global {
-  background-color: #00000050;
+  background-color: transparent;
   position: sticky;
   top: 0px;
   z-index: 99999;
@@ -163,4 +273,89 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+/* Reveal-on-scroll (used by components/MotionWrapper). Visible by default;
+   animated only where scroll-driven animations are supported. */
+.motion-up { --motion-x: 0; --motion-y: 40px; }
+.motion-down { --motion-x: 0; --motion-y: -40px; }
+.motion-left { --motion-x: 40px; --motion-y: 0; }
+.motion-right { --motion-x: -40px; --motion-y: 0; }
+.motion-none { --motion-x: 0; --motion-y: 0; }
+.motion-item { --motion-x: 0; --motion-y: 20px; }
+
+@keyframes motion-reveal {
+  from {
+    opacity: 0;
+    translate: var(--motion-x, 0) var(--motion-y, 0);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .motion-reveal {
+      animation: motion-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+/* ==========================================================================
+   Home page rhythm: equal vertical spacing + a hairline divider between
+   content sections. Skips the trust banner (has its own borders), the block
+   right after it, and the photo CTA.
+   ========================================================================== */
+.main-global > section[id]:not(#contact) {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.main-global > section[id]:not(#contact):not(#news)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: min(1380px, calc(100% - 60px));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--accent-rgb), 0.35) 25%,
+    rgba(var(--accent-rgb), 0.35) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Small accent mark in the middle of the line */
+.main-global > section[id]:not(#contact):not(#news)::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  translate: -50% 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.7);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .main-global > section[id]:not(#contact) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .main-global > section[id]:not(#contact):not(#news)::before {
+    width: calc(100% - 30px);
+  }
 }

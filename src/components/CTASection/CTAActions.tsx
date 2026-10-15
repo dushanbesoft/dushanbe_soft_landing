@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import styles from './CTASection.module.css';
-import ContactModal from '../ContactModal/ContactModal';
+import dynamic from "next/dynamic";
+// Loaded after hydration: the modal is not needed for the first paint.
+const ContactModal = dynamic(() => import('../ContactModal/ContactModal'), { ssr: false });
 
 interface CTAActionsProps {
   primaryBtnText: string;

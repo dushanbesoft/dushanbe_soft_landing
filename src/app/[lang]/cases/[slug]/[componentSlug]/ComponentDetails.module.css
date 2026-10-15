@@ -3,8 +3,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #081c22;
-  color: #fff;
+  background-color: var(--bg-elevated);
+  color: var(--text);
   padding-top: 90px;
 }
 
@@ -15,7 +15,7 @@
   margin: 0 auto;
   /* height: auto; */
   min-height: 500px;
-  background-color: #081c22;
+  background-color: var(--bg-elevated);
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 80%, #000 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 80%, var(--bg) 100%);
   z-index: 1;
 } */
 
@@ -53,16 +53,15 @@
   color: #fff;
   background: rgba(8, 28, 34, 0.55);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(var(--ink-rgb), 0.2);
   text-decoration: none;
-  transition:
-    background 0.2s ease,
+  transition: background 0.2s ease,
     transform 0.2s ease;
 }
 
 .heroNav:hover {
-  background: #3ddc84;
-  color: #000;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .heroNavPrev {
@@ -110,7 +109,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--ink-rgb), 0.6);
   font-family: var(--font-nunito-sans);
   text-decoration: none;
   font-size: 16px;
@@ -120,28 +119,28 @@
 }
 
 .backBtn:hover {
-  color: #fff;
+  color: var(--text);
 }
 
 .title {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   margin: 0;
   font-family: var(--font-tektur), sans-serif;
 }
 
 .shortInfo {
   font-size: 18px;
-  color: #3ddc84;
+  color: var(--accent-text);
   font-weight: 500;
   margin: 0;
 }
 
 /* .descriptionSection {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  background: rgba(var(--ink-rgb), 0.03);
+  border: 1px solid rgba(var(--ink-rgb), 0.1);
+  border-radius: var(--radius-lg);
   padding: 40px;
   margin-top: 20px;
 } */
@@ -149,7 +148,7 @@
 .descriptionText {
   font-size: 18px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(var(--ink-rgb), 0.8);
   margin: 0;
 }
 

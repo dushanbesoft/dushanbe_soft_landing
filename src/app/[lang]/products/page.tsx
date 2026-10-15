@@ -1,43 +1,29 @@
+import type { Metadata } from 'next';
 import initTranslations from '../../i18n';
 import TranslationsProvider from '../../../components/TranslationsProvider';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import ProductsSection from '../../../components/ProductsSection/ProductsSection';
 
+import { buildPageMetadata } from '../../../utils/seo';
+
 const i18nNamespaces = ['common'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const { t } = await initTranslations(lang, i18nNamespaces);
-  
-  const title = t('header.products', { defaultValue: 'Продукты' }) + ' | Dushanbe Soft';
-  const description = t('seo.products_description', { defaultValue: 'Собственные продукты и решения от компании Dushanbe Soft.' });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
-  const currentUrl = lang === 'ru' ? `${siteUrl}/products` : `${siteUrl}/${lang}/products`;
 
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      url: currentUrl,
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        'tg': `${siteUrl}/tj/products`,
-        'ru': `${siteUrl}/products`,
-        'en': `${siteUrl}/en/products`,
-        'x-default': `${siteUrl}/products`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: 'products',
+    title: t('seo.products_title'),
+    description: t('seo.products_description'),
+  });
 }
 
 export default async function ProductsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const { t, resources } = await initTranslations(lang, i18nNamespaces);
+  const { resources } = await initTranslations(lang, i18nNamespaces);
 
   return (
     <TranslationsProvider namespaces={i18nNamespaces} locale={lang} resources={resources}>
@@ -46,7 +32,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
           <Header />
         </div>
         <ProductsSection showAll={true} lang={lang} />
-        <Footer />
+        <Footer lang={lang} />
       </main>
     </TranslationsProvider>
   );

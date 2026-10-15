@@ -37,6 +37,8 @@ COPY --from=prod-deps --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+# Lets `npm run indexnow` run inside the container after a deploy
+COPY --from=builder --chown=nextjs:nodejs /app/scripts/indexnow.mjs ./scripts/indexnow.mjs
 
 USER nextjs
 

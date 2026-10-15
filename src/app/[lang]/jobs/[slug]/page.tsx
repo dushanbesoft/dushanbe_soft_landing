@@ -8,9 +8,60 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
+import {
+  COMPANY,
+  ORGANIZATION_ID,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  homeCrumb,
+  jsonLdString,
+  localeUrl,
+} from "@/utils/seo";
+import { LOCALES } from "@/utils/locales";
+
+const JOB_SUFFIX: Record<string, string> = {
+  ru: "вакансия в Душанбе", en: "job in Dushanbe", tj: "ҷои корӣ дар Душанбе",
+  uz: "Dushanbedagi vakansiya", kk: "Душанбедегі бос орын", ky: "Душанбедеги бош орун",
+  tk: "Duşenbedäki boş iş orny", fa: "فرصت شغلی در دوشنبه", ar: "وظيفة في دوشنبه",
+};
+
+type DescBlock =
+  | { type: "heading"; text: string }
+  | { type: "text"; text: string }
+  | { type: "list"; items: string[] };
+
+/**
+ * Turns the plain-text job description into structured blocks:
+ * a line followed by "•" / "1." items becomes a heading with a list.
+ */
+function parseJobDescription(raw: string): DescBlock[] {
+  const blocks: DescBlock[] = [];
+  const isItem = (line: string) => /^(•|-|\d+\.)\s*/.test(line);
+  for (const chunk of raw.split(/\n\s*\n/)) {
+    const lines = chunk.split("\n").map((l) => l.trim()).filter(Boolean);
+    let i = 0;
+    while (i < lines.length) {
+      if (isItem(lines[i])) {
+        const items: string[] = [];
+        while (i < lines.length && isItem(lines[i])) {
+          items.push(lines[i].replace(/^(•|-|\d+\.)\s*/, ""));
+          i++;
+        }
+        blocks.push({ type: "list", items });
+      } else if (i + 1 < lines.length && isItem(lines[i + 1])) {
+        blocks.push({ type: "heading", text: lines[i].replace(/:$/, "") });
+        i++;
+      } else {
+        blocks.push({ type: "text", text: lines[i] });
+        i++;
+      }
+    }
+  }
+  return blocks;
+}
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -34,31 +85,15 @@ export async function generateMetadata({
     return {};
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
-  const title = `${job.title} | Dushanbe Soft`;
-  const description = job.description;
-  const currentUrl = lang === "ru" ? `${siteUrl}/jobs/${slug}` : `${siteUrl}/${lang}/jobs/${slug}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      url: currentUrl,
-      locale: lang === "tj" ? "tg_TJ" : lang === "ru" ? "ru_RU" : "en_US",
-      type: "article",
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        "tg": `${siteUrl}/tj/jobs/${slug}`,
-        "ru": `${siteUrl}/jobs/${slug}`,
-        "en": `${siteUrl}/en/jobs/${slug}`,
-        "x-default": `${siteUrl}/jobs/${slug}`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: `jobs/${slug}`,
+    title: `${job.title} — ${JOB_SUFFIX[lang] ?? JOB_SUFFIX.ru}`,
+    description: job.description,
+    type: "article",
+    publishedTime: job.datePosted,
+    contentPage: true,
+  });
 }
 
 export default async function JobDetailsPage({
@@ -74,14 +109,54 @@ export default async function JobDetailsPage({
     notFound();
   }
 
+  const jsonLd = [
+    breadcrumbJsonLd([
+      homeCrumb(lang),
+      { name: t("header.careers", "Карьера"), url: `${localeUrl(lang)}/#careers` },
+      { name: job.title, url: localeUrl(lang, `jobs/${slug}`) },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      title: job.title,
+      description: (job.fullDescription || job.description).replace(/\n/g, "<br>"),
+      datePosted: job.datePosted,
+      hiringOrganization: {
+        "@type": "Organization",
+        "@id": ORGANIZATION_ID,
+        name: COMPANY.name,
+        sameAs: localeUrl("ru"),
+        logo: localeUrl("ru") + "/logo.png",
+      },
+      jobLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: COMPANY.addressLocality,
+          addressCountry: COMPANY.addressCountry,
+        },
+      },
+      ...(job.typeValue === "remote"
+        ? {
+            jobLocationType: "TELECOMMUTE",
+            applicantLocationRequirements: { "@type": "Country", name: "Tajikistan" },
+          }
+        : {}),
+      directApply: false,
+    },
+  ];
+
   return (
     <TranslationsProvider namespaces={["common"]} locale={lang} resources={resources}>
       <main className={styles.main}>
-        <Header />
-        
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
+        <div className="header-global">
+          <Header />
+        </div>
+
         <div className={styles.container}>
           <Link href={lang === "ru" ? "/#careers" : `/${lang}/#careers`} className={styles.backBtn}>
-            ← К списку вакансий
+            ← {t("jobs.backToList", "К списку вакансий")}
           </Link>
 
           <div className={styles.content}>
@@ -100,33 +175,47 @@ export default async function JobDetailsPage({
                       </linearGradient>
                     </defs>
                   </svg>
-                  <span>{job.location}</span>
+                  <span>{t("jobs.location.dushanbe", job.location)}</span>
                 </div>
                 <div className={styles.metaItem}>
-                  <span>Формат: {job.typeLabel}</span>
+                  <span>{t("jobs.formatLabel", "Формат")}: {t(`jobs.${job.typeValue}`, job.typeLabel)}</span>
                 </div>
                 {job.experienceValue && (
                   <div className={styles.metaItem}>
-                    <span>Опыт: {job.experienceValue === 'junior' ? 'Без опыта' : job.experienceValue === 'middle' ? '1-3 года' : '3+ года'}</span>
+                    <span>{t("jobs.experienceLabel", "Опыт")}: {t(`jobs.${job.experienceValue}`)}</span>
                   </div>
                 )}
               </div>
             </div>
 
             <div className={styles.body}>
-              <h2 className={styles.sectionTitle}>О вакансии</h2>
-              <div className={styles.description}>{(job as any).fullDescription || job.description}</div>
+              <h2 className={styles.sectionTitle}>{t("jobs.about", "О вакансии")}</h2>
+              <div className={styles.description}>
+                {parseJobDescription(job.fullDescription || job.description).map((block, i) =>
+                  block.type === "heading" ? (
+                    <h3 key={i} className={styles.descHeading}>{block.text}</h3>
+                  ) : block.type === "list" ? (
+                    <ul key={i} className={styles.descList}>
+                      {block.items.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p key={i} className={styles.descText}>{block.text}</p>
+                  ),
+                )}
+              </div>
               
               <div className={styles.ctaBox}>
-                <h3 className={styles.ctaTitle}>Заинтересовала вакансия?</h3>
-                <p className={styles.ctaDesc}>Отправьте нам своё резюме через Telegram, и мы свяжемся с вами в ближайшее время!</p>
+                <h3 className={styles.ctaTitle}>{t("jobs.detailCtaTitle", "Заинтересовала вакансия?")}</h3>
+                <p className={styles.ctaDesc}>{t("jobs.detailCtaDesc", "Отправьте нам своё резюме через Telegram, и мы свяжемся с вами в ближайшее время!")}</p>
                 <a 
                   href="https://t.me/m_yakub" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={styles.ctaBtn}
                 >
-                  Отправить резюме
+                  {t("jobs.send_cv", "Отправить резюме")}
                 </a>
               </div>
             </div>

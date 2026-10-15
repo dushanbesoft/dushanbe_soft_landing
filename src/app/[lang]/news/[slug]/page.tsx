@@ -4,19 +4,30 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import styles from "./NewsDetail.module.css";
-import { newsList, getNewsBySlug, getRelatedNews } from "@/const/news-data";
+import { newsList, getNewsBySlug, getRelatedNews, getNewsContent } from "@/const/news-data";
+import { LOCALES, contentLocale, localeHreflang } from "@/utils/locales";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
 import { FadeIn } from "@/components/MotionWrapper";
+import {
+  ORGANIZATION_ID,
+  absoluteUrl,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  homeCrumb,
+  jsonLdString,
+  localeUrl,
+  ruDateToIso,
+} from "@/utils/seo";
 
 interface PageProps {
   params: Promise<{ lang: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -37,38 +48,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const { t } = await initTranslations(lang, ["common"]);
-  const title = t(item.titleKey, item.defaultTitle) + " | Dushanbe Soft";
-  const description = t(item.descKey, item.defaultDesc);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dushanbe-soft.tj";
-  const currentUrl = lang === "ru" ? `${siteUrl}/news/${slug}` : `${siteUrl}/${lang}/news/${slug}`;
 
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      url: currentUrl,
-      images: [
-        {
-          url: item.image,
-          width: 1200,
-          height: 630,
-          alt: item.defaultTitle,
-        },
-      ],
-      type: "article",
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        tg: `${siteUrl}/tj/news/${slug}`,
-        ru: `${siteUrl}/news/${slug}`,
-        en: `${siteUrl}/en/news/${slug}`,
-        "x-default": `${siteUrl}/news/${slug}`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: `news/${slug}`,
+    title: t(item.titleKey, item.defaultTitle),
+    description: t(item.descKey, item.defaultDesc),
+    image: { url: item.image, alt: t(item.titleKey, item.defaultTitle) },
+    type: "article",
+    publishedTime: ruDateToIso(item.date),
+    contentPage: true,
+  });
 }
 
 export default async function NewsDetailPage({ params }: PageProps) {
@@ -99,20 +89,47 @@ export default async function NewsDetailPage({ params }: PageProps) {
     return lang === "ru" ? `/cases/${caseSlug}` : `/${lang}/cases/${caseSlug}`;
   };
 
-  const caseUrl = getCaseUrl(item.fullContent?.caseSlug);
+  const content = getNewsContent(item, lang);
+  const caseUrl = getCaseUrl(content.caseSlug);
+  const articleUrl = localeUrl(lang, `news/${slug}`);
+  const published = ruDateToIso(item.date);
+
+  const jsonLd = [
+    breadcrumbJsonLd([
+      homeCrumb(lang),
+      { name: t("news.viewAll", "Все новости"), url: localeUrl(lang, "news") },
+      { name: title, url: articleUrl },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: title,
+      description: desc,
+      image: [absoluteUrl(item.image)],
+      datePublished: published,
+      dateModified: published,
+      inLanguage: localeHreflang(contentLocale(lang)),
+      mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+      author: { "@type": "Organization", "@id": ORGANIZATION_ID, name: "Dushanbe Soft" },
+      publisher: { "@id": ORGANIZATION_ID },
+      ...(content.techStack?.length ? { keywords: content.techStack.join(", ") } : {}),
+      ...(content.source ? { citation: content.source.url, isBasedOn: content.source.url } : {}),
+    },
+  ];
 
   return (
     <TranslationsProvider namespaces={["common"]} locale={lang} resources={resources}>
       <main className={styles.main}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
         <div className="header-global">
           <Header />
         </div>
 
         <div className={styles.container}>
           <div className={styles.navRow}>
-            <nav className={styles.breadcrumbs} aria-label="Хлебные крошки">
+            <nav className={styles.breadcrumbs} aria-label={t("ui.breadcrumbs", "Хлебные крошки")}>
               <Link href={homeUrl} className={styles.breadcrumbLink}>
-                Главная
+                {t("ui.home", "Главная")}
               </Link>
               <span className={styles.breadcrumbSeparator}>/</span>
               <Link href={newsUrl} className={styles.breadcrumbLink}>
@@ -132,7 +149,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
               <div className={styles.metaRow}>
                 <span className={styles.categoryBadge}>{tag}</span>
                 <span className={styles.metaDot}>•</span>
-                <span className={styles.metaItem}>📅 {item.date}</span>
+                <time className={styles.metaItem} dateTime={published}>📅 {item.date}</time>
                 <span className={styles.metaDot}>•</span>
                 <span className={styles.metaItem}>⏱ {item.readTime}</span>
               </div>
@@ -157,10 +174,10 @@ export default async function NewsDetailPage({ params }: PageProps) {
           <div className={styles.articleBody}>
             <article className={styles.contentCol}>
               <p className={styles.leadText}>
-                {item.fullContent?.lead || desc}
+                {content.lead || desc}
               </p>
 
-              {item.fullContent?.sections?.map((section, idx) => (
+              {content.sections?.map((section, idx) => (
                 <div key={idx} className={styles.sectionBlock}>
                   <h2 className={styles.sectionHeading}>{section.heading}</h2>
                   <p className={styles.sectionText}>{section.text}</p>
@@ -176,11 +193,20 @@ export default async function NewsDetailPage({ params }: PageProps) {
                 </div>
               ))}
 
-              {item.fullContent?.techStack && item.fullContent.techStack.length > 0 && (
+              {content.source && (
+                <p className={styles.sectionText}>
+                  <a href={content.source.url} target="_blank" rel="noopener" className={styles.caseLinkBtn}>
+                    <span>{content.source.label}</span>
+                    <span>↗</span>
+                  </a>
+                </p>
+              )}
+
+              {content.techStack && content.techStack.length > 0 && (
                 <div className={styles.techBox}>
-                  <h3 className={styles.techTitle}>Использованный стек технологий</h3>
+                  <h3 className={styles.techTitle}>{t("ui.techStack", "Использованный стек технологий")}</h3>
                   <div className={styles.techBadges}>
-                    {item.fullContent.techStack.map((tech, tIdx) => (
+                    {content.techStack.map((tech, tIdx) => (
                       <span key={tIdx} className={styles.techBadge}>
                         {tech}
                       </span>
@@ -191,7 +217,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
               {caseUrl && (
                 <Link href={caseUrl} className={styles.caseLinkBtn}>
-                  <span>Посмотреть кейс проекта в портфолио</span>
+                  <span>{t("ui.viewCase", "Посмотреть кейс проекта в портфолио")}</span>
                   <span>→</span>
                 </Link>
               )}
@@ -199,18 +225,18 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
             <aside className={styles.sidebarCol}>
               <div className={styles.ctaCard}>
-                <h3 className={styles.ctaTitle}>Интересует подобное решение?</h3>
+                <h3 className={styles.ctaTitle}>{t("ui.similarTitle", "Интересует подобное решение?")}</h3>
                 <p className={styles.ctaText}>
-                  Команда Dushanbe Soft проектирует и разрабатывает надежные цифровые платформы, ERP, SaaS и мобильные приложения под ключ.
+                  {t("ui.similarText", "Команда Dushanbe Soft проектирует и разрабатывает надежные цифровые платформы, ERP, SaaS и мобильные приложения под ключ.")}
                 </p>
                 <Link href={contactUrl} className={styles.ctaBtn}>
-                  Обсудить проект
+                  {t("ui.discussProject", "Обсудить проект")}
                 </Link>
               </div>
 
               {relatedNews.length > 0 && (
                 <div className={styles.relatedBlock}>
-                  <h3 className={styles.relatedHeading}>Другие новости</h3>
+                  <h3 className={styles.relatedHeading}>{t("ui.otherNews", "Другие новости")}</h3>
                   <div className={styles.relatedList}>
                     {relatedNews.map((rel) => {
                       const relTitle = t(rel.titleKey, rel.defaultTitle);

@@ -8377,15 +8377,15 @@ This example shows how entered fields relate to the chat’s appearance. Placing
             fullInfo: { ru: "", en: "", tj: "" },
           },
           {
-            slug: "lending-winners-зфпу",
+            slug: "lending-winners-page",
             title: {
               ru: "Список победителей",
               en: "Winners List",
               tj: "Рӯйхати ғолибон",
             },
-            imageSrc: "/images/projects/royalbaby/web/lending-winners-зфпу.png",
+            imageSrc: "/images/projects/royalbaby/web/lending-winners-page.png",
             BannerSrc:
-              "/images/projects/royalbaby/web/lending-winners-зфпу.png",
+              "/images/projects/royalbaby/web/lending-winners-page.png",
             shortInfo: {
               ru: "Таблица с результатами розыгрыша",
               en: "Results table",

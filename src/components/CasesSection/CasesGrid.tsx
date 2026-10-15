@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./CasesSection.module.css";
 import CaseCard from "./CaseCard";
 import { FadeIn } from "../MotionWrapper";
@@ -31,7 +31,9 @@ export default function CasesGrid({
   lang,
   labels,
   title,
-}: CasesGridProps & { title?: string }) {
+  isPage = false,
+}: CasesGridProps & { title?: string; isPage?: boolean }) {
+  const Heading = isPage ? "h1" : "h2";
   const [showAll, setShowAll] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Все");
 
@@ -75,6 +77,66 @@ export default function CasesGrid({
     traveltours: "Корпоративные",
   };
 
+  // Category keys stay in Russian (they match slugCategoryMap); labels are localized.
+  const categoryLabels: Record<string, Record<string, string>> = {
+    en: {
+      "Все": "All",
+      "Государственные": "Government",
+      "Корпоративные": "Corporate",
+      "Медиа": "Media",
+      "Финтех": "Fintech",
+    },
+    tj: {
+      "Все": "Ҳама",
+      "Государственные": "Давлатӣ",
+      "Корпоративные": "Корпоративӣ",
+      "Медиа": "Медиа",
+      "Финтех": "Финтех",
+    },    uz: {
+      "Все": "Barchasi",
+      "Государственные": "Davlat",
+      "Корпоративные": "Korporativ",
+      "Медиа": "Media",
+      "Финтех": "Fintex",
+    },
+    kk: {
+      "Все": "Барлығы",
+      "Государственные": "Мемлекеттік",
+      "Корпоративные": "Корпоративтік",
+      "Медиа": "Медиа",
+      "Финтех": "Финтех",
+    },
+    ky: {
+      "Все": "Баары",
+      "Государственные": "Мамлекеттик",
+      "Корпоративные": "Корпоративдик",
+      "Медиа": "Медиа",
+      "Финтех": "Финтех",
+    },
+    tk: {
+      "Все": "Hemmesi",
+      "Государственные": "Döwlet",
+      "Корпоративные": "Korporatiw",
+      "Медиа": "Media",
+      "Финтех": "Fintech",
+    },
+    fa: {
+      "Все": "همه",
+      "Государственные": "دولتی",
+      "Корпоративные": "شرکتی",
+      "Медиа": "رسانه",
+      "Финтех": "فین‌تک",
+    },
+    ar: {
+      "Все": "الكل",
+      "Государственные": "حكومية",
+      "Корпоративные": "الشركات",
+      "Медиа": "الإعلام",
+      "Финтех": "التكنولوجيا المالية",
+    },
+  };
+  const categoryLabel = (cat: string) => categoryLabels[lang]?.[cat] ?? cat;
+
   const filteredCases =
     activeCategory === "Все"
       ? casesData
@@ -89,7 +151,7 @@ export default function CasesGrid({
         style={{ width: "100%", marginBottom: "20px" }}
       >
         <div className={styles.titles}>
-          {title && <h2 className={styles.mainTitle}>{title}</h2>}
+          {title && <Heading className={styles.mainTitle}>{title}</Heading>}
         </div>
         <div className={styles.categoriesList}>
           {categories.map((cat) => (
@@ -101,7 +163,7 @@ export default function CasesGrid({
                 setShowAll(false);
               }}
             >
-              {cat}
+              {categoryLabel(cat)}
             </button>
           ))}
         </div>

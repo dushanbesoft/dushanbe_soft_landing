@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./HeroContent.module.css";
@@ -42,7 +41,10 @@ function TypedTitle({ text }: { text: string }) {
   return <span className={styles.typedText}>{typed}</span>;
 }
 
-import ContactModal from "../ContactModal/ContactModal";
+import dynamic from "next/dynamic";
+import { contentLocale } from "@/utils/locales";
+// Loaded after hydration: the modal is not needed for the first paint.
+const ContactModal = dynamic(() => import("../ContactModal/ContactModal"), { ssr: false });
 
 export default function HeroContent() {
   const { t, i18n } = useTranslation();
@@ -79,13 +81,7 @@ export default function HeroContent() {
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
           </button>
           <a 
-            href={
-              i18n.language === "en"
-                ? "/files/EN - Dushanbe- Soft.pdf"
-                : i18n.language === "tj"
-                ? "/files/TJ - Dushanbe- Soft.pdf"
-                : "/files/RU - Dushanbe- Soft.pdf"
-            }
+            href={`/files/${contentLocale(i18n.language).toUpperCase()} - Dushanbe- Soft.pdf`}
             download
             target="_blank"
             rel="noopener noreferrer"

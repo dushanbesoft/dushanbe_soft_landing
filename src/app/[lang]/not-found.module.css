@@ -1,0 +1,95 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background:
+    radial-gradient(circle at 0% 100%, rgba(var(--accent-rgb), 0.18) 0%, transparent 50%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* Only the variant matching <html lang> (set by the [lang] layout) is shown */
+.variant {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+:global(html[lang="ru"]) .variant[data-locale="ru"],
+:global(html[lang="en"]) .variant[data-locale="en"],
+:global(html[lang="tg"]) .variant[data-locale="tg"],
+:global(html[lang="uz"]) .variant[data-locale="uz"],
+:global(html[lang="kk"]) .variant[data-locale="kk"],
+:global(html[lang="ky"]) .variant[data-locale="ky"],
+:global(html[lang="tk"]) .variant[data-locale="tk"],
+:global(html[lang="fa"]) .variant[data-locale="fa"],
+:global(html[lang="ar"]) .variant[data-locale="ar"] {
+  display: flex;
+}
+
+.code {
+  font-family: var(--font-tektur), sans-serif;
+  font-size: clamp(96px, 18vw, 180px);
+  font-weight: 700;
+  line-height: 1;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-tektur), sans-serif;
+  font-size: clamp(26px, 4vw, 40px);
+}
+
+.text {
+  margin: 0;
+  max-width: 480px;
+  color: var(--text-secondary);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.home {
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 8px;
+  padding: 0 28px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-accent);
+  color: #ffffff;
+  font-family: var(--font-tektur), sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 6px;
+}
+
+.links a {
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.links a:hover,
+.home:hover {
+  opacity: 0.85;
+}

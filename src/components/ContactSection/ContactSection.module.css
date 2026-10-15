@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fdfdfe;
+  background: var(--bg-alt);
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -42,10 +42,10 @@
 }
 
 .subtitle {
-  font-family: var(--font-tektur);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -60,9 +60,9 @@
 }
 
 .titleBlack {
-  color: #000;
+  color: var(--text);
   font-family: var(--font-tektur);
-  font-size: 55px;
+  font-size: 56px;
   font-weight: 700;
 }
 
@@ -73,16 +73,16 @@
 
 .titleGradient {
   font-family: var(--font-tektur);
-  font-size: 55px;
+  font-size: 56px;
   font-weight: 700;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .desc {
-  color: #64748b;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -124,7 +124,7 @@
 }
 
 .featureLabel {
-  color: #64748b;
+  color: var(--text-muted);
   text-align: center;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
@@ -132,9 +132,9 @@
 }
 
 .featureValue {
-  color: #000;
+  color: var(--text);
   text-align: center;
-  font-family: var(--font-tektur);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
@@ -144,8 +144,8 @@
   padding: 30px;
   align-items: center;
   gap: 30px;
-  border-radius: 11px;
-  background: #000607;
+  border-radius: var(--radius-md);
+  background: var(--bg);
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -171,8 +171,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid #3ddc84;
-  background: #051517;
+  border: 1px solid var(--accent);
+  background: var(--bg-elevated);
   overflow: hidden;
   position: relative;
 }
@@ -187,7 +187,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #001010;
+  background: var(--bg-elevated);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +200,7 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -216,7 +216,7 @@
 }
 
 .messengersTitle {
-  color: #000;
+  color: var(--text);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 700;
@@ -243,7 +243,7 @@
 }
 
 .messengerName {
-  color: #64748b;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 700;
@@ -262,8 +262,8 @@
   flex-direction: column;
   align-items: stretch;
   gap: 30px;
-  border-radius: 22px;
-  background: #fff;
+  border-radius: var(--radius-xl);
+  background: var(--bg-alt);
   box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
   box-sizing: border-box;
 }
@@ -288,7 +288,7 @@
 }
 
 .formTitle {
-  color: #000;
+  color: var(--text);
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
@@ -296,7 +296,7 @@
 }
 
 .formSubtitle {
-  color: #64748b;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -331,7 +331,7 @@
 }
 
 .label {
-  color: #000;
+  color: var(--text);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 700;
@@ -343,10 +343,10 @@
 .textarea {
   width: 100%;
   padding: 20px;
-  border-radius: 11px;
-  border: 1px solid rgba(61, 220, 132, 0.5);
-  background: #fff;
-  color: #000;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(var(--accent-rgb), 0.5);
+  background: var(--bg-alt);
+  color: var(--text);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -358,12 +358,12 @@
 .input:focus,
 .select:focus,
 .textarea:focus {
-  border-color: #02704f;
+  border-color: var(--accent-deep);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .selectWrapper {
@@ -375,12 +375,12 @@
   appearance: none;
   -webkit-appearance: none;
   cursor: pointer;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .selectArrow {
   position: absolute;
-  right: 20px;
+  inset-inline-end: 20px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -399,8 +399,8 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  border-radius: 11px;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  border-radius: var(--radius-md);
+  background: var(--gradient-accent);
   border: none;
   cursor: pointer;
   width: 100%;
@@ -412,7 +412,7 @@
 }
 
 .submitBtn span {
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-family: var(--font-tektur);
   font-size: 18px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './CaseCard.module.css';
 
 interface CaseCardProps {
@@ -36,10 +37,15 @@ export default function CaseCard({
 
   return (
     <Link href={lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`} className={styles.card} onClick={handleClick}>
-      <div 
-        className={styles.imageHeader} 
-        style={{ backgroundImage: `url('${imageSrc}')` }}
-      />
+      <div className={styles.imageHeader}>
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 400px"
+          style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+        />
+      </div>
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
         <div className={styles.description}>{description}</div>

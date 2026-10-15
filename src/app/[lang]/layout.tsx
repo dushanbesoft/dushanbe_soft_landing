@@ -1,79 +1,55 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../../styles/globals.css";
-import { dir } from 'i18next';
 import { i18nConfig } from "../../../i18nConfig";
 import { ReactNode } from "react";
-import { tektur, nunitoSans } from "../../styles/fonts";
+import { tektur, nunitoSans, vazirmatn } from "../../styles/fonts";
 
 import initTranslations from "../i18n";
+import InlineScript from "../../components/InlineScript";
+import {
+  COMPANY,
+  OG_IMAGE,
+  ORGANIZATION_ID,
+  SITE_NAME,
+  SITE_URL,
+  WEBSITE_ID,
+  buildPageMetadata,
+  jsonLdString,
+} from "../../utils/seo";
+import { LOCALE_META, localeDir, localeHreflang } from "../../utils/locales";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const { t } = await initTranslations(lang, ["common"]);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
 
   const defaultTitle = t("seo.default_title", "Dushanbe Soft | Разработка программного обеспечения");
   const defaultDesc = t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.");
+  // Site-wide defaults only. Canonical, hreflang, robots and og:url belong to
+  // each page; inheriting the home page's would point other URLs (e.g. 404s) at "/".
+  const page = buildPageMetadata({ lang, path: "", title: defaultTitle, description: defaultDesc });
+  delete page.alternates;
+  delete page.robots;
+  if (page.openGraph) delete page.openGraph.url;
 
   return {
-    metadataBase: new URL(siteUrl),
+    ...page,
+    metadataBase: new URL(SITE_URL),
     title: {
       default: defaultTitle,
-      template: `%s | Dushanbe Soft`
+      template: `%s | ${SITE_NAME}`
     },
-    description: defaultDesc,
+    applicationName: SITE_NAME,
     keywords: t("seo.keywords", "разработка ПО, создание сайтов, мобильные приложения, автоматизация бизнеса, Душанбе, Таджикистан, Dushanbe Soft, IT компания, web development, mobile development, software engineering"),
-    authors: [{ name: "Dushanbe Soft", url: siteUrl }],
-    creator: "Dushanbe Soft",
-    publisher: "Dushanbe Soft",
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
+    category: "technology",
     formatDetection: {
       email: false,
       address: false,
       telephone: false,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    openGraph: {
-      title: defaultTitle,
-      description: defaultDesc,
-      url: lang === 'ru' ? siteUrl : `${siteUrl}/${lang}`,
-      siteName: 'Dushanbe Soft',
-      images: [
-        {
-          url: `${siteUrl}/images/hero-bg.png`,
-          alt: 'Dushanbe Soft — разработка программного обеспечения в Таджикистане',
-        },
-      ],
-      locale: lang === 'tj' ? 'tg_TJ' : lang === 'ru' ? 'ru_RU' : 'en_US',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: defaultTitle,
-      description: defaultDesc,
-      images: [`${siteUrl}/images/hero-bg.png`], 
-    },
-    alternates: {
-      canonical: lang === 'ru' ? siteUrl : `${siteUrl}/${lang}`,
-      languages: {
-        'tg': `${siteUrl}/tj`,
-        'ru': `${siteUrl}`,
-        'en': `${siteUrl}/en`,
-        'x-default': `${siteUrl}`,
-      },
-    },
-    icons: {
-      icon: "/icons/site-favicon.svg",
-      apple: "/icons/site-favicon.svg",
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -81,11 +57,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     appleWebApp: {
       capable: true,
-      title: "Dushanbe Soft",
+      title: SITE_NAME,
       statusBarStyle: "black-translucent",
     },
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: "#000607",
+  colorScheme: "dark light",
+};
 
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ lang: locale }));
@@ -99,58 +80,106 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
-  
+  const { t } = await initTranslations(lang, ["common"]);
+  const inLanguage = localeHreflang(lang);
+
+  // One entity graph for the whole site: the organization (as a local
+  // ProfessionalService) and the website it publishes. Pages reference
+  // these by @id instead of re-declaring the organization.
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    'areaServed': ['TJ', 'Central Asia'],
-    'knowsAbout': ['Разработка программного обеспечения', 'Создание сайтов', 'Мобильные приложения', 'ERP', 'CRM', 'Автоматизация бизнеса'],
-    'name': 'Dushanbe Soft',
-    'url': siteUrl,
-    'logo': `${siteUrl}/icons/logo-header.svg`,
-    'image': `${siteUrl}/icons/site-favicon.svg`,
-    'description': 'Ведущая IT-компания в Таджикистане (г. Душанбе). Разработка программного обеспечения, сайтов, ERP и мобильных приложений.',
-    'address': {
-      '@type': 'PostalAddress',
-      'addressLocality': 'Душанбе',
-      'addressCountry': 'TJ'
-    },
-    'sameAs': [
-      'https://www.instagram.com/dushanbesoft',
-      'https://t.me/dushanbesoft'
-    ]
+    '@graph': [
+      {
+        '@type': ['Organization', 'ProfessionalService'],
+        '@id': ORGANIZATION_ID,
+        name: COMPANY.name,
+        legalName: COMPANY.legalName,
+        alternateName: ['Dushanbe-Soft', 'DushanbeSoft', 'Душанбе Софт', 'Private Enterprise "Dushanbe Soft"'],
+        url: SITE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/logo.png`,
+          width: 512,
+          height: 512,
+        },
+        image: OG_IMAGE.url,
+        description: t("seo.default_description"),
+        slogan: t("footer.desc"),
+        foundingDate: COMPANY.foundingDate,
+        telephone: COMPANY.telephone,
+        email: COMPANY.email,
+        priceRange: '$$',
+        currenciesAccepted: 'TJS, USD',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: COMPANY.addressLocality,
+          addressRegion: COMPANY.addressRegion,
+          addressCountry: COMPANY.addressCountry,
+        },
+        areaServed: [
+          { '@type': 'Country', name: 'Tajikistan' },
+          { '@type': 'Place', name: 'Central Asia' },
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'customer service',
+          telephone: COMPANY.telephone,
+          email: COMPANY.email,
+          areaServed: 'TJ',
+          availableLanguage: ['Russian', 'Tajik', 'English'],
+        },
+        knowsAbout: [
+          'Разработка программного обеспечения',
+          'Создание сайтов',
+          'Разработка мобильных приложений',
+          'CRM',
+          'ERP',
+          'SMS-рассылки',
+          'UI/UX дизайн',
+          'Кибербезопасность',
+          'Автоматизация бизнеса',
+        ],
+        sameAs: COMPANY.sameAs,
+        award: COMPANY.worldBankAward.text,
+        subjectOf: {
+          '@type': 'WebPage',
+          name: 'World Bank contract award notice OP00455715',
+          url: COMPANY.worldBankAward.url,
+          publisher: { '@type': 'Organization', name: 'The World Bank', url: 'https://www.worldbank.org' },
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': WEBSITE_ID,
+        url: SITE_URL,
+        name: SITE_NAME,
+        inLanguage: Object.values(LOCALE_META).map((m) => m.hreflang),
+        publisher: { '@id': ORGANIZATION_ID },
+      },
+    ],
   };
 
   return (
-    <html lang={lang === 'tj' ? 'tg' : lang} dir={dir(lang)}>
+    <html lang={inLanguage} dir={localeDir(lang)} data-theme="dark" suppressHydrationWarning>
       <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-BC9JE7JMKM"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BC9JE7JMKM');
-            `,
-          }}
+        {/* Apply the saved theme before first paint to avoid a flash */}
+        <InlineScript
+          html={`try{var t=localStorage.getItem("ds-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          async
-          src="//core.livechat.tj/widget/IgW317eT_p"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }}
         />
       </head>
-      <body className={`${tektur.variable} ${nunitoSans.variable}`}>
+      <body className={`${tektur.variable} ${nunitoSans.variable} ${vazirmatn.variable}`}>
         {children}
+        <Script
+          id="livechat-widget"
+          src="https://core.livechat.tj/widget/IgW317eT_p"
+          strategy="lazyOnload"
+        />
       </body>
+      <GoogleAnalytics gaId="G-BC9JE7JMKM" />
     </html>
   );
 }

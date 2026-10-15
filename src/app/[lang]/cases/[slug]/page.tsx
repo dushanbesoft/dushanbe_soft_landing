@@ -48,9 +48,22 @@ const ArrowLeftIcon = () => (
 );
 
 import { Metadata } from "next";
+import { LOCALES } from "@/utils/locales";
+import {
+  ORGANIZATION_ID,
+  absoluteUrl,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  caseTitle,
+  casesCrumb,
+  homeCrumb,
+  jsonLdString,
+  localeUrl,
+  truncate,
+} from "../../../../utils/seo";
 
 export async function generateStaticParams() {
-  const languages = ["ru", "tj", "en"];
+  const languages = LOCALES;
   const params: { lang: string; slug: string }[] = [];
 
   languages.forEach((lang) => {
@@ -78,43 +91,14 @@ export async function generateMetadata({
   const title = t(`projects.${project.slug}.title`, { defaultValue: "Кейс Dushanbe Soft" });
   const description = t(`projects.${project.slug}.description`, { defaultValue: "Кейс Dushanbe Soft" });
   
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
-  const currentUrl = lang === 'ru' ? `${siteUrl}/cases/${slug}` : `${siteUrl}/${lang}/cases/${slug}`;
-
-  return {
-    title: title,
-    description: description,
-    openGraph: {
-      title: title,
-      description: description,
-      url: currentUrl,
-      images: [
-        {
-          url: project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-      locale: lang === 'tj' ? 'tg_TJ' : lang === 'ru' ? 'ru_RU' : 'en_US',
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: title,
-      description: description,
-      images: [project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`],
-    },
-    alternates: {
-      canonical: currentUrl,
-      languages: {
-        'tg': `${siteUrl}/tj/cases/${slug}`,
-        'ru': `${siteUrl}/cases/${slug}`,
-        'en': `${siteUrl}/en/cases/${slug}`,
-        'x-default': `${siteUrl}/cases/${slug}`,
-      },
-    },
-  };
+  return buildPageMetadata({
+    lang,
+    path: `cases/${slug}`,
+    title: caseTitle(title, lang),
+    description: truncate(description),
+    image: { url: project.imageSrc, alt: title },
+    type: "article",
+  });
 }
 
 export default async function CaseDetailsPage({
@@ -137,8 +121,6 @@ export default async function CaseDetailsPage({
   const galleryCaptions = t(`projects.${project.slug}.gallery`, { returnObjects: true, defaultValue: null }) as string[] | null;
   const gallery = project.gallery ?? [];
   const projectComponents = project.projectComponents;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dushanbe-soft.tj';
-
   return (
     <TranslationsProvider
       namespaces={i18nNamespaces}
@@ -149,29 +131,26 @@ export default async function CaseDetailsPage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              headline: title,
-              description: description,
-              image: project.imageSrc.startsWith('http') ? project.imageSrc : `${siteUrl}${project.imageSrc}`,
-              author: {
-                "@type": "Organization",
-                name: "Dushanbe Soft"
+            __html: jsonLdString([
+              breadcrumbJsonLd([
+                homeCrumb(lang),
+                casesCrumb(lang),
+                { name: title, url: localeUrl(lang, `cases/${slug}`) },
+              ]),
+              {
+                "@context": "https://schema.org",
+                "@type": "CreativeWork",
+                name: title,
+                headline: title,
+                description: truncate(description, 300),
+                image: absoluteUrl(project.imageSrc),
+                dateCreated: project.year,
+                keywords: project.tags.join(", "),
+                url: localeUrl(lang, `cases/${slug}`),
+                creator: { "@id": ORGANIZATION_ID },
+                publisher: { "@id": ORGANIZATION_ID },
               },
-              publisher: {
-                "@type": "Organization",
-                name: "Dushanbe Soft",
-                logo: {
-                  "@type": "ImageObject",
-                  url: `${siteUrl}/icons/site-favicon.svg`
-                }
-              },
-              mainEntityOfPage: {
-                "@type": "WebPage",
-                "@id": lang === 'ru' ? `${siteUrl}/cases/${slug}` : `${siteUrl}/${lang}/cases/${slug}`
-              }
-            })
+            ]),
           }}
         />
         <div className="header-global header-fixed">
@@ -247,7 +226,7 @@ export default async function CaseDetailsPage({
           )}
         </div>
 
-        <Footer />
+        <Footer lang={lang} />
       </main>
     </TranslationsProvider>
   );
