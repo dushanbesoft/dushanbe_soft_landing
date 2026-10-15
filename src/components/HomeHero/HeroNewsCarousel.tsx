@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaTelegram, FaXTwitter } from "react-icons/fa6";
@@ -13,12 +13,16 @@ import { localePath, localeUrl } from "@/utils/seo";
 
 // Banner order: the five latest/pinned news, then extra news and portfolio cases.
 const EXTRA_NEWS = ["zudsms"];
-const CASE_SLIDES = [{ slug: "president", heroImage: "/images/news/president-banner.webp" }];
+const CASE_SLIDES = [
+  { slug: "president", heroImage: "/images/news/president-banner.webp", mobileImage: "/images/projects/president/banner_main.jpg" },
+];
 const TRAILING_NEWS = ["livechat"];
 
 type Slide = {
   key: string;
   image: string;
+  /** Phones show the original promo picture: the wide composed banner would be tiny there. */
+  mobileImage: string;
   /** Path without locale prefix, e.g. "news/zudsms" or "cases/president" */
   path: string;
   tagKey: string;
@@ -35,6 +39,7 @@ const newsSlide = (slug: string): Slide[] => {
   return [{
     key: item.slug,
     image: item.heroImage ?? item.image,
+    mobileImage: item.heroImageMobile ?? item.image,
     path: `news/${item.slug}`,
     tagKey: item.tagKey,
     defaultTag: item.defaultTag,
@@ -44,12 +49,13 @@ const newsSlide = (slug: string): Slide[] => {
   }];
 };
 
-const caseSlide = ({ slug, heroImage }: { slug: string; heroImage: string }): Slide[] => {
+const caseSlide = ({ slug, heroImage, mobileImage }: (typeof CASE_SLIDES)[number]): Slide[] => {
   const project = ProductSite.find((p) => p.slug === slug);
   if (!project) return [];
   return [{
     key: `case-${slug}`,
     image: heroImage,
+    mobileImage,
     path: `cases/${slug}`,
     tagKey: "cases.subtitle",
     defaultTag: "Портфолио",
@@ -86,6 +92,22 @@ const PlayIcon = () => (
     <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" />
   </svg>
 );
+
+const MOBILE_QUERY = "(max-width: 768px)";
+
+/** Wide composed banner on desktop, the original promo picture on phones. */
+function SlideImage({ slide, alt, priority }: { slide: Slide; alt: string; priority: boolean }) {
+  const common = { alt, fill: true, quality: 90, ...(priority ? { fetchPriority: "high" as const, loading: "eager" as const } : {}) };
+  const { props: { srcSet: desktop } } = getImageProps({ ...common, src: slide.image, sizes: "(max-width: 1700px) 100vw, 1640px" });
+  const { props: { srcSet: mobile, ...rest } } = getImageProps({ ...common, src: slide.mobileImage, sizes: "100vw" });
+  return (
+    <picture>
+      <source media={MOBILE_QUERY} srcSet={mobile} sizes="100vw" />
+      <source srcSet={desktop} sizes="(max-width: 1700px) 100vw, 1640px" />
+      <img {...rest} alt={alt} className={styles.image} />
+    </picture>
+  );
+}
 
 function usePrefersReducedMotion() {
   const [reduced, setReduced] = useState(false);
@@ -206,18 +228,10 @@ export default function HeroNewsCarousel() {
               aria-hidden={!isActive}
               inert={!isActive}
             >
-              {needsImage(index) && (
-                <Image
-                  src={item.image}
-                  alt={title}
-                  fill
-                  sizes="(max-width: 1700px) 100vw, 1640px"
-                  quality={90}
-                  className={styles.image}
-                  preload={index === 0}
-                />
-              )}
-              <div className={styles.shade} aria-hidden="true" />
+              <div className={styles.media}>
+                {needsImage(index) && <SlideImage slide={item} alt={title} priority={index === 0} />}
+                <div className={styles.shade} aria-hidden="true" />
+              </div>
 
               <div className={styles.caption}>
                 <div className={styles.captionMain}>

@@ -21,6 +21,8 @@ export interface NewsItem {
   image: string;
   /** Wide, high-resolution image for the home page banner (~3280x1520). Falls back to `image`. */
   heroImage?: string;
+  /** Banner image on phones, where the wide composed banner is too small. Falls back to `image`. */
+  heroImageMobile?: string;
   date: string;
   category: string;
   readTime: string;
@@ -155,6 +157,7 @@ const newsItems: NewsItem[] = [
     slug: "zudsms",
     image: "/images/projects/zudsms.webp",
     heroImage: "/images/news/zudsms-banner.webp",
+    heroImageMobile: "/images/projects/zudsms.png",
     date: "18.11.2025",
     category: "saas",
     readTime: "3 мин",

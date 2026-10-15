@@ -47,6 +47,13 @@
   z-index: 1;
 }
 
+/* Holds the art-directed <picture>; fills the slide on desktop */
+.media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
 .image {
   object-fit: cover;
   object-position: center top;
@@ -293,29 +300,53 @@
   .navNext { inset-inline-end: 3%; }
 }
 
+/* Phones: the picture keeps its own proportions at full width and the
+   caption sits below it instead of covering a cropped middle slice. */
 @media (max-width: 768px) {
   .hero {
     padding: calc(83px + 12px) 12px 20px;
   }
   .banner {
-    height: 72vh;
-    min-height: 420px;
+    display: grid;
+    height: auto;
+    min-height: 0;
     border-radius: var(--radius-md);
+    background: #023d2c;
   }
+  /* All slides share one grid cell, so the banner is as tall as the tallest */
+  .slide {
+    position: relative;
+    inset: auto;
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .media {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 2.2 / 1;
+    background: #000607;
+  }
+  .image {
+    object-fit: contain;
+    object-position: center;
+  }
+  .slideActive .image {
+    animation: none;
+  }
+  /* Short fade into the caption panel instead of a full overlay */
   .shade {
-    background: linear-gradient(
-      180deg,
-      rgba(0, 6, 7, 0) 20%,
-      rgba(2, 60, 44, 0.6) 50%,
-      rgba(2, 70, 50, 0.95) 75%,
-      #023d2c 100%
-    );
+    background: linear-gradient(180deg, rgba(2, 61, 44, 0) 70%, #023d2c 100%);
   }
   .caption {
+    position: relative;
+    inset: auto;
+    flex: 1;
     flex-direction: column-reverse;
     align-items: flex-start;
-    gap: 14px;
-    padding: 0 20px 64px;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 18px 60px;
   }
   .date {
     flex-direction: row;
@@ -324,14 +355,24 @@
     min-width: 0;
   }
   .dateBig {
-    font-size: 30px;
+    font-size: 28px;
   }
   .dateSmall {
     margin-top: 0;
     font-size: 16px;
   }
+  .captionMain {
+    gap: 12px;
+    width: 100%;
+  }
   .title {
-    font-size: 20px;
+    font-size: 19px;
+  }
+  .dots {
+    bottom: 22px;
+  }
+  .playBtn {
+    bottom: 14px;
   }
   /* Swipe replaces the side arrows on touch screens */
   .navBtn {
