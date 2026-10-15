@@ -152,6 +152,7 @@ export function homeCrumb(lang: string) {
 
 /** "24.08.2025" → "2025-08-24" */
 export function ruDateToIso(date: string): string {
+  if (!date.includes(".")) return date; // year-only, e.g. "2024"
   const [d, m, y] = date.split(".");
   return `${y}-${m.padStart(2, "0")}-${d.padStart(2, "0")}`;
 }

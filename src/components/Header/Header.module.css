@@ -332,3 +332,35 @@
     flex-shrink: 0;
   }
 }
+
+/* Dropdown list, wide (two-column) variant and footer link */
+.navDropdownList {
+  display: flex;
+  flex-direction: column;
+}
+
+.navDropdownMenuWide {
+  min-width: 440px;
+}
+
+.navDropdownMenuWide .navDropdownList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4px;
+}
+
+.navDropdownFooter {
+  margin-top: 6px;
+  padding: 10px 12px 4px;
+  border-top: 1px solid var(--border);
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navDropdownFooter:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

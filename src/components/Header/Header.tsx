@@ -6,6 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 import { servicesNav } from "@/const/services-nav";
+import { productsNav, portfolioNav, partnersNav, HeaderNavItem } from "@/const/header-nav";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const DownArrow = () => (
@@ -93,6 +94,43 @@ export default function Header() {
     if (lang === "ru") return subPath ? `/${subPath}` : "/";
     return subPath ? `/${lang}/${subPath}` : `/${lang}`;
   };
+
+  const localeHref = (path: string) => {
+    if (path.startsWith("#")) return getNavHref(path.slice(1));
+    return currentLang === "ru" ? `/${path}` : `/${currentLang}/${path}`;
+  };
+
+  // Dropdown links stay in the DOM (hidden with CSS) so crawlers can follow them.
+  const renderDropdown = (
+    label: string,
+    href: string,
+    items: { href: string; label: string }[],
+    footer: { href: string; label: string } | null,
+    options: { wide?: boolean; secondary?: boolean } = {},
+  ) => (
+    <div className={`${styles.navDropdown} ${options.secondary ? styles.navSecondary : ""}`}>
+      <Link href={href} className={styles.navItem} onClick={closeMenu}>
+        {label}
+      </Link>
+      <div className={`${styles.navDropdownMenu} ${options.wide ? styles.navDropdownMenuWide : ""}`}>
+        <div className={styles.navDropdownList}>
+          {items.map((item) => (
+            <Link key={item.href + item.label} href={item.href} className={styles.navDropdownItem} onClick={closeMenu}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+        {footer && (
+          <Link href={footer.href} className={styles.navDropdownFooter} onClick={closeMenu}>
+            {footer.label} →
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+
+  const toItems = (list: HeaderNavItem[]) =>
+    list.map((item) => ({ href: localeHref(item.path), label: t(item.labelKey, item.fallback) }));
 
   const getNavHref = (hash: string) => {
     return currentLang === "ru" ? `/#${hash}` : `/${currentLang}/#${hash}`;
@@ -205,27 +243,34 @@ export default function Header() {
           >
             {t("header.home", "Главная")}
           </Link>
-          <Link
-            href={getNavHref("products")}
-            className={styles.navItem}
-            onClick={(e) => handleNavClick(e, getNavHref("products"))}
-          >
-            {t("header.products", "Для бизнеса")}
-          </Link>
-          <Link
-            href={getNavHref("cases")}
-            className={styles.navItem}
-            onClick={(e) => handleNavClick(e, getNavHref("cases"))}
-          >
-            {t("header.cases", "Портфолио")}
-          </Link>
-          <Link
-            href={getNavHref("partners")}
-            className={`${styles.navItem} ${styles.navSecondary}`}
-            onClick={(e) => handleNavClick(e, getNavHref("partners"))}
-          >
-            {t("header.partners", "Наши партнёры")}
-          </Link>
+          {renderDropdown(
+            t("header.products", "Для бизнеса"),
+            localeHref("products"),
+            toItems(productsNav),
+            { href: localeHref("products"), label: t("products.allProducts", "Все продукты") },
+          )}
+          {renderDropdown(
+            t("header.cases", "Портфолио"),
+            localeHref("cases"),
+            toItems(portfolioNav),
+            { href: localeHref("cases"), label: t("cases.all_projects", "Все проекты") },
+          )}
+          {renderDropdown(
+            t("header.partners", "Наши партнёры"),
+            getNavHref("partners"),
+            toItems(partnersNav),
+            { href: getNavHref("partners"), label: t("header.allPartners", "Все партнёры") },
+            { wide: true, secondary: true },
+          )}
+          {renderDropdown(
+            t("header.services", "Услуги"),
+            localeHref("services"),
+            servicesNav.map((service) => ({
+              href: localeHref(`services/${service.slug}`),
+              label: service.name[currentLang as "ru" | "en" | "tj"],
+            })),
+            { href: localeHref("services"), label: t("services.allServices", "Все услуги") },
+          )}
           <Link
             href={getNavHref("process")}
             className={styles.navItem}
@@ -233,27 +278,6 @@ export default function Header() {
           >
             {t("header.process", "Процесс разработки")}
           </Link>
-          <div className={styles.navDropdown}>
-            <Link
-              href={currentLang === "ru" ? "/services" : `/${currentLang}/services`}
-              className={styles.navItem}
-              onClick={closeMenu}
-            >
-              {t("header.services", "Услуги")}
-            </Link>
-            <div className={styles.navDropdownMenu}>
-              {servicesNav.map((service) => (
-                <Link
-                  key={service.slug}
-                  href={currentLang === "ru" ? `/services/${service.slug}` : `/${currentLang}/services/${service.slug}`}
-                  className={styles.navDropdownItem}
-                  onClick={closeMenu}
-                >
-                  {service.name[currentLang as "ru" | "en" | "tj"]}
-                </Link>
-              ))}
-            </div>
-          </div>
           <Link
             href={getNavHref("pricing")}
             className={styles.navItem}

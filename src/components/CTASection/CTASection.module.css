@@ -5,7 +5,16 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 26px;
-  background: url("/images/login-home-bg.webp") lightgray 50% / cover no-repeat;
+  /* The photo is navy; recolour it to the brand green (hue/saturation from
+     the green layer, light and detail from the photo) and darken the text side. */
+  background:
+    linear-gradient(90deg, rgba(0, 6, 7, 0.94) 0%, rgba(0, 6, 7, 0.78) 42%, rgba(0, 6, 7, 0.25) 100%),
+    radial-gradient(ellipse at 85% 20%, rgba(61, 220, 132, 0.28), transparent 55%),
+    linear-gradient(#0a7a4f, #0a7a4f),
+    url("/images/login-home-bg.webp") 50% / cover no-repeat #000607;
+  background-blend-mode: normal, normal, color, normal;
+  border-top: 1px solid rgba(61, 220, 132, 0.25);
+  border-bottom: 1px solid rgba(61, 220, 132, 0.25);
   width: 100%;
 
   box-sizing: border-box;

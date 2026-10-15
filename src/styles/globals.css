@@ -294,3 +294,58 @@ body {
     }
   }
 }
+
+/* ==========================================================================
+   Home page rhythm: equal vertical spacing + a hairline divider between
+   content sections. Skips the trust banner (has its own borders), the block
+   right after it, and the photo CTA.
+   ========================================================================== */
+.main-global > section[id]:not(#contact) {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.main-global > section[id]:not(#contact):not(#news)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: min(1380px, calc(100% - 60px));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--accent-rgb), 0.35) 25%,
+    rgba(var(--accent-rgb), 0.35) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Small accent mark in the middle of the line */
+.main-global > section[id]:not(#contact):not(#news)::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  translate: -50% 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.7);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .main-global > section[id]:not(#contact) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .main-global > section[id]:not(#contact):not(#news)::before {
+    width: calc(100% - 30px);
+  }
+}

@@ -235,7 +235,7 @@ export default async function ProductsSection({
                 "Внутренняя CRM-система для провайдера кабельного телевидения, автоматизирующая управление абонентами, контроллерами, кассовыми операциями и отчетностью.",
               )}
               tags={getTvcrmTags()}
-              href="/#cases"
+              href={lang === "ru" ? "/cases/sinamoktv" : `/${lang}/cases/sinamoktv`}
             />
           </StaggerItem>
         </StaggerContainer>

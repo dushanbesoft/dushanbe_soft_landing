@@ -634,3 +634,194 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+/* ==========================================================================
+   Reels (design refresh): vertical 9:16 cards, hover preview, clean titles
+   ========================================================================== */
+.reelStrip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.reelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.reel {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  cursor: pointer;
+  text-align: left;
+  isolation: isolate;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.reel:hover,
+.reel:focus-visible {
+  transform: translateY(-6px);
+  border-color: rgba(var(--accent-rgb), 0.6);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(var(--accent-rgb), 0.25);
+}
+
+.reelImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.reel:hover .reelImage {
+  transform: scale(1.05);
+}
+
+.reelVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.reelVideo[data-playing="1"] {
+  opacity: 1;
+}
+
+.reelShade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 6, 7, 0.35) 0%, transparent 22%, transparent 42%, rgba(0, 6, 7, 0.88) 68%, rgba(0, 6, 7, 0.97) 100%);
+  pointer-events: none;
+}
+
+.reelTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 6, 7, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.reelPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  translate: -50% -50%;
+  background: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.reelPlay svg {
+  margin-left: 3px;
+}
+
+.reel:hover .reelPlay {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.reelInfo {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reelTitle {
+  color: #ffffff;
+  font-family: var(--font-tektur), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reelDuration {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--accent-rgb), 0.9);
+  color: #000607;
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.lightboxTitle {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-family: var(--font-tektur), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Tablets and phones: swipeable strip */
+@media (max-width: 1100px) {
+  .reelStrip {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 15px;
+    scrollbar-width: none;
+    margin: 0 -15px;
+    padding: 4px 15px 12px;
+  }
+
+  .reelStrip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reelStrip > .reel {
+    flex: 0 0 210px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 540px) {
+  .reelGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .reelTitle {
+    font-size: 14px;
+  }
+}

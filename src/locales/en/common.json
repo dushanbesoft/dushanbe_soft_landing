@@ -13,7 +13,8 @@
     "pricing": "Pricing",
     "careers": "Careers",
     "awards": "Awards",
-    "proposal": "Get Commercial Proposal"
+    "proposal": "Get Commercial Proposal",
+    "allPartners": "All partners"
   },
   "hero": {
     "seoTitle": "Dushanbe Soft — software, website and mobile app development company in Dushanbe, Tajikistan",
@@ -362,7 +363,7 @@
     },
     "navo": {
       "title": "Navo - Radioportal",
-      "description": "OTT streaming platform for Somon TV - one of the largest television networks in Tajikistan. The platform provides live broadcasting, VoD archive, and multiscreen viewing capabilities."
+      "description": "Official website of «Navo» 96.5 FM radio (navo.tj): programs and rubrics, podcasts, music selections, photo and video galleries, news feed and studio contacts."
     },
     "somon-tv": {
       "title": "Somon TV",
@@ -857,6 +858,12 @@
         "date": "09.07.2026",
         "title": "Dushanbe Soft awarded a contract under a World Bank-financed project",
         "desc": "Private Enterprise \"Dushanbe Soft\" has been awarded a contract to develop an institution's website under the World Bank-financed Tajikistan Digital Foundations Project (P506611)."
+      },
+      "10": {
+        "tag": "Media & OTT",
+        "date": "2024",
+        "title": "«Navo» 96.5 FM radio website — navo.tj",
+        "desc": "Dushanbe Soft built the website of «Navo» 96.5 FM radio: programs and rubrics, podcasts, music selections, photo and video galleries and a news feed."
       }
     },
     "filterAll": "All",

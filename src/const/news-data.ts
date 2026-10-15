@@ -374,10 +374,109 @@ const newsItems: NewsItem[] = [
       },
     },
   },
+  {
+    id: "10",
+    slug: "navo-radio",
+    image: "/images/projects/navo.webp",
+    date: "2024",
+    category: "media",
+    readTime: "2 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.10.tag",
+    defaultTag: "Медиа & OTT",
+    titleKey: "news.items.10.title",
+    defaultTitle: "Сайт радио «Navo» 96.5 FM — navo.tj",
+    descKey: "news.items.10.desc",
+    defaultDesc: "Dushanbe Soft разработала сайт радиостанции «Navo» 96.5 FM: программы и рубрики, подкасты, музыкальные подборки, фото- и видеогалерея и лента новостей.",
+    fullContent: {
+      lead: "Dushanbe Soft разработала официальный сайт радиостанции «Navo» 96.5 FM — navo.tj. Сайт объединяет эфирные программы, подкасты, музыку и новости радио в одном удобном портале.",
+      caseSlug: "navo",
+      techStack: ["Laravel", "React", "PostgreSQL", "Nginx"],
+      sections: [
+        {
+          heading: "Что есть на сайте",
+          text: "Структура портала повторяет жизнь радиостанции: слушатель быстро находит любимую программу, ведущего или подкаст.",
+          bulletPoints: [
+            "Программы и рубрики радио с описанием и ведущими",
+            "Подкасты",
+            "Музыка: Топ-20, таджикская и зарубежная подборки",
+            "Медиа: фото- и видеогалерея",
+            "Лента новостей и акции",
+            "Контакты студии и прямой телефон эфира",
+          ],
+        },
+        {
+          heading: "Удобство для слушателей",
+          text: "Сайт адаптирован под смартфоны и компьютеры, а ссылки на социальные сети радио — Telegram, Instagram, YouTube, TikTok и другие — собраны в одном месте.",
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "Dushanbe Soft built the official website of «Navo» 96.5 FM radio — navo.tj. The site brings the station's programs, podcasts, music and news together in one convenient portal.",
+        caseSlug: "navo",
+        techStack: ["Laravel", "React", "PostgreSQL", "Nginx"],
+        sections: [
+          {
+            heading: "What the site offers",
+            text: "The portal mirrors the life of the station, so listeners quickly find their favourite show, host or podcast.",
+            bulletPoints: [
+              "Radio programs and rubrics with descriptions and hosts",
+              "Podcasts",
+              "Music: Top-20, Tajik and international selections",
+              "Media: photo and video galleries",
+              "News feed and promotions",
+              "Studio contacts and the live on-air phone line",
+            ],
+          },
+          {
+            heading: "Built for listeners",
+            text: "The site works on phones and desktops, and links to the station's social channels — Telegram, Instagram, YouTube, TikTok and more — are gathered in one place.",
+          },
+        ],
+      },
+      tj: {
+        lead: "Dushanbe Soft сомонаи расмии радиои «Navo» 96.5 FM — navo.tj-ро таҳия кард. Сомона барномаҳо, подкастҳо, мусиқӣ ва хабарҳои радиоро дар як портали қулай муттаҳид мекунад.",
+        caseSlug: "navo",
+        techStack: ["Laravel", "React", "PostgreSQL", "Nginx"],
+        sections: [
+          {
+            heading: "Дар сомона чӣ ҳаст",
+            text: "Сохтори портал ҳаёти радиоро инъикос мекунад: шунаванда барнома, баранда ё подкасти дӯстдоштаашро зуд меёбад.",
+            bulletPoints: [
+              "Барномаҳо ва рубрикаҳои радио бо тавсиф ва барандагон",
+              "Подкастҳо",
+              "Мусиқӣ: Топ-20, интихоби тоҷикӣ ва хориҷӣ",
+              "Медиа: галереяи акс ва видео",
+              "Лентаи хабарҳо ва аксияҳо",
+              "Тамосҳои студия ва телефони мустақими эфир",
+            ],
+          },
+          {
+            heading: "Қулай барои шунавандагон",
+            text: "Сомона барои смартфонҳо ва компютерҳо мутобиқ карда шудааст, ва истинодҳо ба шабакаҳои иҷтимоии радио — Telegram, Instagram, YouTube, TikTok ва дигарон — дар як ҷо ҷамъ оварда шудаанд.",
+          },
+        ],
+      },
+    },
+  },
 ];
 
-// Newest first everywhere (home page shows the first four).
+// Pinned news go first in this exact order; the rest follow newest first.
+// The home page shows the first four.
+const pinnedOrder = [
+  "world-bank-tajikistan-digital-foundations",
+  "mavji-somon",
+  "sohktor",
+  "navo-radio",
+];
+
 export const newsList: NewsItem[] = [...newsItems].sort((a, b) => {
+  const pa = pinnedOrder.indexOf(a.slug);
+  const pb = pinnedOrder.indexOf(b.slug);
+  if (pa !== -1 || pb !== -1) {
+    return (pa === -1 ? Infinity : pa) - (pb === -1 ? Infinity : pb);
+  }
   const iso = (d: string) => d.split(".").reverse().join("-");
   return iso(b.date).localeCompare(iso(a.date));
 });

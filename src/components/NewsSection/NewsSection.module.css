@@ -130,7 +130,8 @@
 
 .imageContainer {
   display: flex;
-  height: 201px;
+  /* Banners are ~2.4:1 — match it so nothing gets cropped */
+  aspect-ratio: 12 / 5;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -323,9 +324,6 @@
     gap: 18px;
   }
 
-  .imageContainer {
-    height: 190px;
-  }
 }
 
 .filterRow {
