@@ -71,7 +71,7 @@ function iconFor(slug) {
       "web-development": "web.svg",
       "mobile-app-development": "mobile.svg",
       "crm-erp-development": "network.svg",
-      "sms-gateway": "api.svg",
+      "sms-gateway": "sms.svg",
       "ui-ux-design": "disign.svg",
       "api-integration": "api.svg",
       cybersecurity: "security.svg",

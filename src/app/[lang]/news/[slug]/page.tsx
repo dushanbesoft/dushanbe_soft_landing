@@ -125,9 +125,9 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
         <div className={styles.container}>
           <div className={styles.navRow}>
-            <nav className={styles.breadcrumbs} aria-label="Хлебные крошки">
+            <nav className={styles.breadcrumbs} aria-label={t("ui.breadcrumbs", "Хлебные крошки")}>
               <Link href={homeUrl} className={styles.breadcrumbLink}>
-                Главная
+                {t("ui.home", "Главная")}
               </Link>
               <span className={styles.breadcrumbSeparator}>/</span>
               <Link href={newsUrl} className={styles.breadcrumbLink}>
@@ -202,7 +202,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
               {content.techStack && content.techStack.length > 0 && (
                 <div className={styles.techBox}>
-                  <h3 className={styles.techTitle}>Использованный стек технологий</h3>
+                  <h3 className={styles.techTitle}>{t("ui.techStack", "Использованный стек технологий")}</h3>
                   <div className={styles.techBadges}>
                     {content.techStack.map((tech, tIdx) => (
                       <span key={tIdx} className={styles.techBadge}>
@@ -215,7 +215,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
               {caseUrl && (
                 <Link href={caseUrl} className={styles.caseLinkBtn}>
-                  <span>Посмотреть кейс проекта в портфолио</span>
+                  <span>{t("ui.viewCase", "Посмотреть кейс проекта в портфолио")}</span>
                   <span>→</span>
                 </Link>
               )}
@@ -223,18 +223,18 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
             <aside className={styles.sidebarCol}>
               <div className={styles.ctaCard}>
-                <h3 className={styles.ctaTitle}>Интересует подобное решение?</h3>
+                <h3 className={styles.ctaTitle}>{t("ui.similarTitle", "Интересует подобное решение?")}</h3>
                 <p className={styles.ctaText}>
-                  Команда Dushanbe Soft проектирует и разрабатывает надежные цифровые платформы, ERP, SaaS и мобильные приложения под ключ.
+                  {t("ui.similarText", "Команда Dushanbe Soft проектирует и разрабатывает надежные цифровые платформы, ERP, SaaS и мобильные приложения под ключ.")}
                 </p>
                 <Link href={contactUrl} className={styles.ctaBtn}>
-                  Обсудить проект
+                  {t("ui.discussProject", "Обсудить проект")}
                 </Link>
               </div>
 
               {relatedNews.length > 0 && (
                 <div className={styles.relatedBlock}>
-                  <h3 className={styles.relatedHeading}>Другие новости</h3>
+                  <h3 className={styles.relatedHeading}>{t("ui.otherNews", "Другие новости")}</h3>
                   <div className={styles.relatedList}>
                     {relatedNews.map((rel) => {
                       const relTitle = t(rel.titleKey, rel.defaultTitle);

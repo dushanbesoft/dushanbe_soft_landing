@@ -19,7 +19,7 @@ const HeroBackgroundAnimation = dynamic(
 
 export default function HomeHero() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-theme="dark">
       <div>
         <HeroBackgroundAnimation />
       </div>

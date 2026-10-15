@@ -9,7 +9,7 @@ const i18nNamespaces = ["common"];
 export default async function CTASection({ lang = "ru" }: { lang?: string }) {
   const { t } = await initTranslations(lang, i18nNamespaces);
   return (
-    <section className={styles.section}>
+    <section id="contact" className={styles.section} data-theme="dark">
       <FadeIn direction="up">
         <main>
           <div className={styles.content}>

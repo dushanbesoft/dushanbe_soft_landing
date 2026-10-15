@@ -8,7 +8,7 @@
   align-items: center;
   gap: 30px;
   align-self: stretch;
-  background: #000607;
+  background: var(--bg);
   position: relative;
 }
 
@@ -41,8 +41,8 @@
 }
 
 .subtitle {
-  color: #d9d9d9;
-  font-family: var(--font-tektur);
+  color: var(--text-secondary);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
@@ -51,7 +51,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,7 +61,7 @@
 /* Fallback */
 @supports not (-webkit-background-clip: text) {
   .mainTitle {
-    color: #3ddc84;
+    color: var(--accent-text);
   }
 }
 

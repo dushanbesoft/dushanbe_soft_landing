@@ -45,6 +45,7 @@ export default async function Page({
 
         <HomeHero />
         <TrustBanner lang={lang} />
+        <NewsSection lang={lang} />
         <CasesSection lang={lang} />
         <ProductsSection lang={lang} />
         <PartnersSection />
@@ -56,7 +57,6 @@ export default async function Page({
         <JobsSection lang={lang} />
         <AwardsSection lang={lang} />
         <TeamSection />
-        <NewsSection lang={lang} />
         <MediaSection lang={lang} />
         <CTASection lang={lang} />
         

@@ -6,6 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 import { servicesNav } from "@/const/services-nav";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const DownArrow = () => (
   <svg
@@ -17,7 +18,7 @@ const DownArrow = () => (
   >
     <path
       d="M8.93514 0.41361L4.73921 4.903C4.71102 4.93323 4.67504 4.95766 4.634 4.97447C4.59297 4.99127 4.54794 5 4.50232 5C4.45669 5 4.41166 4.99127 4.37063 4.97447C4.32959 4.95766 4.29362 4.93323 4.26542 4.903L0.0660816 0.41361C-0.0907119 0.247017 0.0490387 1.31863e-08 0.301272 1.31863e-08L8.69654 1.31863e-08C8.75347 -1.53927e-05 8.80926 0.0134689 8.85752 0.0389111C8.90579 0.0643533 8.94458 0.100727 8.96947 0.143873C8.99436 0.187019 9.00434 0.235195 8.99827 0.282895C8.9922 0.330595 8.97032 0.375893 8.93514 0.41361Z"
-      fill="white"
+      fill="currentColor"
     />
   </svg>
 );
@@ -28,7 +29,7 @@ const HamburgerIcon = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="white"
+    stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -45,7 +46,7 @@ const CloseIcon = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="white"
+    stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -166,19 +167,27 @@ export default function Header() {
       <main>
         <Link href={logoHref} onClick={closeMenu}>
           <img
-            className={styles.logo}
+            className={`${styles.logo} ${styles.logoOnDark}`}
             src="/icons/logo-header.webp"
             alt="Dushanbe Soft"
             width={172}
             height={38}
             fetchPriority="high"
           />
+          <img
+            className={`${styles.logo} ${styles.logoOnLight}`}
+            src="/icons/logo-header-dark.webp"
+            alt=""
+            aria-hidden="true"
+            width={172}
+            height={38}
+          />
         </Link>
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
           <Link
             href={homeHref}
-            className={styles.navItem}
+            className={`${styles.navItem} ${styles.navHomeItem}`}
             onClick={(e) => {
               const isHomePage = currentLang === "ru"
                 ? (pathname === "/" || pathname === "")
@@ -212,7 +221,7 @@ export default function Header() {
           </Link>
           <Link
             href={getNavHref("partners")}
-            className={styles.navItem}
+            className={`${styles.navItem} ${styles.navSecondary}`}
             onClick={(e) => handleNavClick(e, getNavHref("partners"))}
           >
             {t("header.partners", "Наши партнёры")}
@@ -261,7 +270,7 @@ export default function Header() {
           </Link>
           <Link
             href={getNavHref("awards")}
-            className={styles.navItem}
+            className={`${styles.navItem} ${styles.navSecondary}`}
             onClick={(e) => handleNavClick(e, getNavHref("awards"))}
           >
             {t("header.awards", "Награды")}
@@ -269,6 +278,7 @@ export default function Header() {
         </nav>
 
         <div className={styles.controlsWrapper}>
+          <ThemeToggle />
           <div className={styles.langSwitcherContainer}>
             <div
               className={styles.langSwitcher}

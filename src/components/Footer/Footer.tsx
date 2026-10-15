@@ -8,7 +8,7 @@ const i18nNamespaces = ["common"];
 export default async function Footer({ lang = "ru" }: { lang?: string }) {
   const { t } = await initTranslations(lang, i18nNamespaces);
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-theme="dark">
       <div className={styles.top}>
         <main>
           <div className={styles.brandCol}>

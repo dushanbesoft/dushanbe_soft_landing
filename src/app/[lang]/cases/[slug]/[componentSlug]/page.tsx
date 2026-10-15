@@ -203,7 +203,7 @@ export default async function ComponentDetailsPage({
         <div className={styles.topNav}>
           <Link href={lang === "ru" ? `/cases/${slug}` : `/${lang}/cases/${slug}`} className={styles.backBtn}>
             <ArrowLeftIcon />
-            <span>Вернуться к {projectTitle}</span>
+            <span>{t("ui.backTo", "Вернуться к")} {projectTitle}</span>
           </Link>
         </div>
 

@@ -12,8 +12,8 @@
 
 .modal {
   position: relative;
-  background: #001010;
-  border-radius: 11px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
   max-width: 1199px;
   width: 100%;
   max-height: 90vh;
@@ -28,8 +28,8 @@
   width: 6px;
 }
 .modal::-webkit-scrollbar-thumb {
-  background: #3DDC84;
-  border-radius: 10px;
+  background: var(--accent);
+  border-radius: var(--radius-md);
 }
 
 .closeBtn {
@@ -38,7 +38,7 @@
   right: 20px;
   background: none;
   border: none;
-  color: #3DDC84;
+  color: var(--accent-text);
   cursor: pointer;
   z-index: 10;
   transition: opacity 0.3s ease;
@@ -68,10 +68,10 @@
 }
 
 .label {
-  font-family: 'Tektur', sans-serif;
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
-  background: #3DDC84;
+  background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -80,11 +80,11 @@
   font-family: 'Tektur', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   margin: 10px 0;
 }
 .title .highlight {
-  background: #3DDC84;
+  background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -92,7 +92,7 @@
 .desc {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
-  color: #9EAABB;
+  color: var(--text-muted);
   max-width: 343px;
   line-height: 1.4;
 }
@@ -116,7 +116,7 @@
 .featureIcon {
   width: 64px;
   height: 64px;
-  border-radius: 11px;
+  border-radius: var(--radius-md);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,13 +132,13 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #9EAABB;
+  color: var(--text-muted);
 }
 .featureText strong {
-  font-family: 'Tektur', sans-serif;
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: var(--text);
 }
 
 .messengersBlock {
@@ -150,7 +150,7 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   text-align: center;
 }
 
@@ -159,9 +159,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 30px;
-  border-radius: 22px;
-  border: 1px solid #3DDC84;
-  background: rgba(1, 101, 88, 0.11);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--accent);
+  background: var(--card-tint);
   box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
 }
 
@@ -186,7 +186,7 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #9EAABB;
+  color: var(--text-muted);
 }
 
 .rightCol {
@@ -195,9 +195,9 @@
   flex-direction: column;
   padding: 30px;
   gap: 30px;
-  border-radius: 22px;
-  border: 1px solid #3DDC84;
-  background: rgba(1, 101, 88, 0.11);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--accent);
+  background: var(--card-tint);
   box-shadow: 0 0 33px 0 rgba(54, 151, 170, 0.22);
 }
 
@@ -210,7 +210,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(60deg, rgba(94, 181, 240, 0.11) 13.4%, rgba(2, 112, 79, 0.11) 86.6%);
+  background: linear-gradient(60deg, rgba(var(--accent-rgb), 0.11) 13.4%, var(--card-tint) 86.6%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,13 +224,13 @@
   font-family: 'Tektur', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   margin: 0;
 }
 .formTitleGroup p {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
-  color: #9EAABB;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -256,7 +256,7 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   text-align: center;
 }
 
@@ -265,10 +265,10 @@
 .field textarea {
   width: 100%;
   padding: 15px 20px;
-  border-radius: 11px;
-  border: 1px solid #3DDC84;
-  background: rgba(1, 101, 88, 0.11);
-  color: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent);
+  background: var(--card-tint);
+  color: var(--text);
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
   outline: none;
@@ -277,12 +277,12 @@
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  border-color: #5EB5F0;
+  border-color: var(--accent);
 }
 .field input::placeholder,
 .field select::placeholder,
 .field textarea::placeholder {
-  color: #64748B;
+  color: var(--text-muted);
 }
 
 .field select {
@@ -294,8 +294,8 @@
   padding-right: 40px;
 }
 .field select option {
-  background: #001010;
-  color: #fff;
+  background: var(--bg-elevated);
+  color: var(--text);
 }
 
 .field textarea {
@@ -305,15 +305,15 @@
 
 .submitBtn {
   height: 63px;
-  border-radius: 11px;
-  background: #3DDC84;
+  border-radius: var(--radius-md);
+  background: var(--accent);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--text);
   font-family: 'Tektur', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -359,7 +359,7 @@
     gap: 25px;
   }
   .title {
-    font-size: 22px;
+    font-size: 24px;
     margin: 5px 0;
   }
   .desc {
@@ -450,7 +450,7 @@
   .closeBtn {
     top: 15px;
     right: 15px;
-    background: rgba(61, 220, 132, 0.1);
+    background: rgba(var(--accent-rgb), 0.1);
     border-radius: 50%;
     width: 36px;
     height: 36px;

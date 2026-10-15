@@ -18,6 +18,41 @@ import {
   localeUrl,
 } from "@/utils/seo";
 
+type DescBlock =
+  | { type: "heading"; text: string }
+  | { type: "text"; text: string }
+  | { type: "list"; items: string[] };
+
+/**
+ * Turns the plain-text job description into structured blocks:
+ * a line followed by "•" / "1." items becomes a heading with a list.
+ */
+function parseJobDescription(raw: string): DescBlock[] {
+  const blocks: DescBlock[] = [];
+  const isItem = (line: string) => /^(•|-|\d+\.)\s*/.test(line);
+  for (const chunk of raw.split(/\n\s*\n/)) {
+    const lines = chunk.split("\n").map((l) => l.trim()).filter(Boolean);
+    let i = 0;
+    while (i < lines.length) {
+      if (isItem(lines[i])) {
+        const items: string[] = [];
+        while (i < lines.length && isItem(lines[i])) {
+          items.push(lines[i].replace(/^(•|-|\d+\.)\s*/, ""));
+          i++;
+        }
+        blocks.push({ type: "list", items });
+      } else if (i + 1 < lines.length && isItem(lines[i + 1])) {
+        blocks.push({ type: "heading", text: lines[i].replace(/:$/, "") });
+        i++;
+      } else {
+        blocks.push({ type: "text", text: lines[i] });
+        i++;
+      }
+    }
+  }
+  return blocks;
+}
+
 export async function generateStaticParams() {
   const languages = ["ru", "tj", "en"];
   const params: { lang: string; slug: string }[] = [];
@@ -107,11 +142,13 @@ export default async function JobDetailsPage({
     <TranslationsProvider namespaces={["common"]} locale={lang} resources={resources}>
       <main className={styles.main}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
-        <Header />
-        
+        <div className="header-global">
+          <Header />
+        </div>
+
         <div className={styles.container}>
           <Link href={lang === "ru" ? "/#careers" : `/${lang}/#careers`} className={styles.backBtn}>
-            ← К списку вакансий
+            ← {t("jobs.backToList", "К списку вакансий")}
           </Link>
 
           <div className={styles.content}>
@@ -130,33 +167,47 @@ export default async function JobDetailsPage({
                       </linearGradient>
                     </defs>
                   </svg>
-                  <span>{job.location}</span>
+                  <span>{t("jobs.location.dushanbe", job.location)}</span>
                 </div>
                 <div className={styles.metaItem}>
-                  <span>Формат: {job.typeLabel}</span>
+                  <span>{t("jobs.formatLabel", "Формат")}: {t(`jobs.${job.typeValue}`, job.typeLabel)}</span>
                 </div>
                 {job.experienceValue && (
                   <div className={styles.metaItem}>
-                    <span>Опыт: {job.experienceValue === 'junior' ? 'Без опыта' : job.experienceValue === 'middle' ? '1-3 года' : '3+ года'}</span>
+                    <span>{t("jobs.experienceLabel", "Опыт")}: {t(`jobs.${job.experienceValue}`)}</span>
                   </div>
                 )}
               </div>
             </div>
 
             <div className={styles.body}>
-              <h2 className={styles.sectionTitle}>О вакансии</h2>
-              <div className={styles.description}>{job.fullDescription || job.description}</div>
+              <h2 className={styles.sectionTitle}>{t("jobs.about", "О вакансии")}</h2>
+              <div className={styles.description}>
+                {parseJobDescription(job.fullDescription || job.description).map((block, i) =>
+                  block.type === "heading" ? (
+                    <h3 key={i} className={styles.descHeading}>{block.text}</h3>
+                  ) : block.type === "list" ? (
+                    <ul key={i} className={styles.descList}>
+                      {block.items.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p key={i} className={styles.descText}>{block.text}</p>
+                  ),
+                )}
+              </div>
               
               <div className={styles.ctaBox}>
-                <h3 className={styles.ctaTitle}>Заинтересовала вакансия?</h3>
-                <p className={styles.ctaDesc}>Отправьте нам своё резюме через Telegram, и мы свяжемся с вами в ближайшее время!</p>
+                <h3 className={styles.ctaTitle}>{t("jobs.detailCtaTitle", "Заинтересовала вакансия?")}</h3>
+                <p className={styles.ctaDesc}>{t("jobs.detailCtaDesc", "Отправьте нам своё резюме через Telegram, и мы свяжемся с вами в ближайшее время!")}</p>
                 <a 
                   href="https://t.me/m_yakub" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={styles.ctaBtn}
                 >
-                  Отправить резюме
+                  {t("jobs.send_cv", "Отправить резюме")}
                 </a>
               </div>
             </div>

@@ -1,13 +1,13 @@
 .banner {
-  background: #000607;
-  border-top: 1px solid rgba(61, 220, 132, 0.2);
-  border-bottom: 1px solid rgba(61, 220, 132, 0.2);
+  background: var(--bg);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
 }
 
 .inner {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 18px 20px;
+  padding: 18px 30px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -17,11 +17,11 @@
 .badge {
   flex-shrink: 0;
   padding: 4px 12px;
-  border-radius: 20px;
-  background: rgba(61, 220, 132, 0.12);
-  border: 1px solid rgba(61, 220, 132, 0.35);
-  color: #3ddc84;
-  font-family: var(--font-tektur), sans-serif;
+  border-radius: var(--radius-xl);
+  background: rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -31,7 +31,7 @@
 .text {
   flex: 1 1 360px;
   margin: 0;
-  color: #d9e2ec;
+  color: var(--text-secondary);
   font-family: var(--font-nunito-sans), sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -39,8 +39,8 @@
 
 .link {
   flex-shrink: 0;
-  color: #3ddc84;
-  font-family: var(--font-tektur), sans-serif;
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -49,4 +49,10 @@
 .link:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 18px 15px;
+  }
 }

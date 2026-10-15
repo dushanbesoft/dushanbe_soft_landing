@@ -6,7 +6,7 @@
   align-items: center;
   gap: 30px;
   align-self: stretch;
-  background: #000607;
+  background: var(--bg);
   position: relative;
 }
 
@@ -42,8 +42,8 @@
 }
 
 .subtitle {
-  color: #d9d9d9;
-  font-family: var(--font-tektur);
+  color: var(--text-secondary);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
@@ -52,7 +52,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,7 +61,7 @@
 
 @supports not (-webkit-background-clip: text) {
   .mainTitle {
-    color: #3ddc84;
+    color: var(--accent-text);
   }
 }
 
@@ -83,11 +83,10 @@
   padding: 0;
   align-items: center;
   justify-content: center;
-  border-radius: 777px;
+  border-radius: var(--radius-pill);
   border: 1px solid transparent;
-  background: #fff;
-  box-shadow:
-    0 0 0 0 transparent inset,
+  background: var(--bg-alt);
+  box-shadow: 0 0 0 0 transparent inset,
     0 0 0 0 transparent;
   overflow: hidden;
   position: relative;
@@ -97,18 +96,16 @@
 .thumbnailWrapper.active {
   width: 176px;
   padding: 0 5px 0 6px;
-  border: 1px solid #3ddc84;
-  background:
-    linear-gradient(to bottom right, #1c837c 0%, #000a1d 50%) bottom right / 50%
+  border: 1px solid var(--accent);
+  background: linear-gradient(to bottom right, var(--accent-deep) 0%, var(--bg-elevated) 50%) bottom right / 50%
       50% no-repeat,
-    linear-gradient(to bottom left, #1c837c 0%, #000a1d 50%) bottom left / 50%
+    linear-gradient(to bottom left, var(--accent-deep) 0%, var(--bg-elevated) 50%) bottom left / 50%
       50% no-repeat,
-    linear-gradient(to top left, #1c837c 0%, #000a1d 50%) top left / 50% 50%
+    linear-gradient(to top left, var(--accent-deep) 0%, var(--bg-elevated) 50%) top left / 50% 50%
       no-repeat,
-    linear-gradient(to top right, #1c837c 0%, #000a1d 50%) top right / 50% 50%
+    linear-gradient(to top right, var(--accent-deep) 0%, var(--bg-elevated) 50%) top right / 50% 50%
       no-repeat;
-  box-shadow:
-    0 0 5px 0 #3ddc84 inset,
+  box-shadow: 0 0 5px 0 #3ddc84 inset,
     0 0 11px 0 #008c71;
 }
 
@@ -144,8 +141,8 @@
   padding: 45px 45px 0 45px;
   justify-content: space-between;
   align-items: flex-start;
-  background: rgba(1, 101, 88, 0.11);
-  /* background-color: #ffffff; */
+  background: var(--card-tint);
+  /* background-color: var(--bg-alt); */
   box-shadow: 0 0 8px 0 #fff;
   position: relative;
   width: calc(100%);
@@ -174,15 +171,15 @@
 }
 
 .personName {
-  color: #ffffff;
-  font-family: var(--font-tektur);
+  color: var(--text);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
   margin: 0;
 }
 
 .personRole {
-  color: #d9d9d9;
+  color: var(--text-secondary);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -190,7 +187,7 @@
 }
 
 .personBio {
-  color: #d9d9d9;
+  color: var(--text-secondary);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -204,9 +201,9 @@
   background: linear-gradient(
     270deg,
     rgba(0, 140, 113, 0) 0.17%,
-    #008c71 15.74%,
-    #3ddc84 50%,
-    #008c71 83.22%,
+    var(--accent-deep) 15.74%,
+    var(--accent) 50%,
+    var(--accent-deep) 83.22%,
     rgba(0, 140, 113, 0) 100%
   );
 }
@@ -228,8 +225,8 @@
 
 .detailLabel {
   width: 200px;
-  color: #ffffff;
-  font-family: var(--font-tektur);
+  color: var(--text);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
   flex-shrink: 0;
@@ -237,7 +234,7 @@
 
 .detailValue {
   flex: 1 0 0;
-  color: #d9d9d9;
+  color: var(--text-secondary);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -257,8 +254,8 @@
   align-items: stretch;
   gap: 10px;
   align-self: stretch;
-  border-radius: 20px;
-  background: rgba(1, 101, 88, 0.11);
+  border-radius: var(--radius-xl);
+  background: var(--card-tint);
   flex-wrap: wrap;
 }
 
@@ -275,7 +272,7 @@
 }
 
 .statItem {
-  border-right: 1px solid #3ddc84;
+  border-right: 1px solid var(--accent);
 }
 
 .statValue {
@@ -283,14 +280,14 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .statLabel {
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-family: var(--font-nunito-sans);
   font-size: 15px;
@@ -341,7 +338,7 @@
   .detailLabel {
     width: 100%;
     font-size: 14px;
-    color: #3ddc84;
+    color: var(--accent-text);
   }
   .detailValue {
     font-size: 14px;
@@ -366,7 +363,7 @@
   }
   .statItem {
     border-right: none;
-    border-bottom: 1px solid #3ddc84;
+    border-bottom: 1px solid var(--accent);
   }
   .statItemLast {
     border-bottom: none;
@@ -382,4 +379,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Unified section eyebrow (design system) */
+.subtitle {
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }

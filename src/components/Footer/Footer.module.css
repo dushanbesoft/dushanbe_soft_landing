@@ -11,7 +11,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 45px;
-  background: #000607;
+  background: var(--bg);
   width: 100%;
   box-sizing: border-box;
 }
@@ -24,7 +24,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 45px;
-  background: #000607;
+  background: var(--bg);
   width: 100%;
   box-sizing: border-box;
 }
@@ -49,7 +49,7 @@
 }
 
 .desc {
-  color: #9eaabb;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -68,18 +68,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(var(--ink-rgb), 0.15);
   width: 28px; /* 28px */
   height: 28px;
-  transition:
-    transform 0.3s,
+  transition: transform 0.3s,
     background 0.3s;
   cursor: pointer;
 }
 
 .socialIcon:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(var(--ink-rgb), 0.25);
 }
 
 .socialIcon svg {
@@ -103,7 +102,7 @@
 }
 
 .colTitle {
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-tektur);
   font-size: 16px;
   font-weight: 700;
@@ -119,7 +118,7 @@
 }
 
 .link {
-  color: #9eaabb;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -128,7 +127,7 @@
 }
 
 .link:hover {
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .contactItem {
@@ -145,7 +144,7 @@
 
 .contactItem span,
 .contactItem a {
-  color: #9eaabb;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -162,13 +161,13 @@
   padding: 15px 15px;
   justify-content: center;
   align-items: flex-start;
-  background: #001010;
+  background: var(--bg-elevated);
   width: 100%;
   box-sizing: border-box;
 }
 
 .copyright {
-  color: #64748b;
+  color: var(--text-muted);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;

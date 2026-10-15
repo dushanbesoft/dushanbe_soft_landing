@@ -20,7 +20,7 @@
     "badge": "IT solutions for business and government",
     "title1": "Technologies that",
     "title2": "drive business forward",
-    "subtitle": "We develop and implement modern IT solutions, automate processes, and increase company efficiency.",
+    "subtitle": "We build and implement modern IT solutions",
     "btnPrimary": "Get consultation",
     "btnSecondary": "View projects",
     "marquee": [
@@ -239,14 +239,14 @@
         "duration": "1-2 weeks"
       },
       {
-        "title": "Launch and support",
-        "description": "Deploy the project on servers and provide technical support.",
-        "duration": "Constantly"
+        "title": "Launch",
+        "description": "We deploy the project to servers, set up monitoring and publish apps to the App Store and Google Play.",
+        "duration": "1 week"
       },
       {
-        "title": "Launch",
-        "description": "Cloud deployment, monitoring setup, team training and smooth release.",
-        "duration": "1 wk"
+        "title": "Support and growth",
+        "description": "We provide technical support after release, keep the product stable and keep improving it with you.",
+        "duration": "Ongoing"
       }
     ]
   },
@@ -703,7 +703,13 @@
       "frontend-react": "Development of user interfaces in React.js",
       "backend-node": "Creating server logic and API on Node.js",
       "ux-ui-designer": "Designing user-friendly and modern interfaces for web and mobile"
-    }
+    },
+    "backToList": "Back to jobs",
+    "formatLabel": "Format",
+    "experienceLabel": "Experience",
+    "about": "About the job",
+    "detailCtaTitle": "Interested in this job?",
+    "detailCtaDesc": "Send us your resume via Telegram and we will get back to you shortly!"
   },
   "modal": {
     "error_send": "Sending error",
@@ -735,7 +741,7 @@
   },
   "awards": {
     "subtitle": "Our awards",
-    "title": "Achievements and periods",
+    "title": "Achievements and awards",
     "viewDoc": "View document",
     "items": {
       "1": {
@@ -875,5 +881,18 @@
     "badge": "World Bank",
     "text": "Dushanbe Soft is a contractor under the World Bank-financed Tajikistan Digital Foundations Project.",
     "more": "Learn more"
+  },
+  "ui": {
+    "home": "Home",
+    "breadcrumbs": "Breadcrumbs",
+    "techStack": "Technology stack",
+    "viewCase": "View the case study in our portfolio",
+    "similarTitle": "Interested in a similar solution?",
+    "similarText": "Dushanbe Soft designs and builds reliable digital platforms, ERP, SaaS and mobile apps end to end.",
+    "discussProject": "Discuss a project",
+    "otherNews": "More news",
+    "backTo": "Back to",
+    "themeLight": "Light theme",
+    "themeDark": "Dark theme"
   }
 }

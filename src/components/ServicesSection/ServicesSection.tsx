@@ -173,7 +173,7 @@ export default async function ServicesSection({
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link
             href={localePath(lang, "services")}
-            style={{ color: "#02704f", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: 4 }}
+            style={{ color: "var(--accent-text)", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: 4 }}
           >
             {t("services.allServices", "Все услуги")} →
           </Link>

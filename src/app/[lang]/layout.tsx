@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export const viewport: Viewport = {
   themeColor: "#000607",
-  colorScheme: "dark",
+  colorScheme: "dark light",
 };
 
 export function generateStaticParams() {
@@ -165,8 +165,14 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={inLanguage} dir={dir(lang)}>
+    <html lang={inLanguage} dir={dir(lang)} data-theme="dark" suppressHydrationWarning>
       <head>
+        {/* Apply the saved theme before first paint to avoid a flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("ds-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }}

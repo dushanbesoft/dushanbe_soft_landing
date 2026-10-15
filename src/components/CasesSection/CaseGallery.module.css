@@ -42,20 +42,20 @@
 
 .lightboxImage {
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .lightboxCaption {
   color: #fff;
   font-family: var(--font-tektur), sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
   margin: 0;
 }
 
 .counter {
-  color: #3DDC84;
-  font-family: var(--font-tektur), sans-serif;
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 14px;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .navBtn:hover:not(:disabled) {
-  background: rgba(61, 220, 132, 0.8);
+  background: rgba(var(--accent-rgb), 0.8);
 }
 
 .navBtn:disabled {
@@ -113,7 +113,7 @@
 }
 
 .closeBtn:hover {
-  background: rgba(61, 220, 132, 0.8);
+  background: rgba(var(--accent-rgb), 0.8);
 }
 
 @media (max-width: 600px) {

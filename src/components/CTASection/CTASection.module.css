@@ -37,8 +37,8 @@
 }
 
 .subtitle {
-  color: #d9d9d9;
-  font-family: var(--font-tektur);
+  color: var(--text-secondary);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 15px;
   font-weight: 500;
   margin: 0;
@@ -48,7 +48,7 @@
   font-family: var(--font-tektur);
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,7 +56,7 @@
 }
 
 .desc {
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-nunito-sans);
   font-size: 15px;
   font-weight: 400;
@@ -86,7 +86,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 11px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: transform 0.3s ease;
   text-decoration: none;
@@ -105,12 +105,12 @@
 }
 
 .primaryBtn {
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
+  background: var(--gradient-accent);
   border: none;
 }
 
 .primaryBtn span {
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-family: var(--font-tektur);
   font-size: 18px;
@@ -123,12 +123,12 @@
 }
 
 .secondaryBtn {
-  border: 1px solid rgba(61, 220, 132, 0.8); /* fallback border since gradient on border is hard without wrapper */
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.8); /* fallback border since gradient on border is hard without wrapper */
+  background: rgba(var(--ink-rgb), 0.06);
 }
 
 .secondaryBtn span {
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-family: var(--font-tektur);
   font-size: 18px;
@@ -180,4 +180,14 @@
   .secondaryBtn span {
     font-size: 16px;
   }
+}
+
+/* Unified section eyebrow (design system) */
+.subtitle {
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }

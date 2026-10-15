@@ -77,6 +77,25 @@ export default function CasesGrid({
     traveltours: "Корпоративные",
   };
 
+  // Category keys stay in Russian (they match slugCategoryMap); labels are localized.
+  const categoryLabels: Record<string, Record<string, string>> = {
+    en: {
+      "Все": "All",
+      "Государственные": "Government",
+      "Корпоративные": "Corporate",
+      "Медиа": "Media",
+      "Финтех": "Fintech",
+    },
+    tj: {
+      "Все": "Ҳама",
+      "Государственные": "Давлатӣ",
+      "Корпоративные": "Корпоративӣ",
+      "Медиа": "Медиа",
+      "Финтех": "Финтех",
+    },
+  };
+  const categoryLabel = (cat: string) => categoryLabels[lang]?.[cat] ?? cat;
+
   const filteredCases =
     activeCategory === "Все"
       ? casesData
@@ -103,7 +122,7 @@ export default function CasesGrid({
                 setShowAll(false);
               }}
             >
-              {cat}
+              {categoryLabel(cat)}
             </button>
           ))}
         </div>

@@ -92,7 +92,7 @@ export default function JobsClient({ lang }: { lang: string }) {
       <div className={styles.grid}>
         {filteredJobs.length === 0 ? (
            <FadeIn style={{ gridColumn: "1 / -1", display: "flex", justifyContent: "center" }}>
-             <p style={{ color: "#9EAABB", textAlign: "center", width: "100%", padding: "40px 20px", fontSize: "16px", fontFamily: "'Nunito Sans', sans-serif" }}>
+             <p style={{ color: "var(--text-muted)", textAlign: "center", width: "100%", padding: "40px 20px", fontSize: "16px", fontFamily: "'Nunito Sans', sans-serif" }}>
                {t('jobs.not_found', 'К сожалению, по вашему запросу ничего не найдено.')}
              </p>
            </FadeIn>

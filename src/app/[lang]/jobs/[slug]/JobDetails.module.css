@@ -1,5 +1,5 @@
 .main {
-  background: #000607;
+  background: var(--bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
 .container {
   max-width: 1410px;
   margin: 0 auto;
-  padding: 120px 30px 60px;
+  padding: 40px 30px 60px;
   width: 100%;
   flex: 1;
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 .backBtn {
-  color: #3ddc84;
+  color: var(--accent-text);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -26,7 +26,7 @@
 }
 
 .backBtn:hover {
-  color: #02704f;
+  color: var(--accent-text);
 }
 
 .content {
@@ -49,20 +49,20 @@
   padding: 10px 15px;
   justify-content: center;
   align-items: center;
-  border-radius: 40px;
+  border-radius: var(--radius-pill);
   background: linear-gradient(
     60deg,
-    rgba(94, 181, 240, 0.22) 13.4%,
-    rgba(2, 112, 79, 0.22) 86.6%
+    rgba(var(--accent-rgb), 0.22) 13.4%,
+    var(--card-tint-strong) 86.6%
   );
-  color: #9eaabb;
+  color: var(--text-muted);
   font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 
 .title {
-  color: #fff;
+  color: var(--text);
   font-family: "Tektur", sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -80,7 +80,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #9eaabb;
+  color: var(--text-muted);
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
 }
@@ -92,7 +92,7 @@
 }
 
 .sectionTitle {
-  color: #fff;
+  color: var(--text);
   font-family: "Tektur", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -100,12 +100,11 @@
 }
 
 .description {
-  color: #9eaabb;
-  font-family: "Nunito Sans", sans-serif;
+  color: var(--text-muted);
+  font-family: var(--font-nunito-sans), sans-serif;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
-  white-space: pre-wrap;
 }
 
 .ctaBox {
@@ -114,14 +113,14 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  border-radius: 11px;
-  border: 1px solid #3ddc84;
-  background: rgba(1, 101, 88, 0.11);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent);
+  background: var(--card-tint);
   margin-top: 20px;
 }
 
 .ctaTitle {
-  color: #fff;
+  color: var(--text);
   font-family: "Tektur", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -129,7 +128,7 @@
 }
 
 .ctaDesc {
-  color: #9eaabb;
+  color: var(--text-muted);
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -141,9 +140,9 @@
   padding: 12px 40px;
   justify-content: center;
   align-items: center;
-  border-radius: 222px;
-  background: linear-gradient(60deg, #3ddc84 13.4%, #02704f 86.6%);
-  color: #fff;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-accent);
+  color: var(--text);
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -173,4 +172,49 @@
   .ctaBtn {
     width: 100%;
   }
+}
+
+/* Structured job description */
+.descHeading {
+  margin: 28px 0 10px;
+  color: var(--text);
+  font-family: var(--font-tektur), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.descHeading:first-child {
+  margin-top: 0;
+}
+
+.descText,
+.descList li {
+  font-family: var(--font-nunito-sans), sans-serif;
+}
+
+.descText {
+  margin: 0 0 10px;
+}
+
+.descList {
+  margin: 0 0 8px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.descList li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.descList li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }

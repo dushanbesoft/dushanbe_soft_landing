@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.1);
   padding-bottom: 20px;
   margin-bottom: 10px;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-tektur), inherit;
 }
 
@@ -39,23 +39,23 @@
 
 .tabButton {
   padding: 8px 24px;
-  border-radius: 6px;
-  background: #333;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--ink-rgb), 0.08);
   border: none;
-  color: #fff;
+  color: var(--text);
   font-size: 15px;
-  font-family: var(--font-tektur), inherit;
+  font-family: var(--font-nunito-sans), sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .tabButton:hover {
-  background: #444;
+  background: rgba(var(--ink-rgb), 0.14);
 }
 
 .activeTab {
-  background: #3ddc84;
-  color: #000;
+  background: var(--accent);
+  color: var(--on-accent);
   font-weight: 500;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .mobile .grid {
-  grid-template-columns: repeat(4, 1fr) ;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 1200px) {
@@ -128,8 +128,8 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: #081c22;
-  border-radius: 8px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
   overflow: hidden;
 }
 
@@ -148,17 +148,17 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.03);
+  color: rgba(var(--ink-rgb), 0.7);
+  background: rgba(var(--ink-rgb), 0.03);
   padding: 12px 16px;
   min-height: 64px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .cardTitle {
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
   margin: 0;
   font-family: var(--font-tektur), sans-serif;
 }
@@ -166,6 +166,6 @@
 .cardShortInfo {
   font-size: 14px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--ink-rgb), 0.6);
   line-height: 1.4;
 }
