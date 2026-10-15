@@ -2,7 +2,8 @@ import React from "react";
 import initTranslations from "@/app/i18n";
 import styles from "./ProductsSection.module.css";
 import ProductCard from "./ProductCard";
-import { FadeIn, StaggerContainer, StaggerItem } from "../MotionWrapper";
+import ProductsCarousel from "./ProductsCarousel";
+import { FadeIn } from "../MotionWrapper";
 
 
 const SmsIcon = () => (
@@ -228,32 +229,20 @@ export default async function ProductsSection({
     },
   ];
 
+  const Heading = showAll ? "h1" : "h2";
+
   return (
     <section id="products" className={styles.section}>
       <div className={styles.container}>
-        <FadeIn direction="up">
-          <div className={styles.headerRow}>
-            <div className={styles.titles}>
-              <div className={styles.subtitle}>
-                {t("products.subtitle", "Наши продукты")}
-              </div>
-              {(() => {
-                const Heading = showAll ? "h1" : "h2";
-                return (
-                  <Heading className={styles.mainTitle}>
-                    {t("products.title", "Готовые продукты для вашего бизнеса")}
-                  </Heading>
-                );
-              })()}
-            </div>
-          </div>
-        </FadeIn>
-
-        <StaggerContainer
-          className={styles.cardsContainer}
-          staggerChildren={0.2}
-        >
-          <StaggerItem>
+        <FadeIn direction="up" fullWidth>
+          <ProductsCarousel
+            headerSubtitle={t("products.subtitle", "Наши продукты")}
+            headerTitle={
+              <Heading className={styles.mainTitle}>
+                {t("products.title", "Готовые продукты для вашего бизнеса")}
+              </Heading>
+            }
+          >
             <ProductCard
               imageSrc="/images/ZudSMSBanner.webp"
               icon={<SmsIcon />}
@@ -269,8 +258,6 @@ export default async function ProductsSection({
               tags={getSmsTags()}
               href="https://zudsms.tj"
             />
-          </StaggerItem>
-          <StaggerItem>
             <ProductCard
               imageSrc="/images/liveChatBanner.webp"
               icon={<ChatIcon />}
@@ -283,8 +270,6 @@ export default async function ProductsSection({
               tags={getChatTags()}
               href="https://livechat.tj"
             />
-          </StaggerItem>
-          <StaggerItem>
             <ProductCard
               imageSrc="/images/projects/mablag-banner.png"
               icon={<FinanceIcon />}
@@ -300,8 +285,6 @@ export default async function ProductsSection({
               tags={getMablagTags()}
               href={lang === "ru" ? "/cases/mablagtj" : `/${lang}/cases/mablagtj`}
             />
-          </StaggerItem>
-          <StaggerItem>
             <ProductCard
               imageSrc="/images/projects/tvcrm-banner.png"
               icon={<TvIcon />}
@@ -317,8 +300,8 @@ export default async function ProductsSection({
               tags={getTvcrmTags()}
               href={lang === "ru" ? "/cases/sinamoktv" : `/${lang}/cases/sinamoktv`}
             />
-          </StaggerItem>
-        </StaggerContainer>
+          </ProductsCarousel>
+        </FadeIn>
       </div>
     </section>
   );

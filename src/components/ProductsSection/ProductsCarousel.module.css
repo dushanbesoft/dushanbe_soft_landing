@@ -1,0 +1,159 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  position: relative;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex: 1 0 0;
+  min-width: 260px;
+}
+
+.subtitle {
+  color: var(--accent-text);
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.titleWrap {
+  width: 100%;
+}
+
+.navControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent);
+  background: var(--card-tint);
+  color: var(--accent-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.navBtn:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.45);
+  transform: translateY(-2px);
+}
+
+.navBtn:active {
+  transform: translateY(0);
+}
+
+.carouselContainer {
+  /* Direction LTR ensures predictable slide translation regardless of text direction */
+  direction: ltr;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  padding: 5px 0;
+  --card-width: calc((100% - 40px) / 3);
+}
+
+.carouselContainer:active {
+  cursor: grabbing;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  will-change: transform;
+}
+
+.slide {
+  direction: var(--page-dir, ltr);
+  flex: 0 0 var(--card-width);
+  width: var(--card-width);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide > * {
+  height: 100%;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.dot {
+  width: 16px;
+  height: 6px;
+  border-radius: var(--radius-sm);
+  border: none;
+  opacity: 0.25;
+  background: linear-gradient(60deg, var(--accent) 13.4%, var(--accent-deep) 86.6%);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot:hover {
+  opacity: 0.6;
+}
+
+.dotActive {
+  width: 38px;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
+}
+
+@media (max-width: 1024px) {
+  .carouselContainer {
+    --card-width: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .carouselContainer {
+    --card-width: 100%;
+  }
+
+  .navControls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
