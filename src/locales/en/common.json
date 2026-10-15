@@ -121,6 +121,18 @@
       "title": "TV CRM",
       "subtitle": "CRM for Cable TV",
       "description": "An internal CRM system for a cable TV provider that automates the management of subscribers, controllers, cash transactions, and reporting."
+    },
+    "mablagtj": {
+      "title": "Mablag.tj – Business Accounting & Automation",
+      "subtitle": "mablag.tj",
+      "description": "Cloud platform and ERP system for comprehensive financial, inventory, and trade management. The service brings together multicurrency cash registers, stock tracking, procurement and sales, payroll calculation, and profit and loss (P&L) reporting.",
+      "tags": [
+        "Financial, warehouse, and trade accounting",
+        "Multicurrency cash registers & management analytics (P&L)",
+        "Debtor and creditor balance tracking",
+        "Warehouse inventory, stock movements and arrivals",
+        "Granular access control and audit logging"
+      ]
     }
   },
   "whyUs": {

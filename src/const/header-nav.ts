@@ -11,6 +11,7 @@ export interface HeaderNavItem {
 
 /** «Для бизнеса»: our own products, linked to their case studies */
 export const productsNav: HeaderNavItem[] = [
+  { path: "cases/mablagtj", labelKey: "products.mablagtj.title", fallback: "Mablag.tj – Автоматизация и учет для бизнеса" },
   { path: "cases/zudsms", labelKey: "products.zudsms.title", fallback: "ZudSMS – Платформа SMS-рассылок" },
   { path: "cases/livechat-tj", labelKey: "products.livechat.title", fallback: "LiveChat TJ - Онлайн-чат" },
   { path: "cases/sinamoktv", labelKey: "products.tvcrm.title", fallback: "TV CRM" },

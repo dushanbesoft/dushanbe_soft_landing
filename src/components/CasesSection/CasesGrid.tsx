@@ -63,6 +63,7 @@ export default function CasesGrid({
     itrunstj: "Корпоративные",
     itrans: "Корпоративные",
     zudsms: "Финтех",
+    mablagtj: "Финтех",
     "sunduk-tv": "Медиа",
     onlinepay: "Финтех",
     "arcane-finance": "Blockchain/Web3",

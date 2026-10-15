@@ -89,6 +89,34 @@ const TvIcon = () => (
   </svg>
 );
 
+const FinanceIcon = () => (
+  <svg
+    width="36"
+    height="36"
+    viewBox="0 0 46 46"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M38 10H8C6.89543 10 6 10.8954 6 12V34C6 35.1046 6.89543 36 8 36H38C39.1046 36 40 35.1046 40 34V12C40 10.8954 39.1046 10 38 10ZM38 34H8V22H38V34ZM38 16H8V12H38V16ZM33 27C33 28.1 32.1 29 31 29C29.9 29 29 28.1 29 27C29 25.9 29.9 25 31 25C32.1 25 33 25.9 33 27Z"
+      fill="url(#paint2_linear_finance)"
+    />
+    <defs>
+      <linearGradient
+        id="paint2_linear_finance"
+        x1="10.8756"
+        y1="30"
+        x2="35.1244"
+        y2="16"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#3DDC84" />
+        <stop offset="1" stopColor="#02704F" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 interface ProductsSectionProps {
   showAll?: boolean;
   lang?: string;
@@ -165,6 +193,41 @@ export default async function ProductsSection({
     { label: "Telecom" },
   ];
 
+  const getMablagTags = () => [
+    {
+      label: t(
+        "products.mablagtj.tags.0",
+        "Финансовый, складской и торговый учет",
+      ),
+      highlighted: true,
+    },
+    {
+      label: t(
+        "products.mablagtj.tags.1",
+        "Мультивалютные кассы и управленческая аналитика (P&L)",
+      ),
+      highlighted: true,
+    },
+    {
+      label: t(
+        "products.mablagtj.tags.2",
+        "Контроль взаиморасчетов с клиентами и поставщиками",
+      ),
+    },
+    {
+      label: t(
+        "products.mablagtj.tags.3",
+        "Управление складами, остатками и перемещениями",
+      ),
+    },
+    {
+      label: t(
+        "products.mablagtj.tags.4",
+        "Гибкое разграничение прав доступа и аудит действий",
+      ),
+    },
+  ];
+
   return (
     <section id="products" className={styles.section}>
       <div className={styles.container}>
@@ -219,6 +282,23 @@ export default async function ProductsSection({
               )}
               tags={getChatTags()}
               href="https://livechat.tj"
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <ProductCard
+              imageSrc="/images/projects/mablag-banner.png"
+              icon={<FinanceIcon />}
+              title={t(
+                "products.mablagtj.title",
+                "Mablag.tj – Автоматизация и учет для бизнеса",
+              )}
+              subtitle={t("products.mablagtj.subtitle", "mablag.tj")}
+              description={t(
+                "products.mablagtj.description",
+                "Облачная платформа и ERP-система для комплексного финансового, складского и торгового учета...",
+              )}
+              tags={getMablagTags()}
+              href={lang === "ru" ? "/cases/mablagtj" : `/${lang}/cases/mablagtj`}
             />
           </StaggerItem>
           <StaggerItem>
