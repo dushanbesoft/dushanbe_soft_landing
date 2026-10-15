@@ -1,0 +1,52 @@
+.banner {
+  background: #000607;
+  border-top: 1px solid rgba(61, 220, 132, 0.2);
+  border-bottom: 1px solid rgba(61, 220, 132, 0.2);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(61, 220, 132, 0.12);
+  border: 1px solid rgba(61, 220, 132, 0.35);
+  color: #3ddc84;
+  font-family: var(--font-tektur), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.text {
+  flex: 1 1 360px;
+  margin: 0;
+  color: #d9e2ec;
+  font-family: var(--font-nunito-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.link {
+  flex-shrink: 0;
+  color: #3ddc84;
+  font-family: var(--font-tektur), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

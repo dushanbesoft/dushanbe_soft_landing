@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
+import { servicesNav } from "@/const/services-nav";
 
 const DownArrow = () => (
   <svg
@@ -82,6 +83,14 @@ export default function Header() {
 
     router.push(targetUrl);
     router.refresh();
+  };
+
+  const getLangHref = (lang: string) => {
+    const pathSegments = pathname.split("/").filter(Boolean);
+    const hasLocalePrefix = ["tj", "en", "ru"].includes(pathSegments[0]);
+    const subPath = (hasLocalePrefix ? pathSegments.slice(1) : pathSegments).join("/");
+    if (lang === "ru") return subPath ? `/${subPath}` : "/";
+    return subPath ? `/${lang}/${subPath}` : `/${lang}`;
   };
 
   const getNavHref = (hash: string) => {
@@ -215,13 +224,27 @@ export default function Header() {
           >
             {t("header.process", "Процесс разработки")}
           </Link>
-          <Link
-            href={getNavHref("services")}
-            className={styles.navItem}
-            onClick={(e) => handleNavClick(e, getNavHref("services"))}
-          >
-            {t("header.services", "Услуги")}
-          </Link>
+          <div className={styles.navDropdown}>
+            <Link
+              href={currentLang === "ru" ? "/services" : `/${currentLang}/services`}
+              className={styles.navItem}
+              onClick={closeMenu}
+            >
+              {t("header.services", "Услуги")}
+            </Link>
+            <div className={styles.navDropdownMenu}>
+              {servicesNav.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={currentLang === "ru" ? `/services/${service.slug}` : `/${currentLang}/services/${service.slug}`}
+                  className={styles.navDropdownItem}
+                  onClick={closeMenu}
+                >
+                  {service.name[currentLang as "ru" | "en" | "tj"]}
+                </Link>
+              ))}
+            </div>
+          </div>
           <Link
             href={getNavHref("pricing")}
             className={styles.navItem}
@@ -257,29 +280,48 @@ export default function Header() {
               </span>
               <DownArrow />
             </div>
-            {isLangMenuOpen && (
-              <div className={styles.langDropdown}>
-                <div
+            {/* Always rendered so crawlers can follow the language links */}
+            {(
+              <div
+                className={styles.langDropdown}
+                style={isLangMenuOpen ? undefined : { display: "none" }}
+              >
+                <a
+                  href={getLangHref("tj")}
+                  hrefLang={"tg"}
                   className={styles.langOption}
-                  onClick={() => changeLanguage("tj")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeLanguage("tj");
+                  }}
                 >
                   <span className={styles.langFlag}>🇹🇯</span>
                   ТҶ
-                </div>
-                <div
+                </a>
+                <a
+                  href={getLangHref("ru")}
+                  hrefLang={"ru"}
                   className={styles.langOption}
-                  onClick={() => changeLanguage("ru")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeLanguage("ru");
+                  }}
                 >
                   <span className={styles.langFlag}>🇷🇺</span>
                   РУ
-                </div>
-                <div
+                </a>
+                <a
+                  href={getLangHref("en")}
+                  hrefLang={"en"}
                   className={styles.langOption}
-                  onClick={() => changeLanguage("en")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeLanguage("en");
+                  }}
                 >
                   <span className={styles.langFlag}>🇬🇧</span>
                   EN
-                </div>
+                </a>
               </div>
             )}
           </div>

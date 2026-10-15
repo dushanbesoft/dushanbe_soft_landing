@@ -99,7 +99,7 @@ export default async function RootLayout({
         '@id': ORGANIZATION_ID,
         name: COMPANY.name,
         legalName: COMPANY.legalName,
-        alternateName: ['Dushanbe-Soft', 'DushanbeSoft', 'Душанбе Софт'],
+        alternateName: ['Dushanbe-Soft', 'DushanbeSoft', 'Душанбе Софт', 'Private Enterprise "Dushanbe Soft"'],
         url: SITE_URL,
         logo: {
           '@type': 'ImageObject',
@@ -145,6 +145,13 @@ export default async function RootLayout({
           'Автоматизация бизнеса',
         ],
         sameAs: COMPANY.sameAs,
+        award: COMPANY.worldBankAward.text,
+        subjectOf: {
+          '@type': 'WebPage',
+          name: 'World Bank contract award notice OP00455715',
+          url: COMPANY.worldBankAward.url,
+          publisher: { '@type': 'Organization', name: 'The World Bank', url: 'https://www.worldbank.org' },
+        },
       },
       {
         '@type': 'WebSite',

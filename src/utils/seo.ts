@@ -15,7 +15,8 @@ export const OG_IMAGE = {
 // and the Google Business / Yandex Business profiles exactly.
 export const COMPANY = {
   name: SITE_NAME,
-  legalName: "Dushanbe Soft",
+  // As registered in the World Bank procurement notice OP00455715
+  legalName: "Частное предприятие «Dushanbe Soft»",
   foundingDate: "2017",
   telephone: "+992901000535",
   email: "dushanbesoft@gmail.com",
@@ -23,6 +24,10 @@ export const COMPANY = {
   addressRegion: "Душанбе",
   addressCountry: "TJ",
   logo: `${SITE_URL}/icons/logo-header.svg`,
+  worldBankAward: {
+    url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715",
+    text: "Contract award under the World Bank-financed Tajikistan Digital Foundations Project (P506611, TDFP-NS-RFQ-03), 2026",
+  },
   sameAs: [
     "https://www.instagram.com/dushanbe_soft/",
     "https://www.facebook.com/Dushanbe-Soft-575506316208641/",

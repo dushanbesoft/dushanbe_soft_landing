@@ -41,7 +41,9 @@ function TypedTitle({ text }: { text: string }) {
   return <span className={styles.typedText}>{typed}</span>;
 }
 
-import ContactModal from "../ContactModal/ContactModal";
+import dynamic from "next/dynamic";
+// Loaded after hydration: the modal is not needed for the first paint.
+const ContactModal = dynamic(() => import("../ContactModal/ContactModal"), { ssr: false });
 
 export default function HeroContent() {
   const { t, i18n } = useTranslation();

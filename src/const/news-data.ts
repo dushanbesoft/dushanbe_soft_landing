@@ -9,6 +9,8 @@ export interface NewsFullContent {
   sections: NewsSectionContent[];
   techStack?: string[];
   caseSlug?: string;
+  /** External primary source that confirms the news (shown as a link) */
+  source?: { label: string; url: string };
 }
 
 export interface NewsItem {
@@ -26,9 +28,11 @@ export interface NewsItem {
   descKey: string;
   defaultDesc: string;
   fullContent: NewsFullContent;
+  /** Optional translated article body; falls back to `fullContent` (ru) */
+  localizedContent?: Partial<Record<"en" | "tj", NewsFullContent>>;
 }
 
-export const newsList: NewsItem[] = [
+const newsItems: NewsItem[] = [
   {
     id: "1",
     slug: "digital-tajikistan",
@@ -187,7 +191,7 @@ export const newsList: NewsItem[] = [
     defaultDesc: "Омниканальный виджет онлайн-чата и система коммуникаций с клиентами для сайтов с веб-сокетами и быстрыми ответами.",
     fullContent: {
       lead: "LiveChat.TJ помогает компаниям удерживать посетителей на сайте и мгновенно отвечать на вопросы, увеличивая конверсию продаж до 30%.",
-      caseSlug: "livechat",
+      caseSlug: "livechat-tj",
       techStack: ["WebSockets", "Node.js", "Redis", "TypeScript", "React", "PostgreSQL"],
       sections: [
         {
@@ -265,7 +269,7 @@ export const newsList: NewsItem[] = [
     defaultDesc: "Интерактивный портал телерадиовещания с прямым эфиром, архивом передач и оптимизацией под любые экраны.",
     fullContent: {
       lead: "Официальный цифровой портал телерадиовещания «Сомон ТВ» предоставил зрителям круглосуточный доступ к прямому эфиру и архивам лучших авторских программ.",
-      caseSlug: "somontv",
+      caseSlug: "somon-tv",
       techStack: ["Next.js", "Video.js", "Node.js", "Redis", "Nginx RTMP"],
       sections: [
         {
@@ -275,7 +279,113 @@ export const newsList: NewsItem[] = [
       ],
     },
   },
+  {
+    id: "9",
+    slug: "world-bank-tajikistan-digital-foundations",
+    image: "/images/news/world-bank-tdfp.webp",
+    date: "09.07.2026",
+    category: "gov",
+    readTime: "2 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.9.tag",
+    defaultTag: "Международные проекты",
+    titleKey: "news.items.9.title",
+    defaultTitle: "Dushanbe Soft — победитель закупки по проекту Всемирного банка",
+    descKey: "news.items.9.desc",
+    defaultDesc: "Частное предприятие «Dushanbe Soft» выбрано исполнителем контракта на разработку веб-сайта учреждения в рамках проекта Всемирного банка «Цифровые основы Таджикистана» (P506611).",
+    fullContent: {
+      lead: "Частное предприятие «Dushanbe Soft» стало победителем закупки в рамках проекта Tajikistan Digital Foundations Project («Цифровые основы Таджикистана»), который финансируется Всемирным банком. Уведомление о присуждении контракта опубликовано на официальном портале закупок Всемирного банка.",
+      source: { label: "Уведомление о присуждении контракта на сайте Всемирного банка", url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715" },
+      sections: [
+        {
+          heading: "Детали контракта",
+          text: "Контракт заключён по результатам закупки методом запроса котировок (Request for Quotations) и предусматривает услуги по разработке веб-сайта учреждения.",
+          bulletPoints: [
+            "Проект: Tajikistan Digital Foundations Project (P506611)",
+            "Финансирование: Международная ассоциация развития (IDA-E3950)",
+            "Номер закупки: TDFP-NS-RFQ-03",
+            "Предмет контракта: разработка веб-сайта учреждения",
+            "Дата уведомления о присуждении: 12 мая 2026 года",
+            "Срок выполнения: 2,5 месяца",
+          ],
+        },
+        {
+          heading: "Почему это важно",
+          text: "Закупки по проектам Всемирного банка проводятся по его правилам: с открытой публикацией, конкурентной оценкой предложений и раскрытием результатов. Победа в такой закупке подтверждает, что Dushanbe Soft соответствует требованиям международных финансовых институтов к подрядчикам в сфере цифровых решений.",
+        },
+        {
+          heading: "Опыт в государственных цифровых проектах",
+          text: "Проект продолжает работу команды над цифровизацией государственного сектора Таджикистана. Ранее Dushanbe Soft разработала официальный сайт Президента Республики Таджикистан и портал электронных государственных услуг Digital Tajikistan.",
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "Private Enterprise \"Dushanbe Soft\" has been awarded a contract under the Tajikistan Digital Foundations Project, financed by the World Bank. The contract award notice is published on the World Bank's official procurement portal.",
+        source: { label: "Contract award notice on the World Bank website", url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715" },
+        sections: [
+          {
+            heading: "Contract details",
+            text: "The contract was awarded through a Request for Quotations and covers non-consulting services for the development of an institution's website.",
+            bulletPoints: [
+              "Project: Tajikistan Digital Foundations Project (P506611)",
+              "Financing: International Development Association (IDA-E3950)",
+              "Reference No.: TDFP-NS-RFQ-03",
+              "Scope: development of an institution's website",
+              "Notification of award issued: May 12, 2026",
+              "Duration: 2.5 months",
+            ],
+          },
+          {
+            heading: "Why it matters",
+            text: "Procurement under World Bank-financed projects follows the Bank's rules: open publication, competitive evaluation of bids and public disclosure of results. Winning such a procurement confirms that Dushanbe Soft meets the requirements international financial institutions set for digital solution contractors.",
+          },
+          {
+            heading: "Experience in government digital projects",
+            text: "The project continues our work on digitalizing Tajikistan's public sector. Dushanbe Soft previously built the official website of the President of the Republic of Tajikistan and the Digital Tajikistan e-government services portal.",
+          },
+        ],
+      },
+      tj: {
+        lead: "Корхонаи хусусии «Dushanbe Soft» ғолиби харид дар доираи лоиҳаи Tajikistan Digital Foundations Project («Асосҳои рақамии Тоҷикистон») гардид, ки аз ҷониби Бонки ҷаҳонӣ маблағгузорӣ мешавад. Огоҳинома дар бораи супоридани шартнома дар портали расмии хариди Бонки ҷаҳонӣ нашр шудааст.",
+        source: { label: "Огоҳинома дар бораи супоридани шартнома дар сомонаи Бонки ҷаҳонӣ", url: "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715" },
+        sections: [
+          {
+            heading: "Тафсилоти шартнома",
+            text: "Шартнома дар натиҷаи харид бо усули дархости нархнома (Request for Quotations) баста шуда, хизматрасонӣ оид ба таҳияи сомонаи муассисаро дар бар мегирад.",
+            bulletPoints: [
+              "Лоиҳа: Tajikistan Digital Foundations Project (P506611)",
+              "Маблағгузорӣ: Ассотсиатсияи байналмилалии рушд (IDA-E3950)",
+              "Рақами харид: TDFP-NS-RFQ-03",
+              "Мавзӯи шартнома: таҳияи сомонаи муассиса",
+              "Санаи огоҳинома дар бораи супоридан: 12 майи соли 2026",
+              "Мӯҳлати иҷро: 2,5 моҳ",
+            ],
+          },
+          {
+            heading: "Чаро ин муҳим аст",
+            text: "Харидҳо дар доираи лоиҳаҳои Бонки ҷаҳонӣ мувофиқи қоидаҳои он гузаронида мешаванд: бо нашри ошкоро, арзёбии рақобатии пешниҳодҳо ва ифшои натиҷаҳо. Ғалаба дар чунин харид тасдиқ мекунад, ки Dushanbe Soft ба талаботи муассисаҳои молиявии байналмилалӣ нисбат ба пудратчиёни ҳалли рақамӣ мувофиқат мекунад.",
+          },
+          {
+            heading: "Таҷриба дар лоиҳаҳои рақамии давлатӣ",
+            text: "Ин лоиҳа кори дастаи моро дар рақамикунонии бахши давлатии Тоҷикистон идома медиҳад. Пеш аз ин Dushanbe Soft сомонаи расмии Президенти Ҷумҳурии Тоҷикистон ва портали хидматҳои электронии давлатии Digital Tajikistan-ро таҳия кардааст.",
+          },
+        ],
+      },
+    },
+  },
 ];
+
+// Newest first everywhere (home page shows the first four).
+export const newsList: NewsItem[] = [...newsItems].sort((a, b) => {
+  const iso = (d: string) => d.split(".").reverse().join("-");
+  return iso(b.date).localeCompare(iso(a.date));
+});
+
+export function getNewsContent(item: NewsItem, lang: string): NewsFullContent {
+  if (lang === "en" || lang === "tj") return item.localizedContent?.[lang] ?? item.fullContent;
+  return item.fullContent;
+}
 
 export function getNewsBySlug(slug: string): NewsItem | undefined {
   return newsList.find((item) => item.slug === slug);

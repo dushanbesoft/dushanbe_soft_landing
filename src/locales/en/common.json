@@ -845,6 +845,12 @@
         "date": "03.02.2026",
         "title": "Somon TV Media Portal",
         "desc": "Interactive broadcasting portal with live streaming, program archives, and responsive design for all screen sizes."
+      },
+      "9": {
+        "tag": "International projects",
+        "date": "09.07.2026",
+        "title": "Dushanbe Soft awarded a contract under a World Bank-financed project",
+        "desc": "Private Enterprise \"Dushanbe Soft\" has been awarded a contract to develop an institution's website under the World Bank-financed Tajikistan Digital Foundations Project (P506611)."
       }
     },
     "filterAll": "All",
@@ -864,5 +870,10 @@
     "filterPhoto": "Photos",
     "showMore": "Show more",
     "showLess": "Show less"
+  },
+  "trust": {
+    "badge": "World Bank",
+    "text": "Dushanbe Soft is a contractor under the World Bank-financed Tajikistan Digital Foundations Project.",
+    "more": "Learn more"
   }
 }

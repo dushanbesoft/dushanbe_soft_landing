@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import styles from "./NewsDetail.module.css";
-import { newsList, getNewsBySlug, getRelatedNews } from "@/const/news-data";
+import { newsList, getNewsBySlug, getRelatedNews, getNewsContent } from "@/const/news-data";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -87,7 +87,8 @@ export default async function NewsDetailPage({ params }: PageProps) {
     return lang === "ru" ? `/cases/${caseSlug}` : `/${lang}/cases/${caseSlug}`;
   };
 
-  const caseUrl = getCaseUrl(item.fullContent?.caseSlug);
+  const content = getNewsContent(item, lang);
+  const caseUrl = getCaseUrl(content.caseSlug);
   const articleUrl = localeUrl(lang, `news/${slug}`);
   const published = ruDateToIso(item.date);
 
@@ -109,7 +110,8 @@ export default async function NewsDetailPage({ params }: PageProps) {
       mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
       author: { "@type": "Organization", "@id": ORGANIZATION_ID, name: "Dushanbe Soft" },
       publisher: { "@id": ORGANIZATION_ID },
-      ...(item.fullContent?.techStack?.length ? { keywords: item.fullContent.techStack.join(", ") } : {}),
+      ...(content.techStack?.length ? { keywords: content.techStack.join(", ") } : {}),
+      ...(content.source ? { citation: content.source.url, isBasedOn: content.source.url } : {}),
     },
   ];
 
@@ -170,10 +172,10 @@ export default async function NewsDetailPage({ params }: PageProps) {
           <div className={styles.articleBody}>
             <article className={styles.contentCol}>
               <p className={styles.leadText}>
-                {item.fullContent?.lead || desc}
+                {content.lead || desc}
               </p>
 
-              {item.fullContent?.sections?.map((section, idx) => (
+              {content.sections?.map((section, idx) => (
                 <div key={idx} className={styles.sectionBlock}>
                   <h2 className={styles.sectionHeading}>{section.heading}</h2>
                   <p className={styles.sectionText}>{section.text}</p>
@@ -189,11 +191,20 @@ export default async function NewsDetailPage({ params }: PageProps) {
                 </div>
               ))}
 
-              {item.fullContent?.techStack && item.fullContent.techStack.length > 0 && (
+              {content.source && (
+                <p className={styles.sectionText}>
+                  <a href={content.source.url} target="_blank" rel="noopener" className={styles.caseLinkBtn}>
+                    <span>{content.source.label}</span>
+                    <span>↗</span>
+                  </a>
+                </p>
+              )}
+
+              {content.techStack && content.techStack.length > 0 && (
                 <div className={styles.techBox}>
                   <h3 className={styles.techTitle}>Использованный стек технологий</h3>
                   <div className={styles.techBadges}>
-                    {item.fullContent.techStack.map((tech, tIdx) => (
+                    {content.techStack.map((tech, tIdx) => (
                       <span key={tIdx} className={styles.techBadge}>
                         {tech}
                       </span>

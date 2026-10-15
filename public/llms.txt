@@ -4,6 +4,8 @@
 
 Contacts: phone +992 901 000 535, email dushanbesoft@gmail.com, Telegram https://t.me/992901000535. Address: Dushanbe, Republic of Tajikistan.
 
+Private Enterprise "Dushanbe Soft" was awarded a contract (TDFP-NS-RFQ-03, 2026) under the World Bank-financed Tajikistan Digital Foundations Project (P506611): https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715
+
 Notable projects: the official website of the President of the Republic of Tajikistan (president.tj), the Digital Tajikistan e-government portal, OTT streaming platforms for Somon TV, the OnlinePay acquiring platform, the ZudSMS bulk SMS platform and the LiveChat TJ online chat service.
 
 ## Services

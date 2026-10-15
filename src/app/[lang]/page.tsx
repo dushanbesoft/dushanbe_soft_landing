@@ -20,6 +20,7 @@ import JobsSection from "../../components/JobsSection/JobsSection";
 import AwardsSection from "../../components/AwardsSection/AwardsSection";
 import NewsSection from "../../components/NewsSection/NewsSection";
 import MediaSection from "../../components/MediaSection/MediaSection";
+import TrustBanner from "../../components/TrustBanner/TrustBanner";
 
 const i18nNamespaces = ["common"];
 
@@ -43,6 +44,7 @@ export default async function Page({
         </div>
 
         <HomeHero />
+        <TrustBanner lang={lang} />
         <CasesSection lang={lang} />
         <ProductsSection lang={lang} />
         <PartnersSection />
