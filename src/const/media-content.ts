@@ -14,7 +14,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_1",
     "type": "video",
-    "src": "/content/DushanbeSoft/%23website%20%23web%20%23tajikistan%20%23%D0%B2%D0%B5%D0%B1%20%23%D0%B2%D0%B5%D0%B1%D1%81%D0%B0%D0%B8%CC%86%D1%82%20%23dushanbe%20%23radio.mp4",
+    "src": "/content/DushanbeSoft/reel_1.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_1.webp",
     "title": "#website #web #tajikistan #веб #вебсайт #dushanbe #radio",
     "caption": "#website #web #tajikistan #веб #вебсайт #dushanbe #radio",
@@ -23,7 +23,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_2",
     "type": "video",
-    "src": "/content/DushanbeSoft/1.%20HTML%20%D0%B1%D1%8B%D0%BB%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%20%D0%B2%201989%20%D0%B3%D0%BE%D0%B4%D1%83HTML%20-%20%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B8%CC%86%20%D1%8F%D0%B7%D1%8B%D0%BA%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D0%B1-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86.%20%D0%92%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D0%BE%D0%BD.mp4",
+    "src": "/content/DushanbeSoft/reel_2.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_2.webp",
     "title": "1. HTML был создан в 1989 годуHTML - основной язык разметки д...",
     "caption": "1. HTML был создан в 1989 годуHTML - основной язык разметки для создания веб-страниц. Впервые он",
@@ -32,7 +32,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_3",
     "type": "video",
-    "src": "/content/DushanbeSoft/Dushanbe-soft%20%E2%80%93%20%D1%8D%D1%82%D0%BE%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B8%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D0%BE%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D0%B2%D0%B0%D1%8E%D1%89%D0%B0%D1%8F%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F.%20%D0%9D%D0%B0%D1%88%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%20%D0%B8%D0%BC%D0%B5%D0%B5%D1%82%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B8%CC%86%20.mp4",
+    "src": "/content/DushanbeSoft/reel_3.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_3.webp",
     "title": "Dushanbe-soft – это профессиональная и быстроразвивающаяся ком...",
     "caption": "Dushanbe-soft – это профессиональная и быстроразвивающаяся компания. Наша команда имеет большой",
@@ -41,7 +41,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_4",
     "type": "video",
-    "src": "/content/DushanbeSoft/SMS-%D1%88%D0%BB%D1%8E%D0%B7%20%D0%B4%D0%BB%D1%8F%20OTP-%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2%2C%202FA%20%D0%B8%D0%BB%D0%B8%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D1%85%20%D1%83%D0%B2%D0%B5%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D0%B8%CC%86.%20%20%D0%94%D0%BB%D1%8F%20%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0-%20%D0%A1%D1%80%D0%B0%D0%B7%D1%83%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%20%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%B8%20%D0%BC%D1%8B%20%D0%B4.mp4",
+    "src": "/content/DushanbeSoft/reel_4.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_4.webp",
     "title": "SMS-шлюз для OTP-кодов, 2FA или системных уведомлений.  Для с...",
     "caption": "SMS-шлюз для OTP-кодов, 2FA или системных уведомлений.  Для старта- Сразу после регистрации мы д",
@@ -50,7 +50,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_5",
     "type": "video",
-    "src": "/content/DushanbeSoft/%C2%AB%D0%A2%D0%BE%D0%BF%2010%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D1%8B%D1%85%20%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F1.%20%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B8%CC%86%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%20%D0%B2%20%D0%BC%D0%B8%D1%80%D0%B5%20%D0%B1%D1%8B%D0%BB%D0%B0%20%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D0%B0%20%D0%BF%D0%BE%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8%20.mp4",
+    "src": "/content/DushanbeSoft/reel_5.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_5.webp",
     "title": "«Топ 10 интересных фактов о программирования1. Первый програм...",
     "caption": "«Топ 10 интересных фактов о программирования1. Первый программист в мире была женщина по имени",
@@ -59,7 +59,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_6",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D0%B0%D1%80%D1%8F%20SMM%2C%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D1%8F%D0%BC%D1%83%D1%8E%20%D1%81%D0%B2%D1%8F%D0%B7%D1%8C%20%D1%81%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8%20%D0%B8%20%D0%BE%D1%82%D0%B2%D0%B5%D1%87%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%B8%D1%85%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%20%D0%B8%D0%BB%D0%B8%20%D0%B4%D0%B0%D0%B2.mp4",
+    "src": "/content/DushanbeSoft/reel_6.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_6.webp",
     "title": "Благодаря SMM, бизнес может установить прямую связь с клиентам...",
     "caption": "Благодаря SMM, бизнес может установить прямую связь с клиентами и отвечать на их вопросы или дав",
@@ -68,7 +68,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_7",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%9D%D0%B0%D1%88%20%D0%BD%D0%BE%D0%B2%D1%8B%D0%B8%CC%86%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B8%CC%86%20%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B8%CC%86%D1%82%20TTL.TJ%20%D0%BD%D0%B0%20NextJS.mp4",
+    "src": "/content/DushanbeSoft/reel_7.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_7.webp",
     "title": "Наш новый разработанный веб-сайт TTL.TJ на NextJS",
     "caption": "Наш новый разработанный веб-сайт TTL.TJ на NextJS",
@@ -77,7 +77,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_8",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%A0%D0%90%D0%97%D0%A0%D0%90%D0%91%D0%90%D0%A2%D0%AB%D0%92%D0%90%D0%95%D0%9C%D0%9C%D0%9E%D0%91%D0%98%D0%9B%D0%AC%D0%9D%D0%AB%D0%95%20%D0%9F%D0%A0%D0%98%D0%9B%D0%9E%D0%96%D0%95%D0%9D%D0%98%D0%AF%D0%94%D0%9B%D0%AF%20IOS%20%D0%98%20ANDROID%D0%A7%D1%82%D0%BE%D0%B1%D1%8B%20%D0%B2%D1%8B-%E2%AC%86%EF%B8%8F%20%D0%BF%D0%BE%D0%B2%D1%8B%D1%81%D0%B8%D0%BB%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8%20%D0%B8%20%D0%BB%D0%BE%D1%8F%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BA%D0%BB%D0%B8%D0%B5.mp4",
+    "src": "/content/DushanbeSoft/reel_8.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_8.webp",
     "title": "РАЗРАБАТЫВАЕММОБИЛЬНЫЕ ПРИЛОЖЕНИЯДЛЯ IOS И ANDROIDЧтобы вы-⬆️ ...",
     "caption": "РАЗРАБАТЫВАЕММОБИЛЬНЫЕ ПРИЛОЖЕНИЯДЛЯ IOS И ANDROIDЧтобы вы-⬆️ повысили продажи и лояльность клие",
@@ -86,7 +86,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_9",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%A0%D0%B0%D0%B7%D0%B2%D0%B5%D1%80%D0%BD%D0%B5%D0%BC%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%20%D1%81%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0%D0%BC%D0%B8%2C%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%B0%D0%BC%D0%B8%2C%20%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%BC%2C%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%20%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82%D0%BE%D0%BC%20%D0%B8%20%D1%81%D0%B2%D1%8F%D0%B6%D0%B5%D0%BC.mp4",
+    "src": "/content/DushanbeSoft/reel_9.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_9.webp",
     "title": "Развернем интернет-магазин с управлением товарами, фильтрами, ...",
     "caption": "Развернем интернет-магазин с управлением товарами, фильтрами, поиском, личным кабинетом и свяжем",
@@ -95,7 +95,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_10",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%A0%D0%BE%D0%B7%D1%8B%D0%B3%D1%80%D1%8B%D1%88%20%D0%BE%D1%82%20Royal%20Baby%20%23%D1%80%D0%BE%D0%B7%D1%8B%D0%B3%D1%80%D1%8B%D1%88%23%D0%B4%D0%B5%D1%82%D0%B8%23%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%23%D1%82%D0%B0%D0%B4%D0%B6%D0%B8%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD%23%D0%BA%D1%83%D0%BB%D0%BE%D0%B1%23%D1%85%D1%83%D1%87%D0%B0%D0%BD%D0%B4%23%D0%BF%D0%BE%D0%BC%D0%B8%D1%80.mp4",
+    "src": "/content/DushanbeSoft/reel_10.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_10.webp",
     "title": "Розыгрыш от Royal Baby #розыгрыш#дети#участие#таджикистан#куло...",
     "caption": "Розыгрыш от Royal Baby #розыгрыш#дети#участие#таджикистан#кулоб#хучанд#помир",
@@ -104,7 +104,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_11",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%A1%D0%9C%D0%9C%20%D0%9F%D0%A0%D0%9E%D0%94%D0%92%D0%98%D0%96%D0%95%D0%9D%D0%98%D0%AF%20%D0%92%D0%A1%D0%95%D0%9C%E2%9C%8C%EF%B8%8F%20%F0%9F%94%B4%D0%A6%D0%95%D0%9B%D0%98%20SMM%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%F0%9F%94%B5%20%D0%9F%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%83%D0%B7%D0%BD%D0%B0%D0%B2%D0%B0%D0%B5%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%B1%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%3B%F0%9F%94%B5%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE.mp4",
+    "src": "/content/DushanbeSoft/reel_11.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_11.webp",
     "title": "СММ ПРОДВИЖЕНИЯ ВСЕМ✌️ 🔴ЦЕЛИ SMM продвижения-🔵 Повышение узнав...",
     "caption": "СММ ПРОДВИЖЕНИЯ ВСЕМ✌️ 🔴ЦЕЛИ SMM продвижения-🔵 Повышение узнаваемости бренда;🔵 Привлечение по",
@@ -113,7 +113,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_12",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BC%2C%20%D0%B4%D1%83%CC%84%D1%81%D1%82%D0%BE%D0%BD%21%20%D0%91%D0%BE%20%D0%BA%D0%B0%D0%BC%D0%BE%D0%BB%D0%B8%20%D1%85%D1%83%D1%88%D0%BD%D1%83%D0%B4%D0%B8%CC%84%20%D0%B1%D0%B0%20%D0%BC%D0%B0%D1%8A%D0%BB%D1%83%D0%BC%D0%BE%D1%82%D0%B8%20%D0%A8%D1%83%D0%BC%D0%BE%20%D0%BC%D0%B5%D1%80%D0%B0%D1%81%D0%BE%D0%BD%D0%B5%D0%BC%2C%20%D0%BA%D0%B8%20%D1%88%D0%B8%D1%80%D0%BA%D0%B0%D1%82%D0%B8%20DushanbeSoft%20%D2%B3%D0%B0%D0%BC%D1%87%D1%83%D0%BD%20%D1%82%D0%B0%D2%B3.mp4",
+    "src": "/content/DushanbeSoft/reel_12.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_12.webp",
     "title": "Салом, дӯстон! Бо камоли хушнудӣ ба маълумоти Шумо мерасонем...",
     "caption": "Салом, дӯстон! Бо камоли хушнудӣ ба маълумоти Шумо мерасонем, ки ширкати DushanbeSoft ҳамчун таҳ",
@@ -122,7 +122,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_13",
     "type": "video",
-    "src": "/content/DushanbeSoft/%D0%A2%D0%B5%D1%85%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B8%CC%86%D1%82%D0%B0%20%E2%80%93%20%D0%BE%D0%B4%D0%BD%D0%BE%20%D0%B8%D0%B7%20%D0%B2%D0%B0%D0%B6%D0%BD%D0%B5%D0%B8%CC%86%D1%88%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B8%CC%86%20%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8%2C%20%D0%B0%20%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B5%D0%B3%D0%BE%20%D0%BF%D0%BE%D1%81%D0%B5%D1%89%D0%B0%D0%B5.mp4",
+    "src": "/content/DushanbeSoft/reel_13.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_13.webp",
     "title": "Техподдержка сайта – одно из важнейших условий обеспечения ...",
     "caption": "Техподдержка сайта – одно из важнейших условий обеспечения его безопасности, а также его посещае",
@@ -131,7 +131,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_14",
     "type": "video",
-    "src": "/content/DushanbeSoft/%E2%9D%A4%EF%B8%8F%D0%A1%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE%20%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%B3%D0%B0%D0%BC%20%D0%B8%D0%B7%20%40dushanbe_soft%20%D0%B7%D0%B0%20%D0%BD%D0%B5%D0%BE%D0%B6%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B8%CC%86%20%D0%B8%20%D1%81%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8%D0%B8%CC%86%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D0%BA%21%20%F0%9F%8E%89%D0%A1%D0%B0%D0%B8%CC%86%D1%82%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%83%D1%80%D0%B0%21%20%D0%A0.mp4",
+    "src": "/content/DushanbeSoft/reel_14.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_14.webp",
     "title": "❤️Спасибо коллегам из @dushanbe_soft за неожиданный и сладкии...",
     "caption": "❤️Спасибо коллегам из @dushanbe_soft за неожиданный и сладкий подарок! 🎉Сайт работает на ура! Р",
@@ -140,7 +140,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_15",
     "type": "video",
-    "src": "/content/DushanbeSoft/%F0%9F%8C%9F%20%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%B4%D1%80%D1%83%D0%B7%D1%8C%D1%8F%21%20%D0%A1%20%D0%B3%D0%BE%D1%80%D0%B4%D0%BE%D1%81%D1%82%D1%8C%D1%8E%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D0%BC%20%D0%BD%D0%B0%D1%88%20%D0%BD%D0%BE%D0%B2%D1%8B%D0%B8%CC%86%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20%E2%80%94%20RoyalBaBy%20%2B%20%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC-%D0%B1%D0%BE%D1%82%21%20%F0%9F%8E%89%D0%94%D0%BB%D1%8F%20%D0%B7.mp4",
+    "src": "/content/DushanbeSoft/reel_15.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_15.webp",
     "title": "🌟 Привет, друзья! С гордостью представляем наш новый проект —...",
     "caption": "🌟 Привет, друзья! С гордостью представляем наш новый проект — RoyalBaBy + телеграм-бот! 🎉Для з",
@@ -149,7 +149,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_16",
     "type": "video",
-    "src": "/content/DushanbeSoft/%F0%9F%8C%9F%20%E2%80%9C%D0%A3%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%20Dushanbe-Soft%20%D0%B8%20%40lovely.tajikistan%20%21%E2%80%9C%F0%9F%8C%9F%D0%9C%D1%8B%20%D0%B8%D1%81%D0%BA%D1%80%D0%B5%D0%BD%D0%BD%D0%B5%20%D1%80%D0%B0%D0%B4%D1%8B%20%D0%BF%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD.mp4",
+    "src": "/content/DushanbeSoft/reel_16.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_16.webp",
     "title": "🌟 “Успешное сотрудничество Dushanbe-Soft и @lovely.tajikistan ...",
     "caption": "🌟 “Успешное сотрудничество Dushanbe-Soft и @lovely.tajikistan !“🌟Мы искренне рады поделиться н",
@@ -158,7 +158,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_17",
     "type": "video",
-    "src": "/content/DushanbeSoft/%F0%9F%93%88%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0-%20%D0%A3%D0%B2%D0%B5%D0%BB%D0%B8%D1%87%D1%8C%D1%82%D0%B5%20%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%8C%2C%20%D0%BE%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%21%20%F0%9F%9A%80%F0%9F%94%A7%20%D0%97%D0%B0%D1%87%D0%B5%D0%BC%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C.mp4",
+    "src": "/content/DushanbeSoft/reel_17.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_17.webp",
     "title": "📈 Автоматизация бизнеса- Увеличьте эффективность, освободите в...",
     "caption": "📈 Автоматизация бизнеса- Увеличьте эффективность, освободите время! 🚀🔧 Зачем автоматизировать",
@@ -167,7 +167,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_18",
     "type": "video",
-    "src": "/content/DushanbeSoft/%F0%9F%93%A9%20%D0%AF%D0%BA%20%D0%BF%D0%B0%D0%B5%CC%88%D0%BC%20%E2%80%94%20%D2%B3%D0%B0%D0%B7%D0%BE%D1%80%D0%BE%D0%BD%20%D0%BC%D1%83%D1%88%D1%82%D0%B0%D1%80%D0%B8%CC%84.%D0%97%D1%83%D0%B4%D0%A1%D0%9C%D0%A1%20%E2%80%94%20%D1%80%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%D0%B8%20%D0%BE%D0%BC%D0%BC%D0%B0%D0%B2%D0%B8%D0%B8%20%D0%A1%D0%9C%D0%A1%20%D0%B1%D0%B0%D1%80%D0%BE%D0%B8%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%B4%D0%B0%D1%80%20%D1%81%D0%B0%D1%80%D0%BE%D1%81%D0%B0%D1%80%D0%B8%20%D0%A2%D0%BE%D2%B7%D0%B8%D0%BA%D0%B8%D1%81%D1%82%D0%BE%D0%BD.mp4",
+    "src": "/content/DushanbeSoft/reel_18.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_18.webp",
     "title": "📩 Як паём — ҳазорон муштарӣ.ЗудСМС — рассылкаи оммавии СМС б...",
     "caption": "📩 Як паём — ҳазорон муштарӣ.ЗудСМС — рассылкаи оммавии СМС барои бизнес дар саросари Тоҷикистон",
@@ -176,7 +176,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_19",
     "type": "video",
-    "src": "/content/DushanbeSoft/%F0%9F%94%8D%F0%9F%93%88%20SEO%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%20%D0%BA%D0%BB%D1%8E%D1%87%20%D0%BA%20%D1%83%D1%81%D0%BF%D0%B5%D1%85%D1%83%20%D0%B2%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5%21%D0%95%D1%81%D0%BB%D0%B8%20%D1%82%D1%8B%20%D0%B2%D0%B5%D0%B4%D0%B5%D1%88%D1%8C%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%B8%D0%BB%D0%B8%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D1%85%D0%BE%D1%87%D0%B5%D1%88%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%83.mp4",
+    "src": "/content/DushanbeSoft/reel_19.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_19.webp",
     "title": "🔍📈 SEO оптимизация- ключ к успеху в интернете!Если ты ведешь б...",
     "caption": "🔍📈 SEO оптимизация- ключ к успеху в интернете!Если ты ведешь бизнес или просто хочешь продвину",
@@ -185,7 +185,7 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_20",
     "type": "video",
-    "src": "/content/DushanbeSoft/%F0%9F%9A%80%20%D0%9D%D0%B0%D1%88%D0%B0%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%20%E2%80%94%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C%20%D1%83%D0%BD%D0%B8%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%B8%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D1%8C%D1%8E%20%D1%83%D0%B4%D0%BE%D0%B2%D0%BB%D0%B5%D1%82%D0%B2%D0%BE%D1%80.mp4",
+    "src": "/content/DushanbeSoft/reel_20.mp4",
     "thumb": "/content/DushanbeSoft/thumbnails/reel_20.webp",
     "title": "🚀 Наша задача — разработать уникальные и функциональные платфо...",
     "caption": "🚀 Наша задача — разработать уникальные и функциональные платформы, которые полностью удовлетвор",
@@ -194,8 +194,8 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_21",
     "type": "image",
-    "src": "/content/DushanbeSoft/%D0%9C%D1%83%D0%B2%D0%B0%D1%84%D1%84%D0%B0%D2%9B%D0%B8%D1%8F%D1%82%D0%B8%20%D0%BD%D0%B0%D0%B2%D0%B8%20%D0%B4%D0%B0%D1%81%D1%82%D0%B0%D0%B8%20Dushanbe-Soft%21%20%D0%9C%D0%BE%20%D0%B1%D0%B0%D1%80%D0%BE%D0%B8%20%D1%80%D0%B0%D1%81%D0%B8%D0%B4%D0%B0%D0%BD%20%D0%B1%D0%B0%20%D2%B3%D0%B0%D0%B4%D0%B0%D1%84%D2%B3%D0%BE%D0%B8%20%D0%B0%D1%81%D0%BB%D0%B8%D0%B8%20%D1%85%D1%83%D0%B4%20%D0%B7%D0%B0%D2%B3%D0%BC%D0%B0%D1%82%D2%B3%D0%BE%D0%B8%20%D1%88%D0%B0%D0%B1%D0%BE%D0%BD%D0%B0%D1%80.jpg",
-    "thumb": "/content/DushanbeSoft/%D0%9C%D1%83%D0%B2%D0%B0%D1%84%D1%84%D0%B0%D2%9B%D0%B8%D1%8F%D1%82%D0%B8%20%D0%BD%D0%B0%D0%B2%D0%B8%20%D0%B4%D0%B0%D1%81%D1%82%D0%B0%D0%B8%20Dushanbe-Soft%21%20%D0%9C%D0%BE%20%D0%B1%D0%B0%D1%80%D0%BE%D0%B8%20%D1%80%D0%B0%D1%81%D0%B8%D0%B4%D0%B0%D0%BD%20%D0%B1%D0%B0%20%D2%B3%D0%B0%D0%B4%D0%B0%D1%84%D2%B3%D0%BE%D0%B8%20%D0%B0%D1%81%D0%BB%D0%B8%D0%B8%20%D1%85%D1%83%D0%B4%20%D0%B7%D0%B0%D2%B3%D0%BC%D0%B0%D1%82%D2%B3%D0%BE%D0%B8%20%D1%88%D0%B0%D0%B1%D0%BE%D0%BD%D0%B0%D1%80.jpg",
+    "src": "/content/DushanbeSoft/media_21.jpg",
+    "thumb": "/content/DushanbeSoft/media_21.jpg",
     "title": "Муваффақияти нави дастаи Dushanbe-Soft! Мо барои расидан ба ҳа...",
     "caption": "Муваффақияти нави дастаи Dushanbe-Soft! Мо барои расидан ба ҳадафҳои аслии худ заҳматҳои шабонар",
     "duration": null
@@ -203,8 +203,8 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_22",
     "type": "image",
-    "src": "/content/DushanbeSoft/%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B8%CC%86%D1%82%D0%B0%20%E2%80%94%20%D1%8D%D1%82%D0%BE%20%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B5%2C%20%D0%BE%20%D1%87%D0%B5%D0%BC%20%D0%B7%D0%B0%D0%B4%D1%83%D0%BC%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%D1%81%D1%8F%20%D0%B2%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%86%D1%8B%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20.jpg",
-    "thumb": "/content/DushanbeSoft/%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B8%CC%86%D1%82%D0%B0%20%E2%80%94%20%D1%8D%D1%82%D0%BE%20%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B5%2C%20%D0%BE%20%D1%87%D0%B5%D0%BC%20%D0%B7%D0%B0%D0%B4%D1%83%D0%BC%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%D1%81%D1%8F%20%D0%B2%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%86%D1%8B%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20.jpg",
+    "src": "/content/DushanbeSoft/media_22.jpg",
+    "thumb": "/content/DushanbeSoft/media_22.jpg",
     "title": "Разработка корпоративного сайта — это практически первое, о ч...",
     "caption": "Разработка корпоративного сайта — это практически первое, о чем задумываются владельцы малого и",
     "duration": null
@@ -212,8 +212,8 @@ export const mediaGalleryItems: MediaItem[] = [
   {
     "id": "media_23",
     "type": "image",
-    "src": "/content/DushanbeSoft/%F0%9F%94%94%20%D0%9A%D0%B0%D0%B1%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D1%82%D0%B5%D0%BB%D0%B5%D0%B2%D0%B8%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%21%20%E2%9C%85%20%20%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20POS-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%20%E2%9C%85%20%20%D0%A3%D1%87%D0%B5%CC%88%D1%82%20%D0%B1%D0%B0%D0%B7%D1%8B%20%D0%B0%D0%B1%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%E2%9C%85%20%20%D0%A3%D1%87%D0%B5%CC%88.jpg",
-    "thumb": "/content/DushanbeSoft/%F0%9F%94%94%20%D0%9A%D0%B0%D0%B1%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D1%82%D0%B5%D0%BB%D0%B5%D0%B2%D0%B8%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%21%20%E2%9C%85%20%20%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20POS-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%20%E2%9C%85%20%20%D0%A3%D1%87%D0%B5%CC%88%D1%82%20%D0%B1%D0%B0%D0%B7%D1%8B%20%D0%B0%D0%B1%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%E2%9C%85%20%20%D0%A3%D1%87%D0%B5%CC%88.jpg",
+    "src": "/content/DushanbeSoft/media_23.jpg",
+    "thumb": "/content/DushanbeSoft/media_23.jpg",
     "title": "🔔 Кабельное телевидение! ✅  Возможности оплаты через POS-терми...",
     "caption": "🔔 Кабельное телевидение! ✅  Возможности оплаты через POS-терминал ✅  Учёт базы абонентов ✅  Учё",
     "duration": null
