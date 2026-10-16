@@ -20,15 +20,30 @@ import {
 } from "../../utils/seo";
 import { LOCALE_META, localeDir, localeHreflang } from "../../utils/locales";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const { t } = await initTranslations(lang, ["common"]);
 
-  const defaultTitle = t("seo.default_title", "Dushanbe Soft | Разработка программного обеспечения");
-  const defaultDesc = t("seo.default_description", "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.");
+  const defaultTitle = t(
+    "seo.default_title",
+    "Dushanbe Soft | Разработка программного обеспечения",
+  );
+  const defaultDesc = t(
+    "seo.default_description",
+    "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.",
+  );
   // Site-wide defaults only. Canonical, hreflang, robots and og:url belong to
   // each page; inheriting the home page's would point other URLs (e.g. 404s) at "/".
-  const page = buildPageMetadata({ lang, path: "", title: defaultTitle, description: defaultDesc });
+  const page = buildPageMetadata({
+    lang,
+    path: "",
+    title: defaultTitle,
+    description: defaultDesc,
+  });
   delete page.alternates;
   delete page.robots;
   if (page.openGraph) delete page.openGraph.url;
@@ -38,10 +53,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     metadataBase: new URL(SITE_URL),
     title: {
       default: defaultTitle,
-      template: `%s | ${SITE_NAME}`
+      template: `%s | ${SITE_NAME}`,
     },
     applicationName: SITE_NAME,
-    keywords: t("seo.keywords", "разработка ПО, создание сайтов, мобильные приложения, автоматизация бизнеса, Душанбе, Таджикистан, Dushanbe Soft, IT компания, web development, mobile development, software engineering"),
+    keywords: t(
+      "seo.keywords",
+      "разработка ПО, создание сайтов, мобильные приложения, автоматизация бизнеса, Душанбе, Таджикистан, Dushanbe Soft, IT компания, web development, mobile development, software engineering",
+    ),
     authors: [{ name: SITE_NAME, url: SITE_URL }],
     creator: SITE_NAME,
     publisher: SITE_NAME,
@@ -54,6 +72,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
       yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    },
+    icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/icon.png', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-icon.png' },
+      ],
     },
     appleWebApp: {
       capable: true,
@@ -69,12 +96,12 @@ export const viewport: Viewport = {
 };
 
 export function generateStaticParams() {
-  return i18nConfig.locales.map(locale => ({ lang: locale }));
+  return i18nConfig.locales.map((locale) => ({ lang: locale }));
 }
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: {
   children: ReactNode;
   params: Promise<{ lang: string }>;
@@ -87,18 +114,23 @@ export default async function RootLayout({
   // ProfessionalService) and the website it publishes. Pages reference
   // these by @id instead of re-declaring the organization.
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        '@type': ['Organization', 'ProfessionalService'],
-        '@id': ORGANIZATION_ID,
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": ORGANIZATION_ID,
         name: COMPANY.name,
         legalName: COMPANY.legalName,
-        alternateName: ['Dushanbe-Soft', 'DushanbeSoft', 'Душанбе Софт', 'Private Enterprise "Dushanbe Soft"'],
+        alternateName: [
+          "Dushanbe-Soft",
+          "DushanbeSoft",
+          "Душанбе Софт",
+          'Private Enterprise "Dushanbe Soft"',
+        ],
         url: SITE_URL,
         logo: {
-          '@type': 'ImageObject',
-          url: `${SITE_URL}/logo.png`,
+          "@type": "ImageObject",
+          url: `${SITE_URL}/logo-rm-bg.png`,
           width: 512,
           height: 512,
         },
@@ -108,59 +140,68 @@ export default async function RootLayout({
         foundingDate: COMPANY.foundingDate,
         telephone: COMPANY.telephone,
         email: COMPANY.email,
-        priceRange: '$$',
-        currenciesAccepted: 'TJS, USD',
+        priceRange: "$$",
+        currenciesAccepted: "TJS, USD",
         address: {
-          '@type': 'PostalAddress',
+          "@type": "PostalAddress",
           addressLocality: COMPANY.addressLocality,
           addressRegion: COMPANY.addressRegion,
           addressCountry: COMPANY.addressCountry,
         },
         areaServed: [
-          { '@type': 'Country', name: 'Tajikistan' },
-          { '@type': 'Place', name: 'Central Asia' },
+          { "@type": "Country", name: "Tajikistan" },
+          { "@type": "Place", name: "Central Asia" },
         ],
         contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'customer service',
+          "@type": "ContactPoint",
+          contactType: "customer service",
           telephone: COMPANY.telephone,
           email: COMPANY.email,
-          areaServed: 'TJ',
-          availableLanguage: ['Russian', 'Tajik', 'English'],
+          areaServed: "TJ",
+          availableLanguage: ["Russian", "Tajik", "English"],
         },
         knowsAbout: [
-          'Разработка программного обеспечения',
-          'Создание сайтов',
-          'Разработка мобильных приложений',
-          'CRM',
-          'ERP',
-          'SMS-рассылки',
-          'UI/UX дизайн',
-          'Кибербезопасность',
-          'Автоматизация бизнеса',
+          "Разработка программного обеспечения",
+          "Создание сайтов",
+          "Разработка мобильных приложений",
+          "CRM",
+          "ERP",
+          "SMS-рассылки",
+          "UI/UX дизайн",
+          "Кибербезопасность",
+          "Автоматизация бизнеса",
         ],
         sameAs: COMPANY.sameAs,
         award: COMPANY.worldBankAward.text,
         subjectOf: {
-          '@type': 'WebPage',
-          name: 'World Bank contract award notice OP00455715',
+          "@type": "WebPage",
+          name: "World Bank contract award notice OP00455715",
           url: COMPANY.worldBankAward.url,
-          publisher: { '@type': 'Organization', name: 'The World Bank', url: 'https://www.worldbank.org' },
+          publisher: {
+            "@type": "Organization",
+            name: "The World Bank",
+            url: "https://www.worldbank.org",
+          },
         },
       },
       {
-        '@type': 'WebSite',
-        '@id': WEBSITE_ID,
+        "@type": "WebSite",
+        "@id": WEBSITE_ID,
         url: SITE_URL,
         name: SITE_NAME,
         inLanguage: Object.values(LOCALE_META).map((m) => m.hreflang),
-        publisher: { '@id': ORGANIZATION_ID },
+        publisher: { "@id": ORGANIZATION_ID },
       },
     ],
   };
 
   return (
-    <html lang={inLanguage} dir={localeDir(lang)} data-theme="dark" suppressHydrationWarning>
+    <html
+      lang={inLanguage}
+      dir={localeDir(lang)}
+      data-theme="dark"
+      suppressHydrationWarning
+    >
       <head>
         {/* Apply the saved theme before first paint to avoid a flash */}
         <InlineScript
@@ -171,7 +212,9 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }}
         />
       </head>
-      <body className={`${tektur.variable} ${nunitoSans.variable} ${vazirmatn.variable}`}>
+      <body
+        className={`${tektur.variable} ${nunitoSans.variable} ${vazirmatn.variable}`}
+      >
         {children}
         <Script
           id="livechat-widget"
