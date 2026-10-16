@@ -41,14 +41,11 @@ function TypedTitle({ text }: { text: string }) {
   return <span className={styles.typedText}>{typed}</span>;
 }
 
-import dynamic from "next/dynamic";
 import { contentLocale } from "@/utils/locales";
-// Loaded after hydration: the modal is not needed for the first paint.
-const ContactModal = dynamic(() => import("../ContactModal/ContactModal"), { ssr: false });
+import { TELEGRAM_URL } from "@/const/contacts";
 
 export default function HeroContent() {
   const { t, i18n } = useTranslation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const fullTitle = t(
     "hero.subtitle",
     "Разрабатываем и внедряем современные IT-решения",
@@ -74,12 +71,14 @@ export default function HeroContent() {
      
 
         <div className={styles.buttons}>
-          <button
-            onClick={() => setIsModalOpen(true)}
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.btnPrimary}
           >
             {t("hero.btnPrimary", "Получить консультацию")} <ArrowRight />
-          </button>
+          </a>
           <a 
             href={`/files/${contentLocale(i18n.language).toUpperCase()} - Dushanbe- Soft.pdf`}
             download
@@ -92,7 +91,6 @@ export default function HeroContent() {
         </div>
       </div>
       <HeroMarquee />
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
