@@ -8,11 +8,11 @@ import { FaSearchPlus, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const awards = [
   {
-    id: 'indian_tech_1',
-    title: 'Indian Technical',
+    id: 'completion',
+    title: 'Certificate of Completion',
     description: 'Certificate',
-    year: '2022',
-    image: '/files/indian-technical-2022.jpg',
+    year: '2023',
+    image: '/files/sertificate-of-completion-2023.jpg',
   },
   {
     id: 'indian_tech_2',
@@ -22,6 +22,13 @@ const awards = [
     image: '/files/indian-technical-government-of-india-2022.jpg',
   },
   {
+    id: 'golden_travel',
+    title: 'Golden Travel',
+    description: 'Letter of Recommendation',
+    year: '2023',
+    image: '/files/letter-of-recommendation-golden-travel.jpg',
+  },
+  {
     id: 'fmfb',
     title: 'First MicroFinance Bank',
     description: 'Letter of Recommendation',
@@ -29,11 +36,11 @@ const awards = [
     image: '/files/letter-of-recommendation-first-micro-finance-bank-2019.jpg',
   },
   {
-    id: 'golden_travel',
-    title: 'Golden Travel',
-    description: 'Letter of Recommendation',
-    year: '2023',
-    image: '/files/letter-of-recommendation-golden-travel.jpg',
+    id: 'indian_tech_1',
+    title: 'Indian Technical',
+    description: 'Certificate',
+    year: '2022',
+    image: '/files/indian-technical-2022.jpg',
   },
   {
     id: 'megafon',
@@ -62,13 +69,6 @@ const awards = [
     description: 'Letter of Recommendation',
     year: '2022',
     image: '/files/letter-of-recommendation-sunduktv-2022.png',
-  },
-  {
-    id: 'completion',
-    title: 'Certificate of Completion',
-    description: 'Certificate',
-    year: '2023',
-    image: '/files/sertificate-of-completion-2023.jpg',
   }
 ];
 
