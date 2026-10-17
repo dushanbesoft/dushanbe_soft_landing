@@ -170,7 +170,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          {/* Right Column - Form */}
+          {/* Right Column - Form
           <div className={styles.rightCol}>
             <div className={styles.formHeader}>
               <div className={styles.formIcon}>
@@ -231,7 +231,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </svg>
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
         </motion.div>
         </motion.div>
