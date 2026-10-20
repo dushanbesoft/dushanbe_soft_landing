@@ -70,7 +70,9 @@ export async function generateMetadata({
       telephone: false,
     },
     verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      google:
+        process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+        "y1VCk1jNGPoz_waTRHtW3NC0p6-BN9MlRPuiImDxzMo",
       yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
     },
     icons: {
