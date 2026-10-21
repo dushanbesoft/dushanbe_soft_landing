@@ -498,6 +498,21 @@
         "Admin panel (ERP/CRM) development",
         "Financial and inventory management integration"
       ]
+    },
+    "omodatj": {
+      "title": "Omoda AI (Omoda.tj)",
+      "description": "Intelligent EdTech web platform and mobile exam simulator on iOS and Android for Tajikistan's centralized Dovtalab (IMD/NTC) university entrance examinations. Features adaptive testing, AI-powered problem breakdowns, knowledge duels, and an official score calculator.",
+      "tasks": [
+        "Information architecture and UX/UI platform design",
+        "High-conversion promotional landing page",
+        "Student personal portal and dashboard",
+        "IMD exam simulator and NTC score calculator",
+        "5-cluster question bank integration and digital resource library"
+      ]
+    },
+    "omoda": {
+      "title": "Omoda AI (Omoda.tj)",
+      "description": "Intelligent EdTech web platform and mobile exam simulator on iOS and Android for Tajikistan's centralized Dovtalab (IMD/NTC) university entrance examinations."
     }
   },
   "partners": {

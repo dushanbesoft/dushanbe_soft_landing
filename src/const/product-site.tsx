@@ -4,6 +4,7 @@ import { zudsmsLandingScreens } from "./zudsms-landing-screens";
 import { zudsmsAccountScreens } from "./zudsms-account-screens";
 import { zudyobScreens } from "./zudyob-screens";
 import { mablagtjWebScreens, mablagtjAdminScreens } from "./mablagtj-screens";
+import { omodatjWebScreens, omodatjAdminScreens } from "./omodatj-screens";
 
 export interface ProductSiteItem {
   imageSrc: string;
@@ -6466,6 +6467,34 @@ This example shows how entered fields relate to the chat’s appearance. Placing
           tj: "Панели идоракунӣ",
         },
         items: mablagtjAdminScreens,
+      },
+    ],
+  },
+  {
+    imageSrc: "/images/projects/omoda-bunner.png",
+    bannerSrc: "/images/projects/omoda-bunner.png",
+    year: "2025",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "EdTech / LMS",
+      "AI Assistant",
+      "Mobile App",
+    ],
+    slug: "omodatj",
+    projectComponents: [
+      {
+        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        items: omodatjWebScreens,
+      },
+      {
+        tabName: {
+          ru: "Панель управления",
+          en: "Admin Panel",
+          tj: "Панели идоракунӣ",
+        },
+        items: omodatjAdminScreens,
       },
     ],
   },

@@ -25,6 +25,7 @@ export const portfolioNav: HeaderNavItem[] = [
   "mavji-somon",
   "somon-tv",
   "onlinepay",
+  "omodatj",
   "rushdikuhiston",
   "zenith-valuation",
 ].map((slug) => ({ path: `cases/${slug}`, labelKey: `projects.${slug}.title`, fallback: slug }));
