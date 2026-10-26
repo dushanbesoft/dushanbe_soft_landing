@@ -98,6 +98,7 @@ export async function generateMetadata({
     description: truncate(description),
     image: { url: project.imageSrc, alt: title },
     type: "article",
+    contentPage: true,
   });
 }
 

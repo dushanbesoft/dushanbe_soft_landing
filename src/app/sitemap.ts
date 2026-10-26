@@ -41,11 +41,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   add('media', { changeFrequency: 'monthly', priority: 0.5 });
 
   ProductSite.forEach((project) => {
-    add(`cases/${project.slug}`, {
-      changeFrequency: 'yearly',
-      priority: 0.7,
-      images: [absoluteUrl(project.imageSrc)],
-    });
+    add(
+      `cases/${project.slug}`,
+      {
+        changeFrequency: 'yearly',
+        priority: 0.7,
+        images: [absoluteUrl(project.imageSrc)],
+      },
+      true,
+    );
 
     project.projectComponents?.forEach((group) => {
       group.items.forEach((item) => {
