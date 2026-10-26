@@ -329,3 +329,29 @@ export const orderedMediaItems: MediaItem[] = [
   ...orderIds.map((id) => mediaGalleryItems.find((i) => i.id === id)).filter((i): i is MediaItem => Boolean(i)),
   ...mediaGalleryItems.filter((i) => !orderIds.includes(i.id) && i.id !== "media_5"),
 ];
+
+export function getMediaById(id: string): MediaItem | undefined {
+  return mediaGalleryItems.find((item) => item.id === id);
+}
+
+export function getVideoItems(): MediaItem[] {
+  return mediaGalleryItems.filter((item) => item.type === "video");
+}
+
+export function getRelatedMedia(currentId: string, limit = 4): MediaItem[] {
+  return orderedMediaItems
+    .filter((item) => item.id !== currentId && item.type === "video")
+    .slice(0, limit);
+}
+
+export function formatDurationIso(duration?: string | null): string | undefined {
+  if (!duration) return undefined;
+  const parts = duration.split(":").map(Number);
+  if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+    const [min, sec] = parts;
+    if (min > 0) return `PT${min}M${sec}S`;
+    return `PT${sec}S`;
+  }
+  return undefined;
+}
+

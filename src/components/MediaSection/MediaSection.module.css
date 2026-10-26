@@ -461,10 +461,31 @@
   margin: 0;
 }
 
+.lightboxMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .lightboxCounter {
   color: var(--text-muted);
   font-size: 13px;
   font-family: var(--font-nunito-sans), sans-serif;
+}
+
+.lightboxPageLink {
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-nunito-sans), sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.lightboxPageLink:hover {
+  text-decoration: underline;
+  opacity: 0.85;
 }
 
 .closeBtn {

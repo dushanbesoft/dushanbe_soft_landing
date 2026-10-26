@@ -323,9 +323,17 @@ export default function MediaSection({ showAll = false, lang = "ru" }: MediaSect
             </div>
 
             <div className={styles.lightboxFooter}>
-              <div className={styles.lightboxCounter}>
-                {activeList.findIndex((i) => i.id === activeItem.id) + 1} / {activeList.length}
-                {activeItem.duration && ` • ⏱ ${activeItem.duration}`}
+              <div className={styles.lightboxMetaRow}>
+                <div className={styles.lightboxCounter}>
+                  {activeList.findIndex((i) => i.id === activeItem.id) + 1} / {activeList.length}
+                  {activeItem.duration && ` • ⏱ ${activeItem.duration}`}
+                </div>
+                <Link
+                  href={lang === "ru" ? `/media/${activeItem.id}` : `/${lang}/media/${activeItem.id}`}
+                  className={styles.lightboxPageLink}
+                >
+                  {t("media.openWatchPage", "Страница видео ↗")}
+                </Link>
               </div>
               <p className={styles.lightboxTitle}>{mediaTitle(activeItem, lang)}</p>
               <p className={styles.lightboxCaption}>{activeItem.caption}</p>

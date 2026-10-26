@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { ProductSite } from '../const/product-site';
 import { jobsData } from '../const/jobsData';
+import { mediaGalleryItems } from '../const/media-content';
 import { newsList } from '../const/news-data';
 import { servicesList } from '../const/services-data';
 import { absoluteUrl, languageAlternates, localeUrl, publishedLocales, ruDateToIso } from '../utils/seo';
@@ -72,6 +73,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   jobsData.forEach((job) => {
     add(`jobs/${job.slug}`, { changeFrequency: 'weekly', priority: 0.6 }, true);
   });
+
+  mediaGalleryItems
+    .filter((item) => item.type === 'video')
+    .forEach((item) => {
+      add(
+        `media/${item.id}`,
+        {
+          changeFrequency: 'monthly',
+          priority: 0.6,
+          images: [absoluteUrl(item.thumb)],
+        },
+        true,
+      );
+    });
 
   return entries;
 }
