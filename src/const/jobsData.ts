@@ -2,6 +2,8 @@ export const jobsData = [
   {
     slug: "fullstack-web-php-developer",
     datePosted: "2026-10-05",
+    validThrough: "2027-10-05T00:00:00+05:00",
+    employmentType: "FULL_TIME",
     categoryValue: "it",
     categoryLabel: "IT",
     title: "Fullstack Web PHP developer",
@@ -134,6 +136,8 @@ Drupal — webtrees
   {
     slug: "frontend-developer",
     datePosted: "2026-10-05",
+    validThrough: "2027-10-05T00:00:00+05:00",
+    employmentType: "FULL_TIME",
     categoryValue: "it",
     categoryLabel: "IT",
     title: "FrontEnd Developer",

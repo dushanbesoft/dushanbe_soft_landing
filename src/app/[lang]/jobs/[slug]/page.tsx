@@ -137,6 +137,32 @@ export default async function JobDetailsPage({
         "<br>",
       ),
       datePosted: job.datePosted,
+      validThrough:
+        (job as any).validThrough ||
+        new Date(
+          new Date(job.datePosted || Date.now()).setFullYear(
+            new Date(job.datePosted || Date.now()).getFullYear() + 1,
+          ),
+        ).toISOString(),
+      employmentType: (job as any).employmentType || "FULL_TIME",
+      ...((job as any).baseSalary
+        ? {
+            baseSalary: {
+              "@type": "MonetaryAmount",
+              currency: (job as any).baseSalary.currency || "TJS",
+              value: {
+                "@type": "QuantitativeValue",
+                ...((job as any).baseSalary.value !== undefined
+                  ? { value: (job as any).baseSalary.value }
+                  : {
+                      minValue: (job as any).baseSalary.minValue,
+                      maxValue: (job as any).baseSalary.maxValue,
+                    }),
+                unitText: (job as any).baseSalary.unitText || "MONTH",
+              },
+            },
+          }
+        : {}),
       hiringOrganization: {
         "@type": "Organization",
         "@id": ORGANIZATION_ID,
