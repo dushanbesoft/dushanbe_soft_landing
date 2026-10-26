@@ -68,7 +68,7 @@ export default async function Page({
         <PricingSection lang={lang} />
         <ReviewsSection lang={lang} />
         <ProcessSection lang={lang} />
-        <JobsSection lang={lang} />
+        {/* <JobsSection lang={lang} /> */}
         <AwardsSection lang={lang} />
         <TeamSection />
         <MediaSection lang={lang} />
