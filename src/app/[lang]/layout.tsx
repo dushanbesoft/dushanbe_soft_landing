@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
+import LiveChatWidget from "../../components/LiveChatWidget";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../../styles/globals.css";
 import { i18nConfig } from "../../../i18nConfig";
@@ -218,11 +218,7 @@ export default async function RootLayout({
         className={`${tektur.variable} ${nunitoSans.variable} ${vazirmatn.variable}`}
       >
         {children}
-        <Script
-          id="livechat-widget"
-          src="https://core.livechat.tj/widget/IgW317eT_p"
-          strategy="lazyOnload"
-        />
+        <LiveChatWidget />
       </body>
       <GoogleAnalytics gaId="G-BC9JE7JMKM" />
     </html>
