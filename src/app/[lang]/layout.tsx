@@ -36,8 +36,7 @@ export async function generateMetadata({
     "seo.default_description",
     "Инновационные IT-решения для бизнеса. Разработка программного обеспечения, сайтов, ERP систем и мобильных приложений в Таджикистане.",
   );
-  // Site-wide defaults only. Canonical, hreflang, robots and og:url belong to
-  // each page; inheriting the home page's would point other URLs (e.g. 404s) at "/".
+ 
   const page = buildPageMetadata({
     lang,
     path: "",
@@ -112,9 +111,6 @@ export default async function RootLayout({
   const { t } = await initTranslations(lang, ["common"]);
   const inLanguage = localeHreflang(lang);
 
-  // One entity graph for the whole site: the organization (as a local
-  // ProfessionalService) and the website it publishes. Pages reference
-  // these by @id instead of re-declaring the organization.
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -205,7 +201,6 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Apply the saved theme before first paint to avoid a flash */}
         <InlineScript
           html={`try{var t=localStorage.getItem("ds-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`}
         />
