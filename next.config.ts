@@ -27,6 +27,37 @@ const nextConfig: NextConfig = {
         destination: "https://dushanbe-soft.tj/:path*",
         permanent: true,
       },
+      // LiveChat TJ was rebranded as Kontakio. These rules sit before the
+      // /ru/* rule so old /ru/... URLs reach the new page in a single hop.
+      { source: "/cases/livechat-tj", destination: "/cases/kontakio", permanent: true },
+      // screens that exist under the same name in the new case keep their deep link
+      { source: "/cases/livechat-tj/:sub(hero|features|how-it-works|pricing|login|register)", destination: "/cases/kontakio/:sub", permanent: true },
+      { source: "/ru/cases/livechat-tj/:sub(hero|features|how-it-works|pricing|login|register)", destination: "/cases/kontakio/:sub", permanent: true },
+      {
+        source: "/:lang(en|tj|uz|kk|ky|tk|fa|ar)/cases/livechat-tj/:sub(hero|features|how-it-works|pricing|login|register)",
+        destination: "/:lang/cases/kontakio/:sub",
+        permanent: true,
+      },
+      { source: "/cases/livechat-tj/:sub*", destination: "/cases/kontakio", permanent: true },
+      { source: "/ru/cases/livechat-tj", destination: "/cases/kontakio", permanent: true },
+      { source: "/ru/cases/livechat-tj/:sub*", destination: "/cases/kontakio", permanent: true },
+      {
+        source: "/:lang(en|tj|uz|kk|ky|tk|fa|ar)/cases/livechat-tj",
+        destination: "/:lang/cases/kontakio",
+        permanent: true,
+      },
+      {
+        source: "/:lang(en|tj|uz|kk|ky|tk|fa|ar)/cases/livechat-tj/:sub*",
+        destination: "/:lang/cases/kontakio",
+        permanent: true,
+      },
+      { source: "/news/livechat", destination: "/news/kontakio", permanent: true },
+      { source: "/ru/news/livechat", destination: "/news/kontakio", permanent: true },
+      {
+        source: "/:lang(en|tj|uz|kk|ky|tk|fa|ar)/news/livechat",
+        destination: "/:lang/news/kontakio",
+        permanent: true,
+      },
       // Russian is the unprefixed default locale: /ru/* → /*
       { source: "/ru", destination: "/", permanent: true },
       { source: "/ru/:path*", destination: "/:path*", permanent: true },

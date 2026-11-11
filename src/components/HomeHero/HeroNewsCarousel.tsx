@@ -11,12 +11,12 @@ import { ProductSite } from "@/const/product-site";
 import { localeDir } from "@/utils/locales";
 import { localePath, localeUrl } from "@/utils/seo";
 
-// Banner order: the five latest/pinned news, then extra news and portfolio cases.
+// Banner order: lead news first, then the five latest/pinned news, extra news and portfolio cases.
+const LEAD_NEWS = ["kontakio"];
 const EXTRA_NEWS = ["zudsms"];
 const CASE_SLIDES = [
   { slug: "president", heroImage: "/images/news/president-banner.webp", mobileImage: "/images/projects/president/banner_main.jpg" },
 ];
-const TRAILING_NEWS = ["livechat"];
 
 type Slide = {
   key: string;
@@ -66,10 +66,10 @@ const caseSlide = ({ slug, heroImage, mobileImage }: (typeof CASE_SLIDES)[number
 };
 
 const SLIDES: Slide[] = [
+  ...LEAD_NEWS.flatMap(newsSlide),
   ...newsList.slice(0, 5).flatMap((n) => newsSlide(n.slug)),
   ...EXTRA_NEWS.flatMap(newsSlide),
   ...CASE_SLIDES.flatMap(caseSlide),
-  ...TRAILING_NEWS.flatMap(newsSlide),
 ].filter((slide, i, all) => all.findIndex((s) => s.key === slide.key) === i);
 const AUTOPLAY_MS = 7000;
 const SWIPE_THRESHOLD_PX = 50;

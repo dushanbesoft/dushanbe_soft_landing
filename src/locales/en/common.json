@@ -103,18 +103,18 @@
         "REST API integration for automatic message sending from external CRM/ERP systems"
       ]
     },
-    "livechat": {
-      "title": "LiveChat TJ - Online Chat",
-      "subtitle": "LiveChat TJ",
-      "description": "A web service and online chat widget for business that connects your website visitors with your team in real time. LiveChat TJ automates customer support, improves service quality, and helps increase sales through instant messaging.",
+    "kontakio": {
+      "title": "Kontakio — AI Platform for Customer Communication",
+      "subtitle": "kontakio.com",
+      "description": "Kontakio brings website chat, Telegram, a built-in CRM, an AI operator and an AI assistant together in one window. The AI operator answers customers from your knowledge base and hands the conversation to a person when needed, while the AI assistant helps operators write, edit and translate replies.",
       "tags": [
-        "System architecture development",
-        "High system stability",
-        "Integration of online chat and widgets",
-        "Mobile device support",
-        "Personal account and analytics",
-        "Protection against DDoS attacks",
-        "Multilingual support"
+        "AI operator and AI assistant",
+        "Website chat and Telegram",
+        "Built-in CRM",
+        "Notifications and replies from Telegram",
+        "Multiple websites in one account",
+        "Statistics and analytics",
+        "Widget in 8 languages"
       ]
     },
     "tvcrm": {
@@ -372,21 +372,9 @@
       "title": "Mavji Somon TV OTT",
       "description": "Online platform and streaming service for watching movies, series, and TV channels. The service provides access to high-quality multimedia content across various devices."
     },
-    "livechat-tj": {
-      "title": "LiveChat TJ - Online Chat",
-      "description": "LiveChat TJ is a web service and online chat platform for businesses that provides real-time communication between companies and their customers. The platform automates customer support, improves service quality, and helps increase sales through instant messaging.",
-      "gallery": [
-        "LiveChat landing hero: the “Online chat to connect with your customers” headline and the Try for free button",
-        "Solution block: preview of the LiveChat operator dialogs panel on a laptop and the chat widget on a phone",
-        "Features section: capability cards — instant reply, smart widget, analytics, teamwork, reply templates and CRM integrations",
-        "How it works block: four steps to connect the online chat to your website",
-        "Customization section: adapting the online chat design to your brand style with an operator interface preview",
-        "Pricing section: Starter, Pro and Business plans with their feature lists",
-        "Integrations section: connecting messengers, CRM systems, website builders and a custom API",
-        "Benefits block: sales growth, lower costs and attracting more customers",
-        "Support section: contact options (email, 24/7 chat, documentation) and frequently asked questions",
-        "“Why LiveChat” section highlighting key features together with the site footer"
-      ]
+    "kontakio": {
+      "title": "Kontakio — AI Platform for Customer Communication",
+      "description": "Kontakio is an AI platform for customer communication: website chat, a Telegram bot, notifications, SMS via ZudSMS, a built-in CRM, team chat and statistics in one dashboard. The AI operator answers customers from the knowledge base and hands off to a person, while the AI assistant helps operators write, translate and summarise conversations. Dushanbe Soft built the web dashboard, the embeddable widget in 8 languages, real-time messaging over sockets and the AI modules, as well as an iOS and Android mobile app that is coming soon to the App Store and Google Play."
     },
     "telecomm": {
       "title": "Telecomm Technology",
@@ -665,7 +653,7 @@
     "default_description": "IT company in Dushanbe building websites, mobile apps, CRM and ERP systems for business and government in Tajikistan since 2017.",
     "keywords": "it companies in tajikistan, it company dushanbe, software development tajikistan, web development dushanbe, mobile app development, business automation, dushanbe soft, fintech, crm, erp",
     "products_title": "Ready-made IT Products for Business: SMS Gateway, Live Chat, CRM",
-    "products_description": "Dushanbe Soft products for businesses in Tajikistan: ZudSMS bulk SMS platform, LiveChat TJ online chat, CRM systems and payment solutions.",
+    "products_description": "Dushanbe Soft products for businesses in Tajikistan: ZudSMS bulk SMS platform, Kontakio online chat, CRM systems and payment solutions.",
     "cases_title": "Portfolio — Websites, Apps and Systems We Built",
     "cases_description": "Dushanbe Soft case studies: the President of Tajikistan website, Digital Tajikistan portal, Somon TV OTT platforms, fintech, CRM and mobile apps.",
     "news_title": "Company News — IT Projects and Development in Tajikistan",
@@ -885,12 +873,6 @@
         "title": "ZudSMS — Bulk SMS Messaging Platform",
         "desc": "High-load cloud platform for bulk and transactional SMS notifications for business with instant delivery across all operators in Tajikistan."
       },
-      "5": {
-        "tag": "SaaS & Chat",
-        "date": "05.12.2025",
-        "title": "LiveChat.TJ — Online Business Consultant",
-        "desc": "Omnichannel online chat widget and customer communication system for websites with web sockets and quick responses."
-      },
       "6": {
         "tag": "E-Commerce",
         "date": "22.12.2025",
@@ -920,6 +902,12 @@
         "date": "2024",
         "title": "«Navo» 96.5 FM radio website — navo.tj",
         "desc": "Dushanbe Soft built the website of «Navo» 96.5 FM radio: programs and rubrics, podcasts, music selections, photo and video galleries and a news feed."
+      },
+      "11": {
+        "tag": "SaaS & AI",
+        "date": "11.11.2026",
+        "title": "Kontakio is the new name of LiveChat TJ: an AI platform for customer communication",
+        "desc": "LiveChat TJ is now called Kontakio and runs on kontakio.com. Along with the new name, the platform gains an AI operator and an AI assistant, a built-in CRM and multi-site accounts, and a mobile app for iOS and Android is coming soon to the App Store and Google Play."
       }
     },
     "filterAll": "All",

@@ -52,7 +52,7 @@ export default function CasesGrid({
     "digital-tajikistan": "Государственные",
     sohktor: "Государственные",
     "mavji-somon": "Медиа",
-    "livechat-tj": "Корпоративные",
+    "kontakio": "Корпоративные",
     telecomm: "Корпоративные",
     navo: "Медиа",
     "somon-tv": "Медиа",

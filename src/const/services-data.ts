@@ -523,7 +523,7 @@ export const servicesList: ServiceItem[] = [
   {
     slug: "sms-gateway",
     icon: "/icons/sms.svg",
-    relatedCases: ["zudsms", "livechat-tj", "onlinepay"],
+    relatedCases: ["zudsms", "kontakio", "onlinepay"],
     content: {
       ru: {
         name: "SMS-рассылка и SMS-шлюз",

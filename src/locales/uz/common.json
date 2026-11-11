@@ -103,18 +103,18 @@
         "Tashqi CRM/ERP tizimlaridan xabarlarni avtomatik yuborish uchun REST API integratsiyasi"
       ]
     },
-    "livechat": {
-      "title": "LiveChat TJ - Onlayn chat",
-      "subtitle": "LiveChat TJ",
-      "description": "Sayt tashrifchilarini jamoangiz bilan real vaqtda bog‘laydigan biznes uchun veb-xizmat va onlayn chat vidjeti. LiveChat TJ mijozlarni qo‘llab-quvvatlashni avtomatlashtiradi, xizmat sifatini oshiradi va tezkor xabarlar orqali sotuvlarni ko‘paytirishga yordam beradi.",
+    "kontakio": {
+      "title": "Kontakio — mijozlar bilan muloqot uchun sun’iy intellekt platformasi",
+      "subtitle": "kontakio.com",
+      "description": "Kontakio saytdagi chat, Telegram, o‘rnatilgan CRM, SI-operator va SI-yordamchini bitta oynada birlashtiradi. SI-operator mijozlarga bilimlar bazangiz asosida javob beradi va kerak bo‘lganda suhbatni xodimga topshiradi, SI-yordamchi esa operatorlarga javoblarni yozish, tahrirlash va tarjima qilishda yordam beradi.",
       "tags": [
-        "Tizim arxitekturasini ishlab chiqish",
-        "Tizimning yuqori barqarorligi",
-        "Onlayn chat va vidjetlarni integratsiya qilish",
-        "Mobil qurilmalarni qo‘llab-quvvatlash",
-        "Shaxsiy kabinet va analitika",
-        "DDoS hujumlaridan himoya",
-        "Ko‘p tillilikni qo‘llab-quvvatlash"
+        "SI-operator va SI-yordamchi",
+        "Saytdagi chat va Telegram",
+        "O‘rnatilgan CRM",
+        "Telegram orqali bildirishnomalar va javoblar",
+        "Bitta akkauntda bir nechta sayt",
+        "Statistika va analitika",
+        "8 tilli vidjet"
       ]
     },
     "tvcrm": {
@@ -360,21 +360,9 @@
       "title": "Mavji Somon TV OTT",
       "description": "Filmlar, seriallar va telekanallarni tomosha qilish uchun onlayn platforma va striming xizmati. Xizmat turli qurilmalarda yuqori sifatli multimedia kontentiga kirishni ta’minlaydi."
     },
-    "livechat-tj": {
-      "title": "LiveChat TJ - Onlayn chat",
-      "description": "LiveChat TJ — kompaniyalar va ularning mijozlari o‘rtasida real vaqtda muloqotni ta’minlaydigan biznes uchun veb-xizmat va onlayn chat platformasi. Platforma mijozlarni qo‘llab-quvvatlashni avtomatlashtiradi, xizmat sifatini oshiradi va tezkor xabarlar orqali sotuvlarni ko‘paytirishga yordam beradi.",
-      "gallery": [
-        "LiveChat lendingining birinchi ekrani: “Mijozlaringiz bilan aloqa uchun onlayn chat” sarlavhasi va “Bepul sinab ko‘rish” tugmasi",
-        "Yechim bloki: noutbukdagi LiveChat operator dialoglari paneli va telefondagi chat vidjeti ko‘rinishi",
-        "Imkoniyatlar bo‘limi: funksiya kartochkalari — tezkor javob, aqlli vidjet, analitika, jamoaviy ish, javob shablonlari va CRM integratsiyalari",
-        "“Qanday ishlaydi” bloki: onlayn chatni saytga ulashning to‘rt bosqichi",
-        "Moslashtirish bo‘limi: onlayn chat dizaynini brendingiz uslubiga moslashtirish va operator interfeysi ko‘rinishi",
-        "Tariflar bo‘limi: Starter, Pro va Business rejalari va ularning imkoniyatlari ro‘yxati",
-        "Integratsiyalar bo‘limi: messenjerlar, CRM tizimlari, sayt konstruktorlari va o‘z API’ingizni ulash",
-        "Afzalliklar bloki: sotuvlar o‘sishi, xarajatlarning kamayishi va ko‘proq mijozlarni jalb qilish",
-        "Qo‘llab-quvvatlash bo‘limi: aloqa usullari (email, 24/7 chat, hujjatlar) va ko‘p beriladigan savollar",
-        "Asosiy imkoniyatlar ko‘rsatilgan “Nega LiveChat” bo‘limi va saytning pastki qismi"
-      ]
+    "kontakio": {
+      "title": "Kontakio — mijozlar bilan muloqot uchun sun’iy intellekt platformasi",
+      "description": "Kontakio — mijozlar bilan muloqot uchun sun’iy intellekt platformasi: saytdagi chat, Telegram-bot, bildirishnomalar, ZudSMS orqali SMS, o‘rnatilgan CRM, jamoa chati va statistika bitta kabinetda. SI-operator mijozlarga bilimlar bazasi asosida javob beradi va suhbatni xodimga topshiradi, SI-yordamchi esa operatorlarga yozishmalarni yozish, tarjima qilish va xulosalashda yordam beradi. Dushanbe Soft veb-kabinetni, 8 tilli o‘rnatiladigan vidjetni, soketlar orqali real vaqtda xabar almashishni, sun’iy intellekt modullarini hamda tez orada App Store va Google Play’da chiqadigan iOS va Android uchun mobil ilovani ishlab chiqdi."
     },
     "telecomm": {
       "title": "Telecomm Technology",
@@ -628,7 +616,7 @@
     "default_description": "Dushanbedagi IT kompaniya: 2017-yildan beri biznes va davlat uchun saytlar, mobil ilovalar, CRM va ERP tizimlarini ishlab chiqamiz.",
     "keywords": "tojikistondagi it kompaniyalar, dushanbe it kompaniya, tojikistonda dasturiy ta’minot ishlab chiqish, dushanbeda sayt yaratish, mobil ilovalar ishlab chiqish, biznesni avtomatlashtirish, dushanbe soft, fintech, crm, erp",
     "products_title": "Biznes uchun tayyor IT mahsulotlar: SMS-shlyuz, onlayn chat, CRM",
-    "products_description": "Tojikistondagi biznes uchun Dushanbe Soft mahsulotlari: ZudSMS ommaviy SMS platformasi, LiveChat TJ onlayn chati, CRM tizimlari va to‘lov yechimlari.",
+    "products_description": "Tojikistondagi biznes uchun Dushanbe Soft mahsulotlari: ZudSMS ommaviy SMS platformasi, Kontakio onlayn chati, CRM tizimlari va to‘lov yechimlari.",
     "cases_title": "Portfolio — biz yaratgan saytlar, ilovalar va tizimlar",
     "cases_description": "Dushanbe Soft keyslari: Tojikiston Prezidenti sayti, “Raqamli Tojikiston” portali, Somon TV OTT platformalari, fintech, CRM va mobil ilovalar.",
     "news_title": "Kompaniya yangiliklari — Tojikistondagi IT loyihalar va dasturlash",
@@ -848,12 +836,6 @@
         "title": "ZudSMS — ommaviy SMS-xabarnoma platformasi",
         "desc": "Tojikistondagi barcha operatorlarga bir zumda yetkazib beriladigan biznes uchun ommaviy va tranzaksion SMS-xabarnomalarning yuqori yuklamali bulutli platformasi."
       },
-      "5": {
-        "tag": "SaaS va chat",
-        "date": "05.12.2025",
-        "title": "LiveChat.TJ — biznes uchun onlayn maslahatchi",
-        "desc": "Veb-soketlar va tezkor javoblarga ega saytlar uchun omnikanal onlayn chat vidjeti va mijozlar bilan muloqot tizimi."
-      },
       "6": {
         "tag": "E-Commerce",
         "date": "22.12.2025",
@@ -883,6 +865,12 @@
         "date": "2024",
         "title": "«Navo» 96.5 FM radiosining sayti — navo.tj",
         "desc": "Dushanbe Soft «Navo» 96.5 FM radiosining saytini yaratdi: dasturlar va ruknlar, podkastlar, musiqiy to‘plamlar, foto va video galereyalar hamda yangiliklar lentasi."
+      },
+      "11": {
+        "tag": "SaaS va sun’iy intellekt",
+        "date": "11.11.2026",
+        "title": "LiveChat TJ endi Kontakio: mijozlar bilan muloqot uchun sun’iy intellekt platformasi",
+        "desc": "LiveChat TJ endi Kontakio deb ataladi va kontakio.com domenida ishlaydi. Yangi nom bilan birga platformada SI-operator va SI-yordamchi, o‘rnatilgan CRM hamda bir nechta sayt bilan ishlash imkoniyati paydo bo‘ldi, iOS va Android uchun mobil ilova esa tez orada App Store va Google Play’da chiqadi."
       }
     },
     "filterAll": "Barchasi",

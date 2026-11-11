@@ -103,18 +103,18 @@
         "Daşarky CRM/ERP ulgamlaryndan habarlary awtomatik ibermek üçin REST API integrasiýasy"
       ]
     },
-    "livechat": {
-      "title": "LiveChat TJ - Onlaýn çat",
-      "subtitle": "LiveChat TJ",
-      "description": "Saýta gelýänleri toparyňyz bilen hakyky wagtda baglanyşdyrýan biznes üçin web hyzmaty we onlaýn çat widjeti. LiveChat TJ müşderilere goldawy awtomatlaşdyrýar, hyzmatyň hilini ýokarlandyrýar we dessin habarlar arkaly satuwy artdyrmaga kömek edýär.",
+    "kontakio": {
+      "title": "Kontakio — müşderiler bilen aragatnaşyk üçin emeli aň platformasy",
+      "subtitle": "kontakio.com",
+      "description": "Kontakio bir penjirede saýtdaky çaty, Telegram kanalyny, içine gurnalan CRM ulgamyny, emeli aň operatoryny we emeli aň kömekçisini birleşdirýär. Emeli aň operatory bilim bazaňyz esasynda müşderilere jogap berýär we zerur bolanda dialogy adama geçirýär, emeli aň kömekçisi bolsa operatorlara jogaplary ýazmaga, redaktirlemäge we terjime etmäge kömek edýär.",
       "tags": [
-        "Ulgam arhitekturasyny işläp düzmek",
-        "Ulgamyň ýokary durnuklylygy",
-        "Onlaýn çaty we widjetleri birleşdirmek",
-        "Mobil enjamlary goldamak",
-        "Şahsy otag we analitika",
-        "DDoS hüjümlerinden goramak",
-        "Köp dilliligi goldamak"
+        "Emeli aň operatory we kömekçisi",
+        "Saýtdaky çat we Telegram",
+        "Içine gurnalan CRM",
+        "Telegram arkaly bildirişler we jogaplar",
+        "Bir hasapda birnäçe saýt",
+        "Statistika we analitika",
+        "8 dilli widjet"
       ]
     },
     "tvcrm": {
@@ -360,21 +360,9 @@
       "title": "Mavji Somon TV OTT",
       "description": "Filmleri, seriallary we teleýaýlymlary görmek üçin onlaýn platforma we striming hyzmaty. Hyzmat dürli enjamlarda ýokary hilli multimedia mazmunyna elýeterliligi üpjün edýär."
     },
-    "livechat-tj": {
-      "title": "LiveChat TJ - Onlaýn çat",
-      "description": "LiveChat TJ — kompaniýalar bilen olaryň müşderileriniň arasynda hakyky wagtda aragatnaşygy üpjün edýän biznes üçin web hyzmaty we onlaýn çat platformasy. Platforma müşderilere goldawy awtomatlaşdyrýar, hyzmatyň hilini ýokarlandyrýar we dessin habarlar arkaly satuwy artdyrmaga kömek edýär.",
-      "gallery": [
-        "LiveChat lendinginiň ilkinji ekrany: «Müşderileriňiz bilen aragatnaşyk üçin onlaýn çat» sözbaşysy we «Mugt synap görmek» düwmesi",
-        "Çözgüt bölümi: noutbukdaky LiveChat operator dialoglary paneli we telefondaky çat widjetiniň görnüşi",
-        "Mümkinçilikler bölümi: funksiýa kartoçkalary — dessin jogap, akylly widjet, analitika, toparlaýyn iş, jogap şablonlary we CRM integrasiýalary",
-        "«Nähili işleýär» bölümi: onlaýn çaty saýta birikdirmegiň dört ädimi",
-        "Sazlamak bölümi: onlaýn çatyň dizaýnyny brendiňiziň stiline uýgunlaşdyrmak we operator interfeýsiniň görnüşi",
-        "Tarifler bölümi: Starter, Pro we Business meýilnamalary we olaryň mümkinçilikleriniň sanawy",
-        "Integrasiýalar bölümi: messenjerleri, CRM ulgamlaryny, saýt konstruktorlaryny we öz API-ňizi birikdirmek",
-        "Artykmaçlyklar bölümi: satuwyň ösmegi, çykdajylaryň azalmagy we has köp müşderi çekmek",
-        "Goldaw bölümi: habarlaşmak usullary (email, 24/7 çat, resminamalar) we ýygy berilýän soraglar",
-        "Esasy mümkinçilikler görkezilen «Näme üçin LiveChat» bölümi we saýtyň aşaky bölegi"
-      ]
+    "kontakio": {
+      "title": "Kontakio — müşderiler bilen aragatnaşyk üçin emeli aň platformasy",
+      "description": "Kontakio — müşderiler bilen aragatnaşyk üçin emeli aň platformasy: saýtdaky çat, Telegram-bot, bildirişler, ZudSMS arkaly SMS, içine gurnalan CRM, topar çaty we statistika bir şahsy otagda. Emeli aň operatory bilim bazasy esasynda müşderilere jogap berýär we dialogy adama geçirýär, emeli aň kömekçisi bolsa operatorlara hat alyşmalary ýazmaga, terjime etmäge we gysgaça jemlemäge kömek edýär. Dushanbe Soft web şahsy otagy, 8 dilli ýerleşdirilýän widjeti, soketler arkaly hakyky wagtda habar alyşmagy, emeli aň modullaryny, şeýle hem ýakyn wagtda App Store we Google Play-de çykjak iOS we Android üçin mobil programmany işläp düzdi."
     },
     "telecomm": {
       "title": "Telecomm Technology",
@@ -628,7 +616,7 @@
     "default_description": "Duşenbedäki IT kompaniýa: 2017-nji ýyldan bäri biznes we döwlet üçin saýtlary, mobil programmalary, CRM we ERP ulgamlaryny işläp düzýäris.",
     "keywords": "täjigistandaky it kompaniýalar, duşenbe it kompaniýa, täjigistanda programma üpjünçiligini işläp düzmek, duşenbede saýt döretmek, mobil programmalary işläp düzmek, biznesi awtomatlaşdyrmak, dushanbe soft, fintech, crm, erp",
     "products_title": "Biznes üçin taýýar IT önümler: SMS-şlýuz, onlaýn çat, CRM",
-    "products_description": "Täjigistandaky biznes üçin Dushanbe Soft önümleri: ZudSMS köpçülikleýin SMS platformasy, LiveChat TJ onlaýn çaty, CRM ulgamlary we töleg çözgütleri.",
+    "products_description": "Täjigistandaky biznes üçin Dushanbe Soft önümleri: ZudSMS köpçülikleýin SMS platformasy, Kontakio onlaýn çaty, CRM ulgamlary we töleg çözgütleri.",
     "cases_title": "Portfolio — biziň döreden saýtlarymyz, programmalarymyz we ulgamlarymyz",
     "cases_description": "Dushanbe Soft keýsleri: Täjigistanyň Prezidentiniň saýty, «Sanly Täjigistan» portaly, Somon TV OTT platformalary, fintech, CRM we mobil programmalar.",
     "news_title": "Kompaniýanyň habarlary — Täjigistandaky IT taslamalar we işläp düzmek",
@@ -848,12 +836,6 @@
         "title": "ZudSMS — köpçülikleýin SMS ibermek platformasy",
         "desc": "Täjigistanyň ähli operatorlaryna derrew ýetirilýän biznes üçin köpçülikleýin we tranzaksion SMS habarnamalarynyň ýokary ýüklenmeli bulut platformasy."
       },
-      "5": {
-        "tag": "SaaS we çat",
-        "date": "05.12.2025",
-        "title": "LiveChat.TJ — biznes üçin onlaýn geňeşçi",
-        "desc": "Web-soketler we çalt jogaplar bilen saýtlar üçin omnikanal onlaýn çat widjeti we müşderiler bilen aragatnaşyk ulgamy."
-      },
       "6": {
         "tag": "E-Commerce",
         "date": "22.12.2025",
@@ -883,6 +865,12 @@
         "date": "2024",
         "title": "«Navo» 96.5 FM radiosynyň saýty — navo.tj",
         "desc": "Dushanbe Soft «Navo» 96.5 FM radiosynyň saýtyny döretdi: gepleşikler we rubrikalar, podkastlar, aýdym ýygyndylary, surat we wideo galereýalar hem-de habarlar lentasy."
+      },
+      "11": {
+        "tag": "SaaS we emeli aň",
+        "date": "11.11.2026",
+        "title": "Kontakio — LiveChat TJ-iň täze ady: müşderiler bilen aragatnaşyk üçin emeli aň platformasy",
+        "desc": "LiveChat TJ indi Kontakio diýlip atlandyrylýar we kontakio.com domeninde işleýär. Täze at bilen bilelikde platformada emeli aň operatory we kömekçisi, içine gurnalan CRM we birnäçe saýt bilen işlemek mümkinçiligi peýda boldy, iOS we Android üçin mobil programma bolsa ýakyn wagtda App Store we Google Play-de çykar."
       }
     },
     "filterAll": "Hemmesi",

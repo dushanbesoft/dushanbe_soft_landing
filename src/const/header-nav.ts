@@ -13,7 +13,7 @@ export interface HeaderNavItem {
 export const productsNav: HeaderNavItem[] = [
   { path: "cases/mablagtj", labelKey: "products.mablagtj.title", fallback: "Mablag.tj – Автоматизация и учет для бизнеса" },
   { path: "cases/zudsms", labelKey: "products.zudsms.title", fallback: "ZudSMS – Платформа SMS-рассылок" },
-  { path: "cases/livechat-tj", labelKey: "products.livechat.title", fallback: "LiveChat TJ - Онлайн-чат" },
+  { path: "cases/kontakio", labelKey: "products.kontakio.title", fallback: "Kontakio — ИИ-платформа для общения с клиентами" },
   { path: "cases/sinamoktv", labelKey: "products.tvcrm.title", fallback: "TV CRM" },
 ];
 

@@ -171,19 +171,19 @@ export default async function ProductsSection({
     },
   ];
 
-  const getChatTags = () => [
+  const getKontakioTags = () => [
     {
-      label: t("products.livechat.tags.0", "Разработка архитектуры системы"),
+      label: t("products.kontakio.tags.0", "ИИ-оператор и ИИ-ассистент"),
       highlighted: true,
     },
-    { label: t("products.livechat.tags.1", "Высокая стабильность системы") },
+    { label: t("products.kontakio.tags.1", "Чат на сайте и Telegram") },
+    { label: t("products.kontakio.tags.2", "Встроенная CRM") },
+    { label: t("products.kontakio.tags.3", "Уведомления и ответы из Telegram") },
     {
-      label: t("products.livechat.tags.2", "Интеграция онлайн-чата и виджетов"),
+      label: t("products.kontakio.tags.4", "Несколько сайтов в одном аккаунте"),
     },
-    { label: t("products.livechat.tags.3", "Поддержка мобильных устройств") },
-    { label: t("products.livechat.tags.4", "Личный кабинет и аналитика") },
-    { label: t("products.livechat.tags.5", "Защита от DDoS-атак") },
-    { label: t("products.livechat.tags.6", "Мультиязычность") },
+    { label: t("products.kontakio.tags.5", "Статистика и аналитика") },
+    { label: t("products.kontakio.tags.6", "Виджет на 8 языках") },
   ];
 
   const getTvcrmTags = () => [
@@ -259,16 +259,19 @@ export default async function ProductsSection({
               href="https://zudsms.tj"
             />
             <ProductCard
-              imageSrc="/images/liveChatBanner.webp"
+              imageSrc="/images/kontakioBanner.webp"
               icon={<ChatIcon />}
-              title={t("products.livechat.title", "LiveChat TJ - Онлайн-чат")}
-              subtitle={t("products.livechat.subtitle", "LiveChat TJ")}
-              description={t(
-                "products.livechat.description",
-                "Веб-сервис и платформа онлайн-консультаций для бизнеса...",
+              title={t(
+                "products.kontakio.title",
+                "Kontakio — ИИ-платформа для общения с клиентами",
               )}
-              tags={getChatTags()}
-              href="https://livechat.tj"
+              subtitle={t("products.kontakio.subtitle", "kontakio.com")}
+              description={t(
+                "products.kontakio.description",
+                "Kontakio объединяет чат на сайте, Telegram, встроенную CRM, ИИ-оператора и ИИ-ассистента в одном окне. ИИ-оператор отвечает клиентам по вашей базе знаний и при необходимости передаёт диалог человеку, а ИИ-ассистент помогает операторам писать, редактировать и переводить ответы.",
+              )}
+              tags={getKontakioTags()}
+              href="https://kontakio.com"
             />
             <ProductCard
               imageSrc="/images/projects/mablag-banner.png"

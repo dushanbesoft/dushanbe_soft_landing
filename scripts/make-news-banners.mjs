@@ -25,7 +25,7 @@ const BANNERS = [
   { src: "images/projects/navo.webp", out: "images/news/navo-radio-banner.webp" },
   { src: "images/projects/somontv.webp", out: "images/news/somontv-banner.webp" },
   { src: "images/projects/zudsms.png", out: "images/news/zudsms-banner.webp" },
-  { src: "images/projects/livechat.webp", out: "images/news/livechat-banner.webp" },
+  { src: "images/projects/kontakio.webp", out: "images/news/kontakio-banner.webp" },
   { src: "images/projects/president/banner_main.jpg", out: "images/news/president-banner.webp" },
 ];
 

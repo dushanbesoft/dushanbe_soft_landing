@@ -6,7 +6,7 @@ Contacts: phone +992 901 000 535, email dushanbesoft@gmail.com, Telegram https:/
 
 Private Enterprise "Dushanbe Soft" was awarded a contract (TDFP-NS-RFQ-03, 2026) under the World Bank-financed Tajikistan Digital Foundations Project (P506611): https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00455715
 
-Notable projects: the official website of the President of the Republic of Tajikistan (president.tj), the Digital Tajikistan e-government portal, OTT streaming platforms for Somon TV, the OnlinePay acquiring platform, the ZudSMS bulk SMS platform and the LiveChat TJ online chat service.
+Notable projects: the official website of the President of the Republic of Tajikistan (president.tj), the Digital Tajikistan e-government portal, OTT streaming platforms for Somon TV, the OnlinePay acquiring platform, the ZudSMS bulk SMS platform and Kontakio (kontakio.com), an AI platform for customer communication.
 
 ## Services
 
@@ -23,7 +23,7 @@ Notable projects: the official website of the President of the Republic of Tajik
 ## Company
 
 - [Portfolio](https://dushanbe-soft.tj/en/cases): case studies of delivered projects
-- [Products](https://dushanbe-soft.tj/en/products): ZudSMS, LiveChat TJ and other in-house products
+- [Products](https://dushanbe-soft.tj/en/products): ZudSMS, Kontakio (kontakio.com) and other in-house products
 - [News](https://dushanbe-soft.tj/en/news): company news and project releases
 
 ## Optional
