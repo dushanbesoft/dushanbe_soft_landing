@@ -376,6 +376,17 @@
       "title": "Kontakio — AI Platform for Customer Communication",
       "description": "Kontakio is an AI platform for customer communication: website chat, a Telegram bot, notifications, SMS via ZudSMS, a built-in CRM, team chat and statistics in one dashboard. The AI operator answers customers from the knowledge base and hands off to a person, while the AI assistant helps operators write, translate and summarise conversations. Dushanbe Soft built the web dashboard, the embeddable widget in 8 languages, real-time messaging over sockets and the AI modules, as well as an iOS and Android mobile app that is coming soon to the App Store and Google Play."
     },
+    "gems": {
+      "title": "Gems — game top-up store (gems.tj)",
+      "description": "Gems is a game top-up service for players in Tajikistan: Free Fire diamonds, PUBG Mobile UC and other in-game currency delivered by player ID, with no account password. Payment in somoni via Dushanbe City, Alif and SmartPay (plus SBP and Russian cards), automatic delivery usually within 1–2 minutes, reviews after completed orders and a refund if an order fails. Dushanbe Soft built the storefront, checkout, payment integrations and automatic delivery.",
+      "tasks": [
+        "Designing the purchase flow and the interface in dark and light themes",
+        "Building the Next.js storefront: game catalogue, packages, promo codes and reviews",
+        "Player ID check that shows the account nickname before payment",
+        "Payment in somoni: Dushanbe City, Alif, SmartPay, plus SBP and Russian cards",
+        "Automatic top-up delivery, order statuses and refunds on a Laravel backend"
+      ]
+    },
     "telecomm": {
       "title": "Telecomm Technology",
       "description": "The official website of the telecommunications company and internet provider 'Telecomm Technology'. The platform provides information on high-speed internet tariffs, interactive television (IPTV), and IP/NGN telephony, and also provides access to the customer's personal account."
@@ -908,6 +919,12 @@
         "date": "11.11.2026",
         "title": "Kontakio is the new name of LiveChat TJ: an AI platform for customer communication",
         "desc": "LiveChat TJ is now called Kontakio and runs on kontakio.com. Along with the new name, the platform gains an AI operator and an AI assistant, a built-in CRM and multi-site accounts, and a mobile app for iOS and Android is coming soon to the App Store and Google Play."
+      },
+      "12": {
+        "tag": "E-Commerce",
+        "date": "14.11.2026",
+        "title": "Gems: we launched a game top-up store with payment in somoni",
+        "desc": "Dushanbe Soft built gems.tj, a service where players in Tajikistan buy Free Fire diamonds, PUBG Mobile UC and other top-ups by player ID. Payment in somoni via Dushanbe City, Alif and SmartPay, with automatic delivery, usually within a minute."
       }
     },
     "filterAll": "All",

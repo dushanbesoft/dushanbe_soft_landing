@@ -5,6 +5,7 @@ import { zudsmsAccountScreens } from "./zudsms-account-screens";
 import { zudyobScreens } from "./zudyob-screens";
 import { mablagtjWebScreens, mablagtjAdminScreens } from "./mablagtj-screens";
 import { omodatjWebScreens, omodatjAdminScreens } from "./omodatj-screens";
+import { gemsStorefrontScreens, gemsCheckoutScreens } from "./gems-screens";
 
 export interface ProductSiteItem {
   imageSrc: string;
@@ -4287,6 +4288,22 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       {
         tabName: { ru: "Личный кабинет", en: "Account", tj: "Кабинети шахсӣ" },
         items: kontakioAccountScreens,
+      },
+    ],
+  },
+  {
+    imageSrc: "/images/projects/gems.webp",
+    year: "2026",
+    tags: ["Next.js", "React", "Laravel", "REST API", "SmartPay", "Cloudflare"],
+    slug: "gems",
+    projectComponents: [
+      {
+        tabName: { ru: "Витрина", en: "Storefront", tj: "Витрина" },
+        items: gemsStorefrontScreens,
+      },
+      {
+        tabName: { ru: "Покупка и отзывы", en: "Checkout and reviews", tj: "Харид ва шарҳҳо" },
+        items: gemsCheckoutScreens,
       },
     ],
   },

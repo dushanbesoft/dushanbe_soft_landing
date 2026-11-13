@@ -364,6 +364,10 @@
       "title": "Kontakio — müşderiler bilen aragatnaşyk üçin emeli aň platformasy",
       "description": "Kontakio — müşderiler bilen aragatnaşyk üçin emeli aň platformasy: saýtdaky çat, Telegram-bot, bildirişler, ZudSMS arkaly SMS, içine gurnalan CRM, topar çaty we statistika bir şahsy otagda. Emeli aň operatory bilim bazasy esasynda müşderilere jogap berýär we dialogy adama geçirýär, emeli aň kömekçisi bolsa operatorlara hat alyşmalary ýazmaga, terjime etmäge we gysgaça jemlemäge kömek edýär. Dushanbe Soft web şahsy otagy, 8 dilli ýerleşdirilýän widjeti, soketler arkaly hakyky wagtda habar alyşmagy, emeli aň modullaryny, şeýle hem ýakyn wagtda App Store we Google Play-de çykjak iOS we Android üçin mobil programmany işläp düzdi."
     },
+    "gems": {
+      "title": "Gems — oýunlar üçin donat dükany (gems.tj)",
+      "description": "Gems — Täjigistanyň oýunçylary üçin oýunlary doldurmak hyzmaty: Free Fire almazlary, PUBG Mobile UC we beýleki oýun walýutalary oýunçynyň ID-si boýunça, akkaunt parolsyz. Töleg somonide Dushanbe City, Alif we SmartPay arkaly (şeýle hem SBP we Russiýa kartlary), adatça 1–2 minutda awtomatik eltip bermek, ýerine ýetirilen sargytlardan soň synlar we sargyt ýerine ýetirilmese puly yzyna gaýtarmak. Dushanbe Soft witrinany, sargyt bermegi, töleg ulgamlary bilen integrasiýany we awtomatik eltip bermegi işläp düzdi."
+    },
     "telecomm": {
       "title": "Telecomm Technology",
       "description": "«Telecomm Technology» telekommunikasiýa kompaniýasynyň we internet üpjün edijisiniň resmi saýty. Platforma ýokary tizlikli internet tarifleri, interaktiw telewideniýe (IPTV) we IP/NGN telefoniýa barada maglumat berýär, şeýle hem müşderiniň şahsy otagyna girmegi üpjün edýär."
@@ -871,6 +875,12 @@
         "date": "11.11.2026",
         "title": "Kontakio — LiveChat TJ-iň täze ady: müşderiler bilen aragatnaşyk üçin emeli aň platformasy",
         "desc": "LiveChat TJ indi Kontakio diýlip atlandyrylýar we kontakio.com domeninde işleýär. Täze at bilen bilelikde platformada emeli aň operatory we kömekçisi, içine gurnalan CRM we birnäçe saýt bilen işlemek mümkinçiligi peýda boldy, iOS we Android üçin mobil programma bolsa ýakyn wagtda App Store we Google Play-de çykar."
+      },
+      "12": {
+        "tag": "E-Commerce",
+        "date": "14.11.2026",
+        "title": "Gems: somonide töleg bilen oýunlar üçin donat dükany işe girizildi",
+        "desc": "Dushanbe Soft gems.tj hyzmatyny işläp düzdi: onda Täjigistanyň oýunçylary Free Fire almazlaryny, PUBG Mobile UC we beýleki donaty oýunçynyň ID-si boýunça satyn alýarlar. Töleg somonide Dushanbe City, Alif we SmartPay arkaly, eltip bermek awtomatik, adatça bir minutda."
       }
     },
     "filterAll": "Hemmesi",

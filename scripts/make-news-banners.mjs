@@ -4,7 +4,7 @@
 // a blurred, darkened copy of itself; the lower part stays free for the
 // slide caption.
 //
-// Usage: node scripts/make-news-banners.mjs
+// Usage: node scripts/make-news-banners.mjs [name ...]  (no args = rebuild all; names match the output file, e.g. "gems")
 // Then point the news item's `heroImage` (or a case slide in HeroNewsCarousel) at the generated file.
 
 import sharp from "sharp";
@@ -26,6 +26,7 @@ const BANNERS = [
   { src: "images/projects/somontv.webp", out: "images/news/somontv-banner.webp" },
   { src: "images/projects/zudsms.png", out: "images/news/zudsms-banner.webp" },
   { src: "images/projects/kontakio.webp", out: "images/news/kontakio-banner.webp" },
+  { src: "images/projects/gems.webp", out: "images/news/gems-banner.webp" },
   { src: "images/projects/president/banner_main.jpg", out: "images/news/president-banner.webp" },
 ];
 
@@ -70,4 +71,8 @@ async function build({ src, out }) {
   console.log(`${src} -> ${out} (card ${CARD_W}x${cardH})`);
 }
 
-for (const banner of BANNERS) await build(banner);
+const only = process.argv.slice(2);
+for (const banner of BANNERS) {
+  if (only.length && !only.some((name) => banner.out.includes(name))) continue;
+  await build(banner);
+}

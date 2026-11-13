@@ -53,6 +53,7 @@ export default function CasesGrid({
     sohktor: "Государственные",
     "mavji-somon": "Медиа",
     "kontakio": "Корпоративные",
+    gems: "Финтех",
     telecomm: "Корпоративные",
     navo: "Медиа",
     "somon-tv": "Медиа",

@@ -567,6 +567,117 @@ const newsItems: NewsItem[] = [
       },
     },
   },
+  {
+    id: "12",
+    slug: "gems",
+    image: "/images/projects/gems.webp",
+    heroImage: "/images/news/gems-banner.webp",
+    date: "14.11.2026",
+    category: "retail",
+    readTime: "3 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.12.tag",
+    defaultTag: "E-Commerce",
+    titleKey: "news.items.12.title",
+    defaultTitle: "Gems: запустили магазин доната в игры с оплатой в сомони",
+    descKey: "news.items.12.desc",
+    defaultDesc: "Dushanbe Soft разработала gems.tj — сервис, где игроки из Таджикистана покупают алмазы Free Fire, UC PUBG Mobile и другой донат по ID игрока. Оплата в сомони через Душанбе Сити, Алиф и SmartPay, выдача автоматически, обычно за минуту.",
+    fullContent: {
+      lead: "Мы запустили Gems (gems.tj) — магазин доната для игроков Таджикистана. Алмазы Free Fire, UC PUBG Mobile и валюту других игр можно купить в сомони, без зарубежной карты и без пароля от аккаунта: нужен только ID игрока, а донат приходит автоматически, обычно за минуту.",
+      caseSlug: "gems",
+      techStack: ["Next.js", "React", "Laravel", "REST API", "SmartPay", "Cloudflare"],
+      sections: [
+        {
+          heading: "Какую задачу решает Gems",
+          text: "Игрокам из Таджикистана сложно пополнить игру напрямую: магазины внутри игр принимают зарубежные карты и считают цены в другой валюте. Gems принимает оплату в сомони через привычные местные способы и сам доставляет валюту на аккаунт по ID — так же, как официальный магазин внутри игры.",
+        },
+        {
+          heading: "Как устроена покупка",
+          text: "Мы спроектировали путь покупки из четырёх шагов, чтобы заказ занимал около минуты.",
+          bulletPoints: [
+            "Выбор игры и пакета: алмазы с бонусами, недельные и месячные ваучеры",
+            "Ввод ID игрока и проверка: ник аккаунта показывается до оплаты, чтобы не ошибиться",
+            "Оплата в сомони: Душанбе Сити и Алиф по QR-коду в одно касание, SmartPay — картой любого банка Таджикистана, в приложении банка или по QR; для покупателей из России есть СБП и карта РФ",
+            "Автоматическая выдача без менеджеров, обычно за 1–2 минуты, со статусом заказа в разделе «Мои заказы»",
+          ],
+        },
+        {
+          heading: "Что ещё есть на сайте",
+          text: "Помимо витрины и оформления заказа, Dushanbe Soft разработала всё, что нужно для доверия покупателей и роста продаж.",
+          bulletPoints: [
+            "Отзывы, которые можно оставить только после выполненного заказа, и средний рейтинг на отдельной странице",
+            "Полный возврат денег, если заказ не выполнен, и понятные документы: оферта, политика возвратов, конфиденциальность и реквизиты",
+            "Промокоды на первый заказ и Telegram-канал с еженедельными розыгрышами алмазов",
+            "Интерфейс на русском и таджикском языках, светлая и тёмная тема, удобная навигация на телефоне",
+          ],
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "We have launched Gems (gems.tj), a game top-up store for players in Tajikistan. Free Fire diamonds, PUBG Mobile UC and other in-game currency can be bought in somoni, with no foreign card and no account password: only the player ID is needed, and the top-up arrives automatically, usually within a minute.",
+        caseSlug: "gems",
+        techStack: ["Next.js", "React", "Laravel", "REST API", "SmartPay", "Cloudflare"],
+        sections: [
+          {
+            heading: "The problem Gems solves",
+            text: "Players in Tajikistan find it hard to top up a game directly: in-game stores accept foreign cards and price items in another currency. Gems accepts payment in somoni through familiar local methods and delivers the currency to the account by ID, just like the official in-game store.",
+          },
+          {
+            heading: "How a purchase works",
+            text: "We designed a four-step purchase flow so that an order takes about a minute.",
+            bulletPoints: [
+              "Choose a game and a package: diamonds with bonuses, weekly and monthly vouchers",
+              "Enter and check the player ID: the account nickname is shown before payment to avoid mistakes",
+              "Pay in somoni: Dushanbe City and Alif via a one-tap QR code, SmartPay with any Tajik bank card, in a banking app or by QR; buyers from Russia can use SBP or a Russian card",
+              "Automatic delivery without managers, usually within 1–2 minutes, with the order status in My orders",
+            ],
+          },
+          {
+            heading: "What else the site offers",
+            text: "Beyond the storefront and checkout, Dushanbe Soft built everything needed for buyer trust and sales growth.",
+            bulletPoints: [
+              "Reviews that can only be left after a completed order, with an average rating on a separate page",
+              "A full refund if an order fails, and clear documents: the offer, refund policy, privacy policy and company details",
+              "First-order promo codes and a Telegram channel with weekly diamond giveaways",
+              "An interface in Russian and Tajik, light and dark themes and easy navigation on phones",
+            ],
+          },
+        ],
+      },
+      tj: {
+        lead: "Мо Gems (gems.tj)-ро ба кор андохтем — мағозаи донат барои бозингарони Тоҷикистон. Алмосҳои Free Fire, UC PUBG Mobile ва асъори дигар бозиҳоро ба сомонӣ, бе корти хориҷӣ ва бе пароли аккаунт харидан мумкин аст: танҳо ID-и бозингар лозим аст ва донат худкор, одатан дар як дақиқа меояд.",
+        caseSlug: "gems",
+        techStack: ["Next.js", "React", "Laravel", "REST API", "SmartPay", "Cloudflare"],
+        sections: [
+          {
+            heading: "Gems кадом масъаларо ҳал мекунад",
+            text: "Барои бозингарони Тоҷикистон пур кардани бозӣ бевосита душвор аст: мағозаҳои дохили бозиҳо кортҳои хориҷиро қабул мекунанд ва нархҳоро бо асъори дигар ҳисоб мекунанд. Gems пардохтро ба сомонӣ бо усулҳои шиносои маҳаллӣ қабул мекунад ва асъорро аз рӯи ID ба аккаунт мерасонад — ҳамон тавре ки мағозаи расмии дохили бозӣ.",
+          },
+          {
+            heading: "Харид чӣ тавр сурат мегирад",
+            text: "Мо раванди харидро аз чор қадам тарҳрезӣ кардем, то фармоиш тақрибан як дақиқа вақт гирад.",
+            bulletPoints: [
+              "Интихоби бозӣ ва баста: алмосҳо бо бонус, ваучерҳои ҳафтаина ва моҳона",
+              "Ворид ва санҷиши ID-и бозингар: лақаби аккаунт пеш аз пардохт нишон дода мешавад, то хато нашавад",
+              "Пардохт ба сомонӣ: Душанбе Сити ва Алиф бо QR-код дар як ламс, SmartPay — бо корти ҳар бонки Тоҷикистон, дар барномаи бонк ё бо QR; барои харидорон аз Русия СБП ва корти Русия мавҷуд аст",
+              "Супориши худкор бе менеҷер, одатан дар 1–2 дақиқа, бо ҳолати фармоиш дар бахши «Фармоишҳои ман»",
+            ],
+          },
+          {
+            heading: "Дар сомона боз чӣ ҳаст",
+            text: "Ғайр аз витрина ва фармоиш, Dushanbe Soft ҳама чизеро таҳия кард, ки барои эътимоди харидорон ва афзоиши фурӯш лозим аст.",
+            bulletPoints: [
+              "Шарҳҳое, ки танҳо пас аз иҷрои фармоиш гузошта мешаванд, ва рейтинги миёна дар саҳифаи алоҳида",
+              "Баргардонидани пурраи пул, агар фармоиш иҷро нашавад, ва ҳуҷҷатҳои фаҳмо: оферта, сиёсати баргардонидан, махфият ва реквизитҳо",
+              "Промокодҳо барои фармоиши аввал ва канали Telegram бо бозиҳои бурдбурди ҳафтаинаи алмос",
+              "Интерфейс бо забонҳои русӣ ва тоҷикӣ, мавзӯи равшан ва торик ва роҳнамоии қулай дар телефон",
+            ],
+          },
+        ],
+      },
+    },
+  },
 ];
 
 // Pinned news go first in this exact order; the rest follow newest first.

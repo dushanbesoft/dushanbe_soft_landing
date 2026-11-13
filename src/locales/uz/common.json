@@ -364,6 +364,10 @@
       "title": "Kontakio — mijozlar bilan muloqot uchun sun’iy intellekt platformasi",
       "description": "Kontakio — mijozlar bilan muloqot uchun sun’iy intellekt platformasi: saytdagi chat, Telegram-bot, bildirishnomalar, ZudSMS orqali SMS, o‘rnatilgan CRM, jamoa chati va statistika bitta kabinetda. SI-operator mijozlarga bilimlar bazasi asosida javob beradi va suhbatni xodimga topshiradi, SI-yordamchi esa operatorlarga yozishmalarni yozish, tarjima qilish va xulosalashda yordam beradi. Dushanbe Soft veb-kabinetni, 8 tilli o‘rnatiladigan vidjetni, soketlar orqali real vaqtda xabar almashishni, sun’iy intellekt modullarini hamda tez orada App Store va Google Play’da chiqadigan iOS va Android uchun mobil ilovani ishlab chiqdi."
     },
+    "gems": {
+      "title": "Gems — o‘yinlar uchun donat do‘koni (gems.tj)",
+      "description": "Gems — Tojikiston o‘yinchilari uchun o‘yinlarni to‘ldirish xizmati: Free Fire olmoslari, PUBG Mobile UC va boshqa o‘yin valyutalari o‘yinchi ID raqami bo‘yicha, akkaunt parolisiz. To‘lov somonida Dushanbe City, Alif va SmartPay orqali (shuningdek SBP va Rossiya kartalari), odatda 1–2 daqiqada avtomatik yetkazish, bajarilgan buyurtmalardan keyin sharhlar va buyurtma bajarilmasa pulni qaytarish. Dushanbe Soft vitrina, buyurtma rasmiylashtirish, to‘lov tizimlari bilan integratsiya va avtomatik yetkazishni ishlab chiqdi."
+    },
     "telecomm": {
       "title": "Telecomm Technology",
       "description": "“Telecomm Technology” telekommunikatsiya kompaniyasi va internet-provayderining rasmiy sayti. Platforma yuqori tezlikdagi internet tariflari, interaktiv televideniye (IPTV) va IP/NGN telefoniya haqida ma’lumot beradi hamda mijozning shaxsiy kabinetiga kirishni ta’minlaydi."
@@ -871,6 +875,12 @@
         "date": "11.11.2026",
         "title": "LiveChat TJ endi Kontakio: mijozlar bilan muloqot uchun sun’iy intellekt platformasi",
         "desc": "LiveChat TJ endi Kontakio deb ataladi va kontakio.com domenida ishlaydi. Yangi nom bilan birga platformada SI-operator va SI-yordamchi, o‘rnatilgan CRM hamda bir nechta sayt bilan ishlash imkoniyati paydo bo‘ldi, iOS va Android uchun mobil ilova esa tez orada App Store va Google Play’da chiqadi."
+      },
+      "12": {
+        "tag": "E-Commerce",
+        "date": "14.11.2026",
+        "title": "Gems: somonida to‘lov bilan o‘yinlar uchun donat do‘koni ishga tushirildi",
+        "desc": "Dushanbe Soft gems.tj xizmatini ishlab chiqdi: unda Tojikiston o‘yinchilari Free Fire olmoslari, PUBG Mobile UC va boshqa donatni o‘yinchi ID bo‘yicha sotib oladi. To‘lov somonida Dushanbe City, Alif va SmartPay orqali, yetkazish avtomatik, odatda bir daqiqada."
       }
     },
     "filterAll": "Barchasi",

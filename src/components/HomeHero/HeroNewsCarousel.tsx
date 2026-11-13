@@ -12,7 +12,7 @@ import { localeDir } from "@/utils/locales";
 import { localePath, localeUrl } from "@/utils/seo";
 
 // Banner order: lead news first, then the five latest/pinned news, extra news and portfolio cases.
-const LEAD_NEWS = ["kontakio"];
+const LEAD_NEWS = ["gems", "kontakio"];
 const EXTRA_NEWS = ["zudsms"];
 const CASE_SLIDES = [
   { slug: "president", heroImage: "/images/news/president-banner.webp", mobileImage: "/images/projects/president/banner_main.jpg" },
