@@ -12,6 +12,15 @@ export interface MediaItem {
 
 export const mediaGalleryItems: MediaItem[] = [
   {
+    "id": "media_24",
+    "type": "video",
+    "src": "/content/DushanbeSoft/reel_21.mp4",
+    "thumb": "/content/DushanbeSoft/thumbnails/reel_21.webp",
+    "title": "ZudSMS — SMS-рассылка для бизнеса по всему Таджикистану",
+    "caption": "SMS-рассылка для вашего бизнеса с ZudSMS: акции, коды подтверждения и напоминания клиентам. Низкая цена за SMS, регистрация на сайте и запуск рассылки за несколько минут.",
+    "duration": "1:00"
+  },
+  {
     "id": "media_1",
     "type": "video",
     "src": "/content/DushanbeSoft/reel_1.mp4",
@@ -224,6 +233,10 @@ type L10n = { ru: string; en: string; tj: string };
 
 /** Clean titles and labels shown on the site (captions keep the original post text). */
 export const mediaMeta: Record<string, { title: L10n; tag: L10n }> = {
+  media_24: {
+    title: { ru: "ZudSMS: SMS-рассылка для вашего бизнеса", en: "ZudSMS: bulk SMS for your business", tj: "ZudSMS: фиристодани SMS барои тиҷорати шумо" },
+    tag: { ru: "Продукт", en: "Product", tj: "Маҳсулот" },
+  },
   media_14: {
     title: { ru: "Команда радио «Navo» в гостях у Dushanbe Soft", en: "Navo radio team visits Dushanbe Soft", tj: "Дастаи радиои «Navo» меҳмони Dushanbe Soft" },
     tag: { ru: "Отзыв клиента", en: "Client", tj: "Мизоҷ" },
@@ -317,7 +330,7 @@ export function mediaTag(item: MediaItem, lang: string): string | null {
 }
 
 /** Home page reel strip, in display order */
-const featuredIds = ["media_14", "media_4", "media_15", "media_1", "media_12", "media_7"];
+const featuredIds = ["media_24", "media_14", "media_4", "media_15", "media_1", "media_12"];
 
 export const featuredMediaItems: MediaItem[] = featuredIds
   .map((id) => mediaGalleryItems.find((i) => i.id === id))
