@@ -5,7 +5,9 @@ import { zudsmsAccountScreens } from "./zudsms-account-screens";
 import { zudyobScreens } from "./zudyob-screens";
 import { mablagtjWebScreens, mablagtjAdminScreens } from "./mablagtj-screens";
 import { omodatjWebScreens, omodatjAdminScreens } from "./omodatj-screens";
+import { omodaSiteScreens } from "./omoda-site-screens";
 import { gemsStorefrontScreens, gemsCheckoutScreens } from "./gems-screens";
+import { somonlyProductScreens, somonlyApiScreens } from "./somonly-screens";
 
 export interface ProductSiteItem {
   imageSrc: string;
@@ -4292,6 +4294,22 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     ],
   },
   {
+    imageSrc: "/images/projects/somonly.webp",
+    year: "2026",
+    tags: ["Next.js", "Laravel", "REST API", "Webhooks", "SmartPay", "Pay4Game"],
+    slug: "somonly",
+    projectComponents: [
+      {
+        tabName: { ru: "Сайт продукта", en: "Product site", tj: "Сомонаи маҳсулот" },
+        items: somonlyProductScreens,
+      },
+      {
+        tabName: { ru: "Рубли, API и кабинет", en: "Roubles, API and cabinet", tj: "Рубл, API ва кабинет" },
+        items: somonlyApiScreens,
+      },
+    ],
+  },
+  {
     imageSrc: "/images/projects/gems.webp",
     year: "2026",
     tags: ["Next.js", "React", "Laravel", "REST API", "SmartPay", "Cloudflare"],
@@ -5213,8 +5231,8 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     ],
   },
   {
-    imageSrc: "/images/projects/omoda-bunner.png",
-    bannerSrc: "/images/projects/omoda-bunner.png",
+    imageSrc: "/images/projects/omodatj.webp",
+    bannerSrc: "/images/projects/omodatj.webp",
     year: "2025",
     tags: [
       "Next.js",
@@ -5227,7 +5245,11 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     slug: "omodatj",
     projectComponents: [
       {
-        tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
+        tabName: { ru: "Сайт 2026", en: "2026 site", tj: "Сомонаи 2026" },
+        items: omodaSiteScreens,
+      },
+      {
+        tabName: { ru: "Лендинг 2025", en: "2025 landing", tj: "Лендинг 2025" },
         items: omodatjWebScreens,
       },
       {

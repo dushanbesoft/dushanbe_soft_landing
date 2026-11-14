@@ -27,6 +27,8 @@ const BANNERS = [
   { src: "images/projects/zudsms.png", out: "images/news/zudsms-banner.webp" },
   { src: "images/projects/kontakio.webp", out: "images/news/kontakio-banner.webp" },
   { src: "images/projects/gems.webp", out: "images/news/gems-banner.webp" },
+  { src: "images/projects/somonly.webp", out: "images/news/somonly-banner.webp" },
+  { src: "images/projects/omodatj.webp", out: "images/news/omoda-banner.webp" },
   { src: "images/projects/president/banner_main.jpg", out: "images/news/president-banner.webp" },
 ];
 

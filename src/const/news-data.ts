@@ -678,6 +678,222 @@ const newsItems: NewsItem[] = [
       },
     },
   },
+  {
+    id: "13",
+    slug: "somonly",
+    image: "/images/projects/somonly.webp",
+    heroImage: "/images/news/somonly-banner.webp",
+    date: "15.11.2026",
+    category: "saas",
+    readTime: "3 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.13.tag",
+    defaultTag: "Финтех",
+    titleKey: "news.items.13.title",
+    defaultTitle: "Somonly: запустили платёжный шлюз — 26+ способов оплаты в Таджикистане в одном API",
+    descKey: "news.items.13.desc",
+    defaultDesc: "Dushanbe Soft запустила Somonly (somonly.com) — шлюз эквайринга, который объединяет мобильные банки, карты Visa и Mastercard, QR-код SmartPay и оплату по лицевому счёту в одном API. Клиенты из России платят в рублях по СБП, а новый проект подключается за 5 минут.",
+    fullContent: {
+      lead: "Мы запустили Somonly (somonly.com) — платёжный шлюз для эквайринга в Таджикистане. Он объединяет более 26 платёжных и банковских услуг — мобильные банки, карты Visa и Mastercard, Apple Pay и Google Pay, QR-код SmartPay и оплату по лицевому счёту — в одном API. Клиенты из России платят в рублях по СБП и картами российских банков, а новый проект начинает принимать оплату через 5 минут после подключения.",
+      caseSlug: "somonly",
+      techStack: ["Next.js", "Laravel", "REST API", "Webhooks", "SmartPay", "Pay4Game"],
+      sections: [
+        {
+          heading: "Зачем мы сделали Somonly",
+          text: "Dushanbe Soft запускает новые продукты почти каждую неделю — магазины, сервисы доставки, обучения, такси. SmartPay выдаёт мерчанту только один API-ключ, поэтому раньше каждый проект приходилось заново интегрировать с процессингом: свои вебхуки, подписи, повторы и отчёты. Somonly решает это один раз: проекты подключаются к шлюзу, а шлюз — к процессингу.",
+        },
+        {
+          heading: "Как это работает",
+          text: "Шлюз поддерживает два сценария оплаты через одну интеграцию.",
+          bulletPoints: [
+            "Онлайн-оплата по инвойсу: проект создаёт платёж запросом POST /payments, клиент платит по ссылке или через диплинк в приложении своего банка, а проект получает вебхук payment.paid",
+            "Оплата по лицевому счёту: клиент находит сервис в Alif Mobi или другом банке и вводит номер счёта, а Somonly по префиксу счёта направляет запрос в нужный проект",
+            "Оплата из России через Pay4Game: СБП и карты Мир, Visa и Mastercard российских банков в рублях, с тем же API и теми же вебхуками",
+          ],
+        },
+        {
+          heading: "Что получает проект",
+          text: "Somonly берёт на себя интеграцию с процессингом, безопасность и доставку уведомлений — команда проекта занимается продуктом.",
+          bulletPoints: [
+            "Собственный ключ sm_live_… для каждого проекта: ключ SmartPay хранится только в шлюзе, а проекты не видят чужие платежи",
+            "Вебхуки с подписью HMAC-SHA256, повторная доставка и идемпотентность по order_id — дубль платежа не создаётся",
+            "Журнал запросов и вебхуков, панель администратора, статистика по проектам и банкам, полные и частичные возвраты",
+            "Документация API с примерами на cURL, PHP (Laravel) и Node.js и личный кабинет с платежами, балансом, выплатами и ключами",
+          ],
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "We have launched Somonly (somonly.com), a payment gateway for acquiring in Tajikistan. It brings together more than 26 payment and banking services in one API: mobile banks, Visa and Mastercard cards, Apple Pay and Google Pay, the SmartPay QR code and account-number payments. Customers from Russia pay in roubles via SBP and Russian bank cards, and a new project can accept payments 5 minutes after it is connected.",
+        caseSlug: "somonly",
+        techStack: ["Next.js", "Laravel", "REST API", "Webhooks", "SmartPay", "Pay4Game"],
+        sections: [
+          {
+            heading: "Why we built Somonly",
+            text: "Dushanbe Soft launches new products almost every week: shops, delivery, education and taxi services. SmartPay issues only one API key per merchant, so every project used to need its own processing integration with its own webhooks, signatures, retries and reports. Somonly solves this once: projects connect to the gateway, and the gateway connects to processing.",
+          },
+          {
+            heading: "How it works",
+            text: "The gateway supports two payment flows through one integration.",
+            bulletPoints: [
+              "Online invoice payment: the project creates a payment with POST /payments, the customer pays via a link or a deeplink in their banking app, and the project receives a payment.paid webhook",
+              "Account-number payment: the customer finds the service in Alif Mobi or another bank and enters an account number, and Somonly routes the request to the right project by the account prefix",
+              "Payments from Russia via Pay4Game: SBP and Russian Mir, Visa and Mastercard cards in roubles, with the same API and the same webhooks",
+            ],
+          },
+          {
+            heading: "What a project gets",
+            text: "Somonly takes care of the processing integration, security and notification delivery, so the project team can focus on the product.",
+            bulletPoints: [
+              "Its own sm_live_… key for every project: the SmartPay key is stored only in the gateway, and projects cannot see each other's payments",
+              "HMAC-SHA256 signed webhooks, redelivery and idempotency by order_id, so a payment is never duplicated",
+              "A log of requests and webhooks, an admin panel, statistics by project and bank, and full and partial refunds",
+              "API documentation with cURL, PHP (Laravel) and Node.js examples, and a client cabinet with payments, balance, payouts and keys",
+            ],
+          },
+        ],
+      },
+      tj: {
+        lead: "Мо Somonly (somonly.com)-ро ба кор андохтем — дарвозаи пардохтӣ барои эквайринг дар Тоҷикистон. Он зиёда аз 26 хизматрасонии пардохтӣ ва бонкиро — бонкҳои мобилӣ, кортҳои Visa ва Mastercard, Apple Pay ва Google Pay, QR-коди SmartPay ва пардохт аз рӯи ҳисоби шахсиро — дар як API муттаҳид мекунад. Мизоҷон аз Русия бо рубл тавассути СБП ва кортҳои бонкҳои русӣ пардохт мекунанд ва лоиҳаи нав 5 дақиқа пас аз пайвастшавӣ пардохт қабул мекунад.",
+        caseSlug: "somonly",
+        techStack: ["Next.js", "Laravel", "REST API", "Webhooks", "SmartPay", "Pay4Game"],
+        sections: [
+          {
+            heading: "Чаро мо Somonly-ро сохтем",
+            text: "Dushanbe Soft қариб ҳар ҳафта маҳсулоти нав мебарорад — мағозаҳо, хизматрасониҳои расонидан, таълим ва такси. SmartPay ба мерчант танҳо як калиди API медиҳад, бинобар ин пештар ҳар лоиҳаро аз нав бо процессинг интегратсия кардан лозим буд: вебхукҳо, имзоҳо, такрорҳо ва ҳисоботҳои алоҳида. Somonly инро як бор ҳал мекунад: лоиҳаҳо ба дарвоза пайваст мешаванд, дарвоза бошад ба процессинг.",
+          },
+          {
+            heading: "Чӣ тавр кор мекунад",
+            text: "Дарвоза ду сенарияи пардохтро тавассути як интегратсия дастгирӣ мекунад.",
+            bulletPoints: [
+              "Пардохти онлайн аз рӯи инвойс: лоиҳа пардохтро бо дархости POST /payments месозад, мизоҷ бо пайванд ё диплинк дар барномаи бонки худ пардохт мекунад ва лоиҳа вебхуки payment.paid мегирад",
+              "Пардохт аз рӯи ҳисоби шахсӣ: мизоҷ хизматро дар Alif Mobi ё бонки дигар ёфта, рақами ҳисобро ворид мекунад ва Somonly аз рӯи префикси ҳисоб дархостро ба лоиҳаи лозимӣ равона мекунад",
+              "Пардохт аз Русия тавассути Pay4Game: СБП ва кортҳои Мир, Visa ва Mastercard-и бонкҳои русӣ бо рубл, бо ҳамон API ва ҳамон вебхукҳо",
+            ],
+          },
+          {
+            heading: "Лоиҳа чӣ мегирад",
+            text: "Somonly интегратсия бо процессинг, бехатарӣ ва расонидани огоҳиномаҳоро ба уҳда мегирад — дастаи лоиҳа бо маҳсулот машғул мешавад.",
+            bulletPoints: [
+              "Калиди шахсии sm_live_… барои ҳар лоиҳа: калиди SmartPay танҳо дар дарвоза нигоҳ дошта мешавад ва лоиҳаҳо пардохтҳои ҳамдигарро намебинанд",
+              "Вебхукҳо бо имзои HMAC-SHA256, расонидани такрорӣ ва идемпотентӣ аз рӯи order_id — пардохт дубора сохта намешавад",
+              "Журнали дархостҳо ва вебхукҳо, панели маъмур, омор аз рӯи лоиҳаҳо ва бонкҳо, баргардонидани пурра ва қисман",
+              "Ҳуҷҷатҳои API бо намунаҳо дар cURL, PHP (Laravel) ва Node.js ва кабинети шахсӣ бо пардохтҳо, баланс, пардохтҳо ба ҳисоб ва калидҳо",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "14",
+    slug: "omoda",
+    image: "/images/projects/omodatj.webp",
+    heroImage: "/images/news/omoda-banner.webp",
+    date: "15.11.2026",
+    category: "saas",
+    readTime: "3 мин",
+    author: "Команда Dushanbe Soft",
+    tagKey: "news.items.14.tag",
+    defaultTag: "EdTech",
+    titleKey: "news.items.14.title",
+    defaultTitle: "Довталаб ИИ: обновили omoda.tj — ИИ-репетитор, дуэли и рейтинг для подготовки к ИМД",
+    descKey: "news.items.14.desc",
+    defaultDesc: "Dushanbe Soft выпустила новую версию omoda.tj. Платформа для подготовки к ИМД 2026–2027 теперь называется «Довталаб ИИ»: ИИ-репетитор объясняет каждую ошибку на русском и таджикском, а уровни, дуэли с друзьями и рейтинг недели превращают учёбу в игру.",
+    fullContent: {
+      lead: "Мы выпустили новую версию omoda.tj. Платформа для подготовки к централизованному вступительному экзамену (ИМД) теперь называется «Довталаб ИИ» и готовит выпускников 9 и 11 классов к сезону 2026–2027. Главное обновление — ИИ-репетитор, который разбирает каждое задание по шагам и отвечает на вопросы на русском и таджикском языках. Заниматься можно в приложении для Android, в браузере на app.omoda.tj, а версия для iOS скоро появится в App Store.",
+      caseSlug: "omodatj",
+      techStack: ["Next.js", "React", "TypeScript", "AI Assistant", "Mobile App"],
+      sections: [
+        {
+          heading: "ИИ-репетитор, который объясняет",
+          text: "Ошибся в задаче — нажми «Объяснить решение». ИИ разберёт задание по шагам, ответит на уточняющий вопрос «почему?» и поймёт рисунки и формулы из условия. Спросить ИИ можно прямо на главной странице сайта, без регистрации. Бесплатно — каждый день, в Premium — без ограничений.",
+        },
+        {
+          heading: "Учёба как игра",
+          text: "Чтобы к экзамену готовились каждый день, мы добавили игровые механики.",
+          bulletPoints: [
+            "Уровни и XP за каждую задачу и серия дней без пропусков",
+            "Дуэли с друзьями на 10 вопросов: кто решит больше и быстрее",
+            "Рейтинг недели среди школы и района, ежедневный вызов с бонусными очками и достижения",
+            "Тесты в формате ИМД с частями А и Б, пробный экзамен с таймером, работа над ошибками и прогноз балла по каждому предмету",
+          ],
+        },
+        {
+          heading: "Тарифы и школы",
+          text: "Базовая подготовка бесплатна: ежедневные тесты, ограниченное число пробных экзаменов и базовые результаты.",
+          bulletPoints: [
+            "Довталаб Premium — от 10 сомони в месяц (79 сомони за год): без рекламы и ограничений, с подробным разбором и статистикой, оплата через Алиф",
+            "Для школ и учебных центров — кабинет преподавателя с прогрессом и слабыми темами каждого ученика и оплатой за группу",
+            "9 кластеров ИМД: таджикский и русский языки, математика, физика, химия, биология, история, география и английский",
+          ],
+        },
+      ],
+    },
+    localizedContent: {
+      en: {
+        lead: "We have released a new version of omoda.tj. The platform for preparing for the centralised university entrance exam (IMD) is now called \"Dovtalab AI\" and gets 9th and 11th grade graduates ready for the 2026–2027 season. The main update is an AI tutor that breaks every task down step by step and answers questions in Russian and Tajik. Students can practise in the Android app or in the browser at app.omoda.tj, and the iOS version is coming soon to the App Store.",
+        caseSlug: "omodatj",
+        techStack: ["Next.js", "React", "TypeScript", "AI Assistant", "Mobile App"],
+        sections: [
+          {
+            heading: "An AI tutor that explains",
+            text: "Made a mistake? Press \"Explain the solution\". The AI breaks the task down step by step, answers a follow-up \"why?\" and understands pictures and formulas in the task. You can ask the AI right on the home page, without registration. It is free every day and unlimited in Premium.",
+          },
+          {
+            heading: "Learning as a game",
+            text: "To keep students preparing every day, we added game mechanics.",
+            bulletPoints: [
+              "Levels and XP for every task and a streak of days without a break",
+              "10-question duels with friends: who solves more and faster",
+              "A weekly leaderboard across the school and district, a daily challenge with bonus points and achievements",
+              "IMD-format tests with parts A and B, a timed mock exam, work on mistakes and a score forecast for each subject",
+            ],
+          },
+          {
+            heading: "Plans and schools",
+            text: "Basic preparation is free: daily tests, a limited number of mock exams and basic results.",
+            bulletPoints: [
+              "Dovtalab Premium from 10 somoni a month (79 somoni a year): no ads or limits, with detailed reviews and statistics, paid via Alif",
+              "For schools and learning centres: a teacher's cabinet with each student's progress and weak topics and payment per group",
+              "9 IMD clusters: Tajik and Russian, mathematics, physics, chemistry, biology, history, geography and English",
+            ],
+          },
+        ],
+      },
+      tj: {
+        lead: "Мо версияи нави omoda.tj-ро баровардем. Платформа барои омодагӣ ба имтиҳони марказонидаи дохилшавӣ (ИМД) акнун «Довталаб ИИ» ном дорад ва хатмкунандагони синфҳои 9 ва 11-ро ба мавсими 2026–2027 омода мекунад. Навсозии асосӣ — ИИ-репетитор, ки ҳар супоришро қадам ба қадам таҳлил мекунад ва ба саволҳо бо забонҳои русӣ ва тоҷикӣ ҷавоб медиҳад. Машқ кардан мумкин аст дар барнома барои Android ва дар браузер дар app.omoda.tj, версияи iOS ба наздикӣ дар App Store пайдо мешавад.",
+        caseSlug: "omodatj",
+        techStack: ["Next.js", "React", "TypeScript", "AI Assistant", "Mobile App"],
+        sections: [
+          {
+            heading: "ИИ-репетитор, ки мефаҳмонад",
+            text: "Дар масъала хато кардӣ — «Шарҳи ҳал»-ро пахш кун. ИИ супоришро қадам ба қадам таҳлил мекунад, ба саволи иловагии «чаро?» ҷавоб медиҳад ва расмҳо ва формулаҳоро аз шарт мефаҳмад. Аз ИИ бевосита дар саҳифаи асосии сомона, бе бақайдгирӣ пурсидан мумкин аст. Ҳар рӯз ройгон, дар Premium — бе маҳдудият.",
+          },
+          {
+            heading: "Таҳсил ҳамчун бозӣ",
+            text: "Барои он ки ба имтиҳон ҳар рӯз омода шаванд, мо механикаҳои бозиро илова кардем.",
+            bulletPoints: [
+              "Сатҳҳо ва XP барои ҳар масъала ва силсилаи рӯзҳо бе фосила",
+              "Дуэлҳо бо дӯстон аз 10 савол: кӣ бештар ва тезтар ҳал мекунад",
+              "Рейтинги ҳафта дар байни мактаб ва ноҳия, даъвати ҳаррӯза бо холҳои бонусӣ ва дастовардҳо",
+              "Тестҳо дар формати ИМД бо қисмҳои А ва Б, имтиҳони озмоишӣ бо таймер, кор бо хатоҳо ва пешгӯии хол аз ҳар фан",
+            ],
+          },
+          {
+            heading: "Тарифҳо ва мактабҳо",
+            text: "Омодагии асосӣ ройгон аст: тестҳои ҳаррӯза, шумораи маҳдуди имтиҳонҳои озмоишӣ ва натиҷаҳои асосӣ.",
+            bulletPoints: [
+              "Довталаб Premium — аз 10 сомонӣ дар як моҳ (79 сомонӣ дар як сол): бе реклама ва маҳдудият, бо таҳлили муфассал ва омор, пардохт тавассути Алиф",
+              "Барои мактабҳо ва марказҳои таълимӣ — кабинети омӯзгор бо пешрафт ва мавзӯъҳои заифи ҳар хонанда ва пардохт барои гурӯҳ",
+              "9 кластери ИМД: забонҳои тоҷикӣ ва русӣ, математика, физика, химия, биология, таърих, география ва англисӣ",
+            ],
+          },
+        ],
+      },
+    },
+  },
 ];
 
 // Pinned news go first in this exact order; the rest follow newest first.

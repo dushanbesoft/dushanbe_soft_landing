@@ -368,6 +368,14 @@
       "title": "Gems — oýunlar üçin donat dükany (gems.tj)",
       "description": "Gems — Täjigistanyň oýunçylary üçin oýunlary doldurmak hyzmaty: Free Fire almazlary, PUBG Mobile UC we beýleki oýun walýutalary oýunçynyň ID-si boýunça, akkaunt parolsyz. Töleg somonide Dushanbe City, Alif we SmartPay arkaly (şeýle hem SBP we Russiýa kartlary), adatça 1–2 minutda awtomatik eltip bermek, ýerine ýetirilen sargytlardan soň synlar we sargyt ýerine ýetirilmese puly yzyna gaýtarmak. Dushanbe Soft witrinany, sargyt bermegi, töleg ulgamlary bilen integrasiýany we awtomatik eltip bermegi işläp düzdi."
     },
+    "somonly": {
+      "title": "Somonly — töleg şlýuzy: bir API-de 26+ töleg usuly",
+      "description": "Somonly (somonly.com) — Dushanbe Soft-uň Täjigistandaky ekwaýring şlýuzy: 26-dan gowrak töleg we bank hyzmaty — mobil banklar, Visa we Mastercard kartlary, Apple Pay we Google Pay, SmartPay QR-kody we şahsy hasap boýunça töleg — bir API-de, şeýle hem Pay4Game arkaly Russiýadan SBP we kartlar bilen rubl kabul etmek. Her taslama 5 minutda öz sm_live_… açaryny, gaýtalanmaly HMAC-SHA256 gollanan webhuklary, hasap prefiksi boýunça töleg ugrukdyrmasyny, geleşikler žurnalyny, statistikany we administrator panelinde yzyna gaýtarmalary alýar."
+    },
+    "omodatj": {
+      "title": "Dovtalab AI (Omoda.tj) — AI-repetitor bilen IMD-ä taýýarlyk",
+      "description": "«Dovtalab AI» (omoda.tj) — Täjigistanda 2026–2027-nji ýylyň merkezleşdirilen giriş synagy IMD-ä taýýarlyk platformasy: web-wersiýa, Android programmasy we ýakyn wagtda iOS. AI-repetitor her ýumuşy rus we täjik dillerinde ädimme-ädim düşündirýär; 9 klaster boýunça IMD formatyndaky testler, taýmerli synag ekzameni, ýalňyşlar bilen iş we bal çaklamasy bar, derejeler, dostlar bilen duellar we hepdäniň reýtingi bolsa taýýarlygy oýna öwürýär. Mugt tarif, Alif arkaly tölenýän aýda 10 somoniden Premium we mekdepler üçin mugallym kabineti bar."
+    },
     "telecomm": {
       "title": "Telecomm Technology",
       "description": "«Telecomm Technology» telekommunikasiýa kompaniýasynyň we internet üpjün edijisiniň resmi saýty. Platforma ýokary tizlikli internet tarifleri, interaktiw telewideniýe (IPTV) we IP/NGN telefoniýa barada maglumat berýär, şeýle hem müşderiniň şahsy otagyna girmegi üpjün edýär."
@@ -881,6 +889,18 @@
         "date": "14.11.2026",
         "title": "Gems: somonide töleg bilen oýunlar üçin donat dükany işe girizildi",
         "desc": "Dushanbe Soft gems.tj hyzmatyny işläp düzdi: onda Täjigistanyň oýunçylary Free Fire almazlaryny, PUBG Mobile UC we beýleki donaty oýunçynyň ID-si boýunça satyn alýarlar. Töleg somonide Dushanbe City, Alif we SmartPay arkaly, eltip bermek awtomatik, adatça bir minutda."
+      },
+      "13": {
+        "tag": "Fintech",
+        "date": "15.11.2026",
+        "title": "Somonly: töleg şlýuzyny işe girizdik — Täjigistandaky 26+ töleg usuly bir API-de",
+        "desc": "Dushanbe Soft Somonly (somonly.com) şlýuzyny işe girizdi: ol mobil banklary, Visa we Mastercard kartlaryny, SmartPay QR-kodyny we şahsy hasap boýunça tölegi bir API-de birleşdirýär. Russiýadaky müşderiler SBP arkaly rublda töleýär, täze taslama bolsa 5 minutda birikdirilýär."
+      },
+      "14": {
+        "tag": "EdTech",
+        "date": "15.11.2026",
+        "title": "Dovtalab AI: omoda.tj täzelendi — IMD-ä taýýarlyk üçin AI-repetitor, duellar we reýting",
+        "desc": "Dushanbe Soft omoda.tj-iň täze wersiýasyny çykardy. IMD 2026–2027-ä taýýarlyk platformasy indi «Dovtalab AI» diýlip atlandyrylýar: AI-repetitor her ýalňyşy rus we täjik dillerinde düşündirýär, derejeler, dostlar bilen duellar we hepdäniň reýtingi bolsa okuwy oýna öwürýär."
       }
     },
     "filterAll": "Hemmesi",

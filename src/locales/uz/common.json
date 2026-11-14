@@ -368,6 +368,14 @@
       "title": "Gems — o‘yinlar uchun donat do‘koni (gems.tj)",
       "description": "Gems — Tojikiston o‘yinchilari uchun o‘yinlarni to‘ldirish xizmati: Free Fire olmoslari, PUBG Mobile UC va boshqa o‘yin valyutalari o‘yinchi ID raqami bo‘yicha, akkaunt parolisiz. To‘lov somonida Dushanbe City, Alif va SmartPay orqali (shuningdek SBP va Rossiya kartalari), odatda 1–2 daqiqada avtomatik yetkazish, bajarilgan buyurtmalardan keyin sharhlar va buyurtma bajarilmasa pulni qaytarish. Dushanbe Soft vitrina, buyurtma rasmiylashtirish, to‘lov tizimlari bilan integratsiya va avtomatik yetkazishni ishlab chiqdi."
     },
+    "somonly": {
+      "title": "Somonly — to'lov shlyuzi: bitta API'da 26+ to'lov usuli",
+      "description": "Somonly (somonly.com) — Dushanbe Soft'ning Tojikistondagi ekvayring shlyuzi: 26 dan ortiq to'lov va bank xizmatlari — mobil banklar, Visa va Mastercard kartalari, Apple Pay va Google Pay, SmartPay QR-kodi va shaxsiy hisob raqami bo'yicha to'lov — bitta API'da, shuningdek Pay4Game orqali Rossiyadan SBP va kartalar bilan rubl qabul qilish. Har bir loyiha 5 daqiqada o'z sm_live_… kalitini, takrorlanadigan HMAC-SHA256 imzoli vebxuklarni, hisob prefiksi bo'yicha to'lov marshrutini, tranzaksiyalar jurnali, statistika va administrator panelida qaytarishlarni oladi."
+    },
+    "omodatj": {
+      "title": "Dovtalab AI (Omoda.tj) — AI-repetitor bilan IMDga tayyorgarlik",
+      "description": "«Dovtalab AI» (omoda.tj) — Tojikistonda 2026–2027 yilgi markazlashgan kirish imtihoni IMDga tayyorlanish platformasi: veb-versiya, Android ilovasi va tez orada iOS. AI-repetitor har bir topshiriqni rus va tojik tillarida bosqichma-bosqich tushuntiradi; 9 klaster bo'yicha IMD formatidagi testlar, taymerli sinov imtihoni, xatolar ustida ishlash va ball prognozi bor, darajalar, do'stlar bilan duellar va hafta reytingi esa tayyorgarlikni o'yinga aylantiradi. Bepul tarif, Alif orqali to'lanadigan oyiga 10 somonidan Premium va maktablar uchun o'qituvchi kabineti mavjud."
+    },
     "telecomm": {
       "title": "Telecomm Technology",
       "description": "“Telecomm Technology” telekommunikatsiya kompaniyasi va internet-provayderining rasmiy sayti. Platforma yuqori tezlikdagi internet tariflari, interaktiv televideniye (IPTV) va IP/NGN telefoniya haqida ma’lumot beradi hamda mijozning shaxsiy kabinetiga kirishni ta’minlaydi."
@@ -881,6 +889,18 @@
         "date": "14.11.2026",
         "title": "Gems: somonida to‘lov bilan o‘yinlar uchun donat do‘koni ishga tushirildi",
         "desc": "Dushanbe Soft gems.tj xizmatini ishlab chiqdi: unda Tojikiston o‘yinchilari Free Fire olmoslari, PUBG Mobile UC va boshqa donatni o‘yinchi ID bo‘yicha sotib oladi. To‘lov somonida Dushanbe City, Alif va SmartPay orqali, yetkazish avtomatik, odatda bir daqiqada."
+      },
+      "13": {
+        "tag": "Fintex",
+        "date": "15.11.2026",
+        "title": "Somonly: to'lov shlyuzini ishga tushirdik — Tojikistondagi 26+ to'lov usuli bitta API'da",
+        "desc": "Dushanbe Soft Somonly (somonly.com) ni ishga tushirdi — mobil banklar, Visa va Mastercard kartalari, SmartPay QR-kodi va shaxsiy hisob bo'yicha to'lovni bitta API'da birlashtiradigan ekvayring shlyuzi. Rossiyalik mijozlar SBP orqali rublda to'laydi, yangi loyiha esa 5 daqiqada ulanadi."
+      },
+      "14": {
+        "tag": "EdTech",
+        "date": "15.11.2026",
+        "title": "Dovtalab AI: omoda.tj yangilandi — IMDga tayyorgarlik uchun AI-repetitor, duellar va reyting",
+        "desc": "Dushanbe Soft omoda.tj ning yangi versiyasini chiqardi. IMD 2026–2027 ga tayyorlanish platformasi endi «Dovtalab AI» deb ataladi: AI-repetitor har bir xatoni rus va tojik tillarida tushuntiradi, darajalar, do'stlar bilan duellar va hafta reytingi esa o'qishni o'yinga aylantiradi."
       }
     },
     "filterAll": "Barchasi",

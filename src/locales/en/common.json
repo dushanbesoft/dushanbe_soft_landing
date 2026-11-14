@@ -387,6 +387,17 @@
         "Automatic top-up delivery, order statuses and refunds on a Laravel backend"
       ]
     },
+    "somonly": {
+      "title": "Somonly — a payment gateway: 26+ payment methods in one API",
+      "description": "Somonly (somonly.com) is Dushanbe Soft's acquiring gateway for Tajikistan: more than 26 payment and banking services in one API — mobile banks, Visa and Mastercard cards, Apple Pay and Google Pay, the SmartPay QR code and account-number payments — plus roubles from Russia via SBP and cards through Pay4Game. Each project gets its own sm_live_… key in 5 minutes, HMAC-SHA256 signed webhooks with retries, payment routing by account prefix, a transaction log, statistics and refunds in the admin panel.",
+      "tasks": [
+        "Gateway architecture: one company-wide SmartPay key and separate API keys for each project",
+        "A REST API for online invoice payments and routing of account-number payments by prefix",
+        "HMAC-SHA256 signed webhooks, redelivery and idempotency by order_id",
+        "Rouble payments from Russia via Pay4Game: SBP and Russian bank cards, refunds from the panel",
+        "A product site in three languages, API documentation, an admin panel and a client cabinet"
+      ]
+    },
     "telecomm": {
       "title": "Telecomm Technology",
       "description": "The official website of the telecommunications company and internet provider 'Telecomm Technology'. The platform provides information on high-speed internet tariffs, interactive television (IPTV), and IP/NGN telephony, and also provides access to the customer's personal account."
@@ -499,14 +510,15 @@
       ]
     },
     "omodatj": {
-      "title": "Omoda AI (Omoda.tj)",
-      "description": "Intelligent EdTech web platform and mobile exam simulator on iOS and Android for Tajikistan's centralized Dovtalab (IMD/NTC) university entrance examinations. Features adaptive testing, AI-powered problem breakdowns, knowledge duels, and an official score calculator.",
+      "title": "Dovtalab AI (Omoda.tj): IMD exam preparation with an AI tutor",
+      "description": "\"Dovtalab AI\" (omoda.tj) is a platform for preparing for the 2026–2027 IMD centralised university entrance exam in Tajikistan, with a web version, an Android app and an iOS app coming soon. An AI tutor breaks every task down step by step in Russian and Tajik; there are IMD-format tests in 9 clusters, a timed mock exam, work on mistakes and a score forecast, while levels, duels with friends and a weekly leaderboard turn preparation into a game. There is a free plan, Premium from 10 somoni a month paid via Alif, and a teacher's cabinet for schools.",
       "tasks": [
         "Information architecture and UX/UI platform design",
         "High-conversion promotional landing page",
         "Student personal portal and dashboard",
         "IMD exam simulator and NTC score calculator",
-        "5-cluster question bank integration and digital resource library"
+        "5-cluster question bank integration and digital resource library",
+        "The 2026 version: an AI tutor, gamification (levels, duels, leaderboard) and Premium plans"
       ]
     },
     "omoda": {
@@ -925,6 +937,18 @@
         "date": "14.11.2026",
         "title": "Gems: we launched a game top-up store with payment in somoni",
         "desc": "Dushanbe Soft built gems.tj, a service where players in Tajikistan buy Free Fire diamonds, PUBG Mobile UC and other top-ups by player ID. Payment in somoni via Dushanbe City, Alif and SmartPay, with automatic delivery, usually within a minute."
+      },
+      "13": {
+        "tag": "Fintech",
+        "date": "15.11.2026",
+        "title": "Somonly: we launched a payment gateway with 26+ payment methods in Tajikistan in one API",
+        "desc": "Dushanbe Soft has launched Somonly (somonly.com), an acquiring gateway that brings mobile banks, Visa and Mastercard cards, the SmartPay QR code and account-number payments together in one API. Customers from Russia pay in roubles via SBP, and a new project connects in 5 minutes."
+      },
+      "14": {
+        "tag": "EdTech",
+        "date": "15.11.2026",
+        "title": "Dovtalab AI: we updated omoda.tj with an AI tutor, duels and a leaderboard for IMD preparation",
+        "desc": "Dushanbe Soft has released a new version of omoda.tj. The 2026–2027 IMD preparation platform is now called \"Dovtalab AI\": an AI tutor explains every mistake in Russian and Tajik, and levels, duels with friends and a weekly leaderboard turn studying into a game."
       }
     },
     "filterAll": "All",
