@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./ComponentDetails.module.css";
 import { ProductSite } from "../../../../../const/product-site";
 import Header from "../../../../../components/Header/Header";
+import ProjectSiteLink from "../../../../../components/ProjectSiteLink/ProjectSiteLink";
 import Footer from "../../../../../components/Footer/Footer";
 import initTranslations from "../../../../i18n";
 import TranslationsProvider from "../../../../../components/TranslationsProvider";
@@ -248,6 +249,11 @@ export default async function ComponentDetailsPage({
           <div>
             <h1 className={styles.title}>{getTranslated(component.title, lang)}</h1>
             <p className={styles.shortInfo}>{getTranslated(component.shortInfo, lang)}</p>
+            {project.url && (
+              <div style={{ marginTop: "16px" }}>
+                <ProjectSiteLink url={project.url} label={t("ui.projectSite", "Сайт проекта")} />
+              </div>
+            )}
           </div>
 
           <div className={styles.descriptionSection}>

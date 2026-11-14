@@ -26,9 +26,11 @@ interface CaseTabsProps {
   lang: string;
   projectSlug: string;
   projectTitle?: string;
+  /** Rendered under the title, e.g. the link to the live project site. */
+  titleExtra?: React.ReactNode;
 }
 
-export default function CaseTabs({ groups, lang, projectSlug, projectTitle }: CaseTabsProps) {
+export default function CaseTabs({ groups, lang, projectSlug, projectTitle, titleExtra }: CaseTabsProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   if (!groups || groups.length === 0) return null;
@@ -44,7 +46,12 @@ export default function CaseTabs({ groups, lang, projectSlug, projectTitle }: Ca
       }
     >
       <div className={styles.tabHeader}>
-        {projectTitle && <h1 className={styles.projectTitle}>{projectTitle}</h1>}
+        {(projectTitle || titleExtra) && (
+          <div className={styles.titleBlock}>
+            {projectTitle && <h1 className={styles.projectTitle}>{projectTitle}</h1>}
+            {titleExtra}
+          </div>
+        )}
         <div className={styles.tabButtons}>
           {groups.map((group, idx) => (
             <button

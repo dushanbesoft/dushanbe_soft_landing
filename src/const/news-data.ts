@@ -34,6 +34,8 @@ export interface NewsItem {
   descKey: string;
   defaultDesc: string;
   fullContent: NewsFullContent;
+  /** Live project website; defaults to the `url` of the case in `fullContent.caseSlug`. */
+  projectUrl?: string;
   /** Optional translated article body; falls back to `fullContent` (ru) */
   localizedContent?: Partial<Record<"en" | "tj", NewsFullContent>>;
 }

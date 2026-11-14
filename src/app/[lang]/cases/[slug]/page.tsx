@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectSiteLink from "../../../../components/ProjectSiteLink/ProjectSiteLink";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import styles from "./CaseDetails.module.css";
@@ -122,6 +123,9 @@ export default async function CaseDetailsPage({
   const galleryCaptions = t(`projects.${project.slug}.gallery`, { returnObjects: true, defaultValue: null }) as string[] | null;
   const gallery = project.gallery ?? [];
   const projectComponents = project.projectComponents;
+  const siteLink = project.url ? (
+    <ProjectSiteLink url={project.url} label={t("ui.projectSite", "Сайт проекта")} />
+  ) : null;
   return (
     <TranslationsProvider
       namespaces={i18nNamespaces}
@@ -148,6 +152,7 @@ export default async function CaseDetailsPage({
                 dateCreated: project.year,
                 keywords: project.tags.join(", "),
                 url: localeUrl(lang, `cases/${slug}`),
+                ...(project.url ? { sameAs: project.url } : {}),
                 creator: { "@id": ORGANIZATION_ID },
                 publisher: { "@id": ORGANIZATION_ID },
               },
@@ -167,12 +172,13 @@ export default async function CaseDetailsPage({
           {!projectComponents && (
             <div className={styles.heroContent}>
               <h1 className={styles.title}>{title}</h1>
+              {siteLink}
             </div>
           )}
 
           {projectComponents ? (
             <div style={{ marginTop: '0px', width: '100%' }}>
-              <CaseTabs groups={projectComponents} lang={lang} projectSlug={slug} projectTitle={title} />
+              <CaseTabs groups={projectComponents} lang={lang} projectSlug={slug} projectTitle={title} titleExtra={siteLink} />
             </div>
           ) : (
             <>

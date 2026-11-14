@@ -16,6 +16,8 @@ export interface ProductSiteItem {
   year: string;
   tags: string[];
   slug: string;
+  /** Live project website, shown as "Project site" on the case and its news. */
+  url?: string;
   gallery?: string[];
   projectComponents?: {
     tabName: TranslatedString;
@@ -39,6 +41,7 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["React", "Redux", "Laravel", "MySQL", "REST API"],
     slug: "president",
+    url: "https://president.tj",
     projectComponents: [
       {
         tabName: { ru: "Web-сайт", en: "Website", tj: "Веб-сайт" },
@@ -906,6 +909,7 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Docker", "REST API"],
     slug: "digital-tajikistan",
+    url: "https://dt.tj",
     projectComponents: [
       {
         tabName: { ru: "Портал", en: "Portal", tj: "Портал" },
@@ -1859,6 +1863,7 @@ export const ProductSite: ProductSiteItem[] = [
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "mavji-somon",
+    url: "https://mavjisomon.tj",
     projectComponents: [
       {
         tabName: { ru: "Web-сайт", en: "Website", tj: "Веб-сайт" },
@@ -4282,6 +4287,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2026",
     tags: ["Laravel", "React", "Node.js", "Socket.IO", "MySQL", "React Native", "Claude AI"],
     slug: "kontakio",
+    url: "https://kontakio.com",
     projectComponents: [
       {
         tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
@@ -4298,6 +4304,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2026",
     tags: ["Next.js", "Laravel", "REST API", "Webhooks", "SmartPay", "Pay4Game"],
     slug: "somonly",
+    url: "https://somonly.com",
     projectComponents: [
       {
         tabName: { ru: "Сайт продукта", en: "Product site", tj: "Сомонаи маҳсулот" },
@@ -4314,6 +4321,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2026",
     tags: ["Next.js", "React", "Laravel", "REST API", "SmartPay", "Cloudflare"],
     slug: "gems",
+    url: "https://gems.tj",
     projectComponents: [
       {
         tabName: { ru: "Витрина", en: "Storefront", tj: "Витрина" },
@@ -4330,6 +4338,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap", "REST API"],
     slug: "telecomm",
+    url: "https://ttl.tj",
     projectComponents: [
       {
         tabName: { ru: "Веб-сайт", en: "Website", tj: "Веб-сайт" },
@@ -4443,6 +4452,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "navo",
+    url: "https://navo.tj",
     projectComponents: [
       {
         tabName: {
@@ -4740,6 +4750,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Laravel", "React", "PostgreSQL", "Flutter", "Nginx"],
     slug: "somon-tv",
+    url: "https://somon.tv",
     projectComponents: [
       {
         tabName: {
@@ -5025,6 +5036,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "REST API",
     ],
     slug: "zenith-valuation",
+    url: "https://www.zenithvaluation.com",
     projectComponents: [
       {
         tabName: {
@@ -5187,6 +5199,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["Node.js", "JavaScript", "MySQL", "HTML5 / CSS3", "REST API"],
     slug: "zudsms",
+    url: "https://zudsms.tj",
     projectComponents: [
       {
         tabName: { ru: "Лендинг", en: "Landing", tj: "Лендинг" },
@@ -5243,6 +5256,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
       "Mobile App",
     ],
     slug: "omodatj",
+    url: "https://omoda.tj",
     projectComponents: [
       {
         tabName: { ru: "Сайт 2026", en: "2026 site", tj: "Сомонаи 2026" },
@@ -5267,6 +5281,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["React", "JavaScript", "HTML5 / CSS3", "REST API"],
     slug: "sunduk-tv",
+    url: "https://sunduk.tv",
     projectComponents: [
       {
         tabName: {
@@ -8441,6 +8456,7 @@ The Main Screen includes a dynamic, smoothly animated banner carousel based on A
     year: "2024",
     tags: ["React", "Next.js", "PostgreSQL", "Fintech"],
     slug: "rushdikuhiston",
+    url: "https://www.rushdikuhiston.tj",
     projectComponents: [
       {
         tabName: { ru: "Веб-сайт", en: "Website", tj: "Вебсайт" },

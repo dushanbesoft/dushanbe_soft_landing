@@ -11,6 +11,8 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import initTranslations from "@/app/i18n";
 import { FadeIn } from "@/components/MotionWrapper";
+import ProjectSiteLink from "@/components/ProjectSiteLink/ProjectSiteLink";
+import { ProductSite } from "@/const/product-site";
 import {
   ORGANIZATION_ID,
   absoluteUrl,
@@ -91,6 +93,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
   const content = getNewsContent(item, lang);
   const caseUrl = getCaseUrl(content.caseSlug);
+  const projectUrl = item.projectUrl ?? ProductSite.find((p) => p.slug === content.caseSlug)?.url;
   const articleUrl = localeUrl(lang, `news/${slug}`);
   const published = ruDateToIso(item.date);
 
@@ -110,6 +113,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
       dateModified: published,
       inLanguage: localeHreflang(contentLocale(lang)),
       mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+      ...(projectUrl ? { about: { "@type": "WebSite", url: projectUrl } } : {}),
       author: { "@type": "Organization", "@id": ORGANIZATION_ID, name: "Dushanbe Soft" },
       publisher: { "@id": ORGANIZATION_ID },
       ...(content.techStack?.length ? { keywords: content.techStack.join(", ") } : {}),
@@ -155,6 +159,11 @@ export default async function NewsDetailPage({ params }: PageProps) {
               </div>
 
               <h1 className={styles.title}>{title}</h1>
+              {projectUrl && (
+                <div className={styles.projectSiteRow}>
+                  <ProjectSiteLink url={projectUrl} label={t("ui.projectSite", "Сайт проекта")} />
+                </div>
+              )}
             </header>
           </FadeIn>
 
@@ -213,6 +222,10 @@ export default async function NewsDetailPage({ params }: PageProps) {
                     ))}
                   </div>
                 </div>
+              )}
+
+              {projectUrl && (
+                <ProjectSiteLink url={projectUrl} label={t("ui.visitProjectSite", "Перейти на сайт проекта")} variant="button" />
               )}
 
               {caseUrl && (
